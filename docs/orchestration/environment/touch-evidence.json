@@ -1,0 +1,377 @@
+{
+  "browser": "151.0.7922.34",
+  "capabilities": {
+    "coarse": true,
+    "height": 844,
+    "hover": false,
+    "maxTouchPoints": 1,
+    "width": 390
+  },
+  "errors": [],
+  "fixture": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/demo/touch-probe.html",
+  "playwright": "1.62.1",
+  "results": [
+    {
+      "duration": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 48.700000047683716,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 48.700000047683716,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": "touch",
+          "time": 48.700000047683716,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 48.700000047683716,
+          "trusted": true,
+          "type": "touchend",
+          "x": 60,
+          "y": 249
+        }
+      ],
+      "moved": 0,
+      "name": "tap",
+      "verdict": "PASS"
+    },
+    {
+      "duration": 753.2999999523163,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 43.40000009536743,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 43.40000009536743,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": "touch",
+          "time": 796.7000000476837,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 796.7000000476837,
+          "trusted": true,
+          "type": "touchend",
+          "x": 60,
+          "y": 249
+        }
+      ],
+      "moved": 0,
+      "name": "long-press",
+      "verdict": "PASS"
+    },
+    {
+      "duration": 1083.6000001430511,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 39.89999985694885,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 39.89999985694885,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": "touch",
+          "time": 792.8999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 80,
+          "y": 252
+        },
+        {
+          "pointerType": null,
+          "time": 792.8999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 80,
+          "y": 252
+        },
+        {
+          "pointerType": "touch",
+          "time": 823.8999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 100,
+          "y": 255
+        },
+        {
+          "pointerType": null,
+          "time": 823.8999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 100,
+          "y": 255
+        },
+        {
+          "pointerType": "touch",
+          "time": 857.5999999046326,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 120,
+          "y": 258
+        },
+        {
+          "pointerType": null,
+          "time": 857.5999999046326,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 120,
+          "y": 258
+        },
+        {
+          "pointerType": "touch",
+          "time": 891.5999999046326,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 140,
+          "y": 261
+        },
+        {
+          "pointerType": null,
+          "time": 891.5999999046326,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 140,
+          "y": 261
+        },
+        {
+          "pointerType": "touch",
+          "time": 925.0999999046326,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 160,
+          "y": 264
+        },
+        {
+          "pointerType": null,
+          "time": 925.0999999046326,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 160,
+          "y": 264
+        },
+        {
+          "pointerType": "touch",
+          "time": 958.0999999046326,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 180,
+          "y": 267
+        },
+        {
+          "pointerType": null,
+          "time": 958.0999999046326,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 180,
+          "y": 267
+        },
+        {
+          "pointerType": "touch",
+          "time": 992.0999999046326,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 200,
+          "y": 270
+        },
+        {
+          "pointerType": null,
+          "time": 992.0999999046326,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 200,
+          "y": 270
+        },
+        {
+          "pointerType": "touch",
+          "time": 1024.6999998092651,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 220,
+          "y": 273
+        },
+        {
+          "pointerType": null,
+          "time": 1024.6999998092651,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 220,
+          "y": 273
+        },
+        {
+          "pointerType": "touch",
+          "time": 1057.6999998092651,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 240,
+          "y": 276
+        },
+        {
+          "pointerType": null,
+          "time": 1057.6999998092651,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 240,
+          "y": 276
+        },
+        {
+          "pointerType": "touch",
+          "time": 1089.8999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 260,
+          "y": 279
+        },
+        {
+          "pointerType": null,
+          "time": 1089.8999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 260,
+          "y": 279
+        },
+        {
+          "pointerType": "touch",
+          "time": 1123.5,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 260,
+          "y": 279
+        },
+        {
+          "pointerType": null,
+          "time": 1123.5,
+          "trusted": true,
+          "type": "touchend",
+          "x": 260,
+          "y": 279
+        }
+      ],
+      "moved": 202.23748416156684,
+      "name": "drag",
+      "verdict": "PASS"
+    },
+    {
+      "duration": 1.2000000476837158,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 42,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 42,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": "touch",
+          "time": 43.200000047683716,
+          "trusted": true,
+          "type": "pointercancel",
+          "x": 60,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 43.200000047683716,
+          "trusted": true,
+          "type": "touchcancel",
+          "x": 60,
+          "y": 249
+        }
+      ],
+      "moved": 0,
+      "name": "cancel",
+      "verdict": "PASS"
+    },
+    {
+      "duration": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 40.799999952316284,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 60,
+          "y": 184
+        },
+        {
+          "pointerType": null,
+          "time": 40.799999952316284,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 60,
+          "y": 184
+        },
+        {
+          "pointerType": "touch",
+          "time": 40.799999952316284,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 60,
+          "y": 184
+        },
+        {
+          "pointerType": null,
+          "time": 40.799999952316284,
+          "trusted": true,
+          "type": "touchend",
+          "x": 60,
+          "y": 184
+        }
+      ],
+      "moved": 0,
+      "name": "landscape-tap",
+      "verdict": "PASS"
+    }
+  ],
+  "timestamp": "2026-10-15T19:27:13.205Z",
+  "verdict": "PASS"
+}

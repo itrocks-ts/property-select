@@ -86,6 +86,12 @@ Validate both standalone selector and actual framework integration. Browser, key
 checks are required, with independent final acceptance and separate delivery under VAL-08. DOM doubles or compilation do
 not establish browser success. Physical-device absence has the narrow VAL-05 treatment only.
 
+Installed Playwright and Chromium provide verified emulated touch input; see the
+[touch procedure](ENVIRONMENT.md#browser-procedure-and-touch-input) and
+[diagnostic](environment/TOUCH-DIAGNOSTIC.md). IAB does not expose touch input. Use a real touch context and browser
+input transport for gestures; preserve the browser sandbox and use the normal tool approval mechanism for launch
+if required. The probe does not validate product gesture behaviour. Task 4.2 awaits an independent correction check.
+
 Each report records criteria, exact commands, tested checkpoints, results and evidence/defects paths, limits and version
 changes. Maintain the manifest/matrix once created. Return at most eight lines under orchestration section 7: status;
 requested/effective profile; repositories and SHAs; versions; validation; report/proof/defect paths; blockers.

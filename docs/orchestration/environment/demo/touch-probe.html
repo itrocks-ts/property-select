@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Touch input capability probe</title>
+	<style>
+		body { font: 16px system-ui; margin: 20px; }
+		#surface { background: #d8edff; border: 2px solid #124b7a; height: 260px; touch-action: none; }
+		#surface p { padding: 16px; }
+		pre { font-size: 12px; overflow-wrap: anywhere; white-space: pre-wrap; }
+	</style>
+</head>
+<body>
+	<h1>Touch input capability probe</h1>
+	<p>Input observation only. No selector or product gesture behaviour is implemented.</p>
+	<div id="surface"><p>Tap, hold or move a finger here.</p></div>
+	<pre id="events" aria-live="polite">Waiting for input</pre>
+	<script>
+		const events  = []
+		const output  = document.querySelector('#events')
+		const surface = document.querySelector('#surface')
+
+		for (const type of ['pointerdown', 'pointermove', 'pointerup', 'pointercancel',
+			'touchstart', 'touchmove', 'touchend', 'touchcancel']) {
+			document.addEventListener(type, event => {
+				const touch = event.changedTouches?.[0]
+				events.push({
+					pointerType: event.pointerType ?? null,
+					time:        event.timeStamp,
+					trusted:     event.isTrusted,
+					type:        event.type,
+					x:           touch?.clientX ?? event.clientX,
+					y:           touch?.clientY ?? event.clientY
+				})
+				output.textContent = JSON.stringify(events, null, 2)
+				if (type === 'pointerdown') surface.setPointerCapture(event.pointerId)
+			}, { passive: true })
+		}
+	</script>
+</body>
+</html>

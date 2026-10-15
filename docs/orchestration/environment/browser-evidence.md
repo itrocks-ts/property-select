@@ -28,6 +28,13 @@ Available browser providers: Codex In-app Browser (`iab`) and Codex MCP Apps (`m
 Browser capabilities: `visibility`, `viewport`. Tab capabilities: `pageAssets`, `webmcp`.
 The documented viewport API accepts width and height only. The input APIs expose clicks, keyboard and mouse drag,
 with no touch context, tap, touch sequence or pointer cancellation emulation API.
-No tactile gesture was executed or validated. Mobile dimensions do not establish touch emulation.
+No tactile gesture was executed or validated through IAB. Mobile dimensions do not establish touch emulation.
 In this sub-agent, explicit IAB visibility requests report `IAB visibility is not supported in a subagent thread`;
 background tab creation, navigation, accessibility, screenshots and viewport overrides work.
+
+## Installed Chromium touch input
+
+The separate [touch diagnostic](TOUCH-DIAGNOSTIC.md) exercises the installed Playwright runtime and its Chromium.
+Trusted touch and pointer events confirm tap, stationary hold, movement and protocol cancellation, including a landscape
+tap. Its [committed event trace](touch-evidence.json) is the input proof; screenshots alone do not establish gestures.
+IAB's input limitation remains specific to its API. No selector product acceptance is claimed by the capability probe.

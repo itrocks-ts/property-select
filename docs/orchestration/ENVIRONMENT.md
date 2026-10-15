@@ -2,18 +2,21 @@
 
 ## Scope and checkpoint
 
-Task 4.2: `NEEDS_FIX`, checked on 15 October 2026. Infrastructure checks pass; tactile tooling needs diagnosis.
+Task 4.2: `NEEDS_FIX`, checked on 15 October 2026, pending independent verification of the tactile tooling correction.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
-Touch emulation is unavailable in the documented browser tool surface; see the diagnostic below before scheduling
-mandatory gesture acceptance.
+Touch input is available through the installed Playwright runtime and Chromium, with the browser sandbox enabled.
+Tap, stationary hold, movement and cancellation are verified on a standalone input probe. This establishes tooling
+capability only; product gesture acceptance remains to be implemented and independently exercised.
 
 Requested profile: `gpt-6.1-sol` / `medium`. The native sub-agent runtime does not expose independent proof of its
 model or reasoning effort. No sub-agent was created.
 
 Repository root: `/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select`.
-Starting package HEAD: `b8e9d4e75d6d0b80dc2c31433fb44644502ea443`, version `0.0.5`; delivery version: `0.0.6`.
+Infrastructure starting HEAD: `b8e9d4e75d6d0b80dc2c31433fb44644502ea443`, version `0.0.5`;
+infrastructure version: `0.0.6`.
+Tactile correction starting HEAD: `276943ad110fe8d1b3dffb06686b7afd52c2bc2d`; correction version: `0.0.7`.
 The untracked `environment/` resources from the interrupted environment task were inspected, reused and corrected.
 The package has no build script or runtime selector exports yet. Files under `docs` are included in its published files.
 
@@ -100,8 +103,9 @@ smoke connection; all delivered proof uses the canonical database port.
 
 [fixtures.sql](environment/fixtures.sql) resets only tables in the dedicated synthetic database via its dedicated
 socket. It provides the real application `country` list with two countries and a separate `ps_` graph
-with four invoices, customers, addresses, cities, countries, invoice lines and N-N tags. The graph includes two address paths to the same
-type, cyclic customer parents, absent relations, nullable dates, decimals, booleans and empty versus null strings.
+with four invoices, customers, addresses, cities, countries, invoice lines and N-N tags. The graph includes two address
+paths to the same type, cyclic customer parents, absent relations, nullable dates, decimals, booleans and empty versus
+null strings.
 Future metadata fixtures must describe inverse, unknown-cardinality and invalid-path cases; SQL rows alone do not
 provide these metadata contracts.
 
@@ -123,9 +127,9 @@ The journal contains the smoke marker, bound criterion expanded by the driver, a
 A focused synthetic excerpt is preserved in [sql-evidence.txt](environment/sql-evidence.txt).
 Never use a private development database for these commands or copy private query logs into reports.
 
-## Browser procedure and touch diagnostic
+## Browser procedure and touch input
 
-The available real browser is Codex In-app Browser, operated with `mcp__cua_repl.js`.
+For interactive browser checks, use Codex In-app Browser, operated with `mcp__cua_repl.js`.
 Create a tab with `cua.createBrowserTab('iab', URL)` and inspect `getAXState()` or `getScreenshot()`.
 The framework list visibly renders both synthetic countries. After rebuilding, reload the tab and observe fresh state.
 The standalone page explicitly says it has no selector; functional tasks must implement that demonstration later.
@@ -137,15 +141,37 @@ Browser warning/error logs were empty for the checked framework page.
 
 Capability inventory contains only browser `visibility`/`viewport` and tab `pageAssets`/`webmcp`.
 Viewport options accept dimensions only. Neither the documented input API nor the available capabilities expose touch
-context emulation, taps, touch sequences or pointer cancellation. No touch gesture was generated. Native computer APIs
+context emulation, taps, touch sequences or pointer cancellation. No touch gesture was generated through IAB.
+Native computer APIs
 are disabled; MCP Apps is not a separate general-purpose browser. An explicit IAB visibility request is unsupported in
 this sub-agent, while background tab operations work.
 
-This is a precise environment limitation requiring a dedicated tooling diagnostic before mandatory tactile acceptance.
-Do not substitute a mobile viewport, synthetic DOM dispatch or a mouse drag for touch proof. Later gesture tasks must
-use an authorised documented browser tool with real emulated touch input, or remain explicitly blocked on that resource.
-No physical phone was available or tested. This does not waive automatisable tactile validation under VAL-05.
-Browser observations and capability evidence are in [browser-evidence.md](environment/browser-evidence.md).
+For tactile validation, use the installed Playwright `1.62.1` and its Chromium `151.0.7922.34` independently of IAB.
+The runtime path comes from `load_workspace_dependencies`, without installing packages or browsers. Run:
+
+```bash
+node "$recipe/touch-probe.mjs"
+```
+
+The restricted shell rejects Chromium startup with `sandbox_host_linux.cc:41`, `shutdown: Operation not permitted`.
+The normal `require_escalated` approval mechanism accepted this exact local browser test, which then passed.
+Following agents must use that mechanism when necessary; approval remains controlled by the tool reviewer.
+Keep `chromiumSandbox: true`. Do not disable the browser sandbox or alter permission settings to make startup pass.
+The script launches and closes only its own browser, loads a local synthetic HTML file and touches no existing server.
+Its output defaults to `/tmp/showtime-property-select-touch`; override with `PS_TOUCH_OUTPUT` to preserve separate runs.
+Use `PS_PLAYWRIGHT_MODULE` to select a module path returned by the runtime dependency tool if that path changes.
+
+The probe creates `hasTouch: true`, `isMobile: true` contexts at 390 × 844 and checks a tap at 844 × 390.
+`page.touchscreen.tap()` generates taps. A CDP session uses `Input.dispatchTouchEvent` for `touchStart`, `touchMove`,
+`touchEnd` and `touchCancel`; these enter the real browser input pipeline. Observed events are trusted and pointer
+events have `pointerType: 'touch'`. No DOM dispatch or direct product handler call supplies the input.
+This procedure can operate the actual application or standalone demonstration once product tasks implement them.
+
+The [touch diagnostic](environment/TOUCH-DIAGNOSTIC.md) gives commands, assertions and precise results.
+The committed [event evidence](environment/touch-evidence.json) records the executed input sequences.
+No physical phone was available or tested. System interruption, edge gestures and native keyboards remain unverified.
+Protocol cancellation verifies browser event transport only. Product scroll arbitration and rollback await their tasks.
+Other browser observations are in [browser-evidence.md](environment/browser-evidence.md).
 
 ## Integrated check, shutdown and continuation
 
