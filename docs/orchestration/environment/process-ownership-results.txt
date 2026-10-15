@@ -1,0 +1,6 @@
+{"directory":"/tmp/property-select-process-owner-tzdxiK","foreign":"/tmp/property-select-process-foreign-FJgHNB","ports":[34897,36643,33345,33913,46025]}
+PASS: cycle 1, foreign records/PIDs refused, owned stops/repeats, restart and HTTP
+PASS: cycle 2, foreign records/PIDs refused, owned stops/repeats, restart and HTTP
+PASS: full MySQL teardown; inherited listeners preserved; logs/datadir retained
+PASS: owned MySQL is already stopped
+PASS: owned MySQL is already stopped

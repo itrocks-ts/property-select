@@ -1,13 +1,13 @@
-import { createReadStream, mkdirSync, writeFileSync } from 'node:fs'
+import { createReadStream } from 'node:fs'
 import { createServer } from 'node:http'
 import { resolve, sep } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-const directory = process.env.PS_ENV_DIRECTORY || '/tmp/showtime-property-select-env'
-const port = Number(process.env.PS_STANDALONE_PORT || 13318)
+const port = Number(process.argv[3]?.slice('--ps-port='.length))
+if (!process.argv[2]?.startsWith('--ps-environment=') || !process.argv[3]?.startsWith('--ps-port=')) {
+	throw new Error('Launch through control.mjs standalone')
+}
 const root = fileURLToPath(new URL('./demo/', import.meta.url))
-mkdirSync(directory, { recursive: true })
-writeFileSync(`${directory}/standalone.pid`, String(process.pid))
 createServer((request, response) => {
 	const pathname = decodeURIComponent(new URL(request.url, 'http://127.0.0.1').pathname)
 	const file = resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname))

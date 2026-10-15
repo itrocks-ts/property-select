@@ -2,10 +2,11 @@
 
 ## Scope and checkpoint
 
-Task 4.2: `NEEDS_FIX` after independent VAL-07 retest on 15 October 2026.
-MySQL shutdown and tactile tooling pass. Application/standalone shutdown can stop another environment's process
-using the same launcher; VAL-01 remains gated. See the [shutdown correction](environment/SHUTDOWN-CORRECTION.md)
-and [independent verification](VERIFY-ENVIRONMENT.md) for current results and the required correction.
+Task 4.2: application/standalone ownership correction implemented and regression-tested on 15 October 2026;
+independent VAL-07 retest is pending, so VAL-01 remains gated. MySQL shutdown and tactile tooling pass.
+See the [process ownership correction](environment/PROCESS-OWNERSHIP-CORRECTION.md),
+[MySQL shutdown correction](environment/SHUTDOWN-CORRECTION.md) and
+[independent verification](VERIFY-ENVIRONMENT.md) for evidence and the remaining independent gate.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
@@ -196,9 +197,13 @@ node "$recipe/control.mjs" stop-app
 PS_ENV_DIRECTORY=/tmp/showtime-property-select-env-retry node "$recipe/control.mjs" stop-standalone
 ```
 
-Both commands verify the recorded PID command line against the package launcher. They do not yet establish which
-environment owns that process: a foreign environment using the same launcher passes this check. Confirm the resource
-identity manually before using these commands until the documented VAL-07 correction is delivered.
+Both commands require the PID and matching `app.owner.json` or `standalone.owner.json` written by `control.mjs`.
+They verify exact launcher/environment/port/token arguments, UID, executable, boot identity and process start ticks
+before signalling, then wait for termination and remove their records. Port overrides are needed at launch only;
+shutdown uses the recorded port. Missing or mismatched evidence fails without signalling. Existing processes without
+these ownership records are left untouched. A repeated stop succeeds after owned records have been removed.
+Start refuses an existing PID reservation; stop a verified instance before restarting it.
+Run `node "$recipe/process-ownership-regression.mjs"` for the two-environment lifecycle and forged-PID checks.
 The application stop/start cycle was executed and followed by an HTTP check and actual browser reload.
 Original recipe servers remain running for subsequent tasks; the final verifier's isolated services are stopped.
 For full teardown, `control.mjs stop` additionally stops its recorded dedicated MySQL instance and any matching

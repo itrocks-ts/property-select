@@ -2,8 +2,8 @@
 
 ## Checkpoint and scope
 
-VAL-07 MySQL correction: independently verified `PASS`; task 4.2 still needs the separate application/standalone
-ownership correction in the [current verification report](../VERIFY-ENVIRONMENT.md). Starting package HEAD:
+VAL-07 MySQL correction: independently verified `PASS`; the separate application/standalone
+[ownership correction](PROCESS-OWNERSHIP-CORRECTION.md) awaits independent retest. Starting package HEAD:
 `de8d89a5115288d1569ca0765536d60689ebcf21`, clean, version `0.0.8`; correction version `0.0.9`.
 Requested execution profile: `gpt-6.1-sol` / `medium`; the launcher supplies no independent
 effective-profile attestation.
@@ -18,7 +18,7 @@ Only then does it send administrative shutdown over that socket. It never sends 
 It waits for process exit (including a terminated zombie), socket removal and PID-file removal before returning success.
 Identity lookup, administrative shutdown and termination waits have finite timeouts. Ownership failures preserve the
 resources and return an error. An already stopped instance succeeds only when both socket and PID file are absent.
-Application and standalone signal checks retain their existing behaviour.
+Application and standalone ownership checks are documented in the separate correction report.
 
 ## Executed regression
 

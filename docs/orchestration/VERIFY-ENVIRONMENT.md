@@ -2,9 +2,11 @@
 
 ## Verdict and checkpoints
 
-Task 4.2 independent VAL-07 check: `NEEDS_FIX`, 15 October 2026. The owned MySQL shutdown correction passes.
-VAL-01 remains gated by an application/standalone ownership defect: shutdown accepts another environment's PID
-when it uses the same launcher. VAL-05 emulated touch tooling passes; product acceptance remains `NOT_RUN`.
+Task 4.2 independent VAL-07 checkpoint: `NEEDS_FIX`, 15 October 2026, against the tested HEAD below.
+The application/standalone [ownership correction](environment/PROCESS-OWNERSHIP-CORRECTION.md) is now implemented
+and passes its author regression; an independent retest is pending. VAL-01 remains gated until that retest.
+The owned MySQL shutdown and VAL-05 emulated touch tooling pass; product acceptance remains `NOT_RUN`.
+The execution and reproducer below document the independent checkpoint, not a verdict on the pending correction.
 
 Tested package HEAD: `3f6b2001a6b044174bfdc9a8b4f951e040f99c7d`, initially clean, version `0.0.9`.
 This documentation checkpoint uses `0.0.10`; no product or launcher source was changed.
