@@ -1,0 +1,42 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "commands": [
+    {
+      "command": "git rev-parse HEAD",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/application-head.txt"
+    },
+    {
+      "command": "git status --short",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/application-status.txt"
+    },
+    {
+      "command": "git ls-files --stage audit-itrocks-dependencies.json audit-itrocks-dependencies.txt",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/application-index.txt"
+    },
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select run build",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/build.txt"
+    },
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select test",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/test.txt"
+    },
+    {
+      "command": "PS_PLAYWRIGHT_MODULE=/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs node node_modules/@itrocks/property-select/test/browser-smoke.mjs",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/browser-smoke.json",
+      "permission": "Normal escalation, chromiumSandbox: true"
+    },
+    {
+      "command": "npm pack ./node_modules/@itrocks/property-select --dry-run --json --ignore-scripts --offline --cache /tmp/property-select/L1/npm-cache",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/package-files.json"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/review.mjs",
+      "output": "node_modules/@itrocks/property-select/docs/orchestration/evidence/L1/review.json"
+    },
+    {
+      "command": "git -C node_modules/@itrocks/property-select diff --check",
+      "output": "exit 0, no output"
+    }
+  ]
+}

@@ -4,11 +4,33 @@
 		"email": "baptiste@pillot.fr"
 	},
 	"description": "Interactive property selection through business object relationships",
+	"devDependencies": {
+		"@itrocks/prepare-module": "latest",
+		"typescript": "^6.0"
+	},
+	"engines": {
+		"node": ">=24"
+	},
+	"exports": {
+		".": {
+			"types": "./property-select.d.ts",
+			"import": "./property-select.js",
+			"require": "./cjs/property-select.js"
+		},
+		"./property-select.js": {
+			"types": "./property-select.d.ts",
+			"default": "./property-select.js"
+		}
+	},
 	"files": [
 		"COPYING",
 		"LICENSE",
+		"README.md",
+		"cjs",
 		"docs",
-		"README.md"
+		"/*.d.ts",
+		"/*.js",
+		"!*.map"
 	],
 	"homepage": "https://it.rocks",
 	"keywords": [
@@ -32,5 +54,9 @@
 		"type": "git",
 		"url": "git+https://github.com/itrocks-ts/property-select.git"
 	},
-	"version": "0.0.21"
+	"scripts": {
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser",
+		"test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
+	},
+	"version": "0.1.0"
 }

@@ -472,7 +472,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Navigation, confirmations, stale-work handling and serialisable state form the shared behavioural model.",
@@ -492,7 +492,16 @@
         "NAV-07",
         "DEP-01",
         "DEP-04"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "56c22747a7bd3d732e8218f95772a595807ea0ea",
+          "base_version": "0.0.21",
+          "version": "0.1.0",
+          "source": "L1 working delivery recorded by the same task commit"
+        }
+      },
+      "validation": "PASS: build, public TypeScript imports, 14 Node contract tests, sandboxed Chromium public import, ESM/CJS/types package inventory, source dependency graph and application preservation. UI/search/session/gestures remain assigned to later gates."
     },
     {
       "id": "L1-META",

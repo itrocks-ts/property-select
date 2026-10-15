@@ -1,0 +1,14 @@
+{
+  "application": "Preserved HEAD, initial AD entries, staged blobs and working-file absence",
+  "browserGraph": [
+    "controller.js",
+    "intentions.js",
+    "metadata.js",
+    "navigation.js",
+    "path.js",
+    "property-select.js"
+  ],
+  "package": "@itrocks/property-select@0.1.0",
+  "publicArtifacts": "ESM/CJS/declarations present; source/tests/maps excluded",
+  "status": "PASS"
+}

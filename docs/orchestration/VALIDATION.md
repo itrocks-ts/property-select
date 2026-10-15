@@ -8,7 +8,8 @@ backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). VAL-02 plan coverage i
 observations remain pending. [S03](reports/S03.md) passes reflection relation-fact checks;
 [S04](reports/S04.md) passes metadata path resolution.
 [S05](reports/S05.md) passes deterministic relationship graph and physical binding checks.
-Provider/search observations remain pending.
+[L1](reports/L1.md) passes the generic controller contract observations: navigation, intentions, serialisable local
+state, stale/disposal handling and public browser import. Provider/search observations remain pending.
 Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
 No fixture smoke is product proof.
 
@@ -24,6 +25,32 @@ in `reports/<gate>.md`. Future paths are evidence destinations, not files assert
 At execution, add a result entry under each case with expected/observed outcome, PASS/FAIL/BLOCKED/NOT_RUN, exact proof
 link and current owner versions/SHAs. A requirement remains NOT_RUN or FAIL until all its linked cases pass. A later
 product change invalidates its affected proof and requires independent retest under EXECUTION.md.
+
+## L1 author observations
+
+Tested delivery: `property-select` `0.1.0`, based on `56c22747a7bd3d732e8218f95772a595807ea0ea`.
+The [L1 report](reports/L1.md) records the corresponding source/build/test delivery; the parent records its commit.
+All combined case verdicts and independent browser acceptance remain `NOT_RUN` at this stage.
+
+- **T01 core / PASS**: String/array equivalence, missing provider, optional defaults and observable canonical
+  intentions with a plain non-table consumer. Public ESM/CJS/types and sandboxed Chromium import pass.
+- **T02 core / PASS**: Customer→Address→City→Country, then Address→City and root, retains the complete branch,
+  query and scroll; only one object context is exposed.
+- **T03 core / PASS**: A sibling relation retains the common prefix and replaces the divergent suffix.
+- **T05 navigation / PASS**: Relation main activation navigates; terminal activation and explicit relation selection
+  emit one intention each while retaining branch/current/query. DOM propagation/keyboard/touch remain V2-UI/V2/V6.
+- **PORT-01 core / PASS**: No host/framework/SQL imports, absent provider error, optional consumer observation,
+  translation identity and provider business order/label fallback. Rendered presentation remains V2-UI.
+- **PORT-02 contract / PASS**: Id/path/status/phase validation, duplicate and disposed rejection, one terminal
+  transport call, confirmed additions only, out-of-order outcomes and reentrant disposal. Real gestures remain V5/V6.
+- **PORT-03 navigation / PASS**: Instance-scoped lazy context cache, abort and stale response suppression.
+  Search budgets, progressive exploration and ranking remain L3/V3.
+- **PORT-09 consumer error / PASS**: Rejected/failed consumer outcomes are recoverable and retain navigation.
+  Persistence and preview observations remain L4/V4/L5/V5/L6/V6.
+
+Proof: [14 Node tests and public typecheck](evidence/L1/test.txt),
+[Chromium import](evidence/L1/browser-smoke.json), [artifact and dependency review](evidence/L1/review.json).
+Author contract tests are distinct from the mandatory independent browser gates.
 
 ## Package ownership key
 
@@ -859,6 +886,8 @@ an implemented feature or use a simulated replacement for a required browser/dat
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and
   browser linkage at V2. Keep VSQL PASS separate from the unfinished combined SQL-14 case.
+- L1: T01–T03 core and T05 navigation observations, PORT-01/02 generic contracts and PORT-03 navigation stale work.
+  These author checks pass as recorded above; rendered input and independent browser acceptance remain NOT_RUN.
 - L1-META: META-01–META-03 provider contract/HTTP observations and the ability to change allowed catalogue paths.
   META-04 persisted restoration belongs to L4/V4. VSQL covers only reflection portions of META-01/META-03;
   V3 covers provider permission/presentation and search cycles; V4 completes META-04.

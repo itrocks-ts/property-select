@@ -1,0 +1,14 @@
+{
+  "browser": "151.0.7922.34",
+  "module": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/property-select.js",
+  "observed": {
+    "context": "",
+    "intentions": [
+      "name"
+    ],
+    "path": "customer.name",
+    "recent": []
+  },
+  "errors": [],
+  "status": "PASS"
+}
