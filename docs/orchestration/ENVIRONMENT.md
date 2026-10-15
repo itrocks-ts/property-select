@@ -1,0 +1,178 @@
+# Property selector validation environment
+
+## Scope and checkpoint
+
+Task 4.2: `NEEDS_FIX`, checked on 15 October 2026. Infrastructure checks pass; tactile tooling needs diagnosis.
+The existing framework runs against synthetic data on a dedicated MySQL server.
+Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
+observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
+Touch emulation is unavailable in the documented browser tool surface; see the diagnostic below before scheduling
+mandatory gesture acceptance.
+
+Requested profile: `gpt-6.1-sol` / `medium`. The native sub-agent runtime does not expose independent proof of its
+model or reasoning effort. No sub-agent was created.
+
+Repository root: `/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select`.
+Starting package HEAD: `b8e9d4e75d6d0b80dc2c31433fb44644502ea443`, version `0.0.5`; delivery version: `0.0.6`.
+The untracked `environment/` resources from the interrupted environment task were inspected, reused and corrected.
+The package has no build script or runtime selector exports yet. Files under `docs` are included in its published files.
+
+Application root: `/home/baptiste/itrocks/showtime`, HEAD `d7ca948292e28c248bdcc0283724e47c2a82bba4`, version `0.0.6`.
+The initial `AD` entries for `audit-itrocks-dependencies.json` and `audit-itrocks-dependencies.txt` remain intact,
+including staged additions and absent working files. No application source, tracking document or commit was created.
+Build output is ignored application test material. Other package checkpoints are in [AUDIT.md](AUDIT.md).
+Package checkouts under `node_modules/@itrocks` are real Git repositories, not symlinks.
+
+Never execute `npm install` or `npm update` during this work: they can replace these repositories and destroy local
+commits. Avoid `npx` commands that may implicitly download or install. Use existing binaries or `npm run` scripts.
+If an `@itrocks` package is missing, clone its Git repository directly under `node_modules/@itrocks`.
+
+## Tools and reconstruction
+
+Observed versions: Node.js `24.0.1`, npm `11.6.4`, MySQL Community Server `8.0.46-0ubuntu0.24.04.4` on Linux.
+The installed `mariadb` Node driver connects to the isolated MySQL instance. No installation is required.
+
+From the application root, `npm run build` passes server TypeScript, browser TypeScript and Sass compilation.
+For a changed framework owner, use `npm --prefix node_modules/@itrocks/OWNER run build`; rebuild dependencies before
+consumers and finally rebuild the application. Do not run `vcs-modules` as a verification command.
+
+Existing package build commands are available for `framework`, `home`, `list`, `table`, `reflect`, `reflect-path`,
+`storage`, `mysql`, `sql-build` and `sql-join`. Consult their actual manifest scripts before building resources.
+Existing test entry points:
+
+- `npm --prefix node_modules/@itrocks/framework test` builds and runs `test/*.test.js`.
+- `npm --prefix node_modules/@itrocks/list test` builds its server files and runs `test/**/*.test.mjs`.
+- `npm --prefix node_modules/@itrocks/sql-build test` passes type checks and eight tests at this checkpoint.
+- `npm --prefix node_modules/@itrocks/sql-join test` passes type checks and eight tests at this checkpoint.
+- `node --test node_modules/@itrocks/table/test/*.test.mjs` runs the existing table tests from the application root.
+- `reflect` provides `build:test`; `home`, `reflect-path`, `storage` and `mysql` have no `test` script
+  at this checkpoint.
+- Application `npm test` fails with exit 127 because `jest` is absent. This is an initial tooling limitation.
+
+Only the two SQL package suites and the application build/test baseline were rerun by this continuation.
+The other commands above are entry-point inventory, not claims of passed tests.
+
+## Start and check the isolated stack
+
+All commands below run from `/home/baptiste/itrocks/showtime`. Set the task-specific shell variable once:
+
+```bash
+recipe=node_modules/@itrocks/property-select/docs/orchestration/environment
+node "$recipe/control.mjs" database
+mysqladmin --no-defaults --socket=/tmp/showtime-property-select-env/mysql.sock -u root ping
+node "$recipe/control.mjs" reset
+PS_APP_PORT=13319 node "$recipe/control.mjs" app
+PS_APP_PORT=13319 node "$recipe/control.mjs" status
+node "$recipe/database-smoke.mjs"
+PS_ENV_DIRECTORY=/tmp/showtime-property-select-env-retry PS_STANDALONE_PORT=13320 \
+  node "$recipe/control.mjs" standalone
+```
+
+`database` initialises an insecure disposable datadir only when absent and starts MySQL bound to `127.0.0.1:13316`.
+It refuses an existing PID file; when the server is already alive, skip that command and use `mysqladmin`.
+Startup is asynchronous: repeat the readiness command after startup until it succeeds, checking logs on failure.
+Do not start against an occupied port or remove a PID file without identifying the recorded process.
+The existing isolated database was reused; fixture reset and SQL execution were independently rerun here.
+
+Resources are entirely synthetic: database `property_select_recipe`, local test user `root`, empty password,
+Unix socket `/tmp/showtime-property-select-env/mysql.sock`. These are disposable local credentials, not application
+credentials. MySQL X Protocol is disabled. Do not expose these listeners externally.
+
+Framework URL: `http://127.0.0.1:13319/country`.
+Standalone support URL: `http://127.0.0.1:13320/`.
+The runtime configuration hook overrides access, server, database and session configuration before framework binding.
+It uses the real application classes and installed framework modules. Free access is confined to this local recipe.
+Session files are placed under `/tmp/showtime-property-select-env/sessions` using the framework's application-relative
+path convention. No application configuration file is edited.
+
+An inherited listener on `13317` and standalone listener on `13318` were observed. Their application process ownership
+could not be established from this continuation; they were left untouched.
+Their URLs are not the owned restart proof.
+The continuation launched and restarted the framework on `13319` with its own recorded PID, and launched standalone
+support on `13320` with a separate PID directory.
+
+Runtime logs and PIDs are under `/tmp/showtime-property-select-env/`; standalone support uses the `-retry` directory.
+Environment overrides: `PS_APP_PORT`, `PS_DATABASE_PORT`, `PS_ENV_DIRECTORY`, `PS_STANDALONE_PORT`.
+The database smoke script targets the canonical `13316` recipe. Changing database ports also requires adapting that
+smoke connection; all delivered proof uses the canonical database port.
+
+## Fixtures and query observation
+
+[fixtures.sql](environment/fixtures.sql) resets only tables in the dedicated synthetic database via its dedicated
+socket. It provides the real application `country` list with two countries and a separate `ps_` graph
+with four invoices, customers, addresses, cities, countries, invoice lines and N-N tags. The graph includes two address paths to the same
+type, cyclic customer parents, absent relations, nullable dates, decimals, booleans and empty versus null strings.
+Future metadata fixtures must describe inverse, unknown-cardinality and invalid-path cases; SQL rows alone do not
+provide these metadata contracts.
+
+[database-smoke.mjs](environment/database-smoke.mjs) executes real left joins, a parameter-bound criterion and a limit,
+and checks four rows plus driver conversions. This is infrastructure proof using handwritten SQL. It does not validate
+`DataSource.select()`, object hydration, count/pagination coherence or relational columns; those await DEP-11 tasks.
+
+MySQL starts with `general_log=1`, writing `/tmp/showtime-property-select-env/queries.log`.
+Observe actual executed statements with:
+
+```bash
+node "$recipe/control.mjs" queries
+mysql --no-defaults --socket=/tmp/showtime-property-select-env/mysql.sock -u root -N \
+  -e 'SELECT VERSION(), @@port, @@datadir, @@general_log;'
+```
+
+The journal contains the smoke marker, bound criterion expanded by the driver, and actual framework statements:
+`SELECT id, name FROM country LIMIT 50` and the separate country count, with MySQL identifier quoting.
+A focused synthetic excerpt is preserved in [sql-evidence.txt](environment/sql-evidence.txt).
+Never use a private development database for these commands or copy private query logs into reports.
+
+## Browser procedure and touch diagnostic
+
+The available real browser is Codex In-app Browser, operated with `mcp__cua_repl.js`.
+Create a tab with `cua.createBrowserTab('iab', URL)` and inspect `getAXState()` or `getScreenshot()`.
+The framework list visibly renders both synthetic countries. After rebuilding, reload the tab and observe fresh state.
+The standalone page explicitly says it has no selector; functional tasks must implement that demonstration later.
+The static support server serves `environment/demo/`, with path traversal protection and local binding only.
+
+Default browser viewport measured 1280 × 720. The documented `viewport` capability successfully set 390 × 844;
+the existing list remained visible, and the override was reset. Retrieve capability documentation before using it.
+Browser warning/error logs were empty for the checked framework page.
+
+Capability inventory contains only browser `visibility`/`viewport` and tab `pageAssets`/`webmcp`.
+Viewport options accept dimensions only. Neither the documented input API nor the available capabilities expose touch
+context emulation, taps, touch sequences or pointer cancellation. No touch gesture was generated. Native computer APIs
+are disabled; MCP Apps is not a separate general-purpose browser. An explicit IAB visibility request is unsupported in
+this sub-agent, while background tab operations work.
+
+This is a precise environment limitation requiring a dedicated tooling diagnostic before mandatory tactile acceptance.
+Do not substitute a mobile viewport, synthetic DOM dispatch or a mouse drag for touch proof. Later gesture tasks must
+use an authorised documented browser tool with real emulated touch input, or remain explicitly blocked on that resource.
+No physical phone was available or tested. This does not waive automatisable tactile validation under VAL-05.
+Browser observations and capability evidence are in [browser-evidence.md](environment/browser-evidence.md).
+
+## Integrated check, shutdown and continuation
+
+The current integrated infrastructure check is:
+
+```bash
+npm run build
+PS_APP_PORT=13319 node "$recipe/control.mjs" status
+node "$recipe/database-smoke.mjs"
+```
+
+Then open both URLs using the real browser procedure above. This check is not the later functional acceptance matrix.
+Results are recorded in [test-results.txt](environment/test-results.txt).
+
+Stop only the recorded owned processes, checking their command lines before signalling:
+
+```bash
+node "$recipe/control.mjs" stop-app
+PS_ENV_DIRECTORY=/tmp/showtime-property-select-env-retry node "$recipe/control.mjs" stop-standalone
+```
+
+Both commands verify the recorded PID command line against the package launcher. The application stop/start cycle was
+executed and followed by an HTTP check and actual browser reload. Servers remain running for subsequent tasks.
+For full teardown, `control.mjs stop` additionally stops its recorded dedicated MySQL instance and any matching
+standalone PID in that directory. Use it only after confirming no following task needs the recipe.
+No datadir deletion is part of shutdown. Reset fixtures with `reset` before a new SQL acceptance run.
+
+SOLID review: launch, fixture and evidence resources contain no selector, SQL builder, reflection, table or pane product
+logic. The configuration shim is explicitly test-only and calls installed public package entries; it is not a product
+adapter. No additional framework owner was edited. Proposed local commit: `Prepare reproducible validation resources`.

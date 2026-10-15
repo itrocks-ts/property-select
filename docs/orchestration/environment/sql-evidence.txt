@@ -1,0 +1,17 @@
+MySQL 8.0.46; port 13316; datadir /tmp/showtime-property-select-env/data/; general_log=1
+Actual server general-log excerpt, synthetic recipe data only:
+SELECT /* property-select environment smoke */
+	 i.id, i.number, c.name AS customer, cy.name AS city, p.name AS country, d.street AS delivery,
+	 i.active, i.amount, i.issued_at, i.note
+	 FROM ps_invoice i
+	 LEFT JOIN ps_customer c ON c.id = i.id_customer
+	 LEFT JOIN ps_address a ON a.id = c.id_address
+	 LEFT JOIN ps_city cy ON cy.id = a.id_city
+	 LEFT JOIN ps_country p ON p.id = cy.id_country
+	 LEFT JOIN ps_address d ON d.id = i.id_delivery_address
+	 ORDER BY i.id
+2026-10-15T19:21:19.927786Z	   20 Query	SELECT i.number FROM ps_invoice i
+	 JOIN ps_customer c ON c.id = i.id_customer WHERE c.name = 'Recipe Alice' ORDER BY i.id LIMIT 1
+Framework list query observed separately:
+SELECT id, `name` FROM `country` LIMIT 50
+SELECT COUNT(*) `count` FROM `country`
