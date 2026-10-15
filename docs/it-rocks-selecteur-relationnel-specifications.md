@@ -12,6 +12,10 @@ Spécifications fonctionnelles et cadre de réalisation séquentielle
 Les sections 1 à 9 définissent la phase 1 ; la section 10 réserve la phase 2, **à ne pas développer maintenant**. Les
 sections 11 et 12 fournissent le cadre d'exécution et le prompt de préparation.
 
+Lire aussi les [dépendances et contrats d’intégration](dependencies.md) : ils fixent les responsabilités des
+packages, l’usage hors it.rocks et les travaux à inclure dans les modules dépendants. Ils font partie des
+exigences de la phase 1, en particulier pour les métadonnées, le tableau, le volet et la session.
+
 Les identifiants d'exigences sont stables et servent à relier tâches, code et tests. Les noms techniques proposés sont
 descriptifs, pas des noms de classes ou de modules imposés.
 
@@ -85,7 +89,9 @@ type PropertyPath = string | readonly string[]
 ```
 
 La racine correspond à un chemin vide ; son libellé peut apparaître dans l'interface mais n'est pas un segment
-technique. Elle est navigable, pas sélectionnable. Aucune dépendance à `ReflectPropertyPath` en V1.
+technique. Elle est navigable, pas sélectionnable. Le contrat du sélecteur reste indépendant de
+`ReflectPropertyPath` ; l’adaptateur it.rocks délègue la réflexion à `reflect-path` et `reflect`, selon
+[DEP-03](dependencies.md#31-métadonnées-et-résolution-des-chemins).
 
 **API-02.** L'architecture doit permettre les échanges suivants, via les conventions du dépôt plutôt qu'une nouvelle API
 arbitraire :
@@ -152,10 +158,15 @@ propriété.
 
 **UI-01.** Dans l'intégration tableau, le sélecteur occupe un panneau latéral droit qui réduit la largeur disponible du
 tableau sur ordinateur. Le tableau reste interactif et défilable. Pas de popup modale pour cet usage.
+Le volet générique appartient à `home` et son activation au framework, selon
+[DEP-08](dependencies.md#43-volet-droit-standard-dans-home) ; il est initialement rabattu.
+Le sélecteur est montable dans un autre hôte sans ce volet.
 
 **UI-02.** Sur mobile, ce panneau occupe l'espace disponible comme un écran. Un bouton permet de le masquer ; la vue
 principale propose un bouton pour le réafficher. Le bouton d'ajout de colonnes reste accessible à droite de l'en-tête du
-tableau, indépendamment de son défilement horizontal. Réutiliser les conventions de panneaux/menu de l'application.
+tableau, indépendamment de son défilement horizontal. Il demande l’ouverture du volet existant.
+La commande du volet n’apparaît que si son contenu est présent ; sa position et son inversion à l’ouverture
+suivent [DEP-08](dependencies.md#43-volet-droit-standard-dans-home).
 
 **UI-03.** Un ajout par clic ne ferme jamais automatiquement le panneau. Masquer puis réafficher restaure la navigation,
 la recherche et le défilement. Les transitions spécifiques au drag sont définies en section 7.
@@ -573,7 +584,10 @@ Le premier passage est un travail d'analyse et de planification, sans implément
 3. Définir le contrat minimal entre sélecteur, fournisseur et adaptateur, puis les fichiers et commandes de validation
    réellement concernés.
 4. Produire un plan ordonné et des fiches de tâches dans l'emplacement documentaire prévu par le projet. Relier chaque
-   exigence V1 à au moins une tâche et aux tests utiles. Marquer la phase 2 exclue.
+   exigence V1 et DEP-01 à DEP-10 à au moins une tâche et aux tests utiles. Inclure les développements dans
+   les packages propriétaires et ordonner leurs contrats avant leurs consommateurs, selon la
+   [prise en compte dans le plan](dependencies.md#7-prise-en-compte-obligatoire-dans-le-plan). Marquer la phase 2
+   exclue.
 
 Résoudre les inconnues du dépôt sans rouvrir les arbitrages UX. Documenter toute incompatibilité réelle, son impact et
 l'adaptation minimale proposée ; ne pas modifier silencieusement le périmètre.
@@ -659,7 +673,8 @@ Pour préparer puis exécuter automatiquement la phase 1, utiliser plutôt le
 [prompt d’orchestration](itrocks-property-select-prompt-orchestrateur.md).
 
 ```text
-Lis docs/it-rocks-selecteur-relationnel-specifications.md et les AGENTS.md applicables.
+Lis docs/it-rocks-selecteur-relationnel-specifications.md, docs/dependencies.md
+et les AGENTS.md applicables.
 Commence par vérifier que le dépôt est dans un état propre ; sinon arrête-toi et
 signale les modifications sans les effacer ni les masquer.
 
@@ -673,7 +688,8 @@ Tu peux créer les documents de planification dans l'emplacement adapté au dép
 Chaque tâche doit être bornée, autonome par sa description et ses références,
 expliciter ses dépendances, les fichiers/API réellement concernés, les exigences
 et tests couverts, les commandes de validation et ce qui est exclu. Maintiens
-une couverture de toutes les exigences V1. Le pré-découpage de la section 11 est
+une couverture de toutes les exigences V1 et DEP-01 à DEP-10. Prévois les développements et liaisons dans les
+packages propriétaires, ainsi que la recette hors it.rocks. Le pré-découpage de la section 11 est
 indicatif : ajuste-le à l'existant sans modifier les décisions fonctionnelles.
 
 Réutilise les composants et interactions existants. Garde tout comportement de

@@ -3,6 +3,10 @@
 Tu es uniquement l’orchestrateur du développement de `@itrocks/property-select`.
 
 **Spécifications :** [sélecteur relationnel](it-rocks-selecteur-relationnel-specifications.md).
+
+**Architecture obligatoire :** [dépendances et contrats d’intégration](dependencies.md), exigences DEP-01 à DEP-10.
+Ces contrats doivent être lus par les agents concernés et reliés aux tâches des packages propriétaires.
+
 **Objectif :** livrer sa phase 1, sélecteur générique back+front indépendant de tout tableau, avec première intégration
 au tableau. Ne rien développer de la phase 2.
 
@@ -63,9 +67,9 @@ ou niveau indisponible est un blocage explicite, pas une substitution silencieus
 
 ### 4.1 Audit : `gpt-6.1-sol` / `medium`
 
-Lis les specs et inspecte les dépôts nécessaires. Identifie composants réutilisables, points d’extension, conventions de
-packages et de commits, commandes réelles de validation, liens locaux entre packages non publiés, politique de versions
-et risques. Ne développe aucune fonctionnalité.
+Lis les specs et `docs/dependencies.md`, puis inspecte les dépôts nécessaires. Identifie composants réutilisables,
+points d’extension, conventions de packages et de commits, commandes réelles de validation, liens locaux entre packages
+non publiés, politique de versions et risques. Ne développe aucune fonctionnalité.
 Crée un dossier documentaire adapté, par défaut `docs/property-select/`, avec `AUDIT.md` et `COMMON.md`. Ce dernier
 reprend une seule fois les règles applicables aux exécutants : périmètre, exécution, calibrage, validation, Git,
 versions et retours. Ne leur impose pas ton interdiction de concevoir ou coder. Consigne les chemins des dépôts
@@ -75,18 +79,24 @@ autorisés et leurs points de contrôle. Committe ces documents selon les règle
 
 À partir des specs, de l’audit et du code utile, définis les contrats minimaux entre sélecteur, fournisseur de
 métadonnées et consommateur/tableau. Produis les contrats, un `PLAN.json` ordonné et une fiche Markdown par tâche.
+Inclure explicitement les ports et adaptateurs de métadonnées/session, le plugin d’ajout dans `table`,
+l’adaptateur de `list`, le volet standard de `home` et la composition serveur/navigateur dans le framework.
+Prévoir les extensions de `reflect` et `reflect-path` requises. Suivre les propriétaires et points d’entrée
+de `docs/dependencies.md`, sans déplacer ces responsabilités dans le sélecteur.
 Chaque entrée du manifeste contient `id`, titre, fiche, dépendances, dépôts/packages concernés, `model` et
 `model_reasoning_effort`. Chaque fiche précise objectif observable, références d’exigences, points d’entrée réellement
 constatés, travail, exclusions, critères d’acceptation, tests, commandes de validation et impact de version prévu.
 Les tâches sont autonomes en contexte, pas artificiellement indépendantes du code précédent. Choisis des livraisons
 cohérentes et testables, sans microdécoupage. Référence les specs sans les recopier. Couvre toutes les exigences V1 et
-réserve une dernière tâche à la recette transversale. Distingue contrôles automatisés requis et vérifications manuelles
-restant à effectuer. Committe le plan, sans implémentation produit.
+DEP-01 à DEP-10 et réserve une dernière tâche à la recette transversale. Distingue contrôles automatisés requis et
+vérifications manuelles restant à effectuer. Committe le plan, sans implémentation produit.
 
 ### 4.3 Revue du plan : `gpt-6.1-sol` / `high`
 
 Relis indépendamment specs, audit, contrats et fiches. Vérifie couverture V1, exclusion V2, séparation
-générique/tableau, ordre, contrats compatibles, testabilité, autonomie des fiches et calibrage. Corrige les incohérences
+générique/tableau, ordre, contrats compatibles, testabilité, autonomie des fiches et calibrage. Vérifie aussi
+les propriétaires de `docs/dependencies.md`, l’ordre des développements dans les dépendances et la recette
+autonome sans it.rocks, ainsi que l’absence de dépendances inverses. Corrige les incohérences
 documentaires sans modifier les arbitrages UX. Committe les corrections et un verdict court. Si une contradiction
 fonctionnelle ou une inconnue indispensable subsiste, retourne `BLOCKED`. Sinon valide le plan pour exécution.
 

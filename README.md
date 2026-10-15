@@ -19,6 +19,8 @@ They cover navigation, search, suggestions, session state, desktop and touch int
 and the first integration with table column selection.
 The [orchestration prompt](docs/itrocks-property-select-prompt-orchestrateur.md) describes the preparation and execution
 workflow in French.
+The [dependency and integration contracts](docs/dependencies.md), also in French, define the package boundaries,
+framework bindings and standalone use required by the development plan.
 
 ## Licence
 
