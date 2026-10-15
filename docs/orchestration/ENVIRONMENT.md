@@ -2,7 +2,8 @@
 
 ## Scope and checkpoint
 
-Task 4.2: `NEEDS_FIX`, checked on 15 October 2026, pending independent verification of the tactile tooling correction.
+Task 4.2: `NEEDS_FIX`, independently checked on 15 October 2026. Tactile tooling passes; the owned MySQL shutdown
+procedure needs correction. See [independent verification](VERIFY-ENVIRONMENT.md) for results and the reproducer.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.

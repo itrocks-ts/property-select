@@ -1,0 +1,432 @@
+{
+  "timestamp": "2026-10-15T19:35:11.377Z",
+  "scenarios": [
+    {
+      "name": "fresh-mysql",
+      "verdict": "PASS",
+      "roots": 4
+    },
+    {
+      "name": "framework-navigation",
+      "cap": {
+        "width": 1280,
+        "height": 720,
+        "touch": 0,
+        "coarse": false,
+        "hover": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "name": "framework-navigation",
+      "cap": {
+        "width": 390,
+        "height": 844,
+        "touch": 0,
+        "coarse": false,
+        "hover": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "name": "framework-navigation",
+      "cap": {
+        "width": 844,
+        "height": 390,
+        "touch": 0,
+        "coarse": false,
+        "hover": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "name": "standalone-support",
+      "verdict": "PASS"
+    },
+    {
+      "name": "no-touch-negative-control",
+      "cap": {
+        "width": 844,
+        "height": 390,
+        "touch": 0,
+        "coarse": false,
+        "hover": true
+      },
+      "events": [
+        {
+          "pointerType": "mouse",
+          "time": 52.299999952316284,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 50,
+          "y": 173.875
+        },
+        {
+          "pointerType": "mouse",
+          "time": 52.5,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 50,
+          "y": 173.875
+        },
+        {
+          "pointerType": "mouse",
+          "time": 52.60000014305115,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 50,
+          "y": 173.875
+        }
+      ],
+      "rejected": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "tap",
+      "cap": {
+        "width": 390,
+        "height": 844,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "elapsed": 0,
+      "moved": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 45.09999990463257,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 45.09999990463257,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": "touch",
+          "time": 45.09999990463257,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 45.09999990463257,
+          "trusted": true,
+          "type": "touchend",
+          "x": 55,
+          "y": 239
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "long-press",
+      "cap": {
+        "width": 390,
+        "height": 844,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "elapsed": 802.9000000953674,
+      "moved": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 41.40000009536743,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 41.40000009536743,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": "touch",
+          "time": 844.3000001907349,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 844.3000001907349,
+          "trusted": true,
+          "type": "touchend",
+          "x": 55,
+          "y": 239
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "drag",
+      "cap": {
+        "width": 390,
+        "height": 844,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "elapsed": 1011.1000001430511,
+      "moved": 180.39955654047492,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 40.59999990463257,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 40.59999990463257,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": "touch",
+          "time": 843.3999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 85,
+          "y": 241
+        },
+        {
+          "pointerType": null,
+          "time": 843.3999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 85,
+          "y": 241
+        },
+        {
+          "pointerType": "touch",
+          "time": 885.8999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 115,
+          "y": 243
+        },
+        {
+          "pointerType": null,
+          "time": 885.8999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 115,
+          "y": 243
+        },
+        {
+          "pointerType": "touch",
+          "time": 918.8999998569489,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 145,
+          "y": 245
+        },
+        {
+          "pointerType": null,
+          "time": 918.8999998569489,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 145,
+          "y": 245
+        },
+        {
+          "pointerType": "touch",
+          "time": 952,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 175,
+          "y": 247
+        },
+        {
+          "pointerType": null,
+          "time": 952,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 175,
+          "y": 247
+        },
+        {
+          "pointerType": "touch",
+          "time": 985,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 205,
+          "y": 249
+        },
+        {
+          "pointerType": null,
+          "time": 985,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 205,
+          "y": 249
+        },
+        {
+          "pointerType": "touch",
+          "time": 1018.7000000476837,
+          "trusted": true,
+          "type": "pointermove",
+          "x": 235,
+          "y": 251
+        },
+        {
+          "pointerType": null,
+          "time": 1018.7000000476837,
+          "trusted": true,
+          "type": "touchmove",
+          "x": 235,
+          "y": 251
+        },
+        {
+          "pointerType": "touch",
+          "time": 1051.7000000476837,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 235,
+          "y": 251
+        },
+        {
+          "pointerType": null,
+          "time": 1051.7000000476837,
+          "trusted": true,
+          "type": "touchend",
+          "x": 235,
+          "y": 251
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "cancel",
+      "cap": {
+        "width": 390,
+        "height": 844,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "elapsed": 2.200000047683716,
+      "moved": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 44.59999990463257,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 44.59999990463257,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": "touch",
+          "time": 46.799999952316284,
+          "trusted": true,
+          "type": "pointercancel",
+          "x": 55,
+          "y": 239
+        },
+        {
+          "pointerType": null,
+          "time": 46.799999952316284,
+          "trusted": true,
+          "type": "touchcancel",
+          "x": 55,
+          "y": 239
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape-tap",
+      "cap": {
+        "width": 844,
+        "height": 390,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "elapsed": 0,
+      "moved": 0,
+      "events": [
+        {
+          "pointerType": "touch",
+          "time": 46.200000047683716,
+          "trusted": true,
+          "type": "pointerdown",
+          "x": 55,
+          "y": 174
+        },
+        {
+          "pointerType": null,
+          "time": 46.200000047683716,
+          "trusted": true,
+          "type": "touchstart",
+          "x": 55,
+          "y": 174
+        },
+        {
+          "pointerType": "touch",
+          "time": 46.200000047683716,
+          "trusted": true,
+          "type": "pointerup",
+          "x": 55,
+          "y": 174
+        },
+        {
+          "pointerType": null,
+          "time": 46.200000047683716,
+          "trusted": true,
+          "type": "touchend",
+          "x": 55,
+          "y": 174
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "framework-touch-context",
+      "cap": {
+        "width": 844,
+        "height": 390,
+        "touch": 1,
+        "coarse": true,
+        "hover": false
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "browserErrors": [],
+  "failedRequests": [],
+  "browser": "151.0.7922.34",
+  "touchStartupEvents": "[\n  {\n    \"pointerType\": \"mouse\",\n    \"time\": 6.199999809265137,\n    \"trusted\": true,\n    \"type\": \"pointermove\",\n    \"x\": 0,\n    \"y\": 0\n  }\n]",
+  "verdict": "PASS"
+}
