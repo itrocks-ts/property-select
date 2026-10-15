@@ -2,8 +2,9 @@
 
 ## Scope and checkpoint
 
-Task 4.2: `NEEDS_FIX`, independently checked on 15 October 2026. Tactile tooling passes; the owned MySQL shutdown
-procedure needs correction. See [independent verification](VERIFY-ENVIRONMENT.md) for results and the reproducer.
+Task 4.2: shutdown correction delivered on 15 October 2026; independent VAL-07 retest is pending.
+Tactile tooling passes. See the [shutdown correction](environment/SHUTDOWN-CORRECTION.md) for its regression results
+and [independent verification](VERIFY-ENVIRONMENT.md) for the original defect and reproducer.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
@@ -198,7 +199,11 @@ Both commands verify the recorded PID command line against the package launcher.
 executed and followed by an HTTP check and actual browser reload. Servers remain running for subsequent tasks.
 For full teardown, `control.mjs stop` additionally stops its recorded dedicated MySQL instance and any matching
 standalone PID in that directory. Use it only after confirming no following task needs the recipe.
-No datadir deletion is part of shutdown. Reset fixtures with `reset` before a new SQL acceptance run.
+MySQL shutdown uses `mysqladmin --protocol=SOCKET` after checking exact process arguments, UID, datadir, socket,
+PID file and server UUID. It waits for the process, socket and PID file to disappear, with bounded timeouts.
+A mismatch or inaccessible ownership evidence fails without stopping the database. Repeated full shutdown succeeds
+when MySQL has already removed its PID file and socket. No datadir deletion is part of shutdown.
+Reset fixtures with `reset` before a new SQL acceptance run.
 
 SOLID review: launch, fixture and evidence resources contain no selector, SQL builder, reflection, table or pane product
 logic. The configuration shim is explicitly test-only and calls installed public package entries; it is not a product

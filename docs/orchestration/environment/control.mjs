@@ -1,6 +1,7 @@
 import { spawn, spawnSync } from 'node:child_process'
 import { closeSync, existsSync, mkdirSync, openSync, readFileSync } from 'node:fs'
 import { resolve } from 'node:path'
+import { setTimeout } from 'node:timers/promises'
 import { fileURLToPath } from 'node:url'
 
 const directory = process.env.PS_ENV_DIRECTORY || '/tmp/showtime-property-select-env'
@@ -24,6 +25,50 @@ function launch(program, args, log)
 	})
 	child.unref()
 	closeSync(descriptor)
+}
+
+async function stopDatabase()
+{
+	const pidFile = `${directory}/mysql.pid`
+	if (!existsSync(pidFile)) {
+		if (existsSync(socket)) throw new Error('Database socket exists without an owned PID')
+		console.log('PASS: owned MySQL is already stopped')
+		return
+	}
+	const pid = Number(readFileSync(pidFile, 'utf8').trim())
+	if (!Number.isSafeInteger(pid) || pid <= 1) throw new Error('Invalid database PID')
+	const args = readFileSync(`/proc/${pid}/cmdline`, 'utf8').split('\0')
+	for (const argument of [
+		`--datadir=${directory}/data`, `--socket=${socket}`, `--pid-file=${pidFile}`, '--bind-address=127.0.0.1'
+	]) {
+		if (!args.includes(argument)) throw new Error(`PID ${pid} is not the owned MySQL instance`)
+	}
+	const uid = readFileSync(`/proc/${pid}/status`, 'utf8').match(/^Uid:\s+(\d+)/m)?.[1]
+	if (Number(uid) !== process.getuid()) throw new Error('MySQL belongs to another user')
+	// Verify the server reached through the socket before sending any administrative shutdown.
+	const connection = ['--no-defaults', '--protocol=SOCKET', `--socket=${socket}`, '--connect-timeout=5', '-u', 'root']
+	const identity = spawnSync('mysql', [...connection, '--batch', '--skip-column-names', '-e',
+		'SELECT @@datadir, @@socket, @@pid_file, @@server_uuid'], { encoding: 'utf8', timeout: 10000 })
+	if (identity.status !== 0) throw new Error(`MySQL identity check failed: ${identity.stderr ?? identity.error}`)
+	const [data, serverSocket, serverPidFile, uuid] = identity.stdout.trim().split('\t')
+	const ownedUuid = readFileSync(`${directory}/data/auto.cnf`, 'utf8').match(/^server-uuid=(.+)$/m)?.[1]
+	if (resolve(data) !== resolve(directory, 'data') || serverSocket !== socket || serverPidFile !== pidFile
+		|| !ownedUuid || uuid !== ownedUuid) throw new Error('Socket does not identify the owned MySQL instance')
+	const result = spawnSync('mysqladmin', [...connection, 'shutdown'], { encoding: 'utf8', timeout: 30000 })
+	if (result.status !== 0) throw new Error(`MySQL shutdown failed: ${result.stderr ?? result.error}`)
+	const deadline = Date.now() + 30000
+	const running = () => {
+		try { return !/^State:\s+Z/m.test(readFileSync(`/proc/${pid}/status`, 'utf8')) }
+		catch (error) {
+			if (error.code === 'ENOENT') return false
+			throw error
+		}
+	}
+	while (existsSync(pidFile) || existsSync(socket) || running()) {
+		if (Date.now() >= deadline) throw new Error('Owned MySQL shutdown timed out; resources retained')
+		await setTimeout(100)
+	}
+	console.log(`PASS: owned MySQL ${pid} stopped through ${socket}; PID file and socket removed`)
 }
 
 mkdirSync(directory, { recursive: true })
@@ -57,8 +102,7 @@ else if (command === 'standalone') {
 else if (['stop', 'stop-app', 'stop-standalone'].includes(command)) {
 	// Match the recorded owner's command line before signalling a potentially reused PID.
 	for (const [name, marker] of [
-		['app', `${source}app.cjs`], ['standalone', `${source}standalone.mjs`],
-		['mysql', `--datadir=${directory}/data`]
+		['app', `${source}app.cjs`], ['standalone', `${source}standalone.mjs`]
 	]) {
 		if (command !== 'stop' && command !== `stop-${name}`) continue
 		if (!existsSync(`${directory}/${name}.pid`)) continue
@@ -70,6 +114,7 @@ else if (['stop', 'stop-app', 'stop-standalone'].includes(command)) {
 		}
 		catch (error) { if (error.code !== 'ENOENT' && error.code !== 'ESRCH') throw error }
 	}
+	if (command === 'stop') await stopDatabase()
 }
 else if (command === 'queries') {
 	console.log(readFileSync(`${directory}/queries.log`, 'utf8'))

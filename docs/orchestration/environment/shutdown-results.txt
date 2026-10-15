@@ -1,0 +1,15 @@
+Resources: /tmp/property-select-shutdown-regression-SABY8s; ports 13424, 13425, 13426
+PASS: cycle 1 rejects a foreign recorded PID without stopping its server
+mysqld is alive
+PASS: framework list HTTP 200 with Recipe France
+PASS: owned MySQL 2103691 stopped through /tmp/property-select-shutdown-regression-SABY8s/mysql.sock; PID file and socket removed
+PASS: owned MySQL is already stopped
+PASS: cycle 1 full stack stopped, journal confirmed; repeated stop succeeds
+PASS: cycle 2 rejects a foreign recorded PID without stopping its server
+mysqld is alive
+PASS: framework list HTTP 200 with Recipe France
+PASS: owned MySQL 2103890 stopped through /tmp/property-select-shutdown-regression-SABY8s/mysql.sock; PID file and socket removed
+PASS: owned MySQL is already stopped
+PASS: cycle 2 full stack stopped, journal confirmed; repeated stop succeeds
+PASS: inherited listener availability preserved; fixtures survive restart
+Retained logs and synthetic datadir: /tmp/property-select-shutdown-regression-SABY8s
