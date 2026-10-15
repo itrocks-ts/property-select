@@ -1,0 +1,2316 @@
+{
+  "url": "http://127.0.0.1:13741/pane-fixture",
+  "seed": "generic fixture: 16 branches / 80 items",
+  "assertions": [
+    {
+      "name": "desktop: real home shell",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: empty has no command",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: empty has no content",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: registration folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: registration subscription immediate",
+      "expected": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "observed": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: exactly one dock command after notifications",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: closed icon",
+      "expected": "‹",
+      "observed": "‹",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: competing registration refuses and preserves content",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: open title",
+      "expected": "Generic recipe content",
+      "observed": "Generic recipe content",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: command before title and reversed",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: expanded aria",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: 44px command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: main shrinks",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: desktop main interactive",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: main scrolls both axes",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: visible keyboard outline",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard Enter opens",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: mouse long breadcrumb accessible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: content scroll exists",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: explicit close folds and focuses command",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: reopen preserves value",
+      "expected": "independent retained value",
+      "observed": "independent retained value",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: reopen preserves scroll",
+      "expected": 260,
+      "observed": 260,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: nested token still folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: final restore opens same content",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: restore avoids search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: restore scroll retained",
+      "expected": 260,
+      "observed": 260,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: Escape folds and focuses",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: inert cleared on close",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: removal hides command clears title/content",
+      "expected": [
+        false,
+        "",
+        0
+      ],
+      "observed": [
+        false,
+        "",
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: stale handle cannot reopen/remove successor",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: theme contrast",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: all browser events trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: fresh reload empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "resize: modal and focus moved from hidden main",
+      "expected": [
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "resize: main restored and pane retained",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "public contract: inactive replacement / active refusal / explicit suspended close / final removal",
+      "expected": {
+        "explicitCloseRetained": true,
+        "final": {
+          "present": false,
+          "open": false,
+          "suspended": false
+        },
+        "occupied": "PaneOccupiedError",
+        "sameHandle": true,
+        "title": "Updated title"
+      },
+      "observed": {
+        "explicitCloseRetained": true,
+        "final": {
+          "present": false,
+          "open": false,
+          "suspended": false
+        },
+        "occupied": "PaneOccupiedError",
+        "sameHandle": true,
+        "title": "Updated title"
+      },
+      "verdict": "PASS"
+    },
+    {
+      "name": "dispose: no orphan content/command",
+      "expected": [
+        false,
+        0
+      ],
+      "observed": [
+        false,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: real home shell",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: empty has no command",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: empty has no content",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: registration folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: registration subscription immediate",
+      "expected": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "observed": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: exactly one dock command after notifications",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: closed icon",
+      "expected": "‹",
+      "observed": "‹",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: competing registration refuses and preserves content",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: open title",
+      "expected": "Generic recipe content",
+      "observed": "Generic recipe content",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: command before title and reversed",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: expanded aria",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: 44px command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: main shrinks",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: desktop main interactive",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: main scrolls both axes",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: visible keyboard outline",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard Enter opens",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: mouse long breadcrumb accessible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: content scroll exists",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: explicit close folds and focuses command",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: reopen preserves value",
+      "expected": "independent retained value",
+      "observed": "independent retained value",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: reopen preserves scroll",
+      "expected": 260,
+      "observed": 260,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: nested token still folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: final restore opens same content",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: restore avoids search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: restore scroll retained",
+      "expected": 260,
+      "observed": 260,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: Escape folds and focuses",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: inert cleared on close",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: removal hides command clears title/content",
+      "expected": [
+        false,
+        "",
+        0
+      ],
+      "observed": [
+        false,
+        "",
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: stale handle cannot reopen/remove successor",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: theme contrast",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: all browser events trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: fresh reload empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: real home shell",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: empty has no command",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: empty has no content",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: registration folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: registration subscription immediate",
+      "expected": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "observed": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: exactly one dock command after notifications",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: closed icon",
+      "expected": "‹",
+      "observed": "‹",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: competing registration refuses and preserves content",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: open title",
+      "expected": "Generic recipe content",
+      "observed": "Generic recipe content",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: command before title and reversed",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: expanded aria",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: 44px command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: main inert modal",
+      "expected": [
+        true,
+        "dialog",
+        "true"
+      ],
+      "observed": [
+        true,
+        "dialog",
+        "true"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: pane fills viewport",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: reverse tab traps at last control",
+      "expected": "pane-suspend",
+      "observed": "pane-suspend",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: forward tab traps at command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: touch long breadcrumb accessible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: cancellation keeps pane open",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: content scroll exists",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: explicit close folds and focuses command",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: reopen preserves value",
+      "expected": "independent retained value",
+      "observed": "independent retained value",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: reopen preserves scroll",
+      "expected": 213,
+      "observed": 213,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: nested token still folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: final restore opens same content",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: restore avoids search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: restore scroll retained",
+      "expected": 213,
+      "observed": 213,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: Escape folds and focuses",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: inert cleared on close",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: removal hides command clears title/content",
+      "expected": [
+        false,
+        "",
+        0
+      ],
+      "observed": [
+        false,
+        "",
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: stale handle cannot reopen/remove successor",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: theme contrast",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: all browser events trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: touch movement and cancellation transported",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: fresh reload empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: real home shell",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: empty has no command",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: empty has no content",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: registration folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: registration subscription immediate",
+      "expected": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "observed": "{\"present\":true,\"open\":false,\"suspended\":false}",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: exactly one dock command after notifications",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: closed icon",
+      "expected": "‹",
+      "observed": "‹",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: competing registration refuses and preserves content",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: open title",
+      "expected": "Generic recipe content",
+      "observed": "Generic recipe content",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: command before title and reversed",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: expanded aria",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: 44px command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: main inert modal",
+      "expected": [
+        true,
+        "dialog",
+        "true"
+      ],
+      "observed": [
+        true,
+        "dialog",
+        "true"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: pane fills viewport",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reverse tab traps at last control",
+      "expected": "pane-suspend",
+      "observed": "pane-suspend",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: forward tab traps at command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: touch long breadcrumb accessible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: cancellation keeps pane open",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: content scroll exists",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: explicit close folds and focuses command",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reopen preserves value",
+      "expected": "independent retained value",
+      "observed": "independent retained value",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reopen preserves scroll",
+      "expected": 366,
+      "observed": 366,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: nested token still folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: final restore opens same content",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: restore avoids search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: restore scroll retained",
+      "expected": 366,
+      "observed": 366,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: Escape folds and focuses",
+      "expected": [
+        false,
+        true
+      ],
+      "observed": [
+        false,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: inert cleared on close",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: removal hides command clears title/content",
+      "expected": [
+        false,
+        "",
+        0
+      ],
+      "observed": [
+        false,
+        "",
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: stale handle cannot reopen/remove successor",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: theme contrast",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: all browser events trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: touch movement and cancellation transported",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: fresh reload empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "network and browser health",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    }
+  ],
+  "health": [],
+  "modes": [
+    {
+      "mode": "desktop",
+      "width": 1280,
+      "height": 720,
+      "hasTouch": false,
+      "isMobile": false,
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Control"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "A"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "r"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "v"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "l"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "u"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Escape"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "narrow",
+      "width": 768,
+      "height": 900,
+      "hasTouch": false,
+      "isMobile": false,
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Control"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "A"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "r"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "v"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "l"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "u"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Escape"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "hasTouch": true,
+      "isMobile": true,
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Control"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "A"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "r"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "v"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "l"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "u"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchcancel",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Escape"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "width": 844,
+      "height": 390,
+      "hasTouch": true,
+      "isMobile": true,
+      "inputs": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Control"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "A"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "r"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "i"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "n"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "d"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "v"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "a"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "l"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "u"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchcancel",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointercancel",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Escape"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "checkpoints": {
+    "home": "857a9f7796feb71816f75aa84d27a08c31f5f44a / 0.5.1",
+    "propertySelect": "ae300eace5d7a1b1ed73980b1921b40650238558 / 0.2.2; verifier tracking 0.2.3"
+  },
+  "verdict": "PASS"
+}

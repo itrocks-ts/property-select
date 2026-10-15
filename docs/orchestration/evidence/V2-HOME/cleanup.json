@@ -1,0 +1,7 @@
+{
+  "command": "PS_ENV_DIRECTORY=/tmp/property-select-V2-HOME-live node node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs stop-app",
+  "exit_code": 0,
+  "output": "PASS: owned app 2276980 stopped",
+  "app_pid_absent": true,
+  "app_owner_absent": true
+}

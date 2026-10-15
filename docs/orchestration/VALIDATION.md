@@ -986,25 +986,29 @@ Implementation: `L2-HOME L2-LIST L6`. Independent gates: `V2-HOME V2 V6 V7`. Met
 Expected: No content means no pane command; first arbitrary content starts folded; one command is right of
 notifications/breadcrumb while closed.
 
-Proof: `evidence/<gate>/PANE-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
+Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-02: Opened command and desktop layout
 
 Expected: Same command moves left of pane title and reverses icon; main table shrinks but stays interactive and
 scrollable.
 
-Proof: `evidence/<gate>/PANE-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
+Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-03: Occupancy and restoration tokens
 
 Expected: Competing owner registration rejects; temporary fold preserves instance; release restores former state;
 removal/navigation invalidates tokens and prevents stale reopening.
 
-Proof: `evidence/<gate>/PANE-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
+Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-04: Focus and mobile modal region
 
 Expected: Explicit close focuses visible trigger, mobile hidden main is unfocusable, desktop main remains accessible
 and drag restoration avoids search focus.
 
-Proof: `evidence/<gate>/PANE-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
+Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-05: Header control and click flow
 
 Expected: Pinned right header add button opens the one existing pane at every horizontal scroll position; mobile
@@ -1016,7 +1020,8 @@ Proof: `evidence/<gate>/PANE-05.*` and `reports/<gate>.md`. Current verdict: `NO
 Expected: Desktop/narrow/portrait/landscape pass no overflow, long breadcrumb access, comfortable touch targets,
 contrast, visible focus, themes and reduced motion.
 
-Proof: `evidence/<gate>/PANE-06.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
+Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 
 ## LIFE additional cases
 
@@ -1154,6 +1159,17 @@ restoration/disposal, title, subscription, movable command, desktop interaction/
 four viewport layouts, actual touch scroll, breadcrumb access, themes and reduced motion are exercised.
 The delivered owner is `home` 0.5.1; package exports/build/style/inventory also pass.
 
-Independent PANE verdicts remain NOT_RUN until V2-HOME. Combined UI-01..03, QUA-02 and DEP-08 requirements retain their
+Independent PANE shell verdicts pass V2-HOME. Combined UI-01..03, QUA-02 and DEP-08 requirements retain their
 later integration gates. PANE-05, list header, product drag and navigation cleanup by the future composition remain
 NOT_RUN at their named stages; the public removal contract invalidates stale tokens now.
+
+## Independent V2-HOME result
+
+V2-HOME passes PANE-01–PANE-04 and PANE-06 shell observations on home `0.5.1`, checkpoint
+`857a9f7796feb71816f75aa84d27a08c31f5f44a`. The independent
+[driver](environment/checks/V2-HOME.mjs) executes **147 assertions** against the actual `/pane-fixture` route,
+including mouse/keyboard at 1280 × 720 and 768 × 900 plus trusted emulated touch at 390 × 844 and 844 × 390.
+[Results](evidence/V2-HOME/results.json), sixteen screenshots and the [report](reports/V2-HOME.md) record empty/content
+states, one relocated command, title, focus, shrinking/scrollable desktop main, mobile modal isolation, preservation,
+competing owners, nested restoration, stale removal, resize, dynamic insertion, reload and clean network/console.
+Combined UI/DEP requirements keep their later list, selector and product drag observations NOT_RUN. PANE-05 is NOT_RUN.

@@ -870,7 +870,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "medium",
       "model_justification": "Home is a visible independent increment and needs its own immediate gate.",
@@ -882,7 +882,18 @@
         "QUA-02",
         "VAL-04",
         "VAL-06"
-      ]
+      ],
+      "delivery": {
+        "verdict": "PASS",
+        "tested_home_checkpoint": "857a9f7796feb71816f75aa84d27a08c31f5f44a",
+        "tested_home_version": "0.5.1",
+        "tracking_base_checkpoint": "ae300eace5d7a1b1ed73980b1921b40650238558",
+        "tracking_version": "0.2.3",
+        "browser_assertions": 147,
+        "evidence": "evidence/V2-HOME/results.json",
+        "scope": "PANE-01..04 and PANE-06 shell PASS; list/product drag remain at later gates",
+        "profile_attestation": "Requested gpt-6.1-sol / medium; actual dispatch metadata is held by parent; runtime unverified"
+      }
     },
     {
       "id": "L2-TABLE",
