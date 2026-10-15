@@ -1,0 +1,35 @@
+{
+	"author": {
+		"name": "Baptiste Pillot",
+		"email": "baptiste@pillot.fr"
+	},
+	"description": "Interactive property selection through business object relationships",
+	"files": [
+		"COPYING",
+		"LICENSE",
+		"README.md"
+	],
+	"homepage": "https://it.rocks",
+	"keywords": [
+		"browser",
+		"drag-and-drop",
+		"it.rocks",
+		"metadata",
+		"navigation",
+		"property",
+		"property-path",
+		"relations",
+		"search",
+		"selection"
+	],
+	"license": "LGPL-3.0-or-later",
+	"name": "@itrocks/property-select",
+	"publishConfig": {
+		"access": "public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/itrocks-ts/property-select.git"
+	},
+	"version": "0.0.1"
+}
