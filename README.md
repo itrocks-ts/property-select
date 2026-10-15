@@ -21,6 +21,9 @@ The [orchestration prompt](docs/itrocks-property-select-prompt-orchestrateur.md)
 workflow in French.
 The [dependency and integration contracts](docs/dependencies.md), also in French, define the package boundaries,
 framework bindings and standalone use required by the development plan.
+The [validation and autonomous delivery protocol](docs/validation.md), also in French, requires progressive browser
+checks, independent verification and correction tasks before delivery.
+The [data selection contract](docs/select.md) specifies the storage and SQL work required for related columns.
 
 ## Licence
 

@@ -158,6 +158,8 @@ les en-têtes, ainsi que les interactions de tri et les plugins de colonnes gel�
 et demande au service de volet injecté par le framework d’héberger le sélecteur.
 Il doit gérer les chemins relationnels dans les en-têtes, cellules, chargements supplémentaires et état sauvegardé,
 avec `reflect-path` pour la résolution plutôt qu’une nouvelle traversée métier locale.
+Pour lire ces valeurs, `list` utilise le nouveau contrat `DataSource.select()` de
+[DEP-11](#44-sélection-de-données-par-chemins), à implémenter et vérifier avant cette intégration.
 La persistance de configuration et les options de requête restent chez leurs propriétaires existants.
 Aucune requête de données de colonne ne part du sélecteur.
 
@@ -194,6 +196,18 @@ pendant une interaction active. Il ne doit pas introduire un gestionnaire de fen
 `home` possède structure, comportement et styles spécifiques au volet. Réutiliser
 [`@itrocks/ux-core`](https://github.com/itrocks-ts/ux-core) pour les conventions de thèmes et de responsive ;
 des styles réellement partagés peuvent y être factorisés, sans y transférer la responsabilité du volet.
+
+### 4.4 Sélection de données par chemins
+
+**DEP-11.** Les capacités actuelles de `Mysql.search()` ne suffisent pas à lire les colonnes relationnelles de `list`.
+Ajouter `select()` au contrat `DataSource` de `@itrocks/storage` et à son implémentation `Mysql` dans `@itrocks/mysql`.
+L’implémentation appelle `@itrocks/sql-build` pour construire la requête depuis les chemins projetés et les critères,
+avec `@itrocks/sql-join` pour les jointures. Le contrat couvre aussi les colonnes objets et leurs valeurs typées.
+
+Le [contrat de sélection et sa référence PHP](select.md) précise responsabilités, périmètre initial, points d’entrée,
+limites, ordre des sous-tâches et validations obligatoires, notamment sur une base de test réelle.
+Il est une entrée obligatoire des tâches de données, de réflexion, de construction SQL et d’intégration de `list`.
+Ces développements restent dans leurs propriétaires ; `property-select` ne devient pas un composant d’accès aux données.
 
 ## 5. Composition par le framework et usage autonome
 
@@ -279,13 +293,16 @@ Ne pas créer un nouveau package de drag, de panneau, de recherche ou de recomma
 
 ## 7. Prise en compte obligatoire dans le plan
 
-Chaque exigence DEP-01 à DEP-10 doit être reliée à des tâches et des critères de validation, en complément des
-exigences fonctionnelles. Le plan doit couvrir les changements dans les dépendances, pas seulement dans le sélecteur.
+Chaque exigence DEP-01 à DEP-11 doit être reliée à des tâches et des critères de validation, en complément des
+exigences fonctionnelles et de [validation VAL-01 à VAL-08](validation.md). Le plan doit couvrir les changements dans
+les dépendances, pas seulement dans le sélecteur.
 
 - **Audit et contrats, avant L1 :** vérifier propriétaires, exports, dépendances et compositions ; arrêter les
   signatures des ports, données, retours, annulations, défauts, activation et destruction des instances.
 - **L1 et L3 :** séparer cœur et fournisseur it.rocks ; prévoir les extensions de `reflect` et `reflect-path`
   nécessaires et tester la recherche avec un catalogue indépendant, y compris relations inconnues et cycles.
+- **Avant les colonnes relationnelles de L2 :** réaliser DEP-11 selon les sous-tâches de [sélection](select.md),
+  avec contrat, construction SQL, implémentation MySQL et validation indépendante sur une vraie base.
 - **L2 :** développer le volet générique dans `home`, son branchement par le framework, le plugin d’ajout dans `table`
   et l’adaptateur de `list` pour les clics. Le sélecteur doit déjà fonctionner avec un autre hôte.
 - **L4 :** raccorder l’état à la session réelle, les libellés et conseils aux fournisseurs existants ; tester
@@ -300,3 +317,7 @@ fournis, les dépendances logiques et les validations par dépôt. Le manifeste 
 avant leurs consommateurs et prévoir leur intégration avant la tâche suivante. Inclure les impacts de version,
 les exports et ressources navigateur à livrer ainsi que la documentation des liaisons effectivement réalisées.
 La revue du plan vérifie l’absence de dépendance inverse et de fonctionnalité de tableau ou de volet dans le sélecteur.
+
+L’environnement et les sous-tâches de vérification navigateur sont planifiés selon [VAL-01/02](validation.md).
+Les défauts d’intégration déclenchent les corrections chez leurs propriétaires puis une nouvelle vérification
+indépendante selon VAL-07. La clôture inclut la recette intégrée et la remise en état utilisable de VAL-08.

@@ -15,6 +15,8 @@ sections 11 et 12 fournissent le cadre d'exécution et le prompt de préparation
 Lire aussi les [dépendances et contrats d’intégration](dependencies.md) : ils fixent les responsabilités des
 packages, l’usage hors it.rocks et les travaux à inclure dans les modules dépendants. Ils font partie des
 exigences de la phase 1, en particulier pour les métadonnées, le tableau, le volet et la session.
+Le [contrat de sélection de données](select.md), DEP-11, impose `DataSource.select()`, `Mysql.select()` et
+la construction SQL par chemins avant les colonnes relationnelles réelles de `list`.
 
 Les identifiants d'exigences sont stables et servent à relier tâches, code et tests. Les noms techniques proposés sont
 descriptifs, pas des noms de classes ou de modules imposés.
@@ -22,6 +24,10 @@ descriptifs, pas des noms de classes ou de modules imposés.
 **Avant de planifier**, consulter les `AGENTS.md` applicables et inspecter métadonnées, chemins, événements, tests,
 panneaux et interactions existants. Le dépôt n'a pas été audité pour ce document : ne pas inventer ses API, packages ou
 commandes de test. Réutiliser l'existant, sans refonte générale ni nouvelle dépendance par défaut.
+
+Le [protocole de validation et de livraison autonome](validation.md) fixe les contrôles VAL-01 à VAL-08 :
+environnement éprouvé, sous-tâches navigateur successives, corrections et recette finale indépendante.
+Il est obligatoire pour le développement complet, en complément des scénarios de la section 9.
 
 Une tâche est **autonome en contexte**, pas nécessairement indépendante techniquement : elle peut dépendre de code déjà
 livré, mais jamais d'une conversation avec un agent précédent.
@@ -437,13 +443,18 @@ tableau reste accessible. Après fermeture explicite, le focus revient à un con
 chargement différé, annulation et réutilisation des données ; ne pas introduire une infrastructure de virtualisation ou
 d'indexation complète si l'existant suffit aux tests de charge représentatifs.
 
+L’accès aux valeurs des colonnes relationnelles repose sur [DEP-11 et son contrat `select()`](select.md).
+Les validations de stockage, de construction SQL et de rendu intégré doivent être planifiées dans leurs propriétaires.
+
 ## 9. Critères d'acceptation et recette
 
 Préparer des fixtures couvrant Facture/Commande, Client, Adresse, Ville, Pays, Lignes et plusieurs chemins vers un même
 type. Ajouter une relation inverse connue, un N-N et une branche cyclique. Tester les contrats génériques avec un faux
 consommateur non lié au tableau.
 
-Automatiser les cas vérifiables et documenter séparément la recette sur appareil tactile réel.
+Automatiser les cas vérifiables et exécuter les contrôles dans un navigateur réel, selon
+[VAL-01 à VAL-08](validation.md). La recette commence dès les premières interactions intégrées, sans attendre L7.
+Distinguer responsive, émulation tactile et appareil physique ; traiter une indisponibilité matérielle selon VAL-05.
 
 - **T01**. **Scénario minimal :** Le sélecteur fonctionne avec un faux consommateur et sans import du tableau ; chaîne
   et segments désignent la même propriété. **Références :** ARC-01 à 04, API-01/02
@@ -529,6 +540,8 @@ Automatiser les cas vérifiables et documenter séparément la recette sur appar
 **Fin de phase 1 :** tests pertinents exécutés, contrôles de compilation/types/style du dépôt satisfaits, non-régression
 des interactions existantes du tableau et recette responsive documentée. Déclarer les tests non exécutés et leurs
 raisons. Ne pas annoncer une validation sur appareil physique lorsqu'elle n'a pas eu lieu.
+Les contrôles obligatoires non exécutés et les défauts connus empêchent la clôture, sauf la réserve matérielle
+explicitement admise par [VAL-08](validation.md#7-recette-finale-et-remise-en-état-de-livraison).
 
 ## 10. Phase 2 : hors du développement actuel
 
@@ -584,8 +597,8 @@ Le premier passage est un travail d'analyse et de planification, sans implément
 3. Définir le contrat minimal entre sélecteur, fournisseur et adaptateur, puis les fichiers et commandes de validation
    réellement concernés.
 4. Produire un plan ordonné et des fiches de tâches dans l'emplacement documentaire prévu par le projet. Relier chaque
-   exigence V1 et DEP-01 à DEP-10 à au moins une tâche et aux tests utiles. Inclure les développements dans
-   les packages propriétaires et ordonner leurs contrats avant leurs consommateurs, selon la
+   exigence V1, DEP-01 à DEP-11 et VAL-01 à VAL-08 à au moins une tâche et aux tests utiles. Inclure les
+   développements dans les packages propriétaires et ordonner leurs contrats avant leurs consommateurs, selon la
    [prise en compte dans le plan](dependencies.md#7-prise-en-compte-obligatoire-dans-le-plan). Marquer la phase 2
    exclue.
 
@@ -622,6 +635,9 @@ testable, pas seulement un fichier isolé.
   non-régression. **Dépendances logiques :** Lots précédents.
 
 Tester à chaque tâche. L2 éprouve tôt la séparation générique/tableau ; L7 complète la recette, il ne la commence pas.
+Prévoir l’environnement de test avant les développements produit et une sous-tâche de vérification navigateur
+après chaque livraison d’interactions, selon [VAL-01/02](validation.md). Une sous-tâche de livraison suit la recette
+finale.
 
 ### 11.3 Contenu d'une fiche de tâche
 
@@ -636,6 +652,8 @@ Points d'entrée : fichiers et API constatés dans le dépôt
 Travail demandé et limites explicites
 Critères d'acceptation et tests à ajouter/mettre à jour
 Commandes de validation exactes
+Parcours navigateur, URL, fixtures, dimensions et preuves, pour les tâches concernées
+Modèle, effort, justification et nouvelle vérification après correction
 Livrables attendus, y compris documentation technique utile à la suite
 ```
 
@@ -650,10 +668,14 @@ lit instructions locales et code courant. Aucun prérequis ne doit dépendre d'u
   l'absence effective d'héritage d'historique dans le lanceur utilisé ; un nouveau nom d'agent ne la garantit pas. Ne
   pas inventer d'option absente de la version installée.
 - **Rôle limité :** l'orchestrateur déclenche, attend, contrôle et rapporte ; il n'implémente pas les fonctionnalités à
-  la place du sous-agent. Un échec ou blocage interrompt la chaîne au lieu d'être contourné discrètement.
+  la place du sous-agent. Un défaut ouvre les sous-tâches correctives de
+  [VAL-07](validation.md#6-corrections-autonomes-et-nouvelle-vérification), puis une vérification indépendante.
+  Les fonctionnalités dépendantes attendent la réussite ; seul un blocage réel arrête le chantier.
 - **État reproductible :** démarrer depuis le point de contrôle Git attendu, vérifier les prérequis et l'absence de
   modifications étrangères. À chaque étape, laisser une modification cohérente, validée et attribuable selon les
-  conventions de commit du dépôt. Aucun push, déploiement ni nettoyage destructeur implicite.
+  conventions de commit du dépôt. Les changements initiaux sans rapport sont identifiés et préservés selon le
+  [prompt d’orchestration](itrocks-property-select-prompt-orchestrateur.md#1-rôle-autonomie-et-état-initial).
+  Aucun push, déploiement ni nettoyage destructeur implicite.
 - **Validation :** examiner le résultat et les tests rapportés ; ne pas confondre compilation réussie et respect des
   critères UX. Les validations impossibles sont signalées, pas déclarées réussies.
 - **Mémoire dans le dépôt :** seuls le code, les tests et les contrats/documentations stabilisés servent aux tâches
@@ -673,8 +695,8 @@ Pour préparer puis exécuter automatiquement la phase 1, utiliser plutôt le
 [prompt d’orchestration](itrocks-property-select-prompt-orchestrateur.md).
 
 ```text
-Lis docs/it-rocks-selecteur-relationnel-specifications.md, docs/dependencies.md
-et les AGENTS.md applicables.
+Lis docs/it-rocks-selecteur-relationnel-specifications.md, docs/dependencies.md,
+docs/select.md, docs/validation.md et les AGENTS.md applicables.
 Commence par vérifier que le dépôt est dans un état propre ; sinon arrête-toi et
 signale les modifications sans les effacer ni les masquer.
 
@@ -688,8 +710,9 @@ Tu peux créer les documents de planification dans l'emplacement adapté au dép
 Chaque tâche doit être bornée, autonome par sa description et ses références,
 expliciter ses dépendances, les fichiers/API réellement concernés, les exigences
 et tests couverts, les commandes de validation et ce qui est exclu. Maintiens
-une couverture de toutes les exigences V1 et DEP-01 à DEP-10. Prévois les développements et liaisons dans les
-packages propriétaires, ainsi que la recette hors it.rocks. Le pré-découpage de la section 11 est
+une couverture de toutes les exigences V1, DEP-01 à DEP-11 et VAL-01 à VAL-08.
+Prévois les développements et liaisons dans les packages propriétaires, ainsi que
+la recette hors it.rocks. Le pré-découpage de la section 11 est
 indicatif : ajuste-le à l'existant sans modifier les décisions fonctionnelles.
 
 Réutilise les composants et interactions existants. Garde tout comportement de
