@@ -1,0 +1,21 @@
+{
+  "framework": {
+    "status": "",
+    "untracked": [],
+    "raw_diff": "/tmp/property-select/L1-META/framework-diff.raw.txt",
+    "raw_sha256": "8cf9e44769ead22236bbfa60ffecba6d857da5eeeed1e27c4f0d2f3d648eaffa"
+  },
+  "property-select": {
+    "status": "M  docs/orchestration/ENVIRONMENT.md\nMM docs/orchestration/PLAN.json\nMM docs/orchestration/VALIDATION.md\nM  docs/orchestration/environment/app.cjs\nA  docs/orchestration/evidence/L1-META/application-head.txt\nA  docs/orchestration/evidence/L1-META/application-index.txt\nA  docs/orchestration/evidence/L1-META/application-status.txt\nA  docs/orchestration/evidence/L1-META/browser.json\nAM docs/orchestration/evidence/L1-META/build.txt\nAM docs/orchestration/evidence/L1-META/checkpoints.json\nA  docs/orchestration/evidence/L1-META/cleanup.txt\nAM docs/orchestration/evidence/L1-META/commands.json\nA  docs/orchestration/evidence/L1-META/defect-offset.mjs\nA  docs/orchestration/evidence/L1-META/defect-offset.txt\nA  docs/orchestration/evidence/L1-META/environment.json\nA  docs/orchestration/evidence/L1-META/existing-projection-absolute.txt\nA  docs/orchestration/evidence/L1-META/existing-projection-test.txt\nAM docs/orchestration/evidence/L1-META/final-artifacts.json\nA  docs/orchestration/evidence/L1-META/framework-diff-check.txt\nAM docs/orchestration/evidence/L1-META/framework-diff.txt\nAM docs/orchestration/evidence/L1-META/framework-test.txt\nA  docs/orchestration/evidence/L1-META/metadata-test.txt\nA  docs/orchestration/evidence/L1-META/owned-status.txt\nAM docs/orchestration/evidence/L1-META/package-files.json\nA  docs/orchestration/evidence/L1-META/property-select-diff.txt\nA  docs/orchestration/evidence/L1-META/review.json\nA  docs/orchestration/evidence/L1-META/review.py\nA  docs/orchestration/evidence/L1-META/run-checks.py\nA  docs/orchestration/evidence/L1-META/tracking-diff-check.txt\nAM docs/orchestration/reports/L1-META.md\nAM docs/orchestration/tasks/FIX-L1-META-1.md\nM  docs/orchestration/tasks/L1-META.md\nM  docs/orchestration/tasks/L2-UI.md\nAM docs/orchestration/tasks/RETEST-L1-META-1.md\nM  package.json\n",
+    "untracked": [],
+    "raw_diff": "/tmp/property-select/L1-META/property-select-diff.raw.txt",
+    "raw_sha256": "b7661dbf21140a2d76ea7f7fbb210d4d6249007dfeaa01caf0ad7896c5822122"
+  },
+  "checks": {
+    "application": "PASS",
+    "exports": "PASS",
+    "browser_graph": "PASS",
+    "package_files": "PASS",
+    "solid": "PASS: provider facts, request policy/configuration, actions/serialisation and fetch transport each have one owner; selector consumes neutral ports; SQL/list/table/home remain outside the provider"
+  }
+}

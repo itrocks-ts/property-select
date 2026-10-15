@@ -1,0 +1,57 @@
+{
+  "framework": {
+    "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+    "version": "0.9.3",
+    "status": ""
+  },
+  "property-select": {
+    "sha": "a2a22bbf91fe0ed9591f0f1496436e0d9654d2d2",
+    "version": "0.1.1",
+    "status": " M docs/orchestration/ENVIRONMENT.md\n M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/environment/app.cjs\n M docs/orchestration/tasks/L1-META.md\n M docs/orchestration/tasks/L2-UI.md\n M package.json\n?? docs/orchestration/evidence/L1-META/\n?? docs/orchestration/reports/L1-META.md\n?? docs/orchestration/tasks/FIX-L1-META-1.md\n?? docs/orchestration/tasks/RETEST-L1-META-1.md\n"
+  },
+  "list": {
+    "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
+    "version": "0.8.0",
+    "status": ""
+  },
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "version": "0.3.2",
+    "status": ""
+  },
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect-path": {
+    "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "version": "0.3.1",
+    "status": ""
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "property-view": {
+    "sha": "67a0ca77821b83be54cc8f143f43b81fe70b5b79",
+    "version": "0.2.2",
+    "status": ""
+  },
+  "class-view": {
+    "sha": "c4de42eae2d6f3e2758616d6529439eb6e54eeda",
+    "version": "0.2.2",
+    "status": ""
+  },
+  "composition": {
+    "sha": "c47991453d423cac27cc2b9ffcb741983c604ac3",
+    "version": "0.2.3",
+    "status": ""
+  },
+  "route": {
+    "sha": "16b5777e5cab90cee0eff40e01378d5b10869c74",
+    "version": "0.4.0",
+    "status": ""
+  }
+}

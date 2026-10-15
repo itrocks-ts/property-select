@@ -1,0 +1,33 @@
+{
+  "bare": {
+    "status": 500,
+    "body": {
+      "error": "Internal Server Error",
+      "message": "Something went wrong. We are working on it.",
+      "statusCode": 500
+    }
+  },
+  "explicit": {
+    "status": 200,
+    "syntheticCountries": true
+  },
+  "origin": "http://127.0.0.1:13619"
+}
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: The country control route must work without an explicit pagination parameter
+
+500 !== 200
+
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L1-META/defect-offset.mjs:9:8
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 500,
+  expected: 200,
+  operator: 'strictEqual'
+}
+
+Node.js v24.0.1

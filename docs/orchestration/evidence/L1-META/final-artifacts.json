@@ -1,0 +1,14 @@
+{
+  "final_sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+  "final_version": "0.9.3",
+  "browser_runtime_sha": "3ff5f9ff52deba48f7c1e280d28e38c71e795f2b",
+  "browser_runtime_version": "0.9.1",
+  "source_delta": "none; final commits change README/documentation and manifest only",
+  "sha256": {
+    "cjs/property-select.js": "1c1b191e2f9180698b0d4d576fcec425d754458cca807e63f15a230654364192",
+    "cjs/property-select-provider.js": "1c4a077d8cb2e65ff2f41a360435fea7c178072e41f5e8db8de04eb39e9d896a",
+    "cjs/property-select-actions.js": "256ce6b69e6acef2fe465379cb087a4242ee6310b4ba34963d50bf286bdf942a",
+    "property-select-metadata.js": "fee51c525c477fa5721266fc78312ffbe5b9b1f23f50633baa4b25119231dc1e",
+    "property-select-metadata.d.ts": "02378856518f570a5ce400bd59d4b0447da5771cb7ce6d482594cf18286c3291"
+  }
+}

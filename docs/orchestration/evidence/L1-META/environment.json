@@ -1,0 +1,11 @@
+{
+  "origin": "http://127.0.0.1:13619",
+  "directory": "/tmp/property-select-L1-META",
+  "shared_synthetic_database": "property_select_recipe on 127.0.0.1:13316",
+  "database_socket_link": "/tmp/property-select-L1-META/mysql.sock -> /tmp/showtime-property-select-env/mysql.sock",
+  "database_ownership": "not owned by L1-META; stop-app only",
+  "initializer": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+  "raw_log": "/tmp/property-select/L1-META/app.log",
+  "raw_sha256": "8717623ad9b053ae1609fd66e6b34d86c30fd7aaf99c608599cb85dbdc190c5e",
+  "inherited_application": "13319 untouched: stop-app refused missing app.owner.json; duplicate start refused existing PID reservation"
+}

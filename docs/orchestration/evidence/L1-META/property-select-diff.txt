@@ -1,0 +1,532 @@
+diff --git a/docs/orchestration/ENVIRONMENT.md b/docs/orchestration/ENVIRONMENT.md
+index dc310c1..153dd5b 100644
+--- a/docs/orchestration/ENVIRONMENT.md
++++ b/docs/orchestration/ENVIRONMENT.md
+@@ -60,6 +60,15 @@ Existing test entry points:
+ Only the two SQL package suites and the application build/test baseline were rerun by this continuation.
+ The other commands above are entry-point inventory, not claims of passed tests.
+
++## Framework initializer hook
++
++The isolated `app.cjs` launcher accepts optional `PS_FRAMEWORK_INITIALIZER`, an existing test fixture module path
++resolved from the application working directory. It registers that module through public `beforeFrameworkRun`,
++after composition/dependency binding and before HTTP startup. No application file is edited.
++L1-META uses the framework owner's `test/metadata-fixture.cjs`; see its
++[report](reports/L1-META.md#environment-ownership-and-solid) for exact launch/stop commands and the fresh-runtime
++country pagination defect. The hook is test infrastructure; it does not register product roots by default.
++
+ ## Start and check the isolated stack
+
+ All commands below run from `/home/baptiste/itrocks/showtime`. Set the task-specific shell variable once:
+diff --git a/docs/orchestration/PLAN.json b/docs/orchestration/PLAN.json
+index 330d90b..bf1bad9 100644
+--- a/docs/orchestration/PLAN.json
++++ b/docs/orchestration/PLAN.json
+@@ -26,6 +26,8 @@
+     "VSQL",
+     "L1",
+     "L1-META",
++    "FIX-L1-META-1",
++    "RETEST-L1-META-1",
+     "L2-UI",
+     "V2-UI",
+     "L2-HOME",
+@@ -517,7 +519,7 @@
+         "node_modules/@itrocks/framework"
+       ],
+       "category": "implementation",
+-      "status": "PENDING",
++      "status": "NEEDS_FIX",
+       "model": "gpt-6.1-sol",
+       "model_reasoning_effort": "high",
+       "model_justification": "Authorisation, composed reflection and per-request metadata must share the storage path facts.",
+@@ -530,6 +532,80 @@
+         "DEP-06",
+         "DEP-09",
+         "DEP-10"
++      ],
++      "validation": "PASS: framework build/tests, five META contracts, nine existing projection assertions, real Chromium HTTP actions, abort/stale, exports and package inventory. FAIL: owned stack status and bare /country after fresh S07 runtime (List offset NaN). Correction and independent retest required.",
++      "tested_checkpoints": {
++        "@itrocks/framework": {
++          "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
++          "version": "0.9.3",
++          "browser_source_sha": "3ff5f9ff52deba48f7c1e280d28e38c71e795f2b",
++          "browser_source_version": "0.9.1",
++          "source_delta": "Final documentation/manifest changes only; rebuilt/tests/pack pass."
++        },
++        "@itrocks/property-select": {
++          "base_sha": "a2a22bbf91fe0ed9591f0f1496436e0d9654d2d2",
++          "base_version": "0.1.0",
++          "version": "0.1.1",
++          "source": "L1-META tracking delivery recorded by the same task commit"
++        },
++        "@itrocks/list": {
++          "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
++          "version": "0.8.0"
++        }
++      }
++    },
++    {
++      "id": "FIX-L1-META-1",
++      "title": "Restore the country control route without an offset",
++      "card": "tasks/FIX-L1-META-1.md",
++      "dependencies": [
++        "L1-META"
++      ],
++      "packages": [
++        "@itrocks/list"
++      ],
++      "repositories": [
++        "node_modules/@itrocks/list"
++      ],
++      "category": "correction",
++      "status": "PENDING",
++      "model": "gpt-6.1-sol",
++      "model_reasoning_effort": "high",
++      "model_justification": "An absent List offset becomes NaN and violates the strict SQL projection limit contract; preserve real framework integration.",
++      "report": "reports/FIX-L1-META-1.md",
++      "requirements": [
++        "DEP-09",
++        "DEP-10",
++        "VAL-03",
++        "VAL-07"
++      ]
++    },
++    {
++      "id": "RETEST-L1-META-1",
++      "title": "Independently verify metadata and country route recovery",
++      "card": "tasks/RETEST-L1-META-1.md",
++      "dependencies": [
++        "FIX-L1-META-1"
++      ],
++      "packages": [
++        "@itrocks/list",
++        "@itrocks/framework"
++      ],
++      "repositories": [
++        "node_modules/@itrocks/list",
++        "node_modules/@itrocks/framework"
++      ],
++      "category": "verification",
++      "status": "PENDING",
++      "model": "gpt-6.1-sol",
++      "model_reasoning_effort": "high",
++      "model_justification": "A fresh verifier must replay the failed control route and metadata transport on the corrective commit.",
++      "report": "reports/RETEST-L1-META-1.md",
++      "requirements": [
++        "DEP-09",
++        "DEP-10",
++        "VAL-03",
++        "VAL-07"
+       ]
+     },
+     {
+@@ -537,7 +613,7 @@
+       "title": "Standalone selector browser surface",
+       "card": "tasks/L2-UI.md",
+       "dependencies": [
+-        "L1-META"
++        "RETEST-L1-META-1"
+       ],
+       "packages": [
+         "@itrocks/property-select"
+diff --git a/docs/orchestration/VALIDATION.md b/docs/orchestration/VALIDATION.md
+index 13d4965..8ff761f 100644
+--- a/docs/orchestration/VALIDATION.md
++++ b/docs/orchestration/VALIDATION.md
+@@ -9,7 +9,8 @@ observations remain pending. [S03](reports/S03.md) passes reflection relation-fa
+ [S04](reports/S04.md) passes metadata path resolution.
+ [S05](reports/S05.md) passes deterministic relationship graph and physical binding checks.
+ [L1](reports/L1.md) passes the generic controller contract observations: navigation, intentions, serialisable local
+-state, stale/disposal handling and public browser import. Provider/search observations remain pending.
++state, stale/disposal handling and public browser import. Provider observations are recorded below;
++independent search acceptance remains pending.
+ Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
+ No fixture smoke is product proof.
+
+@@ -52,6 +53,27 @@ Proof: [14 Node tests and public typecheck](evidence/L1/test.txt),
+ [Chromium import](evidence/L1/browser-smoke.json), [artifact and dependency review](evidence/L1/review.json).
+ Author contract tests are distinct from the mandatory independent browser gates.
+
++## L1-META author observations
++
++Framework `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3` passes its five provider assertions,
++nine existing projection assertions, full build/test suite, public types/exports/package inventory and real Chromium
++HTTP transport. Browser proof uses identical runtime source at `0.9.1`; final `0.9.3` changes documentation only.
++[Report](reports/L1-META.md), [contract tests](evidence/L1-META/metadata-test.txt),
++[browser](evidence/L1-META/browser.json), [review](evidence/L1-META/review.json).
++
++- **META-01/META-03 provider / PASS**: Inherited/optional/collection/inverse/N-N facts, opaque canonical relation ids,
++  unknowns, two routes, finite cycles and ambiguous traversal refusal; zero business reads/constructors/getters.
++- **META-02 provider/HTTP / PASS**: Same enumeration/full-path-prefix permissions, registered roots only, real 403
++  refusals, presentation owner labels/order and accessible fields beyond initial List columns; no-store JSON.
++- **META-04 capability / PASS**: Changed request catalogue removes forbidden context, resolution and static advice.
++  Persisted restoration remains NOT_RUN until L4/V4.
++- **PORT-03 HTTP / PASS**: Real started fetch abort and actual delayed HTTP response rejection after newer navigation.
++  Search observations and independent acceptance remain V3.
++- **Environment control / FAIL**: Fresh `/country` without offset returns 500 `unsupported-option`; explicit offset 0
++  returns 200 with synthetic countries. The documented owned status command fails. The
++  [failing assertion](evidence/L1-META/defect-offset.txt) requires `FIX-L1-META-1` and independent
++  `RETEST-L1-META-1` before L2-UI; L1-META is NEEDS_FIX and all combined verdicts remain NOT_RUN.
++
+ ## Package ownership key
+
+ | Implementation | Owning packages                                     |
+@@ -677,12 +699,17 @@ The throwing getter/constructor fixtures establish zero metadata value reads.
+ and [report](reports/S04.md), reflect-path `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`.
+ VSQL passes independent reflection observations; provider descriptions and UI observations remain `NOT_RUN`.
+
++L1-META provider observation: **PASS**; see [author observations](#l1-meta-author-observations).
++
+ ### META-02: Permission and presentation
+
+ Expected: Both enumerate and resolve full path enforce the same authorisation; labels/order reuse display owners and
+ include accessible fields beyond initial list columns.
+
+ Proof: `evidence/<gate>/META-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
++L1-META provider/HTTP permission and presentation observation: **PASS**.
++[Real browser responses](evidence/L1-META/browser.json); independent V3 remains NOT_RUN.
++
+ ### META-03: Path ambiguity and cycles
+
+ Expected: Resolve two-level/deep paths and multiple routes to same class; ambiguous unions reject; unknown inverse
+@@ -701,6 +728,8 @@ element target with `many` multiplicity and rejects composed traversal explicitl
+ and [report](reports/S04.md), reflect-path `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`.
+ Search-return decisions remain `NOT_RUN` until L3/V3; no type parser or automatic traversal rule is duplicated.
+
++L1-META finite provider paths and ambiguous/unknown handling: **PASS**; automatic search returns remain V3.
++
+ ### META-04: Invalidated catalogue
+
+ Expected: Change allowed paths between save/restore; truncate branch to valid prefix, discard invalid advice and
+@@ -708,6 +737,9 @@ rerun query from the validated context.
+
+ Proof: `evidence/<gate>/META-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
++L1-META catalogue-change capability: **PASS**; [browser proof](evidence/L1-META/browser.json).
++Persisted branch/query/advice restoration remains NOT_RUN until L4/V4.
++
+ ## PORT additional cases
+
+ Implementation: `L1 L1-META L2-UI L2-TABLE L3 L4 L5 L7`.
+diff --git a/docs/orchestration/environment/app.cjs b/docs/orchestration/environment/app.cjs
+index 46cc170..f3543b9 100644
+--- a/docs/orchestration/environment/app.cjs
++++ b/docs/orchestration/environment/app.cjs
+@@ -26,4 +26,9 @@ configuration.scanConfigFiles = async (...args) => {
+  delete config.smtp
+  mkdirSync(sessionPath, { recursive: true })
+ }
+-require('@itrocks/framework')
++const framework = require('@itrocks/framework')
++if (process.env.PS_FRAMEWORK_INITIALIZER) {
++ framework.beforeFrameworkRun(() => import(require('node:url').pathToFileURL(
++   path.resolve(process.env.PS_FRAMEWORK_INITIALIZER)
++ ).href))
++}
+diff --git a/docs/orchestration/reports/L1-META.md b/docs/orchestration/reports/L1-META.md
+new file mode 100644
+index 0000000..e28d5b0
+--- /dev/null
++++ b/docs/orchestration/reports/L1-META.md
+@@ -0,0 +1,146 @@
++# L1-META authorised framework metadata
++
++## Verdict and checkpoints
++
++Status: `NEEDS_FIX`, 16 October 2026. Every assigned metadata/provider/HTTP observation passes, but a fresh server
++fails the documented environment control route `/country` without an offset. The owned status command fails too.
++No dependent feature may start before `FIX-L1-META-1` and a successful independent `RETEST-L1-META-1`.
++The failure belongs to existing list pagination; it is not replaced with a fixture backend or waived.
++
++Prerequisites S02–S07, VSQL and L1 have validated reports and attributable commits. Tracking starts clean at
++property-select `a2a22bbf91fe0ed9591f0f1496436e0d9654d2d2` / `0.1.0`; this documentation/test-support delivery applies
++patch `0.1.1` on its first edit. Framework starts clean at `aff37e0da8272ca63908a57d7ff3abfa80ec177e` / `0.8.1`.
++Its compatible public adapter receives `0.9.0`, commit `4c35412b26ca011b503176becdb4df301dc7dbba`.
++A subsequent whitespace-only correction is `3ff5f9ff52deba48f7c1e280d28e38c71e795f2b` / `0.9.1`.
++A README-width correction is `09e152a1f2c8b7d60d771375609363e1daa77318` / `0.9.2`.
++The final application-relative root example correction is `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`.
++That final version rebuilds and passes framework tests and package inventory; runtime source is unchanged from the
++browser-tested `0.9.1` checkpoint. [Artifact record](../evidence/L1-META/final-artifacts.json).
++The tracking report contains no own-commit SHA.
++
++Requested profile: `gpt-6.1-sol` / `high`; actual dispatch metadata belongs to the parent. This executor has no
++independent runtime model/effort attestation. No sub-agent was launched. The new adapter uses the already validated
++reflection/path ports; no projection or hydration redesign requires Astra calibration in this task.
++
++## Delivered contracts
++
++The public framework `property-select` subpath exports `ReflectionMetadataProvider`, root/configuration/policy types,
++`createMetadataProvider`, `metadataConfiguration`, `propertySelectDependsOn`, `bindPropertySelect` and typed metadata
++errors. Public actions expose `/property-select/context/json`, `/property-select/resolve/json` and
++`/property-select/configuration/json` with opaque registered root ids and full root-relative paths. They use actual
++`Action`, action `Request.data` and JSON responses through Fastify. No request can name a module or register a root.
++
++The configured root catalogue and each request's policy jointly filter enumeration and every full-path prefix.
++Unregistered roots and forbidden properties have the same 403 response. Default roots are empty; configured roots
++remain subject to normal action access and the optional request-specific policy. Metadata responses are `no-store`.
++Root advice is configuration only, filtered to valid authorised relations, with a catalogue version. Changing grants
++between requests changes contexts, resolution and advice without a global user cache. Persisted restoration is L4/V4.
++
++Facts reuse public composed reflection, path resolution, route destinations and presentation owners. Framework
++`ReflectClass.propertyNames` enumerates declared types/prototype getter descriptors without domain construction.
++Presentation/path owners load after composition, including when the public binding API was imported before bootstrap.
++Missing reflection composition fails explicitly. Labels/order reuse class/property display metadata and include fields
++beyond `List` columns. Unknown cardinality/inverse/targets remain explicit. Logical inverse/N-N descriptions contain
++no physical link table. Canonical opaque relation ids survive inheritance and different traversal paths.
++Component/composite facts add only one unambiguous inverse and known singular/plural cardinality pairs.
++
++The public browser `property-select-metadata.js` exports `HttpMetadataProvider` and its options. The normal browser
++composition root registers that asset; its dedicated API import has no activation side effect or server imports.
++It uses same-origin credentials, forwards abort signals and checks cancellation after JSON parsing. The selector's
++existing generation check rejects late results even when the real HTTP request continues. There is no business-value
++read, SQL, search ranking, host geometry or session persistence in these adapters.
++
++## Executed validation
++
++Run from `/home/baptiste/itrocks/showtime`; exact argv, exits, output paths and SHA-256 values are in
++[commands.json](../evidence/L1-META/commands.json). Reproduce the recorded checks with:
++
++```bash
++python3 node_modules/@itrocks/property-select/docs/orchestration/evidence/L1-META/run-checks.py
++python3 node_modules/@itrocks/property-select/docs/orchestration/evidence/L1-META/review.py
++```
++
++The runner records every outcome, including the known failed control checks; its own completion is not an all-pass
++verdict. It requires the owned synthetic server below. No installation or implicit download occurs.
++
++- **PASS** framework build and existing framework suite, including public positive/negative TypeScript fixtures;
++  [build](../evidence/L1-META/build.txt), [suite](../evidence/L1-META/framework-test.txt).
++- **PASS** five explicit META tests: inherited/optional/collection/inverse/N-N facts; presentation beyond initial List;
++  identical enumeration/full-path access; deep/two-route/cyclic/ambiguous paths; grant changes; async policy abort;
++  unambiguous versus ambiguous composition facts; no domain constructor/getter reads;
++  [assertions](../evidence/L1-META/metadata-test.txt).
++- **PASS** nine existing SQL/framework binding assertions on the absolute Node test path;
++  [output](../evidence/L1-META/existing-projection-absolute.txt). The card's relative Node command has the previously
++  documented Node 24 discovery failure under `node_modules`, retained in
++  [relative output](../evidence/L1-META/existing-projection-test.txt); no assertion is skipped.
++- **PASS** Chromium `151.0.7922.34`, installed Playwright, `chromiumSandbox: true`, real public assets and Fastify
++  requests. Context/root/deep/cyclic/N-N resolution, 403 forbidden/ancestor/unknown-root refusals, malformed/ambiguous
++  400 responses, GET-only actions, catalogue/advice changes and serialization pass. A started network request fails
++  with `net::ERR_ABORTED`; a separate delayed real HTTP 200 is discarded after a newer navigation commits `delivery`.
++  The fixture reports zero guarded business read/search/count/select attempts and zero constructors/getters.
++  No page exception occurs; [browser proof](../evidence/L1-META/browser.json).
++- **PASS** offline framework package inventory, public CJS/browser/declarations/docs, direct dependency declaration,
++  browser graph and application preservation; [inventory](../evidence/L1-META/package-files.json),
++  [review](../evidence/L1-META/review.json), [checkpoints](../evidence/L1-META/checkpoints.json).
++- **FAIL** fresh `/country` and documented owned stack status, reproduced below. Metadata contracts pass, but this
++  required real framework control failure prevents a completed L1-META gate.
++
++META-01–03 provider observations pass; independent V3 and search-cycle observations remain `NOT_RUN`.
++META-04 catalogue-change capability passes; persisted branch/query/advice restoration remains `NOT_RUN` until L4/V4.
++Rendered selector, pane, list-column integration, keyboard and touch cases retain their later stages.
++
++## Reproducible defect and correction handover
++
++`list` is unchanged at `005702a6a0cd49740cdea37c2e5150dc80fb670b` / `0.8.0`.
++`Feed.getParams()` in `list/src/feed.ts` assigns `this.offset = +request.data.offset`; an absent offset becomes `NaN`.
++The current S07 MySQL legacy search forwards that offset to the strict projection builder, which rejects it with
++`unsupported-option`. The server returns 500 before rendering the country list. `/country?offset=0` returns 200 and
++both synthetic countries. This is a fresh-runtime integration defect; the inherited server still serving 13319 does
++not establish behaviour of newly loaded code.
++
++Expected: `/country` returns 200 with the normal first synthetic page and a valid zero offset.
++Observed: 500 `Internal Server Error`; explicit `offset=0` returns 200 with `Recipe France`.
++The [driver](../evidence/L1-META/defect-offset.mjs) intentionally fails its expected-200 assertion;
++[output](../evidence/L1-META/defect-offset.txt) and
++[owned status failure](../evidence/L1-META/owned-status.txt) preserve the reproducer.
++
++PLAN adds `FIX-L1-META-1` followed by `RETEST-L1-META-1`, rewires L2-UI to that retest and retains the failed task.
++Correction owns list pagination and regression tests; the fresh verifier must independently replay the control route,
++metadata contracts and browser transport on the corrective commit. No list/MySQL product change is smuggled into this
++metadata delivery. The current source is an attributable checkpoint, not a completed integration gate.
++
++## Environment, ownership and SOLID
++
++The inherited canonical app PID has no matching `app.owner.json`; targeted stop correctly refused it and duplicate
++start refused its existing reservation. No signal or PID removal occurred. A distinct owned app used port `13619`
++and `/tmp/property-select-L1-META`, with the existing synthetic database on 13316. Its `mysql.sock` is only a link to
++the canonical synthetic socket for status; L1-META does not own or stop the database. The test-only launcher now
++accepts `PS_FRAMEWORK_INITIALIZER`, loading owner fixtures through public `beforeFrameworkRun` after binding.
++
++Successful launch command:
++
++```bash
++PS_ENV_DIRECTORY=/tmp/property-select-L1-META PS_APP_PORT=13619 \
++PS_FRAMEWORK_INITIALIZER=node_modules/@itrocks/framework/test/metadata-fixture.cjs \
++  node node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs app
++```
++
++Targeted cleanup uses the same documented `control.mjs stop-app` with `PS_ENV_DIRECTORY` set to that directory.
++The owned app is stopped after final proof; inherited listeners and the synthetic database remain available.
++See [environment](../evidence/L1-META/environment.json) for ownership paths and raw log checksum, and
++[cleanup](../evidence/L1-META/cleanup.txt) for the successful targeted stop. No permission or browser sandbox setting
++was altered; local service/browser calls used the normal approval mechanism.
++
++SOLID review: provider owns authorised descriptions, configuration/policy binding owns request context, actions own
++HTTP serialization and the browser adapter owns fetch transport. Consumer-owned `MetadataProvider` stays in selector;
++public reflection/presentation/route ports are reused; SQL/storage/list/table/home responsibilities remain separate.
++Static, asynchronous and HTTP providers substitute in the controller; fetch is replaceable. No new infrastructure
++package, business-data hydration or duplicated table geometry is introduced.
++
++Showtime remains at `d7ca948292e28c248bdcc0283724e47c2a82bba4`, with only its two original AD files, absent working
++files and staged blobs `ff4dc939cce17af3aa7c14d8063034c5cc85b867` and
++`de960a87ea9b4f6eb1cece85ab32596baef11fcd`. No application source/document/commit, install/update, implicit-download
++`npx`, `vcs-modules`, push, tag or publication occurred. No lockfile exists in the modified owners.
++Authorised local commit wording: framework `Serve authorised property metadata`,
++`Keep metadata source whitespace clean`, `Keep metadata binding documentation readable`,
++`Document application-relative metadata roots`; tracking `Record metadata adapter and control route regression`.
+diff --git a/docs/orchestration/tasks/FIX-L1-META-1.md b/docs/orchestration/tasks/FIX-L1-META-1.md
+new file mode 100644
+index 0000000..df2ff9a
+--- /dev/null
++++ b/docs/orchestration/tasks/FIX-L1-META-1.md
+@@ -0,0 +1,50 @@
++# FIX-L1-META-1: Restore default list pagination
++
++## Objective and prerequisites
++
++Correct the fresh-framework `/country` failure recorded by [L1-META](../reports/L1-META.md).
++Prerequisite: completed L1-META diagnostic, status `NEEDS_FIX`. This is the correction-protocol prerequisite exception.
++Current status: `PENDING`. Do not start another feature or a sub-agent.
++
++## References and entry points
++
++Read application/owner AGENTS, handbook framework-change routes and list README, then
++[COMMON](../COMMON.md), [EXECUTION](../EXECUTION.md), [ENVIRONMENT](../ENVIRONMENT.md),
++[CONTRACTS](../CONTRACTS.md), [SELECT-CONTRACT](../SELECT-CONTRACT.md), [VALIDATION](../VALIDATION.md),
++[L1-META report](../reports/L1-META.md) and its [failing assertion](../evidence/L1-META/defect-offset.txt).
++Product owner: `@itrocks/list`, initially `005702a6a0cd49740cdea37c2e5150dc80fb670b` / `0.8.0`.
++Entry points: `list/src/feed.ts`, list pagination tests and its manifest's actual build/test scripts.
++Framework metadata checkpoint: `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`.
++
++## Scope and acceptance
++
++Missing `request.data.offset` currently becomes `NaN` via unary plus. Existing S07 MySQL search forwards it to the
++strict SQL builder and the first list page returns 500 `unsupported-option` after a fresh startup.
++Return a valid initial offset without changing explicit pagination, filters, sort, feed or projection contracts.
++Do not weaken strict SQL/selection validation, substitute a backend, edit application source or change metadata policy.
++
++Add focused regression coverage for an absent offset and explicit valid offsets. Read actual existing tests/scripts
++before invoking them; build and run list and relevant framework tests using installed tools. A fresh real framework
++must serve `/country` and `/country?offset=0` with HTTP 200 and both synthetic countries, and the documented owned
++status command must pass. Metadata actions must remain available with no business reads for metadata fixtures.
++The correction remains unaccepted until the separate fresh verifier passes `RETEST-L1-META-1`.
++
++## Commands and evidence
++
++Use the ownership-checked launcher with `PS_FRAMEWORK_INITIALIZER` documented in L1-META; choose a free owned port and
++record it. The L1-META app was stopped; its directory is reusable after checking ownership/PID records. Never stop an
++inherited process without owner evidence. The database remains synthetic on 13316; do not stop or reset private data.
++
++No install/update, implicit-download npx, vcs-modules, permission changes or browser sandbox relaxation.
++Keep showtime HEAD and the two staged/absent AD files intact. Apply handbook patch versioning on first owner/tracking
++edit. Inspect complete owner diffs and commit explicit attributable paths locally only; no push.
++Write `reports/FIX-L1-META-1.md`, `evidence/FIX-L1-META-1/`, PLAN and matrix observations, exact successful commands,
++expected/observed results, checkpoint SHAs/versions and SOLID review. No own SHA in its report.
++
++## Calibration and handover
++
++Requested `gpt-6.1-sol` / `high`: the correction spans request defaults, real SQL validation and framework startup.
++The parent owns dispatch evidence; no independent executor attestation is exposed. A new contract is not expected;
++evaluate Astra explicitly if the diagnosis grows into SQL/projection semantics. Return at most eight lines with
++status, commits/versions, validation, report/proof paths and remaining limits. Do not clear the gate yourself or start
++another task; the separate independent retest owns acceptance.
+diff --git a/docs/orchestration/tasks/L1-META.md b/docs/orchestration/tasks/L1-META.md
+index 2c93f7c..57a8024 100644
+--- a/docs/orchestration/tasks/L1-META.md
++++ b/docs/orchestration/tasks/L1-META.md
+@@ -4,7 +4,7 @@
+
+ Serve authorised metadata descriptions through actual framework actions and browser transport.
+
+-Prerequisites: L1. Current status: `PENDING`.
++Prerequisites: L1. Current status: `NEEDS_FIX`; see [report](../reports/L1-META.md) and correction/retest tasks.
+ Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
+
+ ## References and entry points
+diff --git a/docs/orchestration/tasks/L2-UI.md b/docs/orchestration/tasks/L2-UI.md
+index 578f50e..2a4ea48 100644
+--- a/docs/orchestration/tasks/L2-UI.md
++++ b/docs/orchestration/tasks/L2-UI.md
+@@ -4,7 +4,7 @@
+
+ Display and activate the selector in the standalone browser demonstration.
+
+-Prerequisites: L1-META. Current status: `PENDING`.
++Prerequisites: RETEST-L1-META-1. Current status: `PENDING`.
+ Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
+
+ ## References and entry points
+diff --git a/docs/orchestration/tasks/RETEST-L1-META-1.md b/docs/orchestration/tasks/RETEST-L1-META-1.md
+new file mode 100644
+index 0000000..6783a8a
+--- /dev/null
++++ b/docs/orchestration/tasks/RETEST-L1-META-1.md
+@@ -0,0 +1,55 @@
++# RETEST-L1-META-1: Verify metadata and control route recovery
++
++## Objective and prerequisites
++
++Independently verify the corrected framework first-page route and L1-META contracts before any dependent feature.
++Prerequisite: attributable corrective checkpoint and completed `FIX-L1-META-1` report.
++Current status: `PENDING`. The verifier must be distinct from the corrector and must not spawn a sub-agent.
++
++## References and entry points
++
++Read application/owner AGENTS and handbook routes, [COMMON](../COMMON.md), [EXECUTION](../EXECUTION.md),
++[ENVIRONMENT](../ENVIRONMENT.md), [CONTRACTS](../CONTRACTS.md), [SELECT-CONTRACT](../SELECT-CONTRACT.md),
++[VALIDATION](../VALIDATION.md), [L1-META](../reports/L1-META.md) and the corrective report.
++Inspect the exact corrective diffs and versions. Product checkpoints before correction: framework
++`3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, list
++`005702a6a0cd49740cdea37c2e5150dc80fb670b` / `0.8.0`.
++Use the existing owner fixtures/launcher only as resources; create independent assertions.
++
++## Scope and acceptance
++
++Rebuild affected owners using their actual manifest scripts, run list/framework suites, the five META tests and the
++existing framework projection tests. Use absolute Node test paths if Node 24's known node_modules discovery issue
++occurs; retain the failed invocation and do not skip actual assertions.
++
++Start a fresh owned real framework on an available port with the public `beforeFrameworkRun` fixture hook.
++Exercise `/country` with no query and with explicit `offset=0`, confirm HTTP 200 and both synthetic countries through
++real browser input/navigation, and pass the documented owned stack status command. Existing inherited server success
++cannot replace a newly loaded runtime. Verify a later valid page/feed retains the corrected pagination semantics.
++
++Drive independent real HTTP/browser checks of context/root/full-path resolution, logical inverse/N-N and explicit
++unknown facts, labels/order beyond initial List, unknown-root/forbidden/forbidden-ancestor 403, malformed and ambiguous
++paths, no-store JSON and valid advice after catalogue changes. Observe an actually started network abort and stale
++response rejection by the real controller. Guard/observe zero metadata business reads and domain constructors/getters.
++Keep Chromium's sandbox enabled. Search, rendered selector, session restoration and gestures remain their later gates.
++
++Confirm public CJS/browser/type exports and files, correct dependency direction and SOLID ownership. No product edits
++are allowed during independent verification. A reproducible failure appends the next correction/retest under EXECUTION;
++do not waive it or proceed. A successful retest clears the failed gate for its rewired consumers while retaining
++L1-META's historical failed report and observations.
++
++## Commands, evidence and calibration
++
++No install/update, implicit-download npx, vcs-modules, application edits/commits or sandbox/permission changes.
++Use normal escalation for owned service/browser operations; stop only verified owned processes after proof.
++Preserve showtime HEAD, its two staged/absent AD files and unrelated owner changes.
++
++Write `reports/RETEST-L1-META-1.md`, independent assertions/results in `evidence/RETEST-L1-META-1/`, and update PLAN and
++matrix. Record exact argv, runtime/browser versions, tested owner SHAs/versions, URLs, expected/observed assertions,
++raw evidence checksums, limitations and local tracking commit. Apply handbook tracking patch versioning on first edit;
++do not change untouched product versions. No own SHA inside its report, no push/tag/publication.
++
++Requested `gpt-6.1-sol` / `high`: independent proof crosses request defaults, SQL-backed lists, metadata authorisation,
++composed presentation and browser abort/stale transport. The parent records actual dispatch; executor identity has no
++independent attestation. Evaluate Astra if new SQL-contract ambiguity arises. Return at most eight lines with status,
++commits/versions, validations and report/proof/defect paths. Do not start another task.
+diff --git a/package.json b/package.json
+index 0c86277..c55a4d8 100644
+--- a/package.json
++++ b/package.json
+@@ -58,5 +58,5 @@
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser",
+    "test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
+  },
+- "version": "0.1.0"
++ "version": "0.1.1"
+ }

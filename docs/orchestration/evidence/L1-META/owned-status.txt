@@ -1,0 +1,10 @@
+mysqld is alive
+file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:238
+	if (response.status !== 200 || !html.includes('Recipe France')) throw new Error('Synthetic list unavailable')
+	                                                                      ^
+
+Error: Synthetic list unavailable
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:238:72
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+
+Node.js v24.0.1

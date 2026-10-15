@@ -4,7 +4,7 @@
 
 Serve authorised metadata descriptions through actual framework actions and browser transport.
 
-Prerequisites: L1. Current status: `PENDING`.
+Prerequisites: L1. Current status: `NEEDS_FIX`; see [report](../reports/L1-META.md) and correction/retest tasks.
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points

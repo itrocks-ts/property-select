@@ -60,6 +60,15 @@ Existing test entry points:
 Only the two SQL package suites and the application build/test baseline were rerun by this continuation.
 The other commands above are entry-point inventory, not claims of passed tests.
 
+## Framework initializer hook
+
+The isolated `app.cjs` launcher accepts optional `PS_FRAMEWORK_INITIALIZER`, an existing test fixture module path
+resolved from the application working directory. It registers that module through public `beforeFrameworkRun`,
+after composition/dependency binding and before HTTP startup. No application file is edited.
+L1-META uses the framework owner's `test/metadata-fixture.cjs`; see its
+[report](reports/L1-META.md#environment-ownership-and-solid) for exact launch/stop commands and the fresh-runtime
+country pagination defect. The hook is test infrastructure; it does not register product roots by default.
+
 ## Start and check the isolated stack
 
 All commands below run from `/home/baptiste/itrocks/showtime`. Set the task-specific shell variable once:

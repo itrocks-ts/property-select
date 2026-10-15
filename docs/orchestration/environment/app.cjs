@@ -26,4 +26,9 @@ configuration.scanConfigFiles = async (...args) => {
 	delete config.smtp
 	mkdirSync(sessionPath, { recursive: true })
 }
-require('@itrocks/framework')
+const framework = require('@itrocks/framework')
+if (process.env.PS_FRAMEWORK_INITIALIZER) {
+	framework.beforeFrameworkRun(() => import(require('node:url').pathToFileURL(
+		path.resolve(process.env.PS_FRAMEWORK_INITIALIZER)
+	).href))
+}

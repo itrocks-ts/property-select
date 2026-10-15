@@ -9,7 +9,8 @@ observations remain pending. [S03](reports/S03.md) passes reflection relation-fa
 [S04](reports/S04.md) passes metadata path resolution.
 [S05](reports/S05.md) passes deterministic relationship graph and physical binding checks.
 [L1](reports/L1.md) passes the generic controller contract observations: navigation, intentions, serialisable local
-state, stale/disposal handling and public browser import. Provider/search observations remain pending.
+state, stale/disposal handling and public browser import. Provider observations are recorded below;
+independent search acceptance remains pending.
 Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
 No fixture smoke is product proof.
 
@@ -51,6 +52,27 @@ All combined case verdicts and independent browser acceptance remain `NOT_RUN` a
 Proof: [14 Node tests and public typecheck](evidence/L1/test.txt),
 [Chromium import](evidence/L1/browser-smoke.json), [artifact and dependency review](evidence/L1/review.json).
 Author contract tests are distinct from the mandatory independent browser gates.
+
+## L1-META author observations
+
+Framework `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3` passes its five provider assertions,
+nine existing projection assertions, full build/test suite, public types/exports/package inventory and real Chromium
+HTTP transport. Browser proof uses identical runtime source at `0.9.1`; final `0.9.3` changes documentation only.
+[Report](reports/L1-META.md), [contract tests](evidence/L1-META/metadata-test.txt),
+[browser](evidence/L1-META/browser.json), [review](evidence/L1-META/review.json).
+
+- **META-01/META-03 provider / PASS**: Inherited/optional/collection/inverse/N-N facts, opaque canonical relation ids,
+  unknowns, two routes, finite cycles and ambiguous traversal refusal; zero business reads/constructors/getters.
+- **META-02 provider/HTTP / PASS**: Same enumeration/full-path-prefix permissions, registered roots only, real 403
+  refusals, presentation owner labels/order and accessible fields beyond initial List columns; no-store JSON.
+- **META-04 capability / PASS**: Changed request catalogue removes forbidden context, resolution and static advice.
+  Persisted restoration remains NOT_RUN until L4/V4.
+- **PORT-03 HTTP / PASS**: Real started fetch abort and actual delayed HTTP response rejection after newer navigation.
+  Search observations and independent acceptance remain V3.
+- **Environment control / FAIL**: Fresh `/country` without offset returns 500 `unsupported-option`; explicit offset 0
+  returns 200 with synthetic countries. The documented owned status command fails. The
+  [failing assertion](evidence/L1-META/defect-offset.txt) requires `FIX-L1-META-1` and independent
+  `RETEST-L1-META-1` before L2-UI; L1-META is NEEDS_FIX and all combined verdicts remain NOT_RUN.
 
 ## Package ownership key
 
@@ -677,12 +699,17 @@ The throwing getter/constructor fixtures establish zero metadata value reads.
 and [report](reports/S04.md), reflect-path `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`.
 VSQL passes independent reflection observations; provider descriptions and UI observations remain `NOT_RUN`.
 
+L1-META provider observation: **PASS**; see [author observations](#l1-meta-author-observations).
+
 ### META-02: Permission and presentation
 
 Expected: Both enumerate and resolve full path enforce the same authorisation; labels/order reuse display owners and
 include accessible fields beyond initial list columns.
 
 Proof: `evidence/<gate>/META-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+L1-META provider/HTTP permission and presentation observation: **PASS**.
+[Real browser responses](evidence/L1-META/browser.json); independent V3 remains NOT_RUN.
+
 ### META-03: Path ambiguity and cycles
 
 Expected: Resolve two-level/deep paths and multiple routes to same class; ambiguous unions reject; unknown inverse
@@ -701,12 +728,17 @@ element target with `many` multiplicity and rejects composed traversal explicitl
 and [report](reports/S04.md), reflect-path `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`.
 Search-return decisions remain `NOT_RUN` until L3/V3; no type parser or automatic traversal rule is duplicated.
 
+L1-META finite provider paths and ambiguous/unknown handling: **PASS**; automatic search returns remain V3.
+
 ### META-04: Invalidated catalogue
 
 Expected: Change allowed paths between save/restore; truncate branch to valid prefix, discard invalid advice and
 rerun query from the validated context.
 
 Proof: `evidence/<gate>/META-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+L1-META catalogue-change capability: **PASS**; [browser proof](evidence/L1-META/browser.json).
+Persisted branch/query/advice restoration remains NOT_RUN until L4/V4.
 
 ## PORT additional cases
 

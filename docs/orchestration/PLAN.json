@@ -26,6 +26,8 @@
     "VSQL",
     "L1",
     "L1-META",
+    "FIX-L1-META-1",
+    "RETEST-L1-META-1",
     "L2-UI",
     "V2-UI",
     "L2-HOME",
@@ -517,7 +519,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Authorisation, composed reflection and per-request metadata must share the storage path facts.",
@@ -530,6 +532,80 @@
         "DEP-06",
         "DEP-09",
         "DEP-10"
+      ],
+      "validation": "PASS: framework build/tests, five META contracts, nine existing projection assertions, real Chromium HTTP actions, abort/stale, exports and package inventory. FAIL: owned stack status and bare /country after fresh S07 runtime (List offset NaN). Correction and independent retest required.",
+      "tested_checkpoints": {
+        "@itrocks/framework": {
+          "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+          "version": "0.9.3",
+          "browser_source_sha": "3ff5f9ff52deba48f7c1e280d28e38c71e795f2b",
+          "browser_source_version": "0.9.1",
+          "source_delta": "Final documentation/manifest changes only; rebuilt/tests/pack pass."
+        },
+        "@itrocks/property-select": {
+          "base_sha": "a2a22bbf91fe0ed9591f0f1496436e0d9654d2d2",
+          "base_version": "0.1.0",
+          "version": "0.1.1",
+          "source": "L1-META tracking delivery recorded by the same task commit"
+        },
+        "@itrocks/list": {
+          "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
+          "version": "0.8.0"
+        }
+      }
+    },
+    {
+      "id": "FIX-L1-META-1",
+      "title": "Restore the country control route without an offset",
+      "card": "tasks/FIX-L1-META-1.md",
+      "dependencies": [
+        "L1-META"
+      ],
+      "packages": [
+        "@itrocks/list"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/list"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "An absent List offset becomes NaN and violates the strict SQL projection limit contract; preserve real framework integration.",
+      "report": "reports/FIX-L1-META-1.md",
+      "requirements": [
+        "DEP-09",
+        "DEP-10",
+        "VAL-03",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-L1-META-1",
+      "title": "Independently verify metadata and country route recovery",
+      "card": "tasks/RETEST-L1-META-1.md",
+      "dependencies": [
+        "FIX-L1-META-1"
+      ],
+      "packages": [
+        "@itrocks/list",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "A fresh verifier must replay the failed control route and metadata transport on the corrective commit.",
+      "report": "reports/RETEST-L1-META-1.md",
+      "requirements": [
+        "DEP-09",
+        "DEP-10",
+        "VAL-03",
+        "VAL-07"
       ]
     },
     {
@@ -537,7 +613,7 @@
       "title": "Standalone selector browser surface",
       "card": "tasks/L2-UI.md",
       "dependencies": [
-        "L1-META"
+        "RETEST-L1-META-1"
       ],
       "packages": [
         "@itrocks/property-select"

@@ -1,0 +1,32 @@
+
+> @itrocks/framework@0.9.3 test
+> npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs
+
+
+> @itrocks/framework@0.9.3 build
+> npm run build:back && npm run build:front
+
+
+> @itrocks/framework@0.9.3 build:back
+> tsc
+
+
+> @itrocks/framework@0.9.3 build:front
+> tsc -p src/front/tsconfig.json && node -e "const fs=require('node:fs');for(const file of fs.readdirSync('.').filter(file=>file.endsWith('.js')||file.endsWith('.d.ts')))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('../../',''))"
+
+
+> @itrocks/framework@0.9.3 build:test
+> tsc -p test/tsconfig.json
+
+✔ test/language.test.js (130.150483ms)
+✔ test/main.test.js (196.084647ms)
+✔ test/property-select-metadata.test.mjs (530.052627ms)
+✔ test/property-select.test.mjs (434.644557ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 544.365537
