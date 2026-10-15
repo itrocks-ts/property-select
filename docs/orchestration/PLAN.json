@@ -793,7 +793,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "medium",
       "model_justification": "Real clicks, keyboard and hover/focus must validate the first visible increment immediately.",
@@ -810,7 +810,15 @@
         "VAL-03",
         "VAL-04",
         "VAL-06"
-      ]
+      ],
+      "validation": "PASS: 116 independent sandboxed Chromium assertions at four dimensions; real mouse/keyboard/touch, navigation, geometry, acknowledgements, disposal/reload, public artifacts/imports. Later stage observations remain NOT_RUN.",
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "sha": "b274d101e2d250a9318b312f0324a24a00519eb4",
+          "tested_source_version": "0.2.0",
+          "verification_version": "0.2.1"
+        }
+      }
     },
     {
       "id": "L2-HOME",

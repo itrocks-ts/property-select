@@ -1,0 +1,291 @@
+{
+  "error": "AssertionError [ERR_ASSERTION]: desktop: real input scrolls breadcrumb\n\nfalse !== true\n\n    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V2-UI.mjs:32:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V2-UI.mjs:190:3",
+  "records": [
+    {
+      "name": "clean initial ownership reservation",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: one list and business DOM order",
+      "expected": [
+        "customer",
+        "number"
+      ],
+      "observed": [
+        "customer",
+        "number"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: exactly one property list",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no table columns",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: viewport",
+      "expected": [
+        1280,
+        720
+      ],
+      "observed": [
+        1280,
+        720
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: hover preserves row/main geometry",
+      "expected": [
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: hovered plus visible",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard focus preserves geometry",
+      "expected": [
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 194.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: full remembered branch",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: remembered descendant retained",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: descendant restores object",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: divergent suffix only",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: navigation emits no selection",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: terminal and relation plus each emit once",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: object plus retains current context",
+      "expected": "customer.address",
+      "observed": "customer.address",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: Tab reaches sibling plus",
+      "expected": "select:customer.address.street",
+      "observed": "select:customer.address.street",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: visible keyboard outline",
+      "expected": "solid",
+      "observed": "solid",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: Enter and Space each emit once",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: intention ids unique",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    }
+  ],
+  "failures": [],
+  "requests": [
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    }
+  ],
+  "inputs": []
+}

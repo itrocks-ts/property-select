@@ -1,0 +1,19 @@
+{
+  "args": [
+    "/usr/bin/node",
+    "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+    "--ps-environment=/tmp/property-select-V2-UI",
+    "--ps-port=13721",
+    "--ps-token=c109640a-ca39-4ada-abcf-59d1df56c510"
+  ],
+  "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+  "executable": "/usr/bin/node",
+  "start": "150602921",
+  "state": "R",
+  "uid": 1000,
+  "directory": "/tmp/property-select-V2-UI",
+  "name": "standalone",
+  "pid": 2266827,
+  "port": 13721,
+  "token": "c109640a-ca39-4ada-abcf-59d1df56c510"
+}

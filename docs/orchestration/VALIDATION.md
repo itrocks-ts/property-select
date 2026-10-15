@@ -56,7 +56,8 @@ Author contract tests are distinct from the mandatory independent browser gates.
 ## L2-UI author observations
 
 **PASS** author delivery `property-select` `0.2.0`, based on
-`0526f46fad4a3bd402e73e713283aeffafbfe617`; independent V2-UI and combined cases remain **NOT_RUN**.
+`0526f46fad4a3bd402e73e713283aeffafbfe617`; independent V2-UI observations are recorded below;
+combined cases remain **NOT_RUN**.
 [Report](reports/L2-UI.md), [40 expected/observed browser records](evidence/L2-UI/browser.json),
 [build/types/fourteen controller tests](evidence/L2-UI/test.txt), [public output review](evidence/L2-UI/review.json).
 
@@ -73,6 +74,33 @@ Author contract tests are distinct from the mandatory independent browser gates.
 - **UI-04/ACT-01–06/ACT-08/NAV-09/DEP-01/VAL-03 / PASS author implemented portions**: Semantic sibling buttons,
   in-button chevrons, reserved add targets and one scrollable breadcrumb/list. Search and shortcut presentation remain
   L3/L4; framework integration and independent standalone acceptance retain their named gates.
+
+## V2-UI independent observations
+
+**PASS** implemented standalone observations on clean author checkpoint
+`b274d101e2d250a9318b312f0324a24a00519eb4` / `0.2.0`, rebuilt verification version `0.2.1`.
+[Independent report](reports/V2-UI.md), [116 expected/observed assertions](evidence/V2-UI/results.json),
+[public artifacts and import graph](evidence/V2-UI/artifacts.json).
+
+- **T01 / PORT-01 / API-01–02 / DEP-01 PASS standalone**: One ordered property list, canonical paths, static provider,
+  missing-provider error and optional-port defaults. No host imports, records or table columns.
+- **T02–T03 / NAV-01–05 / NAV-07 PASS standalone**: Remembered ancestor/descendant navigation and divergent suffix
+  replacement match expected paths at all four viewports; navigation emits no selection.
+- **T05 / T07 / ACT-01–03 / ACT-06 PASS intention portions**: Terminal/main and relation plus each emit once;
+  City object selection preserves Address context. Business data and list rendering remain V2.
+- **T06 / ACT-04–05 PASS current surface**: Hover/focus preserve measured boxes; no-hover relation plus remains
+  visible and terminal plus is hidden. Later hybrid/drag observations remain V6.
+- **T08 / NAV-09 PASS click/scroll portions**: Long branch scrolling and remembered activation work at all dimensions;
+  trusted touch movement/cancellation emits no selection. Gesture arbitration remains V6.
+- **T25 / ACT-08 PASS keyboard/tap portions**: Tab order, visible focus, Enter/Space and object-plus keyboard
+  activation emit once. Pane closure and focus restoration retain their later gates.
+- **PORT-02 PASS click/disposal portions**: No implicit outcome; one explicit confirmation, duplicate/disposed rejection,
+  dynamic insertion, repeated mount, disposal/remount and ignored late metadata. Transport remains V5/V6.
+- **UI-04 / VAL-03–04 / VAL-06 PASS implemented standalone portions**: Real independent browser and screenshots,
+  zero console/network failures; fresh reload resets documented instance state. Integration remains V2.
+
+Desktop `1280 × 720`, narrow `768 × 900`, portrait `390 × 844`, landscape `844 × 390`; phone dimensions use actual
+no-hover touch contexts. Combined scenario/requirement verdicts below remain NOT_RUN until all named stage portions pass.
 
 ## L1-META author observations
 
@@ -1113,4 +1141,5 @@ SQL execution, provider/search and consumers remain pending.
 Installed IAB supplies real navigation/viewport checks; verified Playwright supplies touch input. Native phone edge
 gestures, physical system interruptions and keyboard behaviour remain conditional on available hardware. All browser
 and emulated-touch cases are mandatory. L2-UI supplies the standalone browser view and static demo;
-its author observations pass, while independent V2-UI remains NOT_RUN. Current handwritten SQL smoke remains infrastructure-only, never evidence for SQL-01–14.
+its author and independent V2-UI observations pass for the implemented standalone surface. Current handwritten SQL
+smoke remains infrastructure-only, never evidence for SQL-01–14.

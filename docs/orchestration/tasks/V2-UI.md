@@ -4,7 +4,7 @@
 
 Verify the built standalone selector with real browser inputs.
 
-Prerequisites: L2-UI. Current status: `PENDING`.
+Prerequisites: L2-UI. Current status: `DONE` / independent `PASS`; see [report](../reports/V2-UI.md).
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points

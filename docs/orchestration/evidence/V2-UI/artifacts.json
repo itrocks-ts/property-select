@@ -1,0 +1,24 @@
+{
+  "verdict": "PASS",
+  "graph": {
+    "front/property-select.js": "8dd167d0098c0df2b65695fef77edbfe6e9a42c6da4e565e288a8acfc4e13b6d",
+    "property-select.js": "48edec919f0957ce5eaaffab90ad1d9c8f4c94abf899e8fe3ff5456017902a79",
+    "controller.js": "4bdf1e612b5ba8956e193c50893b5e9070dbde05f9771b9824ea5a39e1063ef4",
+    "intentions.js": "a5353fe1f7c5321836f26ac38d0ef365b54d02162dba6bb545a13a122ad8f81a",
+    "metadata.js": "b1ce50abc6ae439aa310ae96a48f78f8d2c9d043a9fa4fd8e7d95f968c6ba6e8",
+    "path.js": "902cf9c263bf9e7f9b4bac4d1bc155af79901a9edc6bb4f7df723be2fdc537dc",
+    "navigation.js": "3782a654dc53e63966019a434a9dcc4a80dd46cc06b8ce20fc3ff266bdf1e569"
+  },
+  "files": [
+    "property-select.js",
+    "property-select.d.ts",
+    "cjs/property-select.js",
+    "cjs/property-select.d.ts",
+    "front/property-select.js",
+    "front/property-select.d.ts",
+    "front/property-select.css",
+    "front/property-select.html"
+  ],
+  "inventoryFiles": 547,
+  "cjs": "public import without DOM"
+}
