@@ -1,0 +1,30 @@
+{
+  "invalidOffsetStatus": 500,
+  "origin": "http://127.0.0.1:13629",
+  "probe": {
+    "attempts": [],
+    "constructions": 0,
+    "reads": 0
+  },
+  "records": [
+    {
+      "countries": [
+        "Recipe France",
+        "Recipe United Kingdom"
+      ],
+      "path": "/country",
+      "sha256": "842aa6cc7ed5fa1c6a56c3182b8c2b460a37f840a4d8a0aef5ed2a55b9668647",
+      "status": 200
+    },
+    {
+      "countries": [
+        "Recipe France",
+        "Recipe United Kingdom"
+      ],
+      "path": "/country?offset=0",
+      "sha256": "842aa6cc7ed5fa1c6a56c3182b8c2b460a37f840a4d8a0aef5ed2a55b9668647",
+      "status": 200
+    }
+  ],
+  "status": "PASS"
+}

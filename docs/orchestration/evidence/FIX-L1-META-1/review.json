@@ -1,0 +1,33 @@
+{
+  "owners": {
+    "framework": {
+      "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+      "status": "",
+      "version": "0.9.3"
+    },
+    "list": {
+      "sha": "7191d22217a7d087c197134bc09226a34d05fc60",
+      "status": "",
+      "version": "0.8.1"
+    },
+    "property-select": {
+      "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/FIX-L1-META-1.md\n M package.json\n?? docs/orchestration/evidence/FIX-L1-META-1/\n?? docs/orchestration/reports/FIX-L1-META-1.md\n",
+      "version": "0.1.2"
+    }
+  },
+  "list_changed_files": [
+    "package.json",
+    "src/feed.ts",
+    "test/feed.test.mjs"
+  ],
+  "framework_artifacts_sha256": {
+    "cjs/property-select.js": "1c1b191e2f9180698b0d4d576fcec425d754458cca807e63f15a230654364192",
+    "cjs/property-select-provider.js": "1c4a077d8cb2e65ff2f41a360435fea7c178072e41f5e8db8de04eb39e9d896a",
+    "cjs/property-select-actions.js": "256ce6b69e6acef2fe465379cb087a4242ee6310b4ba34963d50bf286bdf942a",
+    "property-select-metadata.js": "fee51c525c477fa5721266fc78312ffbe5b9b1f23f50633baa4b25119231dc1e",
+    "property-select-metadata.d.ts": "02378856518f570a5ce400bd59d4b0447da5771cb7ce6d482594cf18286c3291"
+  },
+  "application_preservation": "PASS: original HEAD, two AD entries, exact staged blobs, absent working files",
+  "ownership_cleanup": "PASS: only recorded task app stopped; database and inherited processes untouched",
+  "solid": "PASS: Feed owns request pagination defaults; Limit and strict SQL validation keep their contracts"
+}

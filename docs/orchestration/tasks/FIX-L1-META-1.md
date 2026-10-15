@@ -4,7 +4,7 @@
 
 Correct the fresh-framework `/country` failure recorded by [L1-META](../reports/L1-META.md).
 Prerequisite: completed L1-META diagnostic, status `NEEDS_FIX`. This is the correction-protocol prerequisite exception.
-Current status: `PENDING`. Do not start another feature or a sub-agent.
+Current status: `DONE` (author correction; independent retest pending). Do not start another feature or a sub-agent.
 
 ## References and entry points
 

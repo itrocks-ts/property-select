@@ -1,0 +1,19 @@
+[
+  {
+    "argv": [
+      "node",
+      "node_modules/@itrocks/framework/test/metadata-browser.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-1",
+      "PS_APP_PORT": "13629",
+      "PS_METADATA_URL": "http://127.0.0.1:13629",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs"
+    },
+    "output": "metadata-browser.json",
+    "sha256": "01332ca3a42592d837f7cd3b5e295fdbbfaace5bb291f100074f7be8d471b58f"
+  }
+]

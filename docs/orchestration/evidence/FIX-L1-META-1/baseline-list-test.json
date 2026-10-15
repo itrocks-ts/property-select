@@ -1,0 +1,36 @@
+{
+  "archive_argv": [
+    "git",
+    "archive",
+    "005702a6a0cd49740cdea37c2e5150dc80fb670b"
+  ],
+  "archive_cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+  "directory": "/tmp/property-select-list-baseline-u9agwq_w",
+  "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
+  "version": "0.8.0",
+  "commands": [
+    {
+      "argv": [
+        "npm",
+        "--prefix",
+        "/tmp/property-select-list-baseline-u9agwq_w",
+        "test"
+      ],
+      "cwd": "/home/baptiste/itrocks/showtime",
+      "exit_code": 1,
+      "output": "baseline-list-test.txt"
+    },
+    {
+      "argv": [
+        "node",
+        "--test",
+        "--test-isolation=none",
+        "/tmp/property-select-list-baseline-u9agwq_w/test/columns.test.mjs"
+      ],
+      "cwd": "/home/baptiste/itrocks/showtime",
+      "exit_code": 1,
+      "output": "baseline-columns-test.txt"
+    }
+  ],
+  "extraction": "Python tarfile.extractall(filter=data); node_modules links to installed tools"
+}

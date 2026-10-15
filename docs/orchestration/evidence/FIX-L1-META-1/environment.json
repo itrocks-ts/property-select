@@ -1,0 +1,28 @@
+{
+  "directory": "/tmp/property-select-FIX-L1-META-1",
+  "port": 13629,
+  "url": "http://127.0.0.1:13629",
+  "owner": {
+    "args": [
+      "/usr/bin/node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+      "--ps-environment=/tmp/property-select-FIX-L1-META-1",
+      "--ps-port=13629",
+      "--ps-token=c5347722-3329-4beb-afef-0fe0c8c1b17f"
+    ],
+    "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+    "executable": "/usr/bin/node",
+    "start": "150317777",
+    "state": "R",
+    "uid": 1000,
+    "directory": "/tmp/property-select-FIX-L1-META-1",
+    "name": "app",
+    "pid": 2234211,
+    "port": 13629,
+    "token": "c5347722-3329-4beb-afef-0fe0c8c1b17f"
+  },
+  "preflight": "New directory had no app PID/owner record; successful bind verified port 13629 free; mysqladmin reported mysqld is alive",
+  "database": "Reused synthetic property_select_recipe at 127.0.0.1:13316; mysql.sock symlink points to canonical recipe socket; no reset or database shutdown",
+  "log_path": "/tmp/property-select-FIX-L1-META-1/app.log",
+  "log_sha256": "46ddfdb98e5d24239013bd855358f08c21b3349cc583801c3472600efcb66367"
+}

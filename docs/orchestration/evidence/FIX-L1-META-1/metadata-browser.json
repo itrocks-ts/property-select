@@ -1,0 +1,556 @@
+{
+  "browser": "151.0.7922.34",
+  "errors": [],
+  "failures": [
+    {
+      "error": "net::ERR_ABORTED",
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=billing&root=invoice&delay=180"
+    }
+  ],
+  "observed": {
+    "aborted": true,
+    "absentRoot": {
+      "cache": "no-store",
+      "status": 403,
+      "value": {
+        "error": "forbidden"
+      }
+    },
+    "ambiguous": {
+      "cache": "no-store",
+      "status": 400,
+      "value": {
+        "error": "ambiguous-type"
+      }
+    },
+    "committed": "delivery",
+    "configuration": {
+      "advice": [
+        "billing",
+        "tags"
+      ],
+      "version": "fixture-1"
+    },
+    "context": {
+      "label": "invoice catalogue",
+      "path": "",
+      "properties": [
+        {
+          "kind": "terminal",
+          "label": "Invoice reference",
+          "name": "number",
+          "order": 0,
+          "path": "number"
+        },
+        {
+          "kind": "relation",
+          "label": "billing",
+          "name": "billing",
+          "order": 1,
+          "path": "billing",
+          "target": "c033b6d5dac6b42dd3352b2e",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "1294a7ea96eb986251d7fd59"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "delivery",
+          "name": "delivery",
+          "order": 2,
+          "path": "delivery",
+          "target": "c033b6d5dac6b42dd3352b2e",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "610dc7f9de818f7e334ddaed"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "lines",
+          "name": "lines",
+          "order": 3,
+          "path": "lines",
+          "target": "ca5f1247b2f89674001805c7",
+          "relation": {
+            "cardinality": "one-to-many",
+            "id": "5c24ed86e564dbb876919731",
+            "inverse": "e037e2a2c6c58c1b348d06c6"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "tags",
+          "name": "tags",
+          "order": 4,
+          "path": "tags",
+          "target": "5827666456287651bc143c7e",
+          "relation": {
+            "cardinality": "many-to-many",
+            "id": "a0237187955a250152829817",
+            "inverse": "7dd380fa4e2d29d5ce0d7878"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "ambiguous",
+          "name": "ambiguous",
+          "order": 5,
+          "path": "ambiguous",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "19bbb30f4d464a2b865406c7"
+          }
+        },
+        {
+          "kind": "terminal",
+          "label": "inherited",
+          "name": "inherited",
+          "order": 7,
+          "path": "inherited"
+        },
+        {
+          "kind": "relation",
+          "label": "self",
+          "name": "self",
+          "order": 8,
+          "path": "self",
+          "target": "687d3dad0130dda03e02077a",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "40098e9afb47c4fc8eafa685"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "singular",
+          "name": "singular",
+          "order": 9,
+          "path": "singular",
+          "target": "ca5f1247b2f89674001805c7",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "be36a42d9b3f60cdd59d7bbe"
+          }
+        },
+        {
+          "kind": "terminal",
+          "label": "unknown",
+          "name": "unknown",
+          "order": 10,
+          "path": "unknown"
+        }
+      ],
+      "type": "09ff7b65d0afc8976f7ec061"
+    },
+    "cycle": {
+      "kind": "terminal",
+      "label": "label",
+      "name": "label",
+      "order": 1,
+      "path": "tags.invoices.tags.label"
+    },
+    "deep": {
+      "kind": "terminal",
+      "label": "name",
+      "name": "name",
+      "order": 0,
+      "path": "billing.city.name"
+    },
+    "forbidden": {
+      "cache": "no-store",
+      "status": 403,
+      "value": {
+        "error": "forbidden"
+      }
+    },
+    "forbiddenAncestor": {
+      "cache": "no-store",
+      "status": 403,
+      "value": {
+        "error": "forbidden"
+      }
+    },
+    "malformed": {
+      "cache": "no-store",
+      "status": 400,
+      "value": {
+        "error": "invalid-path"
+      }
+    },
+    "method": 400,
+    "newer": true,
+    "probe": {
+      "attempts": [],
+      "constructions": 0,
+      "reads": 0
+    },
+    "restricted": {
+      "cache": "no-store",
+      "status": 200,
+      "value": {
+        "label": "invoice catalogue",
+        "path": "",
+        "properties": [
+          {
+            "kind": "terminal",
+            "label": "Invoice reference",
+            "name": "number",
+            "order": 0,
+            "path": "number"
+          },
+          {
+            "kind": "relation",
+            "label": "delivery",
+            "name": "delivery",
+            "order": 2,
+            "path": "delivery",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "610dc7f9de818f7e334ddaed"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "lines",
+            "name": "lines",
+            "order": 3,
+            "path": "lines",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "one-to-many",
+              "id": "5c24ed86e564dbb876919731",
+              "inverse": "e037e2a2c6c58c1b348d06c6"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "tags",
+            "name": "tags",
+            "order": 4,
+            "path": "tags",
+            "target": "5827666456287651bc143c7e",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "a0237187955a250152829817",
+              "inverse": "7dd380fa4e2d29d5ce0d7878"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "ambiguous",
+            "name": "ambiguous",
+            "order": 5,
+            "path": "ambiguous",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "19bbb30f4d464a2b865406c7"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "inherited",
+            "name": "inherited",
+            "order": 7,
+            "path": "inherited"
+          },
+          {
+            "kind": "relation",
+            "label": "self",
+            "name": "self",
+            "order": 8,
+            "path": "self",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "40098e9afb47c4fc8eafa685"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "singular",
+            "name": "singular",
+            "order": 9,
+            "path": "singular",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "be36a42d9b3f60cdd59d7bbe"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "unknown",
+            "name": "unknown",
+            "order": 10,
+            "path": "unknown"
+          }
+        ],
+        "type": "09ff7b65d0afc8976f7ec061"
+      }
+    },
+    "restrictedAdvice": {
+      "cache": "no-store",
+      "status": 200,
+      "value": {
+        "advice": [
+          "tags"
+        ],
+        "version": "fixture-1"
+      }
+    },
+    "reverse": {
+      "kind": "relation",
+      "label": "invoices",
+      "name": "invoices",
+      "order": 0,
+      "path": "tags.invoices",
+      "target": "687d3dad0130dda03e02077a",
+      "relation": {
+        "cardinality": "many-to-many",
+        "id": "7dd380fa4e2d29d5ce0d7878",
+        "inverse": "a0237187955a250152829817"
+      }
+    },
+    "root": {
+      "label": "invoice catalogue",
+      "path": "",
+      "properties": [
+        {
+          "kind": "terminal",
+          "label": "Invoice reference",
+          "name": "number",
+          "order": 0,
+          "path": "number"
+        },
+        {
+          "kind": "relation",
+          "label": "billing",
+          "name": "billing",
+          "order": 1,
+          "path": "billing",
+          "target": "c033b6d5dac6b42dd3352b2e",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "1294a7ea96eb986251d7fd59"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "delivery",
+          "name": "delivery",
+          "order": 2,
+          "path": "delivery",
+          "target": "c033b6d5dac6b42dd3352b2e",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "610dc7f9de818f7e334ddaed"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "lines",
+          "name": "lines",
+          "order": 3,
+          "path": "lines",
+          "target": "ca5f1247b2f89674001805c7",
+          "relation": {
+            "cardinality": "one-to-many",
+            "id": "5c24ed86e564dbb876919731",
+            "inverse": "e037e2a2c6c58c1b348d06c6"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "tags",
+          "name": "tags",
+          "order": 4,
+          "path": "tags",
+          "target": "5827666456287651bc143c7e",
+          "relation": {
+            "cardinality": "many-to-many",
+            "id": "a0237187955a250152829817",
+            "inverse": "7dd380fa4e2d29d5ce0d7878"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "ambiguous",
+          "name": "ambiguous",
+          "order": 5,
+          "path": "ambiguous",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "19bbb30f4d464a2b865406c7"
+          }
+        },
+        {
+          "kind": "terminal",
+          "label": "inherited",
+          "name": "inherited",
+          "order": 7,
+          "path": "inherited"
+        },
+        {
+          "kind": "relation",
+          "label": "self",
+          "name": "self",
+          "order": 8,
+          "path": "self",
+          "target": "687d3dad0130dda03e02077a",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "40098e9afb47c4fc8eafa685"
+          }
+        },
+        {
+          "kind": "relation",
+          "label": "singular",
+          "name": "singular",
+          "order": 9,
+          "path": "singular",
+          "target": "ca5f1247b2f89674001805c7",
+          "relation": {
+            "cardinality": "unknown",
+            "id": "be36a42d9b3f60cdd59d7bbe"
+          }
+        },
+        {
+          "kind": "terminal",
+          "label": "unknown",
+          "name": "unknown",
+          "order": 10,
+          "path": "unknown"
+        }
+      ],
+      "type": "09ff7b65d0afc8976f7ec061"
+    },
+    "stale": false,
+    "tags": {
+      "kind": "relation",
+      "label": "tags",
+      "name": "tags",
+      "order": 4,
+      "path": "tags",
+      "target": "5827666456287651bc143c7e",
+      "relation": {
+        "cardinality": "many-to-many",
+        "id": "a0237187955a250152829817",
+        "inverse": "7dd380fa4e2d29d5ce0d7878"
+      }
+    },
+    "terminal": {
+      "cache": "no-store",
+      "status": 400,
+      "value": {
+        "error": "unknown-target"
+      }
+    }
+  },
+  "origin": "http://127.0.0.1:13629",
+  "requests": [
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/property-select.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/path.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/controller.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/navigation.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/intentions.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/@itrocks/property-select/metadata.js"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=billing.city.name&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=tags&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=tags.invoices&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=tags.invoices.tags.label&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/configuration/json?path=&root=invoice"
+    },
+    {
+      "status": 403,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=hidden&root=invoice"
+    },
+    {
+      "status": 403,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=billing.city.name&root=invoice&catalogue=restricted"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=&root=invoice&catalogue=restricted"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/configuration/json?path=&root=invoice&catalogue=restricted"
+    },
+    {
+      "status": 403,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=&root=absent"
+    },
+    {
+      "status": 400,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=ambiguous.name&root=invoice"
+    },
+    {
+      "status": 400,
+      "url": "http://127.0.0.1:13629/property-select/resolve/json?path=billing..city&root=invoice"
+    },
+    {
+      "status": 400,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=number&root=invoice"
+    },
+    {
+      "status": 400,
+      "url": "http://127.0.0.1:13629/property-select/context/json?root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=delivery&root=invoice"
+    },
+    {
+      "status": 200,
+      "url": "http://127.0.0.1:13629/property-select/context/json?path=billing&root=invoice&delay=140"
+    }
+  ],
+  "status": "PASS"
+}

@@ -568,7 +568,7 @@
         "node_modules/@itrocks/list"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "An absent List offset becomes NaN and violates the strict SQL projection limit contract; preserve real framework integration.",
@@ -578,7 +578,23 @@
         "DEP-10",
         "VAL-03",
         "VAL-07"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/framework": {
+          "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+          "version": "0.9.3"
+        },
+        "@itrocks/list": {
+          "sha": "7191d22217a7d087c197134bc09226a34d05fc60",
+          "version": "0.8.1"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "45e61b2dada880b8b315cbe9555f8d6d95b2223b",
+          "base_version": "0.1.1",
+          "version": "0.1.2"
+        }
+      },
+      "validation": "PASS: default/explicit offset regressions, list build, existing scope tests, framework/app builds, metadata/projection tests, fresh country routes, owned status and real metadata browser replay; full list suite retains independently reproduced pre-existing empty-column-save failure; independent RETEST pending"
     },
     {
       "id": "RETEST-L1-META-1",

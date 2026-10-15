@@ -74,6 +74,27 @@ HTTP transport. Browser proof uses identical runtime source at `0.9.1`; final `0
   [failing assertion](evidence/L1-META/defect-offset.txt) requires `FIX-L1-META-1` and independent
   `RETEST-L1-META-1` before L2-UI; L1-META is NEEDS_FIX and all combined verdicts remain NOT_RUN.
 
+## FIX-L1-META-1 author observations
+
+List `7191d22217a7d087c197134bc09226a34d05fc60` / `0.8.1` supplies a zero default before converting an absent
+offset. Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, with identical metadata artifacts.
+[Report](reports/FIX-L1-META-1.md), [focused tests](evidence/FIX-L1-META-1/feed-test.txt),
+[HTTP proof](evidence/FIX-L1-META-1/country.json), [browser](evidence/FIX-L1-META-1/metadata-browser.json).
+
+- **Environment control correction / PASS**: A fresh owned framework on 13629 returns 200 and both synthetic
+  countries for `/country` and `/country?offset=0`, with identical HTML. The documented owned status command passes.
+- **Explicit pagination / PASS**: Numeric/string offsets retain their values and viewport limits; invalid explicit
+  offsets still reach strict SQL validation and are rejected. Existing list scope/filter/feed/JSON assertions pass.
+- **META-01–META-03 and PORT-03 replay / PASS**: Provider/projection tests and real Chromium metadata transport
+  remain available with zero guarded business reads, constructors or getters; policy and artifacts are unchanged.
+- **Existing list suite / FAIL, pre-existing**: Empty column-save assertion fails before the feed implementation.
+  A fresh archive of starting list `0.8.0` reproduces the identical failure.
+  [Current suite](evidence/FIX-L1-META-1/list-test.txt),
+  [baseline assertion](evidence/FIX-L1-META-1/baseline-columns-test.txt). This separate defect remains open.
+
+These are correction-author observations. L1-META retains NEEDS_FIX until independent `RETEST-L1-META-1` passes;
+no combined case or dependent feature is accepted by this entry.
+
 ## Package ownership key
 
 | Implementation | Owning packages                                     |

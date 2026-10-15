@@ -1,0 +1,6 @@
+[@itrocks/fastify] 00:53:44 - Server is listening on http://localhost:13629
+[itrocks-fastify] Request failed {
+  code: 'unsupported-option',
+  name: 'SelectionError',
+  statusCode: undefined
+}
