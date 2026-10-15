@@ -2,7 +2,8 @@
 
 ## Checkpoint and scope
 
-VAL-07 correction implemented; author regression `PASS`; independent retest pending. Starting package HEAD:
+VAL-07 correction: author regression and [independent retest](../VERIFY-ENVIRONMENT.md) `PASS`; VAL-01 is complete.
+Starting package HEAD:
 `7107dbb597822aa6980a5a0548e69df11f5acc09`, clean, version `0.0.10`; correction version `0.0.11`.
 Requested profile: `gpt-6.1-sol` / `high`; effective model/effort has no independent runtime attestation.
 No additional agent was created. Application HEAD remains `d7ca948292e28c248bdcc0283724e47c2a82bba4`,

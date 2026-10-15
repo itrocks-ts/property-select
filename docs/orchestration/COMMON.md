@@ -90,8 +90,8 @@ Installed Playwright and Chromium provide verified emulated touch input; see the
 [touch procedure](ENVIRONMENT.md#browser-procedure-and-touch-input) and
 [diagnostic](environment/TOUCH-DIAGNOSTIC.md). IAB does not expose touch input. Use a real touch context and browser
 input transport for gestures; preserve the browser sandbox and use the normal tool approval mechanism for launch
-if required. The probe does not validate product gesture behaviour. Task 4.2 requires the application/standalone
-process-ownership correction documented in [independent verification](VERIFY-ENVIRONMENT.md).
+if required. The probe does not validate product gesture behaviour. Task 4.2 and its application/standalone ownership
+correction pass [independent verification](VERIFY-ENVIRONMENT.md); VAL-01 is complete.
 
 Each report records criteria, exact commands, tested checkpoints, results and evidence/defects paths, limits and version
 changes. Maintain the manifest/matrix once created. Return at most eight lines under orchestration section 7: status;

@@ -4,7 +4,7 @@
 
 VAL-07 tooling correction: `DONE`, executed on 15 October 2026. Installed Chromium accepts genuine emulated touch input
 through Playwright and CDP. [Independent verification](../VERIFY-ENVIRONMENT.md) confirms this capability;
-task 4.2 still needs the documented application/standalone ownership correction.
+task 4.2 and VAL-01 are complete, including the independent process ownership retest.
 VAL-05 product gestures remain unimplemented and `NOT_RUN`; this report establishes only the required input capability.
 
 Requested profile: `gpt-6.1-sol` / `high`. The agent runtime provides no independent model/effort attestation.

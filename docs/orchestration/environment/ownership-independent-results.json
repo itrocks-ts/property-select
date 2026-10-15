@@ -1,0 +1,1571 @@
+{
+  "directory": "/tmp/property-select-ownership-independent-X0rFhO",
+  "ports": [
+    13561,
+    13562,
+    13563,
+    13564,
+    13565
+  ],
+  "timestamp": "2026-10-15T19:53:14.482Z",
+  "checks": [
+    {
+      "index": 0,
+      "action": "database",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "reset",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/a/app.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/app.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 0,
+      "action": "standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/b/app.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/b/app.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/b/standalone.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/b/standalone.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 1,
+      "stdout": "PASS: owned app 2118036 stopped\nPASS: owned standalone 2118054 stopped\n",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:175\n\t\tif (!args.includes(argument)) throw new Error(`PID ${pid} is not the owned MySQL instance`)\n\t\t                                    ^\n\nError: PID 2117897 is not the owned MySQL instance\n    at stopDatabase (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:175:39)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:229:32\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "cycle 1: foreign MySQL PID",
+      "verdict": "PASS"
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118198 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: foreign PID under own evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118198 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: copied foreign PID and evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118198 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "full stop refuses foreign app evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:434\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open '/tmp/property-select-ownership-independent-X0rFhO/a/app.owner.json'\n    at readFileSync (node:fs:434:20)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:27)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/app.owner.json'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: missing evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "<anonymous_script>:1\n{broken\n ^\n\nSyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:21)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: malformed evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged args",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged boot",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged directory",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged executable",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged name",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged pid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged port",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged start",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged token",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2117996 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged uid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118541 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: unrelated Node PID",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118216 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: foreign PID under own evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118216 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: copied foreign PID and evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:434\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.owner.json'\n    at readFileSync (node:fs:434:20)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:27)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.owner.json'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: missing evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "<anonymous_script>:1\n{broken\n ^\n\nSyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:21)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: malformed evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged args",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged boot",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged directory",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged executable",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged name",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged pid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged port",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged start",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged token",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118014 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged uid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2118833 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: unrelated Node PID",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "name": "independent browser SQL touch",
+      "verdict": "PASS"
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 0,
+      "stdout": "PASS: owned app 2117996 stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 0,
+      "stdout": "PASS: owned standalone 2118014 stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned app 2118198 stopped\nPASS: owned standalone 2118216 stopped\nPASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL 2117897 stopped through /tmp/property-select-ownership-independent-X0rFhO/a/mysql.sock; PID file and socket removed\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "name": "cycle 1: stop repeated restart fixtures journal",
+      "verdict": "PASS"
+    },
+    {
+      "index": 0,
+      "action": "database",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/a/app.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/app.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 0,
+      "action": "standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/b/app.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/b/app.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:554\n  return binding.open(\n                 ^\n\nError: EEXIST: file already exists, open '/tmp/property-select-ownership-independent-X0rFhO/b/standalone.pid'\n    at openSync (node:fs:554:18)\n    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -17,\n  code: 'EEXIST',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/b/standalone.pid'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 1,
+      "stdout": "PASS: owned app 2119290 stopped\nPASS: owned standalone 2119308 stopped\n",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:175\n\t\tif (!args.includes(argument)) throw new Error(`PID ${pid} is not the owned MySQL instance`)\n\t\t                                    ^\n\nError: PID 2119162 is not the owned MySQL instance\n    at stopDatabase (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:175:39)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:229:32\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "cycle 2: foreign MySQL PID",
+      "verdict": "PASS"
+    },
+    {
+      "index": 1,
+      "action": "app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119453 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: foreign PID under own evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119453 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: copied foreign PID and evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119453 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "full stop refuses foreign app evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:434\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open '/tmp/property-select-ownership-independent-X0rFhO/a/app.owner.json'\n    at readFileSync (node:fs:434:20)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:27)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/app.owner.json'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: missing evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "<anonymous_script>:1\n{broken\n ^\n\nSyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:21)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: malformed evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged args",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged boot",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged directory",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged executable",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged name",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged pid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged port",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged start",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged token",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119250 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: forged uid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119796 is not the owned app instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "app: unrelated Node PID",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119471 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: foreign PID under own evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119471 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: copied foreign PID and evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "node:fs:434\n    return binding.readFileUtf8(path, stringToFlags(options.flag));\n                   ^\n\nError: ENOENT: no such file or directory, open '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.owner.json'\n    at readFileSync (node:fs:434:20)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:27)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n  errno: -2,\n  code: 'ENOENT',\n  syscall: 'open',\n  path: '/tmp/property-select-ownership-independent-X0rFhO/a/standalone.owner.json'\n}\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: missing evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "<anonymous_script>:1\n{broken\n ^\n\nSyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)\n    at JSON.parse (<anonymous>)\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:21)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: malformed evidence",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged args",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged boot",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged directory",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged executable",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged name",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged pid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged port",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged start",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged token",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2119268 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: forged uid",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 1,
+      "stdout": "",
+      "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127\n\t\tthrow new Error(`PID ${pid} is not the owned ${name} instance`)\n\t\t      ^\n\nError: PID 2120088 is not the owned standalone instance\n    at stopService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:127:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:227:63\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+    },
+    {
+      "name": "standalone: unrelated Node PID",
+      "verdict": "PASS",
+      "foreignListenersRetained": true
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 0,
+      "stdout": "PASS: owned app 2119250 stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-app",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 0,
+      "stdout": "PASS: owned standalone 2119268 stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop-standalone",
+      "status": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned app 2119453 stopped\nPASS: owned standalone 2119471 stopped\nPASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL 2119162 stopped through /tmp/property-select-ownership-independent-X0rFhO/a/mysql.sock; PID file and socket removed\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "name": "cycle 2: stop repeated restart fixtures journal",
+      "verdict": "PASS"
+    },
+    {
+      "index": 1,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    },
+    {
+      "index": 0,
+      "action": "stop",
+      "status": 0,
+      "stdout": "PASS: owned MySQL is already stopped\n",
+      "stderr": ""
+    }
+  ],
+  "defects": [],
+  "uuid": "0efd2c2f-c8d2-11f1-a83b-fc3497c07008",
+  "browser": {
+    "timestamp": "2026-10-15T19:53:24.979Z",
+    "scenarios": [
+      {
+        "name": "fresh-mysql",
+        "verdict": "PASS",
+        "roots": 4
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 1280,
+          "height": 720,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "standalone-support",
+        "verdict": "PASS"
+      },
+      {
+        "name": "no-touch-negative-control",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "events": [
+          {
+            "pointerType": "mouse",
+            "time": 47,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 50,
+            "y": 173.875
+          },
+          {
+            "pointerType": "mouse",
+            "time": 47.09999990463257,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 50,
+            "y": 173.875
+          },
+          {
+            "pointerType": "mouse",
+            "time": 47.299999952316284,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 50,
+            "y": 173.875
+          }
+        ],
+        "rejected": true,
+        "verdict": "PASS"
+      },
+      {
+        "name": "tap",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 0,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 40.09999990463257,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 40.09999990463257,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 40.09999990463257,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 40.09999990463257,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "long-press",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 802.0999999046326,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 45.799999952316284,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 45.799999952316284,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 847.8999998569489,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 847.8999998569489,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "drag",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 1006.5,
+        "moved": 180.39955654047492,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 39.89999985694885,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 39.89999985694885,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 842.8999998569489,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 85,
+            "y": 241
+          },
+          {
+            "pointerType": null,
+            "time": 842.8999998569489,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 85,
+            "y": 241
+          },
+          {
+            "pointerType": "touch",
+            "time": 880.2000000476837,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 115,
+            "y": 243
+          },
+          {
+            "pointerType": null,
+            "time": 880.2000000476837,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 115,
+            "y": 243
+          },
+          {
+            "pointerType": "touch",
+            "time": 913.2000000476837,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 145,
+            "y": 245
+          },
+          {
+            "pointerType": null,
+            "time": 913.2000000476837,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 145,
+            "y": 245
+          },
+          {
+            "pointerType": "touch",
+            "time": 946.7000000476837,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 175,
+            "y": 247
+          },
+          {
+            "pointerType": null,
+            "time": 946.7000000476837,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 175,
+            "y": 247
+          },
+          {
+            "pointerType": "touch",
+            "time": 979.7999999523163,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 205,
+            "y": 249
+          },
+          {
+            "pointerType": null,
+            "time": 979.7999999523163,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 205,
+            "y": 249
+          },
+          {
+            "pointerType": "touch",
+            "time": 1013.0999999046326,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": null,
+            "time": 1013.0999999046326,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": "touch",
+            "time": 1046.3999998569489,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": null,
+            "time": 1046.3999998569489,
+            "trusted": true,
+            "type": "touchend",
+            "x": 235,
+            "y": 251
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "cancel",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 1.2999999523162842,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 43.60000014305115,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 43.60000014305115,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 44.90000009536743,
+            "trusted": true,
+            "type": "pointercancel",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 44.90000009536743,
+            "trusted": true,
+            "type": "touchcancel",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "landscape-tap",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 0.09999990463256836,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 41.60000014305115,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": null,
+            "time": 41.60000014305115,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": "touch",
+            "time": 41.700000047683716,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": null,
+            "time": 41.700000047683716,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 174
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-touch-context",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "verdict": "PASS"
+      }
+    ],
+    "browserErrors": [],
+    "failedRequests": [],
+    "browser": "151.0.7922.34",
+    "touchStartupEvents": "[\n  {\n    \"pointerType\": \"mouse\",\n    \"time\": 6.200000047683716,\n    \"trusted\": true,\n    \"type\": \"pointermove\",\n    \"x\": 0,\n    \"y\": 0\n  }\n]",
+    "verdict": "PASS"
+  },
+  "inherited": {
+    "ports": [
+      13316,
+      13317,
+      13318,
+      13319,
+      13320,
+      13321,
+      13322,
+      13323,
+      13424,
+      13425,
+      13426
+    ],
+    "before": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "after": [
+      true,
+      false,
+      true,
+      true,
+      true,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "verdict": "PASS",
+  "driver": {
+    "path": "/tmp/property-select-ownership-retest.mjs",
+    "sha256": "cbc314bc4f1d365e6efba55f76d10273f8bc70b0cc294e82d5fab1c92522a437"
+  },
+  "testedHead": "8884e26d84314ea1f3256482ef04e6b83df2613e",
+  "drivers": [
+    {
+      "path": "/tmp/property-select-ownership-retest.mjs",
+      "sha256": "cbc314bc4f1d365e6efba55f76d10273f8bc70b0cc294e82d5fab1c92522a437",
+      "source": "import assert from 'node:assert/strict'\nimport { spawn, spawnSync } from 'node:child_process'\nimport { createHash } from 'node:crypto'\nimport { existsSync, mkdirSync, mkdtempSync, readFileSync, unlinkSync, writeFileSync } from 'node:fs'\nimport { createConnection, createServer } from 'node:net'\nimport { setTimeout as delay } from 'node:timers/promises'\n\nconst root = '/home/baptiste/itrocks/showtime'\nconst recipe = `${root}/node_modules/@itrocks/property-select/docs/orchestration/environment`\nconst directory = mkdtempSync('/tmp/property-select-ownership-independent-')\nconst dirs = [`${directory}/a`, `${directory}/b`]\nfor (const dir of dirs) mkdirSync(dir)\nconst ports = [13561, 13562, 13563, 13564, 13565]\nconst inheritedPorts = [13316, 13317, 13318, 13319, 13320, 13321, 13322, 13323, 13424, 13425, 13426]\nconst report = { directory, ports, timestamp: new Date().toISOString(), checks: [], defects: [] }\nconst listening = port => new Promise(resolve => {\n\tconst socket = createConnection({ host: '127.0.0.1', port })\n\tsocket.on('connect', () => { socket.destroy(); resolve(true) })\n\tsocket.on('error', () => resolve(false))\n})\nasync function until(check)\n{\n\tconst deadline = Date.now() + 40000\n\twhile (!await check()) {\n\t\tassert(Date.now() < deadline, 'Readiness timeout')\n\t\tawait delay(100)\n\t}\n}\nfunction command(index, action, required = true)\n{\n\tconst result = spawnSync(process.execPath, [`${recipe}/control.mjs`, action], {\n\t\tcwd: root, encoding: 'utf8', timeout: 90000, env: {\n\t\t\t...process.env, PS_ENV_DIRECTORY: dirs[index], PS_DATABASE_PORT: String(ports[0]),\n\t\t\tPS_APP_PORT: String(ports[index ? 3 : 1]), PS_STANDALONE_PORT: String(ports[index ? 4 : 2])\n\t\t}\n\t})\n\treport.checks.push({ index, action, status: result.status, stdout: result.stdout, stderr: result.stderr })\n\tif (required) assert.equal(result.status, 0, result.stderr)\n\treturn result\n}\nfunction sql(query)\n{\n\tconst result = spawnSync('mysql', ['--no-defaults', `--socket=${dirs[0]}/mysql.sock`, '-u', 'root',\n\t\t'--batch', '--skip-column-names', '-e', query], { encoding: 'utf8', timeout: 10000 })\n\tassert.equal(result.status, 0, result.stderr)\n\treturn result.stdout.trim()\n}\nasync function alive()\n{\n\tassert.deepEqual(await Promise.all(ports.map(listening)), [true, true, true, true, true])\n\tfor (const port of [ports[1], ports[3]]) {\n\t\tconst response = await fetch(`http://127.0.0.1:${port}/country`)\n\t\tassert.equal(response.status, 200)\n\t\tassert.match(await response.text(), /Recipe France/)\n\t}\n}\nasync function reject(index, action, label)\n{\n\tconst result = command(index, action, false)\n\tassert.notEqual(result.status, 0, label)\n\tawait alive()\n\treport.checks.push({ name: label, verdict: 'PASS', foreignListenersRetained: true })\n}\nconst inherited = await Promise.all(inheritedPorts.map(listening))\nfor (const port of ports) await new Promise((resolve, reject) => {\n\tconst server = createServer().once('error', reject)\n\tserver.listen(port, '127.0.0.1', () => server.close(resolve))\n})\nconsole.log(`Resources: ${directory}; ports ${ports}`)\ntry {\n\tfor (const cycle of [1, 2]) {\n\t\tcommand(0, 'database')\n\t\tawait until(async () => spawnSync('mysqladmin', ['--no-defaults', `--socket=${dirs[0]}/mysql.sock`,\n\t\t\t'-u', 'root', 'ping'], { encoding: 'utf8', timeout: 5000 }).status === 0)\n\t\tif (cycle === 1) command(0, 'reset')\n\t\tconst uuid = sql('SELECT @@server_uuid')\n\t\tif (cycle === 1) report.uuid = uuid\n\t\telse assert.equal(uuid, report.uuid)\n\t\tassert.equal(sql('SELECT COUNT(*) FROM property_select_recipe.country'), '2')\n\t\tfor (const index of [0, 1]) { command(index, 'app'); command(index, 'standalone') }\n\t\tawait until(async () => (await Promise.all(ports.map(listening))).every(Boolean))\n\t\tawait alive()\n\t\tfor (const index of [0, 1]) for (const name of ['app', 'standalone']) {\n\t\t\tconst ownerPath = `${dirs[index]}/${name}.owner.json`\n\t\t\tawait until(async () => existsSync(ownerPath))\n\t\t\tconst own = readFileSync(ownerPath, 'utf8')\n\t\t\tassert.notEqual(command(index, name, false).status, 0)\n\t\t\tassert.equal(readFileSync(ownerPath, 'utf8'), own)\n\t\t}\n\t\twriteFileSync(`${dirs[1]}/mysql.pid`, readFileSync(`${dirs[0]}/mysql.pid`))\n\t\tassert.notEqual(command(1, 'stop', false).status, 0)\n\t\tassert(await listening(ports[0])); assert(await listening(ports[1]))\n\t\treport.checks.push({ name: `cycle ${cycle}: foreign MySQL PID`, verdict: 'PASS' })\n\t\tunlinkSync(`${dirs[1]}/mysql.pid`)\n\t\t// Full stop above terminates B services before checking MySQL; restore them for identity tests.\n\t\tfor (const name of ['app', 'standalone']) command(1, name)\n\t\tawait until(async () => (await Promise.all(ports.map(listening))).every(Boolean))\n\t\tfor (const name of ['app', 'standalone']) {\n\t\t\tconst pidPath = `${dirs[0]}/${name}.pid`, ownerPath = `${dirs[0]}/${name}.owner.json`\n\t\t\tconst originalPid = readFileSync(pidPath), originalOwner = readFileSync(ownerPath)\n\t\t\tconst foreignPid = readFileSync(`${dirs[1]}/${name}.pid`)\n\t\t\tconst foreignOwner = readFileSync(`${dirs[1]}/${name}.owner.json`)\n\t\t\tconst restore = () => { writeFileSync(pidPath, originalPid); writeFileSync(ownerPath, originalOwner) }\n\t\t\ttry {\n\t\t\t\twriteFileSync(pidPath, foreignPid)\n\t\t\t\tawait reject(0, `stop-${name}`, `${name}: foreign PID under own evidence`)\n\t\t\t\twriteFileSync(ownerPath, foreignOwner)\n\t\t\t\tawait reject(0, `stop-${name}`, `${name}: copied foreign PID and evidence`)\n\t\t\t\tif (name === 'app') await reject(0, 'stop', 'full stop refuses foreign app evidence')\n\t\t\t\trestore()\n\t\t\t\tunlinkSync(ownerPath)\n\t\t\t\tawait reject(0, `stop-${name}`, `${name}: missing evidence`)\n\t\t\t\twriteFileSync(ownerPath, '{broken')\n\t\t\t\tawait reject(0, `stop-${name}`, `${name}: malformed evidence`)\n\t\t\t\tfor (const field of ['args', 'boot', 'directory', 'executable', 'name', 'pid', 'port', 'start', 'token', 'uid']) {\n\t\t\t\t\tconst owner = JSON.parse(originalOwner)\n\t\t\t\t\towner[field] = typeof owner[field] === 'number' ? owner[field] + 1 : 'forged'\n\t\t\t\t\twriteFileSync(ownerPath, JSON.stringify(owner))\n\t\t\t\t\tawait reject(0, `stop-${name}`, `${name}: forged ${field}`)\n\t\t\t\t}\n\t\t\t\trestore()\n\t\t\t\tconst innocent = spawn(process.execPath, ['-e', 'setInterval(() => {}, 1000)'], { stdio: 'ignore' })\n\t\t\t\ttry {\n\t\t\t\t\twriteFileSync(pidPath, String(innocent.pid))\n\t\t\t\t\tawait reject(0, `stop-${name}`, `${name}: unrelated Node PID`)\n\t\t\t\t\tprocess.kill(innocent.pid, 0)\n\t\t\t\t}\n\t\t\t\tfinally { innocent.kill('SIGTERM') }\n\t\t\t}\n\t\t\tfinally { restore() }\n\t\t}\n\t\tif (cycle === 1) {\n\t\t\tconst source = readFileSync('/tmp/verify-property-select-environment.cjs', 'utf8')\n\t\t\t\t.replaceAll('/tmp/showtime-property-select-verify', directory)\n\t\t\t\t.replaceAll('13323', String(ports[0])).replaceAll('13321', String(ports[1]))\n\t\t\t\t.replaceAll('13322', String(ports[2]))\n\t\t\twriteFileSync(`${directory}/browser.cjs`, source)\n\t\t\tconst browser = spawnSync(process.execPath, [`${directory}/browser.cjs`], {\n\t\t\t\tcwd: root, encoding: 'utf8', timeout: 90000\n\t\t\t})\n\t\t\twriteFileSync(`${directory}/browser.stdout`, browser.stdout)\n\t\t\twriteFileSync(`${directory}/browser.stderr`, browser.stderr)\n\t\t\tassert.equal(browser.status, 0, browser.stderr)\n\t\t\treport.browser = JSON.parse(readFileSync(`${directory}/independent-results.json`, 'utf8'))\n\t\t\treport.checks.push({ name: 'independent browser SQL touch', verdict: 'PASS' })\n\t\t}\n\t\tfor (const name of ['app', 'standalone']) {\n\t\t\tcommand(0, `stop-${name}`); command(0, `stop-${name}`)\n\t\t\tassert(await listening(ports[name === 'app' ? 3 : 4]))\n\t\t}\n\t\tcommand(1, 'stop'); command(1, 'stop')\n\t\tassert(await listening(ports[0]))\n\t\tcommand(0, 'stop'); command(0, 'stop')\n\t\tassert.deepEqual(await Promise.all(ports.map(listening)), [false, false, false, false, false])\n\t\tassert(!existsSync(`${dirs[0]}/mysql.pid`)); assert(!existsSync(`${dirs[0]}/mysql.sock`))\n\t\tassert(existsSync(`${dirs[0]}/data/auto.cnf`))\n\t\tconst journal = readFileSync(`${dirs[0]}/queries.log`, 'utf8')\n\t\tassert.match(journal, /Query\\tshutdown/i)\n\t\tassert.match(journal, /SELECT id, `name` FROM `country` LIMIT 50/)\n\t\tassert.match(journal, /SELECT COUNT\\(\\*\\).*FROM `country`/i)\n\t\tif (cycle === 1) {\n\t\t\tassert.match(journal, /independent-environment-verification/)\n\t\t\tassert.match(journal, /c.name='Recipe Alice'/)\n\t\t}\n\t\tassert.match(readFileSync(`${dirs[0]}/mysql.log`, 'utf8'), /Shutdown complete/)\n\t\treport.checks.push({ name: `cycle ${cycle}: stop repeated restart fixtures journal`, verdict: 'PASS' })\n\t\tconsole.log(`Cycle ${cycle} PASS`)\n\t}\n\tconst after = await Promise.all(inheritedPorts.map(listening))\n\tassert.deepEqual(after, inherited)\n\treport.inherited = { ports: inheritedPorts, before: inherited, after }\n\treport.verdict = 'PASS'\n}\ncatch (error) { report.defects.push({ message: error.message, stack: error.stack }); report.verdict = 'NEEDS_FIX'; throw error }\nfinally {\n\tfor (const index of [1, 0]) command(index, 'stop', false)\n\treport.driver = { path: '/tmp/property-select-ownership-retest.mjs',\n\t\tsha256: createHash('sha256').update(readFileSync('/tmp/property-select-ownership-retest.mjs')).digest('hex') }\n\twriteFileSync(`${directory}/results.json`, JSON.stringify(report, null, 2) + '\\n')\n\tconsole.log(JSON.stringify({ directory, verdict: report.verdict, defects: report.defects }))\n}\n"
+    },
+    {
+      "path": "/tmp/property-select-ownership-independent-X0rFhO/browser.cjs",
+      "sha256": "7965e5b0841de56a200f45788b22cbabf6a3da6366579c32051e31a8dbf2311a",
+      "source": "const assert = require('node:assert/strict')\nconst fs = require('node:fs/promises')\nconst { createRequire } = require('node:module')\nconst { chromium } = require('/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright')\nconst requireApp = createRequire('/home/baptiste/itrocks/showtime/package.json')\nconst { createConnection } = requireApp('mariadb')\nconst out = '/tmp/property-select-ownership-independent-X0rFhO'\nconst report = { timestamp: new Date().toISOString(), scenarios: [], browserErrors: [], failedRequests: [] }\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\nasync function sql() {\n const connection = await createConnection({host:'127.0.0.1',port:13561,user:'root',password:'',database:'property_select_recipe'})\n try {\n  const rows = await connection.query(`SELECT /* independent-environment-verification */ i.number,c.name,cy.name AS city,i.amount,i.issued_at,i.note,i.active FROM ps_invoice i LEFT JOIN ps_customer c ON c.id=i.id_customer LEFT JOIN ps_address a ON a.id=c.id_address LEFT JOIN ps_city cy ON cy.id=a.id_city ORDER BY i.id`)\n  assert.deepEqual(rows.map(r=>r.number),['REC-001','REC-002','REC-003','REC-004'])\n  assert.equal(rows[0].city,'Recipe Paris'); assert.equal(rows[2].city,null); assert.equal(rows[3].name,null)\n  assert.equal(String(rows[0].amount),'12.34'); assert(rows[0].issued_at instanceof Date)\n  assert.equal(rows[0].note,null); assert.equal(rows[2].note,''); assert.deepEqual(rows.map(r=>r.active),[1,0,1,1])\n  const filtered = await connection.query('SELECT i.number FROM ps_invoice i JOIN ps_customer c ON c.id=i.id_customer WHERE c.name=? ORDER BY i.id LIMIT 1',['Recipe Alice'])\n  assert.equal(filtered[0].number,'REC-001')\n  report.scenarios.push({name:'fresh-mysql',verdict:'PASS',roots:rows.length})\n } finally { await connection.end() }\n}\nasync function capability(page) { return page.evaluate(()=>({width:innerWidth,height:innerHeight,touch:navigator.maxTouchPoints,coarse:matchMedia('(pointer: coarse)').matches,hover:matchMedia('(hover: hover)').matches})) }\nasync function events(page) { return JSON.parse(await page.locator('#events').textContent()) }\nasync function watch(page) {\n page.on('pageerror',error=>report.browserErrors.push(error.message))\n page.on('console',message=>{if(['error','warning'].includes(message.type())) report.browserErrors.push(message.text())})\n page.on('requestfailed',request=>report.failedRequests.push({url:request.url(),error:request.failure()?.errorText}))\n}\n(async()=>{\n await sql()\n let browser = await chromium.launch({headless:true,chromiumSandbox:true})\n try {\n  report.browser=browser.version()\n  const desktop = await browser.newContext({hasTouch:false,viewport:{width:1280,height:720}})\n  const page = await desktop.newPage(); await watch(page)\n  for(const [width,height] of [[1280,720],[390,844],[844,390]]) {\n   await page.setViewportSize({width,height}); assert.equal((await page.goto('http://127.0.0.1:13562/country')).status(),200)\n   await page.locator('table.objects').waitFor(); const text=await page.locator('table.objects').innerText()\n   assert(text.includes('Recipe France')); assert(text.includes('Recipe United Kingdom'))\n   const cap=await capability(page); assert.equal(cap.width,width); assert.equal(cap.height,height)\n   await page.screenshot({path:`${out}/application-${width}.png`,fullPage:true})\n   report.scenarios.push({name:'framework-navigation',cap,verdict:'PASS'})\n  }\n  assert.equal((await page.goto('http://127.0.0.1:13563/')).status(),200)\n  assert((await page.locator('body').innerText()).includes('no selector implementation'))\n  report.scenarios.push({name:'standalone-support',verdict:'PASS'})\n  await page.goto('http://127.0.0.1:13563/touch-probe.html')\n  const nonTouch=await capability(page); assert.equal(nonTouch.touch,0); assert.equal(nonTouch.coarse,false); assert.equal(nonTouch.hover,true)\n  const box=await page.locator('#surface').boundingBox(); await page.mouse.click(box.x+30,box.y+50)\n  const mouse=await events(page); assert(mouse.length>0); assert(mouse.every(e=>e.trusted && e.pointerType==='mouse' && !e.type.startsWith('touch')))\n  let rejected=false; try {await page.touchscreen.tap(box.x+30,box.y+50)} catch(e) {rejected=/hasTouch/.test(e.message)}\n  assert(rejected,'Tap must reject in a no-touch context')\n  report.scenarios.push({name:'no-touch-negative-control',cap:nonTouch,events:mouse,rejected,verdict:'PASS'})\n  await desktop.close()\n  await browser.close()\n  browser = await chromium.launch({headless:true,chromiumSandbox:true})\n  const context=await browser.newContext({hasTouch:true,isMobile:true,viewport:{width:390,height:844}})\n  const touchPage=await context.newPage(); await watch(touchPage)\n  const session=await context.newCDPSession(touchPage)\n  await touchPage.goto('http://127.0.0.1:13563/touch-probe.html')\n  report.touchStartupEvents = await touchPage.locator('#events').textContent()\n  const send=async(type,point)=>session.send('Input.dispatchTouchEvent',{type,touchPoints:point?[{id:7,...point}]:[]})\n  for(const name of ['tap','long-press','drag','cancel','landscape-tap']) {\n   if(name==='landscape-tap') await touchPage.setViewportSize({width:844,height:390})\n   await touchPage.goto('http://127.0.0.1:13563/touch-probe.html')\n   const cap=await capability(touchPage); assert(cap.touch>0); assert(cap.coarse); assert(!cap.hover)\n   assert.equal(cap.width,name==='landscape-tap'?844:390); assert.equal(cap.height,name==='landscape-tap'?390:844)\n   const b=await touchPage.locator('#surface').boundingBox(), point={x:Math.round(b.x+35),y:Math.round(b.y+50)}\n   if(name.includes('tap')) await touchPage.touchscreen.tap(point.x,point.y)\n   else {\n    await send('touchStart',point)\n    if(name!=='cancel') await delay(800)\n    if(name==='drag') for(let i=1;i<=6;i++){await send('touchMove',{x:point.x+i*30,y:point.y+i*2}); await delay(25)}\n    await send(name==='cancel'?'touchCancel':'touchEnd')\n   }\n   const log=await events(touchPage), pointers=log.filter(e=>e.type.startsWith('pointer'))\n   assert(log.length>=4); assert(log.every(e=>e.trusted)); assert(pointers.every(e=>e.pointerType==='touch'), JSON.stringify({name,log}))\n   assert.equal(log.filter(e=>e.type==='pointerdown').length,1); assert.equal(log.filter(e=>e.type==='touchstart').length,1)\n   const end=name==='cancel'?'cancel':'up'; assert.equal(pointers.at(-1).type,`pointer${end}`)\n   assert.equal(log.at(-1).type,name==='cancel'?'touchcancel':'touchend')\n   const elapsed=pointers.at(-1).time-pointers[0].time, moved=Math.hypot(pointers.at(-1).x-pointers[0].x,pointers.at(-1).y-pointers[0].y)\n   if(['long-press','drag'].includes(name)) assert(elapsed>=780)\n   if(name==='drag'){assert(moved>=175); assert(log.some(e=>e.type==='touchmove')); assert(log.some(e=>e.type==='pointermove'))}\n   else assert(moved<2)\n   if(name==='cancel'){assert(!log.some(e=>e.type==='pointerup'||e.type==='touchend'))}\n   await touchPage.screenshot({path:`${out}/independent-${name}.png`})\n   report.scenarios.push({name,cap,elapsed,moved,events:log,verdict:'PASS'})\n  }\n  await touchPage.goto('http://127.0.0.1:13562/country')\n  assert((await touchPage.locator('table.objects').innerText()).includes('Recipe France'))\n  report.scenarios.push({name:'framework-touch-context',cap:await capability(touchPage),verdict:'PASS'})\n  assert.deepEqual(report.browserErrors,[]); assert.deepEqual(report.failedRequests,[])\n  report.verdict='PASS'\n } finally { await browser.close() }\n await fs.writeFile(`${out}/independent-results.json`,JSON.stringify(report,null,2)+'\\n')\n console.log(JSON.stringify({...report,scenarios:report.scenarios.map(({events,...rest})=>rest)},null,2))\n})().catch(error=>{console.error(error);process.exitCode=1})\n"
+    }
+  ]
+}

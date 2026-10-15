@@ -3,7 +3,8 @@
 ## Checkpoint and scope
 
 VAL-07 MySQL correction: independently verified `PASS`; the separate application/standalone
-[ownership correction](PROCESS-OWNERSHIP-CORRECTION.md) awaits independent retest. Starting package HEAD:
+[ownership correction](PROCESS-OWNERSHIP-CORRECTION.md) also passes independent retest. VAL-01 is complete.
+Starting package HEAD:
 `de8d89a5115288d1569ca0765536d60689ebcf21`, clean, version `0.0.8`; correction version `0.0.9`.
 Requested execution profile: `gpt-6.1-sol` / `medium`; the launcher supplies no independent
 effective-profile attestation.

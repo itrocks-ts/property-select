@@ -2,11 +2,11 @@
 
 ## Scope and checkpoint
 
-Task 4.2: application/standalone ownership correction implemented and regression-tested on 15 October 2026;
-independent VAL-07 retest is pending, so VAL-01 remains gated. MySQL shutdown and tactile tooling pass.
+Task 4.2 and VAL-01: independently verified `PASS` on 15 October 2026. Application/standalone process ownership,
+MySQL shutdown, synthetic SQL, browser navigation and tactile tooling pass.
 See the [process ownership correction](environment/PROCESS-OWNERSHIP-CORRECTION.md),
 [MySQL shutdown correction](environment/SHUTDOWN-CORRECTION.md) and
-[independent verification](VERIFY-ENVIRONMENT.md) for evidence and the remaining independent gate.
+[independent verification](VERIFY-ENVIRONMENT.md) for evidence and the completed independent retest.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
@@ -20,6 +20,7 @@ model or reasoning effort. No sub-agent was created.
 Repository root: `/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select`.
 Infrastructure starting HEAD: `b8e9d4e75d6d0b80dc2c31433fb44644502ea443`, version `0.0.5`;
 infrastructure version: `0.0.6`.
+Independent ownership retest tested HEAD: `8884e26d84314ea1f3256482ef04e6b83df2613e`; evidence version: `0.0.12`.
 Tactile correction starting HEAD: `276943ad110fe8d1b3dffb06686b7afd52c2bc2d`; correction version: `0.0.7`.
 The untracked `environment/` resources from the interrupted environment task were inspected, reused and corrected.
 The package has no build script or runtime selector exports yet. Files under `docs` are included in its published files.
