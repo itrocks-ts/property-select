@@ -1,0 +1,23 @@
+{
+  "owner": {
+    "args": [
+      "/usr/bin/node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+      "--ps-environment=/tmp/property-select-FIX-L1-META-2",
+      "--ps-port=13649",
+      "--ps-token=05170359-009d-464c-9559-6c4a89072f05"
+    ],
+    "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+    "executable": "/usr/bin/node",
+    "start": "150431531",
+    "state": "R",
+    "uid": 1000,
+    "directory": "/tmp/property-select-FIX-L1-META-2",
+    "name": "app",
+    "pid": 2247059,
+    "port": 13649,
+    "token": "05170359-009d-464c-9559-6c4a89072f05"
+  },
+  "raw_log": "/tmp/property-select-FIX-L1-META-2/app.log",
+  "log_sha256": "561829e41df767946bf218a9bb4442d0661693a6f2757c5864ec2d491bcc9482"
+}

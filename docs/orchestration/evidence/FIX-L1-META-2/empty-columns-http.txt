@@ -1,0 +1,14 @@
+[
+  {
+    "url": "http://127.0.0.1:13649/country?columns=name",
+    "expected": 204,
+    "status": 204,
+    "bodyBytes": 0
+  },
+  {
+    "url": "http://127.0.0.1:13649/country?columns=",
+    "expected": 204,
+    "status": 204,
+    "bodyBytes": 0
+  }
+]

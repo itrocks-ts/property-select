@@ -1,0 +1,163 @@
+[
+  {
+    "name": "list-build",
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "list-build.txt",
+    "sha256": "f76f80375b9c39b03c7748a61c866c17283608411795371aa96a894a2f6b83d7",
+    "raw_output": "list-build.txt.gz",
+    "raw_sha256": "f87dd78e29eea3f67a2fefd70d3a1eb24a95ac71c94cbb946acb51768eb99c04"
+  },
+  {
+    "name": "list-test",
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "list-test.txt",
+    "sha256": "715583e5312c2712f1851740bdf65c81b28c2e50eaa59c5066fc8b3d1cfaf0cf"
+  },
+  {
+    "name": "framework-test",
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "framework-test.txt",
+    "sha256": "73bba1e0100b692e058298bc2bc1701d677f7e322a6bcd8f4bc4479107982afb"
+  },
+  {
+    "name": "metadata",
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select-metadata.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "metadata.txt",
+    "sha256": "4458233a3df6eb9a46d694914249dbba9e582ccb7f023600001da0ca4976c256"
+  },
+  {
+    "name": "projection-relative",
+    "argv": [
+      "node",
+      "--test",
+      "node_modules/@itrocks/framework/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "projection-relative.txt",
+    "sha256": "262515489c7446e5da21041980a708217fe04ceb751846b79ba50725dc873878"
+  },
+  {
+    "name": "projection",
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "projection.txt",
+    "sha256": "689e0b103d0a46a2332d5ca0d5c695454a8f11d10ec4dee55c1f42d67867f351"
+  },
+  {
+    "name": "selector-test",
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "selector-test.txt",
+    "sha256": "8f559825c394d2ebb9f144aea29251d0f2d49b9a5d110a36284fc7880c8a079a"
+  },
+  {
+    "name": "application-build",
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "application-build.txt",
+    "sha256": "c5bcca67ef0a2f68fa034118123ce1005d74416c0ee9280d9e768186cf33315a"
+  }
+]

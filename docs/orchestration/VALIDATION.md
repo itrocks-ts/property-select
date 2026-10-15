@@ -126,6 +126,29 @@ Gate: **NEEDS_FIX**. Tested list `7191d22217a7d087c197134bc09226a34d05fc60` / `0
 L1-META and this retest retain NEEDS_FIX. PLAN requires `FIX-L1-META-2` then distinct `RETEST-L1-META-2` and rewires
 L2-UI. All overall cases and later browser/search/session/gesture observations retain their prior verdicts.
 
+## FIX-L1-META-2 author observations
+
+Correction: **DONE**, independent `RETEST-L1-META-2` remains pending. List
+`033246001183120bbf3a3f0191d061fe960dcf56` / `0.8.2` distinguishes an explicit empty column-save value from absence.
+Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`; tracking changes `0.1.3` to `0.1.4`.
+[Report](reports/FIX-L1-META-2.md), [13 list assertions](evidence/FIX-L1-META-2/list-assertions.txt),
+[commands](evidence/FIX-L1-META-2/commands-core.json), [review](evidence/FIX-L1-META-2/review.json).
+
+- **Existing list suite/save observation / PASS**: Full suite passes without weakening its empty-column assertion.
+  Focused coverage retains invalid-column validation, explicit empty arrays, absent/undefined rendering and empty
+  session restoration. Real HTTP nonempty/empty saves return 204 with no body and zero business calls or SQL.
+  [Browser/session proof](evidence/FIX-L1-META-2/columns-browser.txt).
+- **Environment/pagination / PASS**: Fresh owned server 13649 serves bare and offset-zero country pages, valid later
+  one-row feeds and empty end feed; invalid offset still fails. The owned status command passes and targeted cleanup
+  removes only this correction's app records. [Status](evidence/FIX-L1-META-2/owned-status.txt).
+- **META-01–META-03 and PORT-03 replay / PASS**: Five META, nine projection and framework suites pass; actual
+  sandboxed Chromium retains authorised metadata, catalogue changes, fetch abort and stale HTTP disposal, with zero
+  guarded reads/constructions/getters and zero metadata business SQL.
+  [Browser proof](evidence/FIX-L1-META-2/metadata-browser.txt).
+
+These are correction-author observations. Historical failed gates retain NEEDS_FIX until the distinct retest passes;
+combined LIFE-03/META/PORT cases, later selector persistence, search and gesture verdicts retain their prior stages.
+
 ## Package ownership key
 
 | Implementation | Owning packages                                     |

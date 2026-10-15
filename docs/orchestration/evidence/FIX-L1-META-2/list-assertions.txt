@@ -1,0 +1,21 @@
+✔ columns accept reordering and removing properties without restoring defaults (2.277728ms)
+✔ columns reject duplicates, unknown properties and malformed requests (0.354447ms)
+✔ removed columns, including the last column, survive session restoration (0.553921ms)
+✔ column changes persist and return 204 before any data query, even for an empty list (0.610849ms)
+✔ column saves preserve validation and restore an empty session on the next request (0.937716ms)
+✔ an absent offset resets the feed to the first page with a finite limit (0.256854ms)
+✔ explicit valid offsets and viewport limits retain their pagination values (0.284868ms)
+✔ invalid explicit offsets remain visible to downstream validation (0.591342ms)
+✔ html combines user filters and a mandatory scope for search and count (0.795379ms)
+✔ html keeps the mandatory scope on paginated feed requests (0.386395ms)
+✔ html restores session filters for queries and inputs, and accepts clearing them (0.918628ms)
+✔ json forwards its mandatory scope directly to the data source (0.251097ms)
+✔ omitting the scope preserves html filters and the json query (0.213255ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 60.740169

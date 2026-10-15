@@ -1,0 +1,38 @@
+[
+  {
+    "name": "metadata-browser",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/browser.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "metadata-browser.txt",
+    "sha256": "3c213ed517e49252b716b73e73ef7bcf5532712917d0c3bdb3e0a7875bd9c4bd"
+  },
+  {
+    "name": "columns-browser",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/columns-browser.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L1-META-2",
+      "PS_APP_PORT": "13649",
+      "PS_METADATA_URL": "http://127.0.0.1:13649",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "columns-browser.txt",
+    "sha256": "2eaa5457a9c813307612ee36bad277ee5f18cdfb2faa837f792fcfde143de810"
+  }
+]

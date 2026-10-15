@@ -1,0 +1,16 @@
+{
+  "list": {
+    "sha": "033246001183120bbf3a3f0191d061fe960dcf56",
+    "version": "0.8.2"
+  },
+  "framework": {
+    "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+    "version": "0.9.3"
+  },
+  "property-select": {
+    "base_sha": "96443912c6a0cd7a7253f506ea109d346f1907cb",
+    "base_version": "0.1.3",
+    "version": "0.1.4",
+    "runtime_source_delta": "none"
+  }
+}

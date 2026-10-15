@@ -1,0 +1,15 @@
+[
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/columns.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "source_sha": "7191d22217a7d087c197134bc09226a34d05fc60",
+    "output": "columns-before.txt",
+    "sha256": "901772695421be3d1060a2065242456a107596adeb478abe199f82f4c409b5cb"
+  }
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "argv": [
+      "python3",
+      "-"
+    ],
+    "stdin": "preflight.py",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "permission": "use_default",
+    "output": "restricted-preflight.txt",
+    "sha256": "08b231209f54178b26cc6f9644f33945b7b6048bc2bf44e731b0ee71a83aec69"
+  },
+  {
+    "argv": [
+      "python3",
+      "-"
+    ],
+    "stdin": "preflight.py",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "permission": "require_escalated",
+    "output": "preflight.txt",
+    "sha256": "c1e2783a28ce8f72abdcb658aaac36e3b980a8aad5ceff3a2dec03dab8bb18e1",
+    "raw_output": "preflight.txt.gz",
+    "raw_sha256": "5b83bdbb771e101aff8c49f9ae39ec3b1511f4949967b018d93eb7e9b4f18e9c"
+  }
+]

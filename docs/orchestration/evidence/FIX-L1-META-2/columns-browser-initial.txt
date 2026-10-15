@@ -1,0 +1,37 @@
+{
+  "browser": "151.0.7922.34",
+  "sandbox": true,
+  "origin": "http://127.0.0.1:13649",
+  "saves": [
+    {
+      "url": "http://127.0.0.1:13649/country?columns=name",
+      "status": 204,
+      "bodyBytes": 0,
+      "sql": "",
+      "restoredColumns": [
+        "name"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13649/country?columns=name%2Cunknown",
+      "status": 204,
+      "bodyBytes": 0,
+      "sql": "",
+      "restoredColumns": [
+        "name"
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13649/country?columns=",
+      "status": 204,
+      "bodyBytes": 0,
+      "sql": "",
+      "restoredColumns": []
+    }
+  ],
+  "isolatedDefaultColumns": [
+    "name"
+  ],
+  "invalidOffset": 500,
+  "status": "PASS"
+}
