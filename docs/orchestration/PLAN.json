@@ -834,7 +834,7 @@
         "node_modules/@itrocks/home"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "medium",
       "model_justification": "Pane lifecycle and focus use a settled generic owner contract.",
@@ -845,7 +845,16 @@
         "UI-03",
         "QUA-02",
         "DEP-08"
-      ]
+      ],
+      "delivery": {
+        "home": {
+          "sha": "857a9f7796feb71816f75aa84d27a08c31f5f44a",
+          "version": "0.5.1"
+        },
+        "tracking_version": "0.2.2",
+        "author_validation": "87 browser assertions and lifecycle suite PASS; manifest-only publication followup PASS",
+        "independent_gate": "V2-HOME pending"
+      }
     },
     {
       "id": "V2-HOME",

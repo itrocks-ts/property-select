@@ -1,0 +1,36 @@
+{
+  "owner_sha": "857a9f7796feb71816f75aa84d27a08c31f5f44a",
+  "version": "0.5.1",
+  "browser_tested_feature_sha": "b2547296456ee65d28cc774dca209ad80a731ab6",
+  "followup": "manifest-only map publication fix; runtime sources unchanged",
+  "required_files": [
+    "container.js",
+    "right-pane.js",
+    "right-pane.d.ts",
+    "right-pane.css",
+    "cjs/container.html",
+    "cjs/output.js"
+  ],
+  "package_inventory": "PASS",
+  "side_effect_free_browser_import": "PASS (Node without DOM)",
+  "backend_root_preserved": "./cjs/output.js",
+  "browser_runtime_imports": {
+    "right-pane.js": [],
+    "container.js": [
+      "./right-pane.js"
+    ]
+  },
+  "sha256": {
+    "package.json": "aa199ed7392add2ec79c473e98dbeca7db46da84eb5614f17547d7523baa8372",
+    "src/container.html": "1419a5e8536bb20ace83f467cec03e0a0ef6f15b8a29bd05aaabb42cebd05226",
+    "src/front/right-pane.ts": "d419d4b8d3d8b71ff30392982cf2be6f7bad7b17269f4a295b41b2883cdea5f3",
+    "src/front/container.ts": "7867e1213bd8d7c245c80d5385cea60ad45a84705c94a8d13113788274c3bb81",
+    "src/right-pane.scss": "d1ff4d7687d66bca06453def41591b168771e7827fa43825ff2f0e0e422f81af",
+    "container.js": "8f2b7ba470f9bf758fc4460c721291900447b5c4b1d34bfe5f14de7ecd544d26",
+    "right-pane.js": "1f0e35c83850e551dc09f792990e290c5535d29c42597ea60d01f448bb5724df",
+    "right-pane.d.ts": "4c9018ce82d2ee1d58939ef40a5124e5997d06b42d40f2246d8f88afb7a580db",
+    "right-pane.css": "d7d004f32a48db548b81147deeef810b5894dadd5a137836504c2dc645b42f35",
+    "cjs/container.html": "1419a5e8536bb20ace83f467cec03e0a0ef6f15b8a29bd05aaabb42cebd05226",
+    "cjs/output.js": "91afd1e3995bed934bbc177f7af445b9b3a2c36edaa7c3c66762b625a43db7bb"
+  }
+}

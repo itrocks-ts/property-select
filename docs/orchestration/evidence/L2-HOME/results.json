@@ -1,0 +1,1053 @@
+{
+  "url": "http://127.0.0.1:13731/pane-fixture",
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "seed": "arbitrary content, 16 branch links, 80 example items",
+  "records": [
+    {
+      "name": "desktop empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop starts folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop one command",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop command moved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop icon reversed",
+      "expected": "›",
+      "observed": "›",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop no overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop comfortable command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop main shrinks",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop main scrolls both axes",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop main stays interactive",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop competing owner refused",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop long breadcrumb scrolls",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop visible keyboard outline",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop content click retains pane",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop actual scroll",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop close focus",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop retained input",
+      "expected": "retained context",
+      "observed": "retained context",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop retained scroll",
+      "expected": 170,
+      "observed": 170,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop nested suspension",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop restored without search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop removed token invalid",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop theme foreground/background distinct",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow starts folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow one command",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow command moved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow icon reversed",
+      "expected": "›",
+      "observed": "›",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow no overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow comfortable command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow main shrinks",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow main scrolls both axes",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow main stays interactive",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow competing owner refused",
+      "expected": "PaneOccupiedError",
+      "observed": "PaneOccupiedError",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow long breadcrumb scrolls",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow visible keyboard outline",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow content click retains pane",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow actual scroll",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow close focus",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow retained input",
+      "expected": "retained context",
+      "observed": "retained context",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow retained scroll",
+      "expected": 170,
+      "observed": 170,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow nested suspension",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow restored without search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow removed token invalid",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow theme foreground/background distinct",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait starts folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait one command",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait command moved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait icon reversed",
+      "expected": "›",
+      "observed": "›",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait no overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait comfortable command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait main inert",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait modal semantics",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait long breadcrumb scrolls",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait content click retains pane",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait actual scroll",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait close focus",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait retained input",
+      "expected": "retained context",
+      "observed": "retained context",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait retained scroll",
+      "expected": 143,
+      "observed": 143,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait nested suspension",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait restored without search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait removed token invalid",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait theme foreground/background distinct",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape empty",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape starts folded",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape one command",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape command moved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape icon reversed",
+      "expected": "›",
+      "observed": "›",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape no overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape comfortable command",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape main inert",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape modal semantics",
+      "expected": "true",
+      "observed": "true",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape long breadcrumb scrolls",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape content click retains pane",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape actual scroll",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape close focus",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape retained input",
+      "expected": "retained context",
+      "observed": "retained context",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape retained scroll",
+      "expected": 143,
+      "observed": 143,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape nested suspension",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape restored without search focus",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape removed token invalid",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape reduced motion",
+      "expected": "0s",
+      "observed": "0s",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape theme foreground/background distinct",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "browser health",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "desktop",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "name": "narrow",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "name": "portrait",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    },
+    {
+      "name": "landscape",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    }
+  ],
+  "failures": [],
+  "ownership": {
+    "args": [
+      "/usr/bin/node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+      "--ps-environment=/tmp/property-select-L2-HOME-live",
+      "--ps-port=13731",
+      "--ps-token=1084e937-9bd4-4246-82b5-a7f19c91b588"
+    ],
+    "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+    "executable": "/usr/bin/node",
+    "start": "150637796",
+    "state": "R",
+    "uid": 1000,
+    "directory": "/tmp/property-select-L2-HOME-live",
+    "name": "app",
+    "pid": 2271697,
+    "port": 13731,
+    "token": "1084e937-9bd4-4246-82b5-a7f19c91b588"
+  }
+}

@@ -1143,3 +1143,17 @@ gestures, physical system interruptions and keyboard behaviour remain conditiona
 and emulated-touch cases are mandatory. L2-UI supplies the standalone browser view and static demo;
 its author and independent V2-UI observations pass for the implemented standalone surface. Current handwritten SQL
 smoke remains infrastructure-only, never evidence for SQL-01–14.
+
+
+## L2-HOME author observations
+
+[Author report](reports/L2-HOME.md) and [fresh evidence](evidence/L2-HOME/results.json) record shell observations
+for PANE-01, PANE-02, PANE-03, PANE-04 and PANE-06: **PASS (author)**. The actual framework container runs arbitrary
+fixture content at `/pane-fixture`, using only the isolated initializer hook. Lifecycle, exclusive occupancy,
+restoration/disposal, title, subscription, movable command, desktop interaction/scroll, mobile inertness/focus,
+four viewport layouts, actual touch scroll, breadcrumb access, themes and reduced motion are exercised.
+The delivered owner is `home` 0.5.1; package exports/build/style/inventory also pass.
+
+Independent PANE verdicts remain NOT_RUN until V2-HOME. Combined UI-01..03, QUA-02 and DEP-08 requirements retain their
+later integration gates. PANE-05, list header, product drag and navigation cleanup by the future composition remain
+NOT_RUN at their named stages; the public removal contract invalidates stale tokens now.
