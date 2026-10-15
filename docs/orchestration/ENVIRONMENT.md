@@ -2,9 +2,10 @@
 
 ## Scope and checkpoint
 
-Task 4.2: shutdown correction delivered on 15 October 2026; independent VAL-07 retest is pending.
-Tactile tooling passes. See the [shutdown correction](environment/SHUTDOWN-CORRECTION.md) for its regression results
-and [independent verification](VERIFY-ENVIRONMENT.md) for the original defect and reproducer.
+Task 4.2: `NEEDS_FIX` after independent VAL-07 retest on 15 October 2026.
+MySQL shutdown and tactile tooling pass. Application/standalone shutdown can stop another environment's process
+using the same launcher; VAL-01 remains gated. See the [shutdown correction](environment/SHUTDOWN-CORRECTION.md)
+and [independent verification](VERIFY-ENVIRONMENT.md) for current results and the required correction.
 The existing framework runs against synthetic data on a dedicated MySQL server.
 Application startup, owned restart, HTTP availability, real browser navigation, responsive sizing and actual SQL
 observation are exercised. No selector, pane, projection API or product acceptance implementation is included.
@@ -195,8 +196,11 @@ node "$recipe/control.mjs" stop-app
 PS_ENV_DIRECTORY=/tmp/showtime-property-select-env-retry node "$recipe/control.mjs" stop-standalone
 ```
 
-Both commands verify the recorded PID command line against the package launcher. The application stop/start cycle was
-executed and followed by an HTTP check and actual browser reload. Servers remain running for subsequent tasks.
+Both commands verify the recorded PID command line against the package launcher. They do not yet establish which
+environment owns that process: a foreign environment using the same launcher passes this check. Confirm the resource
+identity manually before using these commands until the documented VAL-07 correction is delivered.
+The application stop/start cycle was executed and followed by an HTTP check and actual browser reload.
+Original recipe servers remain running for subsequent tasks; the final verifier's isolated services are stopped.
 For full teardown, `control.mjs stop` additionally stops its recorded dedicated MySQL instance and any matching
 standalone PID in that directory. Use it only after confirming no following task needs the recipe.
 MySQL shutdown uses `mysqladmin --protocol=SOCKET` after checking exact process arguments, UID, datadir, socket,

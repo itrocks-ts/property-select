@@ -1,0 +1,683 @@
+{
+  "testedHead": "3f6b2001a6b044174bfdc9a8b4f951e040f99c7d",
+  "verdict": "NEEDS_FIX",
+  "lifecycle": {
+    "directory": "/tmp/property-select-final-independent-M9yqWL",
+    "ports": [
+      13471,
+      13472,
+      13473
+    ],
+    "timestamp": "2026-10-15T19:42:42.415Z",
+    "checks": [
+      {
+        "action": "database",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "action": "reset",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "instance-identity",
+        "cycle": 1,
+        "identity": "/tmp/property-select-final-independent-M9yqWL/data/\t/tmp/property-select-final-independent-M9yqWL/mysql.sock\t/tmp/property-select-final-independent-M9yqWL/mysql.pid\t13471\t963f9c84-c8d0-11f1-9d88-fc3497c07008\t1"
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-mysql",
+        "status": 1,
+        "stdout": "",
+        "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:44\n\t\tif (!args.includes(argument)) throw new Error(`PID ${pid} is not the owned MySQL instance`)\n\t\t                                    ^\n\nError: PID 2106664 is not the owned MySQL instance\n    at stopDatabase (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:44:39)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:32\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+      },
+      {
+        "action": "app",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "action": "standalone",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "action": "status",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "mysqld is alive\nPASS: framework list HTTP 200 with Recipe France\n",
+        "stderr": ""
+      },
+      {
+        "name": "independent-browser-sql-touch",
+        "status": 0
+      },
+      {
+        "action": "stop-app",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-node",
+        "status": 1,
+        "stdout": "",
+        "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:112\n\t\t\tif (!argumentsText.includes(marker)) throw new Error(`PID ${pid} is not the owned ${name}`)\n\t\t\t                                           ^\n\nError: PID 2107670 is not the owned app\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:112:47\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+      },
+      {
+        "action": "stop-standalone",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-node",
+        "status": 1,
+        "stdout": "",
+        "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:112\n\t\t\tif (!argumentsText.includes(marker)) throw new Error(`PID ${pid} is not the owned ${name}`)\n\t\t\t                                           ^\n\nError: PID 2107670 is not the owned standalone\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:112:47\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+      },
+      {
+        "action": "stop-app",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-app",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "same-launcher-foreign-directory",
+        "owner": "app",
+        "pid": "2106750",
+        "status": 0,
+        "stillAlive": false
+      },
+      {
+        "action": "stop-standalone",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-standalone",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "same-launcher-foreign-directory",
+        "owner": "standalone",
+        "pid": "2106768",
+        "status": 0,
+        "stillAlive": false
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "PASS: owned MySQL 2106664 stopped through /tmp/property-select-final-independent-M9yqWL/mysql.sock; PID file and socket removed\n",
+        "stderr": ""
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "PASS: owned MySQL is already stopped\n",
+        "stderr": ""
+      },
+      {
+        "action": "database",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "instance-identity",
+        "cycle": 2,
+        "identity": "/tmp/property-select-final-independent-M9yqWL/data/\t/tmp/property-select-final-independent-M9yqWL/mysql.sock\t/tmp/property-select-final-independent-M9yqWL/mysql.pid\t13471\t963f9c84-c8d0-11f1-9d88-fc3497c07008\t1"
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL/foreign-mysql",
+        "status": 1,
+        "stdout": "",
+        "stderr": "file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:44\n\t\tif (!args.includes(argument)) throw new Error(`PID ${pid} is not the owned MySQL instance`)\n\t\t                                    ^\n\nError: PID 2107757 is not the owned MySQL instance\n    at stopDatabase (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:44:39)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:117:32\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)\n\nNode.js v24.0.1\n"
+      },
+      {
+        "action": "app",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "action": "standalone",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "action": "status",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "mysqld is alive\nPASS: framework list HTTP 200 with Recipe France\n",
+        "stderr": ""
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "PASS: owned MySQL 2107757 stopped through /tmp/property-select-final-independent-M9yqWL/mysql.sock; PID file and socket removed\n",
+        "stderr": ""
+      },
+      {
+        "action": "stop",
+        "directory": "/tmp/property-select-final-independent-M9yqWL",
+        "status": 0,
+        "stdout": "PASS: owned MySQL is already stopped\n",
+        "stderr": ""
+      }
+    ],
+    "defects": [
+      {
+        "name": "foreign-environment-process-stopped",
+        "owner": "app",
+        "pid": "2106750",
+        "foreignDirectory": "/tmp/property-select-final-independent-M9yqWL/foreign-app",
+        "port": 13472,
+        "expected": "Reject a PID belonging to a different PS_ENV_DIRECTORY and retain the listener",
+        "observed": "Exit 0 and the other environment listener closes"
+      },
+      {
+        "name": "foreign-environment-process-stopped",
+        "owner": "standalone",
+        "pid": "2106768",
+        "foreignDirectory": "/tmp/property-select-final-independent-M9yqWL/foreign-standalone",
+        "port": 13473,
+        "expected": "Reject a PID belonging to a different PS_ENV_DIRECTORY and retain the listener",
+        "observed": "Exit 0 and the other environment listener closes"
+      }
+    ],
+    "uuid": "963f9c84-c8d0-11f1-9d88-fc3497c07008",
+    "inherited": {
+      "ports": [
+        13316,
+        13317,
+        13318,
+        13319,
+        13320,
+        13321,
+        13322,
+        13323,
+        13424,
+        13425,
+        13426
+      ],
+      "before": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "after": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    },
+    "verdict": "NEEDS_FIX"
+  },
+  "browser": {
+    "timestamp": "2026-10-15T19:42:50.244Z",
+    "scenarios": [
+      {
+        "name": "fresh-mysql",
+        "verdict": "PASS",
+        "roots": 4
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 1280,
+          "height": 720,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-navigation",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "verdict": "PASS"
+      },
+      {
+        "name": "standalone-support",
+        "verdict": "PASS"
+      },
+      {
+        "name": "no-touch-negative-control",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 0,
+          "coarse": false,
+          "hover": true
+        },
+        "events": [
+          {
+            "pointerType": "mouse",
+            "time": 50.39999985694885,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 50,
+            "y": 173.875
+          },
+          {
+            "pointerType": "mouse",
+            "time": 50.5,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 50,
+            "y": 173.875
+          },
+          {
+            "pointerType": "mouse",
+            "time": 50.69999980926514,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 50,
+            "y": 173.875
+          }
+        ],
+        "rejected": true,
+        "verdict": "PASS"
+      },
+      {
+        "name": "tap",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 0.09999990463256836,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 41.700000047683716,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 41.700000047683716,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 41.799999952316284,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 41.799999952316284,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "long-press",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 802,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 41.09999990463257,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 41.09999990463257,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 843.0999999046326,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 843.0999999046326,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "drag",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 1003.2000000476837,
+        "moved": 180.39955654047492,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 41.40000009536743,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 41.40000009536743,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 844.6000001430511,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 85,
+            "y": 241
+          },
+          {
+            "pointerType": null,
+            "time": 844.6000001430511,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 85,
+            "y": 241
+          },
+          {
+            "pointerType": "touch",
+            "time": 880.4000000953674,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 115,
+            "y": 243
+          },
+          {
+            "pointerType": null,
+            "time": 880.4000000953674,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 115,
+            "y": 243
+          },
+          {
+            "pointerType": "touch",
+            "time": 913.4000000953674,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 145,
+            "y": 245
+          },
+          {
+            "pointerType": null,
+            "time": 913.4000000953674,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 145,
+            "y": 245
+          },
+          {
+            "pointerType": "touch",
+            "time": 946.2999999523163,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 175,
+            "y": 247
+          },
+          {
+            "pointerType": null,
+            "time": 946.2999999523163,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 175,
+            "y": 247
+          },
+          {
+            "pointerType": "touch",
+            "time": 979.7999999523163,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 205,
+            "y": 249
+          },
+          {
+            "pointerType": null,
+            "time": 979.7999999523163,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 205,
+            "y": 249
+          },
+          {
+            "pointerType": "touch",
+            "time": 1012,
+            "trusted": true,
+            "type": "pointermove",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": null,
+            "time": 1012,
+            "trusted": true,
+            "type": "touchmove",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": "touch",
+            "time": 1044.6000001430511,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 235,
+            "y": 251
+          },
+          {
+            "pointerType": null,
+            "time": 1044.6000001430511,
+            "trusted": true,
+            "type": "touchend",
+            "x": 235,
+            "y": 251
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "cancel",
+        "cap": {
+          "width": 390,
+          "height": 844,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 1.3999998569488525,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 42.299999952316284,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 42.299999952316284,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": "touch",
+            "time": 43.69999980926514,
+            "trusted": true,
+            "type": "pointercancel",
+            "x": 55,
+            "y": 239
+          },
+          {
+            "pointerType": null,
+            "time": 43.69999980926514,
+            "trusted": true,
+            "type": "touchcancel",
+            "x": 55,
+            "y": 239
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "landscape-tap",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "elapsed": 0.19999980926513672,
+        "moved": 0,
+        "events": [
+          {
+            "pointerType": "touch",
+            "time": 44.90000009536743,
+            "trusted": true,
+            "type": "pointerdown",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": null,
+            "time": 44.90000009536743,
+            "trusted": true,
+            "type": "touchstart",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": "touch",
+            "time": 45.09999990463257,
+            "trusted": true,
+            "type": "pointerup",
+            "x": 55,
+            "y": 174
+          },
+          {
+            "pointerType": null,
+            "time": 45.09999990463257,
+            "trusted": true,
+            "type": "touchend",
+            "x": 55,
+            "y": 174
+          }
+        ],
+        "verdict": "PASS"
+      },
+      {
+        "name": "framework-touch-context",
+        "cap": {
+          "width": 844,
+          "height": 390,
+          "touch": 1,
+          "coarse": true,
+          "hover": false
+        },
+        "verdict": "PASS"
+      }
+    ],
+    "browserErrors": [],
+    "failedRequests": [],
+    "browser": "151.0.7922.34",
+    "touchStartupEvents": "[\n  {\n    \"pointerType\": \"mouse\",\n    \"time\": 6.8999998569488525,\n    \"trusted\": true,\n    \"type\": \"pointermove\",\n    \"x\": 0,\n    \"y\": 0\n  }\n]",
+    "verdict": "PASS"
+  },
+  "drivers": [
+    {
+      "path": "/tmp/verify-property-select-final.mjs",
+      "sha256": "a89936c0249c1065d3b34f4b3497fb9372fd780875e83f2ee4798b3a294ba33b",
+      "source": "import assert from 'node:assert/strict'\nimport { spawnSync, spawn } from 'node:child_process'\nimport { mkdtempSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs'\nimport { createConnection, createServer } from 'node:net'\nimport { setTimeout as delay } from 'node:timers/promises'\n\nconst root = '/home/baptiste/itrocks/showtime'\nconst recipe = `${root}/node_modules/@itrocks/property-select/docs/orchestration/environment`\nconst directory = mkdtempSync('/tmp/property-select-final-independent-')\nconst ports = [13471, 13472, 13473]\nconst env = { ...process.env, PS_ENV_DIRECTORY: directory, PS_DATABASE_PORT: String(ports[0]),\n PS_APP_PORT: String(ports[1]), PS_STANDALONE_PORT: String(ports[2]) }\nconst report = { directory, ports, timestamp: new Date().toISOString(), checks: [], defects: [] }\nconst listening = port => new Promise(resolve => {\n const socket = createConnection({ host: '127.0.0.1', port })\n socket.on('connect', () => { socket.destroy(); resolve(true) })\n socket.on('error', () => resolve(false))\n})\nasync function until(check) {\n const deadline = Date.now() + 30000\n while (!await check()) { assert(Date.now() < deadline, 'Timeout'); await delay(100) }\n}\nfunction command(action, extra = {}, required = true) {\n const result = spawnSync(process.execPath, [`${recipe}/control.mjs`, action], {\n  env: { ...env, ...extra }, cwd: root, encoding: 'utf8', timeout: 90000\n })\n report.checks.push({ action, directory: extra.PS_ENV_DIRECTORY ?? directory, status: result.status,\n  stdout: result.stdout, stderr: result.stderr })\n if (required) assert.equal(result.status, 0, result.stderr)\n return result\n}\nfunction sql(query) {\n const result = spawnSync('mysql', ['--no-defaults', `--socket=${directory}/mysql.sock`, '-u', 'root',\n  '--batch', '--skip-column-names', '-e', query], { encoding: 'utf8', timeout: 10000 })\n assert.equal(result.status, 0, result.stderr)\n return result.stdout.trim()\n}\nconst inheritedPorts = [13316,13317,13318,13319,13320,13321,13322,13323,13424,13425,13426]\nconst inherited = await Promise.all(inheritedPorts.map(listening))\nfor (const port of ports) await new Promise((resolve,reject) => {\n const server = createServer().once('error', reject)\n server.listen(port,'127.0.0.1',() => server.close(resolve))\n})\nconsole.log(`New resources: ${directory}; ports ${ports}`)\ntry {\n for (const cycle of [1,2]) {\n  command('database')\n  await until(async () => {\n   const ping = spawnSync('mysqladmin',['--no-defaults',`--socket=${directory}/mysql.sock`,'-u','root','ping'],\n    {encoding:'utf8',timeout:5000})\n   return ping.status === 0\n  })\n  if (cycle === 1) command('reset')\n  const identity = sql('SELECT @@datadir, @@socket, @@pid_file, @@port, @@server_uuid, @@general_log')\n  const uuid = identity.split('\\t')[4]\n  if (cycle === 1) report.uuid = uuid\n  else assert.equal(uuid, report.uuid)\n  report.checks.push({ name:'instance-identity', cycle, identity })\n  const foreign = `${directory}/foreign-mysql`\n  mkdirSync(foreign,{recursive:true})\n  writeFileSync(`${foreign}/mysql.pid`,readFileSync(`${directory}/mysql.pid`))\n  const refused = command('stop',{PS_ENV_DIRECTORY:foreign},false)\n  assert.notEqual(refused.status,0)\n  assert.match(refused.stderr,/not the owned MySQL instance/)\n  assert(await listening(ports[0]))\n  command('app'); command('standalone')\n  await until(async () => (await Promise.all(ports.map(listening))).every(Boolean))\n  command('status')\n  if (cycle === 1) {\n   const browserScript = readFileSync('/tmp/verify-property-select-environment.cjs','utf8')\n    .replaceAll('/tmp/showtime-property-select-verify',directory)\n    .replaceAll('13323',String(ports[0])).replaceAll('13321',String(ports[1]))\n    .replaceAll('13322',String(ports[2]))\n   writeFileSync(`${directory}/browser.cjs`,browserScript)\n   const result = spawnSync(process.execPath,[`${directory}/browser.cjs`],{encoding:'utf8',timeout:90000,cwd:root})\n   writeFileSync(`${directory}/browser.stdout`,result.stdout)\n   writeFileSync(`${directory}/browser.stderr`,result.stderr)\n   assert.equal(result.status,0,result.stderr)\n   report.checks.push({name:'independent-browser-sql-touch',status:result.status})\n   const innocent = spawn(process.execPath,['-e','setInterval(() => {}, 1000)'],{stdio:'ignore'})\n   try {\n    const foreignPid = `${directory}/foreign-node`\n    mkdirSync(foreignPid)\n    for (const owner of ['app','standalone']) {\n     writeFileSync(`${foreignPid}/${owner}.pid`,String(innocent.pid))\n     const rejection = command(`stop-${owner}`,{PS_ENV_DIRECTORY:foreignPid},false)\n     assert.notEqual(rejection.status,0)\n     assert.match(rejection.stderr,/not the owned/)\n     process.kill(innocent.pid,0)\n    }\n   } finally { innocent.kill('SIGTERM') }\n   for (const [owner,port] of [['app',ports[1]],['standalone',ports[2]]]) {\n    const foreignDirectory = `${directory}/foreign-${owner}`\n    mkdirSync(foreignDirectory)\n    const pid = readFileSync(`${directory}/${owner}.pid`,'utf8').trim()\n    writeFileSync(`${foreignDirectory}/${owner}.pid`,pid)\n    const result = command(`stop-${owner}`,{PS_ENV_DIRECTORY:foreignDirectory},false)\n    await delay(300)\n    const stillAlive = await listening(port)\n    report.checks.push({name:'same-launcher-foreign-directory',owner,pid,status:result.status,stillAlive})\n    if (result.status === 0 && !stillAlive) report.defects.push({\n     name:'foreign-environment-process-stopped',owner,pid,foreignDirectory,port,\n     expected:'Reject a PID belonging to a different PS_ENV_DIRECTORY and retain the listener',\n     observed:'Exit 0 and the other environment listener closes'\n    })\n   }\n  }\n  command('stop')\n  await until(async () => !(await Promise.all(ports.map(listening))).some(Boolean))\n  assert(!existsSync(`${directory}/mysql.sock`)); assert(!existsSync(`${directory}/mysql.pid`))\n  command('stop')\n  assert.match(readFileSync(`${directory}/mysql.log`,'utf8'),/Shutdown complete/)\n  const journal = readFileSync(`${directory}/queries.log`,'utf8')\n  assert.match(journal,/Query\\tshutdown/i)\n  if (cycle === 1) {\n   assert.match(journal,/independent-environment-verification/)\n   assert.match(journal,/SELECT id, `name` FROM `country` LIMIT 50/)\n  }\n  console.log(`Cycle ${cycle}: owned MySQL administrative shutdown and repeated stop PASS`)\n }\n assert.deepEqual(await Promise.all(inheritedPorts.map(listening)),inherited)\n report.inherited = { ports:inheritedPorts, before:inherited, after:await Promise.all(inheritedPorts.map(listening)) }\n report.verdict = report.defects.length ? 'NEEDS_FIX' : 'PASS'\n} finally {\n if (existsSync(`${directory}/mysql.pid`)) command('stop')\n writeFileSync(`${directory}/lifecycle-results.json`,JSON.stringify(report,null,2)+'\\n')\n console.log(JSON.stringify({directory,uuid:report.uuid,verdict:report.verdict,defects:report.defects},null,2))\n}\n"
+    },
+    {
+      "path": "/tmp/property-select-final-independent-M9yqWL/browser.cjs",
+      "sha256": "6a02f46d2ec18087e46ae9d56116e7a67f3d4a16908b8ec8648ef550e2c55baa",
+      "source": "const assert = require('node:assert/strict')\nconst fs = require('node:fs/promises')\nconst { createRequire } = require('node:module')\nconst { chromium } = require('/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright')\nconst requireApp = createRequire('/home/baptiste/itrocks/showtime/package.json')\nconst { createConnection } = requireApp('mariadb')\nconst out = '/tmp/property-select-final-independent-M9yqWL'\nconst report = { timestamp: new Date().toISOString(), scenarios: [], browserErrors: [], failedRequests: [] }\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\nasync function sql() {\n const connection = await createConnection({host:'127.0.0.1',port:13471,user:'root',password:'',database:'property_select_recipe'})\n try {\n  const rows = await connection.query(`SELECT /* independent-environment-verification */ i.number,c.name,cy.name AS city,i.amount,i.issued_at,i.note,i.active FROM ps_invoice i LEFT JOIN ps_customer c ON c.id=i.id_customer LEFT JOIN ps_address a ON a.id=c.id_address LEFT JOIN ps_city cy ON cy.id=a.id_city ORDER BY i.id`)\n  assert.deepEqual(rows.map(r=>r.number),['REC-001','REC-002','REC-003','REC-004'])\n  assert.equal(rows[0].city,'Recipe Paris'); assert.equal(rows[2].city,null); assert.equal(rows[3].name,null)\n  assert.equal(String(rows[0].amount),'12.34'); assert(rows[0].issued_at instanceof Date)\n  assert.equal(rows[0].note,null); assert.equal(rows[2].note,''); assert.deepEqual(rows.map(r=>r.active),[1,0,1,1])\n  const filtered = await connection.query('SELECT i.number FROM ps_invoice i JOIN ps_customer c ON c.id=i.id_customer WHERE c.name=? ORDER BY i.id LIMIT 1',['Recipe Alice'])\n  assert.equal(filtered[0].number,'REC-001')\n  report.scenarios.push({name:'fresh-mysql',verdict:'PASS',roots:rows.length})\n } finally { await connection.end() }\n}\nasync function capability(page) { return page.evaluate(()=>({width:innerWidth,height:innerHeight,touch:navigator.maxTouchPoints,coarse:matchMedia('(pointer: coarse)').matches,hover:matchMedia('(hover: hover)').matches})) }\nasync function events(page) { return JSON.parse(await page.locator('#events').textContent()) }\nasync function watch(page) {\n page.on('pageerror',error=>report.browserErrors.push(error.message))\n page.on('console',message=>{if(['error','warning'].includes(message.type())) report.browserErrors.push(message.text())})\n page.on('requestfailed',request=>report.failedRequests.push({url:request.url(),error:request.failure()?.errorText}))\n}\n(async()=>{\n await sql()\n let browser = await chromium.launch({headless:true,chromiumSandbox:true})\n try {\n  report.browser=browser.version()\n  const desktop = await browser.newContext({hasTouch:false,viewport:{width:1280,height:720}})\n  const page = await desktop.newPage(); await watch(page)\n  for(const [width,height] of [[1280,720],[390,844],[844,390]]) {\n   await page.setViewportSize({width,height}); assert.equal((await page.goto('http://127.0.0.1:13472/country')).status(),200)\n   await page.locator('table.objects').waitFor(); const text=await page.locator('table.objects').innerText()\n   assert(text.includes('Recipe France')); assert(text.includes('Recipe United Kingdom'))\n   const cap=await capability(page); assert.equal(cap.width,width); assert.equal(cap.height,height)\n   await page.screenshot({path:`${out}/application-${width}.png`,fullPage:true})\n   report.scenarios.push({name:'framework-navigation',cap,verdict:'PASS'})\n  }\n  assert.equal((await page.goto('http://127.0.0.1:13473/')).status(),200)\n  assert((await page.locator('body').innerText()).includes('no selector implementation'))\n  report.scenarios.push({name:'standalone-support',verdict:'PASS'})\n  await page.goto('http://127.0.0.1:13473/touch-probe.html')\n  const nonTouch=await capability(page); assert.equal(nonTouch.touch,0); assert.equal(nonTouch.coarse,false); assert.equal(nonTouch.hover,true)\n  const box=await page.locator('#surface').boundingBox(); await page.mouse.click(box.x+30,box.y+50)\n  const mouse=await events(page); assert(mouse.length>0); assert(mouse.every(e=>e.trusted && e.pointerType==='mouse' && !e.type.startsWith('touch')))\n  let rejected=false; try {await page.touchscreen.tap(box.x+30,box.y+50)} catch(e) {rejected=/hasTouch/.test(e.message)}\n  assert(rejected,'Tap must reject in a no-touch context')\n  report.scenarios.push({name:'no-touch-negative-control',cap:nonTouch,events:mouse,rejected,verdict:'PASS'})\n  await desktop.close()\n  await browser.close()\n  browser = await chromium.launch({headless:true,chromiumSandbox:true})\n  const context=await browser.newContext({hasTouch:true,isMobile:true,viewport:{width:390,height:844}})\n  const touchPage=await context.newPage(); await watch(touchPage)\n  const session=await context.newCDPSession(touchPage)\n  await touchPage.goto('http://127.0.0.1:13473/touch-probe.html')\n  report.touchStartupEvents = await touchPage.locator('#events').textContent()\n  const send=async(type,point)=>session.send('Input.dispatchTouchEvent',{type,touchPoints:point?[{id:7,...point}]:[]})\n  for(const name of ['tap','long-press','drag','cancel','landscape-tap']) {\n   if(name==='landscape-tap') await touchPage.setViewportSize({width:844,height:390})\n   await touchPage.goto('http://127.0.0.1:13473/touch-probe.html')\n   const cap=await capability(touchPage); assert(cap.touch>0); assert(cap.coarse); assert(!cap.hover)\n   assert.equal(cap.width,name==='landscape-tap'?844:390); assert.equal(cap.height,name==='landscape-tap'?390:844)\n   const b=await touchPage.locator('#surface').boundingBox(), point={x:Math.round(b.x+35),y:Math.round(b.y+50)}\n   if(name.includes('tap')) await touchPage.touchscreen.tap(point.x,point.y)\n   else {\n    await send('touchStart',point)\n    if(name!=='cancel') await delay(800)\n    if(name==='drag') for(let i=1;i<=6;i++){await send('touchMove',{x:point.x+i*30,y:point.y+i*2}); await delay(25)}\n    await send(name==='cancel'?'touchCancel':'touchEnd')\n   }\n   const log=await events(touchPage), pointers=log.filter(e=>e.type.startsWith('pointer'))\n   assert(log.length>=4); assert(log.every(e=>e.trusted)); assert(pointers.every(e=>e.pointerType==='touch'), JSON.stringify({name,log}))\n   assert.equal(log.filter(e=>e.type==='pointerdown').length,1); assert.equal(log.filter(e=>e.type==='touchstart').length,1)\n   const end=name==='cancel'?'cancel':'up'; assert.equal(pointers.at(-1).type,`pointer${end}`)\n   assert.equal(log.at(-1).type,name==='cancel'?'touchcancel':'touchend')\n   const elapsed=pointers.at(-1).time-pointers[0].time, moved=Math.hypot(pointers.at(-1).x-pointers[0].x,pointers.at(-1).y-pointers[0].y)\n   if(['long-press','drag'].includes(name)) assert(elapsed>=780)\n   if(name==='drag'){assert(moved>=175); assert(log.some(e=>e.type==='touchmove')); assert(log.some(e=>e.type==='pointermove'))}\n   else assert(moved<2)\n   if(name==='cancel'){assert(!log.some(e=>e.type==='pointerup'||e.type==='touchend'))}\n   await touchPage.screenshot({path:`${out}/independent-${name}.png`})\n   report.scenarios.push({name,cap,elapsed,moved,events:log,verdict:'PASS'})\n  }\n  await touchPage.goto('http://127.0.0.1:13472/country')\n  assert((await touchPage.locator('table.objects').innerText()).includes('Recipe France'))\n  report.scenarios.push({name:'framework-touch-context',cap:await capability(touchPage),verdict:'PASS'})\n  assert.deepEqual(report.browserErrors,[]); assert.deepEqual(report.failedRequests,[])\n  report.verdict='PASS'\n } finally { await browser.close() }\n await fs.writeFile(`${out}/independent-results.json`,JSON.stringify(report,null,2)+'\\n')\n console.log(JSON.stringify({...report,scenarios:report.scenarios.map(({events,...rest})=>rest)},null,2))\n})().catch(error=>{console.error(error);process.exitCode=1})\n"
+    }
+  ]
+}

@@ -2,7 +2,8 @@
 
 ## Checkpoint and scope
 
-VAL-07 correction: `DONE`, awaiting independent verification. Starting package HEAD:
+VAL-07 MySQL correction: independently verified `PASS`; task 4.2 still needs the separate application/standalone
+ownership correction in the [current verification report](../VERIFY-ENVIRONMENT.md). Starting package HEAD:
 `de8d89a5115288d1569ca0765536d60689ebcf21`, clean, version `0.0.8`; correction version `0.0.9`.
 Requested execution profile: `gpt-6.1-sol` / `medium`; the launcher supplies no independent
 effective-profile attestation.
@@ -44,11 +45,12 @@ The preliminary isolated datadir `/tmp/showtime-property-select-shutdown-fix/` a
 
 The restricted shell in this execution cannot create IP sockets, connect to Unix sockets or inspect host PIDs in
 `/proc`. The standard approved `require_escalated` mechanism ran the real local service tests without changing any
-permission configuration. The original `kill EACCES` proof remains in the [independent report](../VERIFY-ENVIRONMENT.md);
+permission configuration. The original `kill EACCES` proof is versioned at checkpoint `de8d89a` in
+`VERIFY-ENVIRONMENT.md`;
 this namespace did not reproduce that exact errno through the old script, whose missing `/proc` handling returned
 success without stopping MySQL. The corrected command fails safely when process ownership cannot be read.
 
 `node --check` on both changed scripts and `git diff --check` pass. This correction changes infrastructure only;
-existing browser/touch and SQL product acceptance claims are unaffected. Independent verification remains required.
+existing browser/touch and SQL product acceptance claims are unaffected. Independent MySQL verification passes.
 SOLID review: resource lifecycle stays in the environment owner; no framework boundary or product abstraction changes.
 Proposed commit: `Stop isolated MySQL through its verified socket`.

@@ -3,7 +3,8 @@
 ## Scope and verdict
 
 VAL-07 tooling correction: `DONE`, executed on 15 October 2026. Installed Chromium accepts genuine emulated touch input
-through Playwright and CDP. Independent verification of this correction is still required before closing task 4.2.
+through Playwright and CDP. [Independent verification](../VERIFY-ENVIRONMENT.md) confirms this capability;
+task 4.2 still needs the documented application/standalone ownership correction.
 VAL-05 product gestures remain unimplemented and `NOT_RUN`; this report establishes only the required input capability.
 
 Requested profile: `gpt-6.1-sol` / `high`. The agent runtime provides no independent model/effort attestation.
@@ -82,7 +83,7 @@ reopening and persistence must be checked against their future implementation on
 Protocol cancellation is not a physical system interruption. Native keyboard, edge gestures and physical phone input
 remain unverified. These limits do not invalidate the demonstrated emulation capability or waive later gesture tests.
 
-A separate verifier must rerun the probe, inspect its event evidence and confirm the documented launch procedure.
+Independent verification reran the gestures, inspected event evidence and confirmed the documented launch procedure.
 If the normal launch approval is unavailable, record that boundary and keep dependent tactile acceptance blocked.
 
 SOLID review: the test fixture only records input, the driver only transports and checks it, and no product owner or
