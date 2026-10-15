@@ -1,0 +1,18 @@
+Node 24.0.1, npm 11.6.4; installed owner compiler used without installation.
+Initial npm --prefix node_modules/@itrocks/sql-build test:
+Typecheck passed, then tsx failed with listen EPERM on /tmp/tsx-1000/54.pipe.
+The same npm command passed through normal require_escalated approval.
+Final run-checks.py also used normal approval for tsx and archived all successful checks.
+
+Original card command:
+node --test node_modules/@itrocks/sql-build/test/property-select.test.mjs
+Result: Could not find 'node_modules/@itrocks/sql-build/test/property-select.test.mjs'
+The file exists; Node's relative discovery under node_modules is the documented S04/S05 limitation.
+Successful command:
+node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build/test/property-select.test.mjs
+Result: 14 tests passed, none failed or skipped. Task card updated accordingly.
+
+Review removed one trailing blank source line; no executable logic changed after the final checks.
+A tool-envelope JavaScript syntax error occurred before one requested shell operation could execute;
+the corrected envelope ran the intended source ordering and full final checks successfully.
+No reproducible product failure or omitted mandatory check remains.

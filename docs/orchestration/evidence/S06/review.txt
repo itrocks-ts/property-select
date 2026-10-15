@@ -1,0 +1,12 @@
+PASS: complete product staged/unstaged/untracked diff inspected before explicit-path commit.
+PASS: sql-build a267327e072df4f6ffa855c15eae6a4c5776ee6d is clean at version 0.2.0.
+PASS: source/test/documentation widths (badge URLs excepted), whitespace and public type fixtures.
+PASS: public facade/types and every new runtime/declaration are in the offline package inventory.
+PASS: source/tests/maps excluded from package; backend has no browser/CSS/HTML/icon assets.
+PASS: new runtime imports use public sql-join/sql-functions entries and local owner files only.
+PASS: no new runtime dependency; optional field-discovery hook preserves complete legacy dependency records.
+PASS: one predicate owner, SQL-only projection mapping, public graph reuse, no runtime data/hydration/presentation.
+PASS: S06 plan/report/matrix record builder PASS only; real SQL/hydration/browser acceptance remains NOT_RUN.
+PASS: unchanged sql-join and framework checkpoints clean; application HEAD, two AD blobs and absences preserved.
+PASS: no application edits/documents/commits, installs/updates/downloads, vcs-modules, service changes or delegation.
+PASS: all four final commands in commands.json exit zero; 8 legacy and 14 projection tests, zero failed/skipped.

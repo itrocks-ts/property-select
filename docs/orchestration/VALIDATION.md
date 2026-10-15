@@ -458,6 +458,14 @@ optional ancestors, explicit inverse/link mappings, multiplicity and pre-SQL val
 and framework `87aea202752c9252ce5803558d9bb18e1fbdcedd` / `0.7.0`.
 Executed projection/count/page/identity observations remain `NOT_RUN` until S07/VSQL.
 
+S06 builder observations for SQL-01–SQL-10: `PASS` for parameterised scalar/object expansion, hidden identity/presence
+fields, shared aliases, final property metadata, optional joins, undisplayed criteria, stable root ordering, bound
+limit/offset/root ids, plural rejection and common count/projection EXISTS scopes. Evidence:
+[projection tests](evidence/S06/sql-build-projection.txt), [existing tests and types](evidence/S06/sql-build-test.txt),
+[report/checkpoints](reports/S06.md), sql-build `a267327e072df4f6ffa855c15eae6a4c5776ee6d` / `0.2.0`.
+These are builder portions only; SQL-07 conversions and actual SQL-01–SQL-10 database outcomes remain `NOT_RUN`
+until S07/VSQL. Additional builder root-id restrictions support SQL-12 without claiming executed restricted reads.
+
 ### SQL-02: Object and representative values
 
 Expected: Project City with nested Country representative fields; assert prototype/id/loaded fields, converted
@@ -781,6 +789,10 @@ an implemented feature or use a simulated replacement for a required browser/dat
   direct/accumulated multiplicity, invalid/ambiguous path rejection, public bindings, existing-client compatibility
   and package exports. These pass only graph prerequisites of DEP-03/DEP-11 and SQL-01/03/04/05/06/09/10/11.
   Actual SQL root identity, correlated predicates, projection/count/pages and browser observations remain NOT_RUN.
+- S06: Parameterised projection SQL and descriptors, scalar/object fields, hidden identity/presence, final property
+  metadata, deterministic aliases, singular ordering, bound root limits/restrictions and common correlated plural
+  criteria/count compilation. These pass only SQL-01–SQL-10 builder portions and support SQL-12 root restrictions.
+  Runtime values, hydration, conversions, executed database counts/pages and browser observations remain NOT_RUN.
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and

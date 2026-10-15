@@ -332,14 +332,21 @@
         "node_modules/@itrocks/sql-build"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Object-field mappings, correlated plural predicates, aliases and root pagination need coherent query planning.",
       "report": "reports/S06.md",
       "requirements": [
         "DEP-11"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/sql-build": {
+          "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+          "version": "0.2.0"
+        }
+      },
+      "validation": "PASS: build, eight existing tests, fourteen metadata projection tests, public types and package files; real SQL/hydration remain S07/VSQL"
     },
     {
       "id": "S07",

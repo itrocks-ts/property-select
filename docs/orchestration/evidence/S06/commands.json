@@ -1,0 +1,56 @@
+[
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "sql-build-build.txt",
+    "sha256": "4d128aedf54d6cb9bdfd2d83161b1f5143f6727dacb8af1999f0dd5fe438d51b",
+    "raw_sha256": "16c916195bb6c42a5c3f19869bd52c4a5b9741099f284bfb9cee2de5f2d7fafa"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "sql-build-test.txt",
+    "sha256": "09a9e43caada8a6ae0aa671d79f289cb9cd7f49b4625a977ff061a4978711157",
+    "raw_sha256": "09a9e43caada8a6ae0aa671d79f289cb9cd7f49b4625a977ff061a4978711157"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "sql-build-projection.txt",
+    "sha256": "fd29033f682dc65aeb637b1fd2a0e969063410a0688a2de2fb93097ce59c6491",
+    "raw_sha256": "fd29033f682dc65aeb637b1fd2a0e969063410a0688a2de2fb93097ce59c6491"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--offline"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build",
+    "exit_code": 0,
+    "output": "sql-build-pack.txt",
+    "sha256": "71da2efa89a401637b5023b882c640a3762956024ea68446a5ae80ef882d3995",
+    "raw_sha256": "71da2efa89a401637b5023b882c640a3762956024ea68446a5ae80ef882d3995"
+  }
+]

@@ -1,0 +1,22 @@
+✔ SQL-01/03/05: scalar metadata, shared paths and deterministic aliases (5.104675ms)
+✔ SQL-02/03/07: object expansion, nested identities and overlapping scalar aliases (1.488866ms)
+✔ SQL-04: undisplayed criteria, object identities and null retain common predicates (0.640645ms)
+✔ SQL-06: aliases and quoted identifiers do not interpret property syntax (1.135263ms)
+✔ SQL-09: plural and unknown projection or ordering reject before rendering (1.322914ms)
+✔ SQL-10: shared plural predicates use one existing child and independent branches use separate scopes (0.747676ms)
+✔ SQL-10: nested plural scopes correlate to their actual parent and preserve shared prefixes (0.504545ms)
+✔ SQL-08/12: root restrictions, stable order and zero or finite limits stay bound (0.722671ms)
+✔ trusted functions and numbered placeholders share one parameter stream (0.659912ms)
+✔ metadata adapters control object fields without record construction or runtime value reads (0.514468ms)
+✔ legacy low-level projection keeps plural joins, explicit aliases and wildcard behaviour (1.004255ms)
+✔ SQL-06/07: long cyclic paths preserve final metadata and configurable table aliases (0.674941ms)
+✔ SQL-09/10: singular inverse and plural physical mappings retain owner columns (0.304267ms)
+✔ SQL-02: default object discovery omits plural and unmapped relations without reading records (0.310172ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 44.986228

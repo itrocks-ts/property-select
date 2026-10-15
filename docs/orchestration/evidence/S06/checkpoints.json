@@ -1,0 +1,27 @@
+{
+  "sql-build": {
+    "head": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "version": "0.2.0",
+    "status": ""
+  },
+  "sql-join": {
+    "head": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "status": ""
+  },
+  "framework": {
+    "head": "87aea202752c9252ce5803558d9bb18e1fbdcedd",
+    "version": "0.7.0",
+    "status": ""
+  },
+  "property-select": {
+    "head": "8e901429f29ca45d3c7c886f57018fa5d59dcfcc",
+    "version": "0.0.19",
+    "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/S06.md\n M package.json\n?? docs/orchestration/evidence/S06/\n?? docs/orchestration/reports/S06.md\n"
+  },
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n"
+  }
+}
