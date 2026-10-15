@@ -14,9 +14,11 @@ Host components receive selection and drag intentions and decide how to use the 
 
 Implementation is still to come.
 
-Read the [functional specifications](https://github.com/itrocks-ts/property-select/blob/HEAD/docs/it-rocks-selecteur-relationnel-specifications.md), written in French.
+Read the [functional specifications](docs/it-rocks-selecteur-relationnel-specifications.md), written in French.
 They cover navigation, search, suggestions, session state, desktop and touch interactions,
 and the first integration with table column selection.
+The [orchestration prompt](docs/itrocks-property-select-prompt-orchestrateur.md) describes the preparation and execution
+workflow in French.
 
 ## Licence
 
@@ -24,4 +26,3 @@ Copyright (C) 2026, Baptiste Pillot <baptiste@pillot.fr>.
 
 This package is licensed under the GNU Lesser General Public License, version 3 or any later version
 (`LGPL-3.0-or-later`). See [LICENSE](LICENSE) for the LGPL terms and [COPYING](COPYING) for the incorporated GPL terms.
-
