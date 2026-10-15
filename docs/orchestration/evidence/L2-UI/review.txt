@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "source_checkpoint": "0526f46fad4a3bd402e73e713283aeffafbfe617",
+  "version": "0.2.0",
+  "browser_graph": [
+    "controller.js",
+    "front/property-select.js",
+    "intentions.js",
+    "metadata.js",
+    "navigation.js",
+    "path.js",
+    "property-select.js"
+  ],
+  "files": {
+    "cjs/property-select.js": "0480e2d68b9ec6d57b2e1f1e9f79af4e64d20a9d81a1247161a7e11e63e41969",
+    "front/property-select.css": "043a8758e7b435fd4a43aa585514e7a7b933ff6d461aa10f0ac8476d9d3b26cc",
+    "front/property-select.d.ts": "5d40e4cffe7550c35d28d5d3682a76bf415108eb7576eb0b1f787409d0090e7d",
+    "front/property-select.html": "1a5cd915c95e51fda549b9c370d2176982c9fa1addcbc663dd3fe3edd55dc65a",
+    "front/property-select.js": "8dd167d0098c0df2b65695fef77edbfe6e9a42c6da4e565e288a8acfc4e13b6d",
+    "property-select.d.ts": "28342d319dca614154ba160242b821ae42fb078ccb725af48508d38d08ce219c",
+    "property-select.js": "48edec919f0957ce5eaaffab90ad1d9c8f4c94abf899e8fe3ff5456017902a79"
+  },
+  "application_head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+  "application_status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt"
+}

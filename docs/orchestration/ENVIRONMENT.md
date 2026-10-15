@@ -160,8 +160,10 @@ Never use a private development database for these commands or copy private quer
 For interactive browser checks, use Codex In-app Browser, operated with `mcp__cua_repl.js`.
 Create a tab with `cua.createBrowserTab('iab', URL)` and inspect `getAXState()` or `getScreenshot()`.
 The framework list visibly renders both synthetic countries. After rebuilding, reload the tab and observe fresh state.
-The standalone page explicitly says it has no selector; functional tasks must implement that demonstration later.
-The static support server serves `environment/demo/`, with path traversal protection and local binding only.
+The standalone page serves the selector browser view, static metadata and an intention observer; see
+[the L2-UI report](reports/L2-UI.md) for author checks and its owned launch recipe.
+The static server serves `environment/demo/` plus explicitly allowlisted installed public selector outputs,
+with local binding only. Unknown asset paths receive 404.
 
 Default browser viewport measured 1280 × 720. The documented `viewport` capability successfully set 390 × 844;
 the existing list remained visible, and the override was reset. Retrieve capability documentation before using it.

@@ -17,20 +17,27 @@
 			"import": "./property-select.js",
 			"require": "./cjs/property-select.js"
 		},
+		"./front/property-select.css": "./front/property-select.css",
+		"./front/property-select.html": "./front/property-select.html",
+		"./front/property-select.js": {
+			"types": "./front/property-select.d.ts",
+			"default": "./front/property-select.js"
+		},
 		"./property-select.js": {
 			"types": "./property-select.d.ts",
 			"default": "./property-select.js"
 		}
 	},
 	"files": [
+		"/*.d.ts",
+		"/*.js",
 		"COPYING",
 		"LICENSE",
 		"README.md",
-		"cjs",
+		"cjs/*.d.ts",
+		"cjs/*.js",
 		"docs",
-		"/*.d.ts",
-		"/*.js",
-		"!*.map"
+		"front"
 	],
 	"homepage": "https://it.rocks",
 	"keywords": [
@@ -55,8 +62,8 @@
 		"url": "git+https://github.com/itrocks-ts/property-select.git"
 	},
 	"scripts": {
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser",
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
 		"test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
 	},
-	"version": "0.1.5"
+	"version": "0.2.0"
 }

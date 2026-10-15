@@ -53,6 +53,27 @@ Proof: [14 Node tests and public typecheck](evidence/L1/test.txt),
 [Chromium import](evidence/L1/browser-smoke.json), [artifact and dependency review](evidence/L1/review.json).
 Author contract tests are distinct from the mandatory independent browser gates.
 
+## L2-UI author observations
+
+**PASS** author delivery `property-select` `0.2.0`, based on
+`0526f46fad4a3bd402e73e713283aeffafbfe617`; independent V2-UI and combined cases remain **NOT_RUN**.
+[Report](reports/L2-UI.md), [40 expected/observed browser records](evidence/L2-UI/browser.json),
+[build/types/fourteen controller tests](evidence/L2-UI/test.txt), [public output review](evidence/L2-UI/review.json).
+
+- **T01 / PASS author**: Standalone static metadata, one list, observable canonical paths and no host imports.
+- **T02–T03 / PASS author**: Full labelled remembered branch, ancestor/descendant return and divergent suffix only.
+- **T05/T07 / PASS author**: Real terminal main/plus and relation main/plus produce one action each; keyboard plus
+  emits the object's own path without navigation. Object business data remains V2.
+- **T06 / PASS author**: Desktop hover/focus reveals plus without changing main/row boxes; actual no-hover touch
+  context shows relation plus and hides terminal plus. Hybrid gestures remain V6.
+- **T08/T25 / PASS author**: All long breadcrumb levels remain reachable at 390 pixels, with no page overflow or
+  added intention during navigation/scroll. Tab order, Enter, Space and visible focus pass; pane closure remains later.
+- **PORT-01/02/10 / PASS author surface**: Public ESM/CJS/types/HTML/CSS, explicit asset allowlist, no host/server
+  browser dependency, repeated mount/dispose and late uncancellable metadata disposal pass. Drag remains V5/V6.
+- **UI-04/ACT-01–06/ACT-08/NAV-09/DEP-01/VAL-03 / PASS author implemented portions**: Semantic sibling buttons,
+  in-button chevrons, reserved add targets and one scrollable breadcrumb/list. Search and shortcut presentation remain
+  L3/L4; framework integration and independent standalone acceptance retain their named gates.
+
 ## L1-META author observations
 
 Framework `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3` passes its five provider assertions,
@@ -1091,5 +1112,5 @@ S02 delivers the neutral storage API; S03 delivers relation facts; S04 delivers 
 SQL execution, provider/search and consumers remain pending.
 Installed IAB supplies real navigation/viewport checks; verified Playwright supplies touch input. Native phone edge
 gestures, physical system interruptions and keyboard behaviour remain conditional on available hardware. All browser
-and emulated-touch cases are mandatory. The standalone support currently contains a placeholder; L2-UI replaces it with
-the real independent demo. Current handwritten SQL smoke remains infrastructure-only, never evidence for SQL-01–14.
+and emulated-touch cases are mandatory. L2-UI supplies the standalone browser view and static demo;
+its author observations pass, while independent V2-UI remains NOT_RUN. Current handwritten SQL smoke remains infrastructure-only, never evidence for SQL-01–14.

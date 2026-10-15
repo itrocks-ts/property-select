@@ -1,0 +1,43 @@
+[
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-L2-UI",
+      "PS_STANDALONE_PORT": "13720",
+      "PS_UI_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI",
+      "PS_UI_URL": "http://127.0.0.1:13720",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "build.txt",
+    "sha256": "c27c9c6b3fd6f989d9972d55a4e34456d804c3a71c79f61a486ee8f9eed053ce",
+    "raw_sha256": "f96364a6e5727d5de2da07a2252815adf835b2872e3689aa6bb7fcfbc0617568"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-L2-UI",
+      "PS_STANDALONE_PORT": "13720",
+      "PS_UI_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI",
+      "PS_UI_URL": "http://127.0.0.1:13720",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "test.txt",
+    "sha256": "d7556ebc69b09a28862794e56715b4b4845629e1a69451d25e35d3d4f8a4ef40",
+    "raw_sha256": "d7556ebc69b09a28862794e56715b4b4845629e1a69451d25e35d3d4f8a4ef40"
+  }
+]

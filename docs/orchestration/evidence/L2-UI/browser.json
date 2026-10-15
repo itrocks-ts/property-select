@@ -1,0 +1,341 @@
+{
+  "browser": "151.0.7922.34",
+  "imports": [
+    "/",
+    "/assets/front/property-select.css",
+    "/demo.js",
+    "/assets/front/property-select.js",
+    "/catalogue.js",
+    "/assets/property-select.js",
+    "/assets/controller.js",
+    "/assets/path.js",
+    "/assets/intentions.js",
+    "/assets/navigation.js",
+    "/assets/metadata.js",
+    "/assets/front/property-select.html"
+  ],
+  "records": [
+    {
+      "expected": 1,
+      "name": "T01: single static object list",
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "number"
+      ],
+      "name": "T05: terminal main emits once",
+      "observed": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "number"
+      ],
+      "name": "T05: relation main navigates only",
+      "observed": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "Invoice",
+        "Customer",
+        "Address",
+        "City",
+        "Country"
+      ],
+      "name": "T02: full labelled branch",
+      "observed": [
+        "Invoice",
+        "Customer",
+        "Address",
+        "City",
+        "Country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": 1,
+      "name": "T02: remembered descendant survives ancestor",
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "expected": 1,
+      "name": "T02: remembered country survives return",
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "Invoice",
+        "Customer",
+        "Address",
+        "Country"
+      ],
+      "name": "T03: divergent suffix only",
+      "observed": [
+        "Invoice",
+        "Customer",
+        "Address",
+        "Country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": "0",
+      "name": "T06: desktop plus initially contextual",
+      "observed": "0",
+      "status": "PASS"
+    },
+    {
+      "expected": "1",
+      "name": "T06: hover reveals plus",
+      "observed": "1",
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "x": 305,
+        "y": 194.875,
+        "width": 626,
+        "height": 44
+      },
+      "name": "T06: label and chevron do not move",
+      "observed": {
+        "x": 305,
+        "y": 194.875,
+        "width": 626,
+        "height": 44
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "x": 305,
+        "y": 194.875,
+        "width": 670,
+        "height": 44
+      },
+      "name": "T06: row height does not move",
+      "observed": {
+        "x": 305,
+        "y": 194.875,
+        "width": 670,
+        "height": 44
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": "1",
+      "name": "T06: keyboard focus reveals plus",
+      "observed": "1",
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "ACT-08: main then plus order",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": "solid",
+      "name": "ACT-08: focus is visible",
+      "observed": "solid",
+      "status": "PASS"
+    },
+    {
+      "expected": "customer.address",
+      "name": "T07/T25: object intention by keyboard, no navigation",
+      "observed": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "number",
+        "customer.address.city"
+      ],
+      "name": "T05/T07: plus emits object once",
+      "observed": [
+        "number",
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "number",
+        "customer.address.city",
+        "customer.address.street"
+      ],
+      "name": "T05: terminal plus emits once",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "customer.address.street"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": "customer.address.city",
+      "name": "ACT-08: Enter navigates relation",
+      "observed": "customer.address.city",
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "Narrow: no page overflow at 768 × 900",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": "solid",
+      "name": "Theme/reduced motion: native focus remains visible",
+      "observed": "solid",
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "T08: narrow long breadcrumb scrolls",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": 10,
+      "name": "T08: all levels remain and navigation/scroll never selects",
+      "observed": 10,
+      "status": "PASS"
+    },
+    {
+      "expected": 3,
+      "name": "T08: selection count unchanged",
+      "observed": 3,
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "T08: page has no horizontal overflow",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": 0,
+      "name": "PORT-02: dispose removes owned surface",
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "expected": 1,
+      "name": "PORT-02: repeated mount is singular",
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "expected": 4,
+      "name": "PORT-02: remount has no duplicate listeners",
+      "observed": 4,
+      "status": "PASS"
+    },
+    {
+      "expected": 404,
+      "name": "PORT-01: reject unlisted /src/controller.ts",
+      "observed": 404,
+      "status": "PASS"
+    },
+    {
+      "expected": 404,
+      "name": "PORT-01: reject unlisted /assets/framework.js",
+      "observed": 404,
+      "status": "PASS"
+    },
+    {
+      "expected": 404,
+      "name": "PORT-01: reject unlisted /assets/../package.json",
+      "observed": 404,
+      "status": "PASS"
+    },
+    {
+      "expected": 404,
+      "name": "PORT-01: reject unlisted /catalogue.js/extra",
+      "observed": 404,
+      "status": "PASS"
+    },
+    {
+      "expected": [],
+      "name": "PORT-01: no host imports in network",
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "PORT-01: public template and stylesheet loaded",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "T06: no-hover relation plus always visible",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": "none",
+      "name": "T06: no-hover terminal plus absent",
+      "observed": "none",
+      "status": "PASS"
+    },
+    {
+      "expected": "",
+      "name": "T05: real touch plus selects once without navigation",
+      "observed": "",
+      "status": "PASS"
+    },
+    {
+      "expected": [
+        "customer",
+        "customer.name"
+      ],
+      "name": "T05: real touch terminal selects once",
+      "observed": [
+        "customer",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "expected": true,
+      "name": "ACT-05: landscape keeps relation action accessible",
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "expected": {
+        "children": 0,
+        "mounted": false,
+        "samePromise": true,
+        "status": "disposed"
+      },
+      "name": "PORT-02: dispose during late metadata prevents revival; mount/dispose are idempotent",
+      "observed": {
+        "children": 0,
+        "mounted": false,
+        "samePromise": true,
+        "status": "disposed"
+      },
+      "status": "PASS"
+    },
+    {
+      "expected": [],
+      "name": "Browser exceptions",
+      "observed": [],
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS",
+  "url": "http://127.0.0.1:13720"
+}

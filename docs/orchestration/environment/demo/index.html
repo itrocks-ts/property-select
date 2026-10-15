@@ -1,10 +1,31 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Property selector standalone recipe support</title></head>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Property selector</title>
+	<link rel="stylesheet" href="/assets/front/property-select.css">
+	<style>
+		body { background: Canvas; color: CanvasText; font: 1rem system-ui; margin: 1rem auto; max-width: 44rem; }
+		main, header, aside { padding: 0 1rem; }
+		#selector { border: 1px solid GrayText; border-radius: .4rem; margin-block: 1rem; }
+		#intentions { overflow-wrap: anywhere; }
+		.controls { display: flex; align-items: center; gap: .5rem; flex-wrap: wrap; }
+		.controls button { min-height: 44px; }
+		@media (prefers-color-scheme: dark) { :root { color-scheme: dark; } }
+	</style>
+	<script type="module" src="/demo.js"></script>
+</head>
 <body>
-<h1>Standalone recipe support</h1>
-<p>This launch fixture has no selector implementation. Functional lots supply the standalone demo here.</p>
-<p>No framework, home, list, table or reflection adapter is loaded.</p>
+	<header><h1>Property selector</h1></header>
+	<main>
+		<div class="controls">
+			<button id="mount" type="button">Mount</button>
+			<button id="dispose" type="button">Dispose</button>
+			<output id="lifecycle" aria-live="polite"></output>
+		</div>
+		<div id="selector"></div>
+	</main>
+	<aside aria-label="Selection intentions"><h2>Selection intentions</h2><ol id="intentions"></ol></aside>
 </body>
 </html>

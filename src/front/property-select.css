@@ -1,0 +1,39 @@
+.property-select {
+	color-scheme: light dark;
+	color: CanvasText;
+	background: Canvas;
+	font: 1rem/1.4 system-ui, sans-serif;
+	min-width: 0;
+	max-width: 100%;
+}
+.property-select button {
+	background: transparent;
+	border: 0;
+	border-radius: .25rem;
+	color: inherit;
+	cursor: pointer;
+	font: inherit;
+	min-height: 44px;
+	padding: .5rem .75rem;
+	text-align: left;
+}
+.property-select button:hover { background: color-mix(in srgb, CanvasText 8%, Canvas); }
+.property-select button:focus-visible { outline: 2px solid Highlight; outline-offset: -2px; }
+.ps-breadcrumb { display: flex; overflow-x: auto; overscroll-behavior-x: contain; padding: 2px; }
+.ps-level { flex-shrink: 0; white-space: nowrap; }
+.ps-level + .ps-level::before { content: '›'; margin-right: .75rem; }
+.ps-level[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+.ps-level[data-position="descendant"] { font-style: italic; }
+.ps-properties { list-style: none; margin: 0; padding: 0; }
+.ps-property { display: grid; grid-template-columns: minmax(0, 1fr) 44px; }
+.ps-main { min-width: 0; overflow-wrap: anywhere; }
+.ps-chevron { display: inline; margin-left: .5rem; }
+.property-select .ps-add { text-align: center; width: 44px; }
+.ps-property[data-kind="terminal"] .ps-add { display: none; }
+.ps-status { font-size: .875rem; margin: .5rem .75rem; }
+.ps-status:empty { display: none; }
+@media (hover: hover) and (pointer: fine) {
+	.ps-property[data-kind="terminal"] .ps-add { display: block; }
+	.ps-add { opacity: 0; pointer-events: none; }
+	.ps-property:hover .ps-add, .ps-property:focus-within .ps-add { opacity: 1; pointer-events: auto; }
+}

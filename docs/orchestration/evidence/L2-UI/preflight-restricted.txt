@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI/preflight.py", line 8, in <module>
+    with socket.socket() as probe:
+         ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted

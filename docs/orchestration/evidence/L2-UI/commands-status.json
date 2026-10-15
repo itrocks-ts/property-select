@@ -1,0 +1,19 @@
+[
+  {
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI/status.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-L2-UI",
+      "PS_STANDALONE_PORT": "13720",
+      "PS_UI_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI",
+      "PS_UI_URL": "http://127.0.0.1:13720",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "owned-status.txt",
+    "sha256": "295b00f17b8bcb3977ef36c8b670434b7d50caf0937cb5d02abf248d202b0c1f"
+  }
+]

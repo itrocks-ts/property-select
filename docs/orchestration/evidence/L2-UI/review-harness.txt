@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-UI/review.py", line 33, in <module>
+    assert not any('/' + name + '/' in str(file) for file in visited)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

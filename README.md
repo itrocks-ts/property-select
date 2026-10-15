@@ -13,8 +13,8 @@ Users can select a field or a related object itself, identified by its full path
 Host components receive selection and drag intentions and decide how to use the chosen property.
 
 The public controller runs without it.rocks, a DOM view or a table. It loads metadata lazily, remembers navigation,
-emits selection/transport intentions and exports instance state. Search, rendered controls, session persistence and
-framework adapters belong to subsequent deliveries.
+emits selection/transport intentions and exports instance state. The browser view provides a single property list and
+remembered breadcrumbs. Search, session persistence and framework adapters belong to subsequent deliveries.
 
 ## Standalone use
 
@@ -57,6 +57,38 @@ It supplies full root-relative paths, stable business order, authorised relation
 A missing provider throws a configuration error. Provider failures emit an `error` event and retain the last context.
 Cached contexts belong to one root and one authorised provider catalogue snapshot per instance; recreate the
 controller when that catalogue changes. Labels fall back to technical names. Equal orders use path as a tie-breaker.
+
+## Browser view
+
+Load `@itrocks/property-select/front/property-select.css` through the host stylesheet mechanism, then create a view:
+
+```ts
+import { PropertySelectView } from '@itrocks/property-select/front/property-select.js'
+
+const view = new PropertySelectView(document.querySelector<HTMLElement>('#selector')!, {
+	metadata, // The MetadataProvider from the standalone example.
+	root: 'contact',
+	stateMode: 'instance'
+})
+await view.mount()
+// Observe intentions through view.selector.subscribe(...).
+// When the host removes this view:
+view.dispose()
+```
+
+`PropertySelectView(host: HTMLElement, options: PropertySelectOptions)` owns its `selector: PropertySelect` and appends
+one semantic section to the host. `mount(): Promise<boolean>` fetches the adjacent public `property-select.html`
+template and mounts the controller. Serve the JS, HTML and CSS at their published relative paths with the correct MIME
+types. Repeated mounts share the same promise; failed template loading rejects and disposes the view.
+Metadata errors return false and remain observable through `selector`; the host can retry with `selector.mount()`.
+`dispose(): void` is idempotent, aborts pending work, removes the owned section and releases its listeners/references.
+Create a new view after disposal. No import activates the DOM or registers a global instance.
+
+The main button selects a field or opens a relation; its adjacent `+` selects either path without navigating.
+Desktop hover or keyboard focus reveals the reserved `+`; without hover only relation buttons show it.
+Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
+descendants and marks the current object with `aria-current`, bold text and an underline.
+Search, shortcuts and recognised drag gestures remain separate deliveries.
 
 ## Navigation and state
 
@@ -114,6 +146,9 @@ With the compiler and preparation utility already available, `npm run build` cre
 and declarations at the package root. Generated files are ignored. `npm test` rebuilds, checks public TypeScript
 imports and runs the Node contract suite. The reusable `test/fixtures/static-graph.mjs` and non-table
 recording consumer are test resources, outside the published runtime.
+The separate `test/browser-ui.mjs` drives the standalone demo through real mouse, keyboard and emulated touch input;
+its author evidence and ownership-checked launch recipe are in
+[the L2-UI report](docs/orchestration/reports/L2-UI.md).
 The separate `test/browser-smoke.mjs` imports the actual public entry in sandboxed Chromium; set
 `PS_PLAYWRIGHT_MODULE` to an existing Playwright module. It starts and closes its own ephemeral localhost server.
 

@@ -751,7 +751,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "medium",
       "model_justification": "UI consumes stabilised generic ports; navigation decisions are already fixed.",
@@ -768,7 +768,16 @@
         "NAV-09",
         "DEP-01",
         "VAL-03"
-      ]
+      ],
+      "validation": "PASS author: build/public types/14 controller tests; 40 real sandboxed Chromium assertions for T01–03/T05–08/T25, hover/focus geometry, touch clicks, keyboard, disposal/remount and late metadata; public files/allowlist/import graph and application preservation. Independent V2-UI remains NOT_RUN.",
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "0526f46fad4a3bd402e73e713283aeffafbfe617",
+          "base_version": "0.1.5",
+          "version": "0.2.0",
+          "source": "Browser view, public assets, static demo, author assertions and tracking"
+        }
+      }
     },
     {
       "id": "V2-UI",
