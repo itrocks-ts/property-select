@@ -1,0 +1,11 @@
+S04 development notes
+The unchanged Node 24.0.1 relative test-discovery limitation from S03 is reproduced in relative-discovery.txt.
+The absolute --test-isolation=none command runs all twelve delivered tests successfully.
+Initial development compilation rejected a generic default-key constraint and an optional relation access.
+Both were corrected before delivery; public positive/negative type fixtures now pass.
+A depth-eight eager path union was too expensive on the cyclic fixture and its development build was interrupted.
+Repeated-type suffix widening replaces that approach and completes build:test in less than one second locally.
+A fixture's broad annotated path widened its LastValue input; a literal satisfies annotation preserves its intended key.
+No delivered acceptance defect or mandatory unresolved check remains. No parser syntax capability was invented.
+Final review identified two overlong Markdown lines after the feature commit; a documentation-only patch fixes them.
+The product runtime tree is unchanged and final proof is rerun on the 0.3.1 checkpoint before handover.

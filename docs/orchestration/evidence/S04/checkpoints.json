@@ -1,0 +1,38 @@
+{
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "version": "0.0.6",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n"
+  },
+  "class-file": {
+    "head": "e124bf5e659b2536efb4b8d26c6b15b6faf0b3b6",
+    "version": "0.1.2",
+    "status": ""
+  },
+  "class-type": {
+    "head": "ce1590756eeb7d1bca5b1f5784b2f14c529768f6",
+    "version": "0.2.4",
+    "status": ""
+  },
+  "property-select": {
+    "head": "fc3312732029b566dec2a22a655ec51505944e42",
+    "version": "0.0.17",
+    "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/S04.md\n M package.json\n?? docs/orchestration/evidence/S04/\n?? docs/orchestration/reports/S04.md\n"
+  },
+  "property-type": {
+    "head": "f2beb261d26d73004ec785fdab8512d1a8cd4819",
+    "version": "0.4.0",
+    "status": ""
+  },
+  "reflect": {
+    "head": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect-path": {
+    "head": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "version": "0.3.1",
+    "status": ""
+  },
+  "application_working_files_absent": true
+}

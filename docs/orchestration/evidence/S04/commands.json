@@ -1,0 +1,169 @@
+[
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect-path",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-build.txt",
+    "sha256": "11378f4070833ae811ba5a97557924e394c86acc1b0dcdc71a72818b1bddde9b",
+    "output_normalisation": "Trailing empty lines removed"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect-path",
+      "run",
+      "build:test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-build-test.txt",
+    "sha256": "7a7a9f2efa7c9f44b393dc8139a7cd885a2d14548382dc824c08a8e601afb984",
+    "output_normalisation": "Trailing empty lines removed"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "node_modules/@itrocks/reflect-path/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "output": "relative-discovery.txt",
+    "sha256": "747e5f6dbbfa374a228d585135b83c1099205162604588c04c86db0ecf229b36"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-test.txt",
+    "sha256": "cb40cef1e1b0aa4448aac50172eb461cfbe081be8f96ed29e3d176662eb38347"
+  },
+  {
+    "argv": [
+      "npm",
+      "--cache",
+      "/tmp/property-select/S04/npm-cache",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--offline"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-pack.json",
+    "sha256": "8851bda5c1d1ac1d61dd96a8bad42f72e3202b084e42690864236ee9c1948a0d"
+  },
+  {
+    "argv": [
+      "git",
+      "status",
+      "--short"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "application-status.txt",
+    "sha256": "384dc19e4039ff11bbd7c140f5b3b7eaf578ce61010d1c395deddeb25f6d02a9"
+  },
+  {
+    "argv": [
+      "git",
+      "ls-files",
+      "--stage",
+      "audit-itrocks-dependencies.json",
+      "audit-itrocks-dependencies.txt"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "application-index.txt",
+    "sha256": "54bd4046f187c1e6a2f7f63a80edbf9fdf19c0846233c16ca50bd2cd0304767d"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/reflect-path",
+      "status",
+      "--short"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-status.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/reflect-path",
+      "diff",
+      "HEAD",
+      "--",
+      "package.json"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-version-diff.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/reflect-path",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "reflect-path-diff-check.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/property-select",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "property-select-diff-check.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "python3",
+      "node_modules/@itrocks/property-select/docs/orchestration/evidence/S04/review.py"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "review-command.txt",
+    "sha256": "d9719195d2c3cac9bfc27fc0aed22feb7ba7a8bc05c790e0eb5377563955ee07",
+    "source_sha256": "bbcbee456ba53d92fc5c3142561223113a011765e47b607433a58b4655e27ca7"
+  }
+]

@@ -257,7 +257,7 @@
         "node_modules/@itrocks/reflect-path"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "The existing skipped context step affects deep projection and all metadata consumers.",
@@ -268,7 +268,18 @@
         "ARC-06",
         "DEP-03",
         "DEP-11"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/reflect-path": {
+          "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+          "version": "0.3.1"
+        },
+        "@itrocks/reflect": {
+          "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+          "version": "0.3.0"
+        }
+      },
+      "validation": "PASS: owner build, public positive/negative type fixtures, twelve metadata/value compatibility tests, public require/import and package files"
     },
     {
       "id": "S05",

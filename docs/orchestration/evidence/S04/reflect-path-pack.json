@@ -1,0 +1,71 @@
+[
+  {
+    "id": "@itrocks/reflect-path@0.3.1",
+    "name": "@itrocks/reflect-path",
+    "version": "0.3.1",
+    "size": 5743,
+    "unpackedSize": 18757,
+    "shasum": "061c04c7df584d532fe8bcfd7398c88bd6211999",
+    "integrity": "sha512-+0Ug0Xx7CgtB/2rbamSZFZwTGCoPbDv3AVtgdC+swAfOHRFTGGxtd20GeuHpq0u/XqDYrUkaxNjkGCAp20vP4A==",
+    "filename": "itrocks-reflect-path-0.3.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 4427,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property.d.ts",
+        "size": 795,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property.js",
+        "size": 2124,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-path.d.ts",
+        "size": 454,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-path.js",
+        "size": 821,
+        "mode": 420
+      },
+      {
+        "path": "cjs/resolve-property-path.d.ts",
+        "size": 1069,
+        "mode": 420
+      },
+      {
+        "path": "cjs/resolve-property-path.js",
+        "size": 4053,
+        "mode": 420
+      },
+      {
+        "path": "cjs/types.d.ts",
+        "size": 3191,
+        "mode": 420
+      },
+      {
+        "path": "cjs/types.js",
+        "size": 110,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 946,
+        "mode": 420
+      }
+    ],
+    "entryCount": 11,
+    "bundled": []
+  }
+]

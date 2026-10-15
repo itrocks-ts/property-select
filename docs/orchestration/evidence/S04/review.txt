@@ -1,0 +1,116 @@
+PASS: delivered product commit is the tested checkpoint
+PASS: product source/tests/README/manifest are clean
+PASS: package inventory contains the facade, resolver, types and allowlisted files only
+PASS: product and dry-run package version agree
+PASS: package inventory excludes source, tests and source maps
+PASS: public runtime facade exports PropertyPathError
+PASS: public runtime facade exports ReflectPropertyPath
+PASS: public runtime facade exports resolvePropertyPath
+PASS: public declaration facade exports PropertyPathErrorCode
+PASS: public declaration facade exports ResolvedPropertyPath
+PASS: public declaration facade exports resolvePropertyPath
+PASS: recorded commands have their expected exit status
+PASS: twelve runtime tests pass with zero failed or skipped cases
+PASS: property.ts declares public dependency @itrocks/class-type
+PASS: property.ts declares public dependency @itrocks/reflect
+PASS: property.ts declares public dependency @itrocks/reflect
+PASS: resolve-property-path.ts declares public dependency @itrocks/class-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/property-type
+PASS: resolve-property-path.ts declares public dependency @itrocks/reflect
+PASS: resolve-property-path.ts declares public dependency @itrocks/reflect
+PASS: resolve-property-path.ts declares public dependency @itrocks/reflect
+PASS: public test helper has a declared installed owner
+PASS: product keywords are unique and sorted
+PASS: README description agrees with manifest
+PASS: reflect-path has no tracked lockfile needing synchronisation
+PASS: reflect-path whitespace check passes
+PASS: reflect-path staged whitespace check passes
+PASS: property-select has no tracked lockfile needing synchronisation
+PASS: property-select whitespace check passes
+PASS: property-select staged whitespace check passes
+PASS: showtime HEAD is preserved
+PASS: showtime has only the two initial AD statuses
+PASS: audit-itrocks-dependencies.json index blob is preserved
+PASS: audit-itrocks-dependencies.json working file remains absent
+PASS: audit-itrocks-dependencies.txt index blob is preserved
+PASS: audit-itrocks-dependencies.txt working file remains absent
+PASS: class-file remains clean and unchanged
+PASS: class-type remains clean and unchanged
+PASS: property-type remains clean and unchanged
+PASS: reflect remains clean and unchanged
+PASS: manifest records S04 at the tested product commit
+PASS: no subsequent task was started
+PASS: combined product acceptance remains NOT_RUN
+PASS: tracking patch version is 0.0.17
+PASS: no combined SQL/provider/search/browser case was promoted
+PASS: README.md local link resolves: docs/reflect-path.specs.md
+PASS: README.md local link resolves: docs/reflect-path.specs.fr.md
+PASS: reflect-path.specs.fr.md local link resolves: reflect-path.specs.md
+PASS: S04.md local link resolves: ../evidence/S04/commands.json
+PASS: S04.md local link resolves: ../evidence/S04/reflect-path-build.txt
+PASS: S04.md local link resolves: ../evidence/S04/reflect-path-build-test.txt
+PASS: S04.md local link resolves: ../evidence/S04/reflect-path-test.txt
+PASS: S04.md local link resolves: ../evidence/S04/reflect-path-pack.json
+PASS: S04.md local link resolves: ../evidence/S04/review.txt
+PASS: S04.md local link resolves: ../evidence/S04/relative-discovery.txt
+PASS: S04.md local link resolves: ../evidence/S04/tooling-notes.txt
+PASS: S04.md local link resolves: ../evidence/S04/checkpoints.json
+PASS: S04.md local link resolves: ../reports/S04.md
+PASS: S04.md local link resolves: ../COMMON.md
+PASS: S04.md local link resolves: ../EXECUTION.md
+PASS: S04.md local link resolves: ../CONTRACTS.md
+PASS: S04.md local link resolves: ../SELECT-CONTRACT.md
+PASS: S04.md local link resolves: ../VALIDATION.md
+PASS: S04.md local link resolves: ../AUDIT.md
+PASS: S04.md local link resolves: ../ENVIRONMENT.md
+PASS: S04.md local link resolves: ../VERIFY-ENVIRONMENT.md
+PASS: S04.md local link resolves: ../VALIDATION.md#stage-obligations
+PASS: VALIDATION.md local link resolves: VERIFY-ENVIRONMENT.md
+PASS: VALIDATION.md local link resolves: reports/P04.md
+PASS: VALIDATION.md local link resolves: reports/S02.md
+PASS: VALIDATION.md local link resolves: reports/S03.md
+PASS: VALIDATION.md local link resolves: reports/S04.md
+PASS: VALIDATION.md local link resolves: ../it-rocks-selecteur-relationnel-specifications.md
+PASS: VALIDATION.md local link resolves: VERIFY-ENVIRONMENT.md
+PASS: VALIDATION.md local link resolves: reports/P03.md
+PASS: VALIDATION.md local link resolves: reports/P04.md
+PASS: VALIDATION.md local link resolves: EXECUTION.md
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-test.txt
+PASS: VALIDATION.md local link resolves: reports/S03.md
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/public-typecheck.txt
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/storage-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/adapter-compatibility.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/storage-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-test.txt
+PASS: VALIDATION.md local link resolves: reports/S03.md
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-test.txt
+PASS: VALIDATION.md local link resolves: reports/S04.md
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-test.txt
+PASS: VALIDATION.md local link resolves: reports/S04.md
+PASS: VALIDATION.md local link resolves: evidence/S02/storage-build.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/public-typecheck.txt
+PASS: VALIDATION.md local link resolves: evidence/S02/storage-pack.txt
+PASS: VALIDATION.md local link resolves: reports/S02.md
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-build.txt
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-build-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S03/reflect-pack.json
+PASS: VALIDATION.md local link resolves: reports/S03.md
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-build.txt
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-build-test.txt
+PASS: VALIDATION.md local link resolves: evidence/S04/reflect-path-pack.json
+PASS: VALIDATION.md local link resolves: reports/S04.md
+PASS: new source and Markdown lines meet the 120-column convention
+PASS: complete product staged/unstaged/untracked diff reviewed before explicit-path staging
+SOLID: path resolution reuses public relation targets; terminal shape facts do not parse TypeScript syntax.
+SOLID: one path resolver owns metadata traversal; custom root metadata and singular value API remain usable.
+SOLID: no storage, SQL, selector, presentation, framework or browser runtime dependency introduced.
+NOT_RUN: provider permissions, automatic search cycles, SQL execution, browser and final integration gates.
