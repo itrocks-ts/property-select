@@ -1,0 +1,5 @@
+$ node /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/S02/adapter-compatibility.mjs
+Mysql: unsupported selection; zero connections; zero searches
+Mysql: unsupported selection; zero connections; zero searches
+
+Exit: 0

@@ -192,14 +192,21 @@
         "node_modules/@itrocks/storage"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Storage result, errors and adapter substitution must be stable before consumers.",
       "report": "reports/S02.md",
       "requirements": [
         "DEP-11"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/storage": {
+          "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+          "version": "0.3.0"
+        }
+      },
+      "validation": "PASS: storage build, five runtime tests, public API typecheck, adapter builds and rejection probes, package files"
     },
     {
       "id": "S03",

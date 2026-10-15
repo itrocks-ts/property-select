@@ -1,0 +1,16 @@
+$ node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/storage/test/property-select.test.mjs
+✔ existing adapter rejects projection asynchronously without an entity search fallback (1.939306ms)
+✔ identifiers use the existing option port and retain readonly-compatible identifier inputs (0.300475ms)
+✔ public errors preserve every code, path and original cause (0.311499ms)
+✔ projection-aware adapters substitute through the same public DataSource method (0.296059ms)
+✔ the package public facade resolves to this checkout and retains existing exports (1.048924ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 32.628467
+
+Exit: 0

@@ -2,7 +2,8 @@
 
 ## Status and ownership
 
-This is the phase 1 implementation contract, approved by independent plan review P04, not an available API.
+This is the phase 1 implementation contract, approved by independent plan review P04.
+[S02](reports/S02.md) delivers its neutral storage API; adapter execution and consumers remain pending.
 Read [the requirement](../select.md), [PHP comparison](PHP-COMPARISON.md) and [shared rules](COMMON.md).
 Tasks `S02`–`S07` implement it; `VSQL` must pass on the isolated database before `L2-LIST`.
 Astra/high is selected for SQL planning, reconstruction and independent validation because their invariants cross

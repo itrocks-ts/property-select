@@ -1,0 +1,3 @@
+$ node node_modules/.bin/tsc --project node_modules/@itrocks/storage/test/tsconfig.json
+
+Exit: 0

@@ -1,0 +1,16 @@
+Initial command observation (Node 24.0.1):
+$ node --test node_modules/@itrocks/storage/test/property-select.test.mjs
+Could not find 'node_modules/@itrocks/storage/test/property-select.test.mjs'
+Exit: 1
+Absolute --test alone reported one file, not the five named tests.
+The absolute --test --test-isolation=none command in storage-test.txt executes all five assertions and passes.
+The S02 card records that corrected executable command.
+
+The first type fixture expected SQL strings to be rejected statically by Options.
+TypeScript correctly reported TS2578 (unused @ts-expect-error): legacy Option has no members.
+The incorrect assertion was removed. Existing Options is preserved; S07 must reject unknown options at runtime.
+This is not evidence of implemented option validation or a new storage regression.
+
+npm pack --prefix from the application ignored the prefix and listed the application package.
+No tarball was created (--dry-run); its irrelevant file inventory is not retained.
+The corrected storage-pack.txt runs npm pack --dry-run --json from the storage owner and identifies storage@0.3.0.

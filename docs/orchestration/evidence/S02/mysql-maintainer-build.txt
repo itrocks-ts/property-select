@@ -1,0 +1,7 @@
+$ npm --prefix node_modules/@itrocks/mysql-maintainer run build
+
+> @itrocks/mysql-maintainer@0.3.3 build
+> tsc
+
+
+Exit: 0

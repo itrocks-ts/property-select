@@ -1,0 +1,4 @@
+$ node node_modules/.bin/tsc --version
+Version 6.0.3
+
+Exit: 0

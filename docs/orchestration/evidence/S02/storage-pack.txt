@@ -1,0 +1,125 @@
+$ cd /home/baptiste/itrocks/showtime/node_modules/@itrocks/storage
+$ npm pack --dry-run --json
+[
+  {
+    "id": "@itrocks/storage@0.3.0",
+    "name": "@itrocks/storage",
+    "version": "0.3.0",
+    "size": 10702,
+    "unpackedSize": 35473,
+    "shasum": "ace07db016633164dc5b406c98178cc44f722f98",
+    "integrity": "sha512-kBDotsShAVioEMvgttoWbxaGngoJHkiz9Tw2DZA4XsyIEDS2IFoyc0T42qMMK8z4T7WL+2iqUKCXIUMaysRlsw==",
+    "filename": "itrocks-storage-0.3.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 15678,
+        "mode": 420
+      },
+      {
+        "path": "cjs/data-source.d.ts",
+        "size": 2357,
+        "mode": 420
+      },
+      {
+        "path": "cjs/data-source.js",
+        "size": 1100,
+        "mode": 420
+      },
+      {
+        "path": "cjs/entity.d.ts",
+        "size": 267,
+        "mode": 420
+      },
+      {
+        "path": "cjs/entity.js",
+        "size": 297,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/identifiers.d.ts",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/identifiers.js",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/limit.d.ts",
+        "size": 239,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/limit.js",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/option.d.ts",
+        "size": 41,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/option.js",
+        "size": 178,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/sort.d.ts",
+        "size": 353,
+        "mode": 420
+      },
+      {
+        "path": "cjs/option/sort.js",
+        "size": 617,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.d.ts",
+        "size": 958,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.js",
+        "size": 115,
+        "mode": 420
+      },
+      {
+        "path": "cjs/selection-error.d.ts",
+        "size": 379,
+        "mode": 420
+      },
+      {
+        "path": "cjs/selection-error.js",
+        "size": 460,
+        "mode": 420
+      },
+      {
+        "path": "cjs/storage.d.ts",
+        "size": 849,
+        "mode": 420
+      },
+      {
+        "path": "cjs/storage.js",
+        "size": 2024,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 878,
+        "mode": 420
+      }
+    ],
+    "entryCount": 21,
+    "bundled": []
+  }
+]
+
+Exit: 0

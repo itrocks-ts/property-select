@@ -1,0 +1,7 @@
+$ npm --prefix node_modules/@itrocks/storage run build
+
+> @itrocks/storage@0.3.0 build
+> tsc
+
+
+Exit: 0

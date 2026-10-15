@@ -1,0 +1,7 @@
+$ npm --prefix node_modules/@itrocks/mysql run build
+
+> @itrocks/mysql@0.2.12 build
+> tsc
+
+
+Exit: 0

@@ -1,0 +1,36 @@
+Working directory: node_modules/@itrocks
+$ rg --no-ignore -n '\bDataSource\b|extends.*Mysql' . --glob '*.ts' --glob '*.mjs' --glob '!**/cjs/**' --glob '!**/node_modules/**' --glob '!**/.git/**'
+./mysql-to-schema/src/to-index.ts:20:export interface MysqlIndexRow extends MysqlIndex, MysqlIndexKey
+./schema-diff-mysql/src/schema-diff-mysql.ts:7:export class SchemaDiffMysql extends SchemaToMysql
+./mysql-maintainer/test/mysql.test.mjs:53:class ControlledMysql extends Mysql
+./mysql/src/mysql.ts:13:import { DataSource }            from '@itrocks/storage'
+./mysql/src/mysql.ts:65:export class Mysql extends DataSource
+./mysql-maintainer/test/unique-index.integration.mjs:29:class ObservedMysql extends Mysql
+./property-select/docs/orchestration/evidence/S02/adapter-compatibility.mjs:4:import { DataSource }              from '@itrocks/storage'
+./property-select/docs/orchestration/evidence/S02/adapter-compatibility.mjs:13:	assert.ok(adapter instanceof DataSource)
+./property-select/docs/orchestration/evidence/S02/adapter-compatibility.mjs:14:	assert.equal(adapter.select, DataSource.prototype.select)
+./storage/test/property-select.test.mjs:4:import { DataSource }          from '@itrocks/storage'
+./storage/test/property-select.test.mjs:15:class LegacyAdapter extends DataSource
+./storage/test/property-select.test.mjs:73:test('projection-aware adapters substitute through the same public DataSource method', async () => {
+./storage/test/property-select.test.mjs:100:	for (const name of ['DataSource', 'Identifiers', 'Limit', 'Option', 'SelectionError', 'Sort', 'dataSource', 'ds'])
+./storage/test/property-select.types.ts:2:import { DataSource }         from '@itrocks/storage'
+./storage/test/property-select.types.ts:34:class LegacyAdapter extends DataSource
+./storage/test/property-select.types.ts:37:	close: DataSource['close'] = async () => {}
+./storage/test/property-select.types.ts:38:	count: DataSource['count'] = async () => 0
+./storage/test/property-select.types.ts:39:	delete: DataSource['delete'] = async object => object
+./storage/test/property-select.types.ts:40:	deleteId: DataSource['deleteId'] = () => {}
+./storage/test/property-select.types.ts:41:	deleteRelatedId: DataSource['deleteRelatedId'] = () => {}
+./storage/test/property-select.types.ts:42:	insertRelatedId: DataSource['insertRelatedId'] = () => {}
+./storage/test/property-select.types.ts:43:	read: DataSource['read'] = async () => { throw new Error('Not used') }
+./storage/test/property-select.types.ts:44:	readCollection: DataSource['readCollection'] = async () => []
+./storage/test/property-select.types.ts:45:	readCollectionIds: DataSource['readCollectionIds'] = async () => []
+./storage/test/property-select.types.ts:46:	readMultiple: DataSource['readMultiple'] = async () => []
+./storage/test/property-select.types.ts:47:	save: DataSource['save'] = async () => { throw new Error('Not used') }
+./storage/test/property-select.types.ts:48:	search: DataSource['search'] = async () => []
+./storage/test/property-select.types.ts:52:const adapter: DataSource = new LegacyAdapter()
+./storage/src/storage.ts:2:import { DataSource } from './data-source'
+./storage/src/storage.ts:4:export { DataSource, Options, SearchType }             from './data-source'
+./storage/src/storage.ts:16:let dataSources: Record<string, DataSource> = {}
+./storage/src/data-source.ts:13:export abstract class DataSource
+
+Exit: 0

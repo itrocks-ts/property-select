@@ -1,0 +1,91 @@
+[
+  {
+    "name": "storage-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/storage",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "proof": "storage-build.txt"
+  },
+  {
+    "name": "storage-test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/storage/test/property-select.test.mjs"
+    ],
+    "exit": 0,
+    "proof": "storage-test.txt"
+  },
+  {
+    "name": "public-typecheck",
+    "command": [
+      "node",
+      "node_modules/.bin/tsc",
+      "--project",
+      "node_modules/@itrocks/storage/test/tsconfig.json"
+    ],
+    "exit": 0,
+    "proof": "public-typecheck.txt"
+  },
+  {
+    "name": "mysql-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/mysql",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "proof": "mysql-build.txt"
+  },
+  {
+    "name": "mysql-maintainer-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/mysql-maintainer",
+      "run",
+      "build"
+    ],
+    "exit": 0,
+    "proof": "mysql-maintainer-build.txt"
+  },
+  {
+    "name": "adapter-compatibility",
+    "command": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/S02/adapter-compatibility.mjs"
+    ],
+    "exit": 0,
+    "proof": "adapter-compatibility.txt"
+  },
+  {
+    "name": "compiler-version",
+    "command": [
+      "node",
+      "node_modules/.bin/tsc",
+      "--version"
+    ],
+    "exit": 0,
+    "proof": "compiler-version.txt"
+  },
+  {
+    "name": "storage-pack",
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/storage",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json"
+    ],
+    "exit": 0,
+    "proof": "storage-pack.txt"
+  }
+]

@@ -4,8 +4,10 @@
 
 Planning coverage is complete; product acceptance is **NOT_RUN**. The only completed execution gate is VAL-01,
 backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). VAL-02 plan coverage is independently approved by
-[P04](reports/P04.md); all product observations remain pending.
-All planned product cases below start NOT_RUN, including SQL and browser cases. No fixture smoke is product proof.
+[P04](reports/P04.md). [S02](reports/S02.md) passes the neutral storage contract checks; SQL execution and browser
+observations remain pending.
+Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
+No fixture smoke is product proof.
 
 Requirement rows link an implementation, its independent gates and scenario/extra-case oracles. Owner repositories
 are mapped in the next table and each PLAN.json entry; task cards give exact entry points and commands. Every applicable
@@ -461,6 +463,12 @@ Expected: Distinguish absent customer, absent address, null city.name, empty not
 descendant under optional parent preserves roots.
 
 Proof: `evidence/<gate>/SQL-05.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+S02 contract observation: `PASS` for separate typed loaded null/undefined, absent relation and ignored scalar cells,
+partial object metadata and empty-result descriptors. Public API typecheck:
+[evidence](evidence/S02/public-typecheck.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
+Actual row reconstruction and preservation remain `NOT_RUN` until VSQL.
+
 ### SQL-06: Aliases, identifiers and invalid input
 
 Expected: Use homonymous fields, long paths, id/p0-like names, invalid/ambiguous paths and injection-looking values;
@@ -497,12 +505,24 @@ Expected: Call dataSource().select via configured engine; preserve existing sear
 mysql-maintainer composition. Unsupported adapter rejects without search fallback.
 
 Proof: `evidence/<gate>/SQL-11.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+S02 adapter observation: `PASS` for inherited unsupported-selection with zero search fallback and zero connections,
+including installed MySQL and maintained MySQL adapters. [Runtime tests](evidence/S02/storage-test.txt) and
+[adapter probes](evidence/S02/adapter-compatibility.txt), `storage`
+`a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`. Configured execution and criteria compatibility remain
+`NOT_RUN` until S07/VSQL.
+
 ### SQL-12: Bounded reads and visible-row reload
 
 Expected: One projection query plus separate count, zero cell/render reads; Identifiers restricts loaded rows and
 scope. Empty ids return none; preview movement reuses pending read.
 
 Proof: `evidence/<gate>/SQL-12.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+S02 option observation: `PASS` for the public readonly `Identifiers` carrier and existing option-port compatibility.
+[Runtime tests](evidence/S02/storage-test.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
+Deduplication, bound predicates, scope intersection and actual restricted reads remain `NOT_RUN` until S07/VSQL.
+
 ### SQL-13: Object criteria and errors
 
 Expected: Object equality targets id, null means absence; function operands convert by final property;
@@ -614,6 +634,11 @@ and zero server libraries in browser or host imports in selector.
 
 Proof: `evidence/<gate>/PORT-10.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 
+S02 owner observation: `PASS` for public CJS exports/declarations, package allowlist and neutral dependency direction.
+[Build](evidence/S02/storage-build.txt), [typecheck](evidence/S02/public-typecheck.txt),
+[package files](evidence/S02/storage-pack.txt) and [SOLID review](reports/S02.md), `storage`
+`a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`. Browser assets and remaining owners remain `NOT_RUN`.
+
 ## PANE additional cases
 
 Implementation: `L2-HOME L2-LIST L6`. Independent gates: `V2-HOME V2 V6 V7`. Methods: C,B.
@@ -684,6 +709,8 @@ A gate passes only its observations listed here and in its itinerary. Split case
 observations; the overall case remains NOT_RUN until its final required stage passes. This is not permission to skip
 an implemented feature or use a simulated replacement for a required browser/database check.
 
+- S02: Neutral projection/error/options contract, public API typecheck, inherited unsupported-adapter rejection
+  and adapter compilation. This passes only these storage observations; SQL/hydration/browser cases remain NOT_RUN.
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and
@@ -752,7 +779,7 @@ and record PID/stop commands.
 
 No product tests, browser interaction, database projection or final delivery has been executed by P03. Its checks only
 validate plan structure and coverage. P04 independently approves the repaired contracts and stage obligations;
-implementation starts at S02.
+S02 delivers the neutral storage API; reflection, SQL execution and consumer implementations remain pending.
 Installed IAB supplies real navigation/viewport checks; verified Playwright supplies touch input. Native phone edge
 gestures, physical system interruptions and keyboard behaviour remain conditional on available hardware. All browser
 and emulated-touch cases are mandatory. The standalone support currently contains a placeholder; L2-UI replaces it with

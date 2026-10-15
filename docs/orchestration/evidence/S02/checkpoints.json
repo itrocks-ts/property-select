@@ -1,0 +1,24 @@
+{
+  "application": {
+    "sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt",
+    "version": "0.0.6",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "working_files_absent": true
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "status": "",
+    "version": "0.3.0"
+  },
+  "mysql": {
+    "sha": "caba2bf09e804cec27d95bd2076e15e5d59a39c6",
+    "status": "",
+    "version": "0.2.12"
+  },
+  "mysql-maintainer": {
+    "sha": "f60edbe4e622069bef37deb43b7a1e01578d7190",
+    "status": "",
+    "version": "0.3.3"
+  }
+}
