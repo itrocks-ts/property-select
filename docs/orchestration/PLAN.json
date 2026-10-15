@@ -1,0 +1,1049 @@
+{
+  "schema_version": 1,
+  "scope": "Phase 1 only; no product implementation in P03",
+  "planning_checkpoint": "77ebcdfd963f6143c4bfa95452bf1b3d6a445af6",
+  "application_checkpoint": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+  "execution": "strictly sequential; one fresh agent per task; no subdelegation",
+  "launcher": {
+    "required": "Native spawn_agent; fork_turns none; explicit model and reasoning_effort",
+    "availability": "Tool schema advertises gpt-6.1-sol and gpt-6-astra with high; parent must record actual dispatch metadata",
+    "effective_attestation": "No independent model/effort attestation exposed to executor; never infer from self-report"
+  },
+  "review_status": "PENDING_P04",
+  "product_verdict": "NOT_RUN",
+  "order": [
+    "P01",
+    "P02",
+    "S01",
+    "P03",
+    "P04",
+    "S02",
+    "S03",
+    "S04",
+    "S05",
+    "S06",
+    "S07",
+    "VSQL",
+    "L1",
+    "L1-META",
+    "L2-UI",
+    "V2-UI",
+    "L2-HOME",
+    "V2-HOME",
+    "L2-TABLE",
+    "V2-TABLE",
+    "L2-LIST",
+    "V2",
+    "L3",
+    "V3",
+    "L4",
+    "V4",
+    "L5",
+    "V5",
+    "L6",
+    "V6",
+    "L7",
+    "V7",
+    "D8"
+  ],
+  "tasks": [
+    {
+      "id": "P01",
+      "title": "Initial ownership audit",
+      "card": "tasks/P01.md",
+      "dependencies": [],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "preparation",
+      "status": "DONE",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Repository inventory and ownership analysis with no implementation.",
+      "report": "AUDIT.md",
+      "requirements": [
+        "VAL-01",
+        "DEP-01",
+        "DEP-02"
+      ]
+    },
+    {
+      "id": "P02",
+      "title": "Reproducible validation environment",
+      "card": "tasks/P02.md",
+      "dependencies": [
+        "P01"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "environment",
+      "status": "DONE",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Routine environment setup; completed lifecycle corrections used separate high-effort verifiers.",
+      "report": "VERIFY-ENVIRONMENT.md",
+      "requirements": [
+        "VAL-01",
+        "VAL-05"
+      ]
+    },
+    {
+      "id": "S01",
+      "title": "PHP comparison and adaptation decisions",
+      "card": "tasks/S01.md",
+      "dependencies": [
+        "P02"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "contract",
+      "status": "DONE",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Projection reconstruction and PHP-to-TypeScript ownership require explicit cross-layer decisions.",
+      "report": "PHP-COMPARISON.md",
+      "requirements": [
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "P03",
+      "title": "Architecture contracts and executable plan",
+      "card": "tasks/P03.md",
+      "dependencies": [
+        "S01"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "planning",
+      "status": "DONE",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "DEP-11 object projection, partial hydration and count/page semantics justify Astra from the first pass.",
+      "report": "reports/P03.md",
+      "requirements": [
+        "VAL-02",
+        "DEP-01",
+        "DEP-02",
+        "DEP-03",
+        "DEP-04",
+        "DEP-05",
+        "DEP-06",
+        "DEP-07",
+        "DEP-08",
+        "DEP-09",
+        "DEP-10",
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "P04",
+      "title": "Independent plan review",
+      "card": "tasks/P04.md",
+      "dependencies": [
+        "P03"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "review",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Review object projection, representation, joins, count/pages and gesture/state ownership as one contract.",
+      "report": "reports/P04.md",
+      "requirements": [
+        "VAL-02",
+        "VAL-07",
+        "DEP-01",
+        "DEP-02",
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "S02",
+      "title": "Neutral storage projection types",
+      "card": "tasks/S02.md",
+      "dependencies": [
+        "P04"
+      ],
+      "packages": [
+        "@itrocks/storage"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/storage"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Storage result, errors and adapter substitution must be stable before consumers.",
+      "report": "reports/S02.md",
+      "requirements": [
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "S03",
+      "title": "Reflection relation facts",
+      "card": "tasks/S03.md",
+      "dependencies": [
+        "S02"
+      ],
+      "packages": [
+        "@itrocks/reflect"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/reflect"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Optional, inherited and explicit inverse/cardinality facts control both search cycles and SQL multiplicity.",
+      "report": "reports/S03.md",
+      "requirements": [
+        "ARC-02",
+        "ARC-06",
+        "API-03",
+        "SEA-08",
+        "SEA-09",
+        "DEP-03"
+      ]
+    },
+    {
+      "id": "S04",
+      "title": "Metadata-only path resolution",
+      "card": "tasks/S04.md",
+      "dependencies": [
+        "S03"
+      ],
+      "packages": [
+        "@itrocks/reflect-path"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/reflect-path"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "The existing skipped context step affects deep projection and all metadata consumers.",
+      "report": "reports/S04.md",
+      "requirements": [
+        "API-01",
+        "API-03",
+        "ARC-06",
+        "DEP-03",
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "S05",
+      "title": "Shared join and relationship graph",
+      "card": "tasks/S05.md",
+      "dependencies": [
+        "S04"
+      ],
+      "packages": [
+        "@itrocks/sql-join",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/sql-join",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Optional-ancestor joins, inverse/link mappings and plural predicates determine root identity semantics.",
+      "report": "reports/S05.md",
+      "requirements": [
+        "DEP-03",
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "S06",
+      "title": "Projection and criteria SQL builder",
+      "card": "tasks/S06.md",
+      "dependencies": [
+        "S05"
+      ],
+      "packages": [
+        "@itrocks/sql-build"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/sql-build"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Object-field mappings, correlated plural predicates, aliases and root pagination need coherent query planning.",
+      "report": "reports/S06.md",
+      "requirements": [
+        "DEP-11"
+      ]
+    },
+    {
+      "id": "S07",
+      "title": "MySQL execution and typed reconstruction",
+      "card": "tasks/S07.md",
+      "dependencies": [
+        "S06"
+      ],
+      "packages": [
+        "@itrocks/mysql",
+        "@itrocks/framework",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/mysql",
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Conversion context, object identity and criteria/search/count compatibility cross the storage and framework boundary.",
+      "report": "reports/S07.md",
+      "requirements": [
+        "DEP-11",
+        "VAL-03"
+      ]
+    },
+    {
+      "id": "VSQL",
+      "title": "Independent real database gate",
+      "card": "tasks/VSQL.md",
+      "dependencies": [
+        "S07"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "An independent oracle must challenge hydration, optional joins, scopes, counts and fixed-dataset pagination.",
+      "report": "reports/VSQL.md",
+      "requirements": [
+        "DEP-11",
+        "VAL-03",
+        "VAL-06",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "L1",
+      "title": "Generic selector controller and ports",
+      "card": "tasks/L1.md",
+      "dependencies": [
+        "VSQL"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Navigation, confirmations, stale-work handling and serialisable state form the shared behavioural model.",
+      "report": "reports/L1.md",
+      "requirements": [
+        "ARC-01",
+        "ARC-03",
+        "ARC-04",
+        "ARC-05",
+        "API-01",
+        "API-02",
+        "NAV-01",
+        "NAV-02",
+        "NAV-03",
+        "NAV-04",
+        "NAV-05",
+        "NAV-07",
+        "DEP-01",
+        "DEP-04"
+      ]
+    },
+    {
+      "id": "L1-META",
+      "title": "Authorised framework metadata provider",
+      "card": "tasks/L1-META.md",
+      "dependencies": [
+        "L1"
+      ],
+      "packages": [
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Authorisation, composed reflection and per-request metadata must share the storage path facts.",
+      "report": "reports/L1-META.md",
+      "requirements": [
+        "ARC-02",
+        "ARC-06",
+        "API-03",
+        "DEP-03",
+        "DEP-06",
+        "DEP-09",
+        "DEP-10"
+      ]
+    },
+    {
+      "id": "L2-UI",
+      "title": "Standalone selector browser surface",
+      "card": "tasks/L2-UI.md",
+      "dependencies": [
+        "L1-META"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "UI consumes stabilised generic ports; navigation decisions are already fixed.",
+      "report": "reports/L2-UI.md",
+      "requirements": [
+        "UI-04",
+        "ACT-01",
+        "ACT-02",
+        "ACT-03",
+        "ACT-04",
+        "ACT-05",
+        "ACT-06",
+        "ACT-08",
+        "NAV-09",
+        "DEP-01",
+        "VAL-03"
+      ]
+    },
+    {
+      "id": "V2-UI",
+      "title": "Independent standalone navigation check",
+      "card": "tasks/V2-UI.md",
+      "dependencies": [
+        "L2-UI"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Real clicks, keyboard and hover/focus must validate the first visible increment immediately.",
+      "report": "reports/V2-UI.md",
+      "requirements": [
+        "T01",
+        "T02",
+        "T03",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T25",
+        "VAL-03",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L2-HOME",
+      "title": "Generic right pane",
+      "card": "tasks/L2-HOME.md",
+      "dependencies": [
+        "V2-UI"
+      ],
+      "packages": [
+        "@itrocks/home"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/home"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Pane lifecycle and focus use a settled generic owner contract.",
+      "report": "reports/L2-HOME.md",
+      "requirements": [
+        "UI-01",
+        "UI-02",
+        "UI-03",
+        "QUA-02",
+        "DEP-08"
+      ]
+    },
+    {
+      "id": "V2-HOME",
+      "title": "Independent pane lifecycle check",
+      "card": "tasks/V2-HOME.md",
+      "dependencies": [
+        "L2-HOME"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Home is a visible independent increment and needs its own immediate gate.",
+      "report": "reports/V2-HOME.md",
+      "requirements": [
+        "DEP-08",
+        "UI-01",
+        "UI-02",
+        "QUA-02",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L2-TABLE",
+      "title": "Table column addition plugin",
+      "card": "tasks/L2-TABLE.md",
+      "dependencies": [
+        "V2-HOME"
+      ],
+      "packages": [
+        "@itrocks/table"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/table"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Async data and plugin/frozen-column lifecycle must remain independent of list identity and metadata.",
+      "report": "reports/L2-TABLE.md",
+      "requirements": [
+        "TAB-02",
+        "TAB-04",
+        "TAB-05",
+        "TAB-06",
+        "DEP-07"
+      ]
+    },
+    {
+      "id": "V2-TABLE",
+      "title": "Independent table addition check",
+      "card": "tasks/V2-TABLE.md",
+      "dependencies": [
+        "L2-TABLE"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Async column insertion must not regress existing reorder, deletion, sorting or freeze geometry.",
+      "report": "reports/V2-TABLE.md",
+      "requirements": [
+        "DEP-07",
+        "TAB-04",
+        "TAB-05",
+        "TAB-06",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L2-LIST",
+      "title": "Real projected list and click integration",
+      "card": "tasks/L2-LIST.md",
+      "dependencies": [
+        "V2-TABLE"
+      ],
+      "packages": [
+        "@itrocks/list",
+        "@itrocks/framework",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Projection metadata, representative rendering, scope, count/feed and public host composition must agree.",
+      "report": "reports/L2-LIST.md",
+      "requirements": [
+        "ARC-03",
+        "UI-01",
+        "UI-02",
+        "UI-03",
+        "ACT-06",
+        "TAB-01",
+        "TAB-02",
+        "TAB-04",
+        "TAB-05",
+        "TAB-06",
+        "TAB-12",
+        "DEP-07",
+        "DEP-08",
+        "DEP-09",
+        "DEP-10",
+        "DEP-11",
+        "VAL-03"
+      ]
+    },
+    {
+      "id": "V2",
+      "title": "Independent integrated click and data check",
+      "card": "tasks/V2.md",
+      "dependencies": [
+        "L2-LIST"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "The first real list check must challenge object rendering, filters, count/feed and projection boundaries.",
+      "report": "reports/V2.md",
+      "requirements": [
+        "T01",
+        "T02",
+        "T03",
+        "T05",
+        "T06",
+        "T07",
+        "T08",
+        "T18",
+        "T25",
+        "T27",
+        "DEP-11",
+        "VAL-03",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L3",
+      "title": "Bounded local metadata search",
+      "card": "tasks/L3.md",
+      "dependencies": [
+        "V2"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Branch cycle policy, async cancellation and stable ranking require careful shared-state handling.",
+      "report": "reports/L3.md",
+      "requirements": [
+        "NAV-08",
+        "SEA-01",
+        "SEA-02",
+        "SEA-03",
+        "SEA-04",
+        "SEA-05",
+        "SEA-06",
+        "SEA-07",
+        "SEA-08",
+        "SEA-09",
+        "QUA-01",
+        "QUA-03"
+      ]
+    },
+    {
+      "id": "V3",
+      "title": "Independent search browser check",
+      "card": "tasks/V3.md",
+      "dependencies": [
+        "L3"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Stale async results and branch-specific cycles need both contract assertions and visible observations.",
+      "report": "reports/V3.md",
+      "requirements": [
+        "T09",
+        "T10",
+        "T11",
+        "T12",
+        "T13",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L4",
+      "title": "Suggestions and real session restoration",
+      "card": "tasks/L4.md",
+      "dependencies": [
+        "V3"
+      ],
+      "packages": [
+        "@itrocks/property-select",
+        "@itrocks/list",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Confirmation ordering, concurrent state writes, session generation and invalid path restoration cross server/browser state.",
+      "report": "reports/L4.md",
+      "requirements": [
+        "NAV-06",
+        "REC-01",
+        "REC-02",
+        "REC-03",
+        "REC-04",
+        "REC-05",
+        "REC-06",
+        "REC-07",
+        "STA-01",
+        "STA-02",
+        "STA-03",
+        "STA-04",
+        "STA-05",
+        "DEP-05",
+        "DEP-06"
+      ]
+    },
+    {
+      "id": "V4",
+      "title": "Independent session and suggestions check",
+      "card": "tasks/V4.md",
+      "dependencies": [
+        "L4"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Reload/expiry and concurrent responses require actual sessions and independent browser contexts.",
+      "report": "reports/V4.md",
+      "requirements": [
+        "T04",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "STA-01",
+        "DEP-05",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L5",
+      "title": "Desktop external drag and rollback",
+      "card": "tasks/L5.md",
+      "dependencies": [
+        "V4"
+      ],
+      "packages": [
+        "@itrocks/property-select",
+        "@itrocks/table",
+        "@itrocks/list",
+        "@itrocks/home",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/table",
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/home",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Pointer capture, provisional values, pending duplicates, rollback and late data cross all host lifecycles.",
+      "report": "reports/L5.md",
+      "requirements": [
+        "DRA-01",
+        "DRA-02",
+        "DRA-05",
+        "DRA-08",
+        "ACT-07",
+        "TAB-03",
+        "TAB-07",
+        "TAB-08",
+        "TAB-09",
+        "TAB-10",
+        "TAB-11",
+        "QUA-01"
+      ]
+    },
+    {
+      "id": "V5",
+      "title": "Independent desktop drag check",
+      "card": "tasks/V5.md",
+      "dependencies": [
+        "L5"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Independent real input must test rollback with slow data, header-origin differences and concurrent additions.",
+      "report": "reports/V5.md",
+      "requirements": [
+        "T11",
+        "T15",
+        "T19",
+        "T20",
+        "T21",
+        "T26",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L6",
+      "title": "Touch gesture arbitration and responsive completion",
+      "card": "tasks/L6.md",
+      "dependencies": [
+        "V5"
+      ],
+      "packages": [
+        "@itrocks/property-select",
+        "@itrocks/table",
+        "@itrocks/home",
+        "@itrocks/list"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/table",
+        "node_modules/@itrocks/home",
+        "node_modules/@itrocks/list"
+      ],
+      "category": "implementation",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Scroll/drag arbitration, pointer lifetime and pane restoration under async rollback are cross-component risks.",
+      "report": "reports/L6.md",
+      "requirements": [
+        "ARC-05",
+        "ACT-05",
+        "ACT-06",
+        "DRA-02",
+        "DRA-03",
+        "DRA-04",
+        "DRA-05",
+        "DRA-06",
+        "DRA-07",
+        "DRA-08",
+        "NAV-09",
+        "QUA-02"
+      ]
+    },
+    {
+      "id": "V6",
+      "title": "Independent touch and responsive check",
+      "card": "tasks/V6.md",
+      "dependencies": [
+        "L6"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Real touch input must distinguish scroll from drag and verify restoration under delayed data.",
+      "report": "reports/V6.md",
+      "requirements": [
+        "T06",
+        "T08",
+        "T22",
+        "T23",
+        "T24",
+        "T25",
+        "T27",
+        "VAL-05",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "L7",
+      "title": "Cross-module regression and load coverage",
+      "card": "tasks/L7.md",
+      "dependencies": [
+        "V6"
+      ],
+      "packages": [
+        "@itrocks/property-select",
+        "@itrocks/list",
+        "@itrocks/table",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/table",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Final pre-acceptance stress and lifecycle checks must preserve contractual ownership.",
+      "report": "reports/L7.md",
+      "requirements": [
+        "API-03",
+        "QUA-01",
+        "QUA-02",
+        "QUA-03",
+        "DEP-02",
+        "DEP-09",
+        "DEP-10",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "V7",
+      "title": "Independent final acceptance",
+      "card": "tasks/V7.md",
+      "dependencies": [
+        "L7"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "acceptance",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Cumulative SQL, session, pointer and integration risks justify Astra/high for final independent acceptance.",
+      "report": "reports/V7.md",
+      "requirements": [
+        "VAL-03",
+        "VAL-04",
+        "VAL-05",
+        "VAL-06",
+        "VAL-07",
+        "VAL-08"
+      ]
+    },
+    {
+      "id": "D8",
+      "title": "Independent delivery and live handover",
+      "card": "tasks/D8.md",
+      "dependencies": [
+        "V7"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "delivery",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "medium",
+      "model_justification": "Delivery checks are procedural once independent functional gates pass.",
+      "report": "reports/D8.md",
+      "requirements": [
+        "VAL-08",
+        "VAL-06"
+      ]
+    }
+  ]
+}

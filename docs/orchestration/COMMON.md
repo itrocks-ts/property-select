@@ -46,9 +46,9 @@ initial `AD` files, including their index contents and working-file absence: `au
 changes require diagnosis.
 
 Keep all tracking documents, reports, plans, validation records and reusable test resources in the package tracking
-directory or their owning framework package. `showtime` is only a local test bench: no persistent documents or commits
-belong in its repository. Record temporary application setup, reproduction and cleanup in the package tracking area.
-Task 4.1 excludes `docs/orchestration/environment/`, which belongs to task 4.2.
+directory or their owning framework package. `showtime` is only a local test bench: no durable documents, product
+code or commits belong in its repository. Record temporary application setup, reproduction and cleanup in the
+package tracking area. Task 4.1 excludes `docs/orchestration/environment/`, which belongs to task 4.2.
 
 Local task commits are authorised by prompt section 6. Stage explicit task paths, review the complete pending diff and
 commit only attributable work. No push, tag, publication, deployment or destructive cleanup is authorised. Use concise
@@ -57,11 +57,15 @@ contain its own commit SHA; return that SHA after committing.
 
 Framework version changes follow handbook rules immediately on first edit: patch for documentation/fixes, minor for
 compatible features, major for breaking API changes, highest required level against HEAD once per pending delivery.
-Synchronise manifests/locks/internal dependencies when necessary; do not renumber untouched packages. The audit changes
-`property-select` documentation and changes its version from `0.0.4` to `0.0.5`; all other versions retain their
-initial values for this delivery.
+Synchronise manifests/locks/internal dependencies when necessary; do not renumber untouched packages. Planning
+starts from `property-select` HEAD `77ebcdfd963f6143c4bfa95452bf1b3d6a445af6`, version `0.0.12`.
+Task `P03` increments documentation to `0.0.13`; unchanged owners retain their versions.
 
 ## Local execution and validation
+
+Never run `npm install`, `npm update` or an `npx` command with an implicit download. If an `@itrocks` package is
+missing, clone its Git repository directly under `node_modules/@itrocks`; record its checkpoint before modification.
+Use installed binaries and existing or explicitly delivered `npm run` scripts.
 
 The application contains real package checkouts in `node_modules/@itrocks`, not source symlinks. Build each owner in
 logical dependency order and verify generated server/browser files resolve to the delivered checkout versions. See audit
@@ -96,3 +100,10 @@ correction pass [independent verification](VERIFY-ENVIRONMENT.md); VAL-01 is com
 Each report records criteria, exact commands, tested checkpoints, results and evidence/defects paths, limits and version
 changes. Maintain the manifest/matrix once created. Return at most eight lines under orchestration section 7: status;
 requested/effective profile; repositories and SHAs; versions; validation; report/proof/defect paths; blockers.
+
+## Planning handover
+
+Read [PLAN.json](PLAN.json), [CONTRACTS.md](CONTRACTS.md), [SELECT-CONTRACT.md](SELECT-CONTRACT.md),
+[PHP-COMPARISON.md](PHP-COMPARISON.md), [EXECUTION.md](EXECUTION.md) and [VALIDATION.md](VALIDATION.md).
+Task cards are the autonomous entry points. A completed planning artifact does not mark product acceptance PASS.
+Use the fixed serial order and independent gates; append correction/retest tasks according to EXECUTION.md.
