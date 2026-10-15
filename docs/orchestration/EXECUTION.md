@@ -56,12 +56,11 @@ installed `tsx` through their current npm test script. No absent Jest installati
 For source/build conventions read the owner's handbook links. Always verify generated public CJS, browser `.js`, types,
 HTML/CSS/icons and manifest allowlists; do not commit generated files against the owner's existing convention.
 
-The current environment supplies SQL rows, not a reflected invoice application. `S07` must deliver synthetic model
-classes with runtime files, `.d.ts` and readable source required by reflection. Map their stores/columns through the
-actual framework conventions and adjust only isolated fixture schema where necessary: existing SQL fixtures use
-`id_customer`, while the current TypeScript mapping normally uses `customer_id`. Do not introduce product code to
-special-case recipe names. Extend fixtures with declared inverse/N-N/unknown relations, representation dependencies,
-invalidated paths, alias collisions and 120 roots with tied sort values. Keep initial four-root cases identifiable.
+S07 supplies [synthetic model classes](environment/models/load.mjs) with readable TypeScript and reproducible
+adjacent runtime/declaration files. Build them with the command in [ENVIRONMENT.md](ENVIRONMENT.md) before importing
+the loader. The isolated schema uses actual `customer_id` and other `*_id` column conventions, including named
+link-table columns. It covers inverse/N-N/unknown relations, representative dependencies, invalid/ambiguous paths,
+alias collisions and 120 roots with tied sort values. The original four-root cases remain identifiable.
 
 `L2-LIST` loads those classes through the public `beforeFrameworkRun` hook in `framework/src/framework.ts`
 (after composition/binding, before server run), registered synchronously by the isolated launcher, and real

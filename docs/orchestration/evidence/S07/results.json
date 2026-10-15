@@ -1,0 +1,85 @@
+[
+	{
+		"id": "SQL-01",
+		"status": "PASS",
+		"first": 0,
+		"queries": 1
+	},
+	{
+		"id": "SQL-02",
+		"status": "PASS",
+		"first": 1,
+		"queries": 4
+	},
+	{
+		"id": "SQL-03",
+		"status": "PASS",
+		"first": 5,
+		"queries": 2
+	},
+	{
+		"id": "SQL-04",
+		"status": "PASS",
+		"first": 7,
+		"queries": 2
+	},
+	{
+		"id": "SQL-05",
+		"status": "PASS",
+		"first": 9,
+		"queries": 3
+	},
+	{
+		"id": "SQL-06",
+		"status": "PASS",
+		"first": 12,
+		"queries": 2
+	},
+	{
+		"id": "SQL-07",
+		"status": "PASS",
+		"first": 14,
+		"queries": 6
+	},
+	{
+		"id": "SQL-08",
+		"status": "PASS",
+		"first": 20,
+		"queries": 11
+	},
+	{
+		"id": "SQL-09",
+		"status": "PASS",
+		"first": 31,
+		"queries": 0
+	},
+	{
+		"id": "SQL-10",
+		"status": "PASS",
+		"first": 31,
+		"queries": 15
+	},
+	{
+		"id": "SQL-11",
+		"status": "PASS",
+		"first": 46,
+		"queries": 4
+	},
+	{
+		"id": "SQL-12",
+		"status": "PASS",
+		"first": 50,
+		"queries": 2
+	},
+	{
+		"id": "SQL-13",
+		"status": "PASS",
+		"first": 52,
+		"queries": 6
+	},
+	{
+		"id": "SQL-14",
+		"status": "PASS",
+		"observation": "Executed SQL archive; browser linkage NOT_RUN"
+	}
+]

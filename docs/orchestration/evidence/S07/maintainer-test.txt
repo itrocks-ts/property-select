@@ -1,0 +1,27 @@
+
+> @itrocks/mysql-maintainer@0.4.1 test
+> npm run build && node --test "test/**/*.test.mjs"
+
+
+> @itrocks/mysql-maintainer@0.4.1 build
+> tsc
+
+✔ journalise une tentative utile sans SQL, message pilote ni valeur privée (1.482182ms)
+✔ remplace un code pilote non conforme pour ne pas le journaliser (0.208394ms)
+✔ préflight paresseux uniquement pour les écritures de types @Unique (2.942141ms)
+✔ deux écritures concurrentes coalescent le préflight par type et connexion (4.683274ms)
+✔ deux classes écrites en concurrence conservent chacune leur contexte asynchrone (10.318064ms)
+✔ un préflight échoué ne fuit rien, bloque l’écriture puis peut être retenté (1.423654ms)
+✔ le cache est distinct par connexion et réinitialisé par contextualisation (0.606055ms)
+✔ la maintenance structurelle utilise exclusivement la requête pilote originale (0.400906ms)
+✔ le contexte est retiré quand une opération SQL échoue (0.423405ms)
+✔ projection and count retain all related maintenance contexts during concurrent queries (9.890288ms)
+✔ maintenance visits every graph type and resolves a link within a larger context (1.337796ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.372869

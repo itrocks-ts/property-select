@@ -1,0 +1,1 @@
+PASS: real MySQL joins, absent relations, bound criteria and driver conversions; four synthetic roots

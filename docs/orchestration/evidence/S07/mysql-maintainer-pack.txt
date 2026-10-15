@@ -1,0 +1,71 @@
+[
+  {
+    "id": "@itrocks/mysql-maintainer@0.4.1",
+    "name": "@itrocks/mysql-maintainer",
+    "version": "0.4.1",
+    "size": 9532,
+    "unpackedSize": 33245,
+    "shasum": "5252d3a6ee2c6b8f8ccfc7be92e98178989b4832",
+    "integrity": "sha512-Er3oYmcnj2x2PHaqbiyiPWYtEbZMx6eSwiUB7XdfChjDE0u4LSJpY0c6Cvpt083SUShmpFiR423WUvTFUJ+jbA==",
+    "filename": "itrocks-mysql-maintainer-0.4.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 6593,
+        "mode": 420
+      },
+      {
+        "path": "cjs/contextual-connection.d.ts",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "cjs/contextual-connection.js",
+        "size": 2983,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql-maintainer.d.ts",
+        "size": 917,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql-maintainer.js",
+        "size": 5213,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql.d.ts",
+        "size": 2041,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql.js",
+        "size": 4580,
+        "mode": 420
+      },
+      {
+        "path": "cjs/safe-error-code.d.ts",
+        "size": 69,
+        "mode": 420
+      },
+      {
+        "path": "cjs/safe-error-code.js",
+        "size": 567,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1545,
+        "mode": 420
+      }
+    ],
+    "entryCount": 11,
+    "bundled": []
+  }
+]

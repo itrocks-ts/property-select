@@ -1,0 +1,510 @@
+[
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`, `t3`.`id` AS `p2`, `t2`.`id` AS `p3`, `t1`.`id` AS `p4`, `t3`.`name` AS `p5`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`, `t4`.`id` AS `p5`, `t4`.`name` AS `p6`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t4`.`id` AS `p4`, `t4`.`name` AS `p5`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`, `t5`.`id` AS `p5`, `t4`.`id` AS `p6`, `t6`.`id` AS `p7`, `t6`.`name` AS `p8`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_address` AS `t4` ON `t0`.`delivery_address_id` = `t4`.`id`\nLEFT JOIN `ps_city` AS `t5` ON `t4`.`city_id` = `t5`.`id`\nLEFT JOIN `ps_country` AS `t6` ON `t5`.`country_id` = `t6`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`, `t3`.`id` AS `p2`, `t2`.`id` AS `p3`, `t1`.`id` AS `p4`, `t3`.`name` AS `p5`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_address` AS `t4` ON `t0`.`delivery_address_id` = `t4`.`id`\nLEFT JOIN `ps_city` AS `t5` ON `t4`.`city_id` = `t5`.`id`\nWHERE `t5`.`name` = ? AND `t0`.`number` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"Recipe London",
+			"REC-001",
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`\nLEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`\nWHERE `t2`.`name` = ? AND `t0`.`number` = ?",
+		"values": [
+			"Recipe London",
+			"REC-001"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t6`.`id` AS `p1`, `t5`.`id` AS `p2`, `t6`.`name` AS `p3`, `t4`.`id` AS `p4`, `t3`.`id` AS `p5`, `t2`.`id` AS `p6`, `t1`.`id` AS `p7`, `t4`.`name` AS `p8`, `t0`.`note` AS `p9`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nLEFT JOIN `ps_address` AS `t5` ON `t0`.`delivery_address_id` = `t5`.`id`\nLEFT JOIN `ps_city` AS `t6` ON `t5`.`city_id` = `t6`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`number` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"missing",
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`p0` AS `p1`, `t33`.`id` AS `p2`, `t32`.`id` AS `p3`, `t31`.`id` AS `p4`, `t30`.`id` AS `p5`, `t29`.`id` AS `p6`, `t28`.`id` AS `p7`, `t27`.`id` AS `p8`, `t26`.`id` AS `p9`, `t25`.`id` AS `p10`, `t24`.`id` AS `p11`, `t23`.`id` AS `p12`, `t22`.`id` AS `p13`, `t21`.`id` AS `p14`, `t20`.`id` AS `p15`, `t19`.`id` AS `p16`, `t18`.`id` AS `p17`, `t17`.`id` AS `p18`, `t16`.`id` AS `p19`, `t15`.`id` AS `p20`, `t14`.`id` AS `p21`, `t13`.`id` AS `p22`, `t12`.`id` AS `p23`, `t11`.`id` AS `p24`, `t10`.`id` AS `p25`, `t9`.`id` AS `p26`, `t8`.`id` AS `p27`, `t7`.`id` AS `p28`, `t6`.`id` AS `p29`, `t5`.`id` AS `p30`, `t4`.`id` AS `p31`, `t3`.`id` AS `p32`, `t2`.`id` AS `p33`, `t1`.`id` AS `p34`, `t33`.`name` AS `p35`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_customer` AS `t2` ON `t1`.`parent_id` = `t2`.`id`\nLEFT JOIN `ps_customer` AS `t3` ON `t2`.`parent_id` = `t3`.`id`\nLEFT JOIN `ps_customer` AS `t4` ON `t3`.`parent_id` = `t4`.`id`\nLEFT JOIN `ps_customer` AS `t5` ON `t4`.`parent_id` = `t5`.`id`\nLEFT JOIN `ps_customer` AS `t6` ON `t5`.`parent_id` = `t6`.`id`\nLEFT JOIN `ps_customer` AS `t7` ON `t6`.`parent_id` = `t7`.`id`\nLEFT JOIN `ps_customer` AS `t8` ON `t7`.`parent_id` = `t8`.`id`\nLEFT JOIN `ps_customer` AS `t9` ON `t8`.`parent_id` = `t9`.`id`\nLEFT JOIN `ps_customer` AS `t10` ON `t9`.`parent_id` = `t10`.`id`\nLEFT JOIN `ps_customer` AS `t11` ON `t10`.`parent_id` = `t11`.`id`\nLEFT JOIN `ps_customer` AS `t12` ON `t11`.`parent_id` = `t12`.`id`\nLEFT JOIN `ps_customer` AS `t13` ON `t12`.`parent_id` = `t13`.`id`\nLEFT JOIN `ps_customer` AS `t14` ON `t13`.`parent_id` = `t14`.`id`\nLEFT JOIN `ps_customer` AS `t15` ON `t14`.`parent_id` = `t15`.`id`\nLEFT JOIN `ps_customer` AS `t16` ON `t15`.`parent_id` = `t16`.`id`\nLEFT JOIN `ps_customer` AS `t17` ON `t16`.`parent_id` = `t17`.`id`\nLEFT JOIN `ps_customer` AS `t18` ON `t17`.`parent_id` = `t18`.`id`\nLEFT JOIN `ps_customer` AS `t19` ON `t18`.`parent_id` = `t19`.`id`\nLEFT JOIN `ps_customer` AS `t20` ON `t19`.`parent_id` = `t20`.`id`\nLEFT JOIN `ps_customer` AS `t21` ON `t20`.`parent_id` = `t21`.`id`\nLEFT JOIN `ps_customer` AS `t22` ON `t21`.`parent_id` = `t22`.`id`\nLEFT JOIN `ps_customer` AS `t23` ON `t22`.`parent_id` = `t23`.`id`\nLEFT JOIN `ps_customer` AS `t24` ON `t23`.`parent_id` = `t24`.`id`\nLEFT JOIN `ps_customer` AS `t25` ON `t24`.`parent_id` = `t25`.`id`\nLEFT JOIN `ps_customer` AS `t26` ON `t25`.`parent_id` = `t26`.`id`\nLEFT JOIN `ps_customer` AS `t27` ON `t26`.`parent_id` = `t27`.`id`\nLEFT JOIN `ps_customer` AS `t28` ON `t27`.`parent_id` = `t28`.`id`\nLEFT JOIN `ps_customer` AS `t29` ON `t28`.`parent_id` = `t29`.`id`\nLEFT JOIN `ps_customer` AS `t30` ON `t29`.`parent_id` = `t30`.`id`\nLEFT JOIN `ps_customer` AS `t31` ON `t30`.`parent_id` = `t31`.`id`\nLEFT JOIN `ps_customer` AS `t32` ON `t31`.`parent_id` = `t32`.`id`\nLEFT JOIN `ps_customer` AS `t33` ON `t32`.`parent_id` = `t33`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`number` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"' OR 1=1 --",
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`amount` AS `p1`, `t0`.`active` AS `p2`, `t0`.`issued_at` AS `p3`, `t0`.`note` AS `p4`, `t4`.`id` AS `p5`, `t3`.`id` AS `p6`, `t2`.`id` AS `p7`, `t1`.`id` AS `p8`, `t4`.`name` AS `p9`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t4`.`name` = ? AND `t0`.`number` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"Recipe France",
+			"REC-001",
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t4`.`name` = ? AND `t0`.`number` = ?",
+		"values": [
+			"Recipe France",
+			"REC-001"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t5`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nLEFT JOIN `ps_address` AS `t5` ON `t0`.`delivery_address_id` = `t5`.`id`\nWHERE `t4`.`name` = ? AND `t0`.`number` = ?\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"Recipe France",
+			"REC-001"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`\nLEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`\nORDER BY `t2`.`name` ASC, `t0`.`id` ASC",
+		"values": [],
+		"rows": 120
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`\nLEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`\nORDER BY `t2`.`name` ASC, `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			50,
+			0
+		],
+		"rows": 50
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`\nLEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`\nORDER BY `t2`.`name` ASC, `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			50,
+			50
+		],
+		"rows": 50
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`\nLEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`\nORDER BY `t2`.`name` ASC, `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			50,
+			100
+		],
+		"rows": 20
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`",
+		"values": [],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			0,
+			0
+		],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			50,
+			120
+		],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invoice` AS `t0`\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			2,
+			0
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`number` DESC, `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t1`.`id` ASC, `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 4
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ?)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"Recipe A",
+			50,
+			0
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ?)",
+		"values": [
+			"Recipe A"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > ?)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			1,
+			50,
+			0
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > ?)",
+		"values": [
+			1
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ? AND `t1`.`quantity` = ?)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"Recipe A",
+			1,
+			50,
+			0
+		],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ? AND `t1`.`quantity` = ?)",
+		"values": [
+			"Recipe A",
+			1
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			50,
+			0
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)",
+		"values": [],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`\nINNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`\nWHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = ?)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"Recipe Red",
+			50,
+			0
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`\nINNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`\nWHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = ?)",
+		"values": [
+			"Recipe Red"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ?) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`\nINNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`\nWHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = ?)\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"Recipe A",
+			"Recipe Blue",
+			50,
+			0
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`\nWHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = ?) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`\nINNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`\nWHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = ?)",
+		"values": [
+			"Recipe A",
+			"Recipe Blue"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`\nINNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`\nWHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`\nINNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`\nWHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`\nWHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`label` = ?)))\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"Recipe C",
+			50,
+			0
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`\nINNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`\nWHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`\nINNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`\nWHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`\nWHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`label` = ?)))",
+		"values": [
+			"Recipe C"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`name` AS `p1`\nFROM `ps_tag` AS `t0`\nWHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`\nINNER JOIN `ps_invoice` AS `t2` ON `t1`.`ps_invoice_id` = `t2`.`id`\nWHERE `t0`.`id` = `t1`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t3`\nWHERE `t2`.`id` = `t3`.`invoice_id` AND `t3`.`label` = ?))\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"Recipe A"
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`\nWHERE `t0`.`number` LIKE ?\nORDER BY `t0`.`id` ASC\nLIMIT ? OFFSET ?",
+		"values": [
+			"REC-00%",
+			2,
+			0
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`number` LIKE ?",
+		"values": [
+			"REC-00%"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`\nWHERE `t0`.`id` = ?\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`\nORDER BY `t0`.`id` ASC",
+		"values": [],
+		"rows": 120
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`active` = ? AND `t0`.`id` IN (?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			1,
+			2,
+			4
+		],
+		"rows": 2
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE 1 = 0\nORDER BY `t0`.`id` ASC",
+		"values": [],
+		"rows": 0
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nWHERE `t1`.`id` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nWHERE `t1`.`id` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nWHERE `t1`.`id` IS NULL AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t4`.`name` LIKE ? AND `t0`.`number` = ? AND `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+		"values": [
+			"Recipe France",
+			"REC-001",
+			1,
+			2,
+			3,
+			4
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT COUNT(*) AS `count`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nLEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`\nWHERE `t4`.`name` LIKE ? AND `t0`.`number` = ?",
+		"values": [
+			"Recipe France",
+			"REC-001"
+		],
+		"rows": 1
+	},
+	{
+		"sql": "SELECT `t0`.`id` AS `p0`\nFROM `ps_invalid` AS `t0`\nORDER BY `t0`.`id` ASC",
+		"values": [],
+		"error": "ER_NO_SUCH_TABLE"
+	}
+]

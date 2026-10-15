@@ -1,0 +1,176 @@
+[
+  {
+    "id": "@itrocks/framework@0.8.1",
+    "name": "@itrocks/framework",
+    "version": "0.8.1",
+    "size": 19961,
+    "unpackedSize": 66502,
+    "shasum": "9b58e3ad45c92f0354b553387f6d00ac2f2b60a6",
+    "integrity": "sha512-whCowHaDSpg8D409gJeKr2M5OU7nDoq1hbDCCSomELEfp+b5F25V58mUJ76NGCpFtN3PTNATasNA37xoXk+cPg==",
+    "filename": "itrocks-framework-0.8.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 11922,
+        "mode": 420
+      },
+      {
+        "path": "app.d.ts",
+        "size": 106,
+        "mode": 420
+      },
+      {
+        "path": "app.js",
+        "size": 2753,
+        "mode": 420
+      },
+      {
+        "path": "cjs/dependencies.d.ts",
+        "size": 38,
+        "mode": 420
+      },
+      {
+        "path": "cjs/dependencies.js",
+        "size": 6552,
+        "mode": 420
+      },
+      {
+        "path": "cjs/framework.d.ts",
+        "size": 328,
+        "mode": 420
+      },
+      {
+        "path": "cjs/framework.js",
+        "size": 1512,
+        "mode": 420
+      },
+      {
+        "path": "cjs/language.d.ts",
+        "size": 414,
+        "mode": 420
+      },
+      {
+        "path": "cjs/language.js",
+        "size": 3962,
+        "mode": 420
+      },
+      {
+        "path": "cjs/main.d.ts",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "cjs/main.js",
+        "size": 5657,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-class.d.ts",
+        "size": 519,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-class.js",
+        "size": 1837,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-property.d.ts",
+        "size": 534,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect-property.js",
+        "size": 1706,
+        "mode": 420
+      },
+      {
+        "path": "cjs/servers.d.ts",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "cjs/servers.js",
+        "size": 169,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-join-dependencies.d.ts",
+        "size": 972,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-join-dependencies.js",
+        "size": 3508,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-projection.d.ts",
+        "size": 51,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-projection.js",
+        "size": 2489,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-relationships.d.ts",
+        "size": 709,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-relationships.js",
+        "size": 7150,
+        "mode": 420
+      },
+      {
+        "path": "cjs/store-representative.d.ts",
+        "size": 122,
+        "mode": 420
+      },
+      {
+        "path": "cjs/store-representative.js",
+        "size": 437,
+        "mode": 420
+      },
+      {
+        "path": "config.yaml",
+        "size": 223,
+        "mode": 420
+      },
+      {
+        "path": "docs/sql-projection.md",
+        "size": 1443,
+        "mode": 420
+      },
+      {
+        "path": "docs/sql-relationships.md",
+        "size": 3350,
+        "mode": 420
+      },
+      {
+        "path": "favicon.png",
+        "size": 1271,
+        "mode": 420
+      },
+      {
+        "path": "fr-FR.csv",
+        "size": 2375,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 3521,
+        "mode": 420
+      }
+    ],
+    "entryCount": 32,
+    "bundled": []
+  }
+]

@@ -1,0 +1,15 @@
+{
+	"compilerOptions": {
+		"declaration": true,
+		"module": "nodenext",
+		"skipLibCheck": true,
+		"strict": true,
+		"target": "es2022"
+	},
+	"exclude": [
+		"*.d.ts"
+	],
+	"include": [
+		"*.ts"
+	]
+}

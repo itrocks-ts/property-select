@@ -1,0 +1,7 @@
+Command: PS_APP_PORT=13319 node node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs status
+Exit: 0
+mysqld is alive
+PASS: framework list HTTP 200 with Recipe France
+
+No service was started, stopped or restarted by S07. The database and application listener were inherited.
+This status proves availability of the existing control route, not a browser acceptance or a fresh server bootstrap.

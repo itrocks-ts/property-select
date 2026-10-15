@@ -108,11 +108,23 @@ smoke connection; all delivered proof uses the canonical database port.
 
 [fixtures.sql](environment/fixtures.sql) resets only tables in the dedicated synthetic database via its dedicated
 socket. It provides the real application `country` list with two countries and a separate `ps_` graph
-with four invoices, customers, addresses, cities, countries, invoice lines and N-N tags. The graph includes two address
-paths to the same type, cyclic customer parents, absent relations, nullable dates, decimals, booleans and empty versus
-null strings.
-Future metadata fixtures must describe inverse, unknown-cardinality and invalid-path cases; SQL rows alone do not
-provide these metadata contracts.
+with 120 invoices, customers, addresses, cities, countries, invoice lines and N-N tags.
+The original four invoices retain their distinguishing values; the extra roots supply tied pagination values.
+The graph includes two address paths to the same type, cyclic customer parents, absent relations, nullable dates,
+decimals, booleans and empty versus null strings.
+[Compiled model fixtures](environment/models/load.mjs) describe inverse and N-N relationships, optional/required
+ancestry, cyclic customers, unknown/ambiguous paths and representative fields. They use conventional `customer_id`
+and other `*_id` foreign keys; link columns are `ps_invoice_id` and `ps_tag_id` in `ps_invoice_ps_tag`.
+Build their adjacent runtime/declaration files before importing the loader:
+
+```bash
+node node_modules/.bin/tsc -p node_modules/@itrocks/property-select/docs/orchestration/environment/models/tsconfig.json
+node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/S07.mjs
+```
+
+Generated model files are ignored; readable TypeScript, configuration and registration are tracked. The loader
+uses public framework bindings without server bootstrap. L2-LIST registers it through `beforeFrameworkRun` and
+supplies the fixture action/route. S07 creates no application route or permanent application file.
 
 [database-smoke.mjs](environment/database-smoke.mjs) executes real left joins, a parameter-bound criterion and a limit,
 and checks four rows plus driver conversions. This is infrastructure proof using handwritten SQL. It does not validate
@@ -129,7 +141,9 @@ mysql --no-defaults --socket=/tmp/showtime-property-select-env/mysql.sock -u roo
 
 The journal contains the smoke marker, bound criterion expanded by the driver, and actual framework statements:
 `SELECT id, name FROM country LIMIT 50` and the separate country count, with MySQL identifier quoting.
-A focused synthetic excerpt is preserved in [sql-evidence.txt](environment/sql-evidence.txt).
+S07 archives its executed projection statements, bound operands and fresh general-log excerpt in
+[evidence/S07](evidence/S07/results.json); the author checks are distinct from independent VSQL.
+A focused infrastructure excerpt is preserved in [sql-evidence.txt](environment/sql-evidence.txt).
 Never use a private development database for these commands or copy private query logs into reports.
 
 ## Browser procedure and touch input

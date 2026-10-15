@@ -9,12 +9,12 @@ try {
 	 i.id, i.number, c.name AS customer, cy.name AS city, p.name AS country, d.street AS delivery,
 	 i.active, i.amount, i.issued_at, i.note
 	 FROM ps_invoice i
-	 LEFT JOIN ps_customer c ON c.id = i.id_customer
-	 LEFT JOIN ps_address a ON a.id = c.id_address
-	 LEFT JOIN ps_city cy ON cy.id = a.id_city
-	 LEFT JOIN ps_country p ON p.id = cy.id_country
-	 LEFT JOIN ps_address d ON d.id = i.id_delivery_address
-	 ORDER BY i.id`)
+	 LEFT JOIN ps_customer c ON c.id = i.customer_id
+	 LEFT JOIN ps_address a ON a.id = c.address_id
+	 LEFT JOIN ps_city cy ON cy.id = a.city_id
+	 LEFT JOIN ps_country p ON p.id = cy.country_id
+	 LEFT JOIN ps_address d ON d.id = i.delivery_address_id
+	 WHERE i.id <= 4 ORDER BY i.id`)
 	assert.equal(rows.length, 4)
 	assert.equal(rows[0].city, 'Recipe Paris')
 	assert.equal(rows[0].delivery, '2 Synthetic Street')
@@ -25,7 +25,7 @@ try {
 	assert.equal(rows[0].note, null)
 	assert.equal(rows[2].note, '')
 	const filtered = await connection.query(`SELECT i.number FROM ps_invoice i
-	 JOIN ps_customer c ON c.id = i.id_customer WHERE c.name = ? ORDER BY i.id LIMIT 1`, ['Recipe Alice'])
+	 JOIN ps_customer c ON c.id = i.customer_id WHERE c.name = ? ORDER BY i.id LIMIT 1`, ['Recipe Alice'])
 	assert.equal(filtered[0].number, 'REC-001')
 	console.log('PASS: real MySQL joins, absent relations, bound criteria and driver conversions; four synthetic roots')
 }

@@ -1,0 +1,15 @@
+Development observations, all resolved before handover:
+- Restricted database status failed on socket access. Normal require_escalated execution reached the owned server.
+- Default status uses application port 13317, which was closed. The documented PS_APP_PORT=13319 status passes.
+- Initial fixture reset had a duplicate drop-table name after renaming the N-N table. Corrected in fixtures.sql.
+- SQL-06 exposed an untranslated PropertyPathError. Framework now translates at its SQL metadata boundary.
+- The first search assertion expected number 1 but legacy foreign ids are bigint 1n; the assertion now compares its
+  numeric value without changing the legacy search hydration contract.
+- Inspection identified missing maintainer query context. The owner is explicitly included in S07; its regression
+  verifies concurrent contexts and the real database checks repair a missing table through select and count.
+- The first MySQL commit retained one whitespace-only line from moved documentation. A separate authorised patch
+  commit removes it and bumps 0.3.0 to 0.3.1; runtime source/tests are unchanged. Build/pack were refreshed.
+- No installation, update, implicit download, vcs-modules, extra agent, push or application edit was performed.
+- Final branch-link review corrected documentation links to the verified origin/main branches, with patch bumps.
+- Multi-type maintenance regression initially visited only Root instead of Root/Related/Other. Recovery now visits
+  all types and locates a link table among larger context sets. See maintainer-regression.md; affected tests pass.

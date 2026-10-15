@@ -356,17 +356,19 @@
         "S06"
       ],
       "packages": [
-        "@itrocks/mysql",
         "@itrocks/framework",
+        "@itrocks/mysql",
+        "@itrocks/mysql-maintainer",
         "@itrocks/property-select"
       ],
       "repositories": [
-        "node_modules/@itrocks/mysql",
         "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/mysql",
+        "node_modules/@itrocks/mysql-maintainer",
         "node_modules/@itrocks/property-select"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Conversion context, object identity and criteria/search/count compatibility cross the storage and framework boundary.",
@@ -374,7 +376,22 @@
       "requirements": [
         "DEP-11",
         "VAL-03"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/framework": {
+          "sha": "aff37e0da8272ca63908a57d7ff3abfa80ec177e",
+          "version": "0.8.1"
+        },
+        "@itrocks/mysql": {
+          "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+          "version": "0.3.2"
+        },
+        "@itrocks/mysql-maintainer": {
+          "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+          "version": "0.4.1"
+        }
+      },
+      "validation": "PASS: owner builds/tests, application build, SQL-01\u2013SQL-13 author database assertions, SQL-14 executed SQL archive and packages; independent VSQL and browser linkage remain NOT_RUN"
     },
     {
       "id": "VSQL",

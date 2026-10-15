@@ -27,25 +27,25 @@ product change invalidates its affected proof and requires independent retest un
 
 ## Package ownership key
 
-| Implementation | Owning packages                               |
-| -------------- | --------------------------------------------- |
-| S02            | storage                                       |
-| S03            | reflect                                       |
-| S04            | reflect-path                                  |
-| S05            | sql-join, framework                           |
-| S06            | sql-build                                     |
-| S07            | mysql, framework, property-select             |
-| L1             | property-select                               |
-| L1-META        | framework                                     |
-| L2-UI          | property-select                               |
-| L2-HOME        | home                                          |
-| L2-TABLE       | table                                         |
-| L2-LIST        | list, framework, property-select              |
-| L3             | property-select                               |
-| L4             | selector/list/framework; HTTP/session below   |
-| L5             | property-select, table, list, home, framework |
-| L6             | property-select, table, home, list            |
-| L7             | property-select, list, table, framework       |
+| Implementation | Owning packages                                     |
+| -------------- | --------------------------------------------------- |
+| S02            | storage                                             |
+| S03            | reflect                                             |
+| S04            | reflect-path                                        |
+| S05            | sql-join, framework                                 |
+| S06            | sql-build                                           |
+| S07            | mysql, mysql-maintainer, framework, property-select |
+| L1             | property-select                                     |
+| L1-META        | framework                                           |
+| L2-UI          | property-select                                     |
+| L2-HOME        | home                                                |
+| L2-TABLE       | table                                               |
+| L2-LIST        | list, framework, property-select                    |
+| L3             | property-select                                     |
+| L4             | selector/list/framework; HTTP/session below         |
+| L5             | property-select, table, list, home, framework       |
+| L6             | property-select, table, home, list                  |
+| L7             | property-select, list, table, framework             |
 
 L4 additionally owns `fastify` and `fastify-file-session-store` for session transactions, snapshots and generation
 checks; `selector` in its compact table row means `property-select`.
@@ -466,6 +466,16 @@ limit/offset/root ids, plural rejection and common count/projection EXISTS scope
 These are builder portions only; SQL-07 conversions and actual SQL-01–SQL-10 database outcomes remain `NOT_RUN`
 until S07/VSQL. Additional builder root-id restrictions support SQL-12 without claiming executed restricted reads.
 
+S07 author database observations for SQL-01–SQL-13: `PASS`, including typed partial objects, identity merging,
+final-property read/save conversion, null/absence/ignored/undefined states, common select/search/count criteria,
+120-root pages, plural EXISTS filters, scoped identifier reloads and maintained adapter execution. SQL-14's executed
+SQL archive portion passes; independent VSQL and browser linkage remain `NOT_RUN`. Evidence:
+[assertions](evidence/S07/results.json), [parameterised queries](evidence/S07/sql.json),
+[server journal](evidence/S07/mysql-general.log), [report](reports/S07.md). Tested MySQL
+`275d7f3b0ae3739e9c1a2b6361fc173d98612581` / `0.3.2`, framework
+`aff37e0da8272ca63908a57d7ff3abfa80ec177e` / `0.8.1` and mysql-maintainer
+`89ff36a3b1a41a60b040c0ed553f867bec0f6086` / `0.4.1`.
+
 ### SQL-02: Object and representative values
 
 Expected: Project City with nested Country representative fields; assert prototype/id/loaded fields, converted
@@ -793,6 +803,7 @@ an implemented feature or use a simulated replacement for a required browser/dat
   metadata, deterministic aliases, singular ordering, bound root limits/restrictions and common correlated plural
   criteria/count compilation. These pass only SQL-01–SQL-10 builder portions and support SQL-12 root restrictions.
   Runtime values, hydration, conversions, executed database counts/pages and browser observations remain NOT_RUN.
+- S07 author observations pass with [fresh database evidence](evidence/S07/results.json); VSQL remains independent.
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and

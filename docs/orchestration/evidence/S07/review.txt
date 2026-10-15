@@ -1,0 +1,15 @@
+PASS: complete product staged/unstaged/untracked source/test/documentation diffs reviewed before explicit-path commits.
+PASS: three product owners now clean; package versions, public exports and generated server/browser outputs agree.
+PASS: direct dependencies declared; no reverse framework/maintainer dependency from MySQL or SQL in selector/list.
+PASS: offline pack inventories include CJS/declarations, framework public SQL subpaths and documentation; no source/maps/tests.
+PASS: six MySQL tests, nine framework binding tests, two maintainer projection tests and existing framework/maintainer suites.
+PASS: model build, application build and real isolated database author assertions; all command output hashes verified.
+PASS: one query per select, explicit separate counts and no extra reconstruction/representative reads.
+PASS: all nonidentity conversion uses local final owner/name; objects remain partial and identity-scoped to one result.
+PASS: source conventions and changed documentation reviewed. Existing unchanged framework README line 9 remains 122 columns.
+PASS: no owner-local AGENTS.md found; shared it.rocks/handbook instructions followed.
+PASS: DataSource scan finds MySQL as sole product subclass; legacy/unsupported test adapters retain default rejection.
+PASS: showtime HEAD, two original AD index blobs and working-file absences are unchanged; no application commit/file.
+NOT_RUN: independent VSQL, list/browser rendering and later phase-1 gates. No S07 mandatory check omitted.
+Raw application stdout and MySQL journal retain their original trailing whitespace; scoped .gitattributes entries
+disable only end-of-line blank checks for those two evidence files. Product/code/document checks remain enabled.

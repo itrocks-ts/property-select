@@ -1,0 +1,53 @@
+{
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "version": "0.3.2",
+    "status": ""
+  },
+  "mysql-maintainer": {
+    "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+    "version": "0.4.1",
+    "status": ""
+  },
+  "framework": {
+    "sha": "aff37e0da8272ca63908a57d7ff3abfa80ec177e",
+    "version": "0.8.1",
+    "status": ""
+  },
+  "property-select": {
+    "sha": "6e53c172779e898aaafa32ac2df34c1e08d46f0e",
+    "version": "0.0.20",
+    "status": "M docs/orchestration/ENVIRONMENT.md\n M docs/orchestration/EXECUTION.md\n M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/environment/database-smoke.mjs\n M docs/orchestration/environment/fixtures.sql\n M docs/orchestration/tasks/S07.md\n M package.json\n?? docs/orchestration/environment/checks/\n?? docs/orchestration/environment/models/\n?? docs/orchestration/evidence/S07/\n?? docs/orchestration/reports/S07.md"
+  },
+  "sql-build": {
+    "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "version": "0.2.0",
+    "status": ""
+  },
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "status": ""
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect-path": {
+    "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "version": "0.3.1",
+    "status": ""
+  },
+  "showtime": {
+    "sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt",
+    "working_files_absent": true
+  }
+}
