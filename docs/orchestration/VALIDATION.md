@@ -72,7 +72,8 @@ HTTP transport. Browser proof uses identical runtime source at `0.9.1`; final `0
 - **Environment control / FAIL**: Fresh `/country` without offset returns 500 `unsupported-option`; explicit offset 0
   returns 200 with synthetic countries. The documented owned status command fails. The
   [failing assertion](evidence/L1-META/defect-offset.txt) requires `FIX-L1-META-1` and independent
-  `RETEST-L1-META-1` before L2-UI; L1-META is NEEDS_FIX and all combined verdicts remain NOT_RUN.
+  `RETEST-L1-META-1` before L2-UI; the historical L1-META verdict is NEEDS_FIX.
+  RETEST-L1-META-2 resolves it; combined verdicts remain NOT_RUN.
 
 ## FIX-L1-META-1 author observations
 
@@ -90,14 +91,14 @@ offset. Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, 
 - **Existing list suite / FAIL, pre-existing**: Empty column-save assertion fails before the feed implementation.
   A fresh archive of starting list `0.8.0` reproduces the identical failure.
   [Current suite](evidence/FIX-L1-META-1/list-test.txt),
-  [baseline assertion](evidence/FIX-L1-META-1/baseline-columns-test.txt). This separate defect remains open.
+  [baseline assertion](evidence/FIX-L1-META-1/baseline-columns-test.txt). This defect failed at that checkpoint; the independent recovery below resolves it.
 
-These are correction-author observations. L1-META retains NEEDS_FIX until independent `RETEST-L1-META-1` passes;
-no combined case or dependent feature is accepted by this entry.
+These are correction-author observations. Historical failures are resolved by `RETEST-L1-META-2` below;
+no combined case is accepted by this author entry.
 
 ## RETEST-L1-META-1 independent observations
 
-Gate: **NEEDS_FIX**. Tested list `7191d22217a7d087c197134bc09226a34d05fc60` / `0.8.1`, framework
+Historical gate: **NEEDS_FIX**, resolved by RETEST-L1-META-2 below. Tested list `7191d22217a7d087c197134bc09226a34d05fc60` / `0.8.1`, framework
 `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, selector runtime starting at
 `81cfa9f52c9287411c258d261e964aae4a87a5e7` / `0.1.2`; tracking-only delivery `0.1.3`.
 [Report](reports/RETEST-L1-META-1.md), [independent browser](evidence/RETEST-L1-META-1/independent-browser.txt),
@@ -123,12 +124,12 @@ Gate: **NEEDS_FIX**. Tested list `7191d22217a7d087c197134bc09226a34d05fc60` / `0
   [HTTP](evidence/RETEST-L1-META-1/empty-columns-http.txt). Pre-existence establishes attribution; the mandatory
   suite remains failed. No waiver or combined PASS is recorded.
 
-L1-META and this retest retain NEEDS_FIX. PLAN requires `FIX-L1-META-2` then distinct `RETEST-L1-META-2` and rewires
-L2-UI. All overall cases and later browser/search/session/gesture observations retain their prior verdicts.
+L1-META and this retest retain their historical NEEDS_FIX verdicts in these reports. `RETEST-L1-META-2` below
+resolves both failures and clears the L2-UI prerequisite. All combined and later observations retain their verdicts.
 
 ## FIX-L1-META-2 author observations
 
-Correction: **DONE**, independent `RETEST-L1-META-2` remains pending. List
+Correction: **DONE**, independently accepted by `RETEST-L1-META-2` below. List
 `033246001183120bbf3a3f0191d061fe960dcf56` / `0.8.2` distinguishes an explicit empty column-save value from absence.
 Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`; tracking changes `0.1.3` to `0.1.4`.
 [Report](reports/FIX-L1-META-2.md), [13 list assertions](evidence/FIX-L1-META-2/list-assertions.txt),
@@ -146,8 +147,35 @@ Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`; tracking
   guarded reads/constructions/getters and zero metadata business SQL.
   [Browser proof](evidence/FIX-L1-META-2/metadata-browser.txt).
 
-These are correction-author observations. Historical failed gates retain NEEDS_FIX until the distinct retest passes;
+These are correction-author observations. `RETEST-L1-META-2` below independently resolves the historical failures;
 combined LIFE-03/META/PORT cases, later selector persistence, search and gesture verdicts retain their prior stages.
+
+## RETEST-L1-META-2 independent observations
+
+Gate: **PASS**. List `033246001183120bbf3a3f0191d061fe960dcf56` / `0.8.2`, framework
+`3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, selector runtime from
+`78c64549156c55f78ca9ba0a7427c98e8b4dd1ea` / `0.1.4`; tracking-only patch `0.1.5`.
+[Report](reports/RETEST-L1-META-2.md), [commands](evidence/RETEST-L1-META-2/commands-core.json),
+[independent browser](evidence/RETEST-L1-META-2/browser.txt), [review](evidence/RETEST-L1-META-2/review.json).
+
+- **Full suites/public files / PASS**: Full list suite plus 13 detailed assertions; framework build/suite/types,
+  five META and nine projection tests; selector build/types/14 controller tests; unchanged application build.
+  Independent public List assertions verify zero feed/filter/sort/template calls for explicit saves and omitted
+  columns reaching rendering with the restored empty set. Public CJS/browser/types and offline files pass.
+- **Environment/pagination / PASS**: Fresh owned 13659 serves bare and offset-zero country routes with both
+  countries. Trusted input/form submission and anchor click navigate those real routes. One-row feed pages and empty
+  end page pass; invalid offset retains strict rejection. The documented status passes; only this server is stopped.
+- **Existing list save/session / PASS**: Empty/nonempty/invalid saves return 204 and zero body bytes, business
+  calls or SQL; saved columns survive full reload. An independent browser session retains its default columns.
+- **META-01–META-03 provider/HTTP / PASS**: Root/full paths, two routes, deep/cyclic/inverse/N-N/unknown facts,
+  presentation beyond initial List, equal 403 unknown/forbidden/ancestor, malformed/ambiguous refusals and no-store JSON.
+- **META-04 catalogue capability / PASS**: Request-specific catalogue and advice change and recover.
+  **PORT-03 navigation transport / PASS**: A started real fetch aborts; a later actual HTTP 200 is rejected after
+  delivery navigation commits. Metadata executes zero guarded reads, constructors/getters or business SQL.
+
+PLAN closes the historical L1-META and RETEST-L1-META-1 failures through this independent retest, preserving their
+failed reports and original validation records. L2-UI is ready; no dependent feature was started by this verifier.
+Combined cases, rendered selector, search, selector persistence and gestures remain at their named later gates.
 
 ## Package ownership key
 

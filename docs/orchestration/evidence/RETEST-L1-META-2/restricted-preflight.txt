@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-2/preflight.py", line 5, in <module>
+    with socket.socket() as s: s.bind(('127.0.0.1',13659))
+         ^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 233, in __init__
+    _socket.socket.__init__(self, family, type, proto, fileno)
+PermissionError: [Errno 1] Operation not permitted

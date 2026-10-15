@@ -1,0 +1,7 @@
+{
+  "port": 13659,
+  "available": true,
+  "no_prior_ownership": true,
+  "mysql": "mysqld is alive",
+  "environment": "/tmp/property-select-RETEST-L1-META-2"
+}

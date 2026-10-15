@@ -1,0 +1,21 @@
+[
+  {
+    "name": "owned-status",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-2",
+      "PS_APP_PORT": "13659",
+      "PS_METADATA_URL": "http://127.0.0.1:13659",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 1,
+    "output": "owned-status-readiness.txt",
+    "sha256": "4c5e96384850617c73330984a9eac81e5685d3322a563cd429b9ae1158675df3"
+  }
+]

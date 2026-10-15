@@ -1,0 +1,20 @@
+[
+  {
+    "name": "preflight",
+    "argv": [
+      "python3",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-2/preflight.py"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-2",
+      "PS_APP_PORT": "13659",
+      "PS_METADATA_URL": "http://127.0.0.1:13659",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 1,
+    "output": "restricted-preflight.txt",
+    "sha256": "99f2b15ac7186995649568ba34986878fe7482ec150262320efebcb6ca0587c9"
+  }
+]

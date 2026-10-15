@@ -1,0 +1,2722 @@
+{
+  "base": "http://127.0.0.1:13659",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "sandbox": true,
+  "checks": [
+    {
+      "case": "real navigation",
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200,
+      "text": "collapse\nAccueil\nPayss\n2 éléments\nNouveau\n\tnom\n\t\n\tRecipe France\n\tRecipe United Kingdom"
+    },
+    {
+      "case": "real navigation",
+      "url": "http://127.0.0.1:13659/country?offset=0",
+      "status": 200,
+      "text": "collapse\nAccueil\nPayss\n2 éléments\nNouveau\n\tnom\n\t\n\tRecipe France\n\tRecipe United Kingdom"
+    },
+    {
+      "case": "trusted keyboard/input and anchor navigation",
+      "url": "http://127.0.0.1:13659/country"
+    },
+    {
+      "case": "feed",
+      "offset": 0,
+      "status": 200,
+      "body": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n\t<link href=\"/@itrocks/action-bar/action.css\" rel=\"stylesheet\">\n\t<link href=\"/@itrocks/ux-core/css/app.css\" rel=\"stylesheet\">\n\t<link href=\"/@itrocks/ux-core/css/article.css\" rel=\"stylesheet\">\n\t<link href=\"/@itrocks/list/list.css\" rel=\"stylesheet\">\n\t<meta charset=\"utf-8\">\n\t<script src=\"/@itrocks/list/build.js\" type=\"module\"></script>\n\t<title>Payss</title>\n\t<link href=\"/@itrocks/delete/css/action.css\" rel=\"stylesheet\">\n\t<link href=\"/@itrocks/new/css/action.css\" rel=\"stylesheet\">\n</head>\n<body>\n<main>\n<!--BEGIN-->\n\n\t<!--#main-->\n\t<article data-action=\"list\" data-class=\"Country\" data-route=\"/country\">\n\t\t<header>\n\t\t\t<h2>Payss</h2>\n\t\t\t<section class=\"summary\">2 éléments</section>\n\t\t\t<ul class=\"general actions\">\n\t\t\t\t<li class=\"new\">\n\n\t<a href=\"/country/new\" target=\"#\">Nouveau</a>\n\n</li>\n\t\t\t</ul>\n\t\t</header>\n\t\t<form action=\"/country/list\" autocomplete=\"off\" method=\"post\" target=\"main\">\n\t\t\t<table class=\"objects\" data-feed-fields=\"search.*\" data-link=\"/country\">\n\t\t\t\t<thead>\n\t\t\t\t\t<tr class=\"properties\">\n\t\t\t\t\t\t<th class=\"select\" data-freeze><input name=\"select\" type=\"checkbox\" value=\"all\"></th>\n\t\t\t\t\t\t<th data-property=\"name\">nom</th>\n\t\t\t\t\t</tr>\n\t\t\t\t\t<tr class=\"search\">\n\t\t\t\t\t\t<th><input name=\"reset\" title=\"réinitialise les filtres de recherche\" type=\"submit\" value=\"réinitialiser\"></th>\n\t\t\t\t\t\t<th><input name=\"search.name\"></th>\n\t\t\t\t\t</tr>\n\t\t\t\t</thead>\n\t\t\t\t<tbody>\n\t\t\t\t\t\n\n\t\t<tr>\n\t\t\t<th class=\"select\"><input name=\"id\" type=\"checkbox\" value=\"1\"></th>\n\t\t\t<td>Recipe France</td>\n\t\t</tr>\n\n\t\n\t\t\t\t</tbody>\n\t\t\t</table>\n\t\t\t<footer>\n\t\t\t\t<ul class=\"selection actions\">\n\t\t\t\t\t<li class=\"delete\">\n\n\t<input formaction=\"/country/delete\" formtarget=\"#notification:prepend\" type=\"submit\" value=\"Supprimer\">\n\n</li>\n\t\t\t\t</ul>\n\t\t\t</footer>\n\t\t</form>\n\t</article>\n\t<!--#end-->\n\n<!--END-->\n</main>\n</body>\n</html>\n"
+    },
+    {
+      "case": "feed",
+      "offset": 1,
+      "status": 200,
+      "body": "<!DOCTYPE html>\n<html>\n<head><title>list feed</title></head>\n<body>\n\t<table class=\"objects\" data-feed-fields=\"search.*\">\n\t<!--BEGIN-->\n\n\t\t<tr>\n\t\t\t<th class=\"select\"><input name=\"id\" type=\"checkbox\" value=\"2\"></th>\n\t\t\t<td>Recipe United Kingdom</td>\n\t\t</tr>\n\n\t<!--END-->\n\t</table>\n</body>\n</html>\n"
+    },
+    {
+      "case": "feed",
+      "offset": 2,
+      "status": 200,
+      "body": "<!DOCTYPE html>\n<html>\n<head><title>list feed</title></head>\n<body>\n\t<table class=\"objects\" data-feed-fields=\"search.*\">\n\t<!--BEGIN-->\n\n\n\t<!--END-->\n\t</table>\n</body>\n</html>\n"
+    },
+    {
+      "case": "column save and full reload",
+      "columns": "name",
+      "status": 204,
+      "bodyBytes": 0,
+      "reads": 0,
+      "session": [
+        "name"
+      ],
+      "rendered": [
+        "name"
+      ],
+      "sql": ""
+    },
+    {
+      "case": "column save and full reload",
+      "columns": "unknown",
+      "status": 204,
+      "bodyBytes": 0,
+      "reads": 0,
+      "session": [
+        "name"
+      ],
+      "rendered": [
+        "name"
+      ],
+      "sql": ""
+    },
+    {
+      "case": "column save and full reload",
+      "columns": "",
+      "status": 204,
+      "bodyBytes": 0,
+      "reads": 0,
+      "session": [],
+      "rendered": [],
+      "sql": ""
+    },
+    {
+      "case": "independent session",
+      "defaultColumns": [
+        "name"
+      ]
+    },
+    {
+      "case": "invalid explicit offset",
+      "status": 500
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "metadata": [
+    {
+      "op": "context",
+      "path": "",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "invoice catalogue",
+        "path": "",
+        "properties": [
+          {
+            "kind": "terminal",
+            "label": "Invoice reference",
+            "name": "number",
+            "order": 0,
+            "path": "number"
+          },
+          {
+            "kind": "relation",
+            "label": "billing",
+            "name": "billing",
+            "order": 1,
+            "path": "billing",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "1294a7ea96eb986251d7fd59"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "delivery",
+            "name": "delivery",
+            "order": 2,
+            "path": "delivery",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "610dc7f9de818f7e334ddaed"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "lines",
+            "name": "lines",
+            "order": 3,
+            "path": "lines",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "one-to-many",
+              "id": "5c24ed86e564dbb876919731",
+              "inverse": "e037e2a2c6c58c1b348d06c6"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "tags",
+            "name": "tags",
+            "order": 4,
+            "path": "tags",
+            "target": "5827666456287651bc143c7e",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "a0237187955a250152829817",
+              "inverse": "7dd380fa4e2d29d5ce0d7878"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "ambiguous",
+            "name": "ambiguous",
+            "order": 5,
+            "path": "ambiguous",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "19bbb30f4d464a2b865406c7"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "inherited",
+            "name": "inherited",
+            "order": 7,
+            "path": "inherited"
+          },
+          {
+            "kind": "relation",
+            "label": "self",
+            "name": "self",
+            "order": 8,
+            "path": "self",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "40098e9afb47c4fc8eafa685"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "singular",
+            "name": "singular",
+            "order": 9,
+            "path": "singular",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "be36a42d9b3f60cdd59d7bbe"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "unknown",
+            "name": "unknown",
+            "order": 10,
+            "path": "unknown"
+          }
+        ],
+        "type": "09ff7b65d0afc8976f7ec061"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "invoice catalogue",
+        "path": "",
+        "properties": [
+          {
+            "kind": "terminal",
+            "label": "Invoice reference",
+            "name": "number",
+            "order": 0,
+            "path": "number"
+          },
+          {
+            "kind": "relation",
+            "label": "billing",
+            "name": "billing",
+            "order": 1,
+            "path": "billing",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "1294a7ea96eb986251d7fd59"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "delivery",
+            "name": "delivery",
+            "order": 2,
+            "path": "delivery",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "610dc7f9de818f7e334ddaed"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "lines",
+            "name": "lines",
+            "order": 3,
+            "path": "lines",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "one-to-many",
+              "id": "5c24ed86e564dbb876919731",
+              "inverse": "e037e2a2c6c58c1b348d06c6"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "tags",
+            "name": "tags",
+            "order": 4,
+            "path": "tags",
+            "target": "5827666456287651bc143c7e",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "a0237187955a250152829817",
+              "inverse": "7dd380fa4e2d29d5ce0d7878"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "ambiguous",
+            "name": "ambiguous",
+            "order": 5,
+            "path": "ambiguous",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "19bbb30f4d464a2b865406c7"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "inherited",
+            "name": "inherited",
+            "order": 7,
+            "path": "inherited"
+          },
+          {
+            "kind": "relation",
+            "label": "self",
+            "name": "self",
+            "order": 8,
+            "path": "self",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "40098e9afb47c4fc8eafa685"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "singular",
+            "name": "singular",
+            "order": 9,
+            "path": "singular",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "be36a42d9b3f60cdd59d7bbe"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "unknown",
+            "name": "unknown",
+            "order": 10,
+            "path": "unknown"
+          }
+        ],
+        "type": "09ff7b65d0afc8976f7ec061"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "billing",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=billing",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "billing",
+        "name": "billing",
+        "order": 1,
+        "path": "billing",
+        "target": "c033b6d5dac6b42dd3352b2e",
+        "relation": {
+          "cardinality": "unknown",
+          "id": "1294a7ea96eb986251d7fd59"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "delivery",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=delivery",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "delivery",
+        "name": "delivery",
+        "order": 2,
+        "path": "delivery",
+        "target": "c033b6d5dac6b42dd3352b2e",
+        "relation": {
+          "cardinality": "unknown",
+          "id": "610dc7f9de818f7e334ddaed"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "billing.city.name",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=billing.city.name",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "terminal",
+        "label": "name",
+        "name": "name",
+        "order": 0,
+        "path": "billing.city.name"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "delivery.city.name",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=delivery.city.name",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "terminal",
+        "label": "name",
+        "name": "name",
+        "order": 0,
+        "path": "delivery.city.name"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "lines",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=lines",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "lines",
+        "name": "lines",
+        "order": 3,
+        "path": "lines",
+        "target": "ca5f1247b2f89674001805c7",
+        "relation": {
+          "cardinality": "one-to-many",
+          "id": "5c24ed86e564dbb876919731",
+          "inverse": "e037e2a2c6c58c1b348d06c6"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "lines.invoice",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=lines.invoice",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "invoice",
+        "name": "invoice",
+        "order": 1,
+        "path": "lines.invoice",
+        "target": "687d3dad0130dda03e02077a",
+        "relation": {
+          "cardinality": "many-to-one",
+          "id": "e037e2a2c6c58c1b348d06c6",
+          "inverse": "5c24ed86e564dbb876919731"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "tags",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=tags",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "tags",
+        "name": "tags",
+        "order": 4,
+        "path": "tags",
+        "target": "5827666456287651bc143c7e",
+        "relation": {
+          "cardinality": "many-to-many",
+          "id": "a0237187955a250152829817",
+          "inverse": "7dd380fa4e2d29d5ce0d7878"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "tags.invoices",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=tags.invoices",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "invoices",
+        "name": "invoices",
+        "order": 0,
+        "path": "tags.invoices",
+        "target": "687d3dad0130dda03e02077a",
+        "relation": {
+          "cardinality": "many-to-many",
+          "id": "7dd380fa4e2d29d5ce0d7878",
+          "inverse": "a0237187955a250152829817"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "tags.invoices.tags.invoices.number",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=tags.invoices.tags.invoices.number",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "terminal",
+        "label": "Invoice reference",
+        "name": "number",
+        "order": 4,
+        "path": "tags.invoices.tags.invoices.number"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "self",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=self",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "relation",
+        "label": "self",
+        "name": "self",
+        "order": 8,
+        "path": "self",
+        "target": "687d3dad0130dda03e02077a",
+        "relation": {
+          "cardinality": "unknown",
+          "id": "40098e9afb47c4fc8eafa685"
+        }
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "unknown",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=unknown",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "kind": "terminal",
+        "label": "unknown",
+        "name": "unknown",
+        "order": 10,
+        "path": "unknown"
+      }
+    },
+    {
+      "op": "context",
+      "path": "billing",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=billing",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "address",
+        "path": "billing",
+        "properties": [
+          {
+            "kind": "relation",
+            "label": "city",
+            "name": "city",
+            "order": 0,
+            "path": "billing.city",
+            "target": "73480c253b2c6c8e319d707f",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "93bac18705aab59f72894066"
+            }
+          }
+        ],
+        "type": "c033b6d5dac6b42dd3352b2e"
+      }
+    },
+    {
+      "op": "context",
+      "path": "delivery",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=delivery",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "address",
+        "path": "delivery",
+        "properties": [
+          {
+            "kind": "relation",
+            "label": "city",
+            "name": "city",
+            "order": 0,
+            "path": "delivery.city",
+            "target": "73480c253b2c6c8e319d707f",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "93bac18705aab59f72894066"
+            }
+          }
+        ],
+        "type": "c033b6d5dac6b42dd3352b2e"
+      }
+    },
+    {
+      "op": "context",
+      "path": "lines",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=lines",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "line",
+        "path": "lines",
+        "properties": [
+          {
+            "kind": "terminal",
+            "label": "amount",
+            "name": "amount",
+            "order": 0,
+            "path": "lines.amount"
+          },
+          {
+            "kind": "relation",
+            "label": "invoice",
+            "name": "invoice",
+            "order": 1,
+            "path": "lines.invoice",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "many-to-one",
+              "id": "e037e2a2c6c58c1b348d06c6",
+              "inverse": "5c24ed86e564dbb876919731"
+            }
+          }
+        ],
+        "type": "ca5f1247b2f89674001805c7"
+      }
+    },
+    {
+      "op": "context",
+      "path": "tags",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=tags",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "tag",
+        "path": "tags",
+        "properties": [
+          {
+            "kind": "relation",
+            "label": "invoices",
+            "name": "invoices",
+            "order": 0,
+            "path": "tags.invoices",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "7dd380fa4e2d29d5ce0d7878",
+              "inverse": "a0237187955a250152829817"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "label",
+            "name": "label",
+            "order": 1,
+            "path": "tags.label"
+          }
+        ],
+        "type": "5827666456287651bc143c7e"
+      }
+    },
+    {
+      "op": "context",
+      "path": "tags.invoices",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=tags.invoices",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "invoice",
+        "path": "tags.invoices",
+        "properties": [
+          {
+            "kind": "relation",
+            "label": "ambiguous",
+            "name": "ambiguous",
+            "order": 0,
+            "path": "tags.invoices.ambiguous",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "19bbb30f4d464a2b865406c7"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "billing",
+            "name": "billing",
+            "order": 1,
+            "path": "tags.invoices.billing",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "1294a7ea96eb986251d7fd59"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "delivery",
+            "name": "delivery",
+            "order": 2,
+            "path": "tags.invoices.delivery",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "610dc7f9de818f7e334ddaed"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "lines",
+            "name": "lines",
+            "order": 3,
+            "path": "tags.invoices.lines",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "one-to-many",
+              "id": "5c24ed86e564dbb876919731",
+              "inverse": "e037e2a2c6c58c1b348d06c6"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "Invoice reference",
+            "name": "number",
+            "order": 4,
+            "path": "tags.invoices.number"
+          },
+          {
+            "kind": "relation",
+            "label": "self",
+            "name": "self",
+            "order": 5,
+            "path": "tags.invoices.self",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "40098e9afb47c4fc8eafa685"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "singular",
+            "name": "singular",
+            "order": 6,
+            "path": "tags.invoices.singular",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "be36a42d9b3f60cdd59d7bbe"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "tags",
+            "name": "tags",
+            "order": 7,
+            "path": "tags.invoices.tags",
+            "target": "5827666456287651bc143c7e",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "a0237187955a250152829817",
+              "inverse": "7dd380fa4e2d29d5ce0d7878"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "unknown",
+            "name": "unknown",
+            "order": 8,
+            "path": "tags.invoices.unknown"
+          }
+        ],
+        "type": "687d3dad0130dda03e02077a"
+      }
+    },
+    {
+      "op": "context",
+      "path": "",
+      "root": "unregistered",
+      "url": "/property-select/context/json?root=unregistered&path=",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "context",
+      "path": "",
+      "root": "__proto__",
+      "url": "/property-select/context/json?root=__proto__&path=",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "context",
+      "path": "hidden",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=hidden",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "hidden",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=hidden",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "billing.city.name",
+      "root": "invoice",
+      "catalogue": "restricted",
+      "url": "/property-select/resolve/json?root=invoice&path=billing.city.name&catalogue=restricted",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "context",
+      "path": "billing.city",
+      "root": "invoice",
+      "catalogue": "restricted",
+      "url": "/property-select/context/json?root=invoice&path=billing.city&catalogue=restricted",
+      "status": 403,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "forbidden"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "billing..city",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=billing..city",
+      "status": 400,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "invalid-path"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "ambiguous.name",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=ambiguous.name",
+      "status": 400,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "ambiguous-type"
+      }
+    },
+    {
+      "op": "resolve",
+      "path": "number.name",
+      "root": "invoice",
+      "url": "/property-select/resolve/json?root=invoice&path=number.name",
+      "status": 400,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "invalid-path"
+      }
+    },
+    {
+      "op": "context",
+      "path": "unknown",
+      "root": "invoice",
+      "url": "/property-select/context/json?root=invoice&path=unknown",
+      "status": 400,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "error": "unknown-target"
+      }
+    },
+    {
+      "op": "configuration",
+      "path": "",
+      "root": "invoice",
+      "url": "/property-select/configuration/json?root=invoice&path=",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "advice": [
+          "billing",
+          "tags"
+        ],
+        "version": "fixture-1"
+      }
+    },
+    {
+      "op": "configuration",
+      "path": "",
+      "root": "invoice",
+      "catalogue": "restricted",
+      "url": "/property-select/configuration/json?root=invoice&path=&catalogue=restricted",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "advice": [
+          "tags"
+        ],
+        "version": "fixture-1"
+      }
+    },
+    {
+      "op": "context",
+      "path": "",
+      "root": "invoice",
+      "catalogue": "restricted",
+      "url": "/property-select/context/json?root=invoice&path=&catalogue=restricted",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "label": "invoice catalogue",
+        "path": "",
+        "properties": [
+          {
+            "kind": "terminal",
+            "label": "Invoice reference",
+            "name": "number",
+            "order": 0,
+            "path": "number"
+          },
+          {
+            "kind": "relation",
+            "label": "delivery",
+            "name": "delivery",
+            "order": 2,
+            "path": "delivery",
+            "target": "c033b6d5dac6b42dd3352b2e",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "610dc7f9de818f7e334ddaed"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "lines",
+            "name": "lines",
+            "order": 3,
+            "path": "lines",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "one-to-many",
+              "id": "5c24ed86e564dbb876919731",
+              "inverse": "e037e2a2c6c58c1b348d06c6"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "tags",
+            "name": "tags",
+            "order": 4,
+            "path": "tags",
+            "target": "5827666456287651bc143c7e",
+            "relation": {
+              "cardinality": "many-to-many",
+              "id": "a0237187955a250152829817",
+              "inverse": "7dd380fa4e2d29d5ce0d7878"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "ambiguous",
+            "name": "ambiguous",
+            "order": 5,
+            "path": "ambiguous",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "19bbb30f4d464a2b865406c7"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "inherited",
+            "name": "inherited",
+            "order": 7,
+            "path": "inherited"
+          },
+          {
+            "kind": "relation",
+            "label": "self",
+            "name": "self",
+            "order": 8,
+            "path": "self",
+            "target": "687d3dad0130dda03e02077a",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "40098e9afb47c4fc8eafa685"
+            }
+          },
+          {
+            "kind": "relation",
+            "label": "singular",
+            "name": "singular",
+            "order": 9,
+            "path": "singular",
+            "target": "ca5f1247b2f89674001805c7",
+            "relation": {
+              "cardinality": "unknown",
+              "id": "be36a42d9b3f60cdd59d7bbe"
+            }
+          },
+          {
+            "kind": "terminal",
+            "label": "unknown",
+            "name": "unknown",
+            "order": 10,
+            "path": "unknown"
+          }
+        ],
+        "type": "09ff7b65d0afc8976f7ec061"
+      }
+    },
+    {
+      "op": "configuration",
+      "path": "",
+      "root": "invoice",
+      "url": "/property-select/configuration/json?root=invoice&path=",
+      "status": 200,
+      "cache": "no-store",
+      "type": "application/json; charset=utf-8",
+      "body": {
+        "advice": [
+          "billing",
+          "tags"
+        ],
+        "version": "fixture-1"
+      }
+    }
+  ],
+  "abortStarted": "http://127.0.0.1:13659/property-select/context/json?path=billing&root=invoice&delay=950",
+  "staleStarted": "http://127.0.0.1:13659/property-select/context/json?path=billing&root=invoice&delay=750",
+  "stale": {
+    "newer": true,
+    "older": false,
+    "path": "delivery",
+    "status": "ready"
+  },
+  "metadataGuard": {
+    "attempts": [],
+    "constructions": 0,
+    "reads": 0
+  },
+  "metadataSql": "",
+  "errors": [],
+  "failures": [
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?path=billing&root=invoice&delay=950",
+      "failure": "net::ERR_ABORTED"
+    }
+  ],
+  "responses": [
+    {
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country?offset=0",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country?offset=0",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2&search.name=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/app.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/css/notifications.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/app/menu/menu.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/app.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/action-bar/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/list.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/action.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/article.css",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/asset-loader.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-focus/auto-focus.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/auto-redirect/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/breadcrumb/breadcrumb.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/build/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/collapse/collapse.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/contained-auto-width/contained-auto-width.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/notifications/notifications.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/real-viewport-height/real-viewport-height.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/begin-end.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/build.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/secure-click.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/composite.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/default-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/xtarget.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/head.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/headers-size.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/history.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/hold-on.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/main-target.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/xtarget/modifier.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/framework/property-select-metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/feed.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-background.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/freeze/inherit-border.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/link.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-css.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/asset-loader/load-script.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/logo/itrocks.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/ux-core/css/action/back.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/new/css/new.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/list/filter-reset.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/delete/css/delete.svg",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/sorted-array/sorted-array.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/form-fetch/form-fetch.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/country/list?offset=2",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=billing",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=delivery",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=billing.city.name",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=delivery.city.name",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=lines",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=lines.invoice",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=tags",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=tags.invoices",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=tags.invoices.tags.invoices.number",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=self",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=unknown",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=billing",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=delivery",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=lines",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=tags",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=tags.invoices",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=unregistered&path=",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=__proto__&path=",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=hidden",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=hidden",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=billing.city.name&catalogue=restricted",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=billing.city&catalogue=restricted",
+      "status": 403
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=billing..city",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=ambiguous.name",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/resolve/json?root=invoice&path=number.name",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=unknown",
+      "status": 400
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/configuration/json?root=invoice&path=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/configuration/json?root=invoice&path=&catalogue=restricted",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?root=invoice&path=&catalogue=restricted",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/configuration/json?root=invoice&path=",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/property-select.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/path.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/controller.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/navigation.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/intentions.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/@itrocks/property-select/metadata.js",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?path=&root=invoice",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?path=delivery&root=invoice",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13659/property-select/context/json?path=billing&root=invoice&delay=750",
+      "status": 200
+    }
+  ],
+  "status": "PASS"
+}

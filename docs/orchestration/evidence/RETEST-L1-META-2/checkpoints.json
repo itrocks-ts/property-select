@@ -1,0 +1,26 @@
+{
+  "property-select": {
+    "head": "78c64549156c55f78ca9ba0a7427c98e8b4dd1ea",
+    "status": "M package.json",
+    "version": "0.1.5"
+  },
+  "list": {
+    "head": "033246001183120bbf3a3f0191d061fe960dcf56",
+    "status": "",
+    "version": "0.8.2"
+  },
+  "framework": {
+    "head": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+    "status": "",
+    "version": "0.9.3"
+  },
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt"
+  },
+  "runtime": {
+    "node": "v24.0.1",
+    "npm": "11.6.4"
+  }
+}

@@ -1,0 +1,20 @@
+mysqld is alive
+node:internal/deps/undici/undici:15363
+      Error.captureStackTrace(err);
+            ^
+
+TypeError: fetch failed
+    at node:internal/deps/undici/undici:15363:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:236:19 {
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:13659
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1636:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 13659
+  }
+}
+
+Node.js v24.0.1

@@ -1,0 +1,19 @@
+
+> @itrocks/list@0.8.2 test
+> npm run build:cjs && node --test "test/**/*.test.mjs"
+
+
+> @itrocks/list@0.8.2 build:cjs
+> tsc && node -e "const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.html'))fs.copyFileSync(path.join('src',file),path.join('cjs',file))"
+
+✔ test/columns.test.mjs (81.765638ms)
+✔ test/feed.test.mjs (56.841033ms)
+✔ test/list.test.mjs (79.049315ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.243434

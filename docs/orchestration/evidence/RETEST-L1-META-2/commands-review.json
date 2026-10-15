@@ -1,0 +1,38 @@
+[
+  {
+    "name": "review",
+    "argv": [
+      "python3",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-2/review.py"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-2",
+      "PS_APP_PORT": "13659",
+      "PS_METADATA_URL": "http://127.0.0.1:13659",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "review.txt",
+    "sha256": "48fbbdb3540e51cdaed0890fcacfccc152fd6b9e979f459cbd64604db9dbeb35"
+  },
+  {
+    "name": "public-cjs",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-2/public.cjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-2",
+      "PS_APP_PORT": "13659",
+      "PS_METADATA_URL": "http://127.0.0.1:13659",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "public-cjs.txt",
+    "sha256": "77336c3f51bfb2dc1a8279a960719091c49683eced498b5f69c8a9064153da18"
+  }
+]

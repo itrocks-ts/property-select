@@ -521,7 +521,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "implementation",
-      "status": "NEEDS_FIX",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Authorisation, composed reflection and per-request metadata must share the storage path facts.",
@@ -554,7 +554,10 @@
           "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
           "version": "0.8.0"
         }
-      }
+      },
+      "historical_status": "NEEDS_FIX",
+      "resolved_by": "RETEST-L1-META-2",
+      "resolution": "Fresh independent RETEST-L1-META-2 passes metadata, pagination, full list suite and explicit empty-column/session recovery; original failing validation/report retained."
     },
     {
       "id": "FIX-L1-META-1",
@@ -614,7 +617,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "verification",
-      "status": "NEEDS_FIX",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "A fresh verifier must replay the failed control route and metadata transport on the corrective commit.",
@@ -641,7 +644,10 @@
           "version": "0.1.3",
           "source": "Tracking-only retest delivery; runtime source unchanged"
         }
-      }
+      },
+      "historical_status": "NEEDS_FIX",
+      "resolved_by": "RETEST-L1-META-2",
+      "resolution": "Fresh independent RETEST-L1-META-2 passes metadata, pagination, full list suite and explicit empty-column/session recovery; original failing validation/report retained."
     },
     {
       "id": "FIX-L1-META-2",
@@ -702,7 +708,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Explicit request intent, real SQL-backed lists and metadata cancellation cross owners; retain the independent full-suite gate.",
@@ -712,7 +718,24 @@
         "DEP-10",
         "VAL-03",
         "VAL-07"
-      ]
+      ],
+      "validation": "PASS: full list build/suite and 13 assertions; framework build/full suite/types, five META and nine projection tests; selector build/types/14 contracts and application build. Fresh owned 13659 country/input/default/offset/feed and status; empty/nonempty 204 saves without business work/SQL, restored/isolate sessions; independent sandboxed Chromium metadata/403/catalogue/abort/stale, zero domain reads; public files/CJS/browser/types and owner preservation. Historical failures resolved; later combined cases remain NOT_RUN.",
+      "tested_checkpoints": {
+        "@itrocks/list": {
+          "sha": "033246001183120bbf3a3f0191d061fe960dcf56",
+          "version": "0.8.2"
+        },
+        "@itrocks/framework": {
+          "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+          "version": "0.9.3"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "78c64549156c55f78ca9ba0a7427c98e8b4dd1ea",
+          "base_version": "0.1.4",
+          "version": "0.1.5",
+          "source": "Tracking and independent assertions only; selector runtime unchanged"
+        }
+      }
     },
     {
       "id": "L2-UI",

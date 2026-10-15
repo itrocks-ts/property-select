@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "observations": [
+    {
+      "columns": "note",
+      "expected": [
+        "note"
+      ],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": "",
+      "expected": [],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": [],
+      "expected": [],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": [
+        ""
+      ],
+      "expected": [],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": "name",
+      "expected": [
+        "name"
+      ],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": "missing",
+      "expected": [
+        "name"
+      ],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    },
+    {
+      "columns": "",
+      "expected": [],
+      "counters": {
+        "feed": 0,
+        "filter": 0,
+        "sort": 0,
+        "template": 0
+      }
+    }
+  ],
+  "omittedAndUndefined": "render continuation, empty restored"
+}

@@ -1,0 +1,10 @@
+{
+  "argv": [
+    "git",
+    "diff",
+    "7191d22217a7d087c197134bc09226a34d05fc60..HEAD"
+  ],
+  "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+  "raw_sha256": "54d2fbd321d8ed58a1f3f3de81dc1081578e049dc05221946b3f9cadfeb2ec55",
+  "gzip": "list-correction.diff.gz"
+}

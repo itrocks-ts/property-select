@@ -1,0 +1,20 @@
+[
+  {
+    "name": "browser",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-2/browser.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-2",
+      "PS_APP_PORT": "13659",
+      "PS_METADATA_URL": "http://127.0.0.1:13659",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "exit_code": 0,
+    "output": "browser.txt",
+    "sha256": "b16588e7f10810b094b16b68d21a855f0058a154e8e15759ed88d0b4faf0fb34"
+  }
+]
