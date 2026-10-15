@@ -1,0 +1,15 @@
+S05 final review: PASS
+Product owners clean at committed checkpoints recorded in checkpoints.json.
+Full owner staged/unstaged/untracked review preceded explicit path staging and local commits.
+No generated runtime, declaration, map or fixture output is committed.
+Both offline package inventories contain public runtime/declarations and owning documentation.
+Framework inventory retains app.js/app.d.ts and its CJS entry; source/tests/maps excluded.
+Public CJS exports are exercised by runtime tests; dynamic ESM imports of graph and adapter also pass.
+Framework adapter import does not load the framework bootstrap entry.
+New runtime imports are public and declared; no dependency from sql-join towards framework/reflection/storage.
+Framework composes public reflection/path facts and existing MySQL naming through its schema mapping port.
+Optional new dependency hooks preserve complete legacy Dependencies assignments (type test).
+No root count, pagination, SQL execution or browser verdict is claimed by S05.
+All final command outputs have exit zero and matching SHA-256 values.
+Application HEAD, exact two AD statuses, index blobs and absent working files preserved.
+No install/update/download/push/publication/service action or application edit/commit.

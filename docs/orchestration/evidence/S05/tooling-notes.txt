@@ -1,0 +1,20 @@
+S05 development observations (superseded by the passing final commands.json run)
+
+1. The first restricted npm sql-join test reached tsx and failed to create
+   /tmp/tsx-1000/34.pipe: listen EPERM. The same npm suite passed through the
+   normal require_escalated tool mechanism; no permission setting was changed.
+2. A single fixture module with forward class declarations did not resolve
+   collection targets through the existing property-type parser. Fixtures were
+   split into one class per file with explicit imports, matching framework
+   conventions and previous reflection fixtures. No parser/product workaround.
+3. The initial fixture build used a shell *.ts glob, which also included emitted
+   *.d.ts on its second run and triggered TS5055. The committed test/tsconfig.json
+   excludes generated declarations and makes repeated builds deterministic.
+   The original output is retained in development-fixture-build.txt.
+4. Review found ordinary object prototype names could be looked up as metadata
+   keys. Own-property checks and constructor/__proto__ regression inputs were
+   added before delivery. Final graph and binding tests pass these cases.
+5. Full final checks ran after all source changes and before the owner commits;
+   those commits contain exactly the tested source. No application/service edit.
+6. Saved command outputs omit trailing empty lines for Git whitespace checks.
+   commands.json records both the saved SHA-256 and the original raw SHA-256.

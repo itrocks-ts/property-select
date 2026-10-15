@@ -297,7 +297,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Optional-ancestor joins, inverse/link mappings and plural predicates determine root identity semantics.",
@@ -305,7 +305,18 @@
       "requirements": [
         "DEP-03",
         "DEP-11"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/sql-join": {
+          "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+          "version": "0.2.0"
+        },
+        "@itrocks/framework": {
+          "sha": "87aea202752c9252ce5803558d9bb18e1fbdcedd",
+          "version": "0.7.0"
+        }
+      },
+      "validation": "PASS: both builds, existing suites, eight graph tests, eight public binding tests, public type fixtures, sql-build compatibility and package files"
     },
     {
       "id": "S06",

@@ -1,0 +1,38 @@
+
+> @itrocks/framework@0.7.0 test
+> npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs
+
+
+> @itrocks/framework@0.7.0 build
+> npm run build:back && npm run build:front
+
+
+> @itrocks/framework@0.7.0 build:back
+> tsc
+
+
+> @itrocks/framework@0.7.0 build:front
+> tsc -p src/front/tsconfig.json && node -e "const fs=require('node:fs');for(const file of fs.readdirSync('.').filter(file=>file.endsWith('.js')||file.endsWith('.d.ts')))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('../../',''))"
+
+
+> @itrocks/framework@0.7.0 build:test
+> tsc -p test/tsconfig.json
+
+✔ selects an exact or compatible supported browser language (1.091246ms)
+✔ does not load main before the framework composition phase (164.460936ms)
+✔ public binding uses metadata without constructors and propagates optional ancestry (186.671752ms)
+✔ logical inverses resolve the explicit back-reference to its physical foreign key (45.121487ms)
+✔ N-N mapping reuses existing storage naming in both directions (45.691416ms)
+✔ ambiguous and unresolved targets and invalid inverse identities reject (1.557408ms)
+✔ schema override handles self links without inventing ambiguous conventional columns (0.655756ms)
+✔ unambiguous component metadata resolves a legacy back-reference (0.60766ms)
+✔ explicit inverse identity may be qualified and conflicting cardinality fails (0.453186ms)
+✔ singular inverse mappings preserve target multiplicity and require known ownership (0.407807ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 419.195957

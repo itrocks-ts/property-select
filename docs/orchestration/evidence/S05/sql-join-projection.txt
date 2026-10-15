@@ -1,0 +1,16 @@
+✔ deterministic registration shares prefixes and keeps paths to the same type distinct (2.121047ms)
+✔ an optional ancestor forces every required descendant to remain left joined (0.77307ms)
+✔ plural inverse facts retain physical columns and accumulated multiplicity (0.275658ms)
+✔ nested plural branches and finite cycles retain full paths and inherited multiplicity (0.208562ms)
+✔ invalid paths and traversal through terminal properties fail before rendering (1.344782ms)
+✔ manual aliases reject duplicates and generated aliases skip reserved aliases (0.675808ms)
+✔ physical N-N edges expose both steps and support escaped names and alternate adapters (0.267929ms)
+✔ unknown multiplicity remains explicit and malformed physical mappings reject (0.262389ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.747632

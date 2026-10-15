@@ -1,0 +1,42 @@
+{
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "status": ""
+  },
+  "framework": {
+    "sha": "87aea202752c9252ce5803558d9bb18e1fbdcedd",
+    "version": "0.7.0",
+    "status": ""
+  },
+  "sql-build": {
+    "sha": "fa3dcb594fffc7481f514a5a528622ce7598c33a",
+    "version": "0.1.1",
+    "status": ""
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": ""
+  },
+  "reflect-path": {
+    "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "version": "0.3.1",
+    "status": ""
+  },
+  "property-select": {
+    "sha": "7ba2b76d0044071dca1eea594b6cfa3eb28bb912",
+    "version": "0.0.18",
+    "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/S05.md\n M package.json\n?? docs/orchestration/evidence/S05/\n?? docs/orchestration/reports/S05.md\n"
+  },
+  "showtime": {
+    "sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n"
+  }
+}

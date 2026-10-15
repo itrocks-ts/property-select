@@ -7,6 +7,7 @@ backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). VAL-02 plan coverage i
 [P04](reports/P04.md). [S02](reports/S02.md) passes the neutral storage contract checks; SQL execution and browser
 observations remain pending. [S03](reports/S03.md) passes reflection relation-fact checks;
 [S04](reports/S04.md) passes metadata path resolution.
+[S05](reports/S05.md) passes deterministic relationship graph and physical binding checks.
 Provider/search observations remain pending.
 Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
 No fixture smoke is product proof.
@@ -278,7 +279,7 @@ oracle.
 | ----------- | ---------------- | ----------------- | --------------------- |
 | DEP-01      | L1 L2-UI         | V2-UI             | T01, PORT-01, PORT-02 |
 | DEP-02      | P04 L7           | V7                | PORT-10               |
-| DEP-03      | S03 S04 L1-META  | V3                | META-01..04           |
+| DEP-03      | S03..S05 L1-META | V3                | META-01..04           |
 | DEP-04      | L1 L2-LIST L5    | V2 V5             | PORT-02, T15          |
 | DEP-05      | L4               | V4                | PORT-07..09           |
 | DEP-06      | L1-META L4       | V4                | PORT-05, T14          |
@@ -449,6 +450,13 @@ Proof: `evidence/<gate>/SQL-01.*` and `reports/<gate>.md`. Current verdict: `NOT
 S04 metadata prerequisite: `PASS` for direct/deep final owners, object targets, optional ancestry and canonical
 paths. [Tests](evidence/S04/reflect-path-test.txt), reflect-path
 `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`. Actual projection remains `NOT_RUN` until S07/VSQL.
+
+S05 graph prerequisites for SQL-01/03/04/05/06/09/10/11: `PASS` for deterministic full-path aliases, shared prefixes,
+optional ancestors, explicit inverse/link mappings, multiplicity and pre-SQL validation. Evidence:
+[graph tests](evidence/S05/sql-join-projection.txt), [binding tests](evidence/S05/framework-projection.txt),
+[report/checkpoints](reports/S05.md). Tested sql-join `55db310bdf3e92330ec216677c81577f6854e3f0` / `0.2.0`
+and framework `87aea202752c9252ce5803558d9bb18e1fbdcedd` / `0.7.0`.
+Executed projection/count/page/identity observations remain `NOT_RUN` until S07/VSQL.
 
 ### SQL-02: Object and representative values
 
@@ -769,6 +777,10 @@ an implemented feature or use a simulated replacement for a required browser/dat
   finite cycles, explicit ambiguity/unknown-target/path errors, public exports and type fixtures. These pass only
   path prerequisites for API-01/API-03/ARC-06/DEP-03/DEP-11 and META-01/META-03/SQL-01/SQL-09/PORT-10 portions.
   Provider/search/SQL/browser observations remain NOT_RUN at their named gates.
+- S05: Deterministic shared paths, distinct same-type aliases, optional ancestry, inverse and N-N physical steps,
+  direct/accumulated multiplicity, invalid/ambiguous path rejection, public bindings, existing-client compatibility
+  and package exports. These pass only graph prerequisites of DEP-03/DEP-11 and SQL-01/03/04/05/06/09/10/11.
+  Actual SQL root identity, correlated predicates, projection/count/pages and browser observations remain NOT_RUN.
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and

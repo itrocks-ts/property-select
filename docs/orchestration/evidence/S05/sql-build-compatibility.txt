@@ -1,0 +1,24 @@
+
+> @itrocks/sql-build@0.1.1 test
+> npm run test:types && tsx --test --test-isolation=none test/sql-build.test.ts
+
+
+> @itrocks/sql-build@0.1.1 test:types
+> tsc --ignoreConfig --module nodenext --noEmit --types node test/*.test.ts
+
+✔ builds a parameterized SELECT for root columns (2.365777ms)
+✔ shares joins between selected and filtered property paths (0.681126ms)
+✔ uses sql-join for one-to-many paths and accepts explicit output aliases (0.26832ms)
+✔ renders null filters without binding a value (0.320557ms)
+✔ builds COUNT queries with the same joins and values (0.338975ms)
+✔ selects the root wildcard and rejects relationship projections (0.474743ms)
+✔ allows adapters to number placeholders (0.360537ms)
+✔ allows adapters to resolve arbitrary definitions and identifier quoting (0.407918ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 133.842879
