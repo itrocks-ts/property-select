@@ -3,8 +3,8 @@
 ## Verdict and reading rules
 
 Planning coverage is complete; product acceptance is **NOT_RUN**. The only completed execution gate is VAL-01,
-backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). P03 documents VAL-02 coverage; independent approval awaits
-P04.
+backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). VAL-02 plan coverage is independently approved by
+[P04](reports/P04.md); all product observations remain pending.
 All planned product cases below start NOT_RUN, including SQL and browser cases. No fixture smoke is product proof.
 
 Requirement rows link an implementation, its independent gates and scenario/extra-case oracles. Owner repositories
@@ -37,10 +37,13 @@ product change invalidates its affected proof and requires independent retest un
 | L2-TABLE       | table                                         |
 | L2-LIST        | list, framework, property-select              |
 | L3             | property-select                               |
-| L4             | property-select, list, framework              |
+| L4             | selector/list/framework; HTTP/session below   |
 | L5             | property-select, table, list, home, framework |
 | L6             | property-select, table, home, list            |
 | L7             | property-select, list, table, framework       |
+
+L4 additionally owns `fastify` and `fastify-file-session-store` for session transactions, snapshots and generation
+checks; `selector` in its compact table row means `property-select`.
 
 All verification reports, plans and reusable recipe evidence belong to `property-select`. `VSQL` verifies the real
 `storage/reflect/reflect-path/sql-join/sql-build/mysql/framework` chain; integrated browser gates also verify
@@ -306,7 +309,7 @@ rendering prove it.
 | Requirement | Implement            | Verify           | Current |
 | ----------- | -------------------- | ---------------- | ------- |
 | VAL-01      | P02                  | P02 retest       | PASS    |
-| VAL-02      | P03                  | P04              | PENDING |
+| VAL-02      | P03                  | P04              | PASS    |
 | VAL-03      | L2-UI L2-LIST        | V2-UI VSQL V2 V7 | NOT_RUN |
 | VAL-04      | L2..L6               | V2..V6 V7        | NOT_RUN |
 | VAL-05      | L6                   | V6 V7            | NOT_RUN |
@@ -332,7 +335,7 @@ criteria.
 URLs.
 
 VAL-01 evidence: [independent environment report](VERIFY-ENVIRONMENT.md) and its linked assertion records.
-PLAN-01 evidence: [planning report](reports/P03.md); independent P04 report is still pending.
+PLAN-01 evidence: [planning report](reports/P03.md); independent approval: [P04 report](reports/P04.md).
 EVIDENCE-01/FIX-01/DELIVERY-01 are process cases specified in [EXECUTION.md](EXECUTION.md); their owners and reports
 are the applicable gate, correction/retest and final delivery task. FIX-01 can pass with no product defect found only
 after V7 audits the correction protocol and confirms no unresolved failure; it is not a fabricated corrective run.
@@ -467,7 +470,7 @@ Proof: `evidence/<gate>/SQL-06.*` and `reports/<gate>.md`. Current verdict: `NOT
 ### SQL-07: Final-property conversion
 
 Expected: Exercise decimal, date, boolean, nullable, empty string and custom nested SQL/READ/SAVE converters, async
-conversion, IGNORE and conversion rejection.
+conversion, scalar IGNORE versus loaded undefined, object-field IGNORE and conversion rejection.
 
 Proof: `evidence/<gate>/SQL-07.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 ### SQL-08: Stable sorting, count and pages
@@ -544,7 +547,8 @@ Proof: `evidence/<gate>/META-04.*` and `reports/<gate>.md`. Current verdict: `NO
 
 ## PORT additional cases
 
-Implementation: `L1 L1-META L2-UI L4 L5 L7`. Independent gates: `V2-UI V3 V4 V5 V7`. Methods: U,C,I,B.
+Implementation: `L1 L1-META L2-UI L2-TABLE L3 L4 L5 L7`.
+Independent gates: `V2-UI V2-TABLE V3 V4 V5 V7`. Methods: U,C,I,B.
 
 ### PORT-01: Standalone contract and presentation
 
@@ -590,8 +594,11 @@ real sessions remain distinct; table namespace is separate.
 Proof: `evidence/<gate>/PORT-07.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 ### PORT-08: State sequencing and expiry
 
-Expected: Race writes with revisions and session generation, expire while write is pending, remount and reload;
-stale data never overwrites or resurrects expired state.
+Expected: Race same-key and distinct-key writes with list configuration saves and response autosave. Revoke/expire
+while writes are pending; remount/reload and inspect durable state after a server restart with the same fixture
+secret. Also remove/recreate a selector key while an old write is pending; its tombstone revision rejects the old write.
+No lost namespace, skipped nested-state save, stale overwrite or expired-state resurrection. Use two store
+instances with identical synthetic session ids to prove cache isolation; retain the two-user browser check.
 
 Proof: `evidence/<gate>/PORT-08.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 ### PORT-09: Storage and preview failures
@@ -671,6 +678,39 @@ selection and keyboard after repeated reset.
 
 Proof: `evidence/<gate>/LIFE-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 
+## Stage obligations
+
+A gate passes only its observations listed here and in its itinerary. Split case evidence into stage-specific
+observations; the overall case remains NOT_RUN until its final required stage passes. This is not permission to skip
+an implemented feature or use a simulated replacement for a required browser/database check.
+
+- S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
+  representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
+  SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and
+  browser linkage at V2. Keep VSQL PASS separate from the unfinished combined SQL-14 case.
+- L1-META: META-01–META-03 provider contract/HTTP observations and the ability to change allowed catalogue paths.
+  META-04 persisted restoration belongs to L4/V4. VSQL covers only reflection portions of META-01/META-03;
+  V3 covers provider permission/presentation and search cycles; V4 completes META-04.
+- V2-UI: T01–T03/T05–T08/T25 click, navigation and keyboard portions. T07 here proves object intention only.
+  PORT-02 checks click acknowledgements/disposal; its real drag lifecycle is V5 and recents are V4/V5.
+- L2-HOME/V2-HOME: PANE-01–PANE-04 and PANE-06 generic shell, with public suspend/restore fixture controls.
+  PANE-05 is L2-LIST/V2; product drag restoration is V6. No list header or product drag is required at this stage.
+- L2-TABLE/V2-TABLE: PORT-04 click addition, asynchronous data and generic teardown; external transport commit/cancel
+  completes at L5/V5. Existing header-origin reorder/removal/freeze remains mandatory immediately.
+- V2: SQL-14 browser linkage, object/deep-column data, plural refusal, visible-row reload and PANE-05. L2 navigation
+  cases are complete except observations explicitly assigned to later touch/search/drag features.
+- V3: T09–T13 search/navigation and PORT-03/06, plus META-01–META-03. T11 intermediate-segment drag is V5.
+- L4/V4: T04/T14–T17, PORT-05/07/08, META-04 and PORT-09 storage failure. T15 proves real click add/duplicate and
+  generic rejected/cancelled acknowledgements now; actual column movement/drag abandonment completes at V5.
+  PORT-09 preview failure and response timing complete at V5/V6.
+- L5/V5: T11 drag, T15 actual moved/cancelled outcomes, T19–T21 desktop/contract cancellation, PORT-02/04 transport,
+  PORT-09 preview errors and SQL-12 preview query reuse. Touch pointercancel/gesture arbitration completes at V6.
+- L6/V6: T21–T24 trusted touch, mobile pane restoration and all remaining touch/hybrid observations. V7 replays all
+  completed observations and requires every combined case PASS; D8 independently checks live delivery.
+
+The grouped extra-case implementation/gate headings are unions. In particular PORT-04 is implemented by
+L2-TABLE/L5 and verified by V2-TABLE/V5/V7; PORT-06 is implemented by L3 and verified by V3/V7.
+
 ## Browser itinerary and fixture readiness
 
 All browser cards supply URLs, commands and dimensions. The scenario definitions above specify input and observations;
@@ -711,7 +751,8 @@ and record PID/stop commands.
 ## Remaining limits
 
 No product tests, browser interaction, database projection or final delivery has been executed by P03. Its checks only
-validate plan structure and coverage. P04 must independently judge contract feasibility and semantics before execution.
+validate plan structure and coverage. P04 independently approves the repaired contracts and stage obligations;
+implementation starts at S02.
 Installed IAB supplies real navigation/viewport checks; verified Playwright supplies touch input. Native phone edge
 gestures, physical system interruptions and keyboard behaviour remain conditional on available hardware. All browser
 and emulated-touch cases are mandatory. The standalone support currently contains a placeholder; L2-UI replaces it with

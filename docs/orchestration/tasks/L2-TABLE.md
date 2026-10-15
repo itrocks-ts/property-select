@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `TAB-02`, `TAB-04`, `TAB-05`, `TAB-06`, `DEP-07`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 
@@ -56,7 +58,7 @@ git ls-files --stage audit-itrocks-dependencies.json audit-itrocks-dependencies.
 git -C node_modules/@itrocks/table status --short
 git -C node_modules/@itrocks/table diff HEAD -- package.json
 npm --prefix node_modules/@itrocks/table run build
-node --test node_modules/@itrocks/table/test/property-select.test.mjs
+node --test node_modules/@itrocks/table/test/*.test.mjs
 git -C node_modules/@itrocks/property-select diff --check
 ```
 

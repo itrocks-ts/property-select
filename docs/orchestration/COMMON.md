@@ -57,9 +57,10 @@ contain its own commit SHA; return that SHA after committing.
 
 Framework version changes follow handbook rules immediately on first edit: patch for documentation/fixes, minor for
 compatible features, major for breaking API changes, highest required level against HEAD once per pending delivery.
-Synchronise manifests/locks/internal dependencies when necessary; do not renumber untouched packages. Planning
-starts from `property-select` HEAD `77ebcdfd963f6143c4bfa95452bf1b3d6a445af6`, version `0.0.12`.
-Task `P03` increments documentation to `0.0.13`; unchanged owners retain their versions.
+Synchronise manifests/locks/internal dependencies when necessary; do not renumber untouched packages. The reviewed
+planning delivery is `property-select` HEAD `7c0fdadf06f1ef345efdd041cc8c2f9a0d1555a5`, version
+`0.0.13`. Task `P04` increments documentation to `0.0.14`; use its returned commit as the next checkpoint.
+Unchanged owners retain their versions.
 
 ## Local execution and validation
 

@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `DEP-07`, `TAB-04`, `TAB-05`, `TAB-06`, `VAL-04`, `VAL-06`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 

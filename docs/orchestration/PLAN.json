@@ -9,7 +9,7 @@
     "availability": "Tool schema advertises gpt-6.1-sol and gpt-6-astra with high; parent must record actual dispatch metadata",
     "effective_attestation": "No independent model/effort attestation exposed to executor; never infer from self-report"
   },
-  "review_status": "PENDING_P04",
+  "review_status": "APPROVED_P04",
   "product_verdict": "NOT_RUN",
   "order": [
     "P01",
@@ -165,7 +165,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "review",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Review object projection, representation, joins, count/pages and gesture/state ownership as one contract.",
@@ -752,18 +752,22 @@
       "packages": [
         "@itrocks/property-select",
         "@itrocks/list",
-        "@itrocks/framework"
+        "@itrocks/framework",
+        "@itrocks/fastify",
+        "@itrocks/fastify-file-session-store"
       ],
       "repositories": [
         "node_modules/@itrocks/property-select",
         "node_modules/@itrocks/list",
-        "node_modules/@itrocks/framework"
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/fastify",
+        "node_modules/@itrocks/fastify-file-session-store"
       ],
       "category": "implementation",
       "status": "PENDING",
-      "model": "gpt-6.1-sol",
+      "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
-      "model_justification": "Confirmation ordering, concurrent state writes, session generation and invalid path restoration cross server/browser state.",
+      "model_justification": "Whole-session persistence, autosave, revocation and selector revisions require coordinated HTTP/store/browser lifecycles.",
       "report": "reports/L4.md",
       "requirements": [
         "NAV-06",
@@ -798,9 +802,9 @@
       ],
       "category": "browser",
       "status": "PENDING",
-      "model": "gpt-6.1-sol",
+      "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
-      "model_justification": "Reload/expiry and concurrent responses require actual sessions and independent browser contexts.",
+      "model_justification": "Independent real-request and durable-state checks must challenge session-wide races and revocation.",
       "report": "reports/V4.md",
       "requirements": [
         "T04",
@@ -1045,5 +1049,7 @@
         "VAL-06"
       ]
     }
-  ]
+  ],
+  "review_checkpoint": "7c0fdadf06f1ef345efdd041cc8c2f9a0d1555a5",
+  "review_report": "reports/P04.md"
 }

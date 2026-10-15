@@ -18,6 +18,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 Requirement focus: `ARC-03`, `UI-01`, `UI-02`, `UI-03`, `ACT-06`, `TAB-01`, `TAB-02`, `TAB-04`, `TAB-05`, `TAB-06`,
 `TAB-12`, `DEP-07`, `DEP-08`, `DEP-09`, `DEP-10`, `DEP-11`, `VAL-03`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 

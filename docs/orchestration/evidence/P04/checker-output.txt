@@ -1,0 +1,4 @@
+PASS: 33 serial tasks; DAG, immediate browser gates, DEP-11 order, profiles and owner paths
+PASS: 74 V1 + 27 scenarios + 11 DEP + 8 VAL identifiers mapped to matrix and tasks
+PASS: card sections, references and Markdown widths; product verdict remains NOT_RUN
+PASS: showtime HEAD/index/AD absences intact; 12 other owners clean; installed compilers/runners present

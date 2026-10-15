@@ -3,8 +3,8 @@
 ## Authoritative plan and checkpoints
 
 [PLAN.json](PLAN.json) lists all 33 tasks in the required serial order. Tasks `P01`, `P02`, `S01` and `P03` are recorded
-preparation work; do not replay them. `P04` is the next task. Planning completion is not independent plan approval.
-After a successful independent `P04`, continue automatically with `S02`; no additional user decision is required.
+preparation work; do not replay them. Independent `P04` approves the repaired plan in
+[its report](reports/P04.md). Continue automatically with `S02`; no additional user decision is required.
 
 The mandatory chain is `S01` PHP audit → `S02` storage contract → `S03/S04` reflection → `S05/S06` joins/builder →
 `S07` MySQL and bindings → independent `VSQL` on real MySQL → integration `L2-LIST` → independent browser `V2`.
@@ -34,10 +34,11 @@ is not independently exposed to this planning agent. This distinction must remai
 A tool advertised in a schema is still checked at actual dispatch; an unavailable required profile follows prompt
 section 3 rather than being silently replaced.
 
-Astra/high is selected for `S01`, `P03/P04`, `S05/S06/S07`, `VSQL`, `L2-LIST/V2`, `L5/V5`, `L6/V6` and `V7`.
+Astra/high is selected for `S01`, `P03/P04`, `S05/S06/S07`, `VSQL`, `L2-LIST/V2`, `L4/V4`, `L5/V5`, `L6/V6` and `V7`.
 Their concrete risks are documented in each card. Sol/high handles stabilised but nontrivial reflection, selector state,
-search, table and cross-module checks. Sol/medium handles routine browser clicks, settled pane/UI implementation and
-handover. No mechanical task justifies Luna at this point. No precise unresolved problem warrants xhigh initially;
+search, table and cross-module checks outside the session transaction work. Sol/medium handles routine browser clicks,
+settled pane/UI implementation and handover. No mechanical task justifies Luna at this point. No precise unresolved
+problem warrants xhigh initially;
 a diagnostic task can request it with the required explicit reason. Do not trade away required checks for token savings.
 
 Historical environment task `P02` records its initial medium profile and successful corrections/retests from the
@@ -62,7 +63,9 @@ actual framework conventions and adjust only isolated fixture schema where neces
 special-case recipe names. Extend fixtures with declared inverse/N-N/unknown relations, representation dependencies,
 invalidated paths, alias collisions and 120 roots with tied sort values. Keep initial four-root cases identifiable.
 
-`L2-LIST` loads those classes through the existing after-composition bootstrap hook and real route/action registration.
+`L2-LIST` loads those classes through the public `beforeFrameworkRun` hook in `framework/src/framework.ts`
+(after composition/binding, before server run), registered synchronously by the isolated launcher, and real
+route/action registration.
 Deliver `http://127.0.0.1:13319/property-select-invoice`; preserve `/country` as a control route. Record any routing
 constraint and update the card/matrix with the tested route before `V2`. The standalone server serves its own static
 provider, consumer, public selector module and styles via an explicit asset allowlist. It must not load framework or
@@ -76,6 +79,8 @@ Independent verification may create its own isolated ports/datadir through the a
 
 ## Browser gates and evidence
 
+The matrix's [stage obligations](VALIDATION.md#stage-obligations) specify exactly which observations a gate can
+complete before later features exist. Combined cases stay NOT_RUN until their final required stage.
 Each visible delivery is followed immediately by its distinct gate: `L2-UI/V2-UI`, `L2-HOME/V2-HOME`,
 `L2-TABLE/V2-TABLE`, `L2-LIST/V2`, `L3/V3`, `L4/V4`, `L5/V5`, `L6/V6`.
 Both standalone and real integration are required where their behaviour exists. Real SQL evidence and browser rendering

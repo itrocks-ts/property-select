@@ -18,6 +18,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 Requirement focus: `UI-04`, `ACT-01`, `ACT-02`, `ACT-03`, `ACT-04`, `ACT-05`, `ACT-06`, `ACT-08`, `NAV-09`,
 `DEP-01`, `VAL-03`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 

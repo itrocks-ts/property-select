@@ -123,11 +123,11 @@ type SelectorState = {
   recent: readonly string[]
   scroll: Readonly<Record<string, { left: number; top: number }>>
 }
-type StateRecord = { revision: number; state: SelectorState }
+type StateRecord = { revision: number; state?: SelectorState }
 interface StateStore {
-  read(key: string, signal?: AbortSignal): Promise<StateRecord | undefined>
+  read(key: string, signal?: AbortSignal): Promise<StateRecord>
   write(key: string, state: SelectorState, expectedRevision: number): Promise<StateRecord>
-  remove(key: string, expectedRevision: number): Promise<void>
+  remove(key: string, expectedRevision: number): Promise<StateRecord>
 }
 ```
 
@@ -138,12 +138,24 @@ Unknown state versions reset cleanly; invalid branches truncate at the longest v
 Relaunch the persisted query from that valid context. Do not persist results, transports, preview columns or requests.
 
 Writes are serialised/coalesced per instance; revisions prevent older HTTP responses/writes replacing newer state.
-A missing key starts at revision zero. The host implements compare-and-set in its request/session access, including
-concurrent requests. The framework session adapter serialises updates per session/key, reloads the current session
-under that lock and awaits its save before acknowledgement; retain no user state in a shared singleton. Verify the
-installed session adapter exposes these operations through its request bridge, or extend the owning adapter through
-an explicit correction card. Revision conflicts trigger reread and reapply the latest local snapshot, never silent
-overwrite.
+A never-written key reads `{ revision: 0 }`. Removing a key increments its revision and retains a tombstone without
+`state` until that session generation ends; read/remove return that revision. This prevents an old write from
+recreating removed state and lets a later mount create fresh state using the tombstone revision.
+The host implements compare-and-set for concurrent requests. The framework adapter uses a session-wide transaction
+supplied by the HTTP/session owners. A lock per selector key is insufficient: the installed store writes the whole
+session, including `session.list` and other selector keys.
+L4 must coordinate every write of that session, including response autosave and revoke/expiry, before acknowledging
+state. Reload the authoritative snapshot under the lock; preserve unrelated namespaces and await durable save.
+The transaction must reject stale generations, including requests already loaded when revoke/expiry occurs.
+The existing Fastify request proxy exposes bound `reload`, `save` and `destroy`, but those methods alone do not
+provide this transaction. Implement the narrow session lifecycle support in `fastify` and
+`fastify-file-session-store`, composed by framework; list and selector remain transport-neutral.
+Keep user state in the request/store. A bounded per-session lock registry holds coordination only and is released on
+completion. The configured single-process file store is the required deployment here; do not claim distributed locking.
+Store snapshots must be copied/serialised at the transaction boundary, with cache identity scoped to the store,
+so live nested object mutation cannot skip persistence. Writes and revocation share the same generation check;
+response autosave cannot recreate an expired/revoked record. Do not treat a missing reload as a valid old generation.
+Revision conflicts trigger reread and reapply the latest local snapshot, never silent overwrite.
 A session generation invalidates in-flight writes after expiry/revocation. Errors preserve current local state and show
 recoverable persistence failure. Without a store the explicit standalone mode retains only the mounted instance state.
 

@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `DEP-08`, `UI-01`, `UI-02`, `QUA-02`, `VAL-04`, `VAL-06`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 
@@ -36,7 +38,8 @@ geometry.
 
 ## Acceptance and tests
 
-PANE-01–PANE-06 PASS; command location/inversion, title, focus and responsive shell match DEP-08. Test fixture uses
+PANE-01–PANE-04 and PANE-06 shell observations PASS; command location/inversion, title, focus and responsive shell
+match DEP-08. Test fixture uses
 public API, while user actions use browser input.
 
 Create and run environment/checks/V2-HOME.mjs; open framework recipe URL.
@@ -92,7 +95,8 @@ errors, metadata changes or state expiry; they must not bypass the interaction b
 
 Open home with no content, register arbitrary test content through the fixture page, then exercise
 open/close/removal and competing owner.
-PANE-01–PANE-06 PASS; command location/inversion, title, focus and responsive shell match DEP-08. Test fixture uses
+PANE-01–PANE-04 and PANE-06 shell observations PASS; command location/inversion, title, focus and responsive shell
+match DEP-08. Test fixture uses
 public API, while user actions use browser input.
 
 Capture before/after screenshots plus assertions for actions, actual DOM order/column count, restored state and

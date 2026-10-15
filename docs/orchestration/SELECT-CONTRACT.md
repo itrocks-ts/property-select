@@ -2,7 +2,7 @@
 
 ## Status and ownership
 
-This is the phase 1 implementation contract, approved for independent plan review, not an available API.
+This is the phase 1 implementation contract, approved by independent plan review P04, not an available API.
 Read [the requirement](../select.md), [PHP comparison](PHP-COMPARISON.md) and [shared rules](COMMON.md).
 Tasks `S02`–`S07` implement it; `VSQL` must pass on the isolated database before `L2-LIST`.
 Astra/high is selected for SQL planning, reconstruction and independent validation because their invariants cross
@@ -34,6 +34,7 @@ type ProjectedObject<T extends object = object> = Partial<T> & { id: Identifier 
 type ProjectionCell =
   | { kind: 'value'; value: unknown; loadedFields?: readonly string[] }
   | { kind: 'absent'; at: string }
+  | { kind: 'unloaded'; reason: 'ignored' }
 type ProjectionRow = {
   rootId: Identifier
   cells: readonly ProjectionCell[]
@@ -53,6 +54,9 @@ select<T extends object>(
 `cells[i]` belongs to `columns[i]`; column paths are normalised unique paths in request order.
 The root identity is separate from cell values. `columns` is returned even when `rows` is empty.
 A scalar cell uses `kind: 'value'`, including a terminal SQL `NULL` represented by `value: null`.
+A scalar transformer returning `IGNORE` produces `kind: 'unloaded', reason: 'ignored'`; legitimate `undefined`
+remains a loaded `value`. The list renders an explicit unavailable value for an unloaded scalar, without a lazy read.
+An ignored required representative field is rejected as described below.
 An absent object or absent intermediate relation uses `kind: 'absent'` with its first absent relationship path.
 Thus a present address with null city name differs from an absent address. Extra hidden identity columns distinguish
 these cases. Invalid/forbidden paths and conversion failures reject; they never produce empty successful cells.
@@ -119,8 +123,8 @@ This limit concerns undeclared custom representations, not ordinary object-value
 Build the local owner record expected by transformers, then assign its converted property to the projection tree.
 Do not pass `customer.address.city.name` as a property name on Invoice to a transformer. Honour async conversion,
 `IGNORE`, null/empty distinctions and legitimate `undefined`; conversion errors reject with path context.
-`IGNORE` leaves a field unloaded and omits it from that object cell's `loadedFields`, rather than inventing a default
-value. It does not change the shared column descriptor or another row's loaded fields.
+For object fields, `IGNORE` leaves a field unloaded and omits it from that object cell's `loadedFields`, rather than
+inventing a default value. It does not change the shared column descriptor or another row's loaded fields.
 A required representative field returning `IGNORE` is an explicit unsupported representation at the list boundary.
 
 Use one object per `(target type, id)` within a result when the same identifiable object is selected through multiple
@@ -204,9 +208,12 @@ semantics; the neutral storage selection validates and rejects that shape for V1
 `VSQL` creates its own assertions against public `dataSource().select()` and the configured `Mysql`/framework bindings.
 It compares independent expected roots/values against executed SQL, not only snapshots or the author's tests.
 Use the synthetic invoice graph and query journal from [ENVIRONMENT.md](ENVIRONMENT.md).
-Required cases `SQL-01`–`SQL-14` are in [VALIDATION.md](VALIDATION.md), including absent links, object plus descendant,
-criteria not displayed, conversions, alias collisions, plural rejection, count/pages, empty results and query counts.
+Required database observations of `SQL-01`–`SQL-14` are in [VALIDATION.md](VALIDATION.md), including absent links,
+object plus descendant, criteria not displayed, conversions, alias collisions, plural rejection, count/pages, empty
+results and query counts.
 Use at least 120 roots for a 50-row first page and feed continuation, with duplicate sort values and mixed nulls.
+VSQL proves storage and independent representative conversion; SQL-14 browser linkage and list-owned behaviours
+are completed by V2 and later gates according to the matrix's stage obligations. VSQL never waits for list UI.
 One select call uses one bounded projection query; count is a separate query. Rendering adds zero queries. Adding a
 visible column projects only loaded row ids (the new neutral `Identifiers` option), respecting mandatory scope;
 never read all matching roots to align rows in memory. Repositioning an unchanged preview reuses the pending read.

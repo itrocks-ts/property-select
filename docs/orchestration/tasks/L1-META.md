@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `ARC-02`, `ARC-06`, `API-03`, `DEP-03`, `DEP-06`, `DEP-09`, `DEP-10`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 
@@ -36,7 +38,8 @@ geometry.
 
 ## Acceptance and tests
 
-META-01–META-04 pass with no business reads; forbidden full-path resolution is rejected, requests can be aborted and
+META-01–META-03 provider checks and META-04 catalogue-change support pass with no business reads; forbidden
+full-path resolution is rejected, requests can be aborted and
 stale responses discarded. Catalogue differs from initial List columns.
 
 Existing framework tests; add test/property-select.test.mjs; build framework and verify routes/serialisation through

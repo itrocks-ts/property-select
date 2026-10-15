@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `DEP-11`, `VAL-03`, `VAL-06`, `VAL-07`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 
@@ -37,7 +39,8 @@ geometry.
 
 ## Acceptance and tests
 
-All SQL cases PASS with evidence; filters on hidden paths, typed objects, mixed object/descendant, null/absent,
+All assigned database observations PASS with evidence; filters on hidden paths, typed objects, mixed
+object/descendant, null/absent,
 plural limits, stable pages, total and query counts are observed. No list integration may start on failure.
 
 Create and execute environment/checks/VSQL.mjs; observe queries via control.mjs queries; execute search/count

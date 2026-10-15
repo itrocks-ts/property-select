@@ -17,6 +17,8 @@ Read the application/owner instructions and applicable handbook routes before ed
 
 Requirement focus: `UI-01`, `UI-02`, `UI-03`, `QUA-02`, `DEP-08`.
 Read the linked source requirements in the matrix; coverage is not limited to the shorthand identifiers here.
+Case ranges mean the observations assigned to this stage in
+[stage obligations](../VALIDATION.md#stage-obligations); later observations remain NOT_RUN until their named gate.
 
 Observed entry points (owner-relative unless a URL or application path is given):
 
@@ -36,7 +38,8 @@ geometry.
 
 ## Acceptance and tests
 
-PANE-01–PANE-06 pass in contracts; empty pane has no command, new content starts folded, disposal invalidates
+PANE-01–PANE-04 and PANE-06 shell observations pass in contracts; empty pane has no command, new content starts
+folded, disposal invalidates
 restoration. Desktop main remains interactive.
 
 Build home; add test/property-select.test.mjs; generic content in isolated framework home via tracking fixture hook
