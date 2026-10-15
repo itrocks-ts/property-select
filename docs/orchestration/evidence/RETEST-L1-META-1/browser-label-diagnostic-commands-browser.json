@@ -1,0 +1,20 @@
+[
+  {
+    "name": "independent-browser",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "browser-label-diagnostic-independent-browser.txt",
+    "sha256": "9bd1f875d09ec42fcb747e25b91fd35f98d6df57751b6d98a83c12a71436c188"
+  }
+]

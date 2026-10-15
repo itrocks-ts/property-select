@@ -1,0 +1,20 @@
+[
+  {
+    "name": "empty-columns-http",
+    "argv": [
+      "node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/empty-columns.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 1,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "empty-columns-http.txt",
+    "sha256": "dac88a359b9616eb2beef3cb84b28ac609583ccbc5841e997016a92374e70599"
+  }
+]

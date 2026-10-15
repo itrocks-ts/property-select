@@ -1,0 +1,31 @@
+{
+  "owner": {
+    "args": [
+      "/usr/bin/node",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+      "--ps-environment=/tmp/property-select-RETEST-L1-META-1",
+      "--ps-port=13639",
+      "--ps-token=4d06ebd7-491d-414f-b1f3-2a8056c8e5e2"
+    ],
+    "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+    "executable": "/usr/bin/node",
+    "start": "150362457",
+    "state": "R",
+    "uid": 1000,
+    "directory": "/tmp/property-select-RETEST-L1-META-1",
+    "name": "app",
+    "pid": 2240353,
+    "port": 13639,
+    "token": "4d06ebd7-491d-414f-b1f3-2a8056c8e5e2"
+  },
+  "current_args": [
+    "/usr/bin/node",
+    "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+    "--ps-environment=/tmp/property-select-RETEST-L1-META-1",
+    "--ps-port=13639",
+    "--ps-token=4d06ebd7-491d-414f-b1f3-2a8056c8e5e2"
+  ],
+  "current_start": "150362457",
+  "app_log_sha256": "f186193530215a19c06bf4a19261c96d1bf453a5b9868fd1545e9d46d468f645",
+  "app_log_bytes": 76
+}

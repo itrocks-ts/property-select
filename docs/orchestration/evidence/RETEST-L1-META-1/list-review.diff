@@ -1,0 +1,73 @@
+diff --git a/package.json b/package.json
+index bea0fb3..35f125f 100644
+--- a/package.json
++++ b/package.json
+@@ -71,5 +71,5 @@
+    "build:front": "tsc -p src/front/tsconfig.json",
+    "test": "npm run build:cjs && node --test \"test/**/*.test.mjs\""
+  },
+- "version": "0.8.0"
++ "version": "0.8.1"
+ }
+diff --git a/src/feed.ts b/src/feed.ts
+index cff6376..c6de090 100644
+--- a/src/feed.ts
++++ b/src/feed.ts
+@@ -22,7 +22,7 @@ export class Feed extends Parameter
+    this.limit = xhrInfo.targetHeight
+      ? Math.ceil(xhrInfo.targetHeight / this.lineHeight)
+    : (xhrInfo.visibleRows ?? Feed.DEFAULT_LIMIT)
+-   this.offset = +request.data.offset
++   this.offset = +(request.data.offset ?? Feed.DEFAULT_OFFSET)
+  }
+
+  readOptions(options = new Array<Option>)
+diff --git a/test/feed.test.mjs b/test/feed.test.mjs
+new file mode 100644
+index 0000000..d91d6e8
+--- /dev/null
++++ b/test/feed.test.mjs
+@@ -0,0 +1,43 @@
++import assert            from 'node:assert/strict'
++import { createRequire } from 'node:module'
++import { test }          from 'node:test'
++
++const require = createRequire(import.meta.url)
++const { Limit } = require('@itrocks/storage')
++const { Feed }  = require('../cjs/feed.js')
++
++test('an absent offset resets the feed to the first page with a finite limit', () => {
++ const feed = new Feed()
++ feed.getParams({ data: { offset: '50' }, headers: {} })
++ feed.getParams({ data: {}, headers: {} })
++
++ assert.equal(feed.offset, 0)
++ const [option] = feed.readOptions()
++ assert.ok(option instanceof Limit)
++ assert.equal(option.limit, Feed.DEFAULT_LIMIT)
++ assert.equal(option.offset, 0)
++})
++
++test('explicit valid offsets and viewport limits retain their pagination values', () => {
++ for (const offset of [0, 1, 50, Number.MAX_SAFE_INTEGER]) {
++   for (const value of [offset, String(offset)]) {
++     const feed = new Feed()
++     feed.getParams({ data: { offset: value }, headers: { 'xhr-info': '{"visibleRows":17}' } })
++
++     assert.equal(feed.offset, offset)
++     const [option] = feed.readOptions()
++     assert.equal(option.limit, 17)
++     assert.equal(option.offset, offset)
++   }
++ }
++})
++
++test('invalid explicit offsets remain visible to downstream validation', () => {
++ for (const [value, expected] of [['invalid', NaN], ['-1', -1], ['0.5', 0.5], ['Infinity', Infinity]]) {
++   const feed = new Feed()
++   feed.getParams({ data: { offset: value }, headers: {} })
++
++   assert.equal(feed.offset, expected)
++   assert.equal(feed.readOptions()[0].offset, expected)
++ }
++})

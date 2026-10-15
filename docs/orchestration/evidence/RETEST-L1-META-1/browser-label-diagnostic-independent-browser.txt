@@ -1,0 +1,19 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'invoice catalogue'
+- 'Invoice catalogue'
+
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs:91:12 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'invoice catalogue',
+  expected: 'Invoice catalogue',
+  operator: 'strictEqual'
+}
+
+Node.js v24.0.1

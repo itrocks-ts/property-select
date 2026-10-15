@@ -1,0 +1,94 @@
+{
+  "framework": {
+    "published_required": [
+      "cjs/property-select.js",
+      "docs/property-select.md",
+      "property-select-metadata.d.ts",
+      "property-select-metadata.js"
+    ],
+    "files": 42,
+    "runtime_dependencies": {
+      "@itrocks/action": "latest",
+      "@itrocks/action-request": "latest",
+      "@itrocks/air-datepicker": "latest",
+      "@itrocks/app-dir": "latest",
+      "@itrocks/asset-loader": "latest",
+      "@itrocks/auto-focus": "latest",
+      "@itrocks/auto-redirect": "latest",
+      "@itrocks/autocomplete": "latest",
+      "@itrocks/breadcrumb": "latest",
+      "@itrocks/build": "latest",
+      "@itrocks/class-file": "latest",
+      "@itrocks/class-type": "latest",
+      "@itrocks/class-view": "latest",
+      "@itrocks/collapse": "latest",
+      "@itrocks/collection": "latest",
+      "@itrocks/compose": "latest",
+      "@itrocks/composition": "latest",
+      "@itrocks/config": "latest",
+      "@itrocks/contained-auto-width": "latest",
+      "@itrocks/core-transformers": "latest",
+      "@itrocks/decorator": "latest",
+      "@itrocks/default-action-workflow": "latest",
+      "@itrocks/fastify": "latest",
+      "@itrocks/fastify-file-session-store": "latest",
+      "@itrocks/file": "latest",
+      "@itrocks/lazy-loading": "latest",
+      "@itrocks/links": "latest",
+      "@itrocks/list-properties": "latest",
+      "@itrocks/mysql": "latest",
+      "@itrocks/notifications": "latest",
+      "@itrocks/password": "latest",
+      "@itrocks/property-select": "latest",
+      "@itrocks/property-translate": "latest",
+      "@itrocks/property-type": "latest",
+      "@itrocks/property-view": "latest",
+      "@itrocks/real-viewport-height": "latest",
+      "@itrocks/reflect": "latest",
+      "@itrocks/reflect-path": "latest",
+      "@itrocks/rename": "latest",
+      "@itrocks/request-response": "latest",
+      "@itrocks/required": "latest",
+      "@itrocks/route": "latest",
+      "@itrocks/session": "latest",
+      "@itrocks/sql-build": "latest",
+      "@itrocks/sql-functions": "latest",
+      "@itrocks/sql-join": "latest",
+      "@itrocks/storage": "latest",
+      "@itrocks/store": "latest",
+      "@itrocks/string-formats": "latest",
+      "@itrocks/template": "latest",
+      "@itrocks/template-insight": "latest",
+      "@itrocks/transformer": "latest",
+      "@itrocks/translate": "latest",
+      "@itrocks/uses": "latest",
+      "@itrocks/xtarget": "latest",
+      "air-datepicker": "^3.6",
+      "date-fns": "^4.1"
+    }
+  },
+  "property-select": {
+    "published_required": [
+      "cjs/property-select.js",
+      "property-select.d.ts",
+      "property-select.js"
+    ],
+    "files": 365,
+    "runtime_dependencies": {}
+  },
+  "src/list.ts": {
+    "identical_baseline_and_current": true,
+    "sha256": "b13f23dc62f20a04d806e18e062b17ebb19ff5f163924dfded5c50ce186f72bd"
+  },
+  "test/columns.test.mjs": {
+    "identical_baseline_and_current": true,
+    "sha256": "97ff156762ab59e670239c1d8a2c07510ea04073a0d77094b127062f69f64881"
+  },
+  "checks": {
+    "application_preserved": true,
+    "product_owners_clean": true,
+    "public_files_and_exports": true,
+    "dependency_direction": true,
+    "browser_graph": true
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "feed-test",
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/feed.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "feed-test.txt",
+    "sha256": "8b0448fc81d00aac3ccd75395ccea7dea781f0a09bcf950f3e08a80ee3ba8f97"
+  },
+  {
+    "name": "list-scopes-test",
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/list.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "list-scopes-test.txt",
+    "sha256": "3cbac4227f126b69e2d7ab29515287a3dd8d160b2e1efc2fd0406a9263ba6c4f"
+  }
+]

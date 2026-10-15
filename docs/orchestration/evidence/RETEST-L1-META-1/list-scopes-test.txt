@@ -1,0 +1,13 @@
+✔ html combines user filters and a mandatory scope for search and count (2.248662ms)
+✔ html keeps the mandatory scope on paginated feed requests (0.270038ms)
+✔ html restores session filters for queries and inputs, and accepts clearing them (1.179789ms)
+✔ json forwards its mandatory scope directly to the data source (0.308431ms)
+✔ omitting the scope preserves html filters and the json query (0.399794ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 52.566966

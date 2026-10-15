@@ -2,7 +2,7 @@
 
 ## Authoritative plan and checkpoints
 
-[PLAN.json](PLAN.json) lists all 33 tasks in the required serial order. Tasks `P01`, `P02`, `S01` and `P03` are recorded
+[PLAN.json](PLAN.json) lists all 37 tasks in the required serial order. Tasks `P01`, `P02`, `S01` and `P03` are recorded
 preparation work; do not replay them. Independent `P04` approves the repaired plan in
 [its report](reports/P04.md). Continue automatically with `S02`; no additional user decision is required.
 

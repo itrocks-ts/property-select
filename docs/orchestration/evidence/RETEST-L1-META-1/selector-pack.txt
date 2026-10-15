@@ -1,0 +1,17 @@
+{
+  "error": {
+    "code": "EROFS",
+    "summary": "EROFS: read-only file system, open '/home/baptiste/.npm/_cacache/tmp/d8740b23'",
+    "detail": "Often virtualized file systems, or other file systems\nthat don't support symlinks, give this error."
+  }
+}
+npm warn gitignore-fallback No .npmignore file found, using .gitignore for file exclusion. Consider creating a .npmignore file to explicitly control published files.
+npm error code EROFS
+npm error syscall open
+npm error path /home/baptiste/.npm/_cacache/tmp/d8740b23
+npm error errno -30
+npm error rofs EROFS: read-only file system, open '/home/baptiste/.npm/_cacache/tmp/d8740b23'
+npm error rofs Often virtualized file systems, or other file systems
+npm error rofs that don't support symlinks, give this error.
+npm error Log files were not written due to an error writing to the directory: /home/baptiste/.npm/_logs
+npm error You can rerun the command with `--loglevel=verbose` to see the logs in your terminal

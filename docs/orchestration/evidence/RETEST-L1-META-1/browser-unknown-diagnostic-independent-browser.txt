@@ -1,0 +1,8 @@
+file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs:100
+    assert.equal(get('resolve', 'unknown').body.relation.cardinality, 'unknown')
+                                                        ^
+
+TypeError: Cannot read properties of undefined (reading 'cardinality')
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs:100:57
+
+Node.js v24.0.1

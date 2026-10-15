@@ -1,0 +1,21 @@
+[
+  {
+    "name": "start",
+    "argv": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "app"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "restricted-start.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

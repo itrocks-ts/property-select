@@ -1,0 +1,30 @@
+
+> @itrocks/property-select@0.1.3 test
+> npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs
+
+
+> @itrocks/property-select@0.1.3 build
+> tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser
+
+✔ T01: public CJS and browser facades agree; missing provider and invalid paths are explicit (6.05511ms)
+✔ T01: observer-only intentions receive unique canonical ids without implicit additions (0.712482ms)
+✔ T02: remembered branch survives ancestor, root, and descendant navigation with query and scroll (2.48835ms)
+✔ T03: divergent relation replaces only the suffix (0.613525ms)
+✔ T05 navigation: relation main opens; relation selection and terminal activation keep context/query (0.591047ms)
+✔ PORT-01: provider business ordering, label fallback and snapshot isolation (0.456024ms)
+✔ PORT-02: acknowledgements validate identity/path/status; only applied added changes recents (0.623468ms)
+✔ PORT-02: transport contract carries a stable intent with exactly one terminal call (0.811162ms)
+✔ PORT-02: disposal cancels transport/selections once and ignores late outcomes (1.537456ms)
+✔ PORT-02: out-of-order confirmations belong to their own attempt (0.620739ms)
+✔ PORT-03 navigation: stale metadata cannot replace the context or revive disposal (0.711317ms)
+✔ PORT-09 core: consumer rejection is recoverable and preserves context (0.515683ms)
+✔ PORT-02: reentrant disposal still sends exactly one terminal transport callback (0.236315ms)
+✔ PORT-02: disposal during metadata resolution never emits a selection or begins transport (0.327311ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 42.236132

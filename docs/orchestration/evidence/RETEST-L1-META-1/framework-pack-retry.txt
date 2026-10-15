@@ -1,0 +1,447 @@
+[
+  {
+    "id": "showtime@0.0.6",
+    "name": "showtime",
+    "version": "0.0.6",
+    "size": 49975,
+    "unpackedSize": 122220,
+    "shasum": "040e2ebebc388846d583f3026f65b48724c6e28c",
+    "integrity": "sha512-OTfRWWM+sk0dX7OeWiu5JBuwOj19VuRwJXNApdbDpDsPppxGEUyr0jsxDZt27c3cdZr7o2kHnkTxLNE7FRgB1Q==",
+    "filename": "showtime-0.0.6.tgz",
+    "files": [
+      {
+        "path": "AGENTS.md",
+        "size": 209,
+        "mode": 420
+      },
+      {
+        "path": "CLAUDE.md",
+        "size": 3114,
+        "mode": 420
+      },
+      {
+        "path": "app/actions.scss",
+        "size": 58,
+        "mode": 420
+      },
+      {
+        "path": "app/age-rating.ts",
+        "size": 89,
+        "mode": 420
+      },
+      {
+        "path": "app/cast-member.ts",
+        "size": 789,
+        "mode": 420
+      },
+      {
+        "path": "app/category.ts",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "app/collection.ts",
+        "size": 90,
+        "mode": 420
+      },
+      {
+        "path": "app/country.ts",
+        "size": 87,
+        "mode": 420
+      },
+      {
+        "path": "app/crew-job.ts",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "app/crew-member.ts",
+        "size": 739,
+        "mode": 420
+      },
+      {
+        "path": "app/fr-FR.csv",
+        "size": 2165,
+        "mode": 420
+      },
+      {
+        "path": "app/friend.ts",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "app/genre.ts",
+        "size": 350,
+        "mode": 420
+      },
+      {
+        "path": "app/home/add-a-movie.svg",
+        "size": 1662,
+        "mode": 420
+      },
+      {
+        "path": "app/home/mark-as-watched.svg",
+        "size": 1846,
+        "mode": 420
+      },
+      {
+        "path": "app/home/movie-database.svg",
+        "size": 1304,
+        "mode": 420
+      },
+      {
+        "path": "app/home/what-to-watch.svg",
+        "size": 2040,
+        "mode": 420
+      },
+      {
+        "path": "app/import-emdb/csv.ts",
+        "size": 2833,
+        "mode": 420
+      },
+      {
+        "path": "app/import-emdb/import.ts",
+        "size": 140,
+        "mode": 420
+      },
+      {
+        "path": "app/import-emdb/save.html",
+        "size": 346,
+        "mode": 420
+      },
+      {
+        "path": "app/import-emdb/save.ts",
+        "size": 11650,
+        "mode": 420
+      },
+      {
+        "path": "app/location.ts",
+        "size": 88,
+        "mode": 420
+      },
+      {
+        "path": "app/main.ts",
+        "size": 28,
+        "mode": 420
+      },
+      {
+        "path": "app/medium.ts",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "app/menu/database.svg",
+        "size": 350,
+        "mode": 420
+      },
+      {
+        "path": "app/menu/import-export.svg",
+        "size": 518,
+        "mode": 420
+      },
+      {
+        "path": "app/menu/menu.scss",
+        "size": 235,
+        "mode": 420
+      },
+      {
+        "path": "app/menu/showtime.svg",
+        "size": 395,
+        "mode": 420
+      },
+      {
+        "path": "app/movie.ts",
+        "size": 3032,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new.ts",
+        "size": 14413,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new/details.ts",
+        "size": 793,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new/front/search-result.ts",
+        "size": 541,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new/new.html",
+        "size": 1351,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new/query.ts",
+        "size": 712,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/new/search-results.html",
+        "size": 2345,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search.scss",
+        "size": 402,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search.ts",
+        "size": 3318,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search/front/table-link.ts",
+        "size": 794,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search/query.ts",
+        "size": 820,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search/search-results.html",
+        "size": 1560,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search/search.html",
+        "size": 1394,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/search/title.ts",
+        "size": 4582,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/title-tools.ts",
+        "size": 661,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/watch.ts",
+        "size": 2494,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/watch/front/search-result.ts",
+        "size": 1168,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/watch/search-results.html",
+        "size": 2561,
+        "mode": 420
+      },
+      {
+        "path": "app/movie/watch/search.html",
+        "size": 1201,
+        "mode": 420
+      },
+      {
+        "path": "app/person.ts",
+        "size": 117,
+        "mode": 420
+      },
+      {
+        "path": "app/role-note.ts",
+        "size": 194,
+        "mode": 420
+      },
+      {
+        "path": "app/search.svg",
+        "size": 381,
+        "mode": 420
+      },
+      {
+        "path": "app/studio.ts",
+        "size": 86,
+        "mode": 420
+      },
+      {
+        "path": "app/video-format.ts",
+        "size": 261,
+        "mode": 420
+      },
+      {
+        "path": "app/watch-history.ts",
+        "size": 539,
+        "mode": 420
+      },
+      {
+        "path": "app/youtube/decorator.ts",
+        "size": 927,
+        "mode": 420
+      },
+      {
+        "path": "app/youtube/front/youtube-play.svg",
+        "size": 1009,
+        "mode": 420
+      },
+      {
+        "path": "app/youtube/front/youtube.scss",
+        "size": 280,
+        "mode": 420
+      },
+      {
+        "path": "app/youtube/front/youtube.ts",
+        "size": 1960,
+        "mode": 420
+      },
+      {
+        "path": "app/youtube/transformers.ts",
+        "size": 1015,
+        "mode": 420
+      },
+      {
+        "path": "config.yaml",
+        "size": 1592,
+        "mode": 420
+      },
+      {
+        "path": "icons/manifest.json",
+        "size": 1203,
+        "mode": 420
+      },
+      {
+        "path": "icons/st.svg",
+        "size": 452,
+        "mode": 420
+      },
+      {
+        "path": "icons/st16.png",
+        "size": 327,
+        "mode": 420
+      },
+      {
+        "path": "icons/st32.png",
+        "size": 623,
+        "mode": 420
+      },
+      {
+        "path": "icons/st48.png",
+        "size": 794,
+        "mode": 420
+      },
+      {
+        "path": "icons/st57.png",
+        "size": 959,
+        "mode": 420
+      },
+      {
+        "path": "icons/st60.png",
+        "size": 897,
+        "mode": 420
+      },
+      {
+        "path": "icons/st64.png",
+        "size": 948,
+        "mode": 420
+      },
+      {
+        "path": "icons/st72.png",
+        "size": 1080,
+        "mode": 420
+      },
+      {
+        "path": "icons/st76.png",
+        "size": 1148,
+        "mode": 420
+      },
+      {
+        "path": "icons/st96.png",
+        "size": 1245,
+        "mode": 420
+      },
+      {
+        "path": "icons/st114.png",
+        "size": 1517,
+        "mode": 420
+      },
+      {
+        "path": "icons/st120.png",
+        "size": 1467,
+        "mode": 420
+      },
+      {
+        "path": "icons/st128.png",
+        "size": 1543,
+        "mode": 420
+      },
+      {
+        "path": "icons/st144.png",
+        "size": 1654,
+        "mode": 420
+      },
+      {
+        "path": "icons/st152.png",
+        "size": 1778,
+        "mode": 420
+      },
+      {
+        "path": "icons/st167.png",
+        "size": 1935,
+        "mode": 420
+      },
+      {
+        "path": "icons/st180.png",
+        "size": 2006,
+        "mode": 420
+      },
+      {
+        "path": "icons/st192.png",
+        "size": 2079,
+        "mode": 420
+      },
+      {
+        "path": "icons/st256.png",
+        "size": 2583,
+        "mode": 420
+      },
+      {
+        "path": "icons/st384.png",
+        "size": 3563,
+        "mode": 420
+      },
+      {
+        "path": "icons/st512.png",
+        "size": 4799,
+        "mode": 420
+      },
+      {
+        "path": "local.example.yaml",
+        "size": 435,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2186,
+        "mode": 420
+      },
+      {
+        "path": "session/contains-session-data",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "tsconfig.front.json",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "tsconfig.json",
+        "size": 543,
+        "mode": 420
+      }
+    ],
+    "entryCount": 86,
+    "bundled": []
+  }
+]
+npm warn gitignore-fallback No .npmignore file found, using .gitignore for file exclusion. Consider creating a .npmignore file to explicitly control published files.

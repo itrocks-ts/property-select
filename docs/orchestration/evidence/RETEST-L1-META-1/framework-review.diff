@@ -1,0 +1,1064 @@
+diff --git a/README.md b/README.md
+index db0d5da..b472756 100644
+--- a/README.md
++++ b/README.md
+@@ -305,3 +305,11 @@ See [SQL relationship binding](docs/sql-relationships.md) for public hooks, inve
+ The server bootstrap binds MySQL projection conversion and SQL metadata through the public
+ [`@itrocks/framework/sql-projection`](docs/sql-projection.md) subpath. Isolated adapters can use the same binding
+ without importing the server bootstrap.
++
++### Authorised property metadata
++
++The public [`@itrocks/framework/property-select`](docs/property-select.md) adapter serves authorised reflection
++metadata through real actions. Configure business roots and optional path grants, then supply request-specific
++access restrictions through [`propertySelectDependsOn`](docs/dependencies.md#property-metadata).
++The browser `property-select-metadata.js` entry provides
++`HttpMetadataProvider`, implementing the selector's neutral metadata port without loading server reflection.
+diff --git a/config.yaml b/config.yaml
+index 8b4dc92..073445d 100644
+--- a/config.yaml
++++ b/config.yaml
+@@ -2,6 +2,9 @@ compose:
+   '@itrocks/reflect:ReflectClass':    '@itrocks/framework:ReflectClass'
+   '@itrocks/reflect:ReflectProperty': '@itrocks/framework:ReflectProperty'
+
++propertySelect:
++  roots: {}
++
+ server:
+   host: 127.0.0.1
+   port: 3000
+diff --git a/docs/dependencies.md b/docs/dependencies.md
+new file mode 100644
+index 0000000..60dc988
+--- /dev/null
++++ b/docs/dependencies.md
+@@ -0,0 +1,44 @@
++# Framework dependency binding
++
++The server composition root is `src/dependencies.ts:bind()`, invoked after configured export composition.
++The framework supplies adapters to consumer-owned contracts through public package entries.
++
++## Property metadata
++
++`propertySelectDependsOn(overrides: Partial<PropertySelectDependencies>)`, exported from
++`@itrocks/framework/property-select`, merges overrides without removing unspecified defaults.
++Its `authorise(request, root, path)` function returns a boolean or a promise of one. The default returns true for
++explicitly configured roots and their configured path grants, under the existing framework action access policy.
++No roots are configured by default. Each new action gets its own request-bound provider; user access is never cached
++globally. The adapter checks the root and all ancestor prefixes before resolving a complete path.
++
++Applications supply policy after composition and dependency binding, before requests start:
++
++```ts
++import { propertySelectDependsOn } from '@itrocks/framework/property-select'
++
++propertySelectDependsOn({
++  authorise: async (request, root, path) => {
++    const grants = request.request.session.user?.metadataPaths?.[root] ?? []
++    return grants.includes(path)
++  }
++})
++```
++
++The policy receives a transport-neutral action `Request`; application user/session semantics stay with the host.
++For another request abstraction, construct `ReflectionMetadataProvider(roots, authorise)` with an asynchronous
++`(root, path) => boolean` callback after reflection composition. Neither callback loads records for the selector.
++
++`bindPropertySelect()` registers the framework actions. Reflection and path facts come from the public
++[`reflect`](../../reflect/README.md) and [`reflect-path`](../../reflect-path/README.md) entries.
++Presentation uses [`class-view`](../../class-view/README.md) labels and
++[`property-view`](../../property-view/README.md) labels/order. Module destinations use
++[`route`](../../route/README.md#api); the HTTP adapter uses `Action.jsonResponse` and `Request.data`.
++Presentation/path owners are loaded when used, after export composition, so importing the binding API early does not
++freeze their reflection defaults. See [authorised metadata](property-select.md) for roots, advice, DTOs and browser use.
++
++## SQL adapters
++
++[Relationship bindings](sql-relationships.md) map schema/reflection facts to `sql-join`.
++[Projection bindings](sql-projection.md) supply final-owner SQL conversions to MySQL and SQL builders.
++These bindings own persistence metadata; the property metadata provider does not query these adapters.
+diff --git a/docs/property-select.md b/docs/property-select.md
+new file mode 100644
+index 0000000..c371001
+--- /dev/null
++++ b/docs/property-select.md
+@@ -0,0 +1,112 @@
++# Authorised property metadata
++
++The server subpath `@itrocks/framework/property-select` exposes `ReflectionMetadataProvider`, `MetadataError`,
++`MetadataErrorCode`, `MetadataRoot`, `PropertySelectConfiguration`, `PropertySelectDependencies`,
++`createMetadataProvider`, `metadataConfiguration`, `propertySelectDependsOn` and `bindPropertySelect`.
++Normal bootstrap binds its routes after reflection composition. `ReflectionMetadataProvider` implements the
++`MetadataProvider` port from `@itrocks/property-select`.
++
++## Configuration and access
++
++No metadata root is available by default. Register each permitted business root in application configuration:
++
++```yaml
++propertySelect:
++  roots:
++    invoice:
++      type: '/business/invoice:Invoice'
++      version: '1'
++      advice:
++        - customer.address
++      paths:
++        - number
++        - customer.address.city.name
++```
++
++`type` is a configured module destination with optional export name, or a class supplied by an initializer.
++A leading `/` denotes the application directory; package destinations use their public module specifier.
++The request supplies an opaque registered root id; it cannot supply a module or class name.
++Omitting `paths` permits the root's reflected catalogue. An explicit list grants those complete paths and their
++navigation prefixes. It does not grant every descendant of a relation. The catalogue includes inherited fields
++and accessible fields beyond the initial `List` columns. Increment `version` when its grants or metadata change;
++recreate a cached selector instance when switching catalogue snapshots.
++
++The normal action access policy also applies to these routes. Add request-specific restrictions after framework
++binding and before server startup, through `beforeFrameworkRun`:
++
++```ts
++import { propertySelectDependsOn } from '@itrocks/framework/property-select'
++
++propertySelectDependsOn({
++  authorise: async (request, root, path) => {
++    return request.request.session.user?.metadataPaths?.[root]?.includes(path) ?? false
++  }
++})
++```
++
++The callback receives the current action request and every traversed prefix, including `''` for the root.
++It must grant root and ancestor navigation as well as the destination. Its default permits configured roots and
++paths under the existing action access policy. There is no global cache of user access decisions.
++Partial dependency binding preserves unspecified defaults. Both enumeration and complete-path resolution apply
++these same checks before resolving forbidden prefixes. Unregistered roots and denied paths return an identical
++`403 { error: 'forbidden' }` response.
++
++`createMetadataProvider(request)` constructs a provider for that request. Direct construction accepts a root map
++and an asynchronous `(root, path) => boolean` policy, useful for adapters with another request abstraction.
++It requires the usual framework reflection composition before use; missing composition fails explicitly.
++Framework `ReflectClass.propertyNames` enumerates declared types and prototype getter descriptors without
++constructing domain records. Metadata uses declared property types, never getters or property values.
++
++## Metadata and presentation
++
++`context(root, path, signal?)` returns one object's authorised properties, with full root-relative paths.
++`resolve(root, '', signal?)` returns that root context; another path returns one property description.
++Labels and order reuse `class-view` and `property-view`, with technical-name fallbacks. Order gaps after permission
++filtering retain the original business order. Host translation remains separate.
++
++Type and relation identities are opaque hashes of server-side class metadata identities; no module path is sent.
++Inherited relations have the identity of their declaring metadata owner, regardless of the traversal path.
++Logical inverses and N-N targets are navigable without exposing or loading link tables. Explicit relation facts
++come from reflection. Component/composite declarations add an inverse only when exactly one opposite ownership
++property matches; cardinality is inferred only for a known singular/plural pair. Unknown facts remain unknown.
++Ambiguous traversal, missing properties, terminal traversal and unknown targets reject explicitly.
++
++Both methods honour `AbortSignal` before work and after awaited policy decisions. They load no business records,
++perform no SQL and never read `ReflectProperty.value`. Lazy search and cycle-return decisions belong to the selector.
++
++## Actions and browser transport
++
++The real framework actions expose these GET endpoints:
++
++- `/property-select/context/json?root=invoice&path=customer.address`
++- `/property-select/resolve/json?root=invoice&path=customer.address.city.name`
++- `/property-select/configuration/json?root=invoice`
++
++Responses are JSON with `Cache-Control: no-store`. Invalid requests or paths return `400`; denied access returns `403`.
++The configuration response contains only authorised, valid relation advice and the configured catalogue version.
++Advice is static root configuration; the adapter has no recommendation or persistence engine.
++
++The public browser subpath `@itrocks/framework/property-select-metadata.js` exports `HttpMetadataProvider` and
++`MetadataTransportOptions`. The normal browser composition root exposes the adapter and registers its asset.
++Its import has no activation or server side effect:
++
++```ts
++import { HttpMetadataProvider } from '@itrocks/framework/property-select-metadata.js'
++
++const metadata = new HttpMetadataProvider()
++const context = await metadata.context('invoice', '')
++const configuration = await metadata.configuration('invoice')
++```
++
++Options accept `endpoint` (default `/property-select`) and a substitutable `fetch` function.
++Requests use same-origin credentials and forward `AbortSignal`. A cancelled response is also checked after JSON
++parsing. The selector's generation checks discard obsolete responses even when the network cannot be interrupted.
++Session restoration, rendered controls, searching and host column integration belong to their respective adapters.
++
++## Verification
++
++`npm test` rebuilds the package and exercises existing framework tests plus metadata contracts.
++`node --test --test-isolation=none` with the absolute `test/property-select-metadata.test.mjs` path gives individual
++META assertions. The isolated test fixture and `test/metadata-browser.mjs` exercise the public browser module and
++real request adapter, including cancellation, stale results, per-request permission changes and zero business reads.
++These test resources are outside the published runtime.
+diff --git a/package.json b/package.json
+index cc95067..bbc876d 100644
+--- a/package.json
++++ b/package.json
+@@ -35,6 +35,7 @@
+    "@itrocks/mysql": "latest",
+    "@itrocks/notifications": "latest",
+    "@itrocks/password": "latest",
++   "@itrocks/property-select": "latest",
+    "@itrocks/property-translate": "latest",
+    "@itrocks/property-type": "latest",
+    "@itrocks/property-view": "latest",
+@@ -71,6 +72,9 @@
+  },
+  "exports": {
+    ".": "./cjs/framework.js",
++   "./property-select": "./cjs/property-select.js",
++   "./property-select-actions": "./cjs/property-select-actions.js",
++   "./property-select-metadata.js": "./property-select-metadata.js",
+    "./sql-projection": "./cjs/sql-projection.js",
+    "./sql-relationships": "./cjs/sql-relationships.js"
+  },
+@@ -79,6 +83,8 @@
+    "favicon.png",
+    "LICENSE",
+    "README.md",
++   "docs/dependencies.md",
++   "docs/property-select.md",
+    "docs/sql-projection.md",
+    "docs/sql-relationships.md",
+    "cjs",
+@@ -113,5 +119,5 @@
+    "build:test": "tsc -p test/tsconfig.json",
+    "test": "npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs"
+  },
+- "version": "0.8.1"
++ "version": "0.9.3"
+ }
+diff --git a/src/dependencies.ts b/src/dependencies.ts
+index cefde7c..62eff3b 100644
+--- a/src/dependencies.ts
++++ b/src/dependencies.ts
+@@ -44,6 +44,7 @@ import { format, parse }                    from 'date-fns'
+ import { join }                             from 'node:path'
+ import { normalize }                        from 'node:path'
+ import { configureLanguages }               from './language'
++import { bindPropertySelect }                from './property-select'
+ import { bindSqlProjection }                 from './sql-projection'
+
+ async function propertyOutput<T extends object>(object: T, property: keyof T): Promise<string>
+@@ -85,6 +86,8 @@ export function bind()
+    setTransformers: setMultilineTransformers
+  })
+
++ bindPropertySelect()
++
+  bindSqlProjection()
+
+  passwordDependsOn({
+diff --git a/src/front/app.ts b/src/front/app.ts
+index e91a5b1..3567228 100644
+--- a/src/front/app.ts
++++ b/src/front/app.ts
+@@ -56,3 +56,5 @@ XTargetDefaultOptions({ plugins: [
+  XTargetHistory, XTargetHoldOn, XTargetMainTarget, XTargetModifier, XTargetSecureClick
+ ] })
+ buildXTarget()
++
++export { HttpMetadataProvider } from './property-select-metadata.js'
+diff --git a/src/front/property-select-metadata.ts b/src/front/property-select-metadata.ts
+new file mode 100644
+index 0000000..2b29bb2
+--- /dev/null
++++ b/src/front/property-select-metadata.ts
+@@ -0,0 +1,50 @@
++import type { MetadataProvider }    from '@itrocks/property-select/property-select.js'
++import type { ObjectContext }       from '@itrocks/property-select/property-select.js'
++import type { PropertyDescription } from '@itrocks/property-select/property-select.js'
++
++export type MetadataTransportOptions = {
++ endpoint?: string
++ fetch?: typeof fetch
++}
++
++export class HttpMetadataProvider implements MetadataProvider
++{
++
++ private readonly endpoint: string
++ private readonly fetcher: typeof fetch
++
++ constructor(options: MetadataTransportOptions = {})
++ {
++   this.endpoint = options.endpoint ?? '/property-select'
++   this.fetcher = options.fetch ?? globalThis.fetch.bind(globalThis)
++ }
++
++ configuration(root: string, signal?: AbortSignal): Promise<{ advice: readonly string[]; version: string }>
++ {
++   return this.request('configuration', root, '', signal)
++ }
++
++ context(root: string, path: string, signal?: AbortSignal): Promise<ObjectContext>
++ {
++   return this.request('context', root, path, signal)
++ }
++
++ private async request<T>(operation: string, root: string, path: string, signal?: AbortSignal): Promise<T>
++ {
++   signal?.throwIfAborted()
++   const query = new URLSearchParams({ path, root })
++   const response = await this.fetcher(`${this.endpoint}/${operation}/json?${query}`, {
++     cache: 'no-store', credentials: 'same-origin', headers: { Accept: 'application/json' }, signal
++   })
++   if (!response.ok) throw new Error(`Metadata request failed (${response.status})`)
++   const value = await response.json() as T
++   signal?.throwIfAborted()
++   return value
++ }
++
++ resolve(root: string, path: string, signal?: AbortSignal): Promise<PropertyDescription | ObjectContext>
++ {
++   return this.request('resolve', root, path, signal)
++ }
++
++}
+diff --git a/src/property-select-actions.ts b/src/property-select-actions.ts
+new file mode 100644
+index 0000000..0e7d23e
+--- /dev/null
++++ b/src/property-select-actions.ts
+@@ -0,0 +1,58 @@
++import { Action }                 from '@itrocks/action'
++import { Request }                from '@itrocks/action-request'
++import { createMetadataProvider } from './property-select'
++import { metadataConfiguration }  from './property-select'
++import { MetadataError }          from './property-select-provider'
++
++type Operation = 'configuration' | 'context' | 'resolve'
++
++abstract class MetadataAction extends Action
++{
++
++ protected abstract operation: Operation
++
++ async json(request: Request)
++ {
++   const parameters = request.data
++   const root = parameters.root
++   const path = parameters.path ?? ''
++   const headers = { 'Cache-Control': 'no-store' }
++   if ((request.request.method !== 'GET') || request.ids.length || typeof root !== 'string' || !root
++     || typeof path !== 'string') return this.jsonResponse({ error: 'invalid-request' }, 400, headers)
++   try {
++     const provider = createMetadataProvider(request)
++     const result = this.operation === 'configuration' ? await metadataConfiguration(request, root)
++       : await provider[this.operation](root, path)
++     return this.jsonResponse(result, 200, headers)
++   }
++   catch (error) {
++     if (error instanceof MetadataError) {
++       return this.jsonResponse({ error: error.code }, error.code === 'forbidden' ? 403 : 400, headers)
++     }
++     if (error instanceof TypeError) return this.jsonResponse({ error: 'invalid-path' }, 400, headers)
++     throw error
++   }
++ }
++
++}
++
++export class MetadataConfiguration extends MetadataAction
++{
++
++ protected operation = 'configuration' as const
++
++}
++
++export class MetadataContext extends MetadataAction
++{
++
++ protected operation = 'context' as const
++
++}
++
++export class MetadataResolve extends MetadataAction
++{
++
++ protected operation = 'resolve' as const
++
++}
+diff --git a/src/property-select-provider.ts b/src/property-select-provider.ts
+new file mode 100644
+index 0000000..ffadc71
+--- /dev/null
++++ b/src/property-select-provider.ts
+@@ -0,0 +1,187 @@
++import { fileOf }                        from '@itrocks/class-file'
++import { inherits }                      from '@itrocks/class-type'
++import { Type }                          from '@itrocks/class-type'
++import { componentOf }                   from '@itrocks/composition'
++import { compositeOf }                   from '@itrocks/composition'
++import { MetadataProvider }              from '@itrocks/property-select'
++import { normalisePath }                 from '@itrocks/property-select'
++import { ObjectContext }                 from '@itrocks/property-select'
++import { PropertyDescription }           from '@itrocks/property-select'
++import { resolveDestination }            from '@itrocks/route'
++import { createHash }                    from 'node:crypto'
++import { MetadataRoot }                  from './property-select'
++import { ReflectClass }                  from './reflect-class'
++import { ReflectProperty }               from './reflect-property'
++
++export type MetadataErrorCode = 'forbidden' | 'invalid-path' | 'ambiguous-type' | 'unknown-target'
++type Authorise = (root: string, path: string) => boolean | Promise<boolean>
++
++function aborted(signal?: AbortSignal): void
++{
++ signal?.throwIfAborted()
++}
++
++function relationId(type: Type, name: string): string
++{
++ const context = new ReflectClass(type)
++ const property = context.propertyTypes[name as never]
++ const parent = context.parent
++ if (parent && Object.hasOwn(parent.propertyTypes, name) && (parent.propertyTypes[name as never] === property)) {
++   return relationId(parent.type, name)
++ }
++ for (const uses of context.uses) {
++   if (new ReflectClass(uses).propertyTypes[name as never] === property) return relationId(uses, name)
++ }
++ return createHash('sha256').update(`${typeId(type)}.${name}`).digest('hex').slice(0, 24)
++}
++
++function rootType(root: MetadataRoot): Type
++{
++ if (typeof root.type !== 'string') return root.type
++ const type = resolveDestination(root.type)
++ if (typeof type !== 'function') throw new Error('Metadata root must resolve to a domain class')
++ return type as Type
++}
++
++function typeId(type: Type): string
++{
++ return createHash('sha256').update(`${fileOf(type)}:${type.name}`).digest('hex').slice(0, 24)
++}
++
++export class MetadataError extends Error
++{
++
++ constructor(readonly code: MetadataErrorCode)
++ {
++   super(code)
++   this.name = 'MetadataError'
++ }
++
++}
++
++export class ReflectionMetadataProvider implements MetadataProvider
++{
++
++ constructor(
++   private readonly roots: Readonly<Record<string, MetadataRoot>>,
++   private readonly authorise: Authorise = () => true
++ ) {}
++
++ private async allowed(root: string, path: string, signal?: AbortSignal): Promise<boolean>
++ {
++   aborted(signal)
++   const configuration = Object.hasOwn(this.roots, root) ? this.roots[root] : undefined
++   if (!configuration) return false
++   const paths = configuration.paths
++   if (path && paths && !paths.some(allowed => (allowed === path) || allowed.startsWith(path + '.'))) return false
++   const result = await this.authorise(root, path)
++   aborted(signal)
++   return result
++ }
++
++ private async check(root: string, path: string, signal?: AbortSignal): Promise<void>
++ {
++   const parts = path ? path.split('.') : []
++   for (let depth = 0; depth <= parts.length; depth ++) {
++     if (!await this.allowed(root, parts.slice(0, depth).join('.'), signal)) throw new MetadataError('forbidden')
++   }
++ }
++
++ async context(root: string, path: string, signal?: AbortSignal): Promise<ObjectContext>
++ {
++   path = normalisePath(path)
++   await this.check(root, path, signal)
++   const type = rootType(this.roots[root])
++   const target = path ? this.resolved(type, path).target : type
++   if (!target) throw new MetadataError('unknown-target')
++   const context = new ReflectClass(target)
++   const names = this.names(context)
++   const properties: PropertyDescription[] = []
++   for (const name of names) {
++     const full = path ? `${path}.${name}` : name
++     if (await this.allowed(root, full, signal)) properties.push(this.description(context, name, full, names))
++   }
++   aborted(signal)
++   const { displayOf: classDisplay } = require('@itrocks/class-view') as typeof import('@itrocks/class-view')
++   return { label: classDisplay(target) || target.name, path, properties, type: typeId(target) }
++ }
++
++ private description(
++   context: ReflectClass, name: string, path: string, names: readonly string[]
++ ): PropertyDescription
++ {
++   const { displayOf } = require('@itrocks/property-view') as typeof import('@itrocks/property-view')
++   const property = new ReflectProperty(context, name as never)
++   const fact = property.relation
++   const description: PropertyDescription = {
++     kind: fact ? 'relation' : 'terminal', label: displayOf(context.type, name as never) || name,
++     name, order: names.indexOf(name), path
++   }
++   if (!fact) return description
++   let inverse = fact.inverse
++   let cardinality = fact.cardinality
++   if (fact.target) {
++     description.target = typeId(fact.target)
++     if (!inverse && (componentOf(context.type, name as never) || compositeOf(context.type, name as never))) {
++       const opposite = componentOf(context.type, name as never) ? compositeOf : componentOf
++       const candidates = Object.keys(new ReflectClass(fact.target).propertyTypes).filter(candidate => {
++         if (!opposite(fact.target!, candidate as never)) return false
++         const other = new ReflectProperty(fact.target!, candidate as never).relation
++         return other?.target && inherits(context.type, other.target)
++       })
++       if (candidates.length === 1) {
++         inverse = candidates[0]
++         const other = new ReflectProperty(fact.target, inverse as never).relation!
++         if (cardinality === 'unknown') {
++           const pair = `${fact.targetMultiplicity}/${other.targetMultiplicity}`
++           cardinality = pair === 'many/one' ? 'one-to-many'
++             : pair === 'one/many' ? 'many-to-one' : pair === 'one/one' ? 'one-to-one' : 'unknown'
++         }
++       }
++     }
++     if (inverse) {
++       const name = inverse.startsWith(fact.target.name + '.') ? inverse.slice(fact.target.name.length + 1) : inverse
++       inverse = Object.hasOwn(new ReflectClass(fact.target).propertyTypes, name)
++         ? relationId(fact.target, name) : inverse
++     }
++   }
++   description.relation = { cardinality, id: relationId(context.type, name), ...(inverse ? { inverse } : {}) }
++   return description
++ }
++
++ private names(context: ReflectClass): string[]
++ {
++   const { ReflectClass: ComposedClass } = require('@itrocks/reflect') as typeof import('@itrocks/reflect')
++   if (!(new ComposedClass(context.type) instanceof ReflectClass)) {
++     throw new Error('Metadata requires framework reflection composition before use')
++   }
++   const known = Object.keys(context.propertyTypes)
++   // Composed framework reflection enumerates types, so display defaults never construct domain records.
++   const { displayOrderOf } = require('@itrocks/property-view') as typeof import('@itrocks/property-view')
++   const order = displayOrderOf(context.type).map(String)
++   return [...new Set([...order.filter(name => known.includes(name)), ...known.sort()])]
++ }
++
++ async resolve(root: string, path: string, signal?: AbortSignal): Promise<PropertyDescription | ObjectContext>
++ {
++   path = normalisePath(path)
++   if (!path) return this.context(root, path, signal)
++   await this.check(root, path, signal)
++   const resolved = this.resolved(rootType(this.roots[root]), path)
++   const context = new ReflectClass(resolved.property.class.type)
++   aborted(signal)
++   return this.description(context, String(resolved.property.name), path, this.names(context))
++ }
++
++ private resolved(type: Type, path: string)
++ {
++   const reflection = require('@itrocks/reflect-path') as typeof import('@itrocks/reflect-path')
++   const { PropertyPathError, resolvePropertyPath } = reflection
++   try { return resolvePropertyPath(new ReflectClass(type), path) }
++   catch (error) {
++     if (!(error instanceof PropertyPathError)) throw error
++     throw new MetadataError(error.code === 'terminal-traversal' ? 'invalid-path' : error.code)
++   }
++ }
++
++}
+diff --git a/src/property-select.ts b/src/property-select.ts
+new file mode 100644
+index 0000000..9938a96
+--- /dev/null
++++ b/src/property-select.ts
+@@ -0,0 +1,67 @@
++import { Request }                     from '@itrocks/action-request'
++import { Type }                        from '@itrocks/class-type'
++import { config }                      from '@itrocks/config'
++import { normalisePath }               from '@itrocks/property-select'
++import { RootId }                      from '@itrocks/property-select'
++import { routes }                      from '@itrocks/route'
++import { MetadataError }               from './property-select-provider'
++import { ReflectionMetadataProvider }  from './property-select-provider'
++
++export type MetadataRoot = {
++ advice?: readonly string[]
++ paths?: readonly string[]
++ type: Type | string
++ version?: string
++}
++
++export type PropertySelectDependencies = {
++ authorise: (request: Request, root: RootId, path: string) => boolean | Promise<boolean>
++}
++
++export type PropertySelectConfiguration = { roots?: Readonly<Record<RootId, MetadataRoot>> }
++
++const dependencies: PropertySelectDependencies = { authorise: () => true }
++
++export { MetadataError }                 from './property-select-provider'
++export type { MetadataErrorCode }         from './property-select-provider'
++export { ReflectionMetadataProvider }     from './property-select-provider'
++
++export function bindPropertySelect(): void
++{
++ // Loaded after composition; action classes never trigger the framework bootstrap.
++ routes.add('/property-select/configuration', '@itrocks/framework/property-select-actions:MetadataConfiguration')
++ routes.add('/property-select/context', '@itrocks/framework/property-select-actions:MetadataContext')
++ routes.add('/property-select/resolve', '@itrocks/framework/property-select-actions:MetadataResolve')
++}
++
++export function createMetadataProvider(request: Request): ReflectionMetadataProvider
++{
++ const roots = (config.propertySelect as PropertySelectConfiguration | undefined)?.roots ?? {}
++ return new ReflectionMetadataProvider(roots, (root, path) => dependencies.authorise(request, root, path))
++}
++
++export async function metadataConfiguration(request: Request, root: RootId)
++ : Promise<{ advice: readonly string[]; version: string }>
++{
++ const provider = createMetadataProvider(request)
++ await provider.context(root, '')
++ const source = (config.propertySelect as PropertySelectConfiguration).roots![root]
++ const advice: string[] = []
++ for (const path of source.advice ?? []) {
++   try {
++     const canonical = normalisePath(path)
++     if (!canonical) continue
++     const description = await provider.resolve(root, canonical)
++     if (!('properties' in description) && (description.kind === 'relation')) advice.push(canonical)
++   }
++   catch (error) {
++     if (!(error instanceof MetadataError) && !(error instanceof TypeError)) throw error
++   }
++ }
++ return { advice: [...new Set(advice)], version: source.version ?? '1' }
++}
++
++export function propertySelectDependsOn(overrides: Partial<PropertySelectDependencies>): void
++{
++ Object.assign(dependencies, overrides)
++}
+diff --git a/src/reflect-class.ts b/src/reflect-class.ts
+index 5dcfeb0..1190a71 100644
+--- a/src/reflect-class.ts
++++ b/src/reflect-class.ts
+@@ -46,6 +46,19 @@ export class ReflectClass<T extends object = object> extends RC<T>
+    return properties
+  }
+
++ get propertyNames(): Array<keyof T>
++ {
++   const names = new Set(Object.keys(this.propertyTypes))
++   let prototype = this.type.prototype
++   while (prototype && prototype !== Object.prototype) {
++     for (const [name, descriptor] of Object.entries(Object.getOwnPropertyDescriptors(prototype))) {
++       if (descriptor.get && !name.startsWith('_')) names.add(name)
++     }
++     prototype = Object.getPrototypeOf(prototype)
++   }
++   return [...names].sort() as Array<keyof T>
++ }
++
+  get uses()
+  {
+    const value = usesOf(this.type)
+diff --git a/test/fixtures/metadata.ts b/test/fixtures/metadata.ts
+new file mode 100644
+index 0000000..cbeba0b
+--- /dev/null
++++ b/test/fixtures/metadata.ts
+@@ -0,0 +1,23 @@
++import { Invoice } from './invoice'
++
++export const metadataProbe = { constructions: 0, reads: 0 }
++
++export class MetadataInvoice extends Invoice
++{
++
++ hidden = ''
++ inherited = ''
++
++ constructor()
++ {
++   metadataProbe.constructions ++
++   super()
++ }
++
++ get secret(): string
++ {
++   metadataProbe.reads ++
++   throw new Error('Business getters must not execute')
++ }
++
++}
+diff --git a/test/fixtures/property-select-api.ts b/test/fixtures/property-select-api.ts
+new file mode 100644
+index 0000000..28e7088
+--- /dev/null
++++ b/test/fixtures/property-select-api.ts
+@@ -0,0 +1,19 @@
++import type { Request }                     from '@itrocks/action-request'
++import { createMetadataProvider }           from '@itrocks/framework/property-select'
++import { MetadataError }                    from '@itrocks/framework/property-select'
++import type { MetadataErrorCode }           from '@itrocks/framework/property-select'
++import type { MetadataRoot }                from '@itrocks/framework/property-select'
++import { ReflectionMetadataProvider }       from '@itrocks/framework/property-select'
++import type { MetadataProvider }            from '@itrocks/property-select'
++import { Invoice }                          from './invoice'
++
++const root: MetadataRoot = { advice: ['billing'], paths: ['billing.city.name'], type: Invoice, version: '1' }
++const provider: MetadataProvider = new ReflectionMetadataProvider({ invoice: root }, async () => true)
++const code: MetadataErrorCode = 'forbidden'
++const error: Error = new MetadataError(code)
++const factory: (request: Request) => MetadataProvider = createMetadataProvider
++// @ts-expect-error A provider cannot load business records.
++provider.read(Invoice, 1)
++// @ts-expect-error Root grants contain technical paths, not classes or records.
++const invalid: MetadataRoot = { paths: [Invoice], type: Invoice }
++void [error, factory, invalid, provider]
+diff --git a/test/metadata-browser.mjs b/test/metadata-browser.mjs
+new file mode 100644
+index 0000000..7f8c228
+--- /dev/null
++++ b/test/metadata-browser.mjs
+@@ -0,0 +1,114 @@
++import assert from 'node:assert/strict'
++
++if (!process.env.PS_PLAYWRIGHT_MODULE) throw new Error('Set PS_PLAYWRIGHT_MODULE to an installed Playwright module')
++const { chromium } = await import(process.env.PS_PLAYWRIGHT_MODULE)
++const origin = process.env.PS_METADATA_URL ?? 'http://127.0.0.1:13619'
++let browser
++try {
++ browser = await chromium.launch({ chromiumSandbox: true, headless: true })
++ const page = await browser.newPage()
++ const errors = []
++ const requests = []
++ const failures = []
++ page.on('requestfailed', request => failures.push({ error: request.failure()?.errorText, url: request.url() }))
++ page.on('pageerror', error => errors.push(error.message))
++ page.on('response', response => {
++   if (response.url().includes('/property-select/')) requests.push({ status: response.status(), url: response.url() })
++ })
++ await page.goto(origin + '/country?offset=0')
++ assert.match(await page.locator('body').innerText(), /Recipe France/)
++ const observed = await page.evaluate(async () => {
++   const { HttpMetadataProvider } = await import('/@itrocks/framework/property-select-metadata.js')
++   const { PropertySelect } = await import('/@itrocks/property-select/property-select.js')
++   const provider = new HttpMetadataProvider()
++   const context = await provider.context('invoice', '')
++   const root = await provider.resolve('invoice', '')
++   const deep = await provider.resolve('invoice', 'billing.city.name')
++   const tags = await provider.resolve('invoice', 'tags')
++   const reverse = await provider.resolve('invoice', 'tags.invoices')
++   const cycle = await provider.resolve('invoice', 'tags.invoices.tags.label')
++   const configuration = await provider.configuration('invoice')
++   const status = async (operation, root, path, extra = '') => {
++     const response = await fetch(`/property-select/${operation}/json?` + new URLSearchParams({ path, root }) + extra)
++     return { cache: response.headers.get('Cache-Control'), status: response.status, value: await response.json() }
++   }
++   const forbidden = await status('resolve', 'invoice', 'hidden')
++   const forbiddenAncestor = await status('resolve', 'invoice', 'billing.city.name', '&catalogue=restricted')
++   const restricted = await status('context', 'invoice', '', '&catalogue=restricted')
++   const restrictedAdvice = await status('configuration', 'invoice', '', '&catalogue=restricted')
++   const absentRoot = await status('context', 'absent', '')
++   const ambiguous = await status('resolve', 'invoice', 'ambiguous.name')
++   const malformed = await status('resolve', 'invoice', 'billing..city')
++   const terminal = await status('context', 'invoice', 'number')
++   const method = await fetch('/property-select/context/json?root=invoice', { method: 'POST' })
++   const cancel = new AbortController()
++   const cancellable = new HttpMetadataProvider({ fetch: (input, options) => {
++     const url = new URL(input, location.href)
++     url.searchParams.set('delay', '180')
++     return fetch(url, options)
++   } })
++   const pending = cancellable.context('invoice', 'billing', cancel.signal)
++   await new Promise(resolve => setTimeout(resolve, 30))
++   cancel.abort()
++   let aborted = false
++   try { await pending }
++   catch (error) { aborted = error.name === 'AbortError' }
++   let started
++   const entered = new Promise(resolve => { started = resolve })
++   const delayed = new HttpMetadataProvider({ fetch: async (input, options) => {
++     const url = new URL(input, location.href)
++     if (url.searchParams.get('path') === 'billing') {
++       url.searchParams.set('delay', '140')
++       started()
++     }
++     // The real network completes despite client cancellation, exercising late-result rejection.
++     return fetch(url, { ...options, signal: undefined })
++   } })
++   const selector = new PropertySelect({ metadata: delayed, root: 'invoice' })
++   await selector.mount()
++   const old = selector.navigate('billing')
++   await entered
++   const newer = await selector.navigate('delivery')
++   const stale = await old
++   const committed = selector.path
++   selector.dispose()
++   const probe = await fetch('/property-select-probe/probe/json').then(response => response.json())
++   return { aborted, absentRoot, ambiguous, committed, configuration, context, cycle, deep, forbidden,
++     forbiddenAncestor, malformed, method: method.status, newer, probe, restricted, restrictedAdvice,
++     reverse, root, stale, tags, terminal }
++ })
++ assert.equal(observed.context.properties[0].label, 'Invoice reference')
++ assert.ok(observed.context.properties.some(property => property.name === 'delivery'))
++ assert.equal(observed.context.properties.some(property => property.name === 'hidden'), false)
++ assert.deepEqual(observed.root, observed.context)
++ assert.equal(observed.deep.path, 'billing.city.name')
++ assert.equal(observed.tags.relation.cardinality, 'many-to-many')
++ assert.equal(observed.reverse.relation.inverse, observed.tags.relation.id)
++ assert.equal(observed.cycle.path, 'tags.invoices.tags.label')
++ assert.deepEqual(observed.configuration, { advice: ['billing', 'tags'], version: 'fixture-1' })
++ for (const name of ['forbidden', 'forbiddenAncestor', 'absentRoot']) {
++   assert.equal(observed[name].status, 403, name)
++   assert.deepEqual(observed[name].value, { error: 'forbidden' })
++   assert.equal(observed[name].cache, 'no-store')
++ }
++ assert.equal(observed.restricted.status, 200)
++ assert.equal(observed.restricted.value.properties.some(property => property.name === 'billing'), false)
++ assert.deepEqual(observed.restrictedAdvice.value, { advice: ['tags'], version: 'fixture-1' })
++ assert.equal(observed.ambiguous.status, 400)
++ assert.equal(observed.ambiguous.value.error, 'ambiguous-type')
++ assert.equal(observed.malformed.status, 400)
++ assert.equal(observed.terminal.status, 400)
++ assert.equal(observed.method, 400)
++ assert.equal(observed.aborted, true)
++ assert.equal(observed.newer, true)
++ assert.equal(observed.stale, false)
++ assert.equal(observed.committed, 'delivery')
++ assert.deepEqual(observed.probe, { attempts: [], constructions: 0, reads: 0 })
++ assert.ok(failures.some(failure => failure.url.includes('delay=180') && failure.error === 'net::ERR_ABORTED'))
++ assert.deepEqual(errors, [])
++ console.log(JSON.stringify({ browser: browser.version(), errors, failures, observed, origin, requests,
++   status: 'PASS' }, null, 2))
++}
++finally {
++ await browser?.close()
++}
+diff --git a/test/metadata-fixture.cjs b/test/metadata-fixture.cjs
+new file mode 100644
+index 0000000..18062e0
+--- /dev/null
++++ b/test/metadata-fixture.cjs
+@@ -0,0 +1,64 @@
++const { Action } = require('@itrocks/action')
++const { File } = require('@itrocks/class-file')
++const { Display: ClassDisplay } = require('@itrocks/class-view')
++const { config } = require('@itrocks/config')
++const { List } = require('@itrocks/list-properties')
++const { Display, DisplayOrder } = require('@itrocks/property-view')
++const { routes } = require('@itrocks/route')
++const { Relation } = require('@itrocks/reflect')
++const { dataSource } = require('@itrocks/storage')
++const { frontScripts } = require('@itrocks/template')
++const { propertySelectDependsOn } = require('@itrocks/framework/property-select')
++
++const attempts = []
++const models = {}
++
++frontScripts.push('/@itrocks/property-select/property-select.js')
++for (const name of ['address', 'city', 'invoice', 'line', 'metadata', 'tag']) {
++ const filename = require.resolve(`./fixtures/${name}.js`)
++ for (const [name, model] of Object.entries(require(filename))) {
++   if (typeof model !== 'function') continue
++   File(filename)(model)
++   models[name] = model
++ }
++}
++const { Invoice, Line, MetadataInvoice, Tag } = models
++Relation({ cardinality: 'one-to-many', inverse: 'invoice' })(Invoice.prototype, 'lines')
++Relation({ cardinality: 'many-to-one', inverse: 'lines' })(Line.prototype, 'invoice')
++Relation({ cardinality: 'many-to-many', inverse: 'invoices' })(Invoice.prototype, 'tags')
++Relation({ cardinality: 'many-to-many', inverse: 'tags' })(Tag.prototype, 'invoices')
++ClassDisplay('Invoice catalogue')(MetadataInvoice)
++Display('Invoice reference')(Invoice.prototype, 'number')
++DisplayOrder('number', 'billing', 'delivery', 'lines', 'tags')(MetadataInvoice)
++List('number')(MetadataInvoice)
++config.propertySelect = { roots: { invoice: { advice: ['billing', 'hidden', 'tags', 'absent', 'billing..city'],
++ type: MetadataInvoice, version: 'fixture-1' }, unknown: { type: Invoice } } }
++propertySelectDependsOn({ authorise: async (request, root, path) => {
++ // Synthetic request-scoped policy, deliberately observable only through real HTTP in the browser suite.
++ if (request.data.delay && path === 'billing') {
++   await new Promise(resolve => setTimeout(resolve, Number(request.data.delay)))
++ }
++ if (request.data.catalogue === 'restricted' && path === 'billing') return false
++ return path !== 'hidden' && path !== 'secret' && path !== 'number.secret'
++} })
++for (const operation of ['read', 'search', 'count', 'select']) {
++ const original = dataSource()[operation]
++ dataSource()[operation] = async function(type, ...args) {
++   if (Object.values(models).includes(type)) {
++     attempts.push(operation)
++     throw new Error(`Metadata attempted business ${operation}`)
++   }
++   return original.call(this, type, ...args)
++ }
++}
++class MetadataProbe extends Action
++{
++
++ async json()
++ {
++   return this.jsonResponse({ attempts, ...require('./fixtures/metadata.js').metadataProbe })
++ }
++
++}
++routes.add('/property-select-probe/probe', '/node_modules/@itrocks/framework/test/metadata-fixture.cjs:MetadataProbe')
++module.exports = { ...models, MetadataProbe }
+diff --git a/test/property-select-metadata.test.mjs b/test/property-select-metadata.test.mjs
+new file mode 100644
+index 0000000..a6b7f75
+--- /dev/null
++++ b/test/property-select-metadata.test.mjs
+@@ -0,0 +1,137 @@
++import assert from 'node:assert/strict'
++import { createRequire } from 'node:module'
++import test from 'node:test'
++
++const require = createRequire(import.meta.url)
++const { compose } = require('@itrocks/compose')
++const { ReflectionMetadataProvider, MetadataError } = require('@itrocks/framework/property-select')
++assert.equal(require.cache[require.resolve('@itrocks/framework')], undefined)
++compose('', {
++ '@itrocks/reflect:ReflectClass': require.resolve('../cjs/reflect-class') + ':ReflectClass',
++ '@itrocks/reflect:ReflectProperty': require.resolve('../cjs/reflect-property') + ':ReflectProperty'
++})
++const { File } = require('@itrocks/class-file')
++const { DisplayOrder, Display } = require('@itrocks/property-view')
++const { List, listOf } = require('@itrocks/list-properties')
++const { ReflectClass, Relation } = require('@itrocks/reflect')
++const models = {}
++for (const name of ['address', 'city', 'invoice', 'line', 'metadata', 'tag']) {
++ const file = require.resolve(`./fixtures/${name}.js`)
++ for (const [name, model] of Object.entries(require(file))) {
++   if (typeof model !== 'function') continue
++   File(file)(model)
++   models[name] = model
++ }
++}
++const { Invoice, Line, MetadataInvoice, Tag } = models
++Relation({ cardinality: 'one-to-many', inverse: 'invoice' })(Invoice.prototype, 'lines')
++Relation({ cardinality: 'many-to-one', inverse: 'lines' })(Line.prototype, 'invoice')
++Relation({ cardinality: 'many-to-many', inverse: 'invoices' })(Invoice.prototype, 'tags')
++Relation({ cardinality: 'many-to-many', inverse: 'tags' })(Tag.prototype, 'invoices')
++DisplayOrder('number', 'billing', 'tags')(MetadataInvoice)
++Display('Reference')(Invoice.prototype, 'number')
++List('number')(MetadataInvoice)
++const roots = { configured: { type: '/node_modules/@itrocks/framework/test/fixtures/invoice:Invoice' },
++ direct: { type: Invoice }, invoice: { type: MetadataInvoice } }
++
++// Every assertion below uses public ports and actual composed metadata; no business record is constructed.
++test('META-01 metadata relation facts, inheritance and logical inverse/N-N are serialisable', async () => {
++ const provider = new ReflectionMetadataProvider(roots)
++ const context = await provider.context('invoice', '')
++ assert.equal((await provider.resolve('configured', 'number')).path, 'number')
++ assert.equal(context.path, '')
++ assert.ok(context.properties.some(property => property.name === 'inherited'))
++ const tags = await provider.resolve('invoice', 'tags')
++ const back = await provider.resolve('invoice', 'tags.invoices')
++ assert.equal(tags.relation.cardinality, 'many-to-many')
++ assert.equal(back.relation.inverse, tags.relation.id)
++ const lines = await provider.resolve('invoice', 'lines')
++ assert.equal(lines.relation.cardinality, 'one-to-many')
++ assert.equal((await provider.resolve('invoice', 'lines.invoice')).relation.cardinality, 'many-to-one')
++ const tagContext = await provider.context('invoice', 'tags')
++ assert.equal(tagContext.properties.some(property => property.path === 'tags.label'), true)
++ const unknown = await provider.resolve('invoice', 'billing')
++ assert.equal(unknown.relation.cardinality, 'unknown')
++ assert.equal(unknown.relation.inverse, undefined)
++ assert.deepEqual(JSON.parse(JSON.stringify(context)), context)
++ assert.equal(require('./fixtures/metadata.js').metadataProbe.constructions, 0)
++ assert.equal(require('./fixtures/metadata.js').metadataProbe.reads, 0)
++})
++
++test('META-02 same authorisation on enumeration and every full-path prefix; presentation beyond List', async () => {
++ const seen = []
++ const provider = new ReflectionMetadataProvider(roots, async (root, path) => {
++   seen.push([root, path])
++   return !['billing', 'hidden', 'secret'].includes(path)
++ })
++ const context = await provider.context('invoice', '')
++ assert.equal(context.properties.some(property => property.name === 'billing'), false)
++ assert.equal(context.properties.some(property => property.name === 'secret'), false)
++ await assert.rejects(provider.resolve('invoice', 'billing.city.name'), { code: 'forbidden' })
++ await assert.rejects(provider.context('absent', ''), { code: 'forbidden' })
++ await assert.rejects(provider.context('__proto__', ''), { code: 'forbidden' })
++ assert.equal(context.properties[0].label, 'Reference')
++ assert.equal(context.properties[0].order, 0)
++ assert.deepEqual(listOf(MetadataInvoice), ['number'])
++ assert.ok(context.properties.some(property => property.name === 'delivery'))
++ assert.ok(seen.some(([, path]) => path === 'billing'))
++})
++
++test('META-03 two routes, finite cycles, ambiguous/unknown paths and denied ancestors', async () => {
++ const provider = new ReflectionMetadataProvider(roots)
++ const billing = await provider.resolve('invoice', 'billing.city.name')
++ const delivery = await provider.resolve('invoice', 'delivery.city.name')
++ assert.equal(billing.name, delivery.name)
++ assert.notEqual(billing.path, delivery.path)
++ const cycle = 'tags.invoices.tags.invoices.number'
++ assert.equal((await provider.resolve('invoice', cycle)).path, cycle)
++ await assert.rejects(provider.resolve('invoice', 'ambiguous.name'), { code: 'ambiguous-type' })
++ await assert.rejects(provider.context('invoice', 'unknown'), { code: 'unknown-target' })
++ await assert.rejects(provider.resolve('invoice', 'number.nope'), { code: 'invalid-path' })
++ await assert.rejects(provider.resolve('invoice', 'absent'), MetadataError)
++ await assert.rejects(provider.resolve('invoice', 'billing..city'), TypeError)
++ assert.ok(new ReflectClass(MetadataInvoice).propertyNames.includes('secret'))
++ assert.equal(require('./fixtures/metadata.js').metadataProbe.constructions, 0)
++ assert.equal(require('./fixtures/metadata.js').metadataProbe.reads, 0)
++})
++
++test('META-04 per-instance catalogue change, explicit path grants and aborted authorisation', async () => {
++ const first = new ReflectionMetadataProvider(roots)
++ assert.equal((await first.resolve('invoice', 'billing.city.name')).name, 'name')
++ const changed = new ReflectionMetadataProvider({
++   invoice: { paths: ['number', 'tags.label'], type: MetadataInvoice }
++ })
++ const changedContext = await changed.context('invoice', '')
++ assert.deepEqual(changedContext.properties.map(property => property.name), ['number', 'tags'])
++ assert.equal((await changed.resolve('invoice', 'tags.label')).path, 'tags.label')
++ await assert.rejects(changed.resolve('invoice', 'billing.city.name'), { code: 'forbidden' })
++ let release
++ const entered = new Promise(resolve => { release = resolve })
++ let resume
++ const barrier = new Promise(resolve => { resume = resolve })
++ const delayed = new ReflectionMetadataProvider(roots, async () => { release(); await barrier; return true })
++ const abort = new AbortController()
++ const pending = delayed.context('invoice', '', abort.signal)
++ await entered
++ abort.abort()
++ resume()
++ await assert.rejects(pending, { name: 'AbortError' })
++})
++
++
++test('META-01 composition merges only an unambiguous ownership inverse', async () => {
++ const { Component, Composite } = require('@itrocks/composition')
++ Component()(Invoice.prototype, 'lines')
++ Composite()(Line.prototype, 'invoice')
++ Relation()(Invoice.prototype, 'lines')
++ Relation()(Line.prototype, 'invoice')
++ const provider = new ReflectionMetadataProvider(roots)
++ const lines = await provider.resolve('direct', 'lines')
++ const inverse = await provider.resolve('direct', 'lines.invoice')
++ assert.equal(lines.relation.cardinality, 'one-to-many')
++ assert.equal(inverse.relation.cardinality, 'many-to-one')
++ assert.equal(inverse.relation.inverse, lines.relation.id)
++ Component()(Invoice.prototype, 'singular')
++ assert.equal((await provider.resolve('direct', 'lines.invoice')).relation.inverse, undefined)
++ assert.equal((await provider.resolve('direct', 'lines.invoice')).relation.cardinality, 'unknown')
++})

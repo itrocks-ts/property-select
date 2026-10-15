@@ -28,6 +28,8 @@
     "L1-META",
     "FIX-L1-META-1",
     "RETEST-L1-META-1",
+    "FIX-L1-META-2",
+    "RETEST-L1-META-2",
     "L2-UI",
     "V2-UI",
     "L2-HOME",
@@ -612,11 +614,82 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "A fresh verifier must replay the failed control route and metadata transport on the corrective commit.",
       "report": "reports/RETEST-L1-META-1.md",
+      "requirements": [
+        "DEP-09",
+        "DEP-10",
+        "VAL-03",
+        "VAL-07"
+      ],
+      "validation": "PASS: fresh owned country/default/explicit/later-page routes and status, independent sandboxed Chromium metadata/403/catalogue/abort/stale with zero business reads, builds, five META and nine projection assertions, selector suite and public files. FAIL: full list suite and real empty-column HTTP save (200 instead of 204), independently identical at original list 0.8.0. No waiver: FIX-L1-META-2 then RETEST-L1-META-2 required.",
+      "tested_checkpoints": {
+        "@itrocks/list": {
+          "sha": "7191d22217a7d087c197134bc09226a34d05fc60",
+          "version": "0.8.1"
+        },
+        "@itrocks/framework": {
+          "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+          "version": "0.9.3"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "81cfa9f52c9287411c258d261e964aae4a87a5e7",
+          "base_version": "0.1.2",
+          "version": "0.1.3",
+          "source": "Tracking-only retest delivery; runtime source unchanged"
+        }
+      }
+    },
+    {
+      "id": "FIX-L1-META-2",
+      "title": "Acknowledge empty column saves without business rendering",
+      "card": "tasks/FIX-L1-META-2.md",
+      "dependencies": [
+        "RETEST-L1-META-1"
+      ],
+      "packages": [
+        "@itrocks/list"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/list"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Explicit request intent, real SQL-backed lists and metadata cancellation cross owners; retain the independent full-suite gate.",
+      "report": "reports/FIX-L1-META-2.md",
+      "requirements": [
+        "DEP-09",
+        "DEP-10",
+        "VAL-03",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-L1-META-2",
+      "title": "Independently verify metadata and empty-column save recovery",
+      "card": "tasks/RETEST-L1-META-2.md",
+      "dependencies": [
+        "FIX-L1-META-2"
+      ],
+      "packages": [
+        "@itrocks/list",
+        "@itrocks/framework"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/framework"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Explicit request intent, real SQL-backed lists and metadata cancellation cross owners; retain the independent full-suite gate.",
+      "report": "reports/RETEST-L1-META-2.md",
       "requirements": [
         "DEP-09",
         "DEP-10",
@@ -629,7 +702,7 @@
       "title": "Standalone selector browser surface",
       "card": "tasks/L2-UI.md",
       "dependencies": [
-        "RETEST-L1-META-1"
+        "RETEST-L1-META-2"
       ],
       "packages": [
         "@itrocks/property-select"

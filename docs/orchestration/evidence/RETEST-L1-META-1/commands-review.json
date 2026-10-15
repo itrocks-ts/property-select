@@ -1,0 +1,20 @@
+[
+  {
+    "name": "review",
+    "argv": [
+      "python3",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/review.py"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "review.txt",
+    "sha256": "bd17d5c2f80181d5bac16efae0f0e69af4846f02e3d4abebb1df296323012b28"
+  }
+]

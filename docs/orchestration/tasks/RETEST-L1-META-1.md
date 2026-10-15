@@ -4,7 +4,8 @@
 
 Independently verify the corrected framework first-page route and L1-META contracts before any dependent feature.
 Prerequisite: attributable corrective checkpoint and completed `FIX-L1-META-1` report.
-Current status: `PENDING`. The verifier must be distinct from the corrector and must not spawn a sub-agent.
+Current status: `NEEDS_FIX`; see the [independent report](../reports/RETEST-L1-META-1.md).
+The verifier must be distinct from the corrector and must not spawn a sub-agent.
 
 ## References and entry points
 

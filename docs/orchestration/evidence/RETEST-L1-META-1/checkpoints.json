@@ -1,0 +1,21 @@
+{
+  "property-select": {
+    "sha": "81cfa9f52c9287411c258d261e964aae4a87a5e7",
+    "version": "0.1.3",
+    "status": " M package.json\n?? docs/orchestration/evidence/RETEST-L1-META-1/\n"
+  },
+  "list": {
+    "sha": "7191d22217a7d087c197134bc09226a34d05fc60",
+    "version": "0.8.1",
+    "status": ""
+  },
+  "framework": {
+    "sha": "3566dd9352a6ce25df58e6d365f50481e2787eca",
+    "version": "0.9.3",
+    "status": ""
+  },
+  "runtime": {
+    "node": "v24.0.1",
+    "npm": "11.6.4"
+  }
+}

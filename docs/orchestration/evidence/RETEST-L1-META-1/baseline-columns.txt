@@ -1,0 +1,29 @@
+✔ columns accept reordering and removing properties without restoring defaults (2.12482ms)
+✔ columns reject duplicates, unknown properties and malformed requests (0.352194ms)
+✔ removed columns, including the last column, survive session restoration (0.534125ms)
+✖ column changes persist and return 204 before any data query, even for an empty list (1.049295ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 54.506517
+
+✖ failing tests:
+
+test at ../../../../tmp/property-select-RETEST-L1-META-list-4h_ef2jg/test/columns.test.mjs:59:1
+✖ column changes persist and return 204 before any data query, even for an empty list (1.049295ms)
+  AssertionError [ERR_ASSERTION]: A column save must not fetch or render the list
+      at list.feed.getParams (file:///tmp/property-select-RETEST-L1-META-list-4h_ef2jg/test/columns.test.mjs:64:38)
+      at List.html (/tmp/property-select-RETEST-L1-META-list-4h_ef2jg/cjs/list.js:81:18)
+      at TestContext.<anonymous> (file:///tmp/property-select-RETEST-L1-META-list-4h_ef2jg/test/columns.test.mjs:65:31)
+      at async Test.run (node:internal/test_runner/test:1069:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:752:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: undefined,
+    operator: 'fail'
+  }

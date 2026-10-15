@@ -1,0 +1,12 @@
+{
+  "framework": {
+    "raw_path": "framework-review.diff.gz",
+    "raw_uncompressed_sha256": "8cf9e44769ead22236bbfa60ffecba6d857da5eeeed1e27c4f0d2f3d648eaffa",
+    "comparison": "aff37e0..3566dd9"
+  },
+  "list": {
+    "raw_path": "list-review.diff.gz",
+    "raw_uncompressed_sha256": "15cb04b26ee2f19e1b7f21fc4f342caefc44c110b701dd892a32f2d49382f891",
+    "comparison": "005702a..7191d22"
+  }
+}

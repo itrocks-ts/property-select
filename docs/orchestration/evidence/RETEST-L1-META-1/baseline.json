@@ -1,0 +1,12 @@
+{
+  "sha": "005702a6a0cd49740cdea37c2e5150dc80fb670b",
+  "version": "0.8.0",
+  "directory": "/tmp/property-select-RETEST-L1-META-list-4h_ef2jg",
+  "archive_argv": [
+    "git",
+    "archive",
+    "005702a6a0cd49740cdea37c2e5150dc80fb670b"
+  ],
+  "archive_cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+  "archive_sha256": "19bcb111447d90e7ef092df9a50491a5bb0d5240fecae36202688577b09ce05b"
+}

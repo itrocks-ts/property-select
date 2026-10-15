@@ -1,0 +1,52 @@
+[
+  {
+    "name": "framework-pack-valid",
+    "argv": [
+      "npm",
+      "pack",
+      "./node_modules/@itrocks/framework",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-retest-npm"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "framework-pack-valid.txt",
+    "sha256": "be9a6c20b3650ffda861a70c108c10205f55abed42f08dfc58c3e2d698118e77"
+  },
+  {
+    "name": "selector-pack-valid",
+    "argv": [
+      "npm",
+      "pack",
+      "./node_modules/@itrocks/property-select",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-retest-npm"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L1-META-1",
+      "PS_APP_PORT": "13639",
+      "PS_METADATA_URL": "http://127.0.0.1:13639",
+      "PS_FRAMEWORK_INITIALIZER": "node_modules/@itrocks/framework/test/metadata-fixture.cjs",
+      "PS_PLAYWRIGHT_MODULE": "/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+    },
+    "output": "selector-pack-valid.txt",
+    "sha256": "180f5bb931968c922df69043532587b44488fe03aff22a383f07db1e5ea14baa"
+  }
+]

@@ -1,0 +1,14 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+page.waitForURL: Timeout 30000ms exceeded.
+=========================== logs ===========================
+waiting for navigation to "http://127.0.0.1:13639/country" until "load"
+============================================================
+    at /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs:25:16 {
+  log: [],
+  name: 'TimeoutError'
+}
+
+Node.js v24.0.1

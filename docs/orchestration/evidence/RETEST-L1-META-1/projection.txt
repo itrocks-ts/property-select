@@ -1,0 +1,17 @@
+✔ public binding uses metadata without constructors and propagates optional ancestry (180.157625ms)
+✔ logical inverses resolve the explicit back-reference to its physical foreign key (44.927224ms)
+✔ N-N mapping reuses existing storage naming in both directions (45.913549ms)
+✔ ambiguous and unresolved targets and invalid inverse identities reject (1.166114ms)
+✔ schema override handles self links without inventing ambiguous conventional columns (0.845306ms)
+✔ unambiguous component metadata resolves a legacy back-reference (0.617767ms)
+✔ explicit inverse identity may be qualified and conflicting cardinality fails (0.378512ms)
+✔ singular inverse mappings preserve target multiplicity and require known ownership (0.472598ms)
+✔ public projection binding applies final property SQL read and save transformers (7.810597ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 374.399362

@@ -1,0 +1,1 @@
+PASS: public exports, package files, dependency direction, product owners and application/index preservation

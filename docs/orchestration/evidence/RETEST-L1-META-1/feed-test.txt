@@ -1,0 +1,11 @@
+✔ an absent offset resets the feed to the first page with a finite limit (0.925072ms)
+✔ explicit valid offsets and viewport limits retain their pagination values (0.299893ms)
+✔ invalid explicit offsets remain visible to downstream validation (0.193225ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 27.394794

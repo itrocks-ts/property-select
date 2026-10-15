@@ -95,6 +95,37 @@ offset. Framework remains `3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, 
 These are correction-author observations. L1-META retains NEEDS_FIX until independent `RETEST-L1-META-1` passes;
 no combined case or dependent feature is accepted by this entry.
 
+## RETEST-L1-META-1 independent observations
+
+Gate: **NEEDS_FIX**. Tested list `7191d22217a7d087c197134bc09226a34d05fc60` / `0.8.1`, framework
+`3566dd9352a6ce25df58e6d365f50481e2787eca` / `0.9.3`, selector runtime starting at
+`81cfa9f52c9287411c258d261e964aae4a87a5e7` / `0.1.2`; tracking-only delivery `0.1.3`.
+[Report](reports/RETEST-L1-META-1.md), [independent browser](evidence/RETEST-L1-META-1/independent-browser.txt),
+[commands](evidence/RETEST-L1-META-1/commands-core.json), [public review](evidence/RETEST-L1-META-1/review.json).
+
+- **Environment/pagination / PASS**: Fresh owned server 13639 serves bare country and offset 0 with both countries;
+  trusted Chromium click navigates to bare route. One-row later feed and empty end page retain offset semantics.
+  [Owned status](evidence/RETEST-L1-META-1/owned-status.txt) passes.
+- **META-01–META-03 provider/HTTP / PASS**: Independent root/full-path/deep/two-route/cycle, inverse/N-N and unknown
+  facts; labels/business order beyond initial List; identical 403 unknown/forbidden/ancestor; malformed/ambiguous
+  refusals and no-store JSON. Five META and nine existing projection assertions pass.
+- **META-04 catalogue capability / PASS**: Restricted paths and advice change per request; normal advice returns
+  after restrictions are removed. Persisted selector restoration remains L4/V4.
+- **PORT-03 navigation transport / PASS**: Started real browser fetch aborts with `net::ERR_ABORTED`; delayed real
+  HTTP 200 is discarded and newer delivery remains committed. No metadata business SQL/read attempts or domain
+  constructor/getter reads. Rendered search/gesture cases remain at their later gates.
+- **PORT-10 build/public owner checks / PASS**: Actual builds, public type fixtures, CJS/browser declarations,
+  files and runtime dependency direction pass; product owners and showtime/index are preserved.
+- **Existing list suite/LIFE-03 save / FAIL**: Explicit empty column save reaches feed instead of returning 204.
+  Independent immutable `0.8.0` and current `0.8.1` assertions fail identically; real `/country?columns=` returns
+  200 with a body. [Current](evidence/RETEST-L1-META-1/current-columns.txt),
+  [baseline](evidence/RETEST-L1-META-1/baseline-columns.txt),
+  [HTTP](evidence/RETEST-L1-META-1/empty-columns-http.txt). Pre-existence establishes attribution; the mandatory
+  suite remains failed. No waiver or combined PASS is recorded.
+
+L1-META and this retest retain NEEDS_FIX. PLAN requires `FIX-L1-META-2` then distinct `RETEST-L1-META-2` and rewires
+L2-UI. All overall cases and later browser/search/session/gesture observations retain their prior verdicts.
+
 ## Package ownership key
 
 | Implementation | Owning packages                                     |

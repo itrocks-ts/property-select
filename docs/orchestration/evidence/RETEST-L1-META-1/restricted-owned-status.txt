@@ -1,0 +1,15 @@
+mysqladmin: connect to server at 'localhost' failed
+error: 'Can't connect to local MySQL server through socket '/tmp/property-select-RETEST-L1-META-1/mysql.sock' (1)'
+Check that mysqld is running and that the socket: '/tmp/property-select-RETEST-L1-META-1/mysql.sock' exists!
+file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:21
+	if (result.status !== 0) throw new Error(`${program} failed: ${result.error ?? result.status}`)
+	                               ^
+
+Error: mysqladmin failed: 1
+    at execute (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:21:33)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:235:2
+    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)
+
+Node.js v24.0.1

@@ -4,7 +4,7 @@
 
 Display and activate the selector in the standalone browser demonstration.
 
-Prerequisites: RETEST-L1-META-1. Current status: `PENDING`.
+Prerequisites: RETEST-L1-META-2. Current status: `PENDING`.
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points
