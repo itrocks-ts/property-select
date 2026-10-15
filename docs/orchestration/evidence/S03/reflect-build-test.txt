@@ -1,0 +1,11 @@
+
+> @itrocks/reflect@0.3.0 build:test
+> npm run build:test:cjs && npm run build:test:esm
+
+
+> @itrocks/reflect@0.3.0 build:test:cjs
+> tsc -p tsconfig.test.cjs.json
+
+
+> @itrocks/reflect@0.3.0 build:test:esm
+> tsc -p tsconfig.test.esm.json

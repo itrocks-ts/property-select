@@ -5,7 +5,8 @@
 Planning coverage is complete; product acceptance is **NOT_RUN**. The only completed execution gate is VAL-01,
 backed by [VERIFY-ENVIRONMENT.md](VERIFY-ENVIRONMENT.md). VAL-02 plan coverage is independently approved by
 [P04](reports/P04.md). [S02](reports/S02.md) passes the neutral storage contract checks; SQL execution and browser
-observations remain pending.
+observations remain pending. [S03](reports/S03.md) passes reflection relation-fact checks; typed path resolution
+and provider/search observations remain pending.
 Overall product cases below remain NOT_RUN until all their stage observations pass, including SQL and browser cases.
 No fixture smoke is product proof.
 
@@ -80,7 +81,7 @@ oracle.
 | ----------- | -------------- | ----------------- | --------------------- |
 | API-01      | L1 S04         | V2-UI VSQL        | T01, T11              |
 | API-02      | L1             | V2-UI             | T01                   |
-| API-03      | L1-META L3     | V3                | T26, META-02, PORT-03 |
+| API-03      | S03 L1-META L3 | V3                | T26, META-02, PORT-03 |
 
 - **API-01**: String/segment paths agree; root is navigable only.
 - **API-02**: Root, used paths, intentions and applied acknowledgements cross narrow ports.
@@ -429,6 +430,10 @@ work and unique columns persist. Proof: `evidence/<gate>/T26.*`; current verdict
 - **T27** — Expected: Scroll a wide table to both ends; pane/header controls remain visible and open the same pane
 on desktop and touch. Proof: `evidence/<gate>/T27.*`; current verdict: `NOT_RUN`.
 
+S03 prerequisite facts for T13: `PASS` for explicit N-1/1-N/N-N inverse/cardinality and unknown defaults;
+[owner tests](evidence/S03/reflect-test.txt) and [report](reports/S03.md), reflect
+`8e42bd2009a6ba4e708ae20ca519fc44681ebbb7` / `0.3.0`. Automatic branch-return behaviour remains `NOT_RUN` until L3/V3.
+
 ## SQL additional cases
 
 Implementation: `S02 S03 S04 S05 S06 S07`. Independent gates: `VSQL V2 V7`. Methods: U,C,I; B for rendered cases.
@@ -546,6 +551,12 @@ Expected: Direct/inherited/optional/collection and logical inverse/N-N descripti
 remain explicit; no value getter/read occurs.
 
 Proof: `evidence/<gate>/META-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+S03 owner observation: `PASS` for direct/inherited/optional/collection targets, explicit inverse/N-N/unknown facts,
+inherited defaults and zero record getter/constructor reads. [Tests](evidence/S03/reflect-test.txt) and
+[report](reports/S03.md), reflect `8e42bd2009a6ba4e708ae20ca519fc44681ebbb7` / `0.3.0`.
+Typed traversal and provider descriptions remain `NOT_RUN` until S04/L1-META and their independent gates.
+
 ### META-02: Permission and presentation
 
 Expected: Both enumerate and resolve full path enforce the same authorisation; labels/order reuse display owners and
@@ -558,6 +569,11 @@ Expected: Resolve two-level/deep paths and multiple routes to same class; ambigu
 never permits uncertain automatic return.
 
 Proof: `evidence/<gate>/META-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+S03 owner observation: `PASS` for preserving ambiguous candidates with unknown target/multiplicity and for late
+resolution of deferred metadata. [Tests](evidence/S03/reflect-test.txt), reflect
+`8e42bd2009a6ba4e708ae20ca519fc44681ebbb7` / `0.3.0`. Path errors and automatic cycle decisions remain `NOT_RUN`.
+
 ### META-04: Invalidated catalogue
 
 Expected: Change allowed paths between save/restore; truncate branch to valid prefix, discard invalid advice and
@@ -639,6 +655,12 @@ S02 owner observation: `PASS` for public CJS exports/declarations, package allow
 [package files](evidence/S02/storage-pack.txt) and [SOLID review](reports/S02.md), `storage`
 `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`. Browser assets and remaining owners remain `NOT_RUN`.
 
+S03 owner observation: `PASS` for public CJS/ESM relation exports, cross-facade declarations, readonly type fixtures,
+package allowlist and neutral dependency direction. [Build](evidence/S03/reflect-build.txt),
+[type fixtures](evidence/S03/reflect-build-test.txt), [package files](evidence/S03/reflect-pack.json) and
+[SOLID review](reports/S03.md), reflect `8e42bd2009a6ba4e708ae20ca519fc44681ebbb7` / `0.3.0`.
+Browser assets and remaining owners remain `NOT_RUN`.
+
 ## PANE additional cases
 
 Implementation: `L2-HOME L2-LIST L6`. Independent gates: `V2-HOME V2 V6 V7`. Methods: C,B.
@@ -711,6 +733,9 @@ an implemented feature or use a simulated replacement for a required browser/dat
 
 - S02: Neutral projection/error/options contract, public API typecheck, inherited unsupported-adapter rejection
   and adapter compilation. This passes only these storage observations; SQL/hydration/browser cases remain NOT_RUN.
+- S03: Neutral relation targets/inverses/cardinalities, unknown defaults, inherited/optional/collection metadata,
+  zero getter reads, public CJS/ESM exports and type fixtures. This passes only the reflection-fact portions of
+  META-01/META-03 and prerequisite facts for T13; path/provider/search/SQL/browser observations remain NOT_RUN.
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and
@@ -779,7 +804,8 @@ and record PID/stop commands.
 
 No product tests, browser interaction, database projection or final delivery has been executed by P03. Its checks only
 validate plan structure and coverage. P04 independently approves the repaired contracts and stage obligations;
-S02 delivers the neutral storage API; reflection, SQL execution and consumer implementations remain pending.
+S02 delivers the neutral storage API; S03 delivers relation facts. Typed paths, SQL execution and consumers
+remain pending.
 Installed IAB supplies real navigation/viewport checks; verified Playwright supplies touch input. Native phone edge
 gestures, physical system interruptions and keyboard behaviour remain conditional on available hardware. All browser
 and emulated-touch cases are mandatory. The standalone support currently contains a placeholder; L2-UI replaces it with

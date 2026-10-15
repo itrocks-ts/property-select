@@ -1,0 +1,38 @@
+{
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": "",
+    "initial_sha": "c5ad9bfeb6b6462680cd984f90d3f0dfc32543ed",
+    "initial_version": "0.2.7",
+    "initial_status": ""
+  },
+  "property-select": {
+    "sha": "3038f47462a3b4916a74c5459ad2da980eb5e663",
+    "version": "0.0.16",
+    "status": " M package.json\n?? docs/orchestration/evidence/S03/\n",
+    "initial_version": "0.0.15",
+    "initial_status": ""
+  },
+  "property-type": {
+    "sha": "f2beb261d26d73004ec785fdab8512d1a8cd4819",
+    "version": "0.4.0",
+    "status": ""
+  },
+  "composition": {
+    "sha": "c47991453d423cac27cc2b9ffcb741983c604ac3",
+    "version": "0.2.3",
+    "status": ""
+  },
+  "decorator": {
+    "sha": "be458a84956261775c1dd88ec059192e85138025",
+    "version": "0.2.3",
+    "status": ""
+  },
+  "showtime": {
+    "sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "working_files_absent": true
+  }
+}

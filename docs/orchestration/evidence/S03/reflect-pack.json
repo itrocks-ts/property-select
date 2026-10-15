@@ -1,0 +1,141 @@
+[
+  {
+    "id": "@itrocks/reflect@0.3.0",
+    "name": "@itrocks/reflect",
+    "version": "0.3.0",
+    "size": 8070,
+    "unpackedSize": 38734,
+    "shasum": "e5e80f154c7da386a05b6e65d95e458c3eb29532",
+    "integrity": "sha512-3eoYxMK/lWQqaxfyBx8O6CHSN7221L1y4Y28fbEGmvgRLR2VNGG4pyYfe920XpHw0ZBrpNVsFQ5jCl/Lr5gn2Q==",
+    "filename": "itrocks-reflect-0.3.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 8581,
+        "mode": 420
+      },
+      {
+        "path": "cjs/class.d.ts",
+        "size": 863,
+        "mode": 420
+      },
+      {
+        "path": "cjs/class.js",
+        "size": 4677,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property.d.ts",
+        "size": 720,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property.js",
+        "size": 2216,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect.d.ts",
+        "size": 396,
+        "mode": 420
+      },
+      {
+        "path": "cjs/reflect.js",
+        "size": 850,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relation-fact.d.ts",
+        "size": 279,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relation-fact.js",
+        "size": 2609,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relation.d.ts",
+        "size": 935,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relation.js",
+        "size": 706,
+        "mode": 420
+      },
+      {
+        "path": "esm/class.d.ts",
+        "size": 863,
+        "mode": 420
+      },
+      {
+        "path": "esm/class.js",
+        "size": 4347,
+        "mode": 420
+      },
+      {
+        "path": "esm/esm.d.ts",
+        "size": 11,
+        "mode": 420
+      },
+      {
+        "path": "esm/esm.js",
+        "size": 712,
+        "mode": 420
+      },
+      {
+        "path": "esm/property.d.ts",
+        "size": 720,
+        "mode": 420
+      },
+      {
+        "path": "esm/property.js",
+        "size": 2006,
+        "mode": 420
+      },
+      {
+        "path": "esm/reflect.d.ts",
+        "size": 396,
+        "mode": 420
+      },
+      {
+        "path": "esm/reflect.js",
+        "size": 213,
+        "mode": 420
+      },
+      {
+        "path": "esm/relation-fact.d.ts",
+        "size": 279,
+        "mode": 420
+      },
+      {
+        "path": "esm/relation-fact.js",
+        "size": 2394,
+        "mode": 420
+      },
+      {
+        "path": "esm/relation.d.ts",
+        "size": 935,
+        "mode": 420
+      },
+      {
+        "path": "esm/relation.js",
+        "size": 546,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1713,
+        "mode": 420
+      }
+    ],
+    "entryCount": 25,
+    "bundled": []
+  }
+]

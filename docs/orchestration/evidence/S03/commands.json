@@ -1,0 +1,72 @@
+[
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "reflect-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect",
+      "run",
+      "build:test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "reflect-build-test.txt"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "reflect-test.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect",
+    "exit_code": 0,
+    "output": "reflect-pack.json"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/reflect",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "reflect-diff-check.txt"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/property-select",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit_code": 0,
+    "output": "tracking-diff-check.txt"
+  }
+]

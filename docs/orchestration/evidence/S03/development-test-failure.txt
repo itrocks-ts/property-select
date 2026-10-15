@@ -1,0 +1,29 @@
+✔ ambiguous and unresolved declarations retain uncertainty (136.357896ms)
+✖ collection elements and optionality do not invent opposite-end cardinality (0.516512ms)
+✔ deferred type targets resolve when their metadata becomes available (0.34301ms)
+✔ declarations and inherited defaults stay independent of record values (90.598481ms)
+✔ explicit inverse and all known cardinalities survive unchanged (136.071308ms)
+✔ metadata defaults, inheritance and overrides use the public decorator convention (0.334378ms)
+✔ nullable singular targets and absent declarations keep separate facts (0.173971ms)
+✔ public import and require expose the additive API and legacy classes (103.451949ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 7
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 509.148271
+
+✖ failing tests:
+
+test at node_modules/@itrocks/reflect/test/property-select.test.mjs:42:1
+✖ collection elements and optionality do not invent opposite-end cardinality (0.516512ms)
+  TypeError: Cannot read properties of undefined (reading 'target')
+      at TestContext.<anonymous> (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/test/property-select.test.mjs:56:21)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1062:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:752:18)
+      at Test.postRun (node:internal/test_runner/test:1191:19)
+      at Test.run (node:internal/test_runner/test:1119:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:332:3)

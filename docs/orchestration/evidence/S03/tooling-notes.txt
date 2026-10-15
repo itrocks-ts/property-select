@@ -1,0 +1,22 @@
+S03 development observations (superseded by final PASS outputs)
+
+1. Node 24.0.1 relative test discovery:
+   node --test node_modules/@itrocks/reflect/test/property-select.test.mjs
+   exited 1 with "Could not find 'node_modules/@itrocks/reflect/test/property-select.test.mjs'".
+   The absolute filename with --test-isolation=none runs all eight tests. The task card records it.
+
+2. Initially two fixture-only subclass tests lacked class-file metadata / adjacent .d.ts files.
+   They failed ENOENT on '.d.ts'. Moving the subclass into the compiled owner fixture directory and registering
+   File with its runtime path supplies the existing reflection prerequisites. No product fallback was added.
+
+3. An extended fixture initially expected `(Customer | null)[]` to expose Customer. Existing property-type instead
+   returns CollectionType(Array, UnknownType('(Customer | null)')). Its exact failed test output is retained in
+   development-test-failure.txt. The final fixture explicitly declares the relation and asserts preserved unknown
+   target, many multiplicity and nonoptional container. Other assertions retain resolved optional, collection and
+   nullable singular coverage. Parenthesised element type syntax is a type/AST-owner limitation, not a reason to
+   invent a target or add another parser in reflect. No mandatory S03 check is omitted.
+
+4. A width review found a 121-column new helper signature. It was wrapped to the handbook convention.
+   An existing 162-column README example line predates this delivery and is excluded from new-line width checks.
+
+5. Captured npm build output omits trailing empty lines to satisfy Git whitespace checks.

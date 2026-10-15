@@ -1,0 +1,30 @@
+PASS: reflect committed source/tests/README/manifest are clean
+PASS: reflect tested commit is 8e42bd2009a6ba4e708ae20ca519fc44681ebbb7
+PASS: public CJS/ESM facade, relation runtime and declaration files are in package inventory
+PASS: package inventory excludes source/tests/maps
+PASS: dry-run inventory version is 0.3.0
+PASS: eight final runtime tests pass without skipped cases
+PASS: command passed: npm --prefix node_modules/@itrocks/reflect run build
+PASS: command passed: npm --prefix node_modules/@itrocks/reflect run build:test
+PASS: command passed: node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/test/property-select.test.mjs
+PASS: command passed: npm pack --dry-run --json
+PASS: command passed: git -C node_modules/@itrocks/reflect diff --check
+PASS: new public decorator import has direct installed owner dependency
+PASS: reflect keywords are unique and sorted
+PASS: reflect description agrees with README opening
+PASS: new Markdown/source lines meet 120-column convention; local Markdown links resolve
+PASS: plan records S03 completed at delivered version
+PASS: no combined product acceptance was promoted
+PASS: showtime HEAD preserved
+PASS: showtime has only its two initial AD statuses
+PASS: both initial index blobs preserved
+PASS: both application working files remain absent
+PASS: property-type remains clean and unchanged
+PASS: composition remains clean and unchanged
+PASS: decorator remains clean and unchanged
+PASS: no tracked lockfile in reflect
+PASS: no tracked lockfile in property-select
+PASS: owner and tracking whitespace checks pass; complete owner diff reviewed before explicit-path staging
+SOLID: reflect owns neutral facts; public type/decorator helpers reused; no SQL/framework/presentation import.
+SOLID: separate declaration/fact helper; additive accessor preserves existing reflection subclass contracts.
+NOT_RUN: browser, services, SQL, provider authorisation, full path traversal and search-cycle behaviour.

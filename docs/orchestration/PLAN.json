@@ -222,7 +222,7 @@
         "node_modules/@itrocks/reflect"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Optional, inherited and explicit inverse/cardinality facts control both search cycles and SQL multiplicity.",
@@ -234,7 +234,14 @@
         "SEA-08",
         "SEA-09",
         "DEP-03"
-      ]
+      ],
+      "tested_checkpoints": {
+        "@itrocks/reflect": {
+          "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+          "version": "0.3.0"
+        }
+      },
+      "validation": "PASS: CJS/ESM builds, build:test positive/negative type fixtures, eight runtime tests, public cross-facade metadata and package files"
     },
     {
       "id": "S04",
