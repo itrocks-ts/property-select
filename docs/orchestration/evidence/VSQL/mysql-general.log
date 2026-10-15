@@ -1,0 +1,697 @@
+2026-10-15T22:11:34.927953Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`, `t1`.`id` AS `p2`, `t1`.`name` AS `p3`, `t3`.`id` AS `p4`, `t2`.`id` AS `p5`, `t3`.`name` AS `p6`, `t4`.`id` AS `p7`, `t4`.`street` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_address` AS `t4` ON `t0`.`delivery_address_id` = `t4`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:34.987322Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`, `t4`.`id` AS `p5`, `t4`.`name` AS `p6`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:34.993257Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+WHERE `t0`.`id` = 1
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:34.995690Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+WHERE `t0`.`id` = 1
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:34.996758Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t4`.`id` AS `p4`, `t4`.`name` AS `p5`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+WHERE `t0`.`id` = 1
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:34.998452Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`, `t5`.`id` AS `p5`, `t4`.`id` AS `p6`, `t6`.`id` AS `p7`, `t6`.`name` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_address` AS `t4` ON `t0`.`delivery_address_id` = `t4`.`id`
+LEFT JOIN `ps_city` AS `t5` ON `t4`.`city_id` = `t5`.`id`
+LEFT JOIN `ps_country` AS `t6` ON `t5`.`country_id` = `t6`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.003214Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+WHERE `t0`.`id` = 1
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.004541Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+WHERE `t0`.`active` = 1 AND `t2`.`name` = 'Cedar'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.005891Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+WHERE `t0`.`active` = 1 AND `t2`.`name` = 'Cedar'
+2026-10-15T22:11:35.007141Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t4`.`id` AS `p1`, `t3`.`id` AS `p2`, `t2`.`id` AS `p3`, `t1`.`id` AS `p4`, `t4`.`name` AS `p5`, `t6`.`id` AS `p6`, `t5`.`id` AS `p7`, `t6`.`name` AS `p8`, `t0`.`note` AS `p9`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+LEFT JOIN `ps_address` AS `t5` ON `t0`.`delivery_address_id` = `t5`.`id`
+LEFT JOIN `ps_city` AS `t6` ON `t5`.`city_id` = `t6`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.012805Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t4`.`id` AS `p1`, `t3`.`id` AS `p2`, `t2`.`id` AS `p3`, `t1`.`id` AS `p4`, `t4`.`name` AS `p5`, `t6`.`id` AS `p6`, `t5`.`id` AS `p7`, `t6`.`name` AS `p8`, `t0`.`note` AS `p9`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+LEFT JOIN `ps_address` AS `t5` ON `t0`.`delivery_address_id` = `t5`.`id`
+LEFT JOIN `ps_city` AS `t6` ON `t5`.`city_id` = `t6`.`id`
+WHERE `t0`.`number` = 'no such number'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.013369Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.015748Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`p0` AS `p1`, `t32`.`id` AS `p2`, `t31`.`id` AS `p3`, `t30`.`id` AS `p4`, `t29`.`id` AS `p5`, `t28`.`id` AS `p6`, `t27`.`id` AS `p7`, `t26`.`id` AS `p8`, `t25`.`id` AS `p9`, `t24`.`id` AS `p10`, `t23`.`id` AS `p11`, `t22`.`id` AS `p12`, `t21`.`id` AS `p13`, `t20`.`id` AS `p14`, `t19`.`id` AS `p15`, `t18`.`id` AS `p16`, `t17`.`id` AS `p17`, `t16`.`id` AS `p18`, `t15`.`id` AS `p19`, `t14`.`id` AS `p20`, `t13`.`id` AS `p21`, `t12`.`id` AS `p22`, `t11`.`id` AS `p23`, `t10`.`id` AS `p24`, `t9`.`id` AS `p25`, `t8`.`id` AS `p26`, `t7`.`id` AS `p27`, `t6`.`id` AS `p28`, `t5`.`id` AS `p29`, `t4`.`id` AS `p30`, `t3`.`id` AS `p31`, `t2`.`id` AS `p32`, `t1`.`id` AS `p33`, `t32`.`name` AS `p34`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_customer` AS `t2` ON `t1`.`parent_id` = `t2`.`id`
+LEFT JOIN `ps_customer` AS `t3` ON `t2`.`parent_id` = `t3`.`id`
+LEFT JOIN `ps_customer` AS `t4` ON `t3`.`parent_id` = `t4`.`id`
+LEFT JOIN `ps_customer` AS `t5` ON `t4`.`parent_id` = `t5`.`id`
+LEFT JOIN `ps_customer` AS `t6` ON `t5`.`parent_id` = `t6`.`id`
+LEFT JOIN `ps_customer` AS `t7` ON `t6`.`parent_id` = `t7`.`id`
+LEFT JOIN `ps_customer` AS `t8` ON `t7`.`parent_id` = `t8`.`id`
+LEFT JOIN `ps_customer` AS `t9` ON `t8`.`parent_id` = `t9`.`id`
+LEFT JOIN `ps_customer` AS `t10` ON `t9`.`parent_id` = `t10`.`id`
+LEFT JOIN `ps_customer` AS `t11` ON `t10`.`parent_id` = `t11`.`id`
+LEFT JOIN `ps_customer` AS `t12` ON `t11`.`parent_id` = `t12`.`id`
+LEFT JOIN `ps_customer` AS `t13` ON `t12`.`parent_id` = `t13`.`id`
+LEFT JOIN `ps_customer` AS `t14` ON `t13`.`parent_id` = `t14`.`id`
+LEFT JOIN `ps_customer` AS `t15` ON `t14`.`parent_id` = `t15`.`id`
+LEFT JOIN `ps_customer` AS `t16` ON `t15`.`parent_id` = `t16`.`id`
+LEFT JOIN `ps_customer` AS `t17` ON `t16`.`parent_id` = `t17`.`id`
+LEFT JOIN `ps_customer` AS `t18` ON `t17`.`parent_id` = `t18`.`id`
+LEFT JOIN `ps_customer` AS `t19` ON `t18`.`parent_id` = `t19`.`id`
+LEFT JOIN `ps_customer` AS `t20` ON `t19`.`parent_id` = `t20`.`id`
+LEFT JOIN `ps_customer` AS `t21` ON `t20`.`parent_id` = `t21`.`id`
+LEFT JOIN `ps_customer` AS `t22` ON `t21`.`parent_id` = `t22`.`id`
+LEFT JOIN `ps_customer` AS `t23` ON `t22`.`parent_id` = `t23`.`id`
+LEFT JOIN `ps_customer` AS `t24` ON `t23`.`parent_id` = `t24`.`id`
+LEFT JOIN `ps_customer` AS `t25` ON `t24`.`parent_id` = `t25`.`id`
+LEFT JOIN `ps_customer` AS `t26` ON `t25`.`parent_id` = `t26`.`id`
+LEFT JOIN `ps_customer` AS `t27` ON `t26`.`parent_id` = `t27`.`id`
+LEFT JOIN `ps_customer` AS `t28` ON `t27`.`parent_id` = `t28`.`id`
+LEFT JOIN `ps_customer` AS `t29` ON `t28`.`parent_id` = `t29`.`id`
+LEFT JOIN `ps_customer` AS `t30` ON `t29`.`parent_id` = `t30`.`id`
+LEFT JOIN `ps_customer` AS `t31` ON `t30`.`parent_id` = `t31`.`id`
+LEFT JOIN `ps_customer` AS `t32` ON `t31`.`parent_id` = `t32`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.028717Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE `t0`.`number` = '\' OR 1=1 --'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.076964Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`amount` AS `p1`, `t0`.`active` AS `p2`, `t0`.`issued_at` AS `p3`, `t0`.`note` AS `p4`
+FROM `ps_invoice` AS `t0`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.083176Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+WHERE `t4`.`name` = 'Aster'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.084484Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+WHERE `t4`.`name` = 'Aster'
+2026-10-15T22:11:35.086534Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t5`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+LEFT JOIN `ps_address` AS `t5` ON `t0`.`delivery_address_id` = `t5`.`id`
+WHERE `t4`.`name` = 'Aster'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.089843Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.092442Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.094854Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+ORDER BY `t2`.`name` ASC, `t0`.`id` ASC
+LIMIT 50 OFFSET 0
+2026-10-15T22:11:35.096473Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+ORDER BY `t2`.`name` ASC, `t0`.`id` ASC
+LIMIT 50 OFFSET 50
+2026-10-15T22:11:35.098003Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+ORDER BY `t2`.`name` ASC, `t0`.`id` ASC
+LIMIT 50 OFFSET 100
+2026-10-15T22:11:35.099236Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+ORDER BY `t2`.`name` ASC, `t0`.`id` ASC
+LIMIT 50 OFFSET 137
+2026-10-15T22:11:35.099934Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_address` AS `t1` ON `t0`.`delivery_address_id` = `t1`.`id`
+LEFT JOIN `ps_city` AS `t2` ON `t1`.`city_id` = `t2`.`id`
+ORDER BY `t2`.`name` ASC, `t0`.`id` ASC
+LIMIT 50 OFFSET 0
+2026-10-15T22:11:35.100481Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+2026-10-15T22:11:35.101155Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+ORDER BY `t0`.`id` ASC
+LIMIT 0 OFFSET 0
+2026-10-15T22:11:35.101410Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+ORDER BY `t0`.`id` ASC
+LIMIT 2 OFFSET 0
+2026-10-15T22:11:35.110418Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+ORDER BY `t0`.`number` DESC, `t0`.`id` ASC
+2026-10-15T22:11:35.111234Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+ORDER BY `t1`.`id` ASC, `t0`.`id` ASC
+2026-10-15T22:11:35.205759Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.207979Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+2026-10-15T22:11:35.208700Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.209345Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.209983Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.210612Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.211253Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.212399Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t3`
+WHERE `t0`.`id` = `t3`.`invoice_id` AND `t3`.`label` = 'L0')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.218572Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.219592Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+2026-10-15T22:11:35.220212Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.220857Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.221418Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.221962Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.222477Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.223598Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t3`
+WHERE `t0`.`id` = `t3`.`invoice_id` AND `t3`.`label` IS NULL)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.225807Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.226396Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+2026-10-15T22:11:35.227026Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.227550Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.228201Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.228860Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.229487Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`label` = 'L0' AND `t1`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.230516Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t3`
+WHERE `t0`.`id` = `t3`.`invoice_id` AND `t3`.`label` = 'L0' AND `t3`.`quantity` = 5)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.231286Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.232425Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+2026-10-15T22:11:35.233349Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.234125Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.234926Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.235604Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.236266Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.237369Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t3`
+WHERE `t0`.`id` = `t3`.`invoice_id` AND `t3`.`quantity` > 2)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.240735Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.242164Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+2026-10-15T22:11:35.242881Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.243672Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.244446Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.245160Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.245862Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND `t2`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.246924Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_tag` AS `t4` ON `t3`.`ps_tag_id` = `t4`.`id`
+WHERE `t0`.`id` = `t3`.`ps_invoice_id` AND `t4`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.250213Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.251666Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+2026-10-15T22:11:35.252612Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.253478Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.254373Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.255210Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.256149Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t1`
+WHERE `t0`.`id` = `t1`.`invoice_id` AND `t1`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t2`
+INNER JOIN `ps_tag` AS `t3` ON `t2`.`ps_tag_id` = `t3`.`id`
+WHERE `t0`.`id` = `t2`.`ps_invoice_id` AND `t3`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.257427Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_line` AS `t3`
+WHERE `t0`.`id` = `t3`.`invoice_id` AND `t3`.`quantity` > 2) AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t4`
+INNER JOIN `ps_tag` AS `t5` ON `t4`.`ps_tag_id` = `t5`.`id`
+WHERE `t0`.`id` = `t4`.`ps_invoice_id` AND `t5`.`name` = 'Tag 1')
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.260206Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.263646Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+2026-10-15T22:11:35.265942Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 0
+2026-10-15T22:11:35.268111Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 17
+2026-10-15T22:11:35.270633Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 34
+2026-10-15T22:11:35.272789Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 51
+2026-10-15T22:11:35.274980Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invoice` AS `t0`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t1`
+INNER JOIN `ps_tag` AS `t2` ON `t1`.`ps_tag_id` = `t2`.`id`
+WHERE `t0`.`id` = `t1`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_invoice` AS `t4` ON `t3`.`ps_invoice_id` = `t4`.`id`
+WHERE `t2`.`id` = `t3`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t5`
+WHERE `t4`.`id` = `t5`.`invoice_id` AND `t5`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+LIMIT 17 OFFSET 102
+2026-10-15T22:11:35.277538Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t3`
+INNER JOIN `ps_tag` AS `t4` ON `t3`.`ps_tag_id` = `t4`.`id`
+WHERE `t0`.`id` = `t3`.`ps_invoice_id` AND EXISTS (SELECT 1 FROM `ps_invoice_ps_tag` AS `t5`
+INNER JOIN `ps_invoice` AS `t6` ON `t5`.`ps_invoice_id` = `t6`.`id`
+WHERE `t4`.`id` = `t5`.`ps_tag_id` AND EXISTS (SELECT 1 FROM `ps_line` AS `t7`
+WHERE `t6`.`id` = `t7`.`invoice_id` AND `t7`.`quantity` = 6)))
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.285195Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+WHERE `t0`.`number` LIKE 'VSQL-01%'
+2026-10-15T22:11:35.286078Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE `t0`.`number` LIKE 'VSQL-01%'
+ORDER BY `t0`.`id` ASC
+LIMIT 3 OFFSET 0
+2026-10-15T22:11:35.286986Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.295353Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`active` AS `p1`, `t0`.`amount` AS `p2`, `t1`.`id` AS `p3`, `t2`.`id` AS `p4`, `t0`.`issued_at` AS `p5`, `t0`.`note` AS `p6`, `t0`.`number` AS `p7`, `t0`.`p0` AS `p8`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t0`.`delivery_address_id` = `t2`.`id`
+WHERE `t0`.`id` = 1
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.297526Z	   89 Connect	root@localhost on property_select_recipe using TCP/IP
+2026-10-15T22:11:35.298402Z	   89 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE `t0`.`id` = 8
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.298927Z	   88 Query	DROP TABLE IF EXISTS ps_maintenance
+2026-10-15T22:11:35.352337Z	   89 Query	SELECT `t0`.`id` AS `p0`, `t0`.`name` AS `p1`
+FROM `ps_maintenance` AS `t0`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.354440Z	   89 Query	SHOW TABLES LIKE 'ps_maintenance'
+2026-10-15T22:11:35.403092Z	   89 Query	CREATE TABLE `ps_maintenance` (
+`id` int unsigned NOT NULL AUTO_INCREMENT,
+`name` varchar(255) NOT NULL DEFAULT '' COLLATE utf8mb4_0900_ai_ci,PRIMARY KEY (`id`),
+KEY `representative` (`name`)
+) CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci ENGINE InnoDB
+2026-10-15T22:11:35.450810Z	   89 Query	SELECT `t0`.`id` AS `p0`, `t0`.`name` AS `p1`
+FROM `ps_maintenance` AS `t0`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.451512Z	   88 Query	DROP TABLE ps_maintenance
+2026-10-15T22:11:35.465838Z	   89 Query	SELECT COUNT(*) AS `count`
+FROM `ps_maintenance` AS `t0`
+2026-10-15T22:11:35.466571Z	   89 Query	SHOW TABLES LIKE 'ps_maintenance'
+2026-10-15T22:11:35.467509Z	   89 Query	CREATE TABLE `ps_maintenance` (
+`id` int unsigned NOT NULL AUTO_INCREMENT,
+`name` varchar(255) NOT NULL DEFAULT '' COLLATE utf8mb4_0900_ai_ci,PRIMARY KEY (`id`),
+KEY `representative` (`name`)
+) CHARSET utf8mb4 COLLATE utf8mb4_0900_ai_ci ENGINE InnoDB
+2026-10-15T22:11:35.489748Z	   89 Query	SELECT COUNT(*) AS `count`
+FROM `ps_maintenance` AS `t0`
+2026-10-15T22:11:35.490512Z	   88 Query	DROP TABLE ps_maintenance
+2026-10-15T22:11:35.501289Z	   89 Quit
+2026-10-15T22:11:35.502457Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+WHERE `t0`.`active` = 1 AND `t0`.`id` IN (2, 3, 4, 40, 90, 137)
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.503214Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+WHERE 1 = 0
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.503841Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` = 2
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.504458Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` = 2
+2026-10-15T22:11:35.504881Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` = 2
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.505451Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` = 2
+2026-10-15T22:11:35.505899Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` IS NULL
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.506516Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+WHERE `t1`.`id` IS NULL
+2026-10-15T22:11:35.507227Z	   88 Query	SELECT `t0`.`id` AS `p0`, `t0`.`number` AS `p1`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+WHERE `t4`.`name` LIKE 'Aster'
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.508510Z	   88 Query	SELECT COUNT(*) AS `count`
+FROM `ps_invoice` AS `t0`
+LEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`
+LEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`
+LEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`
+LEFT JOIN `ps_country` AS `t4` ON `t3`.`country_id` = `t4`.`id`
+WHERE `t4`.`name` LIKE 'Aster'
+2026-10-15T22:11:35.509162Z	   88 Query	SELECT `t0`.`id` AS `p0`
+FROM `ps_invalid` AS `t0`
+ORDER BY `t0`.`id` ASC
+2026-10-15T22:11:35.509704Z	   88 Quit

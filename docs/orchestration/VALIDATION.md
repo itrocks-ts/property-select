@@ -445,85 +445,115 @@ Implementation: `S02 S03 S04 S05 S06 S07`. Independent gates: `VSQL V2 V7`. Meth
 Expected: Project number and customer.address.city.name; compare four seed roots, types, order and canonical
 descriptors.
 
-Proof: `evidence/<gate>/SQL-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-01.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
 
 S04 metadata prerequisite: `PASS` for direct/deep final owners, object targets, optional ancestry and canonical
 paths. [Tests](evidence/S04/reflect-path-test.txt), reflect-path
-`7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`. Actual projection remains `NOT_RUN` until S07/VSQL.
+`7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`. Actual projection passes in S07 and independent VSQL.
 
 S05 graph prerequisites for SQL-01/03/04/05/06/09/10/11: `PASS` for deterministic full-path aliases, shared prefixes,
 optional ancestors, explicit inverse/link mappings, multiplicity and pre-SQL validation. Evidence:
 [graph tests](evidence/S05/sql-join-projection.txt), [binding tests](evidence/S05/framework-projection.txt),
 [report/checkpoints](reports/S05.md). Tested sql-join `55db310bdf3e92330ec216677c81577f6854e3f0` / `0.2.0`
 and framework `87aea202752c9252ce5803558d9bb18e1fbdcedd` / `0.7.0`.
-Executed projection/count/page/identity observations remain `NOT_RUN` until S07/VSQL.
+Executed projection/count/page/identity observations pass in S07 and independent VSQL.
 
 S06 builder observations for SQL-01–SQL-10: `PASS` for parameterised scalar/object expansion, hidden identity/presence
 fields, shared aliases, final property metadata, optional joins, undisplayed criteria, stable root ordering, bound
 limit/offset/root ids, plural rejection and common count/projection EXISTS scopes. Evidence:
 [projection tests](evidence/S06/sql-build-projection.txt), [existing tests and types](evidence/S06/sql-build-test.txt),
 [report/checkpoints](reports/S06.md), sql-build `a267327e072df4f6ffa855c15eae6a4c5776ee6d` / `0.2.0`.
-These are builder portions only; SQL-07 conversions and actual SQL-01–SQL-10 database outcomes remain `NOT_RUN`
-until S07/VSQL. Additional builder root-id restrictions support SQL-12 without claiming executed restricted reads.
+These are builder portions only; SQL-07 conversions and actual SQL-01–SQL-10 database outcomes pass in VSQL. Additional
+builder root-id restrictions support SQL-12 without claiming executed restricted reads.
 
 S07 author database observations for SQL-01–SQL-13: `PASS`, including typed partial objects, identity merging,
 final-property read/save conversion, null/absence/ignored/undefined states, common select/search/count criteria,
 120-root pages, plural EXISTS filters, scoped identifier reloads and maintained adapter execution. SQL-14's executed
-SQL archive portion passes; independent VSQL and browser linkage remain `NOT_RUN`. Evidence:
+SQL archive portion passes; independent VSQL now passes; browser linkage remains `NOT_RUN`. Evidence:
 [assertions](evidence/S07/results.json), [parameterised queries](evidence/S07/sql.json),
 [server journal](evidence/S07/mysql-general.log), [report](reports/S07.md). Tested MySQL
 `275d7f3b0ae3739e9c1a2b6361fc173d98612581` / `0.3.2`, framework
 `aff37e0da8272ca63908a57d7ff3abfa80ec177e` / `0.8.1` and mysql-maintainer
 `89ff36a3b1a41a60b040c0ed553f867bec0f6086` / `0.4.1`.
 
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-02: Object and representative values
 
 Expected: Project City with nested Country representative fields; assert prototype/id/loaded fields, converted
 values and zero rendering queries.
 
-Proof: `evidence/<gate>/SQL-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-02.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-03: Shared prefix and overlapping projections
 
 Expected: Project city plus city.name and two different address paths; verify consistent object identity/values and
 no alias/join collision.
 
-Proof: `evidence/<gate>/SQL-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-03.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-04: Criteria outside projection
 
 Expected: Filter deliveryAddress.city.name while displaying only number/customer city; check actual bound criterion
 and mandatory scope in select/count.
 
-Proof: `evidence/<gate>/SQL-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-04.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-05: Null, absence and empty results
 
 Expected: Distinguish absent customer, absent address, null city.name, empty note and no matches; a required
 descendant under optional parent preserves roots.
 
-Proof: `evidence/<gate>/SQL-05.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-05.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
 
 S02 contract observation: `PASS` for separate typed loaded null/undefined, absent relation and ignored scalar cells,
 partial object metadata and empty-result descriptors. Public API typecheck:
 [evidence](evidence/S02/public-typecheck.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
-Actual row reconstruction and preservation remain `NOT_RUN` until VSQL.
+Actual row reconstruction and preservation pass in independent VSQL.
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ### SQL-06: Aliases, identifiers and invalid input
 
 Expected: Use homonymous fields, long paths, id/p0-like names, invalid/ambiguous paths and injection-looking values;
 quoted metadata and bound values stay separate.
 
-Proof: `evidence/<gate>/SQL-06.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-06.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-07: Final-property conversion
 
 Expected: Exercise decimal, date, boolean, nullable, empty string and custom nested SQL/READ/SAVE converters, async
 conversion, scalar IGNORE versus loaded undefined, object-field IGNORE and conversion rejection.
 
-Proof: `evidence/<gate>/SQL-07.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-07.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-08: Stable sorting, count and pages
 
 Expected: Use 120 roots with tied relational sort values; assert root-id tie-breaker, first/next/last pages,
 offset/limit zero, empty page and count equality.
 
-Proof: `evidence/<gate>/SQL-08.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-08.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-09: Plural projection policy
 
 Expected: Navigate inverse/N-N metadata; selecting/sorting any plural column rejects before SQL, even with one
@@ -533,26 +563,36 @@ Proof: `evidence/<gate>/SQL-09.*` and `reports/<gate>.md`. Current verdict: `NOT
 
 S04 multiplicity prerequisite: `PASS` for logical collection/record/generic-array descendants, explicit inverse/N-N
 facts and accumulated `many`. [Tests](evidence/S04/reflect-path-test.txt), reflect-path
-`7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`. Storage refusal and UI navigation remain `NOT_RUN`.
+`7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`. Storage refusal passes in VSQL; UI navigation remains `NOT_RUN`.
+
+VSQL independent storage observation: `PASS`; UI refusal remains `NOT_RUN` until V2.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ### SQL-10: Plural criteria
 
 Expected: Known 1-N/inverse/N-N hidden filters with zero/one/several matches use shared EXISTS semantics;
 same-prefix AND conditions share a child; root count/pages stay unique.
 
-Proof: `evidence/<gate>/SQL-10.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-10.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-11: Compatibility and configured bindings
 
 Expected: Call dataSource().select via configured engine; preserve existing search/count/functions and
 mysql-maintainer composition. Unsupported adapter rejects without search fallback.
 
-Proof: `evidence/<gate>/SQL-11.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-11.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
 
 S02 adapter observation: `PASS` for inherited unsupported-selection with zero search fallback and zero connections,
 including installed MySQL and maintained MySQL adapters. [Runtime tests](evidence/S02/storage-test.txt) and
 [adapter probes](evidence/S02/adapter-compatibility.txt), `storage`
-`a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`. Configured execution and criteria compatibility remain
-`NOT_RUN` until S07/VSQL.
+`a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`. Configured execution and criteria compatibility pass in
+independent VSQL.
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ### SQL-12: Bounded reads and visible-row reload
 
@@ -563,20 +603,30 @@ Proof: `evidence/<gate>/SQL-12.*` and `reports/<gate>.md`. Current verdict: `NOT
 
 S02 option observation: `PASS` for the public readonly `Identifiers` carrier and existing option-port compatibility.
 [Runtime tests](evidence/S02/storage-test.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
-Deduplication, bound predicates, scope intersection and actual restricted reads remain `NOT_RUN` until S07/VSQL.
+Deduplication, bound predicates, scope intersection and actual restricted reads pass in independent VSQL.
+
+VSQL independent storage observation: `PASS`; preview reuse remains `NOT_RUN` until V5.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ### SQL-13: Object criteria and errors
 
 Expected: Object equality targets id, null means absence; function operands convert by final property;
 query/conversion errors retain causes and no fake successful empty cell.
 
-Proof: `evidence/<gate>/SQL-13.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-13.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+
+VSQL independent storage observation: `PASS`.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
+
 ### SQL-14: Independent SQL and browser linkage
 
 Expected: Archive actual SQL/result assertions separately from V2 City/deep-field render, filter/sort/feed/reload
 evidence using the exact delivered modules.
 
 Proof: `evidence/<gate>/SQL-14.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+
+VSQL independent storage observation: `PASS`; browser linkage remains `NOT_RUN` until V2.
+[Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ## META additional cases
 
@@ -598,7 +648,7 @@ canonical string/segment descriptors, final owners, optional ancestor prefixes a
 The throwing getter/constructor fixtures establish zero metadata value reads.
 [Tests](evidence/S04/reflect-path-test.txt)
 and [report](reports/S04.md), reflect-path `7d1534eece60d23339f2ad8355d49c8d5074c08d` / `0.3.1`.
-Provider descriptions and independent integrated observations remain `NOT_RUN` until L1-META/VSQL/V3/V7.
+VSQL passes independent reflection observations; provider descriptions and UI observations remain `NOT_RUN`.
 
 ### META-02: Permission and presentation
 
@@ -804,6 +854,7 @@ an implemented feature or use a simulated replacement for a required browser/dat
   criteria/count compilation. These pass only SQL-01–SQL-10 builder portions and support SQL-12 root restrictions.
   Runtime values, hydration, conversions, executed database counts/pages and browser observations remain NOT_RUN.
 - S07 author observations pass with [fresh database evidence](evidence/S07/results.json); VSQL remains independent.
+- VSQL independent observations pass with [fresh evidence](evidence/VSQL/results.json) and [report](reports/VSQL.md).
 - S07/VSQL: SQL-01–SQL-13 storage/SQL observations, including real typed object reconstruction and independent
   representative conversion with zero extra reads. SQL-09 tests reflection navigation facts, not the later UI refusal.
   SQL-12 tests identity-restricted reads; preview movement is V5. SQL-14 requires archived SQL/values now and

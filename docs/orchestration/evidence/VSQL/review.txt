@@ -1,0 +1,11 @@
+PASS: MySQL public CJS facade, declarations and projection runtime present in offline package inventory.
+PASS: Framework public sql-projection runtime/declarations and existing app.js browser entry present.
+PASS: Maintained MySQL public CJS facade and declarations present.
+PASS: Fourteen independent database groups and all 1390 recorded expected/observed pairs agree.
+PASS: Eight rebuilt product owner checkouts remain clean, without source or version changes.
+PASS: Showtime HEAD, two AD entries, both staged blobs and working-file absences preserved.
+PASS: Source/report/card line widths, whitespace and relative links reviewed.
+PASS: Complete tracked diff and every new test/report/evidence file reviewed for attributable scope.
+PASS: SOLID boundaries reviewed in MySQL selection/hydration, framework composition and maintained adapter.
+PASS: No installation/update, implicit download, vcs-modules, private database, application edit or commit.
+Commit proposal: Verify independent database projections

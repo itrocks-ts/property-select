@@ -1,0 +1,88 @@
+[@itrocks/mysql-maintainer] Schema maintenance attempt { attempt: 1, code: 'ER_NO_SUCH_TABLE' }
+[@itrocks/mysql-maintainer] Schema maintenance attempt { attempt: 1, code: 'ER_NO_SUCH_TABLE' }
+[
+  {
+    "id": "SQL-01",
+    "status": "PASS",
+    "start": 0,
+    "queries": 1
+  },
+  {
+    "id": "SQL-02",
+    "status": "PASS",
+    "start": 1,
+    "queries": 4
+  },
+  {
+    "id": "SQL-03",
+    "status": "PASS",
+    "start": 5,
+    "queries": 2
+  },
+  {
+    "id": "SQL-04",
+    "status": "PASS",
+    "start": 7,
+    "queries": 2
+  },
+  {
+    "id": "SQL-05",
+    "status": "PASS",
+    "start": 9,
+    "queries": 3
+  },
+  {
+    "id": "SQL-06",
+    "status": "PASS",
+    "start": 12,
+    "queries": 2
+  },
+  {
+    "id": "SQL-07",
+    "status": "PASS",
+    "start": 14,
+    "queries": 6
+  },
+  {
+    "id": "SQL-08",
+    "status": "PASS",
+    "start": 20,
+    "queries": 10
+  },
+  {
+    "id": "SQL-09",
+    "status": "PASS",
+    "start": 30,
+    "queries": 0
+  },
+  {
+    "id": "SQL-10",
+    "status": "PASS",
+    "start": 30,
+    "queries": 56
+  },
+  {
+    "id": "SQL-11",
+    "status": "PASS",
+    "start": 86,
+    "queries": 13
+  },
+  {
+    "id": "SQL-12",
+    "status": "PASS",
+    "start": 99,
+    "queries": 2
+  },
+  {
+    "id": "SQL-13",
+    "status": "PASS",
+    "start": 101,
+    "queries": 9
+  },
+  {
+    "id": "SQL-14",
+    "status": "PASS",
+    "start": 110,
+    "queries": 0
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "status": []
+  },
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "version": "0.3.0",
+    "status": []
+  },
+  "reflect-path": {
+    "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "version": "0.3.1",
+    "status": []
+  },
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "status": []
+  },
+  "sql-build": {
+    "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "version": "0.2.0",
+    "status": []
+  },
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "version": "0.3.2",
+    "status": []
+  },
+  "framework": {
+    "sha": "aff37e0da8272ca63908a57d7ff3abfa80ec177e",
+    "version": "0.8.1",
+    "status": []
+  },
+  "mysql-maintainer": {
+    "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+    "version": "0.4.1",
+    "status": []
+  },
+  "property-select": {
+    "sha": "1e2c5d90fe59bf11e815c7d09be3303ea9eac3ad",
+    "version": "0.0.20",
+    "status": [
+      " M package.json",
+      "?? docs/orchestration/environment/checks/VSQL.mjs",
+      "?? docs/orchestration/evidence/VSQL/"
+    ]
+  }
+}

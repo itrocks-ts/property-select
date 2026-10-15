@@ -4,7 +4,7 @@
 
 Prove public select execution, converted values and bounded reads on real MySQL.
 
-Prerequisites: S07. Current status: `PENDING`.
+Prerequisites: S07. Current status: `DONE`; independent database observations `PASS`, see [report](../reports/VSQL.md).
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points

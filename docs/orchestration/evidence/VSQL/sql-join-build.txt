@@ -1,0 +1,3 @@
+
+> @itrocks/sql-join@0.2.0 build
+> tsc
