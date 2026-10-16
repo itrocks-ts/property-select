@@ -1,0 +1,915 @@
+{
+	"assertions": [
+		{
+			"name": "No inherited owned app reservation",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Invoice issuedAt is terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "Date descriptor has no target or relation",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Date resolves without losing its descriptor",
+			"observed": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path invoice:issuedAt.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path invoice:issuedAt.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt.toISOString",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path invoice:issuedAt.toISOString",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt.toISOString",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path invoice:issuedAt.toISOString",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path invoice:issuedAt",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "date is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "date has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:date",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "date HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:date",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:date",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:date.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:date.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "date path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "date has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "date native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:nullableDate",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:nullableDate",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:nullableDate",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:nullableDate.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:nullableDate.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:optionalDate",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:optionalDate",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:optionalDate",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:optionalDate.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:optionalDate.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateArray",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:dateArray",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:dateArray",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateArray.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid path scalar:dateArray.getTime",
+			"observed": {
+				"error": "unknown-target"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "FAIL"
+		},
+		{
+			"name": "Owned app PID removed",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "Owned application listener closed",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		}
+	],
+	"browserErrors": [],
+	"commands": [
+		{
+			"action": "app",
+			"environment": {
+				"PS_APP_PORT": "13861",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-initialise.cjs"
+			},
+			"stdout": ""
+		},
+		{
+			"action": "stop-app",
+			"environment": {
+				"PS_APP_PORT": "13861",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-initialise.cjs"
+			},
+			"stdout": "PASS: owned app 2393832 stopped\n"
+		}
+	],
+	"failedRequests": [],
+	"httpErrors": [],
+	"input": [],
+	"metadata": [
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=",
+			"status": 200,
+			"body": {
+				"label": "invoice",
+				"path": "",
+				"properties": [
+					{
+						"kind": "terminal",
+						"label": "active",
+						"name": "active",
+						"order": 0,
+						"path": "active"
+					},
+					{
+						"kind": "terminal",
+						"label": "amount",
+						"name": "amount",
+						"order": 1,
+						"path": "amount"
+					},
+					{
+						"kind": "relation",
+						"label": "customer",
+						"name": "customer",
+						"order": 2,
+						"path": "customer",
+						"target": "e7d279cdfbb6f53241a9251d",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "dacc3f2c004c642233393e8b"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "delivery address",
+						"name": "deliveryAddress",
+						"order": 3,
+						"path": "deliveryAddress",
+						"target": "15c90db4111410bad0d9e5a8",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "de0ee641ce7ac33b7e13a1a9"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "issued at",
+						"name": "issuedAt",
+						"order": 4,
+						"path": "issuedAt"
+					},
+					{
+						"kind": "relation",
+						"label": "lines",
+						"name": "lines",
+						"order": 5,
+						"path": "lines",
+						"target": "ce9bda8942733bd39f720b88",
+						"relation": {
+							"cardinality": "one-to-many",
+							"id": "fe66142ad4a5111fdce7393c",
+							"inverse": "aefb02945f7f45cd3d24cfa8"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "note",
+						"name": "note",
+						"order": 6,
+						"path": "note"
+					},
+					{
+						"kind": "terminal",
+						"label": "number",
+						"name": "number",
+						"order": 7,
+						"path": "number"
+					},
+					{
+						"kind": "terminal",
+						"label": "p0",
+						"name": "p0",
+						"order": 8,
+						"path": "p0"
+					},
+					{
+						"kind": "relation",
+						"label": "tags",
+						"name": "tags",
+						"order": 9,
+						"path": "tags",
+						"target": "fde55b458a32789dfefadfc5",
+						"relation": {
+							"cardinality": "many-to-many",
+							"id": "9606e8af88078326f644ab45",
+							"inverse": "fe7af5a270993b3174d1aaf8"
+						}
+					}
+				],
+				"type": "0fad9478685a90fbf0b2eb21"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt.toISOString",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt.toISOString",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=",
+			"status": 200,
+			"body": {
+				"label": "metadata invoice",
+				"path": "",
+				"properties": [
+					{
+						"kind": "relation",
+						"label": "ambiguous",
+						"name": "ambiguous",
+						"order": 0,
+						"path": "ambiguous",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "19bbb30f4d464a2b865406c7"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "billing",
+						"name": "billing",
+						"order": 1,
+						"path": "billing",
+						"target": "c033b6d5dac6b42dd3352b2e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "1294a7ea96eb986251d7fd59"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "date",
+						"name": "date",
+						"order": 2,
+						"path": "date"
+					},
+					{
+						"kind": "terminal",
+						"label": "date array",
+						"name": "dateArray",
+						"order": 3,
+						"path": "dateArray"
+					},
+					{
+						"kind": "terminal",
+						"label": "date map",
+						"name": "dateMap",
+						"order": 4,
+						"path": "dateMap"
+					},
+					{
+						"kind": "relation",
+						"label": "delivery",
+						"name": "delivery",
+						"order": 5,
+						"path": "delivery",
+						"target": "c033b6d5dac6b42dd3352b2e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "610dc7f9de818f7e334ddaed"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "generic dates",
+						"name": "genericDates",
+						"order": 6,
+						"path": "genericDates"
+					},
+					{
+						"kind": "terminal",
+						"label": "hidden",
+						"name": "hidden",
+						"order": 7,
+						"path": "hidden"
+					},
+					{
+						"kind": "terminal",
+						"label": "inherited",
+						"name": "inherited",
+						"order": 8,
+						"path": "inherited"
+					},
+					{
+						"kind": "relation",
+						"label": "lines",
+						"name": "lines",
+						"order": 9,
+						"path": "lines",
+						"target": "ca5f1247b2f89674001805c7",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "5c24ed86e564dbb876919731"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "nullable date",
+						"name": "nullableDate",
+						"order": 10,
+						"path": "nullableDate"
+					},
+					{
+						"kind": "terminal",
+						"label": "number",
+						"name": "number",
+						"order": 11,
+						"path": "number"
+					},
+					{
+						"kind": "terminal",
+						"label": "optional date",
+						"name": "optionalDate",
+						"order": 12,
+						"path": "optionalDate"
+					},
+					{
+						"kind": "relation",
+						"label": "self",
+						"name": "self",
+						"order": 13,
+						"path": "self",
+						"target": "687d3dad0130dda03e02077a",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "40098e9afb47c4fc8eafa685"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "singular",
+						"name": "singular",
+						"order": 14,
+						"path": "singular",
+						"target": "ca5f1247b2f89674001805c7",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "be36a42d9b3f60cdd59d7bbe"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "tags",
+						"name": "tags",
+						"order": 15,
+						"path": "tags",
+						"target": "5827666456287651bc143c7e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "a0237187955a250152829817"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "unknown",
+						"name": "unknown",
+						"order": 16,
+						"path": "unknown"
+					}
+				],
+				"type": "09ff7b65d0afc8976f7ec061"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=date",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=date",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=date.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=nullableDate",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=nullableDate",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=nullableDate.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=optionalDate",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=optionalDate",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=optionalDate.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateArray",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=dateArray",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateArray.getTime",
+			"status": 400,
+			"body": {
+				"error": "unknown-target"
+			}
+		}
+	],
+	"requests": [],
+	"seed": "environment/models and framework/test/fixtures",
+	"url": "http://127.0.0.1:13861",
+	"readinessLastError": "fetch failed",
+	"status": "FAIL",
+	"failure": "AssertionError [ERR_ASSERTION]: Invalid path scalar:dateArray.getTime\n+ actual - expected\n\n  {\n+   error: 'unknown-target'\n-   error: 'invalid-path'\n  }\n\n    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs:34:9)\n    at metadata (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs:51:30)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs:103:3"
+}

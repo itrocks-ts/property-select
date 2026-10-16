@@ -2,7 +2,8 @@
 
 ## L3 author search checkpoint
 
-**NEEDS_FIX**: [L3 report](reports/L3.md), [defect L3-01](defects/L3-01.md).
+Historical **NEEDS_FIX**, resolved by independent `RETEST-L3-1` below:
+[L3 report](reports/L3.md), [closed defect L3-01](defects/L3-01.md).
 The 24 controller tests and 40 Chromium author assertions pass: T09 all-word normalisation and path identity,
 T10 current-context scope/cache, T11/NAV-08 terminal/object/segment navigation, T12 generation cancellation and
 loading/empty/error/limited, T13 branch history/known N-1/N-N return/unknown inverse refusal, and PORT-06
@@ -10,10 +11,10 @@ response-independent rank/focus, including display-budget eviction. Browser widt
 [Provider traces](evidence/L3/provider-traces.json), [tests](evidence/L3/test.txt) and
 [browser observations](evidence/L3/browser-results.json) are author evidence, separate from V3.
 
-Integrated metadata exposes scalar `issuedAt: Date | null` as a relation; automatic search requests its context and
-receives HTTP 500/ENOENT. The selector retains context/results and reports `error`, but healthy integration fails.
-`FIX-L3-1` and independent `RETEST-L3-1` must pass before V3. SEA-01–09, NAV-08 and PORT-03/06 retain their
-independent V3 verdicts; META-01/META-02 have this new blocking observation. T11 drag remains V5, and later
+At the L3 checkpoint, metadata exposed scalar `issuedAt: Date | null` as a relation; automatic search requested its
+context and received HTTP 500/ENOENT. The selector retained context/results and reported `error`; integration failed.
+`FIX-L3-1` and independent `RETEST-L3-1` now pass. SEA-01–09, NAV-08 and PORT-03/06 retain their
+independent V3 verdicts; the blocking META observation is resolved. T11 drag remains V5, and later
 session/gesture/final acceptance observations remain NOT_RUN.
 
 ## FIX-L3-1 author correction
@@ -36,7 +37,30 @@ The original L3 failure remains historical; independent `RETEST-L3-1` is mandato
   native-method projection rejects before SQL. Date column selection renders the original date and null value.
   [Six SQL assertions](evidence/FIX-L3-1/date-sql.json), [Date column](evidence/FIX-L3-1/direct/date-column.png).
 
-The defect remains OPEN pending independent retest; broader V3, drag, session and final acceptance verdicts are unchanged.
+Independent retest below closes the defect; broader V3, drag, session and final acceptance remain pending.
+
+## RETEST-L3-1 independent observations
+
+**PASS**: [report](reports/RETEST-L3-1.md), [133 assertions](evidence/RETEST-L3-1/results.json),
+[checkpoint/export review](evidence/RETEST-L3-1/review.json).
+Tested reflect `41e6e67` / `0.3.1`, reflect-path `bc6e4bd` / `0.3.2`, framework `e5d976a` / `0.10.3`
+and selector `b1b47f9` / `0.4.1`; this tracking-only delivery is `0.4.2`.
+
+- **META-01/META-03/API-03 affected scalar observations / PASS**: Real HTTP Date descriptors, scalar/collection
+  multiplicities, optional/nullable dates, direct context/method rejection with HTTP 400, public static Date-method
+  exclusions, domain paths and reciprocal inverse/N-N facts. No native Date class is enumerated.
+- **META-02/SEA-07/QUA-01 correction / PASS**: Trusted `country name` input returns five matching complete paths,
+  ends `limited` within the existing budget, and keeps usable result navigation. No failed metadata request,
+  failing HTTP response, unexpected request failure, console warning/error or page exception occurs.
+  The raw bodyless list-save event is explicitly retained and verified as successful HTTP 204, as in V2.
+- **SQL-07 Date regression / PASS**: Real bounded selection retains Date/null conversions and invalid traversal
+  executes no query. Browser Date selection renders converted/null values and the country control remains valid.
+- Fresh owner rebuilds and suites pass: 9 reflect, 13 reflect-path, 6 explicit META, 4 framework test files and
+  24 selector tests; seven new negative typed paths pass. The unchanged original author reproducer passes 41/41
+  [supplementary assertions](evidence/RETEST-L3-1/author-replay/browser-results.json).
+
+L3-01 is closed. V3 is ready and still owns full independent search acceptance; all later combined verdicts retain
+their assigned gates. Historical L3 failure evidence is preserved. Owned app/standalone resources are stopped.
 
 ## Verdict and reading rules
 

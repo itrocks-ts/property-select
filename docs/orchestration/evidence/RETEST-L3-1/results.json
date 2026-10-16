@@ -1,0 +1,1894 @@
+{
+	"assertions": [
+		{
+			"name": "No inherited owned app reservation",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Invoice issuedAt is terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "Date descriptor has no target or relation",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Date resolves without losing its descriptor",
+			"observed": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path invoice:issuedAt.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path invoice:issuedAt.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:issuedAt.toISOString",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path invoice:issuedAt.toISOString",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt.toISOString",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path invoice:issuedAt.toISOString",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:issuedAt",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path invoice:issuedAt",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "date is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "date has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:date",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "date HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:date",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:date",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:date.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:date.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "date path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "date has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "date native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:nullableDate",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:nullableDate",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:nullableDate",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:nullableDate.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:nullableDate.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "nullableDate native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:optionalDate",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:optionalDate",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:optionalDate",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:optionalDate.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:optionalDate.getTime",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate path multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "optionalDate native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateArray",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:dateArray",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:dateArray",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateArray.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:dateArray.getTime",
+			"observed": {
+				"error": "unknown-target"
+			},
+			"expected": {
+				"error": "unknown-target"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray path multiplicity",
+			"observed": "many",
+			"expected": "many",
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "dateArray native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateMap",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "date map",
+				"name": "dateMap",
+				"order": 4,
+				"path": "dateMap"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "date map",
+				"name": "dateMap",
+				"order": 4,
+				"path": "dateMap"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:dateMap",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:dateMap",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:dateMap.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:dateMap.getTime",
+			"observed": {
+				"error": "unknown-target"
+			},
+			"expected": {
+				"error": "unknown-target"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap path multiplicity",
+			"observed": "many",
+			"expected": "many",
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "dateMap native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates is a selectable HTTP terminal",
+			"observed": "terminal",
+			"expected": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates has no domain target",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:genericDates",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates HTTP resolve matches enumeration",
+			"observed": {
+				"kind": "terminal",
+				"label": "generic dates",
+				"name": "genericDates",
+				"order": 6,
+				"path": "genericDates"
+			},
+			"expected": {
+				"kind": "terminal",
+				"label": "generic dates",
+				"name": "genericDates",
+				"order": 6,
+				"path": "genericDates"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context scalar:genericDates",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:genericDates",
+			"observed": {
+				"error": "invalid-path"
+			},
+			"expected": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve scalar:genericDates.getTime",
+			"observed": 400,
+			"expected": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "Rejected path scalar:genericDates.getTime",
+			"observed": {
+				"error": "unknown-target"
+			},
+			"expected": {
+				"error": "unknown-target"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates path multiplicity",
+			"observed": "many",
+			"expected": "many",
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates has no reflection relation",
+			"status": "PASS"
+		},
+		{
+			"name": "genericDates native traversal rejected by reflection",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Metadata never constructs records or reads domain getters",
+			"observed": {
+				"constructions": 0,
+				"reads": 0
+			},
+			"expected": {
+				"constructions": 0,
+				"reads": 0
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "Optional Date retains optional type",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:lines",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:lines.invoice",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "lines retains domain relation",
+			"observed": "relation",
+			"expected": "relation",
+			"status": "PASS"
+		},
+		{
+			"name": "lines cardinality",
+			"observed": "one-to-many",
+			"expected": "one-to-many",
+			"status": "PASS"
+		},
+		{
+			"name": "lines explicit reciprocal inverse",
+			"observed": [
+				"aefb02945f7f45cd3d24cfa8",
+				"fe66142ad4a5111fdce7393c"
+			],
+			"expected": [
+				"aefb02945f7f45cd3d24cfa8",
+				"fe66142ad4a5111fdce7393c"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:lines",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "lines target context remains navigable",
+			"observed": "ce9bda8942733bd39f720b88",
+			"expected": "ce9bda8942733bd39f720b88",
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:tags",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:tags.invoices",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "tags retains domain relation",
+			"observed": "relation",
+			"expected": "relation",
+			"status": "PASS"
+		},
+		{
+			"name": "tags cardinality",
+			"observed": "many-to-many",
+			"expected": "many-to-many",
+			"status": "PASS"
+		},
+		{
+			"name": "tags explicit reciprocal inverse",
+			"observed": [
+				"fe7af5a270993b3174d1aaf8",
+				"9606e8af88078326f644ab45"
+			],
+			"expected": [
+				"fe7af5a270993b3174d1aaf8",
+				"9606e8af88078326f644ab45"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP context invoice:tags",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "tags target context remains navigable",
+			"observed": "fde55b458a32789dfefadfc5",
+			"expected": "fde55b458a32789dfefadfc5",
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:customer.address.city.country.name",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Domain complete path customer.address.city.country.name",
+			"observed": "customer.address.city.country.name",
+			"expected": "customer.address.city.country.name",
+			"status": "PASS"
+		},
+		{
+			"name": "HTTP resolve invoice:deliveryAddress.city.country.name",
+			"observed": 200,
+			"expected": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "Domain complete path deliveryAddress.city.country.name",
+			"observed": "deliveryAddress.city.country.name",
+			"expected": "deliveryAddress.city.country.name",
+			"status": "PASS"
+		},
+		{
+			"name": "Nullable issuedAt multiplicity",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity active",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity amount",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity note",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity customer",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity customer.address.city.country.name",
+			"observed": "one",
+			"expected": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity lines",
+			"observed": "many",
+			"expected": "many",
+			"status": "PASS"
+		},
+		{
+			"name": "Unchanged scalar and domain multiplicity tags.invoices.number",
+			"observed": "many",
+			"expected": "many",
+			"status": "PASS"
+		},
+		{
+			"name": "SQL date scalar descriptor",
+			"observed": [
+				{
+					"path": "issuedAt",
+					"kind": "scalar"
+				}
+			],
+			"expected": [
+				{
+					"kind": "scalar",
+					"path": "issuedAt"
+				}
+			],
+			"status": "FAIL"
+		},
+		{
+			"name": "SQL date values retain Date/null and root identity",
+			"observed": [
+				[
+					1,
+					true
+				],
+				[
+					2,
+					true
+				],
+				[
+					3,
+					null
+				],
+				[
+					4,
+					true
+				]
+			],
+			"expected": [
+				[
+					1,
+					true
+				],
+				[
+					2,
+					true
+				],
+				[
+					3,
+					null
+				],
+				[
+					4,
+					true
+				]
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "SQL converted calendar dates",
+			"observed": [
+				[
+					2026,
+					1,
+					1,
+					12
+				],
+				[
+					2026,
+					1,
+					2,
+					12
+				],
+				null,
+				[
+					2026,
+					1,
+					4,
+					12
+				]
+			],
+			"expected": [
+				[
+					2026,
+					1,
+					1,
+					12
+				],
+				[
+					2026,
+					1,
+					2,
+					12
+				],
+				null,
+				[
+					2026,
+					1,
+					4,
+					12
+				]
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid Date traversal never executes SQL",
+			"observed": 1,
+			"expected": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "Integrated search finishes successfully within its budget",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Search typed through trusted browser input",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Search exposes matching complete path customer.address.city.country.name",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Search exposes matching complete path deliveryAddress.city.country.name",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Every search result matches both words as complete metadata paths",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Automatic search never traverses Date",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "Context remains usable through result segment",
+			"observed": "country name",
+			"expected": "country name",
+			"status": "PASS"
+		},
+		{
+			"name": "Ordinary Date selection adds one column",
+			"observed": 1,
+			"expected": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "Date column uses existing conversion",
+			"observed": "01/01/2026",
+			"expected": "01/01/2026",
+			"status": "PASS"
+		},
+		{
+			"name": "Nullable Date column renders empty",
+			"observed": "",
+			"expected": "",
+			"status": "PASS"
+		},
+		{
+			"name": "List column save completes as a bodyless success",
+			"observed": 204,
+			"expected": 204,
+			"status": "PASS"
+		},
+		{
+			"name": "Country control remains healthy",
+			"observed": 2,
+			"expected": 2,
+			"status": "PASS"
+		},
+		{
+			"name": "No browser errors or warnings",
+			"observed": [],
+			"expected": [],
+			"status": "PASS"
+		},
+		{
+			"name": "No failed metadata request",
+			"observed": [],
+			"expected": [],
+			"status": "PASS"
+		},
+		{
+			"name": "No unexpected request failure",
+			"observed": [],
+			"expected": [],
+			"status": "PASS"
+		},
+		{
+			"name": "No failing browser HTTP response",
+			"observed": [],
+			"expected": [],
+			"status": "PASS"
+		},
+		{
+			"name": "Owned app PID removed",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "Owned application listener closed",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		}
+	],
+	"browserErrors": [],
+	"commands": [
+		{
+			"action": "app",
+			"environment": {
+				"PS_APP_PORT": "13861",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-initialise.cjs"
+			},
+			"stdout": ""
+		},
+		{
+			"action": "stop-app",
+			"environment": {
+				"PS_APP_PORT": "13861",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-RETEST-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-initialise.cjs"
+			},
+			"stdout": "PASS: owned app 2398492 stopped\n"
+		}
+	],
+	"failedRequests": [
+		{
+			"url": "http://127.0.0.1:13861/property-select-invoice/list?columns=number,amount,issuedAt",
+			"status": 204,
+			"error": {
+				"errorText": "net::ERR_ABORTED"
+			}
+		}
+	],
+	"httpErrors": [],
+	"input": [
+		{
+			"trusted": true,
+			"value": "country name"
+		}
+	],
+	"metadata": [
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=",
+			"status": 200,
+			"body": {
+				"label": "invoice",
+				"path": "",
+				"properties": [
+					{
+						"kind": "terminal",
+						"label": "active",
+						"name": "active",
+						"order": 0,
+						"path": "active"
+					},
+					{
+						"kind": "terminal",
+						"label": "amount",
+						"name": "amount",
+						"order": 1,
+						"path": "amount"
+					},
+					{
+						"kind": "relation",
+						"label": "customer",
+						"name": "customer",
+						"order": 2,
+						"path": "customer",
+						"target": "e7d279cdfbb6f53241a9251d",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "dacc3f2c004c642233393e8b"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "delivery address",
+						"name": "deliveryAddress",
+						"order": 3,
+						"path": "deliveryAddress",
+						"target": "15c90db4111410bad0d9e5a8",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "de0ee641ce7ac33b7e13a1a9"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "issued at",
+						"name": "issuedAt",
+						"order": 4,
+						"path": "issuedAt"
+					},
+					{
+						"kind": "relation",
+						"label": "lines",
+						"name": "lines",
+						"order": 5,
+						"path": "lines",
+						"target": "ce9bda8942733bd39f720b88",
+						"relation": {
+							"cardinality": "one-to-many",
+							"id": "fe66142ad4a5111fdce7393c",
+							"inverse": "aefb02945f7f45cd3d24cfa8"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "note",
+						"name": "note",
+						"order": 6,
+						"path": "note"
+					},
+					{
+						"kind": "terminal",
+						"label": "number",
+						"name": "number",
+						"order": 7,
+						"path": "number"
+					},
+					{
+						"kind": "terminal",
+						"label": "p0",
+						"name": "p0",
+						"order": 8,
+						"path": "p0"
+					},
+					{
+						"kind": "relation",
+						"label": "tags",
+						"name": "tags",
+						"order": 9,
+						"path": "tags",
+						"target": "fde55b458a32789dfefadfc5",
+						"relation": {
+							"cardinality": "many-to-many",
+							"id": "9606e8af88078326f644ab45",
+							"inverse": "fe7af5a270993b3174d1aaf8"
+						}
+					}
+				],
+				"type": "0fad9478685a90fbf0b2eb21"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=issuedAt.toISOString",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt.toISOString",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=issuedAt",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=",
+			"status": 200,
+			"body": {
+				"label": "metadata invoice",
+				"path": "",
+				"properties": [
+					{
+						"kind": "relation",
+						"label": "ambiguous",
+						"name": "ambiguous",
+						"order": 0,
+						"path": "ambiguous",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "19bbb30f4d464a2b865406c7"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "billing",
+						"name": "billing",
+						"order": 1,
+						"path": "billing",
+						"target": "c033b6d5dac6b42dd3352b2e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "1294a7ea96eb986251d7fd59"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "date",
+						"name": "date",
+						"order": 2,
+						"path": "date"
+					},
+					{
+						"kind": "terminal",
+						"label": "date array",
+						"name": "dateArray",
+						"order": 3,
+						"path": "dateArray"
+					},
+					{
+						"kind": "terminal",
+						"label": "date map",
+						"name": "dateMap",
+						"order": 4,
+						"path": "dateMap"
+					},
+					{
+						"kind": "relation",
+						"label": "delivery",
+						"name": "delivery",
+						"order": 5,
+						"path": "delivery",
+						"target": "c033b6d5dac6b42dd3352b2e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "610dc7f9de818f7e334ddaed"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "generic dates",
+						"name": "genericDates",
+						"order": 6,
+						"path": "genericDates"
+					},
+					{
+						"kind": "terminal",
+						"label": "hidden",
+						"name": "hidden",
+						"order": 7,
+						"path": "hidden"
+					},
+					{
+						"kind": "terminal",
+						"label": "inherited",
+						"name": "inherited",
+						"order": 8,
+						"path": "inherited"
+					},
+					{
+						"kind": "relation",
+						"label": "lines",
+						"name": "lines",
+						"order": 9,
+						"path": "lines",
+						"target": "ca5f1247b2f89674001805c7",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "5c24ed86e564dbb876919731"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "nullable date",
+						"name": "nullableDate",
+						"order": 10,
+						"path": "nullableDate"
+					},
+					{
+						"kind": "terminal",
+						"label": "number",
+						"name": "number",
+						"order": 11,
+						"path": "number"
+					},
+					{
+						"kind": "terminal",
+						"label": "optional date",
+						"name": "optionalDate",
+						"order": 12,
+						"path": "optionalDate"
+					},
+					{
+						"kind": "relation",
+						"label": "self",
+						"name": "self",
+						"order": 13,
+						"path": "self",
+						"target": "687d3dad0130dda03e02077a",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "40098e9afb47c4fc8eafa685"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "singular",
+						"name": "singular",
+						"order": 14,
+						"path": "singular",
+						"target": "ca5f1247b2f89674001805c7",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "be36a42d9b3f60cdd59d7bbe"
+						}
+					},
+					{
+						"kind": "relation",
+						"label": "tags",
+						"name": "tags",
+						"order": 15,
+						"path": "tags",
+						"target": "5827666456287651bc143c7e",
+						"relation": {
+							"cardinality": "unknown",
+							"id": "a0237187955a250152829817"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "unknown",
+						"name": "unknown",
+						"order": 16,
+						"path": "unknown"
+					}
+				],
+				"type": "09ff7b65d0afc8976f7ec061"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=date",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "date",
+				"name": "date",
+				"order": 2,
+				"path": "date"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=date",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=date.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=nullableDate",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "nullable date",
+				"name": "nullableDate",
+				"order": 10,
+				"path": "nullableDate"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=nullableDate",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=nullableDate.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=optionalDate",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "optional date",
+				"name": "optionalDate",
+				"order": 12,
+				"path": "optionalDate"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=optionalDate",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=optionalDate.getTime",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateArray",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "date array",
+				"name": "dateArray",
+				"order": 3,
+				"path": "dateArray"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=dateArray",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateArray.getTime",
+			"status": 400,
+			"body": {
+				"error": "unknown-target"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateMap",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "date map",
+				"name": "dateMap",
+				"order": 4,
+				"path": "dateMap"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=dateMap",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=dateMap.getTime",
+			"status": 400,
+			"body": {
+				"error": "unknown-target"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=genericDates",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "generic dates",
+				"name": "genericDates",
+				"order": 6,
+				"path": "genericDates"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=scalar&path=genericDates",
+			"status": 400,
+			"body": {
+				"error": "invalid-path"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=scalar&path=genericDates.getTime",
+			"status": 400,
+			"body": {
+				"error": "unknown-target"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=lines",
+			"status": 200,
+			"body": {
+				"kind": "relation",
+				"label": "lines",
+				"name": "lines",
+				"order": 5,
+				"path": "lines",
+				"target": "ce9bda8942733bd39f720b88",
+				"relation": {
+					"cardinality": "one-to-many",
+					"id": "fe66142ad4a5111fdce7393c",
+					"inverse": "aefb02945f7f45cd3d24cfa8"
+				}
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=lines.invoice",
+			"status": 200,
+			"body": {
+				"kind": "relation",
+				"label": "invoice",
+				"name": "invoice",
+				"order": 0,
+				"path": "lines.invoice",
+				"target": "0fad9478685a90fbf0b2eb21",
+				"relation": {
+					"cardinality": "many-to-one",
+					"id": "aefb02945f7f45cd3d24cfa8",
+					"inverse": "fe66142ad4a5111fdce7393c"
+				}
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=lines",
+			"status": 200,
+			"body": {
+				"label": "line",
+				"path": "lines",
+				"properties": [
+					{
+						"kind": "relation",
+						"label": "invoice",
+						"name": "invoice",
+						"order": 0,
+						"path": "lines.invoice",
+						"target": "0fad9478685a90fbf0b2eb21",
+						"relation": {
+							"cardinality": "many-to-one",
+							"id": "aefb02945f7f45cd3d24cfa8",
+							"inverse": "fe66142ad4a5111fdce7393c"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "label",
+						"name": "label",
+						"order": 1,
+						"path": "lines.label"
+					},
+					{
+						"kind": "terminal",
+						"label": "quantity",
+						"name": "quantity",
+						"order": 2,
+						"path": "lines.quantity"
+					}
+				],
+				"type": "ce9bda8942733bd39f720b88"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=tags",
+			"status": 200,
+			"body": {
+				"kind": "relation",
+				"label": "tags",
+				"name": "tags",
+				"order": 9,
+				"path": "tags",
+				"target": "fde55b458a32789dfefadfc5",
+				"relation": {
+					"cardinality": "many-to-many",
+					"id": "9606e8af88078326f644ab45",
+					"inverse": "fe7af5a270993b3174d1aaf8"
+				}
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=tags.invoices",
+			"status": 200,
+			"body": {
+				"kind": "relation",
+				"label": "invoices",
+				"name": "invoices",
+				"order": 0,
+				"path": "tags.invoices",
+				"target": "0fad9478685a90fbf0b2eb21",
+				"relation": {
+					"cardinality": "many-to-many",
+					"id": "fe7af5a270993b3174d1aaf8",
+					"inverse": "9606e8af88078326f644ab45"
+				}
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/context/json?root=invoice&path=tags",
+			"status": 200,
+			"body": {
+				"label": "tag",
+				"path": "tags",
+				"properties": [
+					{
+						"kind": "relation",
+						"label": "invoices",
+						"name": "invoices",
+						"order": 0,
+						"path": "tags.invoices",
+						"target": "0fad9478685a90fbf0b2eb21",
+						"relation": {
+							"cardinality": "many-to-many",
+							"id": "fe7af5a270993b3174d1aaf8",
+							"inverse": "9606e8af88078326f644ab45"
+						}
+					},
+					{
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "tags.name"
+					}
+				],
+				"type": "fde55b458a32789dfefadfc5"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=customer.address.city.country.name",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "name",
+				"name": "name",
+				"order": 0,
+				"path": "customer.address.city.country.name"
+			}
+		},
+		{
+			"url": "http://127.0.0.1:13861/property-select/resolve/json?root=invoice&path=deliveryAddress.city.country.name",
+			"status": 200,
+			"body": {
+				"kind": "terminal",
+				"label": "name",
+				"name": "name",
+				"order": 0,
+				"path": "deliveryAddress.city.country.name"
+			}
+		}
+	],
+	"requests": [
+		"http://127.0.0.1:13861/property-select-invoice",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/app.css",
+		"http://127.0.0.1:13861/@itrocks/home/right-pane.css",
+		"http://127.0.0.1:13861/@itrocks/notifications/css/notifications.css",
+		"http://127.0.0.1:13861/app/menu/menu.css",
+		"http://127.0.0.1:13861/@itrocks/framework/app.js",
+		"http://127.0.0.1:13861/@itrocks/home/container.js",
+		"http://127.0.0.1:13861/@itrocks/action-bar/action.css",
+		"http://127.0.0.1:13861/@itrocks/delete/css/action.css",
+		"http://127.0.0.1:13861/@itrocks/list/list.css",
+		"http://127.0.0.1:13861/@itrocks/new/css/action.css",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/article.css",
+		"http://127.0.0.1:13861/@itrocks/list/build.js",
+		"http://127.0.0.1:13861/@itrocks/home/right-pane.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/asset-loader.js",
+		"http://127.0.0.1:13861/@itrocks/auto-focus/auto-focus.js",
+		"http://127.0.0.1:13861/@itrocks/auto-redirect/build.js",
+		"http://127.0.0.1:13861/@itrocks/breadcrumb/breadcrumb.js",
+		"http://127.0.0.1:13861/@itrocks/build/build.js",
+		"http://127.0.0.1:13861/@itrocks/collapse/collapse.js",
+		"http://127.0.0.1:13861/@itrocks/contained-auto-width/contained-auto-width.js",
+		"http://127.0.0.1:13861/@itrocks/notifications/notifications.js",
+		"http://127.0.0.1:13861/@itrocks/real-viewport-height/real-viewport-height.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/begin-end.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/build.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/secure-click.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/composite.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/default-target.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/xtarget.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/head.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/headers-size.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/history.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/hold-on.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/main-target.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/modifier.js",
+		"http://127.0.0.1:13861/@itrocks/framework/property-select-list.js",
+		"http://127.0.0.1:13861/@itrocks/framework/property-select-metadata.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-add.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-reorder-freeze.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-reorder.js",
+		"http://127.0.0.1:13861/@itrocks/table/feed.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze/inherit-background.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze/inherit-border.js",
+		"http://127.0.0.1:13861/@itrocks/table/link.js",
+		"http://127.0.0.1:13861/@itrocks/table/table.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/load-css.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/load-script.js",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/logo/itrocks.svg",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/action/back.svg",
+		"http://127.0.0.1:13861/@itrocks/new/css/new.svg",
+		"http://127.0.0.1:13861/@itrocks/delete/css/delete.svg",
+		"http://127.0.0.1:13861/@itrocks/sorted-array/sorted-array.js",
+		"http://127.0.0.1:13861/@itrocks/plugin/plugin.js",
+		"http://127.0.0.1:13861/@itrocks/form-fetch/form-fetch.js",
+		"http://127.0.0.1:13861/@itrocks/list/property-select.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/front/property-select.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/property-select.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/controller.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/path.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/intentions.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/navigation.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/search.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/metadata.js",
+		"http://127.0.0.1:13861/@itrocks/property-select/front/property-select.css",
+		"http://127.0.0.1:13861/@itrocks/table/column-add.css",
+		"http://127.0.0.1:13861/property-select/template/html",
+		"http://127.0.0.1:13861/property-select/context/json?path=&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=deliveryAddress&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=lines&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.address&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.parent&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=deliveryAddress.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.address.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.parent.address&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.deliveryAddress&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.lines&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.address.city.country&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.parent.address.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.address&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.parent&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.deliveryAddress.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=customer.parent.address.city.country&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.address.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.parent.address&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.deliveryAddress.city.country&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.address.city.country&root=invoice",
+		"http://127.0.0.1:13861/property-select/context/json?path=tags.invoices.customer.parent.address.city&root=invoice",
+		"http://127.0.0.1:13861/property-select/resolve/json?path=issuedAt&root=invoice",
+		"http://127.0.0.1:13861/property-select-invoice/list?column=issuedAt&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+		"http://127.0.0.1:13861/property-select-invoice/list?columns=number,amount,issuedAt",
+		"http://127.0.0.1:13861/country",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/app.css",
+		"http://127.0.0.1:13861/@itrocks/home/right-pane.css",
+		"http://127.0.0.1:13861/@itrocks/notifications/css/notifications.css",
+		"http://127.0.0.1:13861/app/menu/menu.css",
+		"http://127.0.0.1:13861/@itrocks/framework/app.js",
+		"http://127.0.0.1:13861/@itrocks/home/container.js",
+		"http://127.0.0.1:13861/@itrocks/action-bar/action.css",
+		"http://127.0.0.1:13861/@itrocks/delete/css/action.css",
+		"http://127.0.0.1:13861/@itrocks/list/list.css",
+		"http://127.0.0.1:13861/@itrocks/new/css/action.css",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/article.css",
+		"http://127.0.0.1:13861/@itrocks/list/build.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/asset-loader.js",
+		"http://127.0.0.1:13861/@itrocks/auto-focus/auto-focus.js",
+		"http://127.0.0.1:13861/@itrocks/auto-redirect/build.js",
+		"http://127.0.0.1:13861/@itrocks/breadcrumb/breadcrumb.js",
+		"http://127.0.0.1:13861/@itrocks/build/build.js",
+		"http://127.0.0.1:13861/@itrocks/collapse/collapse.js",
+		"http://127.0.0.1:13861/@itrocks/contained-auto-width/contained-auto-width.js",
+		"http://127.0.0.1:13861/@itrocks/notifications/notifications.js",
+		"http://127.0.0.1:13861/@itrocks/real-viewport-height/real-viewport-height.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/begin-end.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/build.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/secure-click.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/composite.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/default-target.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/xtarget.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/head.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/headers-size.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/history.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/hold-on.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/main-target.js",
+		"http://127.0.0.1:13861/@itrocks/xtarget/modifier.js",
+		"http://127.0.0.1:13861/@itrocks/framework/property-select-list.js",
+		"http://127.0.0.1:13861/@itrocks/framework/property-select-metadata.js",
+		"http://127.0.0.1:13861/@itrocks/home/right-pane.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-add.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-reorder-freeze.js",
+		"http://127.0.0.1:13861/@itrocks/table/column-reorder.js",
+		"http://127.0.0.1:13861/@itrocks/table/feed.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze/inherit-background.js",
+		"http://127.0.0.1:13861/@itrocks/table/freeze/inherit-border.js",
+		"http://127.0.0.1:13861/@itrocks/table/link.js",
+		"http://127.0.0.1:13861/@itrocks/table/table.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/load-css.js",
+		"http://127.0.0.1:13861/@itrocks/asset-loader/load-script.js",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/logo/itrocks.svg",
+		"http://127.0.0.1:13861/@itrocks/ux-core/css/action/back.svg",
+		"http://127.0.0.1:13861/@itrocks/new/css/new.svg",
+		"http://127.0.0.1:13861/@itrocks/delete/css/delete.svg",
+		"http://127.0.0.1:13861/@itrocks/sorted-array/sorted-array.js",
+		"http://127.0.0.1:13861/@itrocks/plugin/plugin.js",
+		"http://127.0.0.1:13861/@itrocks/form-fetch/form-fetch.js",
+		"http://127.0.0.1:13861/country/list?offset=2&search.name="
+	],
+	"seed": "environment/models and framework/test/fixtures",
+	"url": "http://127.0.0.1:13861",
+	"readinessLastError": "fetch failed",
+	"sql": [
+		{
+			"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`issued_at` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+			"values": [
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"browser": {
+		"version": "151.0.7922.34",
+		"sandbox": true,
+		"viewport": {
+			"width": 1280,
+			"height": 720
+		}
+	},
+	"searchStatus": "limited",
+	"matchingPaths": [
+		"deliveryAddress.city.country.name",
+		"customer.address.city.country.name",
+		"customer.parent.address.city.country.name",
+		"tags.invoices.deliveryAddress.city.country.name",
+		"tags.invoices.customer.address.city.country.name"
+	],
+	"countryRows": [
+		"\n\t\t\t\n\t\t\tRecipe France\n\t\t",
+		"\n\t\t\t\n\t\t\tRecipe United Kingdom\n\t\t"
+	],
+	"status": "PASS"
+}

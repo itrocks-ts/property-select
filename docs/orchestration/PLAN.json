@@ -1275,7 +1275,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "implementation",
-      "status": "NEEDS_FIX",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Branch cycle policy, async cancellation and stable ranking require careful shared-state handling.",
@@ -1317,7 +1317,10 @@
         "evidence/L3/browser-results.json",
         "evidence/L3/test.txt",
         "evidence/L3/provider-traces.json"
-      ]
+      ],
+      "historical_status": "NEEDS_FIX",
+      "resolved_by": "RETEST-L3-1",
+      "resolution": "Independent RETEST-L3-1 closes L3-01 on corrected owner commits; original failed validation/report retained. Broader independent V3 remains pending."
     },
     {
       "id": "FIX-L3-1",
@@ -1401,7 +1404,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "A fresh verifier must check the actual Date metadata route and integrated search on corrected checkpoints without suppressing HTTP errors.",
@@ -1413,6 +1416,36 @@
         "META-02",
         "QUA-01",
         "VAL-07"
+      ],
+      "validation": "PASS: 133 independent real HTTP/SQL/Chromium assertions, 41 original author browser assertions, 9 reflect/13 reflect-path/6 META/24 selector tests, full framework suite and seven independent negative type paths. Date metadata is terminal, direct traversal HTTP 400, Country.Name search limited without failed metadata or console/page errors, scalar conversion and country control pass. L3-01 closed; V3 ready.",
+      "tested_checkpoints": {
+        "@itrocks/reflect": {
+          "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+          "version": "0.3.1"
+        },
+        "@itrocks/reflect-path": {
+          "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+          "version": "0.3.2"
+        },
+        "@itrocks/framework": {
+          "sha": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+          "version": "0.10.3"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "b1b47f985a6ecea0dba00cc73193618a40074581",
+          "base_version": "0.4.1",
+          "version": "0.4.2",
+          "source": "Tracking and independent test resources only; runtime unchanged"
+        }
+      },
+      "evidence": [
+        "evidence/RETEST-L3-1/results.json",
+        "evidence/RETEST-L3-1/author-replay/browser-results.json",
+        "evidence/RETEST-L3-1/commands.json",
+        "evidence/RETEST-L3-1/review.json"
+      ],
+      "closed_defects": [
+        "defects/L3-01.md"
       ]
     },
     {

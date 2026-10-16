@@ -1,0 +1,178 @@
+[
+  {
+    "name": "reflect-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "reflect-test-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect",
+      "run",
+      "build:test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "reflect-test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "reflect-path-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect-path",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "reflect-path-test-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/reflect-path",
+      "run",
+      "build:test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "reflect-path-test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "framework-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "selector-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "metadata-test",
+    "command": [
+      "node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select-metadata.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "independent-types",
+    "command": [
+      "node",
+      "node_modules/.bin/tsc",
+      "--ignoreConfig",
+      "--strict",
+      "--noEmit",
+      "--skipLibCheck",
+      "--target",
+      "es2023",
+      "--module",
+      "nodenext",
+      "--moduleResolution",
+      "nodenext",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-types.ts"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "independent-http-sql-browser",
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0
+  },
+  {
+    "name": "original-author-reproducer",
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/test/browser-search.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "environment": {
+      "PS_SEARCH_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L3-1/author-replay",
+      "PS_SEARCH_DIRECTORY": "/tmp/property-select-RETEST-L3-1-author",
+      "PS_SEARCH_APP_PORT": "13863",
+      "PS_SEARCH_PORT": "13864"
+    },
+    "exit": 0,
+    "stdout": "41/41 assertions PASS; Chromium 151.0.7922.34",
+    "evidence": "author-replay/browser-results.json"
+  },
+  {
+    "name": "restricted-initial-probe",
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs"
+    ],
+    "exit": 1,
+    "diagnostic": "listen EPERM 127.0.0.1:13861; normal require_escalated retry approved; no service started"
+  },
+  {
+    "name": "initial-types-command",
+    "command": [
+      "node",
+      "node_modules/.bin/tsc",
+      "--strict",
+      "--noEmit",
+      "--skipLibCheck",
+      "--target",
+      "es2023",
+      "--module",
+      "nodenext",
+      "--moduleResolution",
+      "nodenext",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1-types.ts"
+    ],
+    "exit": 1,
+    "diagnostic": "TS5112; final invocation adds --ignoreConfig and passes"
+  }
+]

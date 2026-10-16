@@ -3,7 +3,9 @@
 ## Objective and prerequisite
 
 Independently clear [L3-01](../defects/L3-01.md) on attributable corrective commits.
-Prerequisite: `FIX-L3-1` completed diagnostic/correction report and rebuilt owner outputs. Current status: `PENDING`.
+Prerequisite: `FIX-L3-1` completed diagnostic/correction report and rebuilt owner outputs.
+Current status: `DONE / PASS`.
+Independent [report](../reports/RETEST-L3-1.md) and [evidence](../evidence/RETEST-L3-1/results.json).
 The verifier must be fresh and distinct from the L3 author and corrector. No sub-agent or next task.
 
 Read applicable owner/application instructions and handbook routes, [COMMON.md](../COMMON.md),

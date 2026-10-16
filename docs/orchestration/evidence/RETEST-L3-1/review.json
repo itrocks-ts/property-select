@@ -1,0 +1,174 @@
+{
+  "status": "PASS",
+  "owners": {
+    "reflect": {
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "export_targets": [
+        "./esm/reflect.js",
+        "./cjs/reflect.js"
+      ],
+      "packaged_files": 25,
+      "inventory_path": "/tmp/property-select-RETEST-L3-1-review/reflect-files.json",
+      "inventory_sha256": "e5dd5b39b6baee0743bf3b76a155006d64cbd3d8128dc855edc4a601647be777",
+      "command": [
+        "npm",
+        "pack",
+        "--dry-run",
+        "--offline",
+        "--ignore-scripts",
+        "--json",
+        "--cache",
+        "/tmp/property-select-retest-pack-cache"
+      ],
+      "runtime_entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect"
+    },
+    "reflect-path": {
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "export_targets": [
+        "./cjs/reflect-path.js"
+      ],
+      "packaged_files": 11,
+      "inventory_path": "/tmp/property-select-RETEST-L3-1-review/reflect-path-files.json",
+      "inventory_sha256": "478b94be60c1626e90ee7021d5027b545065651898b26724c089d4c67194b6a0",
+      "command": [
+        "npm",
+        "pack",
+        "--dry-run",
+        "--offline",
+        "--ignore-scripts",
+        "--json",
+        "--cache",
+        "/tmp/property-select-retest-pack-cache"
+      ],
+      "runtime_entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path"
+    },
+    "framework": {
+      "sha": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+      "version": "0.10.3",
+      "export_targets": [
+        "./cjs/framework.js",
+        "./cjs/property-select.js",
+        "./cjs/property-select-actions.js",
+        "./property-select-list.js",
+        "./property-select-metadata.js",
+        "./cjs/sql-projection.js",
+        "./cjs/sql-relationships.js"
+      ],
+      "packaged_files": 44,
+      "inventory_path": "/tmp/property-select-RETEST-L3-1-review/framework-files.json",
+      "inventory_sha256": "1bc1aa32e94e73fdca1b4a12d7ac7013f606016c1572b0a405ac24e345e1db03",
+      "command": [
+        "npm",
+        "pack",
+        "--dry-run",
+        "--offline",
+        "--ignore-scripts",
+        "--json",
+        "--cache",
+        "/tmp/property-select-retest-pack-cache"
+      ],
+      "runtime_entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework"
+    },
+    "property-select": {
+      "sha": "b1b47f985a6ecea0dba00cc73193618a40074581",
+      "version": "0.4.2",
+      "export_targets": [
+        "./property-select.d.ts",
+        "./property-select.js",
+        "./cjs/property-select.js",
+        "./front/property-select.css",
+        "./front/property-select.html",
+        "./front/property-select.d.ts",
+        "./front/property-select.js",
+        "./property-select.d.ts",
+        "./property-select.js"
+      ],
+      "packaged_files": 1053,
+      "inventory_path": "/tmp/property-select-RETEST-L3-1-review/property-select-files.json",
+      "inventory_sha256": "99c17ac51c0696331d524a4596ffdaeff2ad118f6dfc7fbd40d8aa25c251a062",
+      "command": [
+        "npm",
+        "pack",
+        "--dry-run",
+        "--offline",
+        "--ignore-scripts",
+        "--json",
+        "--cache",
+        "/tmp/property-select-retest-pack-cache"
+      ],
+      "runtime_entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select"
+    }
+  },
+  "complete_diff_archives": {
+    "reflect": {
+      "from": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+      "to": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "path": "/tmp/property-select-RETEST-L3-1-review/reflect-corrective.diff",
+      "sha256": "c5135e069aa417f147ba97d06acd1b3c1886a547e3694d8ca971240593563a12"
+    },
+    "reflect-path": {
+      "from": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+      "to": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "path": "/tmp/property-select-RETEST-L3-1-review/reflect-path-corrective.diff",
+      "sha256": "beb8e6eb00f80349d3a6f0820122b91cf15d95b2050d7034fccb192523b7669f"
+    },
+    "framework": {
+      "from": "7a302cd606ff007276038ada4d12fc0bd2161d54",
+      "to": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+      "path": "/tmp/property-select-RETEST-L3-1-review/framework-corrective.diff",
+      "sha256": "c710dc78e86674e8287785b5e86d01c642cdd9faccf9216d4ff91484be83e5ad"
+    },
+    "property-select": {
+      "from": "1ddb156fe92edbb7bbae8a43451bbcc47d4eff9d",
+      "to": "b1b47f985a6ecea0dba00cc73193618a40074581",
+      "path": "/tmp/property-select-RETEST-L3-1-review/property-select-corrective.diff",
+      "sha256": "e6acb46cbc8c21895cf7e9901c29f70500ba5c7d15a6583487701d55880bcb8e"
+    }
+  },
+  "generated_checks": {
+    "reflect-cjs": {
+      "path": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/cjs/relation-fact.js",
+      "sha256": "c7c5e3396281698a87b9b840dd25216cfa61c32a104bbbeaf704b44031b38936"
+    },
+    "reflect-esm": {
+      "path": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/esm/relation-fact.js",
+      "sha256": "bf5222414af691106a378243539ba9fe61a62e5d53b13247d0686df8e9f57454"
+    },
+    "path-types": {
+      "path": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path/cjs/types.d.ts",
+      "sha256": "8a0742635f338c80a909b25482cdc6070606af7bb1e955284105155d555de175"
+    },
+    "provider": {
+      "path": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/cjs/property-select-provider.js",
+      "sha256": "2e20843ea81008c3f9efc72ccf17aa9f469d0c9823ad3f343b08fb9aafb62c00"
+    }
+  },
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt",
+    "initial_index_and_absences_preserved": true
+  },
+  "cleanup": "All task-owned app/standalone PID and ownership records removed; inherited database retained",
+  "listener_cleanup": {
+    "closed": [
+      13861,
+      13863,
+      13864
+    ],
+    "inherited_database_still_listening": 13316,
+    "method": "/proc/net/tcp and tcp6 LISTEN inspection under normal escalation"
+  },
+  "documentation_checks": "PASS: new scripts/report/task width <=120; syntax and git whitespace checks",
+  "solid": "Classification, traversal, HTTP and conversion remain with owners; selector runtime unchanged",
+  "independent_driver_sha256": {
+    "RETEST-L3-1.mjs": "340eac77b2f0ee6b87eb52cab259408a5690a48d848edc530b919b368045cc48",
+    "RETEST-L3-1-types.ts": "e8ca6828a24363d61df486483b674ad05a850fa7811745b9b2e580a8e0dce5bf",
+    "RETEST-L3-1-initialise.cjs": "258400303e9fbe420ab23fa35342f5c58030fa5bc9e2e405177ac1d9f7360faa"
+  },
+  "final_review_driver": {
+    "path": "/tmp/RETEST-L3-1-final-review.py",
+    "sha256": "3de1b714285dad917092a8c5bc849f611ee1f064efc5b649a8fe2060b4faa5af"
+  }
+}
