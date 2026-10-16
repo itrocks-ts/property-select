@@ -1,0 +1,39 @@
+{
+  "owners": {
+    "property-select": {
+      "head": "4a0e20283296122b43d0eab87c2f4c8b701ebf7a",
+      "version": "0.5.3",
+      "status": " M package.json\n?? docs/orchestration/environment/checks/RETEST-V4-1-challenges.mjs\n?? docs/orchestration/environment/checks/RETEST-V4-1-integrated.mjs\n?? docs/orchestration/environment/checks/RETEST-V4-1-standalone-fixture.js\n?? docs/orchestration/environment/checks/RETEST-V4-1-standalone.mjs\n?? docs/orchestration/evidence/RETEST-V4-1/\n"
+    },
+    "fastify": {
+      "head": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify-file-session-store": {
+      "head": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    },
+    "list": {
+      "head": "dcc099e285f83ea594a109c4f33b06664879f2e0",
+      "version": "0.10.0",
+      "status": ""
+    },
+    "framework": {
+      "head": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    }
+  },
+  "application": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "absent": [
+      true,
+      true
+    ],
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  }
+}

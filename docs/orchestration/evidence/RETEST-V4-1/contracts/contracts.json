@@ -1,0 +1,121 @@
+{
+  "status": "PASS",
+  "observations": [
+    {
+      "name": "six default destinations",
+      "actual": [
+        "customer.address.city.country",
+        "lines",
+        "tags",
+        "customer.address",
+        "customer.billingAddress",
+        "customer.parent"
+      ],
+      "expected": [
+        "customer.address.city.country",
+        "lines",
+        "tags",
+        "customer.address",
+        "customer.billingAddress",
+        "customer.parent"
+      ]
+    },
+    {
+      "name": "translated full technical fallback",
+      "actual": "Business customer › Business address › Business city › Business country",
+      "expected": "Business customer › Business address › Business city › Business country"
+    },
+    {
+      "name": "existing cannot create recent",
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "moved cannot create recent",
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "cancelled cannot create recent",
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "rejected cannot create recent",
+      "actual": [],
+      "expected": []
+    },
+    {
+      "name": "object selection records itself",
+      "actual": [
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address"
+      ]
+    },
+    {
+      "name": "root terminal creates no root recent",
+      "actual": [
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address"
+      ]
+    },
+    {
+      "name": "recent ancestor survives maximal branches",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.address.city.country",
+        "lines"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.address.city.country",
+        "lines"
+      ]
+    },
+    {
+      "name": "conflict retries latest local query",
+      "actual": "latest",
+      "expected": "latest"
+    },
+    {
+      "name": "intermediate write coalesces",
+      "actual": false,
+      "expected": false
+    },
+    {
+      "name": "persisted fields exclude transient data",
+      "actual": [
+        "branch",
+        "current",
+        "query",
+        "recent",
+        "scroll",
+        "version"
+      ],
+      "expected": [
+        "branch",
+        "current",
+        "query",
+        "recent",
+        "scroll",
+        "version"
+      ]
+    },
+    {
+      "name": "same id different stores isolate cache",
+      "actual": "right",
+      "expected": "right"
+    },
+    {
+      "name": "nested mutation is durably saved",
+      "actual": "changed-left",
+      "expected": "changed-left"
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+[
+  {
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/fastify-file-session-store",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "store-test.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/fastify",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "fastify-test.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "selector-test.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-build.txt"
+  },
+  {
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-build.txt"
+  },
+  {
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/selector-state.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "exit": 0,
+    "output": "list-state-test.txt"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-revoke.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "revocation-pass/revocation.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-contract.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "contracts/contracts.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "browser/results.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V4-1-integrated.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "integrated-complete/results.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V4-1-standalone.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "standalone/results.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V4-1-challenges.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "evidence": "challenges-complete/results.json"
+  },
+  {
+    "command": "node /tmp/retest-v4-public-review.cjs",
+    "exit": 0,
+    "output": "public-review.json",
+    "note": "Five owner npm pack --dry-run --json --ignore-scripts; no installation/publication"
+  }
+]

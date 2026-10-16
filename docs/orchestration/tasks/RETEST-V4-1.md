@@ -3,7 +3,9 @@
 ## Objective and prerequisite
 
 Verify the corrective delivery for [V4-01](../defects/V4-01.md) and complete every V4 obligation.
-Prerequisite: attributable FIX-V4-1 author report/commits with no unresolved blocker. Status: `PENDING`.
+Prerequisite: attributable FIX-V4-1 author report/commits with no unresolved blocker.
+Status: `PASS / DONE`;
+see [independent report](../reports/RETEST-V4-1.md).
 Fresh verifier must be distinct from the author/corrector; no subdelegation or V5.
 Read application/owner instructions, handbook routes, [COMMON.md](../COMMON.md), [EXECUTION.md](../EXECUTION.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),

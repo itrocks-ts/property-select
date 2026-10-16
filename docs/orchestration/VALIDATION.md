@@ -1,5 +1,25 @@
 # Phase 1 validation matrix
 
+## RETEST-V4-1 independent completion
+
+**PASS**, 16 October 2026. [Report](reports/RETEST-V4-1.md),
+[strict 410 and restart](evidence/RETEST-V4-1/revocation-pass/revocation.json),
+[V4 replay](evidence/RETEST-V4-1/browser/results.json),
+[all-size integrated completion](evidence/RETEST-V4-1/integrated-complete/results.json),
+[independent standalone](evidence/RETEST-V4-1/standalone/results.json),
+[full-state expiry and opposite completion orders](evidence/RETEST-V4-1/challenges-complete/results.json),
+[public contracts](evidence/RETEST-V4-1/contracts/contracts.json).
+
+- T04/T14/T16/T17, NAV-06, REC-01–06, STA-01–05, PORT-05/07/08 and META-04: **PASS**.
+- T15/REC-07: **PASS V4 click/generic-outcome portion**; actual drag/move/cancel remains V5.
+- PORT-09: **PASS storage portion**; preview/error timing remains V5/V6.
+- DEP-05/06 and the V4 portion of DEP-10: **PASS**. Later combined gates remain pending.
+- Both interfaces exercised at 1280 × 720, 768 × 900, 390 × 844 and 844 × 390 with native mouse/keyboard/wheel.
+- Fresh counts: 325 browser assertions, 24 contract/HTTP assertions, five builds and 52 regression tests pass.
+- Fastify `aca7bf3` / 0.4.1, selector `4a0e202` / 0.5.2 (tracking 0.5.3), file store `c628498` / 0.4.0,
+  list `dcc099e` / 0.10.0 and framework `7211a97` / 0.11.0 were independently tested.
+- [V4-01](defects/V4-01.md) is closed. L5 is eligible; historical failure/author observations below remain historical.
+
 ## FIX-V4-1 author correction observations
 
 **DONE (author)**, Fastify `aca7bf377b0fd543c15004df3ebfb71fd10ab65f` / **0.4.1**, tracking **0.5.2**.
@@ -744,7 +764,7 @@ breadcrumb. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 imple
 suffix. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T04** — Expected: Activate a shortcut from a different branch; full destination replaces branch and search
 clears. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
+current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T05** — Expected: Click terminal, relation main and relation +; assert one correct intention/action per input,
 unchanged context on add. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T06** — Expected: Compare bounding boxes at hover/focus; on touch + appears only on relations and hybrid actions
@@ -768,16 +788,16 @@ noncycles with provider traces. **PASS**, [fresh real/static traces](evidence/RE
 - **T14** — Expected: Combine recent ancestor, two maximal used branches and duplicate advice; assert stable
 six-or-configured destination limit. Author proof: [L4](reports/L4.md),
 [browser observations](evidence/L4/browser.json);
-current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
+current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T15** — Expected: Confirm new add, click duplicate, move existing and abort new drag; only the committed new add
 becomes recent. Author proof: [L4](reports/L4.md); current verdict: `PASS L4 CLICK/CONTRACT`,
-actual drag/move/cancel and independent V4/V5 remain `NOT_RUN`.
+independent V4 click/generic outcomes **PASS RETEST-V4-1**; actual drag/move/cancel remains **NOT_RUN V5**.
 - **T16** — Expected: Set branch/query/scroll, fold/reopen and full reload; expire that actual session and verify
 all selector state is forgotten. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
+current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T17** — Expected: Switch saved list config, remove a metadata path and reload; used advice updates, recents
 remain, invalid branch truncates. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
+current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T18** — Expected: Click absent/existing columns rapidly; new appends, existing stays at index, both reveal/flash
 and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; current verdict: `NOT_RUN`.
 - **T19** — Expected: Drag new path through legal positions; a true column appears immediately, receives real data
@@ -1055,10 +1075,10 @@ L1-META finite provider paths and ambiguous/unknown handling: **PASS**; automati
 Expected: Change allowed paths between save/restore; truncate branch to valid prefix, discard invalid advice and
 rerun query from the validated context.
 
-Proof: `evidence/<gate>/META-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
 
 L1-META catalogue-change capability: **PASS**; [browser proof](evidence/L1-META/browser.json).
-Persisted branch/query/advice restoration remains NOT_RUN until L4/V4.
+Persisted branch/query/advice restoration: **PASS RETEST-V4-1**.
 
 ## PORT additional cases
 
@@ -1097,7 +1117,7 @@ historical frozen-boundary reveal failure. External transport remains V5/V7.
 Expected: Identity translation fallback, technical label fallback, provider business order, static root advice,
 six-result default and configured limit are observable without phase 2 settings.
 
-Proof: `evidence/<gate>/PORT-05.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
 ### PORT-06: Search rank and focus
 
 Expected: Reverse network completion order; same metadata yields same rank, selected focus remains,
@@ -1109,7 +1129,7 @@ Proof: `evidence/<gate>/PORT-06.*` and `reports/<gate>.md`. Current verdict: `NO
 Expected: Query variants of the same canonical list route share selector state; route-identifying segments and two
 real sessions remain distinct; table namespace is separate.
 
-Proof: `evidence/<gate>/PORT-07.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
 ### PORT-08: State sequencing and expiry
 
 Expected: Race same-key and distinct-key writes with list configuration saves and response autosave. Revoke/expire
@@ -1118,13 +1138,14 @@ secret. Also remove/recreate a selector key while an old write is pending; its t
 No lost namespace, skipped nested-state save, stale overwrite or expired-state resurrection. Use two store
 instances with identical synthetic session ids to prove cache isolation; retain the two-user browser check.
 
-Proof: [V4 reproduction](evidence/V4/revocation.json) and [report](reports/V4.md). Current verdict: **FAIL / V4-01**.
+Proof: [fresh retest](reports/RETEST-V4-1.md). Current verdict: **PASS; V4-01 CLOSED**.
+Historical [V4 reproduction](evidence/V4/revocation.json) remains unchanged.
 ### PORT-09: Storage and preview failures
 
 Expected: Unavailable state store preserves live context and signals error; failed/slow data keeps gesture
 responsive, valid drop outcome independent of data completion and retry available.
 
-Proof: `evidence/<gate>/PORT-09.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS storage portion; preview NOT_RUN until V5/V6**.
 ### PORT-10: Public build and architecture
 
 Expected: Check direct runtime imports, npm dependency graph, public CJS/browser exports, types/assets/files, SOLID

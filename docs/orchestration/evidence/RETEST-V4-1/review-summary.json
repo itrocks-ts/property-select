@@ -1,0 +1,154 @@
+{
+  "status": "PASS",
+  "columnOrdersAndCounts": [
+    {
+      "source": "browser",
+      "name": "duplicate keeps exact DOM columns 1280x720",
+      "viewport": null,
+      "expectedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "source": "browser",
+      "name": "duplicate keeps exact DOM columns 768x900",
+      "viewport": null,
+      "expectedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "source": "browser",
+      "name": "duplicate keeps exact DOM columns 390x844",
+      "viewport": null,
+      "expectedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "source": "browser",
+      "name": "duplicate keeps exact DOM columns 844x390",
+      "viewport": null,
+      "expectedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observedOrder": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expectedCount": 3,
+      "observedCount": 3
+    },
+    {
+      "source": "integrated-complete",
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "expectedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "observedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "source": "integrated-complete",
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "expectedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "observedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "source": "integrated-complete",
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "expectedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "observedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expectedCount": 2,
+      "observedCount": 2
+    },
+    {
+      "source": "integrated-complete",
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "expectedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "observedOrder": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expectedCount": 2,
+      "observedCount": 2
+    }
+  ],
+  "pageExceptions": [],
+  "integratedConsoleStatusCounts": {
+    "410": 16,
+    "500": 4
+  },
+  "integratedAbortedRequests": 40,
+  "allIntegratedNetworkFailuresAreAborts": true,
+  "standaloneConsole": [],
+  "standaloneNetworkFailures": []
+}

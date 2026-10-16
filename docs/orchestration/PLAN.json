@@ -1786,7 +1786,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Session generations, response autosave and durable HTTP error handling require cross-owner verification.",
@@ -1803,6 +1803,26 @@
         "PORT-08",
         "PORT-09",
         "VAL-07"
+      ],
+      "verdict": "PASS",
+      "validation": "PASS independent: strict 410 revoke/expiry 10; V4 replay 84; integrated four-size itinerary 124; independent standalone 94; full-state expiry and opposite-order HTTP/autosave challenges 23; public contracts 14. Five builds and 52 regression tests PASS. V4-01 closed; all V4 stage obligations complete. Later drag/touch portions remain pending.",
+      "tested_checkpoints": {
+        "property-select": "4a0e20283296122b43d0eab87c2f4c8b701ebf7a / 0.5.2; tracking 0.5.3",
+        "fastify": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f / 0.4.1",
+        "fastify-file-session-store": "c62849840b82316d6e8b0594d2ba4eb962a1cefe / 0.4.0",
+        "list": "dcc099e285f83ea594a109c4f33b06664879f2e0 / 0.10.0",
+        "framework": "7211a97419add5165a8ac0f24f96afd5efd1b3fc / 0.11.0"
+      },
+      "evidence": [
+        "evidence/RETEST-V4-1/revocation-pass/revocation.json",
+        "evidence/RETEST-V4-1/browser/results.json",
+        "evidence/RETEST-V4-1/integrated-complete/results.json",
+        "evidence/RETEST-V4-1/standalone/results.json",
+        "evidence/RETEST-V4-1/challenges-complete/results.json",
+        "evidence/RETEST-V4-1/contracts/contracts.json",
+        "evidence/RETEST-V4-1/commands.json",
+        "evidence/RETEST-V4-1/public-review.json",
+        "evidence/RETEST-V4-1/checkpoints.json"
       ]
     },
     {

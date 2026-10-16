@@ -1,0 +1,951 @@
+{
+  "assertions": [
+    {
+      "name": "isolated app has no ownership reservation",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "isolated standalone has no ownership reservation",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "maximal branches 1280x720",
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "recent ancestor first 1280x720",
+      "actual": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate suggestion 1280x720",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "exact divergent shortcut 1280x720",
+      "actual": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears search 1280x720",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration retains recent 1280x720",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed branch truncated 1280x720",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone 1280x720",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate keeps exact DOM columns 1280x720",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected plural keeps recents 1280x720",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves query 1280x720",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload exact branch 1280x720",
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 1280x720",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recent 1280x720",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "two browser contexts isolate queries",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "canonical query variant",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "different route is empty",
+      "status": "PASS"
+    },
+    {
+      "name": "identifying segment is empty",
+      "status": "PASS"
+    },
+    {
+      "name": "newer write first",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "late old write conflicts",
+      "actual": 409,
+      "expected": 409,
+      "status": "PASS"
+    },
+    {
+      "name": "late response cannot overwrite",
+      "actual": "new",
+      "expected": "new",
+      "status": "PASS"
+    },
+    {
+      "name": "remove is committed",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "tombstone rejects in-flight write",
+      "actual": 409,
+      "expected": 409,
+      "status": "PASS"
+    },
+    {
+      "name": "tombstone has no state",
+      "status": "PASS"
+    },
+    {
+      "name": "recreate using tombstone revision",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "concurrent actual state/list requests",
+      "actual": [
+        200,
+        200,
+        204
+      ],
+      "expected": [
+        200,
+        200,
+        204
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "delayed response autosave finishes",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps first selector",
+      "actual": "race-primary",
+      "expected": "race-primary",
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps second selector",
+      "actual": "race-alternate",
+      "expected": "race-alternate",
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps actual list columns",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps nested delayed autosave",
+      "actual": "autosave",
+      "expected": "autosave",
+      "status": "PASS"
+    },
+    {
+      "name": "restart preserves other browser session",
+      "actual": "second-session",
+      "expected": "second-session",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke rejects acquired request",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke rejects old browser generation",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke reload clears state",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke reload clears recent",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "expire rejects acquired request",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire rejects old browser generation",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire reload clears state",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire reload clears recent",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "maximal branches 768x900",
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "recent ancestor first 768x900",
+      "actual": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate suggestion 768x900",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "exact divergent shortcut 768x900",
+      "actual": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears search 768x900",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration retains recent 768x900",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed branch truncated 768x900",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone 768x900",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate keeps exact DOM columns 768x900",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected plural keeps recents 768x900",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves query 768x900",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload exact branch 768x900",
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 768x900",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recent 768x900",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "maximal branches 390x844",
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "recent ancestor first 390x844",
+      "actual": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate suggestion 390x844",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "exact divergent shortcut 390x844",
+      "actual": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears search 390x844",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration retains recent 390x844",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed branch truncated 390x844",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone 390x844",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate keeps exact DOM columns 390x844",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected plural keeps recents 390x844",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves query 390x844",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload exact branch 390x844",
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 390x844",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recent 390x844",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "maximal branches 844x390",
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "recent ancestor first 844x390",
+      "actual": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate suggestion 844x390",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "exact divergent shortcut 844x390",
+      "actual": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears search 844x390",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration retains recent 844x390",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed branch truncated 844x390",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone 844x390",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate keeps exact DOM columns 844x390",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected plural keeps recents 844x390",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves query 844x390",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload exact branch 844x390",
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 844x390",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recent 844x390",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)",
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": ""
+    },
+    {
+      "action": "standalone",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": "PASS: owned app 2491710 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": "PASS: owned app 2492104 stopped\n"
+    },
+    {
+      "action": "stop-standalone",
+      "directory": "/tmp/property-select/RETEST-V4-1-browser",
+      "output": "PASS: owned standalone 2491728 stopped\n"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "standalone-before-1280x720",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-after-1280x720",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-before-1280x720",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-after-1280x720",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-before-768x900",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-after-768x900",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-before-768x900",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-after-768x900",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-before-390x844",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-after-390x844",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-before-390x844",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-after-390x844",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-before-844x390",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-after-844x390",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-before-844x390",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-after-844x390",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard"
+    }
+  ],
+  "inputs": [],
+  "seed": "synthetic invoice fixture",
+  "urls": [
+    "http://127.0.0.1:13911/property-select-invoice",
+    "http://127.0.0.1:13912/state-fixture"
+  ],
+  "database": "127.0.0.1:13316; existing synthetic recipe",
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}
