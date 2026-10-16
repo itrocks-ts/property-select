@@ -3,7 +3,7 @@
 ## Objective and prerequisite
 
 Correct [V3-01](../defects/V3-01.md). Prerequisite: completed V3 diagnostic report, under the correction exception in
-[EXECUTION.md](../EXECUTION.md). Current status: `PENDING`.
+[EXECUTION.md](../EXECUTION.md). Current status: `DONE` (author); independent `RETEST-V3-1` pending.
 
 Read application/owner instructions, handbook routes, owner README, [COMMON.md](../COMMON.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md),

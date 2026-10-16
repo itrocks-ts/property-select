@@ -1,0 +1,98 @@
+node:fs:554
+  return binding.open(
+                 ^
+
+Error: EEXIST: file already exists, open '/tmp/property-select/V3-reproduce/standalone.pid'
+    at openSync (node:fs:554:18)
+    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {
+  errno: -17,
+  code: 'EEXIST',
+  syscall: 'open',
+  path: '/tmp/property-select/V3-reproduce/standalone.pid'
+}
+
+Node.js v24.0.1
+node:internal/errors:983
+  const err = new Error(message);
+              ^
+
+Error: Command failed: /usr/bin/node /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs standalone
+node:fs:554
+  return binding.open(
+                 ^
+
+Error: EEXIST: file already exists, open '/tmp/property-select/V3-reproduce/standalone.pid'
+    at openSync (node:fs:554:18)
+    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {
+  errno: -17,
+  code: 'EEXIST',
+  syscall: 'open',
+  path: '/tmp/property-select/V3-reproduce/standalone.pid'
+}
+
+Node.js v24.0.1
+
+    at genericNodeError (node:internal/errors:983:15)
+    at wrappedFn (node:internal/errors:537:14)
+    at checkExecSyncError (node:child_process:891:11)
+    at execFileSync (node:child_process:927:15)
+    at control (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-reproduce.mjs:18:17)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-reproduce.mjs:23:2
+    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'node:fs:554\n' +
+      '  return binding.open(\n' +
+      '                 ^\n' +
+      '\n' +
+      "Error: EEXIST: file already exists, open '/tmp/property-select/V3-reproduce/standalone.pid'\n" +
+      '    at openSync (node:fs:554:18)\n' +
+      '    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n' +
+      '    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n' +
+      '    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n' +
+      '    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n' +
+      '    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n' +
+      '  errno: -17,\n' +
+      "  code: 'EEXIST',\n" +
+      "  syscall: 'open',\n" +
+      "  path: '/tmp/property-select/V3-reproduce/standalone.pid'\n" +
+      '}\n' +
+      '\n' +
+      'Node.js v24.0.1\n'
+  ],
+  pid: 2424413,
+  stdout: '',
+  stderr: 'node:fs:554\n' +
+    '  return binding.open(\n' +
+    '                 ^\n' +
+    '\n' +
+    "Error: EEXIST: file already exists, open '/tmp/property-select/V3-reproduce/standalone.pid'\n" +
+    '    at openSync (node:fs:554:18)\n' +
+    '    at launchService (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:62:22)\n' +
+    '    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs:223:8\n' +
+    '    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n' +
+    '    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n' +
+    '    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5) {\n' +
+    '  errno: -17,\n' +
+    "  code: 'EEXIST',\n" +
+    "  syscall: 'open',\n" +
+    "  path: '/tmp/property-select/V3-reproduce/standalone.pid'\n" +
+    '}\n' +
+    '\n' +
+    'Node.js v24.0.1\n'
+}
+
+Node.js v24.0.1

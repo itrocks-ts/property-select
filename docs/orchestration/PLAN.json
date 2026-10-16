@@ -1509,7 +1509,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Navigation generations and asynchronous focus retention require independent DOM identity and metadata checks.",
@@ -1521,7 +1521,23 @@
         "SEA-07",
         "QUA-01",
         "VAL-07"
-      ]
+      ],
+      "validation": "PASS (author): 24 selector tests/build/types, 8 final reproductions, 193 focused browser assertions, 21 independent numerical assertions and all 138 full V3 driver assertions. Both interfaces/four dimensions show complete adjacent rows after navigation/error/Clear; main/plus exact focus, budget actions and final blur ranking pass. Distinct RETEST-V3-1 remains mandatory.",
+      "evidence": [
+        "evidence/FIX-V3-1/final-reproducer/reproducer.json",
+        "evidence/FIX-V3-1/final-bounds/bounds.json",
+        "evidence/FIX-V3-1/final-V3/results.json",
+        "evidence/FIX-V3-1/focused-all/results.json",
+        "evidence/FIX-V3-1/commands.json",
+        "evidence/FIX-V3-1/review.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "f426ab2547111691649ea1b0e574a3beb5afad3b",
+          "base_version": "0.4.4",
+          "version": "0.4.5"
+        }
+      }
     },
     {
       "id": "RETEST-V3-1",

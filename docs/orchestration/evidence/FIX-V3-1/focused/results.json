@@ -1,0 +1,1950 @@
+{
+  "checks": [
+    {
+      "name": "standalone-1280 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-main retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-main one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-main retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-main final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-main retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-plus retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-plus one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-plus retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-plus final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-1280-plus retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-main retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-main one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-main retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-main final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-main retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-plus retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-plus one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-plus retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-plus final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-768-plus retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-main retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-main one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-main retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-main final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-main retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-plus retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-plus one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-plus retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-plus final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-390-plus retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 recoverable search error",
+      "observed": "error",
+      "expected": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 complete ordinary rows after error/Clear",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 no retained ordinary rows",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 relation search is local",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 obsolete root relation removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 Clear complete adjacent rows",
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 main keyboard focus",
+      "observed": "main:tags.name",
+      "expected": "main:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 main captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 main exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 select keyboard focus",
+      "observed": "select:tags.name",
+      "expected": "select:tags.name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 select captured during pending enrichment",
+      "observed": "loading",
+      "expected": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 select exact focus survives",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844 trusted inputs",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-main retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-main one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-main retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-main final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-main retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-plus retained focus identity",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-plus one visible retained row",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-plus retained action emits exact path once",
+      "observed": [
+        "slow.name"
+      ],
+      "expected": [
+        "slow.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-plus final ranking after blur",
+      "observed": [
+        "fast.name"
+      ],
+      "expected": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "budget-844-plus retained marker removed",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "No browser exceptions",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "stdout": "",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "standalone",
+      "stdout": "",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "stop-standalone",
+      "stdout": "PASS: owned standalone 2427310 stopped\n",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "stop-app",
+      "stdout": "PASS: owned app 2427286 stopped\n",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "label": "standalone-1280",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-1280",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-768",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-768",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-390",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-390",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-844",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-844",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "health": [],
+  "observations": [
+    {
+      "name": "standalone-1280 error recovery",
+      "url": "http://127.0.0.1:13878/search-fixture?error",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "standalone-1280 main enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "standalone-1280 select enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-1280 error recovery",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "integrated-1280 main enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-1280 select enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "budget-1280-main",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "budget-1280-plus",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "standalone-768 error recovery",
+      "url": "http://127.0.0.1:13878/search-fixture?error",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "standalone-768 main enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "standalone-768 select enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-768 error recovery",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "integrated-768 main enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-768 select enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "budget-768-main",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "budget-768-plus",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "standalone-390 error recovery",
+      "url": "http://127.0.0.1:13878/search-fixture?error",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "standalone-390 main enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "standalone-390 select enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-390 error recovery",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "integrated-390 main enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-390 select enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "budget-390-main",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "budget-390-plus",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "standalone-844 error recovery",
+      "url": "http://127.0.0.1:13878/search-fixture?error",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "standalone-844 main enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "standalone-844 select enrichment",
+      "url": "http://127.0.0.1:13878/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "tags.name",
+        "customer.name",
+        "customer.parent.name",
+        "customer.address.country.name",
+        "customer.billingAddress.country.name",
+        "customer.address.city.name",
+        "customer.billingAddress.city.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.billingAddress.city.country.name",
+        "customer.parent.address.country.name",
+        "customer.parent.billingAddress.country.name",
+        "customer.parent.address.city.name",
+        "customer.parent.billingAddress.city.name",
+        "tags.invoices.customer.parent.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-844 error recovery",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "active": "main:tags.invoices",
+      "status": "idle"
+    },
+    {
+      "name": "integrated-844 main enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "main:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "integrated-844 select enrichment",
+      "url": "http://127.0.0.1:13877/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "customer.name",
+        "tags.name",
+        "deliveryAddress.city.name",
+        "customer.parent.name",
+        "customer.address.city.name",
+        "deliveryAddress.city.country.name",
+        "tags.invoices.customer.name",
+        "customer.address.city.country.name",
+        "customer.parent.address.city.name",
+        "tags.invoices.deliveryAddress.city.name",
+        "tags.invoices.customer.parent.name",
+        "customer.parent.address.city.country.name",
+        "tags.invoices.customer.address.city.name",
+        "tags.invoices.deliveryAddress.city.country.name",
+        "tags.invoices.customer.address.city.country.name",
+        "tags.invoices.customer.parent.address.city.name"
+      ],
+      "active": "select:tags.name",
+      "status": "limited"
+    },
+    {
+      "name": "budget-844-main",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    },
+    {
+      "name": "budget-844-plus",
+      "url": "http://127.0.0.1:13878/search-fixture?focusLimit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "paths": [
+        "fast.name"
+      ],
+      "status": "limited"
+    }
+  ],
+  "checkpoint": "f426ab2547111691649ea1b0e574a3beb5afad3b",
+  "version": "0.4.5",
+  "seed": "Existing synthetic search graph, focusLimit graph and invoice metadata; no database reset",
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

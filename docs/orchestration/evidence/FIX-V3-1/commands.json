@@ -1,0 +1,102 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "checkpoint": {
+    "base_sha": "f426ab2547111691649ea1b0e574a3beb5afad3b",
+    "base_version": "0.4.4",
+    "tested_version": "0.4.5",
+    "pending_source": "Fingerprinted files below; no own commit SHA"
+  },
+  "source_sha256": {
+    "src/front/property-select.ts": "e923932e985606238e4a66e5fba66542f97b079a679c766dc085ce08b7da8436",
+    "front/property-select.js": "53b93e2e84aea17fb28e50a1e591fc14190fb3f9f42f863f7a6f168d68468bf7",
+    "test/fixtures/search-graph.mjs": "db51adaca88a191b87063c1a250b06653ce209432b6434d5b3870b4354c49ad0",
+    "docs/orchestration/environment/demo/search.js": "f32160fe2e1cc2fb5f31e4bb293150c498dea80ac4e3cee439f9850c91680a78",
+    "docs/orchestration/environment/checks/FIX-V3-1.mjs": "0076590edfd391ad2aa5dc8dce8cb234bde2963bcb588965bda45385e5c4e1be",
+    "docs/orchestration/environment/checks/V3.mjs": "bbeaae0add3bbd4036345c82c89332baa9ff85bf30518d3f83df74b772186772",
+    "docs/orchestration/environment/checks/V3-bounds.mjs": "4af1fdc0846a19701b4f0c509ecd03764e8bb48a0ca0610d91e591c9c1f2d2ca",
+    "docs/orchestration/environment/checks/V3-reproduce.mjs": "3601eba6ec1b77486df50ddf0766d389692e3a11c12ae8fd966fcb8065b90048"
+  },
+  "commands": [
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select test",
+      "exit": 0,
+      "evidence": "test.txt",
+      "observed": "24 PASS; build and public TypeScript fixtures PASS"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V3-1/final-reproducer node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-reproduce.mjs",
+      "exit": 0,
+      "evidence": "final-reproducer/reproducer.json",
+      "observed": "8 PASS"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V3-1/final-bounds node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-bounds.mjs",
+      "exit": 0,
+      "evidence": "final-bounds/bounds.json",
+      "observed": "21 PASS"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V3-1/final-V3 node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3.mjs",
+      "exit": 0,
+      "evidence": "final-V3/results.json",
+      "observed": "138 PASS; author replay of independent driver"
+    },
+    {
+      "command": "PS_FIX_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V3-1/focused-all node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-V3-1.mjs",
+      "exit": 0,
+      "evidence": "focused-all/results.json",
+      "observed": "193 PASS"
+    },
+    {
+      "command": "npm pack --dry-run --json --offline --cache /tmp/property-select/npm-cache-FIX-V3-1",
+      "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "exit": 0,
+      "evidence": "package-files.json",
+      "observed": "offline manifest allowlist/public files inventory"
+    },
+    {
+      "command": "node --input-type=module (public controller/view ESM and CommonJS import assertions)",
+      "exit": 0,
+      "observed": "PASS imports and inactive browser view"
+    },
+    {
+      "command": "node --check (four changed .mjs drivers); git diff --check",
+      "exit": 0,
+      "observed": "PASS syntax and whitespace"
+    },
+    {
+      "command": "Independent read-only net.connect of 13871,13872,13874,13875,13877,13878 and reservation existence checks",
+      "exit": 0,
+      "evidence": "cleanup.json",
+      "observed": "all ECONNREFUSED; all PID/owner records absent"
+    }
+  ],
+  "execution_adjustments": [
+    {
+      "evidence": "reproducer.txt",
+      "exit": 1,
+      "observed": "Restricted spawnSync node EPERM; ownership-checked stop-standalone removed partial reservation before approved replay"
+    },
+    {
+      "evidence": "reproducer-approved.txt",
+      "exit": 1,
+      "observed": "Existing partial reservation EEXIST before cleanup; no permission changed"
+    },
+    {
+      "evidence": "focused-initial-harness/results.json",
+      "exit": 1,
+      "observed": "Wildcard fixture route also intercepted product search.js; failed before any assertion. Exact fixture URL fixes harness."
+    },
+    {
+      "command": "npm pack --dry-run --json --offline (default cache)",
+      "exit": 226,
+      "observed": "EROFS default npm cache; explicit temporary cache fixes offline inventory"
+    }
+  ],
+  "limits": [
+    "Correction-author evidence; distinct RETEST-V3-1 remains pending",
+    "Mouse/keyboard responsive dimensions; no physical-device or touch gesture claim",
+    "Supplemental integrated 100-result budget injects 101 synthetic terminal descriptors into delayed metadata; unmodified real metadata covered separately by full V3",
+    "Earlier non-final replays retained separately; final-* and focused-all are authoritative"
+  ]
+}

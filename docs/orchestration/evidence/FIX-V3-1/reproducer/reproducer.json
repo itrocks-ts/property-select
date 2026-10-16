@@ -1,0 +1,352 @@
+{
+  "scenarios": [
+    {
+      "name": "standalone-1280",
+      "url": "http://127.0.0.1:13874/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "search": {
+          "errors": [],
+          "limited": false,
+          "results": [],
+          "status": "idle",
+          "visited": 0
+        },
+        "state": {
+          "branch": [
+            "tags"
+          ],
+          "current": 1,
+          "query": "",
+          "recent": [],
+          "scroll": {},
+          "version": 1
+        },
+        "trusted": [
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280",
+      "url": "http://127.0.0.1:13875/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "trusted": [
+          true,
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768",
+      "url": "http://127.0.0.1:13874/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "search": {
+          "errors": [],
+          "limited": false,
+          "results": [],
+          "status": "idle",
+          "visited": 0
+        },
+        "state": {
+          "branch": [
+            "tags"
+          ],
+          "current": 1,
+          "query": "",
+          "recent": [],
+          "scroll": {},
+          "version": 1
+        },
+        "trusted": [
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768",
+      "url": "http://127.0.0.1:13875/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "trusted": [
+          true,
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390",
+      "url": "http://127.0.0.1:13874/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "search": {
+          "errors": [],
+          "limited": false,
+          "results": [],
+          "status": "idle",
+          "visited": 0
+        },
+        "state": {
+          "branch": [
+            "tags"
+          ],
+          "current": 1,
+          "query": "",
+          "recent": [],
+          "scroll": {},
+          "version": 1
+        },
+        "trusted": [
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390",
+      "url": "http://127.0.0.1:13875/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "trusted": [
+          true,
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844",
+      "url": "http://127.0.0.1:13874/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "search": {
+          "errors": [],
+          "limited": false,
+          "results": [],
+          "status": "idle",
+          "visited": 0
+        },
+        "state": {
+          "branch": [
+            "tags"
+          ],
+          "current": 1,
+          "query": "",
+          "recent": [],
+          "scroll": {},
+          "version": 1
+        },
+        "trusted": [
+          true
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844",
+      "url": "http://127.0.0.1:13875/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": {
+        "active": "tags.invoices",
+        "current": "tags",
+        "query": "",
+        "rows": [
+          {
+            "path": "tags.invoices",
+            "retained": false
+          },
+          {
+            "path": "tags.name",
+            "retained": false
+          }
+        ],
+        "trusted": [
+          true,
+          true
+        ]
+      },
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "standalone",
+      "stdout": "",
+      "directory": "/tmp/property-select/V3-reproduce",
+      "port": "13874"
+    },
+    {
+      "action": "app",
+      "stdout": "",
+      "directory": "/tmp/property-select/V3-reproduce",
+      "port": "13874"
+    },
+    {
+      "action": "stop-app",
+      "stdout": "PASS: owned app 2424671 stopped\n",
+      "directory": "/tmp/property-select/V3-reproduce",
+      "port": "13874"
+    },
+    {
+      "action": "stop-standalone",
+      "stdout": "PASS: owned standalone 2424649 stopped\n",
+      "directory": "/tmp/property-select/V3-reproduce",
+      "port": "13874"
+    }
+  ],
+  "health": [],
+  "browser": "151.0.7922.34"
+}

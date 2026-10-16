@@ -1,0 +1,56 @@
+{
+  "checks": [],
+  "commands": [
+    {
+      "action": "app",
+      "stdout": "",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "standalone",
+      "stdout": "",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "stop-standalone",
+      "stdout": "PASS: owned standalone 2426401 stopped\n",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    },
+    {
+      "action": "stop-app",
+      "stdout": "PASS: owned app 2426383 stopped\n",
+      "environment": {
+        "PS_APP_PORT": "13877",
+        "PS_STANDALONE_PORT": "13878",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V3-1",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      }
+    }
+  ],
+  "inputs": [],
+  "health": [
+    "SyntaxError: The requested module './search.js' does not provide an export named 'Search'"
+  ],
+  "observations": [],
+  "checkpoint": "f426ab2547111691649ea1b0e574a3beb5afad3b",
+  "version": "0.4.5",
+  "seed": "Existing synthetic search graph, focusLimit graph and invoice metadata; no database reset",
+  "browser": "151.0.7922.34",
+  "status": "FAIL",
+  "failure": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ps-main[data-path=\"tags\"]') to be visible\u001b[22m\n"
+}

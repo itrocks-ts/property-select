@@ -8,7 +8,7 @@ const require = createRequire(import.meta.url)
 const runtime = '/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'
 const { chromium } = require(runtime)
 const recipe = resolve('node_modules/@itrocks/property-select/docs/orchestration/environment')
-const output = `${recipe}/../evidence/V3`
+const output = process.env.PS_V3_OUTPUT || `${recipe}/../evidence/V3`
 const env = { ...process.env, PS_ENV_DIRECTORY: '/tmp/property-select/V3-reproduce', PS_STANDALONE_PORT: '13874',
 	PS_APP_PORT: '13875', PS_FRAMEWORK_INITIALIZER: `${recipe}/list/fixture.cjs` }
 const proof = { scenarios: [], commands: [], health: [] }

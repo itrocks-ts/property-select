@@ -1,0 +1,102 @@
+{
+  "status": "PASS",
+  "exports": {
+    "./cjs/property-select.js": "0480e2d68b9ec6d57b2e1f1e9f79af4e64d20a9d81a1247161a7e11e63e41969",
+    "./front/property-select.css": "d67df892dbf235a919890778bf9d87bd7330532d76b93f71574b456e5faba4f0",
+    "./front/property-select.d.ts": "372e43104598e71e741e1401a55fdbc20f64d80018a63160f631118e5ddd73e3",
+    "./front/property-select.html": "cf3584119fbbebd6b7b500d3ba0c6edf8856edd7dd44a4d57b0a40b7afe5bee8",
+    "./front/property-select.js": "53b93e2e84aea17fb28e50a1e591fc14190fb3f9f42f863f7a6f168d68468bf7",
+    "./property-select.d.ts": "29b2ccee0af9ce3e04784732e6a07110758ecc3894e20c2288a917a0d06bfaca",
+    "./property-select.js": "48edec919f0957ce5eaaffab90ad1d9c8f4c94abf899e8fe3ff5456017902a79"
+  },
+  "public_imports": "PASS: public ESM controller, view and CommonJS; no DOM activation",
+  "manifest_exports_files_dependencies_changed": false,
+  "historical_V3_unchanged": true,
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "working_absences": {
+      "audit-itrocks-dependencies.json": true,
+      "audit-itrocks-dependencies.txt": true
+    },
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  },
+  "checkpoints": {
+    "framework": {
+      "head": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+      "version": "0.10.3",
+      "status": ""
+    },
+    "home": {
+      "head": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+      "version": "0.6.0",
+      "status": ""
+    },
+    "list": {
+      "head": "ec7e4b071f4ee40113b294587ee794c44adfc8ac",
+      "version": "0.9.0",
+      "status": ""
+    },
+    "mysql": {
+      "head": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "property-select": {
+      "head": "f426ab2547111691649ea1b0e574a3beb5afad3b",
+      "version": "0.4.5",
+      "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/defects/V3-01.md\n M docs/orchestration/environment/checks/V3-bounds.mjs\n M docs/orchestration/environment/checks/V3-reproduce.mjs\n M docs/orchestration/environment/checks/V3.mjs\n M docs/orchestration/tasks/FIX-V3-1.md\n M package.json\n M src/front/property-select.ts\n?? docs/orchestration/environment/checks/FIX-V3-1.mjs\n?? docs/orchestration/evidence/FIX-V3-1/\n?? docs/orchestration/reports/FIX-V3-1.md\n"
+    },
+    "reflect": {
+      "head": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    "reflect-path": {
+      "head": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "sql-build": {
+      "head": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "sql-join": {
+      "head": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "storage": {
+      "head": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    "table": {
+      "head": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+      "version": "0.3.1",
+      "status": ""
+    }
+  },
+  "solid": "View owns DOM/focus scope only; no metadata/search/SQL/host logic moved, public ports unchanged; existing provider substitutions pass.",
+  "cleanup": "PASS six task ports closed and PID/owner records removed; cleanup.json",
+  "package_inventory": "npm pack --dry-run --json --offline --cache /tmp/property-select/npm-cache-FIX-V3-1; package-files.json",
+  "final_assertions": {
+    "controller_tests": 24,
+    "reproducer": 8,
+    "bounds": 21,
+    "full_V3": 138,
+    "focused_author": 193
+  },
+  "source_sha256": {
+    "src/front/property-select.ts": "e923932e985606238e4a66e5fba66542f97b079a679c766dc085ce08b7da8436",
+    "front/property-select.js": "53b93e2e84aea17fb28e50a1e591fc14190fb3f9f42f863f7a6f168d68468bf7",
+    "test/fixtures/search-graph.mjs": "db51adaca88a191b87063c1a250b06653ce209432b6434d5b3870b4354c49ad0",
+    "docs/orchestration/environment/demo/search.js": "f32160fe2e1cc2fb5f31e4bb293150c498dea80ac4e3cee439f9850c91680a78",
+    "docs/orchestration/environment/checks/FIX-V3-1.mjs": "0076590edfd391ad2aa5dc8dce8cb234bde2963bcb588965bda45385e5c4e1be",
+    "docs/orchestration/environment/checks/V3.mjs": "bbeaae0add3bbd4036345c82c89332baa9ff85bf30518d3f83df74b772186772",
+    "docs/orchestration/environment/checks/V3-bounds.mjs": "4af1fdc0846a19701b4f0c509ecd03764e8bb48a0ca0610d91e591c9c1f2d2ca",
+    "docs/orchestration/environment/checks/V3-reproduce.mjs": "3601eba6ec1b77486df50ddf0766d389692e3a11c12ae8fd966fcb8065b90048"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "path": "/tmp/property-select/V3/app.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3/app.owner.json",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3/standalone.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3/standalone.owner.json",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3-reproduce/app.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3-reproduce/app.owner.json",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3-reproduce/standalone.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/V3-reproduce/standalone.owner.json",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/FIX-V3-1/app.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/FIX-V3-1/app.owner.json",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/FIX-V3-1/standalone.pid",
+      "exists": false
+    },
+    {
+      "path": "/tmp/property-select/FIX-V3-1/standalone.owner.json",
+      "exists": false
+    },
+    {
+      "port": 13871,
+      "observed": "ECONNREFUSED"
+    },
+    {
+      "port": 13872,
+      "observed": "ECONNREFUSED"
+    },
+    {
+      "port": 13874,
+      "observed": "ECONNREFUSED"
+    },
+    {
+      "port": 13875,
+      "observed": "ECONNREFUSED"
+    },
+    {
+      "port": 13877,
+      "observed": "ECONNREFUSED"
+    },
+    {
+      "port": 13878,
+      "observed": "ECONNREFUSED"
+    }
+  ]
+}

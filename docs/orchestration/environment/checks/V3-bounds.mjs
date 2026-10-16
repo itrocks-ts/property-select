@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict'
-import { writeFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 import { PropertySelect } from '../../../../property-select.js'
 
 // Independent provider and numerical oracles; no author driver or search implementation is imported.
@@ -74,6 +75,8 @@ selector.setQuery('name')
 selector.dispose()
 await new Promise(resolve => setTimeout(resolve, 100))
 check('Disposal invalidates pending generation', selector.search.status, 'idle')
-writeFileSync(new URL('../../evidence/V3/bounds.json', import.meta.url),
+const output = process.env.PS_V3_OUTPUT || new URL('../../evidence/V3/', import.meta.url)
+mkdirSync(output, { recursive: true })
+writeFileSync(typeof output === 'string' ? resolve(output, 'bounds.json') : new URL('bounds.json', output),
 	JSON.stringify({ status: 'PASS', records }, null, 2))
 console.log(JSON.stringify({ status: 'PASS', checks: records.length }))

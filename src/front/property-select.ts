@@ -18,6 +18,7 @@ export class PropertySelectView
 	private query?: HTMLInputElement
 	private root?: HTMLElement
 	private readonly rows = new Map<string, HTMLLIElement>()
+	private searchScope = ''
 	private status?: HTMLElement
 	private unsubscribe?: () => void
 
@@ -168,7 +169,13 @@ export class PropertySelectView
 		for (const property of context.properties)
 			if (property.kind === 'relation')
 				this.labels.set(property.path, property.label || property.name)
-		const fingerprint = JSON.stringify([context, state.branch, state.current, search.results, search.status])
+		const searchScope = (search.status !== 'idle') && (search.visited > 0) && (this.selector.status !== 'loading')
+			? JSON.stringify([context.path, state.query]) : ''
+		const retainFocus = !!searchScope && (searchScope === this.searchScope)
+		this.searchScope = searchScope
+		const fingerprint = JSON.stringify([
+			context, state.branch, state.current, state.query, search.results, search.status
+		])
 		if (fingerprint === this.fingerprint)
 			return
 		this.fingerprint = fingerprint
@@ -189,8 +196,9 @@ export class PropertySelectView
 		let results: readonly SearchResult[] = search.status === 'idle'
 			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
-		const retained = focusedRow && this.list!.contains(focusedRow)
+		const retained = retainFocus && focusedRow && this.list!.contains(focusedRow)
 			&& !results.some(result => result.property.path === focusedRow.dataset.path) ? focusedRow : undefined
+		// Retain only within the same active search, never across navigation or clearing the query.
 		// Keep an actively used result available when a better late match reaches the display budget.
 		// Replace the last unfocused row, then release the retained row when focus leaves it.
 		if (retained && results.length)
@@ -216,6 +224,7 @@ export class PropertySelectView
 				row = replacement
 				this.rows.set(property.path, row)
 			}
+			delete row.dataset.retained
 			const before = this.list!.children[index]
 			if (before !== row)
 				this.list!.insertBefore(row, before || null)

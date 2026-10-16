@@ -1,5 +1,23 @@
 # Phase 1 validation matrix
 
+## FIX-V3-1 author correction observations
+
+**DONE (author)** on selector base `f426ab2547111691649ea1b0e574a3beb5afad3b`, rebuilt version `0.4.5`.
+[Report](reports/FIX-V3-1.md), [eight final reproductions](evidence/FIX-V3-1/final-reproducer/reproducer.json),
+[193 focused assertions](evidence/FIX-V3-1/focused-all/results.json),
+[138 full V3 replay assertions](evidence/FIX-V3-1/final-V3/results.json),
+[21 bounds](evidence/FIX-V3-1/final-bounds/bounds.json) and [24 Node tests](evidence/FIX-V3-1/test.txt): **PASS**.
+
+- T10/T12 and SEA-01/05/07: ordinary root → tags after navigation/error/Clear shows exactly `tags.invoices`,
+  `tags.name`, with no obsolete root row, at both interfaces and all four required dimensions.
+- SEA-06 / PORT-06: exact main/+ focus during pending enrichment, retained budget actions and final rank on blur pass.
+- The full V3 itinerary completes, including integrated delayed/reversed HTTP, cycles, permission enforcement,
+  Date terminal metadata and zero business SQL during metadata search. Original V3 evidence is preserved.
+
+These are correction-author replays of independently authored drivers, plus fresh author assertions.
+[V3-01](defects/V3-01.md) remains open pending distinct RETEST-V3-1; L4 stays gated by that retest.
+Original independent failure observations below remain historical. T11 drag and later combined gates remain pending.
+
 ## V3 independent search observations
 
 Gate: **NEEDS_FIX** on selector `080f4e0fe0d310f0a5159df17252f994804892c2` / `0.4.3`,
