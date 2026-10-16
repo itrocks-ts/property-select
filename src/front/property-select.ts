@@ -1,5 +1,6 @@
 import { PropertySelect }             from '../property-select.js'
 import type { PropertySelectOptions } from '../property-select.js'
+import type { SearchResult }          from '../property-select.js'
 
 export type PropertySelectViewOptions = { templateUrl?: string | URL }
 
@@ -14,7 +15,9 @@ export class PropertySelectView
 	private readonly labels = new Map<string, string>()
 	private list?: HTMLElement
 	private mounting?: Promise<boolean>
+	private query?: HTMLInputElement
 	private root?: HTMLElement
+	private readonly rows = new Map<string, HTMLLIElement>()
 	private status?: HTMLElement
 	private unsubscribe?: () => void
 
@@ -40,6 +43,8 @@ export class PropertySelectView
 		this.breadcrumb = this.list = this.root = this.status = undefined
 		this.unsubscribe = undefined
 		this.labels.clear()
+		this.rows.clear()
+		this.query = undefined
 	}
 
 	mount(): Promise<boolean>
@@ -56,6 +61,11 @@ export class PropertySelectView
 			return
 		event.stopPropagation()
 		this.status!.textContent = ''
+		if (button.dataset.action === 'clear') {
+			this.selector.setQuery('')
+			this.query!.focus()
+			return
+		}
 		const path = button.dataset.path!
 		const action = button.dataset.action
 		const operation = action === 'navigate' ? this.selector.navigate(path)
@@ -94,10 +104,26 @@ export class PropertySelectView
 			this.breadcrumb = this.root.querySelector('.ps-breadcrumb') as HTMLElement
 			this.list = this.root.querySelector('.ps-properties') as HTMLElement
 			this.status = this.root.querySelector('.ps-status') as HTMLElement
+			this.query = this.root.querySelector('.ps-query') as HTMLInputElement
+			this.query.setAttribute('aria-label', this.selector.translate('Search properties'))
+			this.root.querySelector('.ps-clear')!.textContent = this.selector.translate('Clear')
+			this.query.addEventListener('input', () => this.selector.setQuery(this.query!.value), {
+				signal: this.abort.signal
+			})
 			this.root.setAttribute('aria-label', this.selector.translate('Property selection'))
 			this.breadcrumb.setAttribute('aria-label', this.selector.translate('Object path'))
 			this.list.setAttribute('aria-label', this.selector.translate('Properties'))
 			this.root.addEventListener('click', event => this.activate(event), { signal: this.abort.signal })
+			this.root.addEventListener('focusout', event => {
+				if (!(event.target as Element).closest('.ps-property[data-retained]'))
+					return
+				setTimeout(() => {
+					if (!this.disposed) {
+						this.fingerprint = ''
+						this.render()
+					}
+				}, 0)
+			}, { signal: this.abort.signal })
 			this.unsubscribe = this.selector.subscribe(event => {
 				if (event.type === 'error')
 					this.status!.textContent = event.error instanceof Error ? event.error.message
@@ -120,11 +146,21 @@ export class PropertySelectView
 	{
 		const context = this.selector.context
 		const state = this.selector.snapshot()
-		this.root!.setAttribute('aria-busy', String(this.selector.status === 'loading'))
+		const search = this.selector.search
+		this.query!.value = state.query
+		this.root!.dataset.searchStatus = search.status
+		this.root!.setAttribute('aria-busy', String(this.selector.status === 'loading' || search.status === 'loading'))
 		if (this.selector.status === 'loading')
 			this.status!.textContent = this.selector.translate('Loading properties…')
 		else if (this.selector.status === 'ready')
 			this.status!.textContent = ''
+		if (search.status !== 'idle') {
+			const messages = {
+				complete: '', empty: 'No matching properties.', error: 'Search failed. Change the query to retry.',
+				limited: 'Search limit reached. Refine your query.', loading: 'Searching properties…'
+			}
+			this.status!.textContent = this.selector.translate(messages[search.status])
+		}
 		if (!context)
 			return
 		if (!this.labels.has(context.path))
@@ -132,7 +168,7 @@ export class PropertySelectView
 		for (const property of context.properties)
 			if (property.kind === 'relation')
 				this.labels.set(property.path, property.label || property.name)
-		const fingerprint = JSON.stringify([context, state.branch, state.current])
+		const fingerprint = JSON.stringify([context, state.branch, state.current, search.results, search.status])
 		if (fingerprint === this.fingerprint)
 			return
 		this.fingerprint = fingerprint
@@ -150,33 +186,86 @@ export class PropertySelectView
 			this.breadcrumb!.append(button)
 		}
 		this.breadcrumb!.scrollLeft = left
-		this.list!.replaceChildren()
-		for (const property of context.properties) {
-			const row = this.host.ownerDocument.createElement('li')
-			row.className = 'ps-property'
-			row.dataset.kind = property.kind
-			const label = property.label || property.name
-			const main = this.button(label, 'activate', property.path)
-			main.className = 'ps-main'
-			if (property.kind === 'relation') {
-				const chevron = this.host.ownerDocument.createElement('span')
-				chevron.className = 'ps-chevron'
-				chevron.setAttribute('aria-hidden', 'true')
-				chevron.textContent = '›'
-				main.append(chevron)
-			}
-			const add = this.button('+', 'select', property.path)
-			add.className = 'ps-add'
-			add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
-			row.append(main, add)
-			this.list!.append(row)
+		let results: readonly SearchResult[] = search.status === 'idle'
+			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
+		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
+		const retained = focusedRow && this.list!.contains(focusedRow)
+			&& !results.some(result => result.property.path === focusedRow.dataset.path) ? focusedRow : undefined
+		// Keep an actively used result available when a better late match reaches the display budget.
+		// Replace the last unfocused row, then release the retained row when focus leaves it.
+		if (retained && results.length)
+			results = results.slice(0, -1)
+		const pathsPresent = new Set(results.map(result => result.property.path))
+		if (retained) {
+			retained.dataset.retained = 'true'
+			pathsPresent.add(retained.dataset.path!)
 		}
+		for (const [path, row] of this.rows)
+			if (!pathsPresent.has(path)) {
+				row.remove()
+				this.rows.delete(path)
+			}
+		for (const [index, result] of results.entries()) {
+			const property = result.property
+			const key = JSON.stringify([property, result.segments])
+			let row = this.rows.get(property.path)
+			if (!row || row.dataset.content !== key) {
+				const replacement = this.row(result)
+				replacement.dataset.content = key
+				row?.replaceWith(replacement)
+				row = replacement
+				this.rows.set(property.path, row)
+			}
+			const before = this.list!.children[index]
+			if (before !== row)
+				this.list!.insertBefore(row, before || null)
+		}
+		if (retained && (this.list!.lastElementChild !== retained))
+			this.list!.append(retained)
 		if (focus) {
-			const buttons = Array.from(this.root!.querySelectorAll<HTMLButtonElement>('button'))
+			const buttons = Array.from(this.root!.querySelectorAll<HTMLElement>('[data-focus]'))
 			const target = buttons.find(button => button.dataset.focus === focus)
 				|| this.list!.querySelector<HTMLButtonElement>('button')
-			target?.focus({ preventScroll: true })
+			if (target && (target !== this.host.ownerDocument.activeElement))
+				target.focus({ preventScroll: true })
 		}
+	}
+
+	private row(result: SearchResult): HTMLLIElement
+	{
+		const property = result.property
+		const row = this.host.ownerDocument.createElement('li')
+		row.className = 'ps-property'
+		row.dataset.kind = property.kind
+		row.dataset.path = property.path
+		const label = property.label || property.name
+		const main = this.button(label, property.kind === 'relation' ? 'navigate' : 'select', property.path)
+		main.className = 'ps-main'
+		main.dataset.focus = `main:${property.path}`
+		if (property.kind === 'relation') {
+			const chevron = this.host.ownerDocument.createElement('span')
+			chevron.className = 'ps-chevron'
+			chevron.setAttribute('aria-hidden', 'true')
+			chevron.textContent = '›'
+			main.append(chevron)
+		}
+		const add = this.button('+', 'select', property.path)
+		add.className = 'ps-add'
+		add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
+		row.append(main, add)
+		if (result.segments.length) {
+			const path = this.host.ownerDocument.createElement('div')
+			path.className = 'ps-result-path'
+			for (const [index, segment] of result.segments.entries()) {
+				if (index)
+					path.append(' › ')
+				const button = this.button(segment.label, 'navigate', segment.path)
+				button.dataset.focus = `segment:${property.path}:${segment.path}`
+				path.append(button)
+			}
+			row.append(path)
+		}
+		return row
 	}
 
 }

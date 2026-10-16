@@ -1,0 +1,182 @@
+{
+	"checks": [
+		{
+			"name": "PORT-06 loading before late customer",
+			"observed": "loading",
+			"expected": "loading",
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 exact focused element survives enrichment",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 reversed responses produce identical order",
+			"observed": [
+				"tags.name",
+				"customer.name",
+				"customer.parent.name",
+				"customer.address.country.name",
+				"customer.billingAddress.country.name",
+				"customer.address.city.name",
+				"customer.billingAddress.city.name",
+				"tags.invoices.customer.name",
+				"customer.address.city.country.name",
+				"customer.billingAddress.city.country.name",
+				"customer.parent.address.country.name",
+				"customer.parent.billingAddress.country.name",
+				"customer.parent.address.city.name",
+				"customer.parent.billingAddress.city.name",
+				"tags.invoices.customer.parent.name"
+			],
+			"expected": [
+				"tags.name",
+				"customer.name",
+				"customer.parent.name",
+				"customer.address.country.name",
+				"customer.billingAddress.country.name",
+				"customer.address.city.name",
+				"customer.billingAddress.city.name",
+				"tags.invoices.customer.name",
+				"customer.address.city.country.name",
+				"customer.billingAddress.city.country.name",
+				"customer.parent.address.country.name",
+				"customer.parent.billingAddress.country.name",
+				"customer.parent.address.city.name",
+				"customer.parent.billingAddress.city.name",
+				"tags.invoices.customer.parent.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T09 normalised all words match labelled path",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T09 distinct billing result",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T09 root-to-parent segments",
+			"observed": [
+				"Facture",
+				"Client",
+				"Adresse",
+				"Pays"
+			],
+			"expected": [
+				"Facture",
+				"Client",
+				"Adresse",
+				"Pays"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T11 terminal emits exact path once",
+			"observed": [],
+			"expected": [
+				"customer.address.country.code"
+			],
+			"status": "FAIL"
+		}
+	],
+	"commands": [
+		{
+			"action": "standalone",
+			"stdout": "",
+			"environment": {
+				"PS_APP_PORT": "13839",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-L3",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13840"
+			}
+		},
+		{
+			"action": "app",
+			"stdout": "",
+			"environment": {
+				"PS_APP_PORT": "13839",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-L3",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13840"
+			}
+		},
+		{
+			"action": "status",
+			"stdout": "mysqld is alive\nPASS: framework list HTTP 200 with Recipe France\n",
+			"environment": {
+				"PS_APP_PORT": "13839",
+				"PS_ENV_DIRECTORY": "/tmp/showtime-property-select-env",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13840"
+			}
+		},
+		{
+			"action": "stop-app",
+			"stdout": "PASS: owned app 2360164 stopped\n",
+			"environment": {
+				"PS_APP_PORT": "13839",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-L3",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13840"
+			}
+		},
+		{
+			"action": "stop-standalone",
+			"stdout": "PASS: owned standalone 2360142 stopped\n",
+			"environment": {
+				"PS_APP_PORT": "13839",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-L3",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13840"
+			}
+		}
+	],
+	"errors": [],
+	"input": [
+		"Trusted fill name; Tab focus during delayed/reordered enrichment"
+	],
+	"requests": [
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/search.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/search.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html"
+	],
+	"urls": [
+		"http://127.0.0.1:13840",
+		"http://127.0.0.1:13839"
+	],
+	"checkpoint": "9a2fd9606a5a731d980bb5a0a743cf3072b85fa7",
+	"version": "0.4.0",
+	"seed": "test/fixtures/search-graph.mjs; environment/models; synthetic existing database only",
+	"browser": "151.0.7922.34"
+}

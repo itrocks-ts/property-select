@@ -13,6 +13,9 @@ import type { PropertyPath }        from './ports.js'
 import type { RootId }              from './ports.js'
 import type { SelectionIntent }     from './ports.js'
 import type { SelectorState }       from './ports.js'
+import { Search }                   from './search.js'
+import type { SearchOptions }       from './search.js'
+import type { SearchSnapshot }      from './search.js'
 
 export type SelectorEvent = IntentionEvent | { type: 'change' } | { type: 'error'; error: unknown }
 
@@ -22,6 +25,7 @@ export interface PropertySelectOptions
 	consumer?: ConsumerPort
 	metadata: MetadataProvider
 	root: RootId
+	search?: SearchOptions
 	stateMode?: 'instance'
 	translate?: (text: string) => string
 	usedPaths?: readonly PropertyPath[]
@@ -35,9 +39,11 @@ export class PropertySelect
 	private readonly intentions: Intentions
 	private readonly listeners = new Set<(event: SelectorEvent) => void>()
 	private readonly navigation: Navigation
+	private navigationGeneration = 0
 	private queryValue = ''
 	private recentValue: string[] = []
 	private scrollValue: Record<string, { left: number; top: number }> = {}
+	private readonly searchEngine: Search
 	private usedValue: string[]
 
 	readonly root: RootId
@@ -60,6 +66,8 @@ export class PropertySelect
 		this.usedValue   = (options.usedPaths || []).map(normalisePath)
 		this.navigation  = new Navigation(options.metadata, options.root, () => this.emit({ type: 'change' }),
 			error => this.emit({ type: 'error', error }))
+		this.searchEngine = new Search((path, signal) => this.navigation.loadContext(path, signal),
+			() => this.emit({ type: 'change' }), error => this.emit({ type: 'error', error }), options.search)
 		this.intentions = new Intentions(options.metadata, options.root, options.consumer,
 			event => this.emit(event), property => this.addRecent(property),
 			error => this.emit({ type: 'error', error }))
@@ -78,6 +86,11 @@ export class PropertySelect
 	get path(): string
 	{
 		return this.navigation.path
+	}
+
+	get search(): SearchSnapshot
+	{
+		return this.searchEngine.snapshot
 	}
 
 	get status(): NavigationStatus
@@ -101,7 +114,8 @@ export class PropertySelect
 		const path = normalisePath(input)
 		if (!path)
 			return this.navigate(path)
-		const property = this.context?.properties.find(candidate => candidate.path === path)
+		const property = this.search.results.find(result => result.property.path === path)?.property
+			|| this.context?.properties.find(candidate => candidate.path === path)
 		if (property)
 			return property.kind === 'relation' ? this.navigate(path) : this.select(path)
 		throw new TypeError('Activate a property in the displayed context; use navigate/select for complete paths')
@@ -122,6 +136,7 @@ export class PropertySelect
 		if (this.disposed)
 			return
 		this.disposed = true
+		this.searchEngine.cancel()
 		this.navigation.dispose()
 		this.intentions.dispose()
 		this.listeners.clear()
@@ -142,9 +157,15 @@ export class PropertySelect
 		this.intentions.move(id, sample)
 	}
 
-	navigate(path: PropertyPath): Promise<boolean>
+	async navigate(path: PropertyPath): Promise<boolean>
 	{
-		return this.navigation.navigate(path)
+		this.assertLive()
+		const generation = ++ this.navigationGeneration
+		this.searchEngine.cancel()
+		const committed = await this.navigation.navigate(path)
+		if (!this.disposed && (generation === this.navigationGeneration))
+			this.searchEngine.start(this.queryValue, this.navigation.trail)
+		return committed
 	}
 
 	select(path: PropertyPath): Promise<Outcome | undefined>
@@ -168,7 +189,7 @@ export class PropertySelect
 		if (typeof query !== 'string')
 			throw new TypeError('The query must be a string')
 		this.queryValue = query
-		this.emit({ type: 'change' })
+		this.searchEngine.start(query, this.navigation.status === 'loading' ? [] : this.navigation.trail)
 	}
 
 	setScroll(key: string, position: { left: number; top: number }): void

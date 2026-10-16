@@ -14,7 +14,7 @@ Host components receive selection and drag intentions and decide how to use the 
 
 The public controller runs without it.rocks, a DOM view or a table. It loads metadata lazily, remembers navigation,
 emits selection/transport intentions and exports instance state. The browser view provides a single property list and
-remembered breadcrumbs. Search, session persistence and framework adapters belong to subsequent deliveries.
+remembered breadcrumbs and bounded descendant search. Session persistence belongs to a subsequent delivery.
 
 ## Standalone use
 
@@ -88,7 +88,7 @@ The main button selects a field or opens a relation; its adjacent `+` selects ei
 Desktop hover or keyboard focus reveals the reserved `+`; without hover only relation buttons show it.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
-Search, shortcuts and recognised drag gestures remain separate deliveries.
+Shortcuts and recognised drag gestures remain separate deliveries.
 
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `templateUrl?: string | URL`.
 Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
@@ -117,7 +117,35 @@ does not read, write or restore sessions.
 
 `usedPaths` and `advice` default to empty arrays. `setConfiguration({ advice?, usedPaths? })` updates them without
 clearing local recents. `translate(text)` defaults to identity or calls the supplied translation function.
-Suggestion fusion and search execution are separate deliveries.
+Suggestion fusion belongs to a subsequent delivery.
+
+## Descendant search
+
+`setQuery(text)` searches metadata below the current object. Every word must match a fragment of a technical name,
+label or full path; case, accents and repeated spaces are normalised. Records are never read. Navigation preserves
+and reruns the query from the destination. Selection preserves query/context, and the browser Clear button restores
+ordinary neighbouring properties immediately.
+
+`search: SearchSnapshot` exposes detached `results`, `status`, `visited`, `limited` and `errors`.
+Statuses distinguish `idle`, `loading`, `complete`, `empty`, `limited` and `error`; zero results under a limit are
+never reported as definitive absence. Partial results survive recoverable metadata errors. Change the query to retry.
+`SearchResult` holds `property`, relative `depth` and root-to-parent `segments` with real paths and labels.
+`activate(path)` accepts displayed results as well as ordinary properties; relation/segment navigation keeps valid
+remembered prefixes and replaces divergent suffixes. Root segments navigate only.
+
+The optional `search: SearchOptions` constructor option tunes `maxDepth` (default 6, local context is depth 0),
+`maxContexts` (500, including the current object), `maxResults` (100) and `maxPending` (4).
+Budgets are safe integers; only depth may be zero. Breadth-first scheduling and final ranking do not depend on response
+arrival. Rank uses relative depth, number of words matching the final name/label, business order and full path.
+The browser retains focused result nodes while enriching; a focused result displaced by the display budget remains
+available within that budget until focus leaves, when the final ranking applies. Input and scroll are preserved.
+
+Relation history is branch-local and includes the incoming navigation path. A reciprocal known inverse may return
+once after a many-to-one or many-to-many edge; one-to-many, unknown or asymmetric inverse returns are excluded.
+Unannotated reverse pairs and repeated unannotated canonical edges stop conservatively. Sibling paths and distinct
+self relations remain independent. These restrictions bound automatic exploration; manual navigation stays available.
+One authorised instance cache serves navigation and search. Query/context changes and disposal abort obsolete work;
+generation checks discard late responses even when providers ignore cancellation. No global root expansion occurs.
 
 ## Intentions and lifecycle
 
@@ -150,6 +178,9 @@ With the compiler and preparation utility already available, `npm run build` cre
 and declarations at the package root. Generated files are ignored. `npm test` rebuilds, checks public TypeScript
 imports and runs the Node contract suite. The reusable `test/fixtures/static-graph.mjs` and non-table
 recording consumer are test resources, outside the published runtime.
+`test/search.test.mjs` covers normalised matching, scope, path identity, known/unknown cycles, reversed and delayed
+providers and a large cyclic graph. `test/browser-search.mjs` owns local recipe servers, exercises actual browser
+inputs and records author evidence in [the L3 report](docs/orchestration/reports/L3.md).
 The separate `test/browser-ui.mjs` drives the standalone demo through real mouse, keyboard and emulated touch input;
 its author evidence and ownership-checked launch recipe are in
 [the L2-UI report](docs/orchestration/reports/L2-UI.md).

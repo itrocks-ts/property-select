@@ -1,0 +1,11 @@
+[@itrocks/fastify] 03:45:22 - Server is listening on http://localhost:13839
+[@itrocks/fastify] 03:46:15 - Server is listening on http://localhost:13839
+[@itrocks/fastify] 03:47:23 - Server is listening on http://localhost:13839
+[@itrocks/fastify] 03:48:52 - Server is listening on http://localhost:13839
+[@itrocks/fastify] 03:50:14 - Server is listening on http://localhost:13839
+[@itrocks/fastify] 03:51:16 - Server is listening on http://localhost:13839
+[itrocks-fastify] Request failed { code: 'ENOENT', name: 'Error', statusCode: undefined }
+[@itrocks/fastify] 03:52:36 - Server is listening on http://localhost:13839
+[itrocks-fastify] Request failed { code: 'ENOENT', name: 'Error', statusCode: undefined }
+[@itrocks/fastify] 03:53:56 - Server is listening on http://localhost:13839
+[itrocks-fastify] Request failed { code: 'ENOENT', name: 'Error', statusCode: undefined }

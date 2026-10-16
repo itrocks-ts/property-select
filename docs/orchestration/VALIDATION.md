@@ -1,5 +1,21 @@
 # Phase 1 validation matrix
 
+## L3 author search checkpoint
+
+**NEEDS_FIX**: [L3 report](reports/L3.md), [defect L3-01](defects/L3-01.md).
+The 24 controller tests and 40 Chromium author assertions pass: T09 all-word normalisation and path identity,
+T10 current-context scope/cache, T11/NAV-08 terminal/object/segment navigation, T12 generation cancellation and
+loading/empty/error/limited, T13 branch history/known N-1/N-N return/unknown inverse refusal, and PORT-06
+response-independent rank/focus, including display-budget eviction. Browser widths 1280, 768, 390 and 844 pass.
+[Provider traces](evidence/L3/provider-traces.json), [tests](evidence/L3/test.txt) and
+[browser observations](evidence/L3/browser-results.json) are author evidence, separate from V3.
+
+Integrated metadata exposes scalar `issuedAt: Date | null` as a relation; automatic search requests its context and
+receives HTTP 500/ENOENT. The selector retains context/results and reports `error`, but healthy integration fails.
+`FIX-L3-1` and independent `RETEST-L3-1` must pass before V3. SEA-01–09, NAV-08 and PORT-03/06 retain their
+independent V3 verdicts; META-01/META-02 have this new blocking observation. T11 drag remains V5, and later
+session/gesture/final acceptance observations remain NOT_RUN.
+
 ## Verdict and reading rules
 
 Planning coverage is complete; product acceptance is **NOT_RUN**. The only completed execution gate is VAL-01,

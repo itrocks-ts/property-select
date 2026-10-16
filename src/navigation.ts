@@ -51,6 +51,14 @@ export class Navigation
 		return this.statusValue
 	}
 
+	get trail(): readonly ObjectContext[]
+	{
+		const paths = ['', ...this.path.split('.').filter(Boolean).map((_, index, parts) =>
+			parts.slice(0, index + 1).join('.'))]
+		return paths.map(path => this.contexts.get(path)).filter((item): item is ObjectContext => !!item)
+			.map(item => structuredClone(item))
+	}
+
 	dispose(): void
 	{
 		if (this.disposed)
@@ -60,6 +68,17 @@ export class Navigation
 		this.abort?.abort()
 		this.contexts.clear()
 		this.statusValue = 'disposed'
+	}
+
+	async loadContext(path: string, signal: AbortSignal): Promise<ObjectContext>
+	{
+		const cached = this.contexts.get(path)
+		if (cached)
+			return structuredClone(cached)
+		const context = await loadContext(this.provider, this.root, path, signal)
+		if (!this.disposed && !signal.aborted)
+			this.contexts.set(path, structuredClone(context))
+		return context
 	}
 
 	async navigate(input: PropertyPath): Promise<boolean>
@@ -75,14 +94,14 @@ export class Navigation
 		this.changed()
 		try {
 			// Validate every edge. A provider cannot accidentally accept a terminal traversal via context alone.
-			let context = await this.load('', abort.signal)
+			let context = await this.loadContext('', abort.signal)
 			for (let index = 0; index < segments.length; index ++) {
 				if (this.disposed || (generation !== this.generation))
 					return false
 				const edge = context.properties.find(property => property.name === segments[index])
 				if (!edge || (edge.kind !== 'relation'))
 					throw new TypeError(`Not a navigable relation: ${segments.slice(0, index + 1).join('.')}`)
-				context = await this.load(edge.path, abort.signal)
+				context = await this.loadContext(edge.path, abort.signal)
 			}
 			if (this.disposed || (generation !== this.generation))
 				return false
@@ -103,17 +122,6 @@ export class Navigation
 			this.changed()
 			return false
 		}
-	}
-
-	private async load(path: string, signal: AbortSignal): Promise<ObjectContext>
-	{
-		const cached = this.contexts.get(path)
-		if (cached)
-			return structuredClone(cached)
-		const context = await loadContext(this.provider, this.root, path, signal)
-		if (!this.disposed && !signal.aborted)
-			this.contexts.set(path, structuredClone(context))
-		return context
 	}
 
 }

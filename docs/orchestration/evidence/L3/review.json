@@ -1,0 +1,257 @@
+{
+  "version": "0.4.0",
+  "public_artifacts": [
+    {
+      "artifact": "property-select.js",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "property-select.d.ts",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "search.js",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "search.d.ts",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "cjs/property-select.js",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "cjs/search.js",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "cjs/search.d.ts",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "front/property-select.js",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "front/property-select.d.ts",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "front/property-select.html",
+      "exists": true,
+      "packed": true
+    },
+    {
+      "artifact": "front/property-select.css",
+      "exists": true,
+      "packed": true
+    }
+  ],
+  "runtime_imports": [
+    {
+      "source": "src/path.ts",
+      "import": "import type { PropertyPath } from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import { resolveProperty }          from './metadata.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import { normalisePath }            from './path.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { ConsumerPort }        from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { MetadataProvider }    from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { Outcome }             from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { PointerSample }       from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { PropertyDescription } from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { PropertyPath }        from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { RootId }              from './ports.js'"
+    },
+    {
+      "source": "src/intentions.ts",
+      "import": "import type { SelectionIntent }     from './ports.js'"
+    },
+    {
+      "source": "src/metadata.ts",
+      "import": "import { normalisePath }            from './path.js'"
+    },
+    {
+      "source": "src/metadata.ts",
+      "import": "import type { MetadataProvider }    from './ports.js'"
+    },
+    {
+      "source": "src/metadata.ts",
+      "import": "import type { ObjectContext }       from './ports.js'"
+    },
+    {
+      "source": "src/metadata.ts",
+      "import": "import type { PropertyDescription } from './ports.js'"
+    },
+    {
+      "source": "src/metadata.ts",
+      "import": "import type { RootId }              from './ports.js'"
+    },
+    {
+      "source": "src/search.ts",
+      "import": "import type { ObjectContext }       from './ports.js'"
+    },
+    {
+      "source": "src/search.ts",
+      "import": "import type { PropertyDescription } from './ports.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import { loadContext }           from './metadata.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import { normalisePath }         from './path.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import type { MetadataProvider } from './ports.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import type { ObjectContext }    from './ports.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import type { PropertyPath }     from './ports.js'"
+    },
+    {
+      "source": "src/navigation.ts",
+      "import": "import type { RootId }           from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import { Intentions }               from './intentions.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { IntentionEvent }      from './intentions.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import { Navigation }               from './navigation.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { NavigationStatus }    from './navigation.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import { normalisePath }            from './path.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { ConsumerPort }        from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { MetadataProvider }    from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { ObjectContext }       from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { Outcome }             from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { PointerSample }       from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { PropertyDescription } from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { PropertyPath }        from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { RootId }              from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { SelectionIntent }     from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { SelectorState }       from './ports.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import { Search }                   from './search.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { SearchOptions }       from './search.js'"
+    },
+    {
+      "source": "src/controller.ts",
+      "import": "import type { SearchSnapshot }      from './search.js'"
+    },
+    {
+      "source": "src/front/property-select.ts",
+      "import": "import { PropertySelect }             from '../property-select.js'"
+    },
+    {
+      "source": "src/front/property-select.ts",
+      "import": "import type { PropertySelectOptions } from '../property-select.js'"
+    },
+    {
+      "source": "src/front/property-select.ts",
+      "import": "import type { SearchResult }          from '../property-select.js'"
+    }
+  ],
+  "solid": "Separate metadata search, navigation/cache, intentions, controller and view; structural provider substitution exercised. No host, reflection, SQL or records in selector runtime.",
+  "status": "PASS",
+  "ownership": {
+    "app_pid_absent": true,
+    "standalone_pid_absent": true
+  },
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json; AD audit-itrocks-dependencies.txt",
+    "working_files_absent": true,
+    "index_blobs": [
+      "ff4dc939cce17af3aa7c14d8063034c5cc85b867",
+      "de960a87ea9b4f6eb1cece85ab32596baef11fcd"
+    ]
+  }
+}

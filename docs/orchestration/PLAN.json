@@ -41,6 +41,8 @@
     "L2-LIST",
     "V2",
     "L3",
+    "FIX-L3-1",
+    "RETEST-L3-1",
     "V3",
     "L4",
     "V4",
@@ -397,7 +399,7 @@
           "version": "0.4.1"
         }
       },
-      "validation": "PASS: owner builds/tests, application build, SQL-01–SQL-13 author database assertions, SQL-14 executed SQL archive and packages; independent VSQL and browser linkage remain NOT_RUN"
+      "validation": "PASS: owner builds/tests, application build, SQL-01\u2013SQL-13 author database assertions, SQL-14 executed SQL archive and packages; independent VSQL and browser linkage remain NOT_RUN"
     },
     {
       "id": "VSQL",
@@ -424,7 +426,7 @@
         "VAL-06",
         "VAL-07"
       ],
-      "validation": "PASS: independent 137-root SQL-01–SQL-13 storage checks and SQL-14 SQL archive; browser/list/preview observations remain NOT_RUN at V2/V5",
+      "validation": "PASS: independent 137-root SQL-01\u2013SQL-13 storage checks and SQL-14 SQL archive; browser/list/preview observations remain NOT_RUN at V2/V5",
       "tested_checkpoints": {
         "@itrocks/storage": {
           "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
@@ -771,7 +773,7 @@
         "DEP-01",
         "VAL-03"
       ],
-      "validation": "PASS author: build/public types/14 controller tests; 40 real sandboxed Chromium assertions for T01–03/T05–08/T25, hover/focus geometry, touch clicks, keyboard, disposal/remount and late metadata; public files/allowlist/import graph and application preservation. Independent V2-UI remains NOT_RUN.",
+      "validation": "PASS author: build/public types/14 controller tests; 40 real sandboxed Chromium assertions for T01\u201303/T05\u201308/T25, hover/focus geometry, touch clicks, keyboard, disposal/remount and late metadata; public files/allowlist/import graph and application preservation. Independent V2-UI remains NOT_RUN.",
       "tested_checkpoints": {
         "@itrocks/property-select": {
           "base_sha": "0526f46fad4a3bd402e73e713283aeffafbfe617",
@@ -1273,7 +1275,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Branch cycle policy, async cancellation and stable ranking require careful shared-state handling.",
@@ -1291,6 +1293,94 @@
         "SEA-09",
         "QUA-01",
         "QUA-03"
+      ],
+      "validation": "PASS: 24 Node tests, build/types/exports and 40 author Chromium assertions. FAIL: integrated metadata exposes Date issuedAt as a relation and context request returns HTTP 500; search reports error. FIX-L3-1/RETEST-L3-1 required before V3.",
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "9a2fd9606a5a731d980bb5a0a743cf3072b85fa7",
+          "base_version": "0.3.1",
+          "version": "0.4.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7a302cd606ff007276038ada4d12fc0bd2161d54",
+          "version": "0.10.0"
+        },
+        "@itrocks/reflect": {
+          "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+          "version": "0.3.0"
+        }
+      },
+      "defects": [
+        "defects/L3-01.md"
+      ],
+      "evidence": [
+        "evidence/L3/browser-results.json",
+        "evidence/L3/test.txt",
+        "evidence/L3/provider-traces.json"
+      ]
+    },
+    {
+      "id": "FIX-L3-1",
+      "title": "Keep scalar Date metadata out of relation traversal",
+      "card": "tasks/FIX-L3-1.md",
+      "dependencies": [
+        "L3"
+      ],
+      "packages": [
+        "@itrocks/reflect",
+        "@itrocks/framework",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/reflect",
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Scalar classification crosses reflection, typed path resolution and the metadata provider; preserve real domain relations and search error handling.",
+      "report": "reports/FIX-L3-1.md",
+      "requirements": [
+        "API-03",
+        "SEA-07",
+        "META-01",
+        "META-02",
+        "QUA-01",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-L3-1",
+      "title": "Independently verify scalar metadata and search recovery",
+      "card": "tasks/RETEST-L3-1.md",
+      "dependencies": [
+        "FIX-L3-1"
+      ],
+      "packages": [
+        "@itrocks/reflect",
+        "@itrocks/framework",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/reflect",
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "A fresh verifier must check the actual Date metadata route and integrated search on corrected checkpoints without suppressing HTTP errors.",
+      "report": "reports/RETEST-L3-1.md",
+      "requirements": [
+        "API-03",
+        "SEA-07",
+        "META-01",
+        "META-02",
+        "QUA-01",
+        "VAL-07"
       ]
     },
     {
@@ -1298,7 +1388,7 @@
       "title": "Independent search browser check",
       "card": "tasks/V3.md",
       "dependencies": [
-        "L3"
+        "RETEST-L3-1"
       ],
       "packages": [
         "@itrocks/property-select"

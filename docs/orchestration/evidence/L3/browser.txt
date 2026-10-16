@@ -1,0 +1,26 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Browser exceptions/warnings/errors
++ actual - expected
+
++ [
++   'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'
++ ]
+- []
+
+    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/test/browser-search.mjs:33:9)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/test/browser-search.mjs:242:2
+    at runNextTicks (node:internal/process/task_queues:65:5)
+    at process.processImmediate (node:internal/timers:473:9) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'Failed to load resource: the server responded with a status of 500 (Internal Server Error)'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual'
+}
+
+Node.js v24.0.1

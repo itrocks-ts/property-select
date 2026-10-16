@@ -10,10 +10,13 @@ if (!process.argv[2]?.startsWith('--ps-environment=') || !process.argv[3]?.start
 const assets = new Map([
 	['/', new URL('./demo/index.html', import.meta.url)],
 	['/catalogue.js', new URL('./demo/catalogue.js', import.meta.url)],
-	['/demo.js', new URL('./demo/demo.js', import.meta.url)]
+	['/demo.js', new URL('./demo/demo.js', import.meta.url)],
+	['/search-fixture', new URL('./demo/search.html', import.meta.url)],
+	['/search-fixture.js', new URL('./demo/search.js', import.meta.url)],
+	['/search-graph.js', new URL('../../../test/fixtures/search-graph.mjs', import.meta.url)]
 ])
 for (const name of ['controller.js', 'front/property-select.css', 'front/property-select.html', 'front/property-select.js',
-	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js'])
+	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js', 'search.js'])
 	assets.set(`/assets/${name}`, new URL(`../../../${name}`, import.meta.url))
 
 // Generic table fixture is a separate consumer of public table/plugin browser entries.
@@ -40,7 +43,7 @@ createServer((request, response) => {
 	const file = fileURLToPath(asset)
 	response.setHeader('Cache-Control', 'no-store')
 	response.setHeader('X-Content-Type-Options', 'nosniff')
-	response.setHeader('Content-Type', file.endsWith('.js') ? 'text/javascript'
+	response.setHeader('Content-Type', (file.endsWith('.js') || file.endsWith('.mjs')) ? 'text/javascript'
 		: file.endsWith('.css') ? 'text/css' : 'text/html')
 	createReadStream(file).on('error', () => response.writeHead(404).end()).pipe(response)
 }).listen(port, '127.0.0.1', () => console.log(`Standalone selector: http://127.0.0.1:${port}`))

@@ -1,0 +1,36 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "commands": [
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select run build",
+      "exit": 0,
+      "output": "build.txt"
+    },
+    {
+      "command": "PS_SEARCH_TEST_EVIDENCE=/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/L3/provider-traces.json npm --prefix node_modules/@itrocks/property-select test",
+      "exit": 0,
+      "output": "test.txt"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/test/browser-search.mjs",
+      "exit": 1,
+      "output": "browser.txt; browser-results.json",
+      "permissions": "normal require_escalated; Chromium sandbox true"
+    },
+    {
+      "command": "PS_PLAYWRIGHT_MODULE=/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs node node_modules/@itrocks/property-select/test/browser-smoke.mjs",
+      "exit": 0,
+      "output": "browser-smoke.json",
+      "permissions": "normal require_escalated; Chromium sandbox true"
+    },
+    {
+      "command": "npm pack ./node_modules/@itrocks/property-select --dry-run --json --ignore-scripts --offline --cache /tmp/property-select/L3/npm-cache",
+      "exit": 0,
+      "output": "package-files.json"
+    },
+    {
+      "command": "git -C node_modules/@itrocks/property-select diff --check",
+      "exit": 0
+    }
+  ]
+}

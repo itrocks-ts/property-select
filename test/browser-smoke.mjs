@@ -8,7 +8,7 @@ if (!modulePath)
 	throw new Error('Set PS_PLAYWRIGHT_MODULE to the installed playwright module; no download is performed')
 const { chromium } = await import(modulePath)
 const assets = new Set(['controller.js', 'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js',
-	'property-select.js'])
+	'property-select.js', 'search.js'])
 const server = createServer(async (request, response) => {
 	const name = new URL(request.url, 'http://localhost').pathname.slice(1)
 	if (!name) {

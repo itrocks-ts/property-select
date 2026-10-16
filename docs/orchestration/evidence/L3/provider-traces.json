@@ -1,0 +1,1002 @@
+[
+	{
+		"name": "T10 descendant scope/cache with no ancestor requests",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "customer.address.country.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "Customer",
+							"path": "customer"
+						},
+						{
+							"label": "Address",
+							"path": "customer.address"
+						},
+						{
+							"label": "Pays",
+							"path": "customer.address.country"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "Nom",
+						"name": "name",
+						"order": 2,
+						"path": "customer.address.city.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "Customer",
+							"path": "customer"
+						},
+						{
+							"label": "Address",
+							"path": "customer.address"
+						},
+						{
+							"label": "Ville",
+							"path": "customer.address.city"
+						}
+					]
+				},
+				{
+					"depth": 2,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "customer.address.city.country.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "Customer",
+							"path": "customer"
+						},
+						{
+							"label": "Address",
+							"path": "customer.address"
+						},
+						{
+							"label": "Ville",
+							"path": "customer.address.city"
+						},
+						{
+							"label": "Pays",
+							"path": "customer.address.city.country"
+						}
+					]
+				},
+				{
+					"depth": 3,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "customer.address.city.addresses.country.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "Customer",
+							"path": "customer"
+						},
+						{
+							"label": "Address",
+							"path": "customer.address"
+						},
+						{
+							"label": "Ville",
+							"path": "customer.address.city"
+						},
+						{
+							"label": "Adresses",
+							"path": "customer.address.city.addresses"
+						},
+						{
+							"label": "Pays",
+							"path": "customer.address.city.addresses.country"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 6
+		},
+		"path": "customer.address",
+		"state": {
+			"branch": [
+				"customer",
+				"address"
+			],
+			"current": 2,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": true
+			},
+			{
+				"path": "customer",
+				"aborted": false
+			},
+			{
+				"path": "customer.address",
+				"aborted": false
+			},
+			{
+				"path": "customer.address.city",
+				"aborted": true
+			},
+			{
+				"path": "customer.address.country",
+				"aborted": true
+			},
+			{
+				"path": "customer.address.city.addresses",
+				"aborted": true
+			},
+			{
+				"path": "customer.address.city.country",
+				"aborted": true
+			},
+			{
+				"path": "customer.address.city.addresses.country",
+				"aborted": true
+			}
+		]
+	},
+	{
+		"name": "T13 many-to-one/one-to-many: expected return true",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				},
+				{
+					"depth": 2,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.back.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						},
+						{
+							"label": "back",
+							"path": "away.back"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 3
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			},
+			{
+				"path": "away.back",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 many-to-many/many-to-many: expected return true",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				},
+				{
+					"depth": 2,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.back.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						},
+						{
+							"label": "back",
+							"path": "away.back"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 3
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			},
+			{
+				"path": "away.back",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 one-to-many/many-to-one: expected return false",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 2
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 unknown/one-to-many: expected return false",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 2
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 many-to-one/unknown: expected return false",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 2
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 uncertain/asymmetric inverse undefined",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 2
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 uncertain/asymmetric inverse wrong",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "away.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "away",
+							"path": "away"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 2
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "away",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T13 incoming one-to-many branch history",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [
+				{
+					"depth": 0,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "children.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "Child",
+							"path": "children"
+						}
+					]
+				}
+			],
+			"status": "complete",
+			"visited": 1
+		},
+		"path": "children",
+		"state": {
+			"branch": [
+				"children"
+			],
+			"current": 1,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": true
+			},
+			{
+				"path": "children",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T12/T26 large cyclic bounded provider trace",
+		"result": {
+			"errors": [],
+			"limited": true,
+			"results": [
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch0.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch0",
+							"path": "branch0"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch1.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch1",
+							"path": "branch1"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch10.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch10",
+							"path": "branch10"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch11.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch11",
+							"path": "branch11"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch12.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch12",
+							"path": "branch12"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch13.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch13",
+							"path": "branch13"
+						}
+					]
+				},
+				{
+					"depth": 1,
+					"property": {
+						"kind": "terminal",
+						"label": "name",
+						"name": "name",
+						"order": 1,
+						"path": "branch14.name"
+					},
+					"segments": [
+						{
+							"label": "Facture",
+							"path": ""
+						},
+						{
+							"label": "branch14",
+							"path": "branch14"
+						}
+					]
+				}
+			],
+			"status": "limited",
+			"visited": 19
+		},
+		"path": "",
+		"state": {
+			"branch": [],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": false
+			},
+			{
+				"path": "branch0",
+				"aborted": false
+			},
+			{
+				"path": "branch1",
+				"aborted": false
+			},
+			{
+				"path": "branch2",
+				"aborted": false
+			},
+			{
+				"path": "branch3",
+				"aborted": false
+			},
+			{
+				"path": "branch4",
+				"aborted": false
+			},
+			{
+				"path": "branch5",
+				"aborted": false
+			},
+			{
+				"path": "branch6",
+				"aborted": false
+			},
+			{
+				"path": "branch7",
+				"aborted": false
+			},
+			{
+				"path": "branch8",
+				"aborted": false
+			},
+			{
+				"path": "branch9",
+				"aborted": false
+			},
+			{
+				"path": "branch10",
+				"aborted": false
+			},
+			{
+				"path": "branch11",
+				"aborted": false
+			},
+			{
+				"path": "branch12",
+				"aborted": false
+			},
+			{
+				"path": "branch13",
+				"aborted": false
+			},
+			{
+				"path": "branch14",
+				"aborted": false
+			},
+			{
+				"path": "branch15",
+				"aborted": false
+			},
+			{
+				"path": "branch16",
+				"aborted": false
+			},
+			{
+				"path": "branch17",
+				"aborted": false
+			}
+		]
+	},
+	{
+		"name": "T12 delayed context and disposed generations",
+		"result": {
+			"errors": [],
+			"limited": false,
+			"results": [],
+			"status": "idle",
+			"visited": 0
+		},
+		"path": "",
+		"state": {
+			"branch": [
+				"lines"
+			],
+			"current": 0,
+			"query": "name",
+			"recent": [],
+			"scroll": {},
+			"version": 1
+		},
+		"calls": [
+			{
+				"path": "",
+				"aborted": true
+			},
+			{
+				"path": "customer",
+				"aborted": true
+			},
+			{
+				"path": "lines",
+				"aborted": true
+			},
+			{
+				"path": "tags",
+				"aborted": true
+			},
+			{
+				"path": "customer",
+				"aborted": true
+			}
+		]
+	}
+]
