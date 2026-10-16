@@ -1,0 +1,740 @@
+{
+  "checks": [
+    {
+      "name": "No inherited app reservation",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "No inherited standalone reservation",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 T09 all-word normalisation",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 SEA-03 separate same-type paths",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 SEA-04 root-to-parent path",
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 no duplicate rows",
+      "observed": 6,
+      "expected": 6,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 T10 only local descendants",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 T10 root return preserves query",
+      "observed": " CÔDE   pAyS CLIENT ",
+      "expected": " CÔDE   pAyS CLIENT ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 clear query",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 clear adjacent rows",
+      "observed": [
+        "customer.billingAddress.country.code",
+        "customer.billingAddress.country.name"
+      ],
+      "expected": [
+        "customer.billingAddress.country.code",
+        "customer.billingAddress.country.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 clear preserves input focus",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 definitive leaf empty",
+      "observed": "empty",
+      "expected": "empty",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 responsive shell",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280 trusted input only",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 T09 all-word normalisation",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 SEA-03 separate same-type paths",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 SEA-04 root-to-parent path",
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 no duplicate rows",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 T10 only local descendants",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 T10 root return preserves query",
+      "observed": "country name",
+      "expected": "country name",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 clear query",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280 clear adjacent rows",
+      "observed": [
+        "deliveryAddress.city.country.name"
+      ],
+      "expected": [
+        "deliveryAddress.city.country.code",
+        "deliveryAddress.city.country.name"
+      ],
+      "status": "FAIL"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "environment": {
+        "PS_APP_PORT": "13871",
+        "PS_STANDALONE_PORT": "13872",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V3",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      },
+      "stdout": ""
+    },
+    {
+      "action": "standalone",
+      "environment": {
+        "PS_APP_PORT": "13871",
+        "PS_STANDALONE_PORT": "13872",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V3",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      },
+      "stdout": ""
+    },
+    {
+      "action": "stop-standalone",
+      "environment": {
+        "PS_APP_PORT": "13871",
+        "PS_STANDALONE_PORT": "13872",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V3",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      },
+      "stdout": "PASS: owned standalone 2411720 stopped\n"
+    },
+    {
+      "action": "stop-app",
+      "environment": {
+        "PS_APP_PORT": "13871",
+        "PS_STANDALONE_PORT": "13872",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V3",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+      },
+      "stdout": "PASS: owned app 2411702 stopped\n"
+    }
+  ],
+  "contexts": [
+    {
+      "name": "standalone-1280-empty",
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "status": "empty",
+      "paths": [],
+      "current": "customer.billingAddress.country"
+    }
+  ],
+  "metadata": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/front/property-select.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/front/property-select.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-graph.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/property-select.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/controller.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/path.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/intentions.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/navigation.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/search.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/metadata.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13872/assets/front/property-select.html",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/ux-core/css/app.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/home/right-pane.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/notifications/css/notifications.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/app/menu/menu.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/framework/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/home/container.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/action-bar/action.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/delete/css/action.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/list/list.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/new/css/action.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/ux-core/css/article.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/list/build.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/home/right-pane.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/build/build.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/column-add.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/column-reorder-freeze.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/column-reorder.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/feed.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/freeze.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/freeze/inherit-background.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/freeze/inherit-border.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/link.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/table.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/xtarget.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/asset-loader/asset-loader.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/auto-focus/auto-focus.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/auto-redirect/build.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/breadcrumb/breadcrumb.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/collapse/collapse.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/contained-auto-width/contained-auto-width.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/notifications/notifications.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/real-viewport-height/real-viewport-height.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/begin-end.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/build.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/secure-click.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/composite.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/default-target.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/head.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/headers-size.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/history.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/hold-on.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/main-target.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/xtarget/modifier.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/framework/property-select-list.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/framework/property-select-metadata.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/sorted-array/sorted-array.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/plugin/plugin.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/ux-core/css/logo/itrocks.svg",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/ux-core/css/action/back.svg",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/new/css/new.svg",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/delete/css/delete.svg",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/form-fetch/form-fetch.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/asset-loader/load-css.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/asset-loader/load-script.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/list/property-select.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/front/property-select.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/property-select.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/controller.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/path.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/intentions.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/navigation.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/search.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/metadata.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/property-select/front/property-select.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/@itrocks/table/column-add.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/template/html",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=deliveryAddress&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=lines&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.address&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.parent&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=deliveryAddress.city&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.address.city&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.parent.address&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.deliveryAddress&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.lines&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.address.city.country&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.parent.address.city&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.address&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.parent&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.deliveryAddress.city&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=customer.parent.address.city.country&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.address.city&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.parent.address&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.deliveryAddress.city.country&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.address.city.country&root=invoice",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select/context/json?path=tags.invoices.customer.parent.address.city&root=invoice",
+      "method": "GET"
+    }
+  ],
+  "health": [],
+  "input": [
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted fill",
+      "text": " CÔDE   pAyS CLIENT "
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted click",
+      "selector": "locator('.ps-main[data-path=\"customer.address.country.code\"]').locator('..').locator('.ps-result-path button[data-path=\"customer.address\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted click",
+      "selector": "locator('.ps-level[data-path=\"\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted fill",
+      "text": "country"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted click",
+      "selector": "locator('.ps-main[data-path=\"customer.billingAddress.country\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted click",
+      "selector": "locator('.ps-clear')"
+    },
+    {
+      "url": "http://127.0.0.1:13872/search-fixture?reverse",
+      "action": "trusted fill",
+      "text": "NoSuchPropertyV3"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted click",
+      "selector": "locator('.add-column:not([hidden])')"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted fill",
+      "text": " NaMe   CoUnTrY CUSTOMER "
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted fill",
+      "text": "country name"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted click",
+      "selector": "locator('.ps-main[data-path=\"customer.address.city.country.name\"]').locator('..').locator('.ps-result-path button[data-path=\"customer.address\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted click",
+      "selector": "locator('.ps-level[data-path=\"\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted fill",
+      "text": "country"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted click",
+      "selector": "locator('.ps-main[data-path=\"deliveryAddress.city.country\"]')"
+    },
+    {
+      "url": "http://127.0.0.1:13871/property-select-invoice",
+      "action": "trusted click",
+      "selector": "locator('.ps-clear')"
+    }
+  ],
+  "seed": "search-graph.mjs and environment/models; synthetic property_select_recipe",
+  "checkpoint": "080f4e0fe0d310f0a5159df17252f994804892c2",
+  "version": "0.4.4",
+  "urls": [
+    "http://127.0.0.1:13872",
+    "http://127.0.0.1:13871"
+  ],
+  "browser": "151.0.7922.34",
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: integrated-1280 clear adjacent rows\n+ actual - expected\n\n  [\n-   'deliveryAddress.city.country.code',\n    'deliveryAddress.city.country.name'\n  ]\n",
+  "failureDOM": "collapse\nAccueil\nInvoices\n+\n61 éléments\nNouveau\n\t\nnumber\n\t\namount\n\n\tREC-001\t12\n\tREC-003\t-6\n\tREC-004\t100\n\tREC-005\t1\n\tREC-007\t1\n\tREC-009\t1\n\tREC-011\t1\n\tREC-013\t1\n\tREC-015\t1\n\tREC-017\t1\n\tREC-019\t1\n\tREC-021\t1\n\tREC-023\t1\n\tREC-025\t1\n\tREC-027\t1\n\tREC-029\t1\n\tREC-031\t1\n\tREC-033\t1\n\tREC-035\t1\n\tREC-037\t1\n\tREC-039\t1\n\tREC-041\t1\n\tREC-043\t1\n\tREC-045\t1\n\tREC-047\t1\n\tREC-049\t1\n\tREC-051\t1\n\tREC-053\t1\n\tREC-055\t1\n\tREC-057\t1\n\tREC-059\t1\n\tREC-061\t1\n\tREC-063\t1\n\tREC-065\t1\n\tREC-067\t1\n\tREC-069\t1\n\tREC-071\t1\n\tREC-073\t1\n\tREC-075\t1\n\tREC-077\t1\n\tREC-079\t1\n\tREC-081\t1\n\tREC-083\t1\n\tREC-085\t1\n\tREC-087\t1\n\tREC-089\t1\n\tREC-091\t1\n\tREC-093\t1\n\tREC-095\t1\n\tREC-097\t1\n›\nClose pane\nAdd columns\ninvoice\ndelivery address\ncity\ncountry\nClear\nname\n+"
+}

@@ -1,5 +1,26 @@
 # Phase 1 validation matrix
 
+## V3 independent search observations
+
+Gate: **NEEDS_FIX** on selector `080f4e0fe0d310f0a5159df17252f994804892c2` / `0.4.3`,
+rebuilt tracking version `0.4.4`. [Report](reports/V3.md), [full browser run](evidence/V3/results.json),
+[eight reduced reproductions](evidence/V3/reproducer.json), [independent bounds](evidence/V3/bounds.json).
+
+- **PASS observations**: T09 all-word normalisation/path identity, T10 current descendants/root return,
+  T11 relation/segment navigation and Clear/leaf empty at both interfaces and all four V3 dimensions.
+  Standalone delayed query/context generations, N-N/1-N/unknown cycle decisions and exact focused-result identity
+  during enrichment/budget eviction pass. Independent numerical traversal assertions: 21 PASS; selector suite: 24 PASS.
+- **FAIL / V3-01**: Ordinary empty-query root → tags retains the obsolete focused `tags` row and omits `tags.name`.
+  Both interfaces fail at 1280 × 720, 768 × 900, 390 × 844 and 844 × 390.
+  Full itinerary stops after 116 PASS / 1 FAIL at navigation following error/Clear.
+  [Defect](defects/V3-01.md) blocks SEA-01/05/06/07 and recoverable navigation acceptance.
+- **NOT_RUN remaining V3**: Fresh integrated delayed/reordered HTTP focus/cycle/permission/Date/no-business-read
+  assertions appear after the failed step and were not executed. Prior RETEST-L3-1 proof retains its own scope.
+  T11 drag remains V5; later combined cases and final acceptance remain NOT_RUN.
+
+`FIX-V3-1` and distinct `RETEST-V3-1` must correct/replay the defect and complete the full V3 itinerary.
+L4 depends on successful RETEST-V3-1; no failed observation is waived.
+
 ## L3 author search checkpoint
 
 Historical **NEEDS_FIX**, resolved by independent `RETEST-L3-1` below:
@@ -658,13 +679,13 @@ current verdict: **PASS (V2 implemented observations)**.
 - **T08** — Expected: Use a long breadcrumb on narrow/touch screens; scroll and activate remembered levels with no
 add/drag. Proof: `evidence/<gate>/T08.*`; current verdict: `NOT_RUN`.
 - **T09** — Expected: Search customer country name with reordered/accented/case-varied words; see terminal and
-object results by full path. Proof: `evidence/<gate>/T09.*`; current verdict: `NOT_RUN`.
+object results by full path. V3 observation: **PASS**; [proof](evidence/V3/results.json).
 - **T10** — Expected: Search from Address, assert all results descend from it; return to root with the same query
-and relaunch. Proof: `evidence/<gate>/T10.*`; current verdict: `NOT_RUN`.
+and relaunch. V3 scoped search passes; **FAIL** ordinary-navigation scope after Clear: [V3-01](defects/V3-01.md).
 - **T11** — Expected: Find Country through billing/delivery paths; navigate and drag intermediate segment using each
 exact full path. Proof: `evidence/<gate>/T11.*`; current verdict: `NOT_RUN`.
 - **T12** — Expected: Delay old query, change text/context and release late response; current results remain,
-loading/empty/limited differ. Proof: `evidence/<gate>/T12.*`; current verdict: `NOT_RUN`.
+loading/empty/limited differ. **FAIL** V3 recovery: [V3-01](defects/V3-01.md); remaining HTTP races NOT_RUN.
 - **T13** — Expected: Run known N→1/N-N inverse return, 1→N excluded return, unknown relations and same-type
 noncycles with provider traces. Proof: `evidence/<gate>/T13.*`; current verdict: `NOT_RUN`.
 - **T14** — Expected: Combine recent ancestor, two maximal used branches and duplicate advice; assert stable

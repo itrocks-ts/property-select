@@ -1,0 +1,34 @@
+{
+  ".": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4\n",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "staged": " audit-itrocks-dependencies.json | 18858 ++++++++++++++++++++++++++++++++++++++\n audit-itrocks-dependencies.txt  |   691 ++\n 2 files changed, 19549 insertions(+)\n",
+    "unstaged": " audit-itrocks-dependencies.json | 18858 --------------------------------------\n audit-itrocks-dependencies.txt  |   691 --\n config.yaml                     |     5 +\n 3 files changed, 5 insertions(+), 19549 deletions(-)\n"
+  },
+  "node_modules/@itrocks/property-select": {
+    "head": "080f4e0fe0d310f0a5159df17252f994804892c2\n",
+    "status": "",
+    "staged": "",
+    "unstaged": ""
+  },
+  "node_modules/@itrocks/framework": {
+    "head": "e5d976aafce2c09266381c643d2cfe6788eb0014\n",
+    "status": "",
+    "staged": "",
+    "unstaged": ""
+  },
+  "node_modules/@itrocks/reflect": {
+    "head": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a\n",
+    "status": "",
+    "staged": "",
+    "unstaged": ""
+  },
+  "node_modules/@itrocks/reflect-path": {
+    "head": "bc6e4bdd17b884d93ecc72451078896c9a119696\n",
+    "status": "",
+    "staged": "",
+    "unstaged": ""
+  },
+  "config.yaml sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa",
+  "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n"
+}

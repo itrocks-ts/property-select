@@ -1,0 +1,131 @@
+{
+  "status": "PASS",
+  "records": [
+    {
+      "name": "depth: visited hard ceiling",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "depth: visible result ceiling",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "depth: pending ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "depth: limited is explicit",
+      "observed": "limited",
+      "expected": "limited",
+      "status": "PASS"
+    },
+    {
+      "name": "depth: depth ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "depth: unique path identity",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: visited hard ceiling",
+      "observed": 7,
+      "expected": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: visible result ceiling",
+      "observed": 7,
+      "expected": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: pending ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: limited is explicit",
+      "observed": "limited",
+      "expected": "limited",
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: depth ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "contexts: unique path identity",
+      "observed": 7,
+      "expected": 7,
+      "status": "PASS"
+    },
+    {
+      "name": "results: visited hard ceiling",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "name": "results: visible result ceiling",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "results: pending ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "results: limited is explicit",
+      "observed": "limited",
+      "expected": "limited",
+      "status": "PASS"
+    },
+    {
+      "name": "results: depth ceiling",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "results: unique path identity",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "name": "Ignored abort cannot publish old results",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "Old provider work actually completed after abort",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Disposal invalidates pending generation",
+      "observed": "idle",
+      "expected": "idle",
+      "status": "PASS"
+    }
+  ]
+}

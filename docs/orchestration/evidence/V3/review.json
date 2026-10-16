@@ -1,0 +1,52 @@
+{
+  "config_preserved": true,
+  "exports": {
+    "./property-select.d.ts": {
+      "exists": true,
+      "sha256": "29b2ccee0af9ce3e04784732e6a07110758ecc3894e20c2288a917a0d06bfaca"
+    },
+    "./property-select.js": {
+      "exists": true,
+      "sha256": "48edec919f0957ce5eaaffab90ad1d9c8f4c94abf899e8fe3ff5456017902a79"
+    },
+    "./cjs/property-select.js": {
+      "exists": true,
+      "sha256": "0480e2d68b9ec6d57b2e1f1e9f79af4e64d20a9d81a1247161a7e11e63e41969"
+    },
+    "./front/property-select.css": {
+      "exists": true,
+      "sha256": "d67df892dbf235a919890778bf9d87bd7330532d76b93f71574b456e5faba4f0"
+    },
+    "./front/property-select.html": {
+      "exists": true,
+      "sha256": "cf3584119fbbebd6b7b500d3ba0c6edf8856edd7dd44a4d57b0a40b7afe5bee8"
+    },
+    "./front/property-select.d.ts": {
+      "exists": true,
+      "sha256": "b9c278133f7d4f7c5f64bc8c43100cb885f61c3355ff8d355390a96687f9d607"
+    },
+    "./front/property-select.js": {
+      "exists": true,
+      "sha256": "1e422f4bf708b15103fbc2b7ca4624b27470cdd349bdf5bc5781a30255d65934"
+    }
+  },
+  "application_head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+  "application_status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+  "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+  "ports": {
+    "13871": "closed",
+    "13872": "closed",
+    "13874": "closed",
+    "13875": "closed"
+  },
+  "ownership_files": {
+    "/tmp/property-select/V3/app.pid": false,
+    "/tmp/property-select/V3/app.owner.json": false,
+    "/tmp/property-select/V3/standalone.pid": false,
+    "/tmp/property-select/V3/standalone.owner.json": false,
+    "/tmp/property-select/V3-reproduce/app.pid": false,
+    "/tmp/property-select/V3-reproduce/app.owner.json": false,
+    "/tmp/property-select/V3-reproduce/standalone.pid": false,
+    "/tmp/property-select/V3-reproduce/standalone.owner.json": false
+  }
+}

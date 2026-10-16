@@ -1,0 +1,41 @@
+{
+  "commands": [
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select test",
+      "exit": 0,
+      "output": "test.txt"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-bounds.mjs",
+      "exit": 0,
+      "output": "bounds.json"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3.mjs",
+      "exit": 1,
+      "output": "results.json"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-reproduce.mjs",
+      "exit": 1,
+      "output": "reproducer.json"
+    },
+    {
+      "restricted_initial_failure": "spawnSync git EPERM",
+      "successful_execution": "normal require_escalated; chromiumSandbox true"
+    }
+  ],
+  "sources": {
+    "environment/checks/V3-bounds.mjs": "107696855285e42b86fd8e07dca796cf27a8c5f8a569b8b0078e7c08639887e2",
+    "environment/checks/V3-reproduce.mjs": "c4c3f359ca193381e90f206ec32425bc6499b717845a5f04323ed30948c83432",
+    "environment/checks/V3-initialise.cjs": "49c3b91f9fe40caff5045dd4bb6780a71e20f0f67dfbc4d9d4114a912d4936ed",
+    "environment/checks/V3.mjs": "3a22508c39192611602de906d54739d4f4971a6be3a5bafc4e823d3a42ec32f1"
+  },
+  "executed_sources_before_line_wrapping": {
+    "environment/checks/V3-bounds.mjs": "9d2713f72fef74286326d7ad26e950934204a6580f9987a0e5e5dc17c0f4a984",
+    "environment/checks/V3-reproduce.mjs": "e5aa64ee65bf35da71b6112980ff9aec348f24dfdccaaf28b310e5ab061580bc",
+    "environment/checks/V3-initialise.cjs": "49c3b91f9fe40caff5045dd4bb6780a71e20f0f67dfbc4d9d4114a912d4936ed",
+    "environment/checks/V3.mjs": "c35e437164a0c636126184bda7a7142a38bc35e906f3e92afe284b81d66b1945"
+  },
+  "final_syntax_checks": "V3.mjs, V3-reproduce.mjs pass; V3-bounds.mjs rerun 21 PASS after line wrapping"
+}

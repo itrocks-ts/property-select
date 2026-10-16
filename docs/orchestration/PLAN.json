@@ -44,6 +44,8 @@
     "FIX-L3-1",
     "RETEST-L3-1",
     "V3",
+    "FIX-V3-1",
+    "RETEST-V3-1",
     "L4",
     "V4",
     "L5",
@@ -1462,7 +1464,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Stale async results and branch-specific cycles need both contract assertions and visible observations.",
@@ -1475,6 +1477,78 @@
         "T13",
         "VAL-04",
         "VAL-06"
+      ],
+      "validation": "FAIL: ordinary navigation retains the focused obsolete root relation and hides a valid child. 116/117 independent browser checks pass; all eight interface/viewport reproductions fail. 21 independent numerical bounds and 24 selector tests pass. Remaining V3 metadata/delayed HTTP checks NOT_RUN after the blocking failure.",
+      "defects": [
+        "defects/V3-01.md"
+      ],
+      "evidence": [
+        "evidence/V3/results.json",
+        "evidence/V3/reproducer.json",
+        "evidence/V3/bounds.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "080f4e0fe0d310f0a5159df17252f994804892c2",
+          "base_version": "0.4.3",
+          "version": "0.4.4"
+        }
+      }
+    },
+    {
+      "id": "FIX-V3-1",
+      "title": "Keep ordinary navigation properties complete",
+      "card": "tasks/FIX-V3-1.md",
+      "dependencies": [
+        "V3"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Navigation generations and asynchronous focus retention require independent DOM identity and metadata checks.",
+      "report": "reports/FIX-V3-1.md",
+      "requirements": [
+        "SEA-01",
+        "SEA-05",
+        "SEA-06",
+        "SEA-07",
+        "QUA-01",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-V3-1",
+      "title": "Independently verify navigation and search focus",
+      "card": "tasks/RETEST-V3-1.md",
+      "dependencies": [
+        "FIX-V3-1"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Navigation generations and asynchronous focus retention require independent DOM identity and metadata checks.",
+      "report": "reports/RETEST-V3-1.md",
+      "requirements": [
+        "SEA-01",
+        "SEA-05",
+        "SEA-06",
+        "SEA-07",
+        "QUA-01",
+        "VAL-07"
       ]
     },
     {
@@ -1482,7 +1556,7 @@
       "title": "Suggestions and real session restoration",
       "card": "tasks/L4.md",
       "dependencies": [
-        "V3"
+        "RETEST-V3-1"
       ],
       "packages": [
         "@itrocks/property-select",
