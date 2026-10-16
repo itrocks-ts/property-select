@@ -4,7 +4,8 @@
 
 Correct the table geometry failure in [V2-TABLE](../reports/V2-TABLE.md) and
 [defect V2-TABLE-1](../defects/V2-TABLE-1.md). Prerequisite: the completed failed gate diagnostic.
-This is the successful-prerequisite exception for correction tasks. Status: `PENDING`.
+This is the successful-prerequisite exception for correction tasks.
+Status: `DONE` / author PASS; independent retest remains pending.
 Do not start another task or sub-agent. No consumer may proceed before independent retest PASS.
 
 ## References and entry points

@@ -996,7 +996,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Sticky geometry across addition/freeze ports must preserve header gestures.",
@@ -1008,7 +1008,21 @@
         "TAB-06",
         "VAL-04",
         "VAL-06"
-      ]
+      ],
+      "result": {
+        "verdict": "Author PASS; independent RETEST-V2-TABLE-1 pending",
+        "table_sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+        "table_version": "0.3.1",
+        "tracking_version": "0.2.6",
+        "node_tests": 43,
+        "author_browser_assertions": 127,
+        "verifier_driver_assertions": 182,
+        "geometry_configurations": 24,
+        "geometry_assertions": 144,
+        "reproducer_viewports": 4,
+        "evidence": "evidence/FIX-V2-TABLE-1/",
+        "next_gate": "RETEST-V2-TABLE-1"
+      }
     },
     {
       "id": "RETEST-V2-TABLE-1",

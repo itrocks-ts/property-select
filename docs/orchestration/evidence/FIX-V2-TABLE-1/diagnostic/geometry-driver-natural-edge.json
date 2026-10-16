@@ -1,0 +1,20 @@
+{
+  "assertions": [],
+  "health": [],
+  "inputs": [],
+  "url": "http://127.0.0.1:13772/table-fixture",
+  "chromiumSandbox": true,
+  "checkpoints": {
+    "table": {
+      "sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+      "version": "0.3.1"
+    },
+    "property-select": {
+      "sha": "93139049d0a178dcf4b0a0e3e5f1cbf1f0619fd1",
+      "version": "0.2.6"
+    }
+  },
+  "browser": "151.0.7922.34",
+  "verdict": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: 1280-colgroup-both: right stays sticky\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-V2-TABLE-1.mjs:95:14"
+}

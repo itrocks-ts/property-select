@@ -1,4 +1,6 @@
 import assert from 'node:assert/strict'
+import { execFileSync } from 'node:child_process'
+import { readFileSync } from 'node:fs'
 import { mkdirSync, writeFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
 import { resolve } from 'node:path'
@@ -7,7 +9,8 @@ const require = createRequire(import.meta.url)
 const runtime = process.env.PS_PLAYWRIGHT_MODULE
 	|| '/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'
 const { chromium } = require(runtime)
-const output = resolve('node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-TABLE')
+const output = resolve(process.env.PS_TABLE_OUTPUT
+	|| 'node_modules/@itrocks/property-select/docs/orchestration/evidence/L2-TABLE')
 const url = process.env.PS_TABLE_URL || 'http://127.0.0.1:13752/table-fixture'
 const results = { url, seed: 'generic opaque ids, two rows, frozen selection/actions', assertions: [], health: [] }
 mkdirSync(output, { recursive: true })
@@ -15,8 +18,11 @@ const browser = await chromium.launch({ chromiumSandbox: true, headless: true })
 results.browser = browser.version()
 results.playwright = require(`${runtime}/package.json`).version
 results.node = process.version
-results.checkpoints = { table: '46adbb2f85105f3f33545f1b4bea9267d1c7c393 + L2-TABLE / 0.3.0',
-	tracking: '863c9d1b03aa4672fa4fbb118f71deaa0319fb91 + L2-TABLE / 0.2.4' }
+results.checkpoints = Object.fromEntries(['table', 'property-select'].map(owner => [owner, {
+	sha: execFileSync('git', ['-C', `node_modules/@itrocks/${owner}`, 'rev-parse', 'HEAD'],
+		{ encoding: 'utf8' }).trim(),
+	version: JSON.parse(readFileSync(`node_modules/@itrocks/${owner}/package.json`)).version
+}]))
 const check = (name, expected, observed) => {
 	results.assertions.push({ name, expected, observed, verdict: JSON.stringify(expected) === JSON.stringify(observed)
 		? 'PASS' : 'FAIL' })

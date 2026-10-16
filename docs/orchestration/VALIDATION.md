@@ -1099,6 +1099,12 @@ an implemented feature or use a simulated replacement for a required browser/dat
   sticky Actions masks part of the revealed column. TAB-05/TAB-06, generic reset/late work and header regressions pass.
   See [report](reports/V2-TABLE.md), [evidence](evidence/V2-TABLE/results.json) and
   [defect](defects/V2-TABLE-1.md). FIX-V2-TABLE-1 then independent RETEST-V2-TABLE-1 block L2-LIST.
+  FIX-V2-TABLE-1 author **PASS** on table `7537cf58863ad0efc5c3edb2b15a0537d54568df` / `0.3.1`:
+  43 Node tests, 127 author and 182 verifier-driver browser assertions, four reproducer viewports and 144 additional
+  geometry assertions across 24 viewport/shape/frozen-side combinations. Fitting columns are fully visible and wide
+  columns use the available inner region. Focus, sort, delete/reorder, async replacement and lifecycle regressions pass.
+  See [correction report](reports/FIX-V2-TABLE-1.md) and [fresh evidence](evidence/FIX-V2-TABLE-1/).
+  Author success leaves V2-TABLE **NEEDS_FIX** until fresh independent RETEST-V2-TABLE-1 PASS; L2-LIST stays blocked.
   Combined PORT-04, T18 and DEP-07 remain unfinished; no final PASS is claimed.
 - V2: SQL-14 browser linkage, object/deep-column data, plural refusal, visible-row reload and PANE-05. L2 navigation
   cases are complete except observations explicitly assigned to later touch/search/drag features.

@@ -1,0 +1,49 @@
+{
+  "table": {
+    "sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+    "version": "0.3.1",
+    "files": [
+      {
+        "entry": "column-add.js",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-add.js",
+        "packed": true,
+        "sha256": "42391a8699a8cd95b65ab30529cc198715d16e079388bba9d87fd85cb310ea7c"
+      },
+      {
+        "entry": "column-add.d.ts",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-add.d.ts",
+        "packed": true,
+        "sha256": "3b22a7d4af6c617a6b45ebbea6f818b192645270d842ec779e8436513fdce39e"
+      },
+      {
+        "entry": "column-add.css",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-add.css",
+        "packed": true,
+        "sha256": "6bd020bb689dcb253015d83513575bf862cc9fe8acb112295508311546d7cdcf"
+      },
+      {
+        "entry": "column-reorder.js",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-reorder.js",
+        "packed": true,
+        "sha256": "752fc9f666ffdf0f78ee379776c8e6dc89452f8fa2d13cb3e6770e4bd70c9690"
+      },
+      {
+        "entry": "freeze.js",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/freeze.js",
+        "packed": true,
+        "sha256": "b11ae5a3c83d8771d85713bd8bef4edd3605054e943da13eb5dd3da58a3ca48b"
+      },
+      {
+        "entry": "freeze.d.ts",
+        "resolved": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/freeze.d.ts",
+        "packed": true,
+        "sha256": "1d36f1380fd4f49dec540d8c83ee66f362ba4b1bd284864e17d0aa472b2ae5f7"
+      }
+    ]
+  },
+  "tracking": {
+    "version": "0.2.6",
+    "publicEntry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/cjs/property-select.js",
+    "browserEntry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/property-select.js"
+  }
+}

@@ -1,0 +1,1 @@
+PASS: 144 geometry assertions, 24 shape/viewport configurations

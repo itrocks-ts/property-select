@@ -1,0 +1,611 @@
+{
+  "assertions": [
+    {
+      "label": "1280-colgroup-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1084,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1084
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "inner": {
+          "left": -1024,
+          "right": 1182
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1084,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1084
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 180,
+        "right": 1264,
+        "inner": {
+          "left": 180,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 126
+      },
+      "verdict": "FAIL"
+    }
+  ],
+  "health": [],
+  "inputs": [
+    {
+      "label": "1280-colgroup-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-colgroup-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-colgroup-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-header-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "url": "http://127.0.0.1:13772/table-fixture",
+  "chromiumSandbox": true,
+  "checkpoints": {
+    "table": {
+      "sha": "c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97",
+      "version": "0.3.1"
+    },
+    "property-select": {
+      "sha": "93139049d0a178dcf4b0a0e3e5f1cbf1f0619fd1",
+      "version": "0.2.6"
+    }
+  },
+  "browser": "151.0.7922.34",
+  "verdict": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: 1280-header-left/loaded/a: {\"left\":180,\"right\":1264,\"inner\":{\"left\":180,\"right\":1346},\"box\":{\"left\":98,\"right\":306,\"width\":208},\"visible\":126}\n\n'FAIL' !== 'PASS'\n\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-V2-TABLE-1.mjs:93:14"
+}

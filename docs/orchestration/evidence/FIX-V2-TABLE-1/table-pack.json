@@ -1,0 +1,176 @@
+[
+  {
+    "id": "@itrocks/table@0.3.1",
+    "name": "@itrocks/table",
+    "version": "0.3.1",
+    "size": 25250,
+    "unpackedSize": 103075,
+    "shasum": "02e330ce9ad9692a461ed78604c1f3bbb948dc59",
+    "integrity": "sha512-D1A1bn8wxoqkg/S3hFbs+PWSdD0/vERiuvEehx6lXRJY5XrgyWUpeAO4vQ0fXQzqJHzq7dpd2DmIgridxEactg==",
+    "filename": "itrocks-table-0.3.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 12072,
+        "mode": 420
+      },
+      {
+        "path": "column-add.css",
+        "size": 983,
+        "mode": 420
+      },
+      {
+        "path": "column-add.d.ts",
+        "size": 2665,
+        "mode": 420
+      },
+      {
+        "path": "column-add.js",
+        "size": 12982,
+        "mode": 420
+      },
+      {
+        "path": "column-reorder-freeze.d.ts",
+        "size": 172,
+        "mode": 420
+      },
+      {
+        "path": "column-reorder-freeze.js",
+        "size": 801,
+        "mode": 420
+      },
+      {
+        "path": "column-reorder.d.ts",
+        "size": 2230,
+        "mode": 420
+      },
+      {
+        "path": "column-reorder.js",
+        "size": 12954,
+        "mode": 420
+      },
+      {
+        "path": "edit-freeze/hide.d.ts",
+        "size": 537,
+        "mode": 420
+      },
+      {
+        "path": "edit-freeze/hide.js",
+        "size": 3437,
+        "mode": 420
+      },
+      {
+        "path": "edit-freeze/scroll.d.ts",
+        "size": 315,
+        "mode": 420
+      },
+      {
+        "path": "edit-freeze/scroll.js",
+        "size": 2045,
+        "mode": 420
+      },
+      {
+        "path": "edit.d.ts",
+        "size": 1646,
+        "mode": 420
+      },
+      {
+        "path": "edit.js",
+        "size": 7808,
+        "mode": 420
+      },
+      {
+        "path": "edit/lock.d.ts",
+        "size": 566,
+        "mode": 420
+      },
+      {
+        "path": "edit/lock.js",
+        "size": 2279,
+        "mode": 420
+      },
+      {
+        "path": "edit/move.d.ts",
+        "size": 666,
+        "mode": 420
+      },
+      {
+        "path": "edit/move.js",
+        "size": 4989,
+        "mode": 420
+      },
+      {
+        "path": "feed.d.ts",
+        "size": 341,
+        "mode": 420
+      },
+      {
+        "path": "feed.js",
+        "size": 2561,
+        "mode": 420
+      },
+      {
+        "path": "freeze.d.ts",
+        "size": 1201,
+        "mode": 420
+      },
+      {
+        "path": "freeze.js",
+        "size": 7993,
+        "mode": 420
+      },
+      {
+        "path": "freeze/inherit-background.d.ts",
+        "size": 265,
+        "mode": 420
+      },
+      {
+        "path": "freeze/inherit-background.js",
+        "size": 1442,
+        "mode": 420
+      },
+      {
+        "path": "freeze/inherit-border.d.ts",
+        "size": 466,
+        "mode": 420
+      },
+      {
+        "path": "freeze/inherit-border.js",
+        "size": 2389,
+        "mode": 420
+      },
+      {
+        "path": "link.d.ts",
+        "size": 1406,
+        "mode": 420
+      },
+      {
+        "path": "link.js",
+        "size": 3367,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1114,
+        "mode": 420
+      },
+      {
+        "path": "table.d.ts",
+        "size": 1238,
+        "mode": 420
+      },
+      {
+        "path": "table.js",
+        "size": 2493,
+        "mode": 420
+      }
+    ],
+    "entryCount": 32,
+    "bundled": []
+  }
+]

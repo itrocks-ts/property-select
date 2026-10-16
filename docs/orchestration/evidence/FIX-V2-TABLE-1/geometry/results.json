@@ -1,0 +1,4293 @@
+{
+  "assertions": [
+    {
+      "label": "1280-colgroup-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1084,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1084
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-colgroup-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -1024,
+          "right": 1182
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 218.140625,
+      "actual": {
+        "left": 98,
+        "right": 1148.140625,
+        "main": {
+          "left": 16,
+          "right": 1230.140625
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1230.140625,
+        "inner": {
+          "left": 98,
+          "right": 1148.140625
+        },
+        "box": {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        "visible": 218.140625
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1084,
+      "actual": {
+        "left": 98,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1182
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1084
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1264
+        },
+        "box": {
+          "left": 1056,
+          "right": 1264,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 98,
+        "right": 1264,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 974,
+          "right": 1182,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -66,
+          "right": 1182
+        },
+        "box": {
+          "left": 142,
+          "right": 350,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "1280-header-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 1166,
+      "actual": {
+        "left": 16,
+        "right": 1182,
+        "main": {
+          "left": 16,
+          "right": 1264
+        },
+        "frozenLeft": 16,
+        "frozenRight": 1264,
+        "inner": {
+          "left": -1024,
+          "right": 1182
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 1166
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 572,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 572
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 752
+        },
+        "box": {
+          "left": 544,
+          "right": 752,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 752
+        },
+        "box": {
+          "left": 544,
+          "right": 752,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 654,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 654
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -578,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -578,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-colgroup-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 654,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -1024,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 654
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 572,
+      "actual": {
+        "left": 98,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 670
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 572
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 752
+        },
+        "box": {
+          "left": 544,
+          "right": 752,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 752
+        },
+        "box": {
+          "left": 544,
+          "right": 752,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 654,
+      "actual": {
+        "left": 98,
+        "right": 752,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 654
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -578,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -578,
+          "right": 670
+        },
+        "box": {
+          "left": 462,
+          "right": 670,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -192,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "768-header-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 654,
+      "actual": {
+        "left": 16,
+        "right": 670,
+        "main": {
+          "left": 16,
+          "right": 752
+        },
+        "frozenLeft": 16,
+        "frozenRight": 752,
+        "inner": {
+          "left": -1024,
+          "right": 670
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 654
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 374
+        },
+        "box": {
+          "left": 166,
+          "right": 374,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 374
+        },
+        "box": {
+          "left": 166,
+          "right": 374,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 276,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 276
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -956,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -956,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-colgroup-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 276,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -1024,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 276
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 194,
+      "actual": {
+        "left": 98,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 292
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 194
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 374
+        },
+        "box": {
+          "left": 166,
+          "right": 374,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 374
+        },
+        "box": {
+          "left": 166,
+          "right": 374,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 276,
+      "actual": {
+        "left": 98,
+        "right": 374,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 276
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -956,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -956,
+          "right": 292
+        },
+        "box": {
+          "left": 84,
+          "right": 292,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -192,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "390-header-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 276,
+      "actual": {
+        "left": 16,
+        "right": 292,
+        "main": {
+          "left": 16,
+          "right": 374
+        },
+        "frozenLeft": 16,
+        "frozenRight": 374,
+        "inner": {
+          "left": -1024,
+          "right": 292
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 276
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 648,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 648
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 828
+        },
+        "box": {
+          "left": 620,
+          "right": 828,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 828
+        },
+        "box": {
+          "left": 620,
+          "right": 828,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 730,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 730
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -502,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -502,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-colgroup-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 730,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -1024,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 730
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-both",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 648,
+      "actual": {
+        "left": 98,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 746
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 648
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 828
+        },
+        "box": {
+          "left": 620,
+          "right": 828,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1346
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 828
+        },
+        "box": {
+          "left": 620,
+          "right": 828,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 2556
+        },
+        "box": {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-left",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 730,
+      "actual": {
+        "left": 98,
+        "right": 828,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": 98,
+          "right": 1516
+        },
+        "box": {
+          "left": 98,
+          "right": 1516,
+          "width": 1418
+        },
+        "visible": 730
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "loaded",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "loaded",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -502,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "reset",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "reset",
+      "id": "opaque/metric:7",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -502,
+          "right": 746
+        },
+        "box": {
+          "left": 538,
+          "right": 746,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "wide",
+      "id": "a",
+      "expected": 208,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -192,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 224,
+          "width": 208
+        },
+        "visible": 208
+      },
+      "verdict": "PASS"
+    },
+    {
+      "label": "844-header-right",
+      "phase": "wide",
+      "id": "opaque/metric:7",
+      "expected": 730,
+      "actual": {
+        "left": 16,
+        "right": 746,
+        "main": {
+          "left": 16,
+          "right": 828
+        },
+        "frozenLeft": 16,
+        "frozenRight": 828,
+        "inner": {
+          "left": -1024,
+          "right": 746
+        },
+        "box": {
+          "left": 16,
+          "right": 1434,
+          "width": 1418
+        },
+        "visible": 730
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "health": [],
+  "inputs": [
+    {
+      "label": "1280-colgroup-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-colgroup-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-colgroup-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-header-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-header-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "1280-header-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-colgroup-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-colgroup-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-colgroup-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-header-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-header-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "768-header-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-colgroup-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-colgroup-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-colgroup-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-header-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-header-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "390-header-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-colgroup-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-colgroup-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-colgroup-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-header-both",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-header-left",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    },
+    {
+      "label": "844-header-right",
+      "trusted": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ]
+    }
+  ],
+  "url": "http://127.0.0.1:13772/table-fixture",
+  "chromiumSandbox": true,
+  "checkpoints": {
+    "table": {
+      "sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+      "version": "0.3.1"
+    },
+    "property-select": {
+      "sha": "93139049d0a178dcf4b0a0e3e5f1cbf1f0619fd1",
+      "version": "0.2.6"
+    }
+  },
+  "browser": "151.0.7922.34",
+  "verdict": "PASS"
+}

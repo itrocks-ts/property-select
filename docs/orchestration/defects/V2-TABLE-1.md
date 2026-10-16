@@ -2,7 +2,8 @@
 
 ## Status and owner
 
-Open, blocking V2-TABLE (`NEEDS_FIX`). Owner: `@itrocks/table`.
+Corrected by FIX-V2-TABLE-1 author; awaiting independent RETEST-V2-TABLE-1.
+V2-TABLE remains blocking (`NEEDS_FIX`). Owner: `@itrocks/table`.
 Tested commit: `c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97`, version `0.3.0`.
 Requirements: TAB-02/TAB-04, DEP-07 and PORT-04 generic addition stage.
 No product code was changed during independent verification.
@@ -46,3 +47,11 @@ Correct both left and right frozen boundaries, including column-group and header
 addition/reset/reorder and columns wider than the available inner width. Keep header deletion, sorting, asynchronous
 replacement and focus unchanged. Add a meaningful regression and pass the full independent driver before independent
 retest. FIX-V2-TABLE-1 and RETEST-V2-TABLE-1 are scheduled before L2-LIST; only the new verifier can clear this gate.
+
+## Correction checkpoint
+
+Table `7537cf58863ad0efc5c3edb2b15a0537d54568df`, version `0.3.1`, passes the original minimal reproducer and both
+complete browser drivers in the correction author's run. Rendered cells define sticky bounds, and refresh removes
+previous freeze rules before measuring natural offsets. Wide-column reveal minimises movement in both directions.
+See [correction report](../reports/FIX-V2-TABLE-1.md) and [fresh proof](../evidence/FIX-V2-TABLE-1/).
+The historical failed evidence remains intact. This author result does not close the independent gate.

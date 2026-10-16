@@ -10,7 +10,8 @@ const require = createRequire(import.meta.url)
 const runtime = process.env.PS_PLAYWRIGHT_MODULE
 	|| '/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'
 const { chromium } = require(runtime)
-const output = resolve('node_modules/@itrocks/property-select/docs/orchestration/evidence/V2-TABLE')
+const output = resolve(process.env.PS_TABLE_OUTPUT
+	|| 'node_modules/@itrocks/property-select/docs/orchestration/evidence/V2-TABLE')
 const url = process.env.PS_TABLE_URL || 'http://127.0.0.1:13762/table-fixture'
 const checkpoint = owner => ({
 	sha: execFileSync('git', ['-C', `node_modules/@itrocks/${owner}`, 'rev-parse', 'HEAD'], { encoding: 'utf8' }).trim(),

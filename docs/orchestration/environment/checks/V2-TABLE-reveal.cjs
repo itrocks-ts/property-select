@@ -3,7 +3,8 @@ const { chromium } = require(
 )
 const { mkdirSync, writeFileSync } = require('node:fs')
 const { resolve } = require('node:path')
-const output = resolve('node_modules/@itrocks/property-select/docs/orchestration/evidence/V2-TABLE')
+const output = resolve(process.env.PS_TABLE_OUTPUT
+	|| 'node_modules/@itrocks/property-select/docs/orchestration/evidence/V2-TABLE')
 const url = process.env.PS_TABLE_URL || 'http://127.0.0.1:13762/table-fixture'
 
 async function main()
