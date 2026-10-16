@@ -1,0 +1,51 @@
+[
+  {
+    "command": "npm --prefix node_modules/@itrocks/fastify-file-session-store run build",
+    "exit": 0,
+    "output": "fastify-file-session-store-build.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/fastify run build",
+    "exit": 0,
+    "output": "fastify-build.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/property-select run build",
+    "exit": 0,
+    "output": "property-select-build.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/list run build",
+    "exit": 0,
+    "output": "list-build.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/framework run build",
+    "exit": 0,
+    "output": "framework-build.txt"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 1,
+    "output": "results.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-contract.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "contracts.json"
+  },
+  {
+    "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-revoke.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 1,
+    "output": "revocation.json"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/property-select test",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "selector-test.txt"
+  }
+]

@@ -1,0 +1,370 @@
+{
+  "assertions": [
+    {
+      "name": "isolated app has no ownership reservation",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "isolated standalone has no ownership reservation",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "maximal branches 1280x720",
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "recent ancestor first 1280x720",
+      "actual": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "no duplicate suggestion 1280x720",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "exact divergent shortcut 1280x720",
+      "actual": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears search 1280x720",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration retains recent 1280x720",
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed branch truncated 1280x720",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone 1280x720",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate keeps exact DOM columns 1280x720",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected plural keeps recents 1280x720",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves query 1280x720",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload exact branch 1280x720",
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 1280x720",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recent 1280x720",
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "two browser contexts isolate queries",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "canonical query variant",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "different route is empty",
+      "status": "PASS"
+    },
+    {
+      "name": "identifying segment is empty",
+      "status": "PASS"
+    },
+    {
+      "name": "newer write first",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "late old write conflicts",
+      "actual": 409,
+      "expected": 409,
+      "status": "PASS"
+    },
+    {
+      "name": "late response cannot overwrite",
+      "actual": "new",
+      "expected": "new",
+      "status": "PASS"
+    },
+    {
+      "name": "remove is committed",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "tombstone rejects in-flight write",
+      "actual": 409,
+      "expected": 409,
+      "status": "PASS"
+    },
+    {
+      "name": "tombstone has no state",
+      "status": "PASS"
+    },
+    {
+      "name": "recreate using tombstone revision",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "concurrent actual state/list requests",
+      "actual": [
+        200,
+        200,
+        204
+      ],
+      "expected": [
+        200,
+        200,
+        204
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "delayed response autosave finishes",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps first selector",
+      "actual": "race-primary",
+      "expected": "race-primary",
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps second selector",
+      "actual": "race-alternate",
+      "expected": "race-alternate",
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps actual list columns",
+      "actual": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "restart keeps nested delayed autosave",
+      "actual": "autosave",
+      "expected": "autosave",
+      "status": "PASS"
+    },
+    {
+      "name": "restart preserves other browser session",
+      "actual": "second-session",
+      "expected": "second-session",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke rejects acquired request",
+      "actual": 500,
+      "expected": 410,
+      "status": "FAIL"
+    }
+  ],
+  "errors": [
+    "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/V4",
+      "output": ""
+    },
+    {
+      "action": "standalone",
+      "directory": "/tmp/property-select/V4",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/V4",
+      "output": "PASS: owned app 2474323 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/V4",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/V4",
+      "output": "PASS: owned app 2474688 stopped\n"
+    },
+    {
+      "action": "stop-standalone",
+      "directory": "/tmp/property-select/V4",
+      "output": "PASS: owned standalone 2474341 stopped\n"
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "standalone-before-1280x720",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "standalone-after-1280x720",
+      "url": "http://127.0.0.1:13912/state-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-before-1280x720",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    },
+    {
+      "name": "integrated-after-1280x720",
+      "url": "http://127.0.0.1:13911/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard"
+    }
+  ],
+  "inputs": [],
+  "seed": "synthetic invoice fixture",
+  "urls": [
+    "http://127.0.0.1:13911/property-select-invoice",
+    "http://127.0.0.1:13912/state-fixture"
+  ],
+  "database": "127.0.0.1:13316; existing synthetic recipe",
+  "browser": "151.0.7922.34",
+  "status": "FAIL",
+  "failure": {
+    "message": "revoke rejects acquired request\n\n500 !== 410\n",
+    "stack": "AssertionError [ERR_ASSERTION]: revoke rejects acquired request\n\n500 !== 410\n\n    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4.mjs:29:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4.mjs:229:5"
+  }
+}

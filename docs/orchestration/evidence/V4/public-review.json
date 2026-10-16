@@ -1,0 +1,130 @@
+{
+  "owners": {
+    "property-select": {
+      "version": "0.5.1",
+      "exports": [
+        {
+          "path": "cjs/property-select.js",
+          "sha256": "6845cf0043715e09a15595db3ed7f83d9ee348c18aba3c5cd62bffe93a97ce8d"
+        },
+        {
+          "path": "front/property-select.css",
+          "sha256": "c90fda4b0a5518f678a0c88ad8063f5b9068fc379a2c01d2cf8d65d8199e4272"
+        },
+        {
+          "path": "front/property-select.d.ts",
+          "sha256": "8c87cb45fd6386d643ebad582ca44cbf02a9ecd4aad043e69cdfd07e594bb69c"
+        },
+        {
+          "path": "front/property-select.html",
+          "sha256": "0a512968c78bcea8a3201025ad4e115c1595cda1df7ea61dba66fc0a420f28b5"
+        },
+        {
+          "path": "front/property-select.js",
+          "sha256": "6797451c4972663e18bbf47f9e18028da888e69523e3c8f2d12165875f7c25e1"
+        },
+        {
+          "path": "property-select.d.ts",
+          "sha256": "79d490f4e974c281557419834cd8ae5edd5ef3e30ad2a515aaa5d787d1d8a7e5"
+        },
+        {
+          "path": "property-select.js",
+          "sha256": "cb029fdd061f741d34bc4649970dd5398607b5857ba3720fa64f8640945c0e5d"
+        }
+      ],
+      "packFiles": 1438,
+      "status": " M package.json\n?? docs/orchestration/environment/checks/V4-contract.mjs\n?? docs/orchestration/environment/checks/V4-fixture.cjs\n?? docs/orchestration/environment/checks/V4-revoke.mjs\n?? docs/orchestration/environment/checks/V4.mjs\n?? docs/orchestration/evidence/V4/\n"
+    },
+    "list": {
+      "version": "0.10.0",
+      "exports": [
+        {
+          "path": "cjs/list.js",
+          "sha256": "bdf3df3e2183b9ad68507e31465b935d3be4e321485013e6ab4b7f6abbcea3ec"
+        },
+        {
+          "path": "cjs/projection.js",
+          "sha256": "9fdc354fbe386cfc75889b5b5bb7ba7f5ce9023d7d178785dc430a3112f6d9af"
+        },
+        {
+          "path": "cjs/selector-state.js",
+          "sha256": "c5e442b9f0c8e99984f28a7bd10e7f225626481b6b31e4cb7e83c935b59c2568"
+        },
+        {
+          "path": "property-select.js",
+          "sha256": "1bb9e5b2319a618a9b349b8c7ab485b9170af4958991c3dea9b217aab898505c"
+        },
+        {
+          "path": "selector-state.js",
+          "sha256": "83c26018f6686beeb384eeaa36e149335cee440c671d35b35530a95d2436a2c1"
+        }
+      ],
+      "packFiles": 47,
+      "status": ""
+    },
+    "framework": {
+      "version": "0.11.0",
+      "exports": [
+        {
+          "path": "cjs/framework.js",
+          "sha256": "bff174ec59a80c1a3e5e14c1f21ea96ff39d49d0c02ed5b7948ba25924d001d9"
+        },
+        {
+          "path": "cjs/property-select-actions.js",
+          "sha256": "8f0981ff2fcf891f56c1c6194d005f1d643d81a2b19c8f7b43f53a5821f9ab33"
+        },
+        {
+          "path": "cjs/property-select.js",
+          "sha256": "24a19df930bd379cc7fb7cc13b15d974c482a458c9a405be032af4a392de3131"
+        },
+        {
+          "path": "cjs/sql-projection.js",
+          "sha256": "54b7176c86ce1a5ed277e03e0a7d2886868c039f0ba680b27a2feebfbf33fb45"
+        },
+        {
+          "path": "cjs/sql-relationships.js",
+          "sha256": "5046560818fb195647b2af9fcbab43a071968fe085f94b1895047b8643d96387"
+        },
+        {
+          "path": "property-select-list.js",
+          "sha256": "041ce7493c32a79eb7e479e93692bc9f2be90a5e4ec4cf6414a2ea30edd698f3"
+        },
+        {
+          "path": "property-select-metadata.js",
+          "sha256": "fee51c525c477fa5721266fc78312ffbe5b9b1f23f50633baa4b25119231dc1e"
+        }
+      ],
+      "packFiles": 44,
+      "status": ""
+    },
+    "fastify": {
+      "version": "0.4.0",
+      "exports": [
+        {
+          "path": "cjs/fastify.js",
+          "sha256": "14a145a7d602aab107bb694e9c81825f7306d92e5aa8b37cdbd20ee207fe6792"
+        }
+      ],
+      "packFiles": 5,
+      "status": ""
+    },
+    "fastify-file-session-store": {
+      "version": "0.4.0",
+      "exports": [
+        {
+          "path": "cjs/fastify-file-session-store.js",
+          "sha256": "c440c86ef5755a16b611a3cc49479484f194abfd526ead1233ba3be22e895efe"
+        }
+      ],
+      "packFiles": 5,
+      "status": ""
+    }
+  },
+  "solid": {
+    "selector": "Navigation, state queue and suggestions stay host-neutral; no framework/list imports.",
+    "list": "Canonical routes, authorised HTTP state and narrow StateStore adapter.",
+    "framework": "Binds public ports.",
+    "fastify": "Request bridge and response lifecycle.",
+    "fileStore": "Atomic durable whole-session transactions; stale generation rejects correctly, response integration misclassifies error."
+  }
+}

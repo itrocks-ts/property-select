@@ -1,0 +1,29 @@
+{
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "config": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  },
+  "owners": {
+    "property-select": {
+      "sha": "0dd1a69163c37632e5433dd471365ce57feac0d1",
+      "version": "0.5.0"
+    },
+    "list": {
+      "sha": "dcc099e285f83ea594a109c4f33b06664879f2e0",
+      "version": "0.10.0"
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0"
+    },
+    "fastify": {
+      "sha": "8ec18b58550a45da1169506f11c3468d2143c0c4",
+      "version": "0.4.0"
+    },
+    "fastify-file-session-store": {
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0"
+    }
+  }
+}

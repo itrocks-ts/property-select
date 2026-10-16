@@ -1,5 +1,25 @@
 # Phase 1 validation matrix
 
+## V4 independent session observations
+
+Gate: **NEEDS_FIX**, selector base `0dd1a69163c37632e5433dd471365ce57feac0d1` / 0.5.0, tracking 0.5.1.
+[Report](reports/V4.md), [34 PASS / 1 FAIL browser observations](evidence/V4/results.json),
+[14 independent public-port assertions](evidence/V4/contracts.json),
+[production-action revoke/expiry reproduction](evidence/V4/revocation.json).
+
+- T04/T14 and REC-01–06 current desktop observations pass on both interfaces; independent defaults/labels/outcomes pass.
+- T15 click portion: actual new add, duplicate DOM order and rejected plural recents pass at 1280 × 720.
+- T16/PORT-07 current portion: two browser contexts, canonical query/route/id separation, branch/current/query/recents
+  reload, two state keys/list columns/delayed nested autosave after actual process restart pass.
+- **FAIL PORT-08 / DEP-05 / V4-01**: acquired production state PUT returns 500 instead of documented 410 after revoke
+  or expiry. No obsolete state is resurrected; new old-generation requests return 410 and new sessions write normally.
+  The response mismatch gives the browser incorrect Retry guidance. [Defect](defects/V4-01.md) remains open.
+- **NOT_RUN**: remaining three viewport loops, native scroll restore, integrated configuration/catalogue change,
+  restored search, visible persistence failure/retry and integrated browser expiry/reload. Full T04/T14–T17,
+  PORT-05/07/08/09 and META-04 acceptance remains incomplete. Actual drag portions remain V5.
+
+`FIX-V4-1` and distinct `RETEST-V4-1` precede L5. Historical author observations below do not clear this failure.
+
 ## RETEST-V3-1 independent closure
 
 **PASS**, corrective selector `216b150a0ec823a4397835fe0fdc2df7822f2415` / `0.4.5`, rebuilt tracking `0.4.6`.
@@ -1081,7 +1101,7 @@ secret. Also remove/recreate a selector key while an old write is pending; its t
 No lost namespace, skipped nested-state save, stale overwrite or expired-state resurrection. Use two store
 instances with identical synthetic session ids to prove cache isolation; retain the two-user browser check.
 
-Proof: `evidence/<gate>/PORT-08.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V4 reproduction](evidence/V4/revocation.json) and [report](reports/V4.md). Current verdict: **FAIL / V4-01**.
 ### PORT-09: Storage and preview failures
 
 Expected: Unavailable state store preserves live context and signals error; failed/slow data keeps gesture

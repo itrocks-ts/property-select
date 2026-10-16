@@ -48,6 +48,8 @@
     "RETEST-V3-1",
     "L4",
     "V4",
+    "FIX-V4-1",
+    "RETEST-V4-1",
     "L5",
     "V5",
     "L6",
@@ -1666,7 +1668,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Independent real-request and durable-state checks must challenge session-wide races and revocation.",
@@ -1681,6 +1683,113 @@
         "DEP-05",
         "VAL-04",
         "VAL-06"
+      ],
+      "validation": "34 PASS / 1 FAIL browser assertions; 14 independent contracts PASS; production-action revoke/expiry reproducer 8 PASS / 2 FAIL. V4-01: autosave replaces documented HTTP 410 with 500. No resurrection observed. Remaining V4 scenarios NOT_RUN; FIX-V4-1 and independent RETEST-V4-1 required.",
+      "evidence": [
+        "evidence/V4/results.json",
+        "evidence/V4/contracts.json",
+        "evidence/V4/revocation.json",
+        "evidence/V4/public-review.json",
+        "evidence/V4/commands.json"
+      ],
+      "defects": [
+        "defects/V4-01.md"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "sha": "0dd1a69163c37632e5433dd471365ce57feac0d1",
+          "version": "0.5.0"
+        },
+        "@itrocks/list": {
+          "sha": "dcc099e285f83ea594a109c4f33b06664879f2e0",
+          "version": "0.10.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        },
+        "@itrocks/fastify": {
+          "sha": "8ec18b58550a45da1169506f11c3468d2143c0c4",
+          "version": "0.4.0"
+        },
+        "@itrocks/fastify-file-session-store": {
+          "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+          "version": "0.4.0"
+        }
+      }
+    },
+    {
+      "id": "FIX-V4-1",
+      "title": "Preserve ended-session responses through autosave",
+      "card": "tasks/FIX-V4-1.md",
+      "dependencies": [
+        "V4"
+      ],
+      "packages": [
+        "@itrocks/fastify",
+        "@itrocks/fastify-file-session-store",
+        "@itrocks/list",
+        "@itrocks/framework",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/fastify",
+        "node_modules/@itrocks/fastify-file-session-store",
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/framework",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Session generations, response autosave and durable HTTP error handling require cross-owner verification.",
+      "report": "reports/FIX-V4-1.md",
+      "requirements": [
+        "T04",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "STA-01",
+        "STA-03",
+        "DEP-05",
+        "PORT-08",
+        "PORT-09",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-V4-1",
+      "title": "Independently finish session and suggestions acceptance",
+      "card": "tasks/RETEST-V4-1.md",
+      "dependencies": [
+        "FIX-V4-1"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6-astra",
+      "model_reasoning_effort": "high",
+      "model_justification": "Session generations, response autosave and durable HTTP error handling require cross-owner verification.",
+      "report": "reports/RETEST-V4-1.md",
+      "requirements": [
+        "T04",
+        "T14",
+        "T15",
+        "T16",
+        "T17",
+        "STA-01",
+        "STA-03",
+        "DEP-05",
+        "PORT-08",
+        "PORT-09",
+        "VAL-07"
       ]
     },
     {
@@ -1688,7 +1797,7 @@
       "title": "Desktop external drag and rollback",
       "card": "tasks/L5.md",
       "dependencies": [
-        "V4"
+        "RETEST-V4-1"
       ],
       "packages": [
         "@itrocks/property-select",
