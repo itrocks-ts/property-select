@@ -68,7 +68,7 @@ try {
 	check('Automatic search never requests native Date context', results.requests.some(url =>
 		new URL(url).pathname === '/property-select/context/json' && new URL(url).searchParams.get('path') === 'issuedAt'),
 		false)
-	const root = await context.request.get(`${origin}/property-select/context/json?root=invoice&path=`)
+	const root = await context.request.get(`${origin}/property-select/context/json?root=%2Fproperty-select-invoice&path=`)
 	const metadata = await root.json()
 	const date = metadata.properties.find(property => property.path === 'issuedAt')
 	check('Root Date is terminal', date.kind, 'terminal')
@@ -78,7 +78,7 @@ try {
 		['resolve', 'issuedAt.getTime', 400], ['resolve', 'issuedAt', 200]
 	]) {
 		const response = await context.request.get(
-			`${origin}/property-select/${operation}/json?root=invoice&path=${path}`)
+			`${origin}/property-select/${operation}/json?root=%2Fproperty-select-invoice&path=${path}`)
 		check(`${operation} ${path} status`, response.status(), expected)
 		check(`${operation} ${path} body`, await response.json(), expected === 200 ? date : { error: 'invalid-path' })
 	}

@@ -1,5 +1,5 @@
 const { File } = require('@itrocks/class-file')
-const { config } = require('@itrocks/config')
+const { routes } = require('@itrocks/route')
 const fixture = require('../list/fixture.cjs')
 
 module.exports.ready = fixture.ready.then(() => {
@@ -10,6 +10,5 @@ module.exports.ready = fixture.ready.then(() => {
 			if (typeof type === 'function') File(file)(type)
 		}
 	}
-	const { MetadataInvoice } = require(`${directory}/metadata.js`)
-	config.propertySelect.roots.scalar = { type: MetadataInvoice, version: 'retest-l3-1' }
+	routes.add('/metadata-invoice', '/node_modules/@itrocks/framework/test/fixtures/metadata:MetadataInvoice')
 })

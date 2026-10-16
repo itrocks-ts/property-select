@@ -79,17 +79,17 @@ try {
 	command('app')
 	started = true
 	await ready()
-	const root = await metadata('context', 'invoice', '')
+	const root = await metadata('context', '/property-select-invoice', '')
 	const date = root.properties.find(property => property.path === 'issuedAt')
 	check('Invoice issuedAt is terminal', date.kind, 'terminal')
 	check('Date descriptor has no target or relation', ['relation', 'target'].some(key => key in date), false)
-	check('Date resolves without losing its descriptor', await metadata('resolve', 'invoice', 'issuedAt'), date)
+	check('Date resolves without losing its descriptor', await metadata('resolve', '/property-select-invoice', 'issuedAt'), date)
 	for (const method of ['getTime', 'toISOString']) {
-		await metadata('resolve', 'invoice', `issuedAt.${method}`, 400)
-		await metadata('context', 'invoice', `issuedAt.${method}`, 400)
+		await metadata('resolve', '/property-select-invoice', `issuedAt.${method}`, 400)
+		await metadata('context', '/property-select-invoice', `issuedAt.${method}`, 400)
 	}
-	await metadata('context', 'invoice', 'issuedAt', 400)
-	const scalar = await metadata('context', 'scalar', '')
+	await metadata('context', '/property-select-invoice', 'issuedAt', 400)
+	const scalar = await metadata('context', '/metadata-invoice', '')
 	const fixtureDirectory = resolve('node_modules/@itrocks/framework/test/fixtures')
 	for (const name of ['address', 'city', 'invoice', 'line', 'metadata', 'tag']) {
 		const file = `${fixtureDirectory}/${name}.js`
@@ -101,9 +101,9 @@ try {
 		const description = scalar.properties.find(property => property.path === name)
 		check(`${name} is a selectable HTTP terminal`, description.kind, 'terminal')
 		check(`${name} has no domain target`, ['relation', 'target'].some(key => key in description), false)
-		check(`${name} HTTP resolve matches enumeration`, await metadata('resolve', 'scalar', name), description)
-		await metadata('context', 'scalar', name, 400)
-		await metadata('resolve', 'scalar', `${name}.getTime`, 400, collection ? 'unknown-target' : 'invalid-path')
+		check(`${name} HTTP resolve matches enumeration`, await metadata('resolve', '/metadata-invoice', name), description)
+		await metadata('context', '/metadata-invoice', name, 400)
+		await metadata('resolve', '/metadata-invoice', `${name}.getTime`, 400, collection ? 'unknown-target' : 'invalid-path')
 		const resolved = resolvePropertyPath(MetadataInvoice, name)
 		check(`${name} path multiplicity`, resolved.targetMultiplicity, collection ? 'many' : 'one')
 		check(`${name} has no reflection relation`, new ReflectProperty(MetadataInvoice, name).relation, undefined)
@@ -116,17 +116,17 @@ try {
 	for (const [path, cardinality, reverse] of [
 		['lines', 'one-to-many', 'lines.invoice'], ['tags', 'many-to-many', 'tags.invoices']
 	]) {
-		const relation = await metadata('resolve', 'invoice', path)
-		const back = await metadata('resolve', 'invoice', reverse)
+		const relation = await metadata('resolve', '/property-select-invoice', path)
+		const back = await metadata('resolve', '/property-select-invoice', reverse)
 		check(`${path} retains domain relation`, relation.kind, 'relation')
 		check(`${path} cardinality`, relation.relation.cardinality, cardinality)
 		check(`${path} explicit reciprocal inverse`, [relation.relation.inverse, back.relation.inverse],
 			[back.relation.id, relation.relation.id])
-		check(`${path} target context remains navigable`, (await metadata('context', 'invoice', path)).type,
+		check(`${path} target context remains navigable`, (await metadata('context', '/property-select-invoice', path)).type,
 			relation.target)
 	}
 	for (const path of ['customer.address.city.country.name', 'deliveryAddress.city.country.name']) {
-		check(`Domain complete path ${path}`, (await metadata('resolve', 'invoice', path)).path, path)
+		check(`Domain complete path ${path}`, (await metadata('resolve', '/property-select-invoice', path)).path, path)
 	}
 	check('Nullable issuedAt multiplicity', resolvePropertyPath(models.Invoice, 'issuedAt').targetMultiplicity, 'one')
 	for (const [path, multiplicity] of [

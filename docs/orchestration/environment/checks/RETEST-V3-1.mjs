@@ -282,7 +282,7 @@ try {
 			return response.json()
 		}
 	}
-	const selector = new PropertySelect({ root: 'invoice', metadata, search: { maxDepth: 5 } })
+	const selector = new PropertySelect({ root: '/property-select-invoice', metadata, search: { maxDepth: 5 } })
 	await selector.mount()
 	selector.setQuery('name')
 	while (selector.search.status === 'loading') await pause(20)
@@ -293,11 +293,11 @@ try {
 	verify('Real distinct address paths survive', [
 		'customer.address.city.country.name', 'deliveryAddress.city.country.name'
 	].every(path => selector.search.results.some(r => r.property.path === path)), true)
-	const root = (await json('/property-select/context/json?root=invoice&path=')).body
+	const root = (await json('/property-select/context/json?root=%2Fproperty-select-invoice&path=')).body
 	verify('Real Date terminal descriptor', root.properties.find(p => p.name === 'issuedAt').kind, 'terminal')
 	verify('Real N-N cardinality', root.properties.find(p => p.name === 'tags').relation.cardinality, 'many-to-many')
 	verify('Real 1-N cardinality', root.properties.find(p => p.name === 'lines').relation.cardinality, 'one-to-many')
-	const lines = (await json('/property-select/context/json?root=invoice&path=lines')).body
+	const lines = (await json('/property-select/context/json?root=%2Fproperty-select-invoice&path=lines')).body
 	verify('Real N-1 cardinality', lines.properties.find(p => p.name === 'invoice').relation.cardinality, 'many-to-one')
 	await selector.navigate('lines')
 	selector.setQuery('number')
@@ -307,7 +307,7 @@ try {
 	const lineProvider = {
 		async context(root, path, signal)
 		{
-			const response = await metadata.context('invoice', `lines${path ? `.${path}` : ''}`, signal)
+			const response = await metadata.context('/property-select-invoice', `lines${path ? `.${path}` : ''}`, signal)
 			return { ...response, path, properties: response.properties.map(property => ({
 				...property, path: property.path.slice(6)
 			})) }
@@ -322,14 +322,14 @@ try {
 		lineSelector.search.results.some(r => r.property.path === 'invoice.lines.label'), true)
 	lineSelector.dispose()
 	for (const operation of ['context', 'resolve']) verify(`Restricted ${operation} denies full path`,
-		(await json(`/property-select/${operation}/json?root=invoice&path=customer.address&catalogue=restricted`)).status,
+		(await json(`/property-select/${operation}/json?root=%2Fproperty-select-invoice&path=customer.address&catalogue=restricted`)).status,
 		403)
-	const restricted = (await json('/property-select/context/json?root=invoice&path=customer&catalogue=restricted')).body
+	const restricted = (await json('/property-select/context/json?root=%2Fproperty-select-invoice&path=customer&catalogue=restricted')).body
 	verify('Restricted enumeration hides forbidden child', restricted.properties.some(p => p.name === 'address'), false)
 	verify('Date method explicitly invalid',
-		(await json('/property-select/resolve/json?root=invoice&path=issuedAt.getTime')).status, 400)
+		(await json('/property-select/resolve/json?root=%2Fproperty-select-invoice&path=issuedAt.getTime')).status, 400)
 	verify('Ambiguous target explicitly invalid',
-		(await json('/property-select/context/json?root=scalar&path=ambiguous')).status, 400)
+		(await json('/property-select/context/json?root=%2Fmetadata-invoice&path=ambiguous')).status, 400)
 	const sqlAfter = (await json('/property-select-observation/probe/json')).body
 	verify('Metadata and permission itinerary reads zero business records', sqlAfter, sqlBefore)
 	selector.dispose()

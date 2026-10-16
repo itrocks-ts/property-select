@@ -1,5 +1,4 @@
 const { Action } = require('@itrocks/action')
-const { config } = require('@itrocks/config')
 const { routes } = require('@itrocks/route')
 const { propertySelectDependsOn } = require('@itrocks/framework/property-select')
 const list = require('../list/fixture.cjs')
@@ -20,8 +19,8 @@ class SessionFixture extends Action
 module.exports = { SessionFixture }
 module.exports.ready = (async () => {
 	await list.ready
-	config.propertySelect.roots.invoice.advice = ['customer.address', 'deliveryAddress', 'tags']
-	propertySelectDependsOn({ authorise: (_request, _root, path) =>
+	propertySelectDependsOn({ advice: () => ['customer.address', 'deliveryAddress', 'tags'],
+		authorise: (_request, _root, path) =>
 		!invalid || (path !== 'customer.address' && !path.startsWith('customer.address.')) })
 	const fixture = '/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs'
 	const listFixture = '/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs'

@@ -210,10 +210,10 @@ try {
 	const beforeMeta = (await get('/property-select-observation/probe/json')).body.length
 	await api.request.post(app + '/property-select-test/session/json', { data: { operation: 'invalidate' } })
 	for (const operation of ['context', 'resolve']) {
-		const denied = await get(`/property-select/${operation}/json?root=invoice&path=customer.address.city`)
+		const denied = await get(`/property-select/${operation}/json?root=%2Fproperty-select-invoice&path=customer.address.city`)
 		check('Full path authorisation ' + operation, denied.status, 403)
 	}
-	const limited = await get('/property-select/context/json?root=invoice&path=customer')
+	const limited = await get('/property-select/context/json?root=%2Fproperty-select-invoice&path=customer')
 	check('Enumeration hides forbidden ancestry', limited.body.properties.some(p => p.name === 'address'), false)
 	const deniedColumn = await get('/property-select-invoice/list?column=customer.address.city&rowIds=1,3,5')
 	check('Column projection refuses forbidden paths with its documented error shape',

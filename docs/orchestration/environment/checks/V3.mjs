@@ -269,21 +269,21 @@ try {
 	check('Integrated Date remains terminal', tracedPaths.some(p => p === 'issuedAt' || p.startsWith('issuedAt.')), false)
 	const sqlAfter = await (await fetch(`${app}/property-select-observation/probe/json`)).json()
 	check('Metadata search executes zero business SQL', sqlAfter.length, sqlBefore.length)
-	const rootMetadata = await (await fetch(`${app}/property-select/context/json?root=invoice&path=`)).json()
+	const rootMetadata = await (await fetch(`${app}/property-select/context/json?root=%2Fproperty-select-invoice&path=`)).json()
 	check('META Date descriptor terminal', rootMetadata.properties.find(p => p.name === 'issuedAt').kind, 'terminal')
 	for (const operation of ['context', 'resolve']) {
-		const forbidden = await fetch(`${app}/property-select/${operation}/json?root=invoice`
+		const forbidden = await fetch(`${app}/property-select/${operation}/json?root=%2Fproperty-select-invoice`
 			+ '&path=customer.address&catalogue=restricted')
 		check(`META-02 ${operation} applies identical request permission`, forbidden.status, 403)
 	}
-	const restricted = await (await fetch(`${app}/property-select/context/json?root=invoice`
+	const restricted = await (await fetch(`${app}/property-select/context/json?root=%2Fproperty-select-invoice`
 		+ '&path=customer&catalogue=restricted')).json()
 	check('META-02 enumeration omits forbidden child', restricted.properties.some(p => p.name === 'address'), false)
-	const invalidDate = await fetch(`${app}/property-select/resolve/json?root=invoice&path=issuedAt.getTime`)
+	const invalidDate = await fetch(`${app}/property-select/resolve/json?root=%2Fproperty-select-invoice&path=issuedAt.getTime`)
 	check('META scalar Date method traversal HTTP 400', invalidDate.status, 400)
-	const ambiguous = await fetch(`${app}/property-select/context/json?root=scalar&path=ambiguous`)
+	const ambiguous = await fetch(`${app}/property-select/context/json?root=%2Fmetadata-invoice&path=ambiguous`)
 	check('META-03 ambiguous domain target explicitly rejects', ambiguous.status, 400)
-	const scalar = await (await fetch(`${app}/property-select/context/json?root=scalar&path=`)).json()
+	const scalar = await (await fetch(`${app}/property-select/context/json?root=%2Fmetadata-invoice&path=`)).json()
 	check('META-01 optional scalar metadata present', scalar.properties.some(p => p.name === 'optionalDate'), true)
 	let slowPath = 'customer'
 	await page.route('**/property-select/context/json?*', async route => {

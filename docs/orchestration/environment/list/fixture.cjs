@@ -1,6 +1,5 @@
 const { Action } = require('@itrocks/action')
 const { dataSource } = require('@itrocks/storage')
-const { config } = require('@itrocks/config')
 const { List } = require('@itrocks/list')
 const { List: ListProperties } = require('@itrocks/list-properties')
 const { Route, routes } = require('@itrocks/route')
@@ -34,7 +33,6 @@ module.exports.ready = (async () => {
 	for (const type of Object.values(models)) initStoreHtmlTransformers(type)
 	ListProperties('number', 'amount')(models.Invoice)
 	Route('/property-select-invoice')(models.Invoice)
-	config.propertySelect = { roots: { invoice: { type: models.Invoice, version: 'list-1' } } }
 	const destination = '/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs'
 	routes.add('/property-select-invoice', destination + ':Invoice')
 	routes.add('/property-select-invoice/list', destination + ':InvoiceList')
