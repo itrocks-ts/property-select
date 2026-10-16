@@ -1,0 +1,15 @@
+{
+  "property-select": {
+    "head": "e126a1e49c534e349365dbcf0f3d57d1d68cde7e",
+    "version": "0.7.3",
+    "manifestSha256": "bff2f9e6ca42dda4bfd9b29e706f5aed517fb3eefddca79394a0af79dad7ebe1"
+  },
+  "list": {
+    "head": "258f26c95f0b35df4176ba73225c35df6b56b449",
+    "version": "0.12.1",
+    "manifestSha256": "506714311fb13d0ba6a0e8dbe2e24c2bd2effa34b726e85f84e0ba39464cc8b7"
+  },
+  "sourceSha256": "b9e6a5724014fd425d0ad66a804c8a5713994f92a4b584ecf267072a05ee2483",
+  "testSha256": "f1a45412869a8c8eb0c58dc620cdbb5c8fd1f295db1680c4b8e0b9f116de4913",
+  "selectorCheckpoint": "FIX-L7-1 commit containing this evidence; working changes tested against recorded base"
+}

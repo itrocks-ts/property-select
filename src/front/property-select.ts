@@ -16,6 +16,7 @@ export class PropertySelectView
 	private readonly labels = new Map<string, string>()
 	private list?: HTMLElement
 	private mounting?: Promise<boolean>
+	private operationError = ''
 	private query?: HTMLInputElement
 	private root?: HTMLElement
 	private resize?: ResizeObserver
@@ -69,11 +70,12 @@ export class PropertySelectView
 		if (!button || !this.root?.contains(button))
 			return
 		event.stopPropagation()
-		this.status!.textContent = ''
 		if (button.dataset.action === 'retry') {
 			void this.selector.flushState().catch(() => {})
 			return
 		}
+		this.operationError = ''
+		this.status!.textContent = ''
 		if (button.dataset.action === 'clear') {
 			this.selector.setQuery('')
 			this.query!.focus()
@@ -86,7 +88,8 @@ export class PropertySelectView
 			: action === 'select' ? this.selector.select(path) : this.selector.activate(path)
 		void operation.catch(() => {
 			if (!this.disposed)
-				this.status!.textContent = this.selector.translate('Unable to complete the operation. Try again.')
+				this.status!.textContent = this.operationError
+					= this.selector.translate('Unable to complete the operation. Try again.')
 		})
 	}
 
@@ -123,9 +126,10 @@ export class PropertySelectView
 			this.query = this.root.querySelector('.ps-query') as HTMLInputElement
 			this.query.setAttribute('aria-label', this.selector.translate('Search properties'))
 			this.root.querySelector('.ps-clear')!.textContent = this.selector.translate('Clear')
-			this.query.addEventListener('input', () => this.selector.setQuery(this.query!.value), {
-				signal: this.abort.signal
-			})
+			this.query.addEventListener('input', () => {
+				this.operationError = ''
+				this.selector.setQuery(this.query!.value)
+			}, { signal: this.abort.signal })
 			this.root.setAttribute('aria-label', this.selector.translate('Property selection'))
 			this.breadcrumb.setAttribute('aria-label', this.selector.translate('Object path'))
 			this.list.setAttribute('aria-label', this.selector.translate('Properties'))
@@ -150,9 +154,16 @@ export class PropertySelectView
 			}, { signal: this.abort.signal })
 			this.unsubscribe = this.selector.subscribe(event => {
 				if (event.type === 'error') {
-					this.renderPersistence()
-					this.status!.textContent = event.error instanceof Error ? event.error.message
-						: this.selector.translate('Unable to complete the operation. Try again.')
+					// State saves have their own recoverable message and must not replace an operation error.
+					if (this.selector.persistenceError === undefined || event.error !== this.selector.persistenceError)
+						this.operationError = event.error instanceof Error ? event.error.message
+							: this.selector.translate('Unable to complete the operation. Try again.')
+					this.render()
+				}
+				if (event.type === 'begin' || event.type === 'select'
+					|| (event.type === 'outcome' && ['added', 'existing', 'moved'].includes(event.outcome.status))) {
+					this.operationError = ''
+					this.render()
 				}
 				if (event.type === 'change')
 					this.render()
@@ -203,11 +214,15 @@ export class PropertySelectView
 		const context = this.selector.context
 		const state = this.selector.snapshot()
 		const search = this.selector.search
+		if (this.query!.value !== state.query)
+			this.operationError = ''
 		this.query!.value = state.query
 		this.root!.dataset.searchStatus = search.status
 		this.root!.setAttribute('aria-busy', String(this.selector.status === 'loading' || search.status === 'loading'))
-		if (this.selector.status === 'loading')
+		if (this.selector.status === 'loading') {
+			this.operationError = ''
 			this.status!.textContent = this.selector.translate('Loading properties…')
+		}
 		else if (this.selector.status === 'ready')
 			this.status!.textContent = ''
 		if (search.status !== 'idle') {
@@ -217,6 +232,8 @@ export class PropertySelectView
 			}
 			this.status!.textContent = this.selector.translate(messages[search.status])
 		}
+		if (this.operationError)
+			this.status!.textContent = this.operationError
 		if (!context)
 			return
 		if (!this.labels.has(context.path))

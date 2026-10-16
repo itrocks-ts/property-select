@@ -2257,7 +2257,7 @@
         "node_modules/@itrocks/list"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "At least L7 risk profile for cross-module dependency correctness and recoverable browser error lifecycle.",
@@ -2268,7 +2268,29 @@
         "QUA-01",
         "PORT-09",
         "VAL-07"
-      ]
+      ],
+      "validation": "PASS author: direct runtime dependencies declared; 3/3 final landscape failures remain visible, 16 status regressions, 290 L7 browser/load/lifecycle assertions, 182 header and 72 support assertions, 140 owner tests, five builds/public inventories and application build. Independent RETEST-L7-1 remains PENDING; historical L7 NEEDS_FIX retained.",
+      "evidence": [
+        "evidence/FIX-L7-1/architecture.json",
+        "evidence/FIX-L7-1/error-final/results.json",
+        "evidence/FIX-L7-1/status-final/results.json",
+        "evidence/FIX-L7-1/results.json",
+        "evidence/FIX-L7-1/header/results.json",
+        "evidence/FIX-L7-1/support/results.json",
+        "evidence/FIX-L7-1/build-final/results.json",
+        "evidence/FIX-L7-1/preservation.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "e126a1e49c534e349365dbcf0f3d57d1d68cde7e",
+          "version": "0.7.3",
+          "checkpoint": "FIX-L7-1 owner commit containing this manifest"
+        },
+        "@itrocks/list": {
+          "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+          "version": "0.12.1"
+        }
+      }
     },
     {
       "id": "RETEST-L7-1",

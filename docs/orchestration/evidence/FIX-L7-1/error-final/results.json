@@ -1,0 +1,91 @@
+{
+  "cases": [
+    {
+      "attempt": 0,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 947,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 950.5,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 1,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 998.7000000476837,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1007.7999999523163,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 2,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 1027.6000001430511,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1037.1000001430511,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    }
+  ],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

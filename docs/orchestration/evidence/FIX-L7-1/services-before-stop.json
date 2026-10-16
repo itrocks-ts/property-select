@@ -1,0 +1,48 @@
+{
+  "availability": {
+    "http://127.0.0.1:13981/property-select-invoice": 200,
+    "http://127.0.0.1:13981/country": 200,
+    "http://127.0.0.1:13982/": 200
+  },
+  "owners": {
+    "app": {
+      "args": [
+        "/usr/bin/node",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+        "--ps-environment=/tmp/property-select/FIX-L7-1-runtime",
+        "--ps-port=13981",
+        "--ps-token=8c3196e1-8af7-41ff-9c4f-0a579198d1ac"
+      ],
+      "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+      "executable": "/usr/bin/node",
+      "start": "152933171",
+      "state": "R",
+      "uid": 1000,
+      "directory": "/tmp/property-select/FIX-L7-1-runtime",
+      "name": "app",
+      "pid": 2573067,
+      "port": 13981,
+      "token": "8c3196e1-8af7-41ff-9c4f-0a579198d1ac"
+    },
+    "standalone": {
+      "args": [
+        "/usr/bin/node",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+        "--ps-environment=/tmp/property-select/FIX-L7-1-owned",
+        "--ps-port=13982",
+        "--ps-token=9f27e2e5-505a-4b7b-ac27-9b2fe4063df4"
+      ],
+      "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+      "executable": "/usr/bin/node",
+      "start": "152931525",
+      "state": "R",
+      "uid": 1000,
+      "directory": "/tmp/property-select/FIX-L7-1-owned",
+      "name": "standalone",
+      "pid": 2572890,
+      "port": 13982,
+      "token": "9f27e2e5-505a-4b7b-ac27-9b2fe4063df4"
+    }
+  },
+  "mysql": "mysqld is alive"
+}

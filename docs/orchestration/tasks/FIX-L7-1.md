@@ -4,7 +4,8 @@
 
 Correct [L7-01](../defects/L7-01.md) and [L7-02](../defects/L7-02.md).
 Prerequisite: completed [L7 diagnostic report](../reports/L7.md), under the correction exception in
-[EXECUTION.md](../EXECUTION.md). Current status: `PENDING`.
+[EXECUTION.md](../EXECUTION.md). Current status: `DONE` / author PASS; see [report](../reports/FIX-L7-1.md).
+Independent RETEST-L7-1 remains required.
 Read application/owner instructions, handbook routes, owner READMEs, [COMMON.md](../COMMON.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),
 [ENVIRONMENT.md](../ENVIRONMENT.md), [VERIFY-ENVIRONMENT.md](../VERIFY-ENVIRONMENT.md) and the linked defects.

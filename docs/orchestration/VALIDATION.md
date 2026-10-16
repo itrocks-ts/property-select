@@ -1,5 +1,19 @@
 # Phase 1 validation matrix
 
+## FIX-L7-1 author correction
+
+**DONE / author PASS**, 16 October 2026. [Report](reports/FIX-L7-1.md), selector **0.7.3**, list **0.12.1**.
+[Public import audit](evidence/FIX-L7-1/architecture.json) passes with no missing dependency or cycle.
+[Three final landscape cases](evidence/FIX-L7-1/error-final/results.json) retain the failed-click error after scroll/save;
+[16 view status assertions](evidence/FIX-L7-1/status-final/results.json) cover non-empty branch/query/recents,
+storage failure/retry/recovery, clearing at selection retry, successful navigation and ordinary messages.
+The [L7 replay](evidence/FIX-L7-1/results.json) passes 290 assertions, with
+[182 header](evidence/FIX-L7-1/header/results.json) and [72 support](evidence/FIX-L7-1/support/results.json) assertions.
+[Five builds/public inventories, 140 owner tests and application build](evidence/FIX-L7-1/build-final/results.json) pass;
+[final selector tests](evidence/FIX-L7-1/selector-final-tests.txt) cover the last generic-error adjustment.
+No SQL contract changed, so independent SQL was not repeated; historical SQL proof remains unchanged.
+L7-01/L7-02 await distinct RETEST-L7-1; L7 retains NEEDS_FIX and V7 remains blocked on that independent gate.
+
 ## L7 regression and load verdict
 
 **NEEDS_FIX**, 16 October 2026. [Report](reports/L7.md), [browser observations](evidence/L7/results.json),
@@ -1253,8 +1267,8 @@ responsive, valid drop outcome independent of data completion and retry availabl
 
 Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **FAIL L7-02 visible consumer error**;
 storage and V5/V6 preview portions retain their PASS.
-L7 visible consumer failure: **FAIL [L7-02](defects/L7-02.md)**; landscape scroll/save clears the message.
-Separate correction and independent retest are required before final acceptance.
+L7 visible consumer failure: historical **FAIL [L7-02](defects/L7-02.md)**.
+[FIX-L7-1](reports/FIX-L7-1.md) author proof passes; independent RETEST-L7-1 remains required before acceptance.
 
 ### PORT-10: Public build and architecture
 
@@ -1263,6 +1277,7 @@ and zero server libraries in browser or host imports in selector.
 
 Proof: `evidence/<gate>/PORT-10.*` and `reports/<gate>.md`. Current verdict: **FAIL L7-01**;
 see [L7 import evidence](evidence/L7/architecture.json).
+[FIX-L7-1](reports/FIX-L7-1.md) author import proof passes; independent RETEST-L7-1 is pending.
 
 S02 owner observation: `PASS` for public CJS exports/declarations, package allowlist and neutral dependency direction.
 [Build](evidence/S02/storage-build.txt), [typecheck](evidence/S02/public-typecheck.txt),

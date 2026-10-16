@@ -1,0 +1,69 @@
+{
+  "owners": {
+    "property-select": {
+      "sha": "e126a1e49c534e349365dbcf0f3d57d1d68cde7e",
+      "status": "",
+      "version": "0.7.2"
+    },
+    "list": {
+      "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+      "status": "",
+      "version": "0.12.0"
+    },
+    "table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "status": "",
+      "version": "0.4.0"
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "status": "",
+      "version": "0.11.0"
+    },
+    "home": {
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "status": "",
+      "version": "0.7.0"
+    },
+    "storage": {
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "status": "",
+      "version": "0.3.0"
+    },
+    "mysql": {
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "status": "",
+      "version": "0.3.2"
+    },
+    "sql-build": {
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "status": "",
+      "version": "0.2.0"
+    },
+    "sql-join": {
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "status": "",
+      "version": "0.2.0"
+    },
+    "reflect": {
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "status": "",
+      "version": "0.3.1"
+    },
+    "reflect-path": {
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "status": "",
+      "version": "0.3.2"
+    }
+  },
+  "showtime": {
+    "sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt",
+    "absent": [
+      true,
+      true
+    ],
+    "configSha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  }
+}

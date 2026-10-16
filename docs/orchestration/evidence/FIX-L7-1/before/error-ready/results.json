@@ -1,0 +1,88 @@
+{
+  "cases": [
+    {
+      "attempt": 0,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "",
+        "trace": [
+          {
+            "time": 1252.1000001430511,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1256.1000001430511,
+            "value": "",
+            "old": [
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "FAIL"
+    },
+    {
+      "attempt": 1,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "",
+        "trace": [
+          {
+            "time": 1033.2000000476837,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1036.7999999523163,
+            "value": "",
+            "old": [
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "FAIL"
+    },
+    {
+      "attempt": 2,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "",
+        "trace": [
+          {
+            "time": 895,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 896.5,
+            "value": "",
+            "old": [
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "FAIL"
+    }
+  ],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "status": "FAIL"
+}
