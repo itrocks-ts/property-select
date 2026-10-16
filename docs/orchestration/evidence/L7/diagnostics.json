@@ -1,0 +1,22 @@
+[
+  {
+    "path": "/tmp/property-select/L7-diagnostic-2/results.json",
+    "sha256": "669fdcd239c777dda1d9909be265b4b8d21830918235e137cbd0f92d998f95b9"
+  },
+  {
+    "path": "/tmp/property-select/L7-diagnostic-3/results.json",
+    "sha256": "743c9d0c4955d035f721104b585ff2bb9eda570077f20b00ba0be090ee22dd8e"
+  },
+  {
+    "path": "/tmp/property-select/L7-diagnostic-4.json",
+    "sha256": "f05cad8b1d26ad28e73ff6508d63abaf2fbc61581873679d8520202daa712c1c"
+  },
+  {
+    "path": "/tmp/property-select/L7-sql/mysql-general.raw.log",
+    "sha256": "daacfdc0aecd49cf38388aa7dd1d6bac305af57c74ed55a54ee99ceb8e8150cc"
+  },
+  {
+    "path": "/tmp/property-select/L7-diagnostic-1.png",
+    "sha256": "c1de5c4c031b4c0f50bc790f3fca24c9b583bfaeb3e56dc9ba3976cc2ab5d864"
+  }
+]

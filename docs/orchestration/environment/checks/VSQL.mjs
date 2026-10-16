@@ -16,7 +16,8 @@ const { createDataSource, dataSource, DataSource, Identifiers, Limit, Sort } = r
 const { applyTransformer, HTML, IGNORE, OUTPUT, READ, SAVE, SQL, setPropertyTransformer }
 	= require('@itrocks/transformer')
 const { City, Country, Customer, Invalid, Invoice, Maintenance } = models
-const output = new URL('../../evidence/VSQL/', import.meta.url)
+const output = new URL(process.env.PS_VSQL_OUTPUT || '../../evidence/VSQL/', import.meta.url)
+const rawOutput = process.env.PS_VSQL_RAW || '/tmp/property-select/VSQL'
 const control = fileURLToPath(new URL('../control.mjs', import.meta.url))
 const journal = '/tmp/showtime-property-select-env/queries.log'
 const config = { engine: '@itrocks/mysql', host: '127.0.0.1', port: 13316,
@@ -378,8 +379,8 @@ try {
 finally {
 	await dao.close()
 	const trace = (await readFile(journal)).subarray(journalStart)
-	await mkdir('/tmp/property-select/VSQL', { recursive: true })
-	await writeFile('/tmp/property-select/VSQL/mysql-general.raw.log', trace)
+	await mkdir(rawOutput, { recursive: true })
+	await writeFile(rawOutput + '/mysql-general.raw.log', trace)
 	await writeFile(new URL('mysql-general.log', output),
 		trace.toString().split('\n').map(line => line.trimEnd()).join('\n'))
 	await run('SQL-14', async () => {

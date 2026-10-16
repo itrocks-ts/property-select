@@ -1,0 +1,14 @@
+{
+  "showtimeSha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+  "showtimeStatus": [
+    "AD audit-itrocks-dependencies.json",
+    "AD audit-itrocks-dependencies.txt",
+    " M config.yaml"
+  ],
+  "index": [
+    "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json",
+    "100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt"
+  ],
+  "auditAbsent": true,
+  "foreignConfigSha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+}

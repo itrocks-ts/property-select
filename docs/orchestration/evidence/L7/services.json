@@ -1,0 +1,41 @@
+[
+  {
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "environment": {
+      "PS_APP_PORT": "13981"
+    },
+    "exit": 0,
+    "stdout": "mysqld is alive\nPASS: framework list HTTP 200 with Recipe France\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-app"
+    ],
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/L7-owned"
+    },
+    "exit": 0,
+    "stdout": "PASS: owned app 2562963 stopped\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-standalone"
+    ],
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/L7-owned"
+    },
+    "exit": 0,
+    "stdout": "PASS: owned standalone 2562988 stopped\n",
+    "stderr": ""
+  }
+]

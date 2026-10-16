@@ -9,8 +9,10 @@ const require = createRequire(import.meta.url)
 const runtime = process.env.PS_PLAYWRIGHT_MODULE
 	|| '/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright'
 const { chromium } = require(runtime)
-const output = resolve('node_modules/@itrocks/property-select/docs/orchestration/evidence/V5/support')
-const base = 'http://127.0.0.1:13954'
+const output = resolve(process.env.PS_V5_SUPPORT_OUTPUT
+	|| 'node_modules/@itrocks/property-select/docs/orchestration/evidence/V5/support')
+const base = process.env.PS_V5_SUPPORT_DEMO || 'http://127.0.0.1:13954'
+const app = process.env.PS_V5_SUPPORT_APP || 'http://127.0.0.1:13953'
 const proof = { assertions: [], contexts: [], errors: [], inputs: [], screenshots: [], chromiumSandbox: true }
 mkdirSync(output, { recursive: true })
 let mode, page
@@ -109,7 +111,7 @@ try {
 		}
 		check('Standalone owns no table', await page.locator('table').count(), 0)
 		await picture('after')
-		await page.goto('http://127.0.0.1:13953/property-select-invoice')
+		await page.goto(app + '/property-select-invoice')
 		await page.locator('.add-column:not([hidden])').click()
 		await page.locator('.ps-main').first().waitFor()
 		check('Integrated responsive shell fits', await page.evaluate(() =>

@@ -1,5 +1,24 @@
 # Phase 1 validation matrix
 
+## L7 regression and load verdict
+
+**NEEDS_FIX**, 16 October 2026. [Report](reports/L7.md), [browser observations](evidence/L7/results.json),
+[landscape error reproducer](evidence/L7/error/results.json), [public import audit](evidence/L7/architecture.json),
+[fresh independent SQL](evidence/L7/sql/results.json) and [owner builds/tests](evidence/L7/build/results.json).
+
+- **FAIL DEP-02/PORT-10 — [L7-01](defects/L7-01.md):** list has executable imports of action, action-request and route
+  absent from its direct dependencies. Public entries and reachable runtime cycles otherwise pass.
+- **FAIL QUA-01/PORT-09 — [L7-02](defects/L7-02.md):** the failed landscape column click loses its visible error
+  after scroll persistence; three independent 844 × 390 contexts reproduce it. No column or navigation corruption.
+- **PASS L7 observations:** 1,200-branch lazy/bounded search, 64 pending controller disposals, 64 view remounts,
+  current metadata/network recovery, departure cleanup, permission enforcement, 120-root scope and entity JSON.
+  Header reorder/delete/sort/freeze/reset passes 182 fresh browser assertions; transport/pending disposal passes 72.
+- **PASS SQL/build observations:** 14 independent SQL groups, 1,390 observations, 110 statements; five owner builds,
+  public inventories, 139 owner tests and showtime build pass. Tested SHAs/versions are in the linked report.
+
+Tracking/tests patch: selector 0.7.2. L7 remains failed until separate FIX-L7-1 and independent RETEST-L7-1 complete;
+V7 now depends on that retest. This author regression gate does not claim final independent acceptance.
+
 ## V6 independent touch and responsive verdict
 
 **DONE / independent PASS**, 16 October 2026. [Report](reports/V6.md),
@@ -1232,14 +1251,18 @@ Historical [V4 reproduction](evidence/V4/revocation.json) remains unchanged.
 Expected: Unavailable state store preserves live context and signals error; failed/slow data keeps gesture
 responsive, valid drop outcome independent of data completion and retry available.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS storage and V5 desktop preview portions**;
-touch remains V6.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **FAIL L7-02 visible consumer error**;
+storage and V5/V6 preview portions retain their PASS.
+L7 visible consumer failure: **FAIL [L7-02](defects/L7-02.md)**; landscape scroll/save clears the message.
+Separate correction and independent retest are required before final acceptance.
+
 ### PORT-10: Public build and architecture
 
 Expected: Check direct runtime imports, npm dependency graph, public CJS/browser exports, types/assets/files, SOLID
 and zero server libraries in browser or host imports in selector.
 
-Proof: `evidence/<gate>/PORT-10.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-10.*` and `reports/<gate>.md`. Current verdict: **FAIL L7-01**;
+see [L7 import evidence](evidence/L7/architecture.json).
 
 S02 owner observation: `PASS` for public CJS exports/declarations, package allowlist and neutral dependency direction.
 [Build](evidence/S02/storage-build.txt), [typecheck](evidence/S02/public-typecheck.txt),

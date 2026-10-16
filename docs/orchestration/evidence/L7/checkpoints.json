@@ -1,0 +1,71 @@
+{
+  "property-select": {
+    "sha": "11375222ec8ba44ddca3faf09419ee3e465bf76d",
+    "version": "0.7.2",
+    "status": [
+      " M docs/orchestration/environment/checks/V5-support.mjs",
+      " M docs/orchestration/environment/checks/VSQL.mjs",
+      " M package.json",
+      "?? docs/orchestration/defects/L7-01.md",
+      "?? docs/orchestration/defects/L7-02.md",
+      "?? docs/orchestration/environment/checks/L7-architecture.mjs",
+      "?? docs/orchestration/environment/checks/L7-build.mjs",
+      "?? docs/orchestration/environment/checks/L7-error.mjs",
+      "?? docs/orchestration/environment/checks/L7.mjs",
+      "?? docs/orchestration/evidence/L7/",
+      "?? docs/orchestration/tasks/FIX-L7-1.md",
+      "?? docs/orchestration/tasks/RETEST-L7-1.md",
+      "?? test/load-lifecycle.test.mjs"
+    ]
+  },
+  "list": {
+    "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+    "version": "0.12.0",
+    "status": []
+  },
+  "table": {
+    "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+    "version": "0.4.0",
+    "status": []
+  },
+  "framework": {
+    "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+    "version": "0.11.0",
+    "status": []
+  },
+  "home": {
+    "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+    "version": "0.7.0",
+    "status": []
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "status": []
+  },
+  "sql-build": {
+    "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "version": "0.2.0",
+    "status": []
+  },
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "status": []
+  },
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "version": "0.3.2",
+    "status": []
+  },
+  "reflect": {
+    "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+    "version": "0.3.1",
+    "status": []
+  },
+  "reflect-path": {
+    "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+    "version": "0.3.2",
+    "status": []
+  }
+}

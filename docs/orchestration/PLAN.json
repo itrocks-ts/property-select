@@ -55,6 +55,8 @@
     "L6",
     "V6",
     "L7",
+    "FIX-L7-1",
+    "RETEST-L7-1",
     "V7",
     "D8"
   ],
@@ -2111,7 +2113,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Final pre-acceptance stress and lifecycle checks must preserve contractual ownership.",
@@ -2125,14 +2127,74 @@
         "DEP-09",
         "DEP-10",
         "VAL-07"
-      ]
+      ],
+      "validation": "FAIL: L7-01 has three undeclared list runtime dependencies; L7-02 loses landscape consumer error after scroll/state save. Owner builds/tests, fresh SQL, load/lifecycle, table header compatibility and other L7 observations pass; mandatory fixes and independent RETEST-L7-1 precede V7.",
+      "evidence": [
+        "evidence/L7/results.json",
+        "evidence/L7/error/results.json",
+        "evidence/L7/architecture.json",
+        "evidence/L7/sql/results.json",
+        "evidence/L7/header/results.json",
+        "evidence/L7/support/results.json",
+        "evidence/L7/build/results.json"
+      ],
+      "defects": [
+        "defects/L7-01.md",
+        "defects/L7-02.md"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "sha": "11375222ec8ba44ddca3faf09419ee3e465bf76d",
+          "version": "0.7.2"
+        },
+        "@itrocks/list": {
+          "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+          "version": "0.12.0"
+        },
+        "@itrocks/table": {
+          "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+          "version": "0.4.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        },
+        "@itrocks/home": {
+          "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+          "version": "0.7.0"
+        },
+        "@itrocks/storage": {
+          "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+          "version": "0.3.0"
+        },
+        "@itrocks/sql-build": {
+          "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+          "version": "0.2.0"
+        },
+        "@itrocks/sql-join": {
+          "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+          "version": "0.2.0"
+        },
+        "@itrocks/mysql": {
+          "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+          "version": "0.3.2"
+        },
+        "@itrocks/reflect": {
+          "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+          "version": "0.3.1"
+        },
+        "@itrocks/reflect-path": {
+          "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+          "version": "0.3.2"
+        }
+      }
     },
     {
       "id": "V7",
       "title": "Independent final acceptance",
       "card": "tasks/V7.md",
       "dependencies": [
-        "L7"
+        "RETEST-L7-1"
       ],
       "packages": [
         "@itrocks/property-select"
@@ -2177,6 +2239,62 @@
       "requirements": [
         "VAL-08",
         "VAL-06"
+      ]
+    },
+    {
+      "id": "FIX-L7-1",
+      "title": "Declare list dependencies and retain recoverable errors",
+      "card": "tasks/FIX-L7-1.md",
+      "dependencies": [
+        "L7"
+      ],
+      "packages": [
+        "@itrocks/property-select",
+        "@itrocks/list"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/list"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "At least L7 risk profile for cross-module dependency correctness and recoverable browser error lifecycle.",
+      "report": "reports/FIX-L7-1.md",
+      "requirements": [
+        "DEP-02",
+        "PORT-10",
+        "QUA-01",
+        "PORT-09",
+        "VAL-07"
+      ]
+    },
+    {
+      "id": "RETEST-L7-1",
+      "title": "Independently verify L7 corrections and complete regressions",
+      "card": "tasks/RETEST-L7-1.md",
+      "dependencies": [
+        "FIX-L7-1"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "verification",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "At least L7 risk profile for cross-module dependency correctness and recoverable browser error lifecycle.",
+      "report": "reports/RETEST-L7-1.md",
+      "requirements": [
+        "DEP-02",
+        "PORT-10",
+        "QUA-01",
+        "PORT-09",
+        "VAL-07"
       ]
     }
   ],
