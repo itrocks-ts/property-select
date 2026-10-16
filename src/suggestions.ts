@@ -25,7 +25,7 @@ export async function suggestions(
 					labels.push(translate(edge.label || segments[depth - 1]))
 				}
 				// Complete labelled paths distinguish homonyms without exposing identifiers as display text.
-				result.push({ label: labels.join(' › '), path: destination })
+				result.push({ label: labels.join('.'), path: destination })
 			}
 			catch (error) { if (signal.aborted) throw error }
 		}

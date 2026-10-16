@@ -354,7 +354,7 @@ export class PropertySelectView
 			path.className = 'ps-result-path'
 			for (const [index, segment] of result.segments.entries()) {
 				if (index)
-					path.append(' › ')
+					path.append('.')
 				const button = this.button(segment.label, 'navigate', segment.path)
 				button.dataset.focus = `segment:${property.path}:${segment.path}`
 				path.append(button)

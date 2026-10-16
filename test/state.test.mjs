@@ -36,7 +36,7 @@ test('T04/T14/T15: maximal used branches, recent ancestors, exact shortcuts and 
 	await selector.mount()
 	assert.deepEqual(selector.suggestions.map(item => item.path),
 		['customer.address.city', 'tags', 'lines', 'customer.address'])
-	assert.equal(selector.suggestions[0].label, 'Label:customer › Label:address › Label:city')
+	assert.equal(selector.suggestions[0].label, 'Label:customer.Label:address.Label:city')
 	await selector.select('customer.name')
 	await tick()
 	assert.deepEqual(selector.suggestions.map(item => item.path),

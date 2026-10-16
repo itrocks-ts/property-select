@@ -274,8 +274,8 @@ affiché. Ne pas dédupliquer par classe cible : deux chemins conduisant au mêm
 chemin ordonné depuis la racine vers son parent, par exemple :
 
 ```text
-Code : Facture > Client > Adresse > Ville > Pays
-Ville : Facture > Client > Adresse
+Code : Facture.Client.Adresse.Ville.Pays
+Ville : Facture.Client.Adresse
 ```
 
 Ne pas inverser l'arborescence. Tous les segments utiles restent accessibles, au besoin par retour à la ligne sur
