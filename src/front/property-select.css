@@ -1,54 +1,122 @@
 .property-select {
-	color-scheme: light dark;
-	color: CanvasText;
-	background: Canvas;
-	font: 1rem/1.4 system-ui, sans-serif;
+	background: #fff;
+	color: #444;
+	display: flex;
+	flex-direction: column;
+	font: 12px/1.4 Roboto, sans-serif;
+	height: 100%;
+	min-height: 0;
 	min-width: 0;
-	max-width: 100%;
 }
 .property-select button {
 	background: transparent;
 	border: 0;
-	border-radius: .25rem;
+	border-radius: 0;
 	color: inherit;
 	cursor: pointer;
 	font: inherit;
-	min-height: 44px;
-	padding: .5rem .75rem;
 	text-align: left;
 }
-.property-select button:hover { background: color-mix(in srgb, CanvasText 8%, Canvas); }
+.property-select button:hover { background-color: #f4f4f4; }
 .property-select button:focus-visible { outline: 2px solid Highlight; outline-offset: -2px; }
-.ps-breadcrumb { display: flex; overflow-x: auto; overscroll-behavior-x: contain; padding: 2px; }
-.ps-level { flex-shrink: 0; white-space: nowrap; }
-.ps-level + .ps-level::before { content: '›'; margin-right: .75rem; }
-.ps-level[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: .3em; }
+
+.ps-breadcrumb {
+	align-items: center;
+	background: #f8f8f8;
+	border-bottom: 1px solid #d8d8d8;
+	display: flex;
+	flex: none;
+	height: 28px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	overscroll-behavior-x: contain;
+}
+.property-select .ps-level { flex-shrink: 0; min-height: 27px; padding: 4px 0; white-space: nowrap; }
+.property-select .ps-level:first-child { padding-left: 8px; }
+.property-select .ps-level:last-child { padding-right: 8px; }
+.ps-level + .ps-level::before { content: '›'; margin: 0 4px; }
+.ps-level[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .ps-level[data-position="descendant"] { font-style: italic; }
-.ps-properties { list-style: none; margin: 0; padding: 0; }
-.ps-property { display: grid; grid-template-columns: minmax(0, 1fr) 44px; }
-.ps-main { min-width: 0; overflow-wrap: anywhere; }
-.ps-chevron { display: inline; margin-left: .5rem; }
-.property-select .ps-add { text-align: center; width: 44px; }
-.ps-property[data-kind="terminal"] .ps-add { display: none; }
-.ps-status { font-size: .875rem; margin: .5rem .75rem; }
+
+.ps-search {
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	display: flex;
+	flex: none;
+	height: 29px;
+}
+.ps-query {
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+	color: inherit;
+	flex: 1;
+	font: inherit;
+	min-width: 0;
+	padding: 0 8px;
+}
+.ps-query::-webkit-search-cancel-button { display: none; }
+.ps-query:focus-visible { box-shadow: inset 0 0 0 2px Highlight; outline: 0; }
+.property-select .ps-clear {
+	background: #fff url('filter-reset.svg') center no-repeat;
+	border-left: 1px solid #d8d8d8;
+	flex: none;
+	font-size: 0;
+	padding: 0;
+	width: 29px;
+}
+.property-select .ps-clear:hover { background-color: #f4f4f4; }
+
+.ps-suggestions { display: flex; flex: none; flex-wrap: wrap; gap: 4px; min-height: 32px; padding: 4px 8px; }
+.property-select .ps-suggestions button {
+	background: #f8f8f8;
+	border: 1px solid #d8d8d8;
+	border-radius: 4px;
+	padding: 2px 6px;
+}
+.ps-suggestions:empty, .ps-persistence:empty { display: none; }
+.ps-persistence, .ps-status { font-size: inherit; margin: 6px 8px; }
 .ps-status:empty { display: none; }
+
+.ps-properties {
+	flex: 1;
+	list-style: none;
+	margin: 0;
+	min-height: 0;
+	min-width: 0;
+	overflow: auto;
+	overscroll-behavior: contain;
+	padding: 0;
+}
+.ps-property {
+	background: #fff;
+	border-bottom: 1px solid #d8d8d8;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 29px;
+	line-height: 1.15;
+}
+.property-select .ps-main {
+	box-sizing: border-box;
+	min-width: 0;
+	overflow: hidden;
+	padding: .6em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/* Match the list row's checkbox contribution to its text line box. */
+.property-select .ps-main::after { content: ''; display: inline-block; height: 13px; width: 0; }
+.ps-chevron { display: inline; margin-left: 8px; }
+.property-select .ps-add { padding: 0; text-align: center; width: 29px; }
+.ps-property[data-kind="terminal"] .ps-add { display: none; }
+.ps-result-path { grid-column: 1 / -1; min-width: 0; overflow-wrap: anywhere; padding: 0 8px 4px; }
+.property-select .ps-result-path button { padding: 0 2px; }
+
 @media (hover: hover) and (pointer: fine) {
 	.ps-property[data-kind="terminal"] .ps-add { display: block; }
 	.ps-add { opacity: 0; pointer-events: none; }
 	.ps-property:hover .ps-add, .ps-property:focus-within .ps-add { opacity: 1; pointer-events: auto; }
 }
-
-.ps-search { display: flex; gap: .25rem; margin: .5rem; }
-.ps-query { background: Canvas; border: 1px solid GrayText; color: inherit; font: inherit; min-width: 0; width: 100%; }
-.ps-query:focus-visible { outline: 2px solid Highlight; }
-.ps-result-path { font-size: .875rem; grid-column: 1 / -1; min-width: 0; overflow-wrap: anywhere; }
-.property-select .ps-result-path button { padding: .25rem .5rem; }
-
-.ps-suggestions { display: flex; flex-wrap: wrap; gap: .25rem; margin: .5rem; }
-.property-select .ps-suggestions button { background: color-mix(in srgb, CanvasText 5%, Canvas); font-size: .875rem; }
-.ps-suggestions:empty, .ps-persistence:empty { display: none; }
-.ps-properties { max-height: 60vh; overflow: auto; overscroll-behavior: contain; }
-.ps-persistence { font-size: .875rem; margin: .5rem .75rem; }
 
 .ps-main, .ps-level, .ps-result-path button { user-select: none; -webkit-user-select: none; }
 
@@ -58,3 +126,33 @@
 	.ps-property[data-kind="terminal"] .ps-add { display: none; }
 	.ps-property[data-kind="relation"] .ps-add { opacity: 1; pointer-events: auto; }
 }
+
+.right-pane:has(.property-select) .right-pane-tab {
+	background: #fff url('property-select.svg') center / 20px 20px no-repeat;
+	font-size: 0;
+}
+.right-pane:has(.property-select) .right-pane-tab:hover { background-color: #f4f4f4; }
+
+.right-pane:has(.property-select) .right-pane-title-bar > h2 {
+	max-width: 100px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.right-pane:has(.property-select) .ps-suggestions {
+	align-items: center;
+	flex-wrap: nowrap;
+	gap: 4px;
+	height: var(--right-pane-title-height);
+	left: 114px;
+	min-height: 0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding: 0 8px;
+	position: absolute;
+	right: 0;
+	scrollbar-width: thin;
+	top: var(--right-pane-tabs-height);
+}
+.right-pane:has(.property-select) .ps-suggestions button { flex: none; }

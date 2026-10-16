@@ -125,7 +125,10 @@ export class PropertySelectView
 			this.persistence = this.root.querySelector('.ps-persistence') as HTMLElement
 			this.query = this.root.querySelector('.ps-query') as HTMLInputElement
 			this.query.setAttribute('aria-label', this.selector.translate('Search properties'))
-			this.root.querySelector('.ps-clear')!.textContent = this.selector.translate('Clear')
+			this.query.placeholder = this.selector.translate('Recherche...')
+			const clear = this.root.querySelector<HTMLButtonElement>('.ps-clear')!
+			clear.setAttribute('aria-label', this.selector.translate('Clear search'))
+			clear.title = this.selector.translate('Clear search')
 			this.query.addEventListener('input', () => {
 				this.operationError = ''
 				this.selector.setQuery(this.query!.value)

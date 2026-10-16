@@ -1,4 +1,4 @@
 import { copyFile } from 'node:fs/promises'
 
-for (const extension of ['css', 'html'])
-	await copyFile(`src/front/property-select.${extension}`, `front/property-select.${extension}`)
+for (const file of ['filter-reset.svg', 'property-select.css', 'property-select.html', 'property-select.svg'])
+	await copyFile(`src/front/${file}`, `front/${file}`)
