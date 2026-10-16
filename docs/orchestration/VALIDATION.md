@@ -22,8 +22,29 @@ This section is the current final-gate verdict; historical stage passes below re
   Partial phone taps and historical V6 proof do not accept the final touch gate. Composite rows stay NOT_RUN as
   recorded in the inventory, including SQL-12's final drag-preview portion.
 
-`FIX-V7-1` must preserve generic persistence recovery information and L7 operation errors. A distinct `RETEST-V7-1`
+`FIX-V7-1` supplies the author correction below; independent acceptance is pending. A distinct `RETEST-V7-1`
 must reproduce recovery and complete the entire final matrix on corrected checkpoints. **D8 is blocked**.
+
+## FIX-V7-1 author correction
+
+**DONE / author PASS**, selector **0.7.6**, based on `0767b5c1d405ff970c2849764ec330cde2c47920` / 0.7.5.
+[Report](reports/FIX-V7-1.md); V7 remains NEEDS_FIX and V7-01 remains OPEN pending independent RETEST-V7-1.
+
+- T16 / STA-03 / DEP-05 / PORT-08–09: [eight final revoke/expiry cases](evidence/FIX-V7-1/after-final/results.json),
+  **141 assertions PASS**, four dimensions. Actual acquired PUT 410, visible reload guidance, preserved live
+  query/branch/suggestions/columns, stale Retry 410 without resurrection, full reload and fresh-generation HTTP 200.
+- QUA-01 / PORT-09: [29 public view assertions](evidence/FIX-V7-1/status/results.json),
+  [62 HTTP/scroll/save/Retry assertions](evidence/FIX-V7-1/error/results.json) and
+  [three landscape cases](evidence/FIX-V7-1/landscape/results.json) PASS. Separate messages, safe text/fallback,
+  preserved branch/query/recents and appropriate operation recovery/loading/search status.
+- Browser health: [24 individually attributed failures](evidence/FIX-V7-1/health-review.json), 16 product metadata
+  AbortSignals and eight completed HTTP 204 saves; zero unqualified failure or page exception. Historical V7
+  observations retain their original evidentiary limits; there is no global ERR_ABORTED exemption.
+- [Five builds/exports, 140 tests and app build](evidence/FIX-V7-1/build/results.json) PASS;
+  [import/dependency audit](evidence/FIX-V7-1/architecture/architecture.json) PASS. Initial eight failures reproduced
+  before runtime modification; all V7 evidence and showtime baseline preserved.
+
+These author observations do not close the defect or replace the full independent final matrix. D8 remains blocked.
 
 ## RETEST-L7-1 independent completion
 

@@ -202,8 +202,11 @@ export class PropertySelectView
 	{
 		if (!this.persistence) return
 		this.persistence.replaceChildren()
-		if (this.selector.persistenceError) {
-			this.persistence.append(this.selector.translate('Unable to save selector state. '),
+		const error = this.selector.persistenceError
+		if (error) {
+			const message = error instanceof Error && error.message.trim()
+				? error.message : this.selector.translate('Unable to save selector state.')
+			this.persistence.append(message + ' ',
 				this.button(this.selector.translate('Retry'), 'retry', ''))
 		}
 	}

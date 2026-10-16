@@ -2489,7 +2489,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "At least V7 risk profile for session recovery, independent final browser/SQL acceptance and regressions.",
@@ -2506,6 +2506,18 @@
         "PORT-08",
         "PORT-09",
         "QUA-01"
+      ],
+      "validation": "Author PASS: eight baseline guidance failures reproduced; 141 final session/browser-health assertions, 29 public view status assertions, 62 existing error-driver assertions and three landscape cases pass. All 24 final ERR_ABORTED events individually attributed (16 product metadata signals, eight completed HTTP 204 saves). Five builds/exports, 140 tests, application build and dependency audit pass. V7-01 remains open pending independent RETEST-V7-1; D8 not executed.",
+      "version_changes": {
+        "@itrocks/property-select": "0.7.5 → 0.7.6"
+      },
+      "evidence": [
+        "evidence/FIX-V7-1/after-final/results.json",
+        "evidence/FIX-V7-1/status/results.json",
+        "evidence/FIX-V7-1/error/results.json",
+        "evidence/FIX-V7-1/health-review.json",
+        "evidence/FIX-V7-1/build/results.json",
+        "evidence/FIX-V7-1/SHA256SUMS"
       ]
     },
     {

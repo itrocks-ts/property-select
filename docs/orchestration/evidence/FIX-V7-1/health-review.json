@@ -1,0 +1,680 @@
+{
+  "status": "PASS",
+  "source": "after-final/results.json",
+  "cases": 8,
+  "assertions": 141,
+  "networkFailures": 24,
+  "productMetadataAborts": 16,
+  "completedHttp204Saves": 8,
+  "unqualified": [],
+  "attribution": [
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134397280,
+      "start": 1792134397275.1912,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134396502.6,
+        "time": 1792134397274.7002
+      },
+      "response": {
+        "name": "1280x720-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134396502.6,
+        "time": 1792134397284.9001
+      },
+      "expected": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134397285,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134396502.6,
+        "time": 1792134397283.7002
+      },
+      "abort": {
+        "name": "1280x720-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134396502.6,
+        "time": 1792134397285.3
+      },
+      "expected": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134397290,
+      "start": 1792134397286.0059,
+      "status": 200,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134396502.6,
+        "time": 1792134397285.5
+      },
+      "abort": {
+        "name": "1280x720-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134396502.6,
+        "time": 1792134397290
+      },
+      "expected": true
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134399890,
+      "start": 1792134399886.034,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134399410,
+        "time": 1792134399885.6
+      },
+      "response": {
+        "name": "1280x720-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134399410,
+        "time": 1792134399894.4
+      },
+      "expected": true
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134399895,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134399410,
+        "time": 1792134399893.6
+      },
+      "abort": {
+        "name": "1280x720-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134399410,
+        "time": 1792134399894.8
+      },
+      "expected": true
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134399901,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "1280x720-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134399410,
+        "time": 1792134399895.1
+      },
+      "abort": {
+        "name": "1280x720-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134399410,
+        "time": 1792134399901.2
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134402448,
+      "start": 1792134402443.6182,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134401833.5,
+        "time": 1792134402443.2
+      },
+      "response": {
+        "name": "768x900-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134401833.5,
+        "time": 1792134402452.1
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134402452,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134401833.5,
+        "time": 1792134402451.8
+      },
+      "abort": {
+        "name": "768x900-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134401833.5,
+        "time": 1792134402452.5
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134402456,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134401833.5,
+        "time": 1792134402452.6
+      },
+      "abort": {
+        "name": "768x900-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134401833.5,
+        "time": 1792134402456.3
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134405136,
+      "start": 1792134405133.471,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134404578.5,
+        "time": 1792134405132.5
+      },
+      "response": {
+        "name": "768x900-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134404578.5,
+        "time": 1792134405140.9
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134405141,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134404578.5,
+        "time": 1792134405140
+      },
+      "abort": {
+        "name": "768x900-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134404578.5,
+        "time": 1792134405141.1
+      },
+      "expected": true
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134405145,
+      "start": 1792134405141.672,
+      "status": 200,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "768x900-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134404578.5,
+        "time": 1792134405141.3
+      },
+      "abort": {
+        "name": "768x900-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134404578.5,
+        "time": 1792134405145.1
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134407704,
+      "start": 1792134407700.9932,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134407240.3,
+        "time": 1792134407700.4001
+      },
+      "response": {
+        "name": "390x844-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134407240.3,
+        "time": 1792134407707.8
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134407708,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134407240.3,
+        "time": 1792134407707.5
+      },
+      "abort": {
+        "name": "390x844-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134407240.3,
+        "time": 1792134407708.1
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134407712,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134407240.3,
+        "time": 1792134407708.2
+      },
+      "abort": {
+        "name": "390x844-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134407240.3,
+        "time": 1792134407712.2
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134410157,
+      "start": 1792134410151.402,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134409813.1,
+        "time": 1792134410150.9001
+      },
+      "response": {
+        "name": "390x844-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134409813.1,
+        "time": 1792134410160.4001
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134410161,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134409813.1,
+        "time": 1792134410160.1
+      },
+      "abort": {
+        "name": "390x844-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134409813.1,
+        "time": 1792134410160.8
+      },
+      "expected": true
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134410165,
+      "start": 1792134410161.4248,
+      "status": 200,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "390x844-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134409813.1,
+        "time": 1792134410160.9001
+      },
+      "abort": {
+        "name": "390x844-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134409813.1,
+        "time": 1792134410164.9001
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134412549,
+      "start": 1792134412541.126,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134412095.7,
+        "time": 1792134412540
+      },
+      "response": {
+        "name": "844x390-revoke",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134412095.7,
+        "time": 1792134412548.4
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134412551,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134412095.7,
+        "time": 1792134412548
+      },
+      "abort": {
+        "name": "844x390-revoke",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134412095.7,
+        "time": 1792134412548.5999
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134412553,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134412095.7,
+        "time": 1792134412548.7
+      },
+      "abort": {
+        "name": "844x390-revoke",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134412095.7,
+        "time": 1792134412552.5999
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+      "method": "GET",
+      "observed": 1792134415084,
+      "start": 1792134415081.2822,
+      "status": 204,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134414513.4,
+        "time": 1792134415080.5999
+      },
+      "response": {
+        "name": "844x390-expire",
+        "id": 23,
+        "url": "http://127.0.0.1:14081/property-select-invoice/list?columns=number,amount,customer.name",
+        "method": "GET",
+        "event": "response",
+        "status": 204,
+        "document": 1792134414513.4,
+        "time": 1792134415090.9
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+      "method": "GET",
+      "observed": 1792134415091,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134414513.4,
+        "time": 1792134415090.5
+      },
+      "abort": {
+        "name": "844x390-expire",
+        "id": 24,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=amount&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134414513.4,
+        "time": 1792134415091.2
+      },
+      "expected": true
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+      "method": "GET",
+      "observed": 1792134415096,
+      "start": 0,
+      "error": "net::ERR_ABORTED",
+      "fetch": {
+        "name": "844x390-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "start",
+        "document": 1792134414513.4,
+        "time": 1792134415091.5
+      },
+      "abort": {
+        "name": "844x390-expire",
+        "id": 25,
+        "url": "http://127.0.0.1:14081/property-select/resolve/json?path=number&root=invoice",
+        "method": "GET",
+        "event": "abort",
+        "document": 1792134414513.4,
+        "time": 1792134415096.2
+      },
+      "expected": true
+    }
+  ],
+  "historicalV7": "The twenty historical events remain immutable and have no retroactive attribution; this fresh execution instruments the same itinerary and qualifies every new event."
+}

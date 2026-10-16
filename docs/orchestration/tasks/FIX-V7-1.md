@@ -3,7 +3,8 @@
 ## Objective and prerequisite
 
 Correct [V7-01](../defects/V7-01.md), diagnosed by the completed [V7 report](../reports/V7.md).
-Status: `PENDING`. The failed-gate correction exception in [EXECUTION.md](../EXECUTION.md) applies.
+Status: `DONE / author PASS`; see [the correction report](../reports/FIX-V7-1.md).
+The failed-gate correction exception in [EXECUTION.md](../EXECUTION.md) applies.
 Read application/owner instructions and the handbook first, then [COMMON.md](../COMMON.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),
 [ENVIRONMENT.md](../ENVIRONMENT.md), [VERIFY-ENVIRONMENT.md](../VERIFY-ENVIRONMENT.md), V7 and the defect.

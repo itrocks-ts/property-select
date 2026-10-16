@@ -1,0 +1,2 @@
+mysqld is alive
+PASS: framework list HTTP 200 with Recipe France

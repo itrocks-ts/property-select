@@ -1,0 +1,46 @@
+
+> @itrocks/framework@0.11.0 test
+> npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs
+
+
+> @itrocks/framework@0.11.0 build
+> npm run build:back && npm run build:front
+
+
+> @itrocks/framework@0.11.0 build:back
+> tsc
+
+
+> @itrocks/framework@0.11.0 build:front
+> tsc -p src/front/tsconfig.json && node -e "const fs=require('node:fs');for(const file of fs.readdirSync('.').filter(file=>file.endsWith('.js')||file.endsWith('.d.ts')))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('../../',''))"
+
+
+> @itrocks/framework@0.11.0 build:test
+> tsc -p test/tsconfig.json
+
+✔ selects an exact or compatible supported browser language (1.149593ms)
+✔ does not load main before the framework composition phase (160.713272ms)
+✔ META-01 metadata relation facts, inheritance and logical inverse/N-N are serialisable (261.799278ms)
+✔ META-02 same authorisation on enumeration and every full-path prefix; presentation beyond List (3.306667ms)
+✔ META-03 two routes, finite cycles, ambiguous/unknown paths and denied ancestors (98.541089ms)
+✔ META-04 per-instance catalogue change, explicit path grants and aborted authorisation (1.925853ms)
+✔ META-01 composition merges only an unambiguous ownership inverse (2.341629ms)
+✔ META-03 native dates stay terminal and context or method traversal rejects with a path error (5.288515ms)
+✔ public binding uses metadata without constructors and propagates optional ancestry (202.93258ms)
+✔ logical inverses resolve the explicit back-reference to its physical foreign key (49.247449ms)
+✔ N-N mapping reuses existing storage naming in both directions (50.684153ms)
+✔ ambiguous and unresolved targets and invalid inverse identities reject (1.225789ms)
+✔ schema override handles self links without inventing ambiguous conventional columns (0.641817ms)
+✔ unambiguous component metadata resolves a legacy back-reference (0.605759ms)
+✔ explicit inverse identity may be qualified and conflicting cardinality fails (0.443539ms)
+✔ singular inverse mappings preserve target multiplicity and require known ownership (0.391032ms)
+✔ public projection binding applies final property SQL read and save transformers (7.945704ms)
+✔ selector template route serves only its published fragment (167.853431ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 633.136111

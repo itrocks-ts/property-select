@@ -1,0 +1,1 @@
+PASS: owned app 2621274 stopped

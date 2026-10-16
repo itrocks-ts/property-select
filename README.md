@@ -127,6 +127,8 @@ then advice. Full paths deduplicate entries; translated metadata labels distingu
 `suggestionLimit` defaults to six (1–100).
 `shortcut(path)` replaces the complete branch and clears the query. Configuration changes preserve session recents.
 The view displays the fused destinations, saves breadcrumb/property scroll and offers Retry after persistence failures.
+Persistence errors show the adapter's recovery message as text, with a generic fallback for unknown or empty errors.
+They remain separate from operation errors, which survive scrolling, state saves and storage Retry.
 
 ## Descendant search
 

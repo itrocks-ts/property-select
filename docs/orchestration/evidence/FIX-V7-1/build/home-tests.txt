@@ -1,0 +1,10 @@
+{"verdict":"PASS","records":["empty command hidden","container announces and replays narrow registration","new content folded","one shared service","competing owner refused","command moved","desktop main interactive","active replacement refused","suspend folded","nested token retains suspension","last token restores open and scroll","restoration never focuses input","explicit close focuses visible command","same owner inactive update retains handle","updated title","removal invalidates tokens and subscription","stale token cannot reopen new owner"],"browser":"151.0.7922.34"}
+✔ PANE-01–04/06: actual browser lifecycle, occupancy, focus and responsive shell (334.867749ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 685.552338

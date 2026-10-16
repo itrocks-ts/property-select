@@ -1,0 +1,117 @@
+[
+  {
+    "owner": "table",
+    "version": "0.4.0",
+    "status": "PASS",
+    "checked": [
+      "column-add.js",
+      "column-add.d.ts",
+      "column-add.css",
+      "column-reorder.js",
+      "column-reorder.d.ts"
+    ],
+    "build": "tsc && sass --no-source-map demo:demo src/column-add.scss:column-add.css && node ../prepare-module/prepare-module.js",
+    "packagedFiles": 32,
+    "tests": {
+      "command": [
+        "node",
+        "--test",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/column-reorder.test.mjs",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/feed.test.mjs",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/freeze-visible.test.mjs",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/property-select.test.mjs"
+      ],
+      "status": "PASS"
+    }
+  },
+  {
+    "owner": "property-select",
+    "version": "0.7.6",
+    "status": "PASS",
+    "checked": [
+      "property-select.js",
+      "property-select.d.ts",
+      "cjs/property-select.js",
+      "front/property-select.js",
+      "front/property-select.html",
+      "front/property-select.css",
+      "front/pointer-transport.js",
+      "front/property-select.d.ts"
+    ],
+    "build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
+    "packagedFiles": 2596,
+    "tests": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "PASS"
+    }
+  },
+  {
+    "owner": "list",
+    "version": "0.12.1",
+    "status": "PASS",
+    "checked": [
+      "property-select.js",
+      "property-select.d.ts",
+      "cjs/list.js",
+      "cjs/projection.js",
+      "cjs/selector-state.js",
+      "selector-state.js"
+    ],
+    "build": "npm run build:cjs && npm run build:css && npm run build:front",
+    "packagedFiles": 47,
+    "tests": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "PASS"
+    }
+  },
+  {
+    "owner": "home",
+    "version": "0.7.0",
+    "status": "PASS",
+    "checked": [
+      "right-pane.js",
+      "right-pane.d.ts",
+      "right-pane.css",
+      "cjs/output.js"
+    ],
+    "build": "npm run build:cjs && npm run build:front && npm run build:css",
+    "packagedFiles": 13,
+    "tests": {
+      "command": [
+        "node",
+        "--test",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home/test/property-select.test.mjs"
+      ],
+      "status": "PASS"
+    }
+  },
+  {
+    "owner": "framework",
+    "version": "0.11.0",
+    "status": "PASS",
+    "checked": [
+      "property-select-list.js",
+      "property-select-metadata.js",
+      "cjs/property-select.js",
+      "cjs/framework.js",
+      "cjs/property-select-actions.js",
+      "cjs/sql-projection.js",
+      "cjs/sql-relationships.js"
+    ],
+    "build": "npm run build:back && npm run build:front",
+    "packagedFiles": 44,
+    "tests": {
+      "command": [
+        "npm",
+        "test"
+      ],
+      "status": "PASS"
+    }
+  }
+]

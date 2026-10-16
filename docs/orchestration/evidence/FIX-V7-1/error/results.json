@@ -1,0 +1,1771 @@
+{
+  "assertions": [
+    {
+      "mode": "1280x720",
+      "name": "remembered branch is non-empty",
+      "observed": [
+        "deliveryAddress",
+        "city"
+      ],
+      "expected": [
+        "deliveryAddress",
+        "city"
+      ]
+    },
+    {
+      "mode": "1280x720",
+      "name": "confirmed recents are non-empty",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "1280x720",
+      "name": "one actual column request received 503",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "1280x720",
+      "name": "503 preserves exact committed columns",
+      "observed": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ]
+    },
+    {
+      "mode": "1280x720",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "1280x720",
+      "name": "native scroll/save retains operation error 500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "1280x720",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "1280x720",
+      "name": "native scrolling caused durable state saves",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "1280x720",
+      "name": "503 and scroll preserve branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "1280x720",
+      "name": "native wheel reached failing HTTP storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "1280x720",
+      "name": "storage 503 retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "1280x720",
+      "name": "native storage Retry retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "1280x720",
+      "name": "storage recovery preserves branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "1280x720",
+      "name": "successful native selection retry adds once",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "1280x720",
+      "name": "successful selection restores ordinary search status",
+      "observed": "Search limit reached. Refine your query.",
+      "expected": "Search limit reached. Refine your query."
+    },
+    {
+      "mode": "768x900",
+      "name": "remembered branch is non-empty",
+      "observed": [
+        "deliveryAddress",
+        "city"
+      ],
+      "expected": [
+        "deliveryAddress",
+        "city"
+      ]
+    },
+    {
+      "mode": "768x900",
+      "name": "confirmed recents are non-empty",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "768x900",
+      "name": "one actual column request received 503",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "768x900",
+      "name": "503 preserves exact committed columns",
+      "observed": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ]
+    },
+    {
+      "mode": "768x900",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "768x900",
+      "name": "native scroll/save retains operation error 500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "768x900",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "768x900",
+      "name": "native scrolling caused durable state saves",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "768x900",
+      "name": "503 and scroll preserve branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "768x900",
+      "name": "native wheel reached failing HTTP storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "768x900",
+      "name": "storage 503 retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "768x900",
+      "name": "native storage Retry retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "768x900",
+      "name": "storage recovery preserves branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "768x900",
+      "name": "successful native selection retry adds once",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "768x900",
+      "name": "successful selection restores ordinary search status",
+      "observed": "Search limit reached. Refine your query.",
+      "expected": "Search limit reached. Refine your query."
+    },
+    {
+      "mode": "390x844",
+      "name": "remembered branch is non-empty",
+      "observed": [
+        "deliveryAddress",
+        "city"
+      ],
+      "expected": [
+        "deliveryAddress",
+        "city"
+      ]
+    },
+    {
+      "mode": "390x844",
+      "name": "confirmed recents are non-empty",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "390x844",
+      "name": "one actual column request received 503",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "390x844",
+      "name": "503 preserves exact committed columns",
+      "observed": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ]
+    },
+    {
+      "mode": "390x844",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "390x844",
+      "name": "native scroll/save retains operation error 500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "390x844",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "390x844",
+      "name": "native scrolling caused durable state saves",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "390x844",
+      "name": "503 and scroll preserve branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "390x844",
+      "name": "native wheel reached failing HTTP storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "390x844",
+      "name": "storage 503 retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "390x844",
+      "name": "native storage Retry retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "390x844",
+      "name": "storage recovery preserves branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "390x844",
+      "name": "successful native selection retry adds once",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "390x844",
+      "name": "successful selection restores ordinary search status",
+      "observed": "Search limit reached. Refine your query.",
+      "expected": "Search limit reached. Refine your query."
+    },
+    {
+      "mode": "844x390",
+      "name": "remembered branch is non-empty",
+      "observed": [
+        "deliveryAddress",
+        "city"
+      ],
+      "expected": [
+        "deliveryAddress",
+        "city"
+      ]
+    },
+    {
+      "mode": "844x390",
+      "name": "confirmed recents are non-empty",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "844x390",
+      "name": "one actual column request received 503",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "844x390",
+      "name": "503 preserves exact committed columns",
+      "observed": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name"
+      ]
+    },
+    {
+      "mode": "844x390",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "844x390",
+      "name": "native scroll/save retains operation error 500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "844x390",
+      "name": "native scroll/save retains operation error -500",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "844x390",
+      "name": "native scrolling caused durable state saves",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "844x390",
+      "name": "503 and scroll preserve branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "844x390",
+      "name": "native wheel reached failing HTTP storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "844x390",
+      "name": "storage 503 retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "844x390",
+      "name": "native storage Retry retains operation error",
+      "observed": "Retest service unavailable",
+      "expected": "Retest service unavailable"
+    },
+    {
+      "mode": "844x390",
+      "name": "storage recovery preserves branch/query/recents",
+      "observed": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      },
+      "expected": {
+        "branch": [
+          "deliveryAddress",
+          "city"
+        ],
+        "current": 0,
+        "query": "name",
+        "recent": [
+          "deliveryAddress.city"
+        ]
+      }
+    },
+    {
+      "mode": "844x390",
+      "name": "successful native selection retry adds once",
+      "observed": 1,
+      "expected": 1
+    },
+    {
+      "mode": "844x390",
+      "name": "successful selection restores ordinary search status",
+      "observed": "Search limit reached. Refine your query.",
+      "expected": "Search limit reached. Refine your query."
+    },
+    {
+      "mode": "844x390",
+      "name": "all tested inputs are native trusted events",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "mode": "844x390",
+      "name": "no browser exception",
+      "observed": [],
+      "expected": []
+    }
+  ],
+  "cases": [
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select-invoice",
+      "before": {
+        "revision": 6,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "after": {
+        "revision": 8,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "final": {
+        "revision": 11,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "customer",
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "statuses": [
+        {
+          "time": 1742.4000000953674,
+          "text": ""
+        },
+        {
+          "time": 1757.1000001430511,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1769,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2009.2000000476837,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2038.4000000953674,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2175.100000143051,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2228.7000000476837,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2425.5,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2432.5,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2489.2000000476837,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2635.5,
+          "text": ""
+        },
+        {
+          "time": 2637.800000190735,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2641.4000000953674,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2751.2000000476837,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2764.7000000476837,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2773.4000000953674,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2778.4000000953674,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2787.100000143051,
+          "text": "Search limit reached. Refine your query."
+        }
+      ],
+      "columns": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name",
+        "customer.name"
+      ]
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select-invoice",
+      "before": {
+        "revision": 6,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "after": {
+        "revision": 8,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "final": {
+        "revision": 11,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "customer",
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "statuses": [
+        {
+          "time": 1307.9000000953674,
+          "text": ""
+        },
+        {
+          "time": 1322.7000000476837,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1334.9000000953674,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1574.9000000953674,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1619.2000000476837,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1740.9000000953674,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1805.1000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1924,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1940.2999999523163,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2089.600000143051,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2307,
+          "text": ""
+        },
+        {
+          "time": 2320.2000000476837,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2323.100000143051,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2360.2999999523163,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2373.600000143051,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2384,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2388.5,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2396.5,
+          "text": "Search limit reached. Refine your query."
+        }
+      ],
+      "columns": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name",
+        "customer.name"
+      ]
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select-invoice",
+      "before": {
+        "revision": 6,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "after": {
+        "revision": 8,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "final": {
+        "revision": 11,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "customer",
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "statuses": [
+        {
+          "time": 1145.1000001430511,
+          "text": ""
+        },
+        {
+          "time": 1160.3000001907349,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1172.6000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1391.6000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1410.3000001907349,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1541.5,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1601.1000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1708.1000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1711.1000001430511,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1758.8000001907349,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1877,
+          "text": ""
+        },
+        {
+          "time": 1890.7000000476837,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1893,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1899,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1913.4000000953674,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1921.1000001430511,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1925.1000001430511,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1932.1000001430511,
+          "text": "Search limit reached. Refine your query."
+        }
+      ],
+      "columns": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name",
+        "customer.name"
+      ]
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select-invoice",
+      "before": {
+        "revision": 6,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "after": {
+        "revision": 8,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "final": {
+        "revision": 11,
+        "state": {
+          "branch": [
+            "deliveryAddress",
+            "city"
+          ],
+          "current": 0,
+          "query": "name",
+          "recent": [
+            "customer",
+            "deliveryAddress.city"
+          ],
+          "scroll": {
+            "properties::name": {
+              "left": 0,
+              "top": 0
+            }
+          },
+          "version": 1
+        }
+      },
+      "statuses": [
+        {
+          "time": 1295.7999999523163,
+          "text": ""
+        },
+        {
+          "time": 1312,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 1322.5,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1561.3999998569489,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1589.1999998092651,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1710.5999999046326,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1775.2999999523163,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1979,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 1993.7999999523163,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2148.399999856949,
+          "text": "Retest service unavailable"
+        },
+        {
+          "time": 2294.5999999046326,
+          "text": ""
+        },
+        {
+          "time": 2308.199999809265,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2310.5,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2317,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2330.199999809265,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2337.7999999523163,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2341.899999856949,
+          "text": "Search limit reached. Refine your query."
+        },
+        {
+          "time": 2350.699999809265,
+          "text": "Search limit reached. Refine your query."
+        }
+      ],
+      "columns": [
+        "number",
+        "amount",
+        "deliveryAddress.city.name",
+        "customer.name"
+      ]
+    }
+  ],
+  "inputs": [
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "768x900",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "390x844",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "wheel",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "mode": "844x390",
+      "type": "click",
+      "trusted": true
+    }
+  ],
+  "responses": [
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?column=customer.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "method": "GET",
+      "status": 503
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 503
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?column=customer.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "method": "GET",
+      "status": 503
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 503
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "768x900",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?column=customer.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "method": "GET",
+      "status": 503
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 503
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "390x844",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select-invoice/list?column=customer.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "method": "GET",
+      "status": 503
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 503
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "mode": "844x390",
+      "url": "http://127.0.0.1:14081/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200
+    }
+  ],
+  "errors": [],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "status": "PASS"
+}

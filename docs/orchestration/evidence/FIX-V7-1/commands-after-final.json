@@ -1,0 +1,129 @@
+[
+  {
+    "program": "mysqladmin",
+    "args": [
+      "--no-defaults",
+      "--socket=/tmp/showtime-property-select-env/mysql.sock",
+      "-u",
+      "root",
+      "ping"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:34.581Z",
+    "finished": "2026-10-16T07:06:34.587Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/database-status.txt",
+    "environment": {}
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "app"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:34.588Z",
+    "finished": "2026-10-16T07:06:34.621Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/app-start.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V7-1-after-final-owned",
+      "PS_APP_PORT": "14081",
+      "PS_STANDALONE_PORT": "14082",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "standalone"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:34.621Z",
+    "finished": "2026-10-16T07:06:34.656Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/standalone-start.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V7-1-after-final-owned",
+      "PS_APP_PORT": "14081",
+      "PS_STANDALONE_PORT": "14082",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:35.951Z",
+    "finished": "2026-10-16T07:06:36.038Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/status.txt",
+    "environment": {
+      "PS_APP_PORT": "14081"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.FIX-V7-1-after-final.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:36.038Z",
+    "finished": "2026-10-16T07:06:57.165Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/run.txt",
+    "environment": {
+      "PS_STATUS_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final",
+      "PS_STATUS_URL": "http://127.0.0.1:14082",
+      "PS_L7_ERROR_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final",
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-standalone"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:57.166Z",
+    "finished": "2026-10-16T07:06:57.249Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/standalone-stop.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V7-1-after-final-owned",
+      "PS_APP_PORT": "14081",
+      "PS_STANDALONE_PORT": "14082",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-app"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:06:57.250Z",
+    "finished": "2026-10-16T07:06:57.348Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/after-final/app-stop.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/FIX-V7-1-after-final-owned",
+      "PS_APP_PORT": "14081",
+      "PS_STANDALONE_PORT": "14082",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  }
+]

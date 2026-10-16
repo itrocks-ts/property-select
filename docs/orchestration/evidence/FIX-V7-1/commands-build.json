@@ -1,0 +1,20 @@
+[
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.FIX-V7-1-build.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:05:03.625Z",
+    "finished": "2026-10-16T07:05:32.486Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/build/run.txt",
+    "environment": {
+      "PS_STATUS_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/build",
+      "PS_STATUS_URL": "http://127.0.0.1:14082",
+      "PS_L7_ERROR_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/build",
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-V7-1/build"
+    }
+  }
+]

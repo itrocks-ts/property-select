@@ -1,0 +1,91 @@
+{
+  "cases": [
+    {
+      "attempt": 0,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 1330.7999999523163,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1335.8999998569489,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 1,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 1027.2000000476837,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1030.0999999046326,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 2,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 1076.5999999046326,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1092.5,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    }
+  ],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

@@ -21,7 +21,7 @@ try {
 		const host = document.createElement('div')
 		document.body.prepend(host)
 		let reject = true, failSave = false, holdSelection = false, revision = 0, completeSelection
-		let rejection = Error('Column failed')
+		let rejection = Error('Column failed'), storageError = Error('Storage failed')
 		const terminal = { kind: 'terminal', label: 'Note', name: 'note', order: 0, path: 'note' }
 		const relation = { kind: 'relation', label: 'Child', name: 'child', order: 1, path: 'child', target: 'Child' }
 		const metadata = {
@@ -35,7 +35,7 @@ try {
 		const store = {
 			async read() { return { revision, state: saved } },
 			async write(_key, state) {
-				if (failSave) throw Error('Storage failed')
+				if (failSave) throw storageError
 				return { revision: ++ revision, state }
 			},
 			async remove() { return { revision: ++ revision } }
@@ -65,7 +65,24 @@ try {
 			view.selector.setScroll('properties::', { left: 0, top: 4 })
 			await view.selector.flushState().catch(() => {})
 			check('storage failure retains consumer error', status(), 'Column failed')
+			check('storage failure presents adapter message',
+				host.querySelector('.ps-persistence').textContent, 'Storage failed Retry')
 			check('storage failure has its retry', !!host.querySelector('[data-action="retry"]'), true)
+			for (const [error, expected] of [
+				[Error('The selector session has ended. Reload the page.'),
+					'The selector session has ended. Reload the page.'],
+				[Error('<img src=x onerror="window.psInjected=true">'), '<img src=x onerror="window.psInjected=true">'],
+				[Error('   '), 'Unable to save selector state.'],
+				[{ message: 'untrusted unknown shape' }, 'Unable to save selector state.']
+			]) {
+				storageError = error
+				await view.selector.flushState().catch(() => {})
+				check('adapter recovery or fallback is rendered: ' + expected,
+					host.querySelector('.ps-persistence').textContent, expected + ' Retry')
+				check('storage retry failure preserves operation message: ' + expected, status(), 'Column failed')
+				check('adapter message cannot create markup: ' + expected,
+					host.querySelector('.ps-persistence img') === null && !window.psInjected, true)
+			}
 			failSave = false
 			host.querySelector('[data-action="retry"]').click()
 			await view.selector.flushState()
