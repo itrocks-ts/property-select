@@ -1,0 +1,110 @@
+{
+  "assertions": [
+    {
+      "name": "selection failure is visible",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "scroll and successful save retain selection error 0",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "scroll and successful save retain selection error 1",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "scroll and successful save retain selection error 2",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "failure preserves branch/query/recents",
+      "actual": {
+        "branch": [
+          "child"
+        ],
+        "current": 1,
+        "query": "Note",
+        "recent": [
+          "child"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "branch": [
+          "child"
+        ],
+        "current": 1,
+        "query": "Note",
+        "recent": [
+          "child"
+        ],
+        "scroll": {},
+        "version": 1
+      }
+    },
+    {
+      "name": "storage failure retains consumer error",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "storage failure has its retry",
+      "actual": true,
+      "expected": true
+    },
+    {
+      "name": "storage recovery retains consumer error",
+      "actual": "Column failed",
+      "expected": "Column failed"
+    },
+    {
+      "name": "storage recovery clears storage message",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "retry clears the stale error before completion",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "successful retry clears error",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "new query shows ordinary empty-search message",
+      "actual": "No matching properties.",
+      "expected": "No matching properties."
+    },
+    {
+      "name": "clear restores ordinary ready status",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "navigation shows loading message",
+      "actual": "Loading properties…",
+      "expected": "Loading properties…"
+    },
+    {
+      "name": "successful navigation clears error",
+      "actual": "",
+      "expected": ""
+    },
+    {
+      "name": "unknown failures retain the translated fallback",
+      "actual": "Unable to complete the operation. Try again.",
+      "expected": "Unable to complete the operation. Try again."
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "chromiumSandbox": true,
+  "url": "http://127.0.0.1:13982",
+  "status": "PASS"
+}

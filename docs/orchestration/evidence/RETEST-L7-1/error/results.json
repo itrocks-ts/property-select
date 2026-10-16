@@ -1,0 +1,91 @@
+{
+  "cases": [
+    {
+      "attempt": 0,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 1403.9000000953674,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1408.2000000476837,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 1,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 963.7999999523163,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 1014.2999999523163,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    },
+    {
+      "attempt": 2,
+      "expected": "A visible recoverable error after a failed column click",
+      "failed": true,
+      "observed": {
+        "status": "Failed to fetch",
+        "trace": [
+          {
+            "time": 987.3999998569489,
+            "value": "Failed to fetch",
+            "old": [
+              null
+            ]
+          },
+          {
+            "time": 990.3999998569489,
+            "value": "Failed to fetch",
+            "old": [
+              null,
+              null
+            ]
+          }
+        ],
+        "note": false,
+        "path": ""
+      },
+      "status": "PASS"
+    }
+  ],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

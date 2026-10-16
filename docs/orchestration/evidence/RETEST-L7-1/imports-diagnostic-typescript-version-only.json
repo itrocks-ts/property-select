@@ -1,0 +1,91 @@
+{
+  "assertions": [
+    {
+      "name": "export target exists: property-select/./property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./cjs/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.html",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.js",
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "imports": [],
+  "exports": [
+    {
+      "owner": "property-select",
+      "entry": "./property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./cjs/property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.css"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.html"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.js"
+    }
+  ],
+  "cycles": [],
+  "status": "FAIL",
+  "failure": "TypeError: Cannot read properties of undefined (reading 'Latest')\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L7-1-imports.mjs:43:89\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)"
+}

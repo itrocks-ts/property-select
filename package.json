@@ -65,5 +65,5 @@
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
 		"test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
 	},
-	"version": "0.7.3"
+	"version": "0.7.4"
 }

@@ -1,0 +1,19 @@
+
+> showtime@0.0.6 build
+> concurrently npm:build:back npm:build:front npm:build:scss
+
+[build:scss]
+[build:scss] > showtime@0.0.6 build:scss
+[build:scss] > sass --no-source-map app:app
+[build:scss]
+[build:front]
+[build:front] > showtime@0.0.6 build:front
+[build:front] > tsc -p tsconfig.front.json
+[build:front]
+[build:back]
+[build:back] > showtime@0.0.6 build:back
+[build:back] > tsc
+[build:back]
+[build:scss] npm run build:scss exited with code 0
+[build:front] npm run build:front exited with code 0
+[build:back] npm run build:back exited with code 0

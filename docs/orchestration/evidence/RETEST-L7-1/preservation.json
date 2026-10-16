@@ -1,0 +1,71 @@
+{
+  "application": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "absent": [
+      true,
+      true
+    ],
+    "configSha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  },
+  "owners": [
+    {
+      "owner": "property-select",
+      "head": "a4c153a2e820f279171b023339fa22cffa54575c",
+      "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/defects/L7-01.md\n M docs/orchestration/defects/L7-02.md\n M docs/orchestration/tasks/RETEST-L7-1.md\n M package.json\n?? docs/orchestration/environment/checks/RETEST-L7-1-browser.mjs\n?? docs/orchestration/environment/checks/RETEST-L7-1-imports.mjs\n?? docs/orchestration/environment/checks/RETEST-L7-1-scope.mjs\n?? docs/orchestration/evidence/RETEST-L7-1/\n?? docs/orchestration/reports/RETEST-L7-1.md\n"
+    },
+    {
+      "owner": "list",
+      "head": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "status": ""
+    },
+    {
+      "owner": "table",
+      "head": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "status": ""
+    },
+    {
+      "owner": "framework",
+      "head": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "status": ""
+    },
+    {
+      "owner": "home",
+      "head": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "status": ""
+    },
+    {
+      "owner": "reflect",
+      "head": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "status": ""
+    },
+    {
+      "owner": "reflect-path",
+      "head": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "status": ""
+    },
+    {
+      "owner": "storage",
+      "head": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "status": ""
+    },
+    {
+      "owner": "sql-build",
+      "head": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "status": ""
+    },
+    {
+      "owner": "sql-join",
+      "head": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "status": ""
+    },
+    {
+      "owner": "mysql",
+      "head": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "status": ""
+    }
+  ],
+  "historicalL7Unchanged": true,
+  "historicalFileCount": 66
+}

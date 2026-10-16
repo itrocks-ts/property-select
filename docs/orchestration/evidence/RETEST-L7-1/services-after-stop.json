@@ -1,0 +1,15 @@
+{
+  "availability": [
+    {
+      "url": "http://127.0.0.1:13981/",
+      "status": "closed",
+      "error": "ECONNREFUSED"
+    },
+    {
+      "url": "http://127.0.0.1:13982/",
+      "status": "closed",
+      "error": "ECONNREFUSED"
+    }
+  ],
+  "mysql": "mysqld is alive\n"
+}

@@ -1,0 +1,57 @@
+{
+  "ownership": {
+    "app": {
+      "args": [
+        "/usr/bin/node",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+        "--ps-environment=/tmp/property-select/RETEST-L7-1-owned",
+        "--ps-port=13981",
+        "--ps-token=f81cc771-90ad-4c3c-8cf4-280c6fc0f3d1"
+      ],
+      "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+      "executable": "/usr/bin/node",
+      "start": "152991088",
+      "state": "R",
+      "uid": 1000,
+      "directory": "/tmp/property-select/RETEST-L7-1-owned",
+      "name": "app",
+      "pid": 2583285,
+      "port": 13981,
+      "token": "f81cc771-90ad-4c3c-8cf4-280c6fc0f3d1"
+    },
+    "standalone": {
+      "args": [
+        "/usr/bin/node",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+        "--ps-environment=/tmp/property-select/RETEST-L7-1-owned",
+        "--ps-port=13982",
+        "--ps-token=405bc2ad-ed3a-4fa3-a9bc-126b5e5b87fb"
+      ],
+      "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+      "executable": "/usr/bin/node",
+      "start": "152991229",
+      "state": "R",
+      "uid": 1000,
+      "directory": "/tmp/property-select/RETEST-L7-1-owned",
+      "name": "standalone",
+      "pid": 2583310,
+      "port": 13982,
+      "token": "405bc2ad-ed3a-4fa3-a9bc-126b5e5b87fb"
+    }
+  },
+  "availability": [
+    {
+      "url": "http://127.0.0.1:13981/property-select-invoice",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13981/country",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13982/",
+      "status": 200
+    }
+  ],
+  "mysql": "mysqld is alive\n"
+}

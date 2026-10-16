@@ -1,0 +1,29 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "successfulCommands": [
+    "PS_L7_BUILD_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1/build node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L7-build.mjs",
+    "PS_L7_ARCHITECTURE_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1 node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L7-architecture.mjs",
+    "PS_L7_ERROR_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1/error node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L7-error.mjs",
+    "PS_L7_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1 node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L7.mjs",
+    "PS_TABLE_URL=http://127.0.0.1:13982/table-fixture PS_TABLE_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1/header node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V2-TABLE-1-itinerary.mjs",
+    "PS_V5_SUPPORT_APP=http://127.0.0.1:13981 PS_V5_SUPPORT_DEMO=http://127.0.0.1:13982 PS_V5_SUPPORT_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1/support node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V5-support.mjs",
+    "PS_STATUS_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-L7-1/status node node_modules/@itrocks/property-select/test/browser-status.mjs",
+    "PS_VSQL_OUTPUT=../../evidence/RETEST-L7-1/sql/ PS_VSQL_RAW=/tmp/property-select/RETEST-L7-1-sql node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/VSQL.mjs",
+    "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L7-1-imports.mjs",
+    "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L7-1-browser.mjs",
+    "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L7-1-scope.mjs"
+  ],
+  "normalEscalation": "require_escalated after restricted EPERM for child-process/browser/socket operations; Chromium sandbox retained",
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "fixture": "canonical 120 roots; VSQL independent 137-root seed restored to 120",
+  "rawSql": {
+    "path": "/tmp/property-select/RETEST-L7-1-sql/mysql-general.raw.log",
+    "sha256": "ceca8d2ee00d8257831baf9053a405ea8992ea34f525a0fa51f0b2bc077bb42b"
+  },
+  "driverSha256": {
+    "environment/checks/RETEST-L7-1-browser.mjs": "db7f777b4bc4adf20b787c730d18845c1ded460d4e7ffe28434be360e96ff26a",
+    "environment/checks/RETEST-L7-1-imports.mjs": "577a4e94548173eeb000d157923d8549148914a804945a61f3dcd83e44fff20b",
+    "environment/checks/RETEST-L7-1-scope.mjs": "5c5521906bbc352a9b85af610cc5f0197e558c81fdd3b98317c0a249add512ba"
+  }
+}

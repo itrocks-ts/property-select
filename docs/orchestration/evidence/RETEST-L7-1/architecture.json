@@ -1,0 +1,1472 @@
+{
+  "owners": [
+    {
+      "owner": "framework",
+      "version": "0.11.0",
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc"
+    },
+    {
+      "owner": "home",
+      "version": "0.7.0",
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd"
+    },
+    {
+      "owner": "list",
+      "version": "0.12.1",
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449"
+    },
+    {
+      "owner": "property-select",
+      "version": "0.7.4",
+      "sha": "a4c153a2e820f279171b023339fa22cffa54575c"
+    },
+    {
+      "owner": "table",
+      "version": "0.4.0",
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6"
+    }
+  ],
+  "cycles": [],
+  "imports": [
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/asset-loader/asset-loader.js",
+      "dependency": "asset-loader",
+      "entry": "asset-loader.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/auto-focus/auto-focus.js",
+      "dependency": "auto-focus",
+      "entry": "auto-focus.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/breadcrumb/breadcrumb.js",
+      "dependency": "breadcrumb",
+      "entry": "breadcrumb.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/build/build.js",
+      "dependency": "build",
+      "entry": "build.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/collapse/collapse.js",
+      "dependency": "collapse",
+      "entry": "collapse.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/contained-auto-width/contained-auto-width.js",
+      "dependency": "contained-auto-width",
+      "entry": "contained-auto-width.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/notifications/notifications.js",
+      "dependency": "notifications",
+      "entry": "notifications.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/notifications/notifications.js",
+      "dependency": "notifications",
+      "entry": "notifications.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/begin-end.js",
+      "dependency": "xtarget",
+      "entry": "begin-end.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/build.js",
+      "dependency": "xtarget",
+      "entry": "build.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/secure-click.js",
+      "dependency": "xtarget",
+      "entry": "secure-click.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/composite.js",
+      "dependency": "xtarget",
+      "entry": "composite.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/default-target.js",
+      "dependency": "xtarget",
+      "entry": "default-target.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/xtarget.js",
+      "dependency": "xtarget",
+      "entry": "xtarget.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/head.js",
+      "dependency": "xtarget",
+      "entry": "head.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/headers-size.js",
+      "dependency": "xtarget",
+      "entry": "headers-size.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/history.js",
+      "dependency": "xtarget",
+      "entry": "history.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/hold-on.js",
+      "dependency": "xtarget",
+      "entry": "hold-on.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/main-target.js",
+      "dependency": "xtarget",
+      "entry": "main-target.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/modifier.js",
+      "dependency": "xtarget",
+      "entry": "modifier.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/autocomplete/autocomplete.js",
+      "dependency": "autocomplete",
+      "entry": "autocomplete.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/links/links.js",
+      "dependency": "links",
+      "entry": "links.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/air-datepicker/air-datepicker.js",
+      "dependency": "air-datepicker",
+      "entry": "air-datepicker.js"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/lazy-loading",
+      "dependency": "lazy-loading",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-file",
+      "dependency": "class-file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/collection",
+      "dependency": "collection",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/file",
+      "dependency": "file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/list-properties",
+      "dependency": "list-properties",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/password",
+      "dependency": "password",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/password/transformers",
+      "dependency": "password",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-translate",
+      "dependency": "property-translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-translate/transformers",
+      "dependency": "property-translate",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/required",
+      "dependency": "required",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/string-formats",
+      "dependency": "string-formats",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/string-formats/transformers",
+      "dependency": "string-formats",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/template",
+      "dependency": "template",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/template-insight",
+      "dependency": "template-insight",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/class-file/automation",
+      "dependency": "class-file",
+      "entry": "automation"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/compose",
+      "dependency": "compose",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/default-action-workflow",
+      "dependency": "default-action-workflow",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "action-request",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "action-request",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/fastify-file-session-store",
+      "dependency": "fastify-file-session-store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/fastify",
+      "dependency": "fastify",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/request-response",
+      "dependency": "request-response",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/session",
+      "dependency": "session",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/template",
+      "dependency": "template",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-actions.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-file",
+      "dependency": "class-file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "property-select",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/config",
+      "dependency": "config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/fastify",
+      "dependency": "fastify",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/list",
+      "dependency": "list",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/list/selector-state",
+      "dependency": "list",
+      "entry": "selector-state"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "property-select",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-class.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-class.js",
+      "specifier": "@itrocks/uses",
+      "dependency": "uses",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/property-type",
+      "dependency": "property-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/decorator/property",
+      "dependency": "decorator",
+      "entry": "property"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/lazy-loading",
+      "dependency": "lazy-loading",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/mysql",
+      "dependency": "mysql",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/sql-build",
+      "dependency": "sql-build",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/sql-functions",
+      "dependency": "sql-functions",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/mysql",
+      "dependency": "mysql",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/required",
+      "dependency": "required",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/store-representative.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/store-representative.js",
+      "specifier": "@itrocks/store",
+      "dependency": "store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "property-select-list.js",
+      "specifier": "@itrocks/asset-loader/asset-loader.js",
+      "dependency": "asset-loader",
+      "entry": "asset-loader.js"
+    },
+    {
+      "owner": "framework",
+      "file": "property-select-list.js",
+      "specifier": "@itrocks/list/property-select.js",
+      "dependency": "list",
+      "entry": "property-select.js"
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/build/build.js",
+      "dependency": "build",
+      "entry": "build.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-add.js",
+      "dependency": "table",
+      "entry": "column-add.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-reorder-freeze.js",
+      "dependency": "table",
+      "entry": "column-reorder-freeze.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-reorder.js",
+      "dependency": "table",
+      "entry": "column-reorder.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/feed.js",
+      "dependency": "table",
+      "entry": "feed.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze.js",
+      "dependency": "table",
+      "entry": "freeze.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze/inherit-background.js",
+      "dependency": "table",
+      "entry": "freeze/inherit-background.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze/inherit-border.js",
+      "dependency": "table",
+      "entry": "freeze/inherit-border.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/link.js",
+      "dependency": "table",
+      "entry": "link.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/table.js",
+      "dependency": "table",
+      "entry": "table.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/xtarget/xtarget.js",
+      "dependency": "xtarget",
+      "entry": "xtarget.js"
+    },
+    {
+      "owner": "list",
+      "file": "cjs/columns.js",
+      "specifier": "@itrocks/list-properties",
+      "dependency": "list-properties",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/feed.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/persist.js",
+      "specifier": "@itrocks/route",
+      "dependency": "route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "class-view",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "property-view",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/action",
+      "dependency": "action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "action-request",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "property-select",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "property-select",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/request-response",
+      "dependency": "request-response",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/sort",
+      "dependency": "sort",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/sort",
+      "dependency": "sort",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "property-select.js",
+      "specifier": "@itrocks/property-select/front/property-select.js",
+      "dependency": "property-select",
+      "entry": "front/property-select.js"
+    },
+    {
+      "owner": "list",
+      "file": "property-select.js",
+      "specifier": "@itrocks/property-select/property-select.js",
+      "dependency": "property-select",
+      "entry": "property-select.js"
+    },
+    {
+      "owner": "list",
+      "file": "selector-state.js",
+      "specifier": "@itrocks/property-select/property-select.js",
+      "dependency": "property-select",
+      "entry": "property-select.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-add.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-add.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder-freeze.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "edit.js",
+      "specifier": "../contenteditable/contenteditable.js",
+      "dependency": "contenteditable",
+      "entry": "contenteditable.js"
+    },
+    {
+      "owner": "table",
+      "file": "edit.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "feed.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "freeze.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "link.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "link.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "table.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "plugin",
+      "entry": "plugin.js"
+    }
+  ],
+  "missing": [],
+  "privateImports": [],
+  "selectorHostImports": [],
+  "missingOwners": [],
+  "status": "PASS"
+}

@@ -4,7 +4,8 @@
 
 Independently close [L7-01](../defects/L7-01.md) and [L7-02](../defects/L7-02.md) and complete all L7 obligations.
 Prerequisite: attributable FIX-L7-1 author report and owner commits with no unresolved blocker.
-Current status: `PENDING`. Fresh verifier must differ from the corrector; no subdelegation or V7.
+Current status: `DONE / independent PASS`; see [report](../reports/RETEST-L7-1.md).
+Fresh verifier must differ from the corrector; no subdelegation or V7.
 Read application/owner instructions, handbook routes, [COMMON.md](../COMMON.md), [EXECUTION.md](../EXECUTION.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),
 [ENVIRONMENT.md](../ENVIRONMENT.md), [VERIFY-ENVIRONMENT.md](../VERIFY-ENVIRONMENT.md), [L7](L7.md), its report,

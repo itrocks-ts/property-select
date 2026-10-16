@@ -1,5 +1,28 @@
 # Phase 1 validation matrix
 
+## RETEST-L7-1 independent completion
+
+**DONE / independent PASS**, 16 October 2026. [Report](reports/RETEST-L7-1.md), runtime selector **0.7.3**,
+tracking/tests **0.7.4**, list **0.12.1**. L7-01 and L7-02 are **CLOSED**; all L7 obligations pass.
+Historical L7 failure evidence is retained. V7's prerequisite is cleared; V7 and D8 remain unexecuted.
+
+- DEP-02/PORT-10: [new AST audit](evidence/RETEST-L7-1/imports-independent.json), 287 assertions over 208 runtime
+  imports, plus the [delivered audit](evidence/RETEST-L7-1/architecture.json): direct declarations, public entries,
+  types/assets and dependency direction/cycles PASS.
+- QUA-01/PORT-09: [three original landscape cases](evidence/RETEST-L7-1/error/results.json) and
+  [62 new native-input assertions](evidence/RETEST-L7-1/independent/results.json) at all four dimensions PASS.
+  HTTP 503 preserves non-empty query/branch/recents and exact columns through native wheel/save, storage failure
+  and Retry; successful selection retry adds once and restores ordinary search status.
+  [Sixteen public view status assertions](evidence/RETEST-L7-1/status/results.json) also PASS.
+- API-03/QUA-02/QUA-03/DEP-09/DEP-10: [290 L7 observations](evidence/RETEST-L7-1/results.json) PASS, including both
+  standalone load/lifecycle runs, bounded catalogue/search, all-size failures/recovery and pending departure cleanup.
+- Scope/JSON/SQL: [69 new complete-entity/scope assertions](evidence/RETEST-L7-1/scope-independent.json) compare all
+  61 authorised JSON entities against 120 SQL roots and challenge visible ids/deduplication with one bounded query.
+  [Fresh independent SQL](evidence/RETEST-L7-1/sql/results.json): 14 groups / 1,390 observations / 110 statements PASS.
+- Table/lifecycle: [182 header assertions](evidence/RETEST-L7-1/header/results.json) and
+  [72 pending admission/value cancellation assertions](evidence/RETEST-L7-1/support/results.json) PASS.
+- [Five owner builds/public inventories, 140 owner tests and showtime build](evidence/RETEST-L7-1/build/results.json) PASS.
+
 ## FIX-L7-1 author correction
 
 **DONE / author PASS**, 16 October 2026. [Report](reports/FIX-L7-1.md), selector **0.7.3**, list **0.12.1**.
@@ -12,7 +35,7 @@ The [L7 replay](evidence/FIX-L7-1/results.json) passes 290 assertions, with
 [Five builds/public inventories, 140 owner tests and application build](evidence/FIX-L7-1/build-final/results.json) pass;
 [final selector tests](evidence/FIX-L7-1/selector-final-tests.txt) cover the last generic-error adjustment.
 No SQL contract changed, so independent SQL was not repeated; historical SQL proof remains unchanged.
-L7-01/L7-02 await distinct RETEST-L7-1; L7 retains NEEDS_FIX and V7 remains blocked on that independent gate.
+L7-01/L7-02 are closed by the distinct RETEST-L7-1 above; the historical L7 verdict remains recorded.
 
 ## L7 regression and load verdict
 
@@ -30,8 +53,8 @@ L7-01/L7-02 await distinct RETEST-L7-1; L7 retains NEEDS_FIX and V7 remains bloc
 - **PASS SQL/build observations:** 14 independent SQL groups, 1,390 observations, 110 statements; five owner builds,
   public inventories, 139 owner tests and showtime build pass. Tested SHAs/versions are in the linked report.
 
-Tracking/tests patch: selector 0.7.2. L7 remains failed until separate FIX-L7-1 and independent RETEST-L7-1 complete;
-V7 now depends on that retest. This author regression gate does not claim final independent acceptance.
+Tracking/tests patch: selector 0.7.2. This historical failed gate is resolved by FIX-L7-1 and RETEST-L7-1 above.
+V7 depends on the completed retest and remains separate final independent acceptance.
 
 ## V6 independent touch and responsive verdict
 
@@ -1265,19 +1288,21 @@ Historical [V4 reproduction](evidence/V4/revocation.json) remains unchanged.
 Expected: Unavailable state store preserves live context and signals error; failed/slow data keeps gesture
 responsive, valid drop outcome independent of data completion and retry available.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **FAIL L7-02 visible consumer error**;
-storage and V5/V6 preview portions retain their PASS.
-L7 visible consumer failure: historical **FAIL [L7-02](defects/L7-02.md)**.
-[FIX-L7-1](reports/FIX-L7-1.md) author proof passes; independent RETEST-L7-1 remains required before acceptance.
+Proof: [session retest](reports/RETEST-V4-1.md), V5/V6 and [L7 retest](reports/RETEST-L7-1.md).
+Current verdict: **PASS current obligations; L7-02 CLOSED**. The original L7 visible-error failure remains
+historical evidence. Fresh aborted-HTTP and HTTP 503/native scroll/save/Retry proof passes at all four dimensions.
+Combined final acceptance remains V7.
 
 ### PORT-10: Public build and architecture
 
 Expected: Check direct runtime imports, npm dependency graph, public CJS/browser exports, types/assets/files, SOLID
 and zero server libraries in browser or host imports in selector.
 
-Proof: `evidence/<gate>/PORT-10.*` and `reports/<gate>.md`. Current verdict: **FAIL L7-01**;
-see [L7 import evidence](evidence/L7/architecture.json).
-[FIX-L7-1](reports/FIX-L7-1.md) author import proof passes; independent RETEST-L7-1 is pending.
+Proof: [independent L7 retest](reports/RETEST-L7-1.md),
+[AST imports/exports](evidence/RETEST-L7-1/imports-independent.json) and
+[build/public inventories](evidence/RETEST-L7-1/build/results.json).
+Current verdict: **PASS current obligations; L7-01 CLOSED**. Historical failed L7 imports remain recorded.
+Combined final acceptance remains V7.
 
 S02 owner observation: `PASS` for public CJS exports/declarations, package allowlist and neutral dependency direction.
 [Build](evidence/S02/storage-build.txt), [typecheck](evidence/S02/public-typecheck.txt),
