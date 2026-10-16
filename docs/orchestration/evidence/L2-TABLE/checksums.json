@@ -1,0 +1,19 @@
+{
+  "artifacts.json": "8a794b7503cec74de0683cc12ce6fd165d4e5bf928473d128b06de2348ace654",
+  "desktop-after.png": "1e99432baa692a108981221b17d68b867ad5f22261a064f33f724b53ac72b820",
+  "desktop-before.png": "eb28c7f10d8b5301b83bc0d1e644cdd6e36992410eec041e1c1da1eebc2d071d",
+  "landscape-after.png": "65d33ec5aed28fc39b3f9e4007fd07e3082326103cf0165f1687f0a8af67253d",
+  "landscape-before.png": "ea891b2b17d55f962ad8101b7081ec0e38ddcd5cf41f801eff63483b7c69e8ff",
+  "narrow-after.png": "c91aed2948500044a107e39d826f7abbcb8c253d871f20fc71adc3617c6dc1bd",
+  "narrow-before.png": "44b3bc3e28c0359f13360231644cbe2d96eed68ef9c13fe1ce31170f377a0991",
+  "portrait-after.png": "e6d1489490e26b797082900f7b014dc3a50b218bcc8bfdaff2c9c06b46407719",
+  "portrait-before.png": "8df4fe05d417edc55702eb809c92a009c1931c7cc1bb646ead28aa7191709464",
+  "preservation.json": "aa81b1d916f23214b5d785cb7258885ef91c6620b16bcab9a731e040830c63fa",
+  "results.json": "93ebb28cdb870ab6f655f40cae45d82559c5006c412ad4de5ef78f321b911f61",
+  "selector-build.txt": "aadd269fa7eb4833146478280109e09b52d9380fff233da6088b1961381d5ce2",
+  "service.json": "c085cd38bd2aa508358b5ddd5659b25ee8ddbb164628692954e55e2bf2798a6d",
+  "standalone.owner.json": "9826d054b0be9192eacef29d929f1f5db0adfaa33794b96172fe5f84d18b3f23",
+  "table-build.txt": "ddae13b1e00911acad9f7ab69b00e1a9424195f14ee82bd388a8a98aafd305db",
+  "table-pack.json": "2cf0b3e926c583cd758ae59163a3a1950424107c8c29fea232c76b79f228e75d",
+  "table-tests.txt": "66874c17ac84899c66d69ba1883a3cdfebe108c9e960155600ffd4a26f1bd291"
+}

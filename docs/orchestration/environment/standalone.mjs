@@ -16,6 +16,13 @@ for (const name of ['controller.js', 'front/property-select.css', 'front/propert
 	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js'])
 	assets.set(`/assets/${name}`, new URL(`../../../${name}`, import.meta.url))
 
+// Generic table fixture is a separate consumer of public table/plugin browser entries.
+assets.set('/table-fixture', new URL('../../../../table/demo/column-add.html', import.meta.url))
+for (const name of ['column-add.css', 'column-add.js', 'column-reorder.js', 'column-reorder-freeze.js',
+	'freeze.js', 'table.js', 'demo/column-add.css', 'demo/column-add.js'])
+	assets.set(`/itrocks/table/${name}`, new URL(`../../../../table/${name}`, import.meta.url))
+assets.set('/itrocks/plugin/plugin.js', new URL('../../../../plugin/plugin.js', import.meta.url))
+
 createServer((request, response) => {
 	let pathname
 	try {

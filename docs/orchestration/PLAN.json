@@ -909,7 +909,7 @@
         "node_modules/@itrocks/table"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Async data and plugin/frozen-column lifecycle must remain independent of list identity and metadata.",
@@ -920,7 +920,21 @@
         "TAB-05",
         "TAB-06",
         "DEP-07"
-      ]
+      ],
+      "delivery": {
+        "table": {
+          "sha": "c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97",
+          "version": "0.3.0"
+        },
+        "tracking_base_checkpoint": "863c9d1b03aa4672fa4fbb118f71deaa0319fb91",
+        "tracking_version": "0.2.4",
+        "author_validation": "20 Node tests, 127 sandboxed browser assertions at four dimensions, builds/public assets/package PASS",
+        "evidence": "evidence/L2-TABLE/results.json",
+        "fixture_url": "http://127.0.0.1:13752/table-fixture",
+        "independent_gate": "V2-TABLE pending",
+        "scope": "Click/async/teardown PASS; transaction foundation delivered; external pointer transport remains L5/V5",
+        "profile_attestation": "Requested gpt-6.1-sol / high; actual dispatch metadata held by parent; runtime unverified"
+      }
     },
     {
       "id": "V2-TABLE",

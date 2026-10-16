@@ -1,0 +1,995 @@
+{
+  "url": "http://127.0.0.1:13752/table-fixture",
+  "seed": "generic opaque ids, two rows, frozen selection/actions",
+  "assertions": [
+    {
+      "name": "desktop: initial column count",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard append before frozen actions",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard focus preserved",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: selection preserved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: actual loaded body values",
+      "expected": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "observed": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: duplicate does not move",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: one new commit only",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: public reveal/highlight retains input focus",
+      "expected": "focus",
+      "observed": "focus",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: motion preference",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: flash has no lingering class",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: slow rapid action deduplicates",
+      "expected": 8,
+      "observed": 8,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: committed loading differs from provisional",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: load error retains real column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: retry does not add another column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: creation failure leaves table unchanged",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: creation failure never commits",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: preview actual cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: cancel ignores late values",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: cancel has no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: reset retains opaque identity without duplicate",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: left frozen column remains fixed",
+      "expected": 16,
+      "observed": 16,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: right frozen column at visible edge",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: reset does not duplicate sort listener",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: frozen header cannot reorder or remove",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: native click sorts once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: header reorder remains usable",
+      "expected": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: drag suppresses sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: header removal still deletes every row cell",
+      "expected": [
+        5,
+        5,
+        5
+      ],
+      "observed": [
+        5,
+        5,
+        5
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: colgroup follows removal",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: async header replacement preserves active gesture",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: async replacement commits header reorder",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: header gesture cleans up after async replacement",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: all recorded browser input is trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: initial column count",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard append before frozen actions",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard focus preserved",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: selection preserved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: actual loaded body values",
+      "expected": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "observed": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: duplicate does not move",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: one new commit only",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: public reveal/highlight retains input focus",
+      "expected": "focus",
+      "observed": "focus",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: motion preference",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: flash has no lingering class",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: slow rapid action deduplicates",
+      "expected": 8,
+      "observed": 8,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: committed loading differs from provisional",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: load error retains real column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: retry does not add another column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: creation failure leaves table unchanged",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: creation failure never commits",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: preview actual cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: cancel ignores late values",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: cancel has no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: reset retains opaque identity without duplicate",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: left frozen column remains fixed",
+      "expected": 16,
+      "observed": 16,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: right frozen column at visible edge",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: reset does not duplicate sort listener",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: frozen header cannot reorder or remove",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: native click sorts once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: header reorder remains usable",
+      "expected": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: drag suppresses sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: header removal still deletes every row cell",
+      "expected": [
+        5,
+        5,
+        5
+      ],
+      "observed": [
+        5,
+        5,
+        5
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: colgroup follows removal",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: async header replacement preserves active gesture",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: async replacement commits header reorder",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: header gesture cleans up after async replacement",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: all recorded browser input is trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: initial column count",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: keyboard append before frozen actions",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: keyboard focus preserved",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: selection preserved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: actual loaded body values",
+      "expected": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "observed": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: duplicate does not move",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: one new commit only",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: public reveal/highlight retains input focus",
+      "expected": "focus",
+      "observed": "focus",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: motion preference",
+      "expected": "none",
+      "observed": "none",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: flash has no lingering class",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: slow rapid action deduplicates",
+      "expected": 8,
+      "observed": 8,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: committed loading differs from provisional",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: load error retains real column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: retry does not add another column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: creation failure leaves table unchanged",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: creation failure never commits",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: preview actual cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: cancel ignores late values",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: cancel has no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: reset retains opaque identity without duplicate",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: left frozen column remains fixed",
+      "expected": 16,
+      "observed": 16,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: right frozen column at visible edge",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: all recorded browser input is trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: initial column count",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: keyboard append before frozen actions",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: keyboard focus preserved",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: selection preserved",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: actual loaded body values",
+      "expected": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "observed": [
+        "Metric opaque/metric:7 / 1",
+        "Metric opaque/metric:7 / 2"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: duplicate does not move",
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "opaque/metric:7",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: one new commit only",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: public reveal/highlight retains input focus",
+      "expected": "focus",
+      "observed": "focus",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: motion preference",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: flash has no lingering class",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: slow rapid action deduplicates",
+      "expected": 8,
+      "observed": 8,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: committed loading differs from provisional",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: load error retains real column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: retry does not add another column",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: creation failure leaves table unchanged",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: creation failure never commits",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: preview actual cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: cancel ignores late values",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: cancel has no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reset retains opaque identity without duplicate",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: left frozen column remains fixed",
+      "expected": 16,
+      "observed": 16,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: right frozen column at visible edge",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: no document overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: reset does not duplicate sort listener",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: frozen header cannot reorder or remove",
+      "expected": 9,
+      "observed": 9,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: native click sorts once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: header reorder remains usable",
+      "expected": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "observed": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: drag suppresses sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: header removal still deletes every row cell",
+      "expected": [
+        5,
+        5,
+        5
+      ],
+      "observed": [
+        5,
+        5,
+        5
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: colgroup follows removal",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: async header replacement preserves active gesture",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: async replacement commits header reorder",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: header gesture cleans up after async replacement",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: all recorded browser input is trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "browser health",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    }
+  ],
+  "health": [],
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "node": "v24.0.1",
+  "checkpoints": {
+    "table": "46adbb2f85105f3f33545f1b4bea9267d1c7c393 + L2-TABLE / 0.3.0",
+    "tracking": "863c9d1b03aa4672fa4fbb118f71deaa0319fb91 + L2-TABLE / 0.2.4"
+  },
+  "verdict": "PASS"
+}

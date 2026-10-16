@@ -1,0 +1,28 @@
+✔ auto-scroll reaches either limit with a stationary pointer at or beyond the edge (4.407931ms)
+✔ columns keep moving outside either edge during removal and auto-scroll (1.731672ms)
+✔ dropping on selection, after the data, above or below removes all column cells (1.090626ms)
+✔ returning inside clears removal and preserves normal reordering (0.360582ms)
+✔ cancelling in a removal zone restores the initial order and sends no callback (0.261073ms)
+✔ removal stays optional for tables using only reordering (0.22266ms)
+✔ release coordinates decide removal and the last data column can also be removed (0.245363ms)
+✔ moving changes the indicator, returning to the original position clears it, and removal takes priority (0.27919ms)
+✔ mouse: tap keeps sorting, dragging suppresses its click, next tap sorts (22.965555ms)
+✔ pen: tap keeps sorting, dragging suppresses its click, next tap sorts (21.959118ms)
+✔ touch: tap keeps sorting, dragging suppresses its click, next tap sorts (22.015292ms)
+✔ only the primary pointer can arm a drag and other fingers cannot move or finish it (1.371346ms)
+✔ unexpected capture loss restores order and clears the drag without saving (1.263413ms)
+✔ feed sends declared fields with exact, prefix and suffix selectors (4.644768ms)
+✔ asynchronous values replace placeholders after a distinct commit and rapid clicks deduplicate (10.988722ms)
+✔ cancel aborts an uncooperative load and prevents late DOM resurrection (3.505348ms)
+✔ existing transactions reuse the column and cancel restores its position without a removal (1.387016ms)
+✔ failed values remain committed and retry loads them without another addition (2.115675ms)
+✔ invalid creation leaves no column and teardown ignores late values (1.794363ms)
+✔ a changed row view rejects stale loaded data and retains a visible recoverable error (0.969697ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 135.895482

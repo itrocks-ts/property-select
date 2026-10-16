@@ -1086,6 +1086,10 @@ an implemented feature or use a simulated replacement for a required browser/dat
   PANE-05 is L2-LIST/V2; product drag restoration is V6. No list header or product drag is required at this stage.
 - L2-TABLE/V2-TABLE: PORT-04 click addition, asynchronous data and generic teardown; external transport commit/cancel
   completes at L5/V5. Existing header-origin reorder/removal/freeze remains mandatory immediately.
+  L2-TABLE author observations **PASS**: 20 Node tests and 127 browser assertions on public table `0.3.0`, including
+  TAB-02/TAB-04/TAB-05/TAB-06 click portions, provisional/committed separation, reset/late work and real header
+  reorder/remove/sort/freeze. See [report](reports/L2-TABLE.md) and [evidence](evidence/L2-TABLE/results.json).
+  V2-TABLE remains NOT_RUN; no combined PORT-04, T18 or DEP-07 verdict is completed here.
 - V2: SQL-14 browser linkage, object/deep-column data, plural refusal, visible-row reload and PANE-05. L2 navigation
   cases are complete except observations explicitly assigned to later touch/search/drag features.
 - V3: T09–T13 search/navigation and PORT-03/06, plus META-01–META-03. T11 intermediate-segment drag is V5.

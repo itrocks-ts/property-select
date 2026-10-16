@@ -1,0 +1,45 @@
+{
+  "verdict": "PASS",
+  "version": "0.3.0",
+  "files": {
+    "column-add.css": {
+      "bytes": 983,
+      "sha256": "6bd020bb689dcb253015d83513575bf862cc9fe8acb112295508311546d7cdcf"
+    },
+    "column-add.d.ts": {
+      "bytes": 2665,
+      "sha256": "3b22a7d4af6c617a6b45ebbea6f818b192645270d842ec779e8436513fdce39e"
+    },
+    "column-add.js": {
+      "bytes": 12761,
+      "sha256": "f226773b294454c42853bd1dbb605bdf9c3905fcbb79808a0085206dea3d9a71"
+    },
+    "column-reorder.d.ts": {
+      "bytes": 2230,
+      "sha256": "56563acea5c0e9d50b5b6a9f4395efc853a8d8b36287645dd1b960e6102cfee3"
+    },
+    "column-reorder.js": {
+      "bytes": 12954,
+      "sha256": "752fc9f666ffdf0f78ee379776c8e6dc89452f8fa2d13cb3e6770e4bd70c9690"
+    },
+    "freeze.js": {
+      "bytes": 7600,
+      "sha256": "213e7f2536d912d1e1105a4bf76880e227c94dd121b91542ed7889b69de648de"
+    },
+    "table.js": {
+      "bytes": 2493,
+      "sha256": "fe26eb6fc58ef190c44c98de20298ff739090eeae329e78146eef68614af226d"
+    }
+  },
+  "resolve": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-add.js",
+  "excluded": [
+    "src",
+    "demo",
+    "test"
+  ],
+  "generatedIgnored": [
+    "column-add.js",
+    "column-add.d.ts",
+    "column-add.css"
+  ]
+}

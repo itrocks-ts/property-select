@@ -205,11 +205,17 @@ interface ColumnOperation {
   cancel(): void
 }
 // Public plugin methods; sample is a structural type owned by table, not an import from the selector.
-add(source: ColumnSource): Promise<'added'>
+add(source: ColumnSource): Promise<'added' | 'existing'>
 reveal(id: string): void
 highlight(id: string): void
 beginExternal(source: ColumnSource, sample: PointerSample): ColumnOperation
 ```
+
+L2-TABLE delivers `add`, `reveal` and `highlight`, plus `begin(source): ColumnTransaction` as a non-pointer foundation
+with `commit`, `cancel`, `moveTo` and `ready`. Its optional `load` callback can be retried through `retry(id)`;
+`dispose()` aborts outstanding work and reset invokes it automatically. `beginExternal` above remains planned for L5;
+it is not an exported L2 capability. Current DOM shape is one header row without spans and one optional column group.
+See the table owner's README for the delivered callback/notification signatures.
 
 `create()` immediately produces a real header and one placeholder cell per loaded row. `load()` enriches it without
 blocking transport, accepts cancellation and carries the current row-view generation in the list closure. Callbacks
