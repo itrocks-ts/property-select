@@ -2,8 +2,8 @@
 
 ## Status and owner
 
-Corrected by FIX-V2-TABLE-1 author; awaiting independent RETEST-V2-TABLE-1.
-V2-TABLE remains blocking (`NEEDS_FIX`). Owner: `@itrocks/table`.
+Closed by independent RETEST-V2-TABLE-1 PASS. The historical V2-TABLE failure is resolved.
+Owner: `@itrocks/table`; verified corrective commit `7537cf58863ad0efc5c3edb2b15a0537d54568df` / `0.3.1`.
 Tested commit: `c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97`, version `0.3.0`.
 Requirements: TAB-02/TAB-04, DEP-07 and PORT-04 generic addition stage.
 No product code was changed during independent verification.
@@ -55,3 +55,12 @@ complete browser drivers in the correction author's run. Rendered cells define s
 previous freeze rules before measuring natural offsets. Wide-column reveal minimises movement in both directions.
 See [correction report](../reports/FIX-V2-TABLE-1.md) and [fresh proof](../evidence/FIX-V2-TABLE-1/).
 The historical failed evidence remains intact. This author result does not close the independent gate.
+
+## Independent closure
+
+[RETEST-V2-TABLE-1](../reports/RETEST-V2-TABLE-1.md) independently passes the original reproducer at all four sizes,
+the complete itinerary in colgroup and header-backed configurations, exact col identity/order regressions and a new
+rendered-cell geometry oracle across 24 configurations. Fitting columns are fully visible; wide columns use the
+available inner area in both directions. Focus, selection, asynchronous replacement and lifecycle checks pass.
+The [fresh evidence](../evidence/RETEST-V2-TABLE-1/) closes this defect and clears the L2-LIST prerequisite.
+Historical failing checkpoints, reports and screenshots remain preserved; combined requirements await later gates.

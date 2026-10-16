@@ -1,0 +1,8936 @@
+{
+  "assertions": [
+    {
+      "mode": "desktop",
+      "name": "fresh page: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "immediate real loading column: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "loading cells busy and committed, no provisional",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "asynchronous values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "one commit",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "one asynchronous completion",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reveal retains typed input and focus",
+      "expected": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "observed": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "metric maximally visible between frozen edges",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "same flash reaches every column cell",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "motion setting",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "green then light keyframes exist",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "flash clears",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "keyboard existing outcome",
+      "expected": "existing",
+      "observed": "existing",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "keyboard focus stays on trigger",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "duplicate no commit or reload",
+      "expected": [
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "rapid pending duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "slow committed once before load",
+      "expected": [
+        1,
+        0
+      ],
+      "observed": [
+        1,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "slow complete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "recoverable error retains placeholders: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "error visibly marked on all cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "retry values without duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "retry one commit/error/load",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "creation failure visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "creation failure changes no cells: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "creation failure no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "provisional cells and no commit",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "cancel ignores late async values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "cancel no provisional remnants",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "repeated reset retains ids: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reset existing never recommits",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "frozen edges after horizontal input",
+      "expected": [
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "responsive document does not overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "one sort listener after repeated reset",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "header reorder: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reorder does not sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "header delete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "frozen origin protected: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "async replacement retains active header drag",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "async drag finishes exactly once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "async drag classes clean",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "async replacement body alignment: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "full reload fresh state: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reset aborts committed and provisional late values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reset clears busy/provisional/flash",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "reset pending no late load",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "disposal removes preview and releases late work",
+      "expected": [
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "desktop",
+      "name": "disposed addition rejects",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "fresh page: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "immediate real loading column: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "loading cells busy and committed, no provisional",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "asynchronous values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "one commit",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "one asynchronous completion",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reveal retains typed input and focus",
+      "expected": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "observed": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "metric maximally visible between frozen edges",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "same flash reaches every column cell",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "motion setting",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "green then light keyframes exist",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "flash clears",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "keyboard existing outcome",
+      "expected": "existing",
+      "observed": "existing",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "keyboard focus stays on trigger",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "duplicate no commit or reload",
+      "expected": [
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "rapid pending duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "slow committed once before load",
+      "expected": [
+        1,
+        0
+      ],
+      "observed": [
+        1,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "slow complete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "recoverable error retains placeholders: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "error visibly marked on all cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "retry values without duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "retry one commit/error/load",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "creation failure visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "creation failure changes no cells: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "creation failure no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "provisional cells and no commit",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "cancel ignores late async values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "cancel no provisional remnants",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "repeated reset retains ids: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reset existing never recommits",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "frozen edges after horizontal input",
+      "expected": [
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "responsive document does not overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "one sort listener after repeated reset",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "header reorder: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reorder does not sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "header delete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "frozen origin protected: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "async replacement retains active header drag",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "async drag finishes exactly once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "async drag classes clean",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "async replacement body alignment: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "full reload fresh state: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reset aborts committed and provisional late values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reset clears busy/provisional/flash",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "reset pending no late load",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "disposal removes preview and releases late work",
+      "expected": [
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "narrow",
+      "name": "disposed addition rejects",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "fresh page: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "immediate real loading column: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "loading cells busy and committed, no provisional",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "asynchronous values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "one commit",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "one asynchronous completion",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reveal retains typed input and focus",
+      "expected": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "observed": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "metric maximally visible between frozen edges",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "same flash reaches every column cell",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "motion setting",
+      "expected": "none",
+      "observed": "none",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reduced motion visible outline",
+      "expected": "solid",
+      "observed": "solid",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "flash clears",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "keyboard existing outcome",
+      "expected": "existing",
+      "observed": "existing",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "keyboard focus stays on trigger",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "duplicate no commit or reload",
+      "expected": [
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "rapid pending duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "slow committed once before load",
+      "expected": [
+        1,
+        0
+      ],
+      "observed": [
+        1,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "slow complete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "recoverable error retains placeholders: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "error visibly marked on all cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "retry values without duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "retry one commit/error/load",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "creation failure visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "creation failure changes no cells: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "creation failure no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "provisional cells and no commit",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "cancel ignores late async values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "cancel no provisional remnants",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "repeated reset retains ids: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reset existing never recommits",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "frozen edges after horizontal input",
+      "expected": [
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "responsive document does not overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "one sort listener after repeated reset",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "full reload fresh state: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reset aborts committed and provisional late values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reset clears busy/provisional/flash",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "reset pending no late load",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "disposal removes preview and releases late work",
+      "expected": [
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "portrait",
+      "name": "disposed addition rejects",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "fresh page: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "immediate real loading column: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "loading cells busy and committed, no provisional",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "asynchronous values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "one commit",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "one asynchronous completion",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reveal retains typed input and focus",
+      "expected": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "observed": [
+        "focus",
+        "Untouched input kept"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "metric maximally visible between frozen edges",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "same flash reaches every column cell",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "motion setting",
+      "expected": "itrocks-column-add-flash",
+      "observed": "itrocks-column-add-flash",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "green then light keyframes exist",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "flash clears",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "keyboard existing outcome",
+      "expected": "existing",
+      "observed": "existing",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "keyboard focus stays on trigger",
+      "expected": "add",
+      "observed": "add",
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "duplicate no commit or reload",
+      "expected": [
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "rapid pending duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "slow committed once before load",
+      "expected": [
+        1,
+        0
+      ],
+      "observed": [
+        1,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "slow complete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 8,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "recoverable error retains placeholders: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "error visibly marked on all cells",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "retry values without duplicate: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "retry one commit/error/load",
+      "expected": [
+        1,
+        1,
+        1
+      ],
+      "observed": [
+        1,
+        1,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "creation failure visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "creation failure changes no cells: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "creation failure no commit",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "provisional cells and no commit",
+      "expected": [
+        3,
+        0
+      ],
+      "observed": [
+        3,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "cancel ignores late async values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "cancel no provisional remnants",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "repeated reset retains ids: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 9,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "opaque/metric:7",
+          "slow",
+          "failure",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Metric opaque/metric:7 / 1",
+            "Metric slow / 1",
+            "Metric failure / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Metric opaque/metric:7 / 2",
+            "Metric slow / 2",
+            "Metric failure / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reset existing never recommits",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "frozen edges after horizontal input",
+      "expected": [
+        true,
+        true
+      ],
+      "observed": [
+        true,
+        true
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "responsive document does not overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "one sort listener after repeated reset",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "header reorder: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "a",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "A1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "A2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reorder does not sort",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "header delete: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "frozen origin protected: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 5,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "async replacement retains active header drag",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "async drag finishes exactly once",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "async drag classes clean",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "async replacement body alignment: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "b",
+          "c",
+          "slow",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "B1",
+            "C1",
+            "Metric slow / 1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "B2",
+            "C2",
+            "Metric slow / 2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "full reload fresh state: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 6,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reset aborts committed and provisional late values: exact header/colgroup/body alignment",
+      "expected": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "observed": {
+        "cols": 7,
+        "colOrder": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "order": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "slow",
+          "Actions"
+        ],
+        "rows": [
+          [
+            "checked:true",
+            "A1",
+            "B1",
+            "C1",
+            "D1",
+            "Loading / 1",
+            "Open"
+          ],
+          [
+            "checked:false",
+            "A2",
+            "B2",
+            "C2",
+            "D2",
+            "Loading / 2",
+            "Open"
+          ]
+        ]
+      },
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reset clears busy/provisional/flash",
+      "expected": [
+        0,
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "reset pending no late load",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "disposal removes preview and releases late work",
+      "expected": [
+        0,
+        0
+      ],
+      "observed": [
+        0,
+        0
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "disposed addition rejects",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "all recorded browser inputs trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "mode": "landscape",
+      "name": "network and console health",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    }
+  ],
+  "contexts": [
+    {
+      "mode": "desktop",
+      "width": 1280,
+      "height": 720,
+      "input": "trusted mouse and keyboard",
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "flash": {
+        "animation": "itrocks-column-add-flash",
+        "outline": "none",
+        "background": "oklab(0.890779 -0.0425335 0.0232467)",
+        "keyframes": [
+          "color(srgb 0.770784 0.897059 0.796863)",
+          "color(srgb 1 1 1)",
+          "rgb(255, 255, 255)"
+        ]
+      }
+    },
+    {
+      "mode": "narrow",
+      "width": 768,
+      "height": 900,
+      "input": "trusted mouse and keyboard",
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "flash": {
+        "animation": "itrocks-column-add-flash",
+        "outline": "none",
+        "background": "oklab(0.890779 -0.0425335 0.0232467)",
+        "keyframes": [
+          "color(srgb 0.770784 0.897059 0.796863)",
+          "color(srgb 1 1 1)",
+          "rgb(255, 255, 255)"
+        ]
+      }
+    },
+    {
+      "mode": "portrait",
+      "width": 390,
+      "height": 844,
+      "reducedMotion": "reduce",
+      "input": "trusted mouse and keyboard",
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "flash": {
+        "animation": "none",
+        "outline": "solid",
+        "background": "rgb(255, 255, 255)",
+        "keyframes": []
+      }
+    },
+    {
+      "mode": "landscape",
+      "width": 844,
+      "height": 390,
+      "colorScheme": "dark",
+      "input": "trusted mouse and keyboard",
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "flash": {
+        "animation": "itrocks-column-add-flash",
+        "outline": "none",
+        "background": "oklab(0.378815 -0.0499051 0.0293326)",
+        "keyframes": [
+          "color(srgb 0.166667 0.292941 0.192745)",
+          "color(srgb 0.256471 0.256471 0.256471)",
+          "rgb(18, 18, 18)"
+        ]
+      }
+    }
+  ],
+  "health": [],
+  "inputs": [
+    {
+      "mode": "desktop",
+      "phase": "add/error/reset",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "k"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        }
+      ]
+    },
+    {
+      "mode": "desktop",
+      "phase": "regressions",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "desktop",
+      "phase": "teardown",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "narrow",
+      "phase": "add/error/reset",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "k"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        }
+      ]
+    },
+    {
+      "mode": "narrow",
+      "phase": "regressions",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "narrow",
+      "phase": "teardown",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "phase": "add/error/reset",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "k"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "phase": "regressions",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "portrait",
+      "phase": "teardown",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "phase": "add/error/reset",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "k"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "e"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "p"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "t"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "End"
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "phase": "regressions",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "mode": "landscape",
+      "phase": "teardown",
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "desktop",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "narrow",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "portrait",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/table-fixture",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.css",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/demo/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/plugin/plugin.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder-freeze.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-add.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/table.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/column-reorder.js",
+      "status": 200
+    },
+    {
+      "mode": "landscape",
+      "url": "http://127.0.0.1:13782/itrocks/table/freeze.js",
+      "status": 200
+    }
+  ],
+  "url": "http://127.0.0.1:13782/table-fixture",
+  "seed": "public generic table fixture: two rows A1..D2, opaque ids, frozen Select/Actions",
+  "checkpoints": {
+    "table": {
+      "sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+      "version": "0.3.1"
+    },
+    "tracking": {
+      "sha": "b1bbb83d5c92ddf3ccf616dfd0530a3628bdf357",
+      "version": "0.2.7"
+    }
+  },
+  "node": "v24.0.1",
+  "playwright": "1.62.1",
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "verdict": "PASS"
+}

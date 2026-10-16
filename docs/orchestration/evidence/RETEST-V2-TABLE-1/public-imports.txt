@@ -1,0 +1,1 @@
+PASS public selector CJS, table browser ESM addition/freeze exports

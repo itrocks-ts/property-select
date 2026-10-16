@@ -978,7 +978,9 @@
         "defect": "defects/V2-TABLE-1.md",
         "next_gate": "RETEST-V2-TABLE-1",
         "scope": "Generic table addition; combined list/external transport cases remain NOT_RUN"
-      }
+      },
+      "resolved_by": "RETEST-V2-TABLE-1",
+      "resolution": "Independent retest passes on table 0.3.1; historical failed report/evidence retained."
     },
     {
       "id": "FIX-V2-TABLE-1",
@@ -1038,7 +1040,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Independent sticky-boundary and async header regression verification.",
@@ -1050,7 +1052,25 @@
         "TAB-06",
         "VAL-04",
         "VAL-06"
-      ]
+      ],
+      "result": {
+        "verdict": "PASS",
+        "tested_table_sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+        "tested_table_version": "0.3.1",
+        "tracking_version": "0.2.7",
+        "node_tests": 43,
+        "selector_tests": 14,
+        "full_browser_assertions": 182,
+        "header_browser_assertions": 182,
+        "colgroup_order_assertions": 182,
+        "independent_geometry_assertions": 2362,
+        "geometry_measurements": 168,
+        "geometry_configurations": 24,
+        "historical_reproducer_viewports": 4,
+        "evidence": "evidence/RETEST-V2-TABLE-1/",
+        "closed_defect": "defects/V2-TABLE-1.md",
+        "scope": "Generic table gate only; combined list, SQL, external transport and touch-product acceptance remain later gates"
+      }
     },
     {
       "id": "L2-LIST",
