@@ -18,7 +18,8 @@ const assets = new Map([
 	['/search-graph.js', new URL('../../../test/fixtures/search-graph.mjs', import.meta.url)]
 ])
 for (const name of [
-	'controller.js', 'front/property-select.css', 'front/property-select.html', 'front/property-select.js',
+	'controller.js', 'front/pointer-transport.js', 'front/property-select.css', 'front/property-select.html',
+	'front/property-select.js',
 	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js', 'search.js',
 	'state.js', 'suggestions.js'
 ])

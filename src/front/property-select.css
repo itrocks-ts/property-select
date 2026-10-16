@@ -49,3 +49,5 @@
 .ps-suggestions:empty, .ps-persistence:empty { display: none; }
 .ps-properties { max-height: 60vh; overflow: auto; overscroll-behavior: contain; }
 .ps-persistence { font-size: .875rem; margin: .5rem .75rem; }
+
+.ps-main, .ps-level, .ps-result-path button { user-select: none; -webkit-user-select: none; }

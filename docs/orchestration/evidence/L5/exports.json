@@ -1,0 +1,69 @@
+[
+  {
+    "owner": "table",
+    "version": "0.4.0",
+    "files": [
+      "column-add.js",
+      "column-add.d.ts",
+      "column-add.css",
+      "column-reorder.js",
+      "column-reorder.d.ts"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "property-select",
+    "version": "0.6.0",
+    "files": [
+      "property-select.js",
+      "property-select.d.ts",
+      "cjs/property-select.js",
+      "front/property-select.js",
+      "front/property-select.d.ts",
+      "front/property-select.css",
+      "front/property-select.html",
+      "front/pointer-transport.js",
+      "front/pointer-transport.d.ts"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "list",
+    "version": "0.11.0",
+    "files": [
+      "property-select.js",
+      "property-select.d.ts",
+      "selector-state.js",
+      "cjs/list.js",
+      "cjs/projection.js",
+      "cjs/selector-state.js"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "home",
+    "version": "0.6.0",
+    "files": [
+      "right-pane.js",
+      "right-pane.d.ts",
+      "right-pane.css",
+      "cjs/output.js"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "framework",
+    "version": "0.11.0",
+    "files": [
+      "property-select-list.js",
+      "property-select-list.d.ts",
+      "property-select-metadata.js",
+      "cjs/property-select.js",
+      "cjs/property-select-actions.js",
+      "cjs/framework.js",
+      "cjs/sql-projection.js",
+      "cjs/sql-relationships.js"
+    ],
+    "status": "PASS"
+  }
+]

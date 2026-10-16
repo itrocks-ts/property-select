@@ -1,6 +1,7 @@
 import { PropertySelect }             from '../property-select.js'
 import type { PropertySelectOptions } from '../property-select.js'
 import type { SearchResult }          from '../property-select.js'
+import { PointerTransport }           from './pointer-transport.js'
 
 export type PropertySelectViewOptions = { templateUrl?: string | URL }
 
@@ -22,6 +23,7 @@ export class PropertySelectView
 	private searchScope = ''
 	private scrollScope = ''
 	private shortcuts?: HTMLElement
+	private transport?: PointerTransport
 	private persistence?: HTMLElement
 	private status?: HTMLElement
 	private unsubscribe?: () => void
@@ -41,6 +43,7 @@ export class PropertySelectView
 		if (this.disposed)
 			return
 		this.disposed = true
+		this.transport?.dispose()
 		this.abort.abort()
 		this.resize?.disconnect()
 		this.unsubscribe?.()
@@ -155,6 +158,7 @@ export class PropertySelectView
 					this.render()
 			})
 			this.host.append(this.root)
+			this.transport = new PointerTransport(this.root, this.selector)
 			this.resize = new ResizeObserver(() => this.restoreScroll())
 			this.resize.observe(this.list)
 			this.resize.observe(this.breadcrumb)

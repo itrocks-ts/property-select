@@ -1,0 +1,46 @@
+
+> @itrocks/property-select@0.6.0 test
+> npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs
+
+
+> @itrocks/property-select@0.6.0 build
+> tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs
+
+✔ T01: public CJS and browser facades agree; missing provider and invalid paths are explicit (8.648498ms)
+✔ T01: observer-only intentions receive unique canonical ids without implicit additions (0.950385ms)
+✔ T02: remembered branch survives ancestor, root, and descendant navigation with query and scroll (4.476465ms)
+✔ T03: divergent relation replaces only the suffix (0.861117ms)
+✔ T05 navigation: relation main opens; relation selection and terminal activation keep context/query (2.170871ms)
+✔ PORT-01: provider business ordering, label fallback and snapshot isolation (0.6481ms)
+✔ PORT-02: acknowledgements validate identity/path/status; only applied added changes recents (0.642261ms)
+✔ PORT-02: transport contract carries a stable intent with exactly one terminal call (0.820093ms)
+✔ PORT-02: disposal cancels transport/selections once and ignores late outcomes (1.339219ms)
+✔ PORT-02: out-of-order confirmations belong to their own attempt (0.751207ms)
+✔ PORT-03 navigation: stale metadata cannot replace the context or revive disposal (0.799499ms)
+✔ PORT-09 core: consumer rejection is recoverable and preserves context (0.52683ms)
+✔ PORT-02: reentrant disposal still sends exactly one terminal transport callback (0.237859ms)
+✔ PORT-02: disposal during metadata resolution never emits a selection or begins transport (0.263364ms)
+✔ PORT-02: source cancellation prevents late begin and permits the next drag (0.407631ms)
+✔ T09: all words normalise case/accents/spacing and match full labelled paths (20.011257ms)
+✔ T10: descendants only, navigation preserves the query and cache avoids reloading ancestors (6.973019ms)
+✔ T11/NAV-08: distinct paths, terminal/object activation and remembered prefixes (14.622683ms)
+✔ T12/PORT-03: obsolete queries and context ignore late abort-insensitive responses (1.676505ms)
+✔ T12: loading, empty, complete, error and limited are distinct; errors preserve usable context (1.087304ms)
+✔ T13: known N-1/N-N return once, 1-N/unknown/asymmetric inverse excluded; manual navigation remains (3.046934ms)
+✔ T13: incoming edges, sibling paths and distinct self relations (0.897209ms)
+✔ PORT-06: reversed provider arrivals preserve rank; local depth/name/business/path tie-breaking (49.743647ms)
+✔ T12/T26: large cyclic catalogue is bounded by contexts/depth/results and pending providers (11.710503ms)
+✔ T12: context replacement and disposal reject late search metadata (1.811651ms)
+✔ T04/T14/T15: maximal used branches, recent ancestors, exact shortcuts and confirmed additions (35.553463ms)
+✔ T16/T17: restore deep remembered branch, current/query/scroll and discard obsolete metadata (29.280612ms)
+✔ state conflicts reapply the newest local snapshot; storage failure retains state and retries (8.725565ms)
+✔ untrusted state versions, lengths and numeric coordinates are validated before restore (0.906201ms)
+✔ coalesced writes discard intermediate snapshots while an older durable acknowledgement is pending (4.347323ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 247.807365

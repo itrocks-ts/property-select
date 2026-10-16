@@ -1,0 +1,26 @@
+✔ selects an exact or compatible supported browser language (1.116828ms)
+✔ does not load main before the framework composition phase (165.173505ms)
+✔ META-01 metadata relation facts, inheritance and logical inverse/N-N are serialisable (252.520444ms)
+✔ META-02 same authorisation on enumeration and every full-path prefix; presentation beyond List (3.948924ms)
+✔ META-03 two routes, finite cycles, ambiguous/unknown paths and denied ancestors (95.230153ms)
+✔ META-04 per-instance catalogue change, explicit path grants and aborted authorisation (2.04839ms)
+✔ META-01 composition merges only an unambiguous ownership inverse (2.430318ms)
+✔ META-03 native dates stay terminal and context or method traversal rejects with a path error (5.497408ms)
+✔ public binding uses metadata without constructors and propagates optional ancestry (184.6157ms)
+✔ logical inverses resolve the explicit back-reference to its physical foreign key (48.446638ms)
+✔ N-N mapping reuses existing storage naming in both directions (46.345232ms)
+✔ ambiguous and unresolved targets and invalid inverse identities reject (1.25645ms)
+✔ schema override handles self links without inventing ambiguous conventional columns (0.657598ms)
+✔ unambiguous component metadata resolves a legacy back-reference (0.602792ms)
+✔ explicit inverse identity may be qualified and conflicting cardinality fails (0.443303ms)
+✔ singular inverse mappings preserve target multiplicity and require known ownership (0.542106ms)
+✔ public projection binding applies final property SQL read and save transformers (7.631048ms)
+✔ selector template route serves only its published fragment (170.40606ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 619.959503

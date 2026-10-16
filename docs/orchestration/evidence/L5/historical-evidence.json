@@ -1,0 +1,15 @@
+{
+  "path": "/tmp/property-select/L5/history.tar.gz",
+  "sha256": "eb6e034b22c06bac8e550ce62fbbc6ecbbd3e3fe10c109d7459ce7d0cfa13465",
+  "contents": [
+    "browser-acceptance",
+    "browser-complete",
+    "browser-delivery",
+    "browser-final",
+    "browser-pass",
+    "browser.json",
+    "preview-1280.png",
+    "narrow-diagnostic"
+  ],
+  "purpose": "Superseded development runs; final delivery and narrow object diagnostic remain versioned"
+}

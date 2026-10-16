@@ -1,0 +1,256 @@
+[
+  {
+    "name": "table-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "table-build.txt"
+  },
+  {
+    "name": "table-tests",
+    "command": [
+      "/usr/bin/node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/column-reorder.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/feed.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/freeze-visible.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "table-tests.txt"
+  },
+  {
+    "name": "table-pack",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L5-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table",
+    "status": 0,
+    "log": "table-pack.txt"
+  },
+  {
+    "name": "property-select-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "property-select-build.txt"
+  },
+  {
+    "name": "property-select-test-script",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "property-select-test-script.txt"
+  },
+  {
+    "name": "property-select-tests",
+    "command": [
+      "/usr/bin/node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/test/core.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/test/search.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/test/state.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "property-select-tests.txt"
+  },
+  {
+    "name": "property-select-pack",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L5-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+    "status": 0,
+    "log": "property-select-pack.txt"
+  },
+  {
+    "name": "list-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "list-build.txt"
+  },
+  {
+    "name": "list-test-script",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "list-test-script.txt"
+  },
+  {
+    "name": "list-tests",
+    "command": [
+      "/usr/bin/node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/columns.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/feed.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/list.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/property-select.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/selector-state.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "list-tests.txt"
+  },
+  {
+    "name": "list-pack",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L5-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "status": 0,
+    "log": "list-pack.txt"
+  },
+  {
+    "name": "home-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "home-build.txt"
+  },
+  {
+    "name": "home-tests",
+    "command": [
+      "/usr/bin/node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "home-tests.txt"
+  },
+  {
+    "name": "home-pack",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L5-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+    "status": 0,
+    "log": "home-pack.txt"
+  },
+  {
+    "name": "framework-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "framework-build.txt"
+  },
+  {
+    "name": "framework-test-script",
+    "command": [
+      "npm",
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "framework-test-script.txt"
+  },
+  {
+    "name": "framework-tests",
+    "command": [
+      "/usr/bin/node",
+      "--test",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/language.test.js",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/main.test.js",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select-metadata.test.mjs",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "framework-tests.txt"
+  },
+  {
+    "name": "framework-pack",
+    "command": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L5-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+    "status": 0,
+    "log": "framework-pack.txt"
+  },
+  {
+    "name": "application-build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "status": 0,
+    "log": "application-build.txt"
+  }
+]

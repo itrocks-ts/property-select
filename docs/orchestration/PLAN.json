@@ -1847,7 +1847,7 @@
         "node_modules/@itrocks/framework"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Pointer capture, provisional values, pending duplicates, rollback and late data cross all host lifecycles.",
@@ -1865,7 +1865,40 @@
         "TAB-10",
         "TAB-11",
         "QUA-01"
-      ]
+      ],
+      "validation": "PASS author: five builds/tests/package exports; 64 browser assertions at two sizes, 14 external-table contract assertions, 182 header regression assertions; real SQL preview reuse. V5 pending.",
+      "evidence": "evidence/L5/",
+      "tested_checkpoints": {
+        "@itrocks/table": {
+          "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+          "version": "0.4.0"
+        },
+        "@itrocks/list": {
+          "sha": "468c53f0b75f6b88df83e5a9a0ded0799460eecf",
+          "version": "0.11.0"
+        },
+        "@itrocks/home": {
+          "sha": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+          "version": "0.6.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        },
+        "@itrocks/fastify": {
+          "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+          "version": "0.4.1"
+        },
+        "@itrocks/fastify-file-session-store": {
+          "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+          "version": "0.4.0"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "db9c62b0663748c64cf58223e3079fa73ec32435",
+          "version": "0.6.0",
+          "checkpoint": "L5 owner commit containing this manifest"
+        }
+      }
     },
     {
       "id": "V5",

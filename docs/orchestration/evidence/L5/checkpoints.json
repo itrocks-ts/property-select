@@ -1,0 +1,37 @@
+{
+  "table": {
+    "head": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+    "version": "0.4.0",
+    "status": ""
+  },
+  "list": {
+    "head": "468c53f0b75f6b88df83e5a9a0ded0799460eecf",
+    "version": "0.11.0",
+    "status": ""
+  },
+  "property-select": {
+    "head": "db9c62b0663748c64cf58223e3079fa73ec32435",
+    "version": "0.6.0",
+    "status": " M README.md\n M docs/orchestration/CONTRACTS.md\n M docs/orchestration/environment/demo/demo.js\n M docs/orchestration/environment/standalone.mjs\n M package.json\n M src/controller.ts\n M src/front/property-select.css\n M src/front/property-select.ts\n M src/intentions.ts\n M test/core.test.mjs\n?? docs/orchestration/environment/checks/L5-commands.mjs\n?? docs/orchestration/environment/checks/L5-exports.mjs\n?? docs/orchestration/environment/checks/L5-table.mjs\n?? docs/orchestration/environment/checks/L5.mjs\n?? docs/orchestration/evidence/L5/\n?? src/front/pointer-transport.ts\n"
+  },
+  "home": {
+    "head": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+    "version": "0.6.0",
+    "status": ""
+  },
+  "framework": {
+    "head": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+    "version": "0.11.0",
+    "status": ""
+  },
+  "fastify": {
+    "head": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+    "version": "0.4.1",
+    "status": ""
+  },
+  "fastify-file-session-store": {
+    "head": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+    "version": "0.4.0",
+    "status": ""
+  }
+}

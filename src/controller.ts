@@ -153,9 +153,9 @@ export class PropertySelect
 		throw new TypeError('Activate a property in the displayed context; use navigate/select for complete paths')
 	}
 
-	begin(path: PropertyPath, sample: PointerSample): Promise<SelectionIntent | undefined>
+	begin(path: PropertyPath, sample: PointerSample, signal?: AbortSignal): Promise<SelectionIntent | undefined>
 	{
-		return this.intentions.begin(path, sample)
+		return this.intentions.begin(path, sample, signal)
 	}
 
 	cancel(id: string, reason?: string): void

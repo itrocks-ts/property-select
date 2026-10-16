@@ -1,0 +1,2385 @@
+{
+  "assertions": [
+    {
+      "name": "768: placeholders are real table cells",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "768: movement makes one value request",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "768: preview does not save columns",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "768: preview does not add recents",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "768: valid drop commits while values are held",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "768: real projected city value",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "768: preview movement executes one projection",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "768: inserts at accepted position",
+      "actual": "customer.address.city.name",
+      "expected": "customer.address.city.name",
+      "status": "PASS"
+    },
+    {
+      "name": "768: moving existing keeps one column",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "768: moving existing keeps recents",
+      "actual": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: existing above restores order",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: existing below restores order",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: existing left restores order",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: existing Escape restores order",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: new outside leaves no late preview",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: new outside saves nothing",
+      "actual": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "768: new Escape leaves no late preview",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768: new Escape saves nothing",
+      "actual": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "name": "768: data failure retains a committed column",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "768: result segment inserts its own object path",
+      "actual": false,
+      "expected": true,
+      "status": "FAIL"
+    }
+  ],
+  "errors": [],
+  "console": [
+    "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+  ],
+  "inputs": [
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointermove",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    }
+  ],
+  "saves": [
+    "customer.address.city.name,number,amount",
+    "number,amount,customer.address.city.name",
+    "number,note,amount,customer.address.city.name"
+  ],
+  "values": [
+    "customer.address.city.name",
+    "issuedAt",
+    "issuedAt",
+    "note",
+    "note",
+    "customer.address.city"
+  ],
+  "sql": [
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "statements": [
+        {
+          "sql": "SELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`active` = ? AND `t0`.`id` IN (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+          "values": [
+            1,
+            "1",
+            "3",
+            "4",
+            "5",
+            "7",
+            "9",
+            "11",
+            "13",
+            "15",
+            "17",
+            "19",
+            "21",
+            "23",
+            "25",
+            "27",
+            "29",
+            "31",
+            "33",
+            "35",
+            "37",
+            "39",
+            "41",
+            "43",
+            "45",
+            "47",
+            "49",
+            "51",
+            "53",
+            "55",
+            "57",
+            "59",
+            "61",
+            "63",
+            "65",
+            "67",
+            "69",
+            "71",
+            "73",
+            "75",
+            "77",
+            "79",
+            "81",
+            "83",
+            "85",
+            "87",
+            "89",
+            "91",
+            "93",
+            "95",
+            "97"
+          ]
+        }
+      ],
+      "journal": "2026-10-16T04:50:13.354888Z\t  267 Query\tSELECT `t0`.`id` AS `p0`, `t3`.`id` AS `p1`, `t2`.`id` AS `p2`, `t1`.`id` AS `p3`, `t3`.`name` AS `p4`\nFROM `ps_invoice` AS `t0`\nLEFT JOIN `ps_customer` AS `t1` ON `t0`.`customer_id` = `t1`.`id`\nLEFT JOIN `ps_address` AS `t2` ON `t1`.`address_id` = `t2`.`id`\nLEFT JOIN `ps_city` AS `t3` ON `t2`.`city_id` = `t3`.`id`\nWHERE `t0`.`active` = 1 AND `t0`.`id` IN ('1', '3', '4', '5', '7', '9', '11', '13', '15', '17', '19', '21', '23', '25', '27', '29', '31', '33', '35', '37', '39', '41', '43', '45', '47', '49', '51', '53', '55', '57', '59', '61', '63', '65', '67', '69', '71', '73', '75', '77', '79', '81', '83', '85', '87', '89', '91', '93', '95', '97')\nORDER BY `t0`.`id` ASC\n"
+    }
+  ],
+  "screenshots": [
+    "preview-768.png",
+    "object-preview-768.png",
+    "failure.png"
+  ],
+  "browser": "151.0.7922.34",
+  "responses": [
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city.name&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=issuedAt&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=issuedAt&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=note&validate=1",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=note&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "status": 503
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=note&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "status": 200
+    },
+    {
+      "url": "http://127.0.0.1:13933/property-select-invoice/list?column=customer.address.city&validate=1",
+      "status": 200
+    }
+  ],
+  "geometry": [
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 177.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 266.75,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 266.75,
+            "y": 101,
+            "width": 78.203125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 344.953125,
+            "bottom": 165.15625,
+            "left": 266.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 344.953125,
+            "y": 101,
+            "width": 77.453125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 165.15625,
+            "left": 344.953125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 407.40625,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 72.734375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 162.109375,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 162.109375,
+            "y": 101,
+            "width": 70.90625,
+            "height": 64.15625,
+            "top": 101,
+            "right": 233.015625,
+            "bottom": 165.15625,
+            "left": 162.109375
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 233.015625,
+            "y": 101,
+            "width": 189.390625,
+            "height": 64.15625,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 165.15625,
+            "left": 233.015625
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 177.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 266.75,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 266.75,
+            "y": 101,
+            "width": 78.203125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 344.953125,
+            "bottom": 165.15625,
+            "left": 266.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 344.953125,
+            "y": 101,
+            "width": 77.453125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 165.15625,
+            "left": 344.953125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 407.40625,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 72.734375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 162.109375,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 162.109375,
+            "y": 101,
+            "width": 70.90625,
+            "height": 64.15625,
+            "top": 101,
+            "right": 233.015625,
+            "bottom": 165.15625,
+            "left": 162.109375
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 233.015625,
+            "y": 101,
+            "width": 189.390625,
+            "height": 64.15625,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 165.15625,
+            "left": 233.015625
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 177.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 266.75,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 266.75,
+            "y": 101,
+            "width": 78.203125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 344.953125,
+            "bottom": 165.15625,
+            "left": 266.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 344.953125,
+            "y": 101,
+            "width": 77.453125,
+            "height": 64.15625,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 165.15625,
+            "left": 344.953125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 407.40625,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 178.953125,
+            "left": 1
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 66.78125,
+            "height": 77.953125,
+            "top": 101,
+            "right": 156.15625,
+            "bottom": 178.953125,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 156.15625,
+            "y": 101,
+            "width": 64.859375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 221.015625,
+            "bottom": 178.953125,
+            "left": 156.15625
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 221.015625,
+            "y": 101,
+            "width": 201.390625,
+            "height": 77.953125,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 178.953125,
+            "left": 221.015625
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 178.953125,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 200.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 289.75,
+            "bottom": 178.953125,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 289.75,
+            "y": 101,
+            "width": 66.78125,
+            "height": 77.953125,
+            "top": 101,
+            "right": 356.53125,
+            "bottom": 178.953125,
+            "left": 289.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 356.53125,
+            "y": 101,
+            "width": 65.875,
+            "height": 77.953125,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 178.953125,
+            "left": 356.53125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 178.953125,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 200.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 289.75,
+            "bottom": 178.953125,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 289.75,
+            "y": 101,
+            "width": 66.78125,
+            "height": 77.953125,
+            "top": 101,
+            "right": 356.53125,
+            "bottom": 178.953125,
+            "left": 289.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 356.53125,
+            "y": 101,
+            "width": 65.875,
+            "height": 77.953125,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 178.953125,
+            "left": 356.53125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 178.953125,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 200.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 289.75,
+            "bottom": 178.953125,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 289.75,
+            "y": 101,
+            "width": 66.78125,
+            "height": 77.953125,
+            "top": 101,
+            "right": 356.53125,
+            "bottom": 178.953125,
+            "left": 289.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 356.53125,
+            "y": 101,
+            "width": 65.875,
+            "height": 77.953125,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 178.953125,
+            "left": 356.53125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 178.953125,
+            "left": 1
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 200.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 289.75,
+            "bottom": 178.953125,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 289.75,
+            "y": 101,
+            "width": 66.78125,
+            "height": 77.953125,
+            "top": 101,
+            "right": 356.53125,
+            "bottom": 178.953125,
+            "left": 289.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 356.53125,
+            "y": 101,
+            "width": 65.875,
+            "height": 77.953125,
+            "top": 101,
+            "right": 422.40625,
+            "bottom": 178.953125,
+            "left": 356.53125
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "issuedAt",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 67.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 156.75,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 156.75,
+            "y": 101,
+            "width": 61.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 218.125,
+            "bottom": 165.15625,
+            "left": 156.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 218.125,
+            "y": 101,
+            "width": 59.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 277.5,
+            "bottom": 165.15625,
+            "left": 218.125
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 277.5,
+            "y": 101,
+            "width": 201.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 478.875,
+            "bottom": 165.15625,
+            "left": 277.5
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "issuedAt",
+          "rect": {
+            "x": 89.375,
+            "y": 101,
+            "width": 67.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 156.75,
+            "bottom": 165.15625,
+            "left": 89.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 156.75,
+            "y": 101,
+            "width": 61.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 218.125,
+            "bottom": 165.15625,
+            "left": 156.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 218.125,
+            "y": 101,
+            "width": 59.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 277.5,
+            "bottom": 165.15625,
+            "left": 218.125
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 277.5,
+            "y": 101,
+            "width": 201.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 478.875,
+            "bottom": 165.15625,
+            "left": 277.5
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 104.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": 1,
+            "y": 101,
+            "width": 88.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 89.375,
+            "bottom": 165.15625,
+            "left": 1
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 31.375,
+            "y": 101,
+            "width": 61.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 92.75,
+            "bottom": 165.15625,
+            "left": 31.375
+          }
+        },
+        {
+          "path": "note",
+          "rect": {
+            "x": 92.75,
+            "y": 101,
+            "width": 131.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 224.125,
+            "bottom": 165.15625,
+            "left": 92.75
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 224.125,
+            "y": 101,
+            "width": 59.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 283.5,
+            "bottom": 165.15625,
+            "left": 224.125
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 283.5,
+            "y": 101,
+            "width": 201.375,
+            "height": 64.15625,
+            "top": 101,
+            "right": 484.875,
+            "bottom": 165.15625,
+            "left": 283.5
+          }
+        }
+      ]
+    },
+    {
+      "point": {
+        "x": 73.375,
+        "y": 231
+      },
+      "headers": [
+        {
+          "rect": {
+            "x": -9,
+            "y": 101,
+            "width": 88.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 79.375,
+            "bottom": 178.953125,
+            "left": -9
+          }
+        },
+        {
+          "path": "customer.address.city",
+          "rect": {
+            "x": 79.375,
+            "y": 101,
+            "width": 238.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 317.75,
+            "bottom": 178.953125,
+            "left": 79.375
+          }
+        },
+        {
+          "path": "number",
+          "rect": {
+            "x": 317.75,
+            "y": 101,
+            "width": 61.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 379.125,
+            "bottom": 178.953125,
+            "left": 317.75
+          }
+        },
+        {
+          "path": "note",
+          "rect": {
+            "x": 379.125,
+            "y": 101,
+            "width": 41.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 420.5,
+            "bottom": 178.953125,
+            "left": 379.125
+          }
+        },
+        {
+          "path": "amount",
+          "rect": {
+            "x": 420.5,
+            "y": 101,
+            "width": 59.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 479.875,
+            "bottom": 178.953125,
+            "left": 420.5
+          }
+        },
+        {
+          "path": "customer.address.city.name",
+          "rect": {
+            "x": 479.875,
+            "y": 101,
+            "width": 201.375,
+            "height": 77.953125,
+            "top": 101,
+            "right": 681.25,
+            "bottom": 178.953125,
+            "left": 479.875
+          }
+        }
+      ]
+    }
+  ],
+  "status": "FAIL",
+  "failure": "AssertionError [ERR_ASSERTION]: 768: result segment inserts its own object path\n\nfalse !== true\n\n    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L5.mjs:18:9)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L5.mjs:221:3",
+  "dom": "collapse\nAccueil\nInvoices\n+\n61 éléments\nNouveau\n\t\nnumber\n\t\nnote\n\t\namount\n\t\ncustomer › address › city › name\n\n\tREC-001\t\t12\tRecipe Paris\n\tREC-003\t\t-6\t\n\tREC-004\t\t100\t\n\tREC-005\t\t1\t\n\tREC-007\t\t1\tRecipe London\n\tREC-009\t\t1\tRecipe Paris\n\tREC-011\t\t1\t\n\tREC-013\t\t1\tRecipe London\n\tREC-015\t\t1\tRecipe Paris\n\tREC-017\t\t1\t\n\tREC-019\t\t1\tRecipe London\n\tREC-021\t\t1\tRecipe Paris\n\tREC-023\t\t1\t\n\tREC-025\t\t1\tRecipe London\n\tREC-027\t\t1\tRecipe Paris\n\tREC-029\t\t1\t\n\tREC-031\t\t1\tRecipe London\n\tREC-033\t\t1\tRecipe Paris\n\tREC-035\t\t1\t\n\tREC-037\t\t1\tRecipe London\n\tREC-039\t\t1\tRecipe Paris\n\tREC-041\t\t1\t\n\tREC-043\t\t1\tRecipe London\n\tREC-045\t\t1\tRecipe Paris\n\tREC-047\t\t1\t\n\tREC-049\t\t1\tRecipe London\n\tREC-051\t\t1\tRecipe Paris\n\tREC-053\t\t1\t\n\tREC-055\t\t1\tRecipe London\n\tREC-057\t\t1\tRecipe Paris\n\tREC-059\t\t1\t\n\tREC-061\t\t1\tRecipe London\n\tREC-063\t\t1\tRecipe Paris\n\tREC-065\t\t1\t\n\tREC-067\t\t1\tRecipe London\n\tREC-069\t\t1\tRecipe Paris\n\tREC-071\t\t1\t\n\tREC-073\t\t1\tRecipe London\n\tREC-075\t\t1\tRecipe Paris\n\tREC-077\t\t1\t\n\tREC-079\t\t1\tRecipe London\n\tREC-081\t\t1\tRecipe Paris\n\tREC-083\t\t1\t\n\tREC-085\t\t1\tRecipe London\n\tREC-087\t\t1\tRecipe Paris\n\tREC-089\t\t1\t\n\tREC-091\t\t1\tRecipe London\n\tREC-093\t\t1\tRecipe Paris\n\tREC-095\t\t1\t\n\tREC-097\t\t1\tRecipe London\n›\nClose pane\nAdd columns\ninvoice\nClear\ncustomer › address › city\ncustomer › address\ndelivery address\ntags\n\nSearch limit reached. Refine your query.\n\nname\n+\ninvoice › delivery address › city\nname\n+\ninvoice › customer › address › city\nname\n+\ninvoice › delivery address › city › country\nname\n+\ninvoice › customer › address › city › country\nname\n+\ninvoice › customer › parent › address › city\nname\n+\ninvoice › tags › invoices › delivery address › city\nname\n+\ninvoice › customer › parent › address › city › country\nname\n+\ninvoice › tags › invoices › customer › address › city\nname\n+\ninvoice › tags › invoices › delivery address › city › country\nname\n+\ninvoice › tags › invoices › customer › address › city › country\nname\n+\ninvoice › tags › invoices › customer › parent › address › city"
+}

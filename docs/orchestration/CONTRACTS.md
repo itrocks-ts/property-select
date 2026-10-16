@@ -197,7 +197,8 @@ type ColumnContent = { header: HTMLTableCellElement; cells: readonly HTMLTableCe
 type ColumnSource = {
   id: string
   create(): ColumnContent
-  load(signal: AbortSignal): Promise<ColumnContent>
+  load?(signal: AbortSignal): Promise<ColumnContent>
+  accept?(signal: AbortSignal): Promise<void>
 }
 interface ColumnOperation {
   move(sample: PointerSample): void
@@ -213,8 +214,8 @@ beginExternal(source: ColumnSource, sample: PointerSample): ColumnOperation
 
 L2-TABLE delivers `add`, `reveal` and `highlight`, plus `begin(source): ColumnTransaction` as a non-pointer foundation
 with `commit`, `cancel`, `moveTo` and `ready`. Its optional `load` callback can be retried through `retry(id)`;
-`dispose()` aborts outstanding work and reset invokes it automatically. `beginExternal` above remains planned for L5;
-it is not an exported L2 capability. Current DOM shape is one header row without spans and one optional column group.
+`dispose()` aborts outstanding work and reset invokes it automatically. L5 delivers `beginExternal` through the public
+reorder operation, including a held admission phase that keeps the operation exclusive. Current DOM shape is one header row without spans and one optional column group.
 See the table owner's README for the delivered callback/notification signatures.
 
 `create()` immediately produces a real header and one placeholder cell per loaded row. `load()` enriches it without
@@ -229,6 +230,8 @@ with reveal/highlight only. Click appends, drag inserts at the accepted position
 light → theme background sequence for new/existing clicks, with reduced-motion handling and no keyboard focus theft.
 A valid drop commits independently of whether optional value loading has finished; a loading failure is a visible
 cell error with retry, not a false cancellation. A failed column creation rejects and confirms no addition.
+Optional `accept(signal)` validates admission independently of values; list uses its authorised representation check
+without selecting rows. Invalid drops cancel immediately, including while admission is pending.
 An invalid drop never falls back to append. External-origin cancellation restores an existing column, never deletes it.
 Header-origin reorder/removal remains unchanged, including frozen boundaries and sort interactions.
 

@@ -1,5 +1,24 @@
 # Phase 1 validation matrix
 
+
+## L5 author delivery — 16 October 2026
+
+**DONE / author PASS**; independent **V5 remains PENDING**. See [report](reports/L5.md) and
+[final browser evidence](evidence/L5/browser-final-delivery/browser.json).
+
+| Cases | Author observation | Independent status |
+| --- | --- | --- |
+| T11, T19, PORT-02/04 | Real source gestures, object segments, immediate column and asynchronous values | V5 pending |
+| T15, T20 | Existing column moved once; cancellation restores position and recents | V5 pending |
+| T21 desktop, LIFE-02/03 | Outside/Escape/lost capture/dispose/XTarget cancellation; no late preview | V5 pending |
+| T26 L5, PORT-09 | Concurrent request refused; delayed/failing values, retry and pending admission | V5 pending |
+| SQL-12 preview | One real joined projection across repeated movement at each of two sizes | V5 pending |
+| Header regression | 182 assertions, four sizes: native reorder/removal, freeze, sorting and reset | Author replay only |
+
+The final browser run has 64 passing assertions at 1280×720 and 768×900. Public table fault injection adds 14
+passing assertions, including autoscroll, admission exclusivity and changed-row rollback. Touch portions of T21 and
+later stress/load observations remain NOT_RUN here. These author results do not replace any independent gate.
+
 ## RETEST-V4-1 independent completion
 
 **PASS**, 16 October 2026. [Report](reports/RETEST-V4-1.md),
@@ -801,11 +820,11 @@ current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST
 - **T18** — Expected: Click absent/existing columns rapidly; new appends, existing stays at index, both reveal/flash
 and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; current verdict: `NOT_RUN`.
 - **T19** — Expected: Drag new path through legal positions; a true column appears immediately, receives real data
-and commits only at valid drop. Proof: `evidence/<gate>/T19.*`; current verdict: `NOT_RUN`.
+and commits only at valid drop. L5 author PASS: `evidence/L5/browser-final-delivery/browser.json`; V5 pending.
 - **T20** — Expected: Drag an existing column, validate movement, then repeat and abandon; assert one column and
-restoration to original index. Proof: `evidence/<gate>/T20.*`; current verdict: `NOT_RUN`.
+restoration to original index. L5 author PASS: `evidence/L5/browser-final-delivery/browser.json`; V5 pending.
 - **T21** — Expected: Drop above/below/outside, Escape, touchCancel and depart view with delayed data; no
-commit/resurrection and clean listeners. Proof: `evidence/<gate>/T21.*`; current verdict: `NOT_RUN`.
+commit/resurrection and clean listeners. L5 desktop author PASS; V5 pending and touch NOT_RUN until L6/V6.
 - **T22** — Expected: Trusted vertical touch scrolls; dominant horizontal gesture in left source zone transports
 without hold or residual click. Proof: `evidence/<gate>/T22.*`; current verdict: `NOT_RUN`.
 - **T23** — Expected: Recognise mobile drag, observe pane folding, edge autoscroll and restore after success/cancel

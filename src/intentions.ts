@@ -66,13 +66,19 @@ export class Intentions
 	}
 
 	// Called by the surface only after its gesture recogniser accepts the drag.
-	async begin(path: PropertyPath, sample: PointerSample): Promise<SelectionIntent | undefined>
+	async begin(path: PropertyPath, sample: PointerSample, signal?: AbortSignal): Promise<SelectionIntent | undefined>
 	{
 		if (this.drag)
 			throw new Error('A transport is already active')
 		const pending = this.create(path)
 		this.drag = pending.intent.id
+		const cancel = () => this.cancel(pending.intent.id, 'source cancelled')
+		signal?.addEventListener('abort', cancel, { once: true })
 		try {
+			if (signal?.aborted) {
+				cancel()
+				return undefined
+			}
 			pending.property = await resolveProperty(this.provider, this.root, pending.intent.path, pending.abort.signal)
 			if (!this.live(pending))
 				return undefined
@@ -87,6 +93,7 @@ export class Intentions
 			this.failure(pending, error)
 			return undefined
 		}
+		finally { signal?.removeEventListener('abort', cancel) }
 	}
 
 	cancel(id: string, reason = 'cancelled'): void

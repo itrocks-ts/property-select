@@ -1,0 +1,31 @@
+✔ columns accept reordering and removing properties without restoring defaults (93.61175ms)
+✔ columns reject duplicates, unknown properties and malformed requests (0.699738ms)
+✔ removed columns, including the last column, survive session restoration (0.569145ms)
+✔ column changes persist and return 204 before any data query, even for an empty list (1.05756ms)
+✔ column saves preserve validation and restore an empty session on the next request (1.296023ms)
+✔ an absent offset resets the feed to the first page with a finite limit (0.999461ms)
+✔ explicit valid offsets and viewport limits retain their pagination values (0.347977ms)
+✔ invalid explicit offsets remain visible to downstream validation (0.204472ms)
+✔ html combines user filters and a mandatory scope for projection and count (2.47877ms)
+✔ html keeps the mandatory scope on paginated feed requests (0.343217ms)
+✔ html restores session filters for queries and inputs, and accepts clearing them (1.67919ms)
+✔ json forwards its mandatory scope directly to the data source (0.357267ms)
+✔ omitting the scope preserves html filters and the json query (0.344681ms)
+✔ object and deep columns derive a finite representation closure through reflection (185.219388ms)
+✔ plural, cyclic and undeclared custom representation closures fail before projection (0.510374ms)
+✔ path columns persist, filter both form trees and query keys, and expand representative ordering (1.52177ms)
+✔ visible row projection intersects mandatory scope and preserves full JSON entities (2.024258ms)
+✔ access denial is checked before projection and object-field authorisation is explicit (0.76008ms)
+✔ default route resolves List after adding public dependency hooks (0.448198ms)
+✔ undeclared object transformers fail before querying; declared fields are accepted (0.914071ms)
+✔ external admission validates representation and authorisation without loading rows (0.833511ms)
+✔ actual session CAS, tombstones, distinct route keys and isolated sessions (88.088693ms)
+✔ public browser transport carries credentials, revisions and a session generation (27.960541ms)
+ℹ tests 23
+ℹ suites 0
+ℹ pass 23
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 306.987545

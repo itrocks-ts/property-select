@@ -300,3 +300,25 @@ test('PORT-02: disposal during metadata resolution never emits a selection or be
 	assert.equal(await dragging, undefined)
 	assert.deepEqual(consumer.calls, [])
 })
+
+test('PORT-02: source cancellation prevents late begin and permits the next drag', async () => {
+	const metadata = staticProvider()
+	const resolve = metadata.resolve.bind(metadata)
+	const waiting = deferred()
+	metadata.resolve = async (...args) => {
+		await waiting.promise
+		return resolve(...args)
+	}
+	const consumer = recordingConsumer()
+	const selector = new PropertySelect(options({ consumer, metadata }))
+	const abort = new AbortController()
+	const pending = selector.begin('customer', sample, abort.signal)
+	abort.abort()
+	waiting.resolve()
+	assert.equal(await pending, undefined)
+	assert.deepEqual(consumer.calls, [])
+	const next = await selector.begin('number', sample)
+	selector.cancel(next.id)
+	assert.deepEqual(consumer.calls.map(call => call.type), ['begin', 'cancel'])
+	selector.dispose()
+})

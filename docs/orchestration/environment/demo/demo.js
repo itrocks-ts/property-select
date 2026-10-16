@@ -12,10 +12,11 @@ async function mount()
 		return
 	view = new PropertySelectView(host, { metadata: staticProvider(), root: 'invoice', stateMode: 'instance' })
 	view.selector.subscribe(event => {
-		if (event.type === 'select') {
+		if (['select', 'begin', 'move', 'end', 'cancel'].includes(event.type)) {
 			const item = document.createElement('li')
-			item.textContent = event.intent.path
-			item.dataset.id = event.intent.id
+			item.textContent = event.intent?.path ?? event.id
+			item.dataset.id = event.intent?.id ?? event.id
+			item.dataset.type = event.type
 			log.append(item)
 		}
 	})

@@ -1,0 +1,166 @@
+{
+  "assertions": [
+    {
+      "name": "external preview auto-scrolls at visible right edge",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "external preview auto-scrolls at visible left edge",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "movement never reloads values",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "asynchronous replacement preserves external marker",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "cancel restores exact original columns",
+      "actual": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "cancel: late callback cannot recreate preview",
+      "actual": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "cancel: no remaining movement classes",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "dispose: late callback cannot recreate preview",
+      "actual": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "dispose: no remaining movement classes",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "reset: late callback cannot recreate preview",
+      "actual": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "Alpha",
+        "Beta",
+        "Gamma",
+        "Delta",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reset: no remaining movement classes",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "pending admission retains exclusivity and cancellation wins",
+      "actual": {
+        "rejected": true,
+        "result": "cancelled",
+        "live": true
+      },
+      "expected": {
+        "rejected": true,
+        "result": "cancelled",
+        "live": true
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "changed row view rollback leaves new rows aligned",
+      "actual": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "expected": [
+        6,
+        6,
+        6,
+        6
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "browser exceptions",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "kind": "real DOM public-port fault injection; no native source claim",
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

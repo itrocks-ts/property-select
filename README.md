@@ -124,7 +124,8 @@ storage failure. Per-instance writes coalesce; revision conflicts reread and rea
 `usedPaths` and `advice` default to empty arrays. `setConfiguration({ advice?, usedPaths? })` updates them without
 clearing local recents. `translate(text)` defaults to identity or calls the supplied translation function.
 `suggestions` exposes `{ path, label }` destinations, ordered by confirmed recents, maximal used contexts per branch,
-then advice. Full paths deduplicate entries; translated metadata labels distinguish equal names by ancestry. `suggestionLimit` defaults to six (1–100).
+then advice. Full paths deduplicate entries; translated metadata labels distinguish equal names by ancestry.
+`suggestionLimit` defaults to six (1–100).
 `shortcut(path)` replaces the complete branch and clears the query. Configuration changes preserve session recents.
 The view displays the fused destinations, saves breadcrumb/property scroll and offers Retry after persistence failures.
 
@@ -169,7 +170,7 @@ Provide an optional `ConsumerPort` to apply intentions in another application. `
 error. Without a consumer, events remain observable; a host may call `acknowledge(outcome)` explicitly.
 Mismatched, premature, duplicate and disposed acknowledgements return false and never apply.
 
-`begin(path, sample)` returns the recognised `SelectionIntent`, `move(id, sample)` forwards movement and
+`begin(path, sample, signal?)` returns the recognised `SelectionIntent`, `move(id, sample)` forwards movement and
 `end(id, sample)` completes the transport. `cancel(id, reason?)` terminates it once. These methods form the generic
 transport contract; surface gesture recognition and pointer capture are supplied by the rendered component.
 `PointerSample` contains pointer id/type and client coordinates. Only one live transport is accepted per instance.
@@ -213,3 +214,16 @@ Copyright (C) 2026, Baptiste Pillot <baptiste@pillot.fr>.
 
 This package is licensed under the GNU Lesser General Public License, version 3 or any later version
 (`LGPL-3.0-or-later`). See [LICENSE](LICENSE) for the LGPL terms and [COPYING](COPYING) for the incorporated GPL terms.
+
+## Desktop source gestures
+
+The rendered view recognises a primary mouse/pen movement of 10 pixels from property names, breadcrumb relations and
+search-result relation segments. It transports their fixed full path through the generic consumer port. The root,
+shortcuts and `+` controls do not start transport. A recognised drag suppresses its compatibility click. No column,
+thumbnail or insertion indicator is rendered by the selector. Target decisions belong to the consumer.
+
+Pointer capture belongs to the document element so replacing source rows or folding a containing pane preserves the
+controller. Pointer cancellation, lost capture, Escape, window blur and disposal cancel the operation once. An optional
+abort signal on `begin` also cancels pending metadata resolution, preventing a late begin after the pointer is released.
+Desktop target decisions and rollback belong to the consumer. Touch gesture recognition remains a separate delivery.
+The standalone demonstration records begin/move/end/cancel intentions without importing table, list, home or framework.
