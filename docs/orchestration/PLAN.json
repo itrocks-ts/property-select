@@ -10,7 +10,7 @@
     "effective_attestation": "No independent model/effort attestation exposed to executor; never infer from self-report"
   },
   "review_status": "APPROVED_P04",
-  "product_verdict": "NEEDS_FIX",
+  "product_verdict": "PASS_FINAL_ACCEPTANCE",
   "order": [
     "P01",
     "P02",
@@ -2327,7 +2327,7 @@
         "VAL-08",
         "VAL-06"
       ],
-      "validation": "BLOCKED by open V7-01 and incomplete independent final matrix; no delivery executed."
+      "validation": "READY: independent RETEST-V7-1 passes the complete final matrix and closes V7-01; acceptance prerequisite cleared. No D8 delivery executed."
     },
     {
       "id": "FIX-L7-1",
@@ -2534,7 +2534,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "acceptance",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "At least V7 risk profile for session recovery, independent final browser/SQL acceptance and regressions.",
@@ -2551,6 +2551,21 @@
         "PORT-08",
         "PORT-09",
         "QUA-01"
+      ],
+      "validation": "Independent PASS: all 64 final T01–T27, SQL-01–14, META, PORT, PANE and LIFE cases; 28 fresh stages; 243 owner tests, all builds/exports and app build. Eight acquired PUT revoke/expiry cases at four sizes pass reload guidance, stale Retry rejection, preserved state and fresh-generation recovery. Simultaneous operation/storage failures pass at all four sizes. Both interfaces/four sizes and genuine CDP phone touch pass. All 428 failures individually attributed: 357 product signals, 63 completed HTTP 204, eight injected ERR_FAILED; zero unclassified. V7-01 CLOSED; D8 prerequisite cleared, delivery not executed.",
+      "version_changes": {
+        "@itrocks/property-select": "0.7.6 → 0.7.7"
+      },
+      "checkpoints": "evidence/RETEST-V7-1/checkpoints.json",
+      "evidence": [
+        "evidence/RETEST-V7-1/coverage.json",
+        "evidence/RETEST-V7-1/stage-summary.json",
+        "evidence/RETEST-V7-1/session-regression/results.json",
+        "evidence/RETEST-V7-1/error/results.json",
+        "evidence/RETEST-V7-1/touch/results.json",
+        "evidence/RETEST-V7-1/health-review.json",
+        "evidence/RETEST-V7-1/final-preservation.json",
+        "evidence/RETEST-V7-1/SHA256SUMS"
       ]
     }
   ],

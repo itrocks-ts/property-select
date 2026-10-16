@@ -1,10 +1,40 @@
 # Phase 1 validation matrix
 
-## V7 independent final acceptance
+## RETEST-V7-1 complete final acceptance
+
+**DONE / independent PASS**, 16 October 2026. [Report](reports/RETEST-V7-1.md),
+[64 individual final cases](evidence/RETEST-V7-1/coverage.json),
+[28 fresh stage results](evidence/RETEST-V7-1/stage-summary.json).
+Corrected runtime `2083bb37` / **0.7.6**; tracking/tests **0.7.7**. All other final owner SHAs are unchanged.
+[V7-01](defects/V7-01.md) is **CLOSED**. D8's prerequisite is cleared; D8 remains PENDING and was not executed.
+
+| Final family | Cases | Verdict | Fresh proof owner                          |
+| ------------ | ----- | ------- | ------------------------------------------ |
+| T            | 01–27 | PASS    | UI, integration, state, gestures, load     |
+| SQL          | 01–14 | PASS    | Fresh oracle, rendering, scope, preview    |
+| META         | 01–04 | PASS    | Foundations, provider/search, restoration  |
+| PORT         | 01–10 | PASS    | Contracts, adapters, state, build, imports |
+| PANE         | 01–06 | PASS    | Generic shell, integration, touch          |
+| LIFE         | 01–03 | PASS    | Activation, departure, list regressions    |
+
+The case inventory links every final obligation to newly executed evidence; **no mandatory NOT_RUN remains**.
+[Eight acquired-PUT session cases](evidence/RETEST-V7-1/session-regression/results.json) pass all four sizes:
+410, complete visible reload guidance, stale Retry rejection, state preservation and full reload recovery.
+[Four-size simultaneous errors](evidence/RETEST-V7-1/error/results.json) preserve operation and persistence messages.
+Both interfaces/four sizes, genuine CDP touch at both phone sizes, mouse/keyboard/hybrid, fresh SQL values/count/feed/
+scope, exports and architecture pass. Owner builds/tests: **243 executions, zero failures/skips**; app build passes.
+[Network gate](evidence/RETEST-V7-1/health-review.json): **428/428 individually attributed**, zero unclassified;
+357 original product signals, 63 completed HTTP 204 responses, eight deliberate ERR_FAILED injections.
+Showtime, foreign config and both AD index entries are preserved. The narrow physical-device limit is VAL-05 only.
+
+All gate verdicts, failures and incomplete portions below are historical stage records. They preserve their original
+proof and do not override this complete final acceptance or imply that an unrun final case was waived.
+
+## V7 historical independent final acceptance
 
 **NEEDS_FIX**, 16 October 2026. [Report](reports/V7.md), [fresh final-case inventory](evidence/V7/coverage.json).
 Selector base `6909c625` / 0.7.4, unchanged runtime 0.7.3; tracking/tests patch **0.7.5**.
-This section is the current final-gate verdict; historical stage passes below remain historical.
+This failed gate is historical; the complete RETEST-V7-1 verdict above supersedes its acceptance status.
 
 - **FAIL T16 / STA-03 / DEP-05 / PORT-08–09 / QUA-01 — [V7-01](defects/V7-01.md):**
   [eight fresh browser scenarios](evidence/V7/session-regression/results.json), revoke and expiry at all four sizes,
@@ -939,23 +969,23 @@ after V7 audits the correction protocol and confirms no unresolved failure; it i
 | T27  | L2-HOME L2-LIST L6 | V2 V6             | B       |
 
 - **T01** — Expected: Mount without hosts; normalise strings/segments; observe explicit intentions and
-acknowledgements. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
+acknowledgements. Proof: [V2 report](reports/V2.md); stage verdict: **PASS (V2 implemented observations)**.
 - **T02** — Expected: Open Customer→Address→City→Country, return to Address then City; Country stays in remembered
-breadcrumb. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
+breadcrumb. Proof: [V2 report](reports/V2.md); stage verdict: **PASS (V2 implemented observations)**.
 - **T03** — Expected: Open a sibling relation from Address; retain the shared prefix and replace only the divergent
-suffix. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
+suffix. Proof: [V2 report](reports/V2.md); stage verdict: **PASS (V2 implemented observations)**.
 - **T04** — Expected: Activate a shortcut from a different branch; full destination replaces branch and search
 clears. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
+stage verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T05** — Expected: Click terminal, relation main and relation +; assert one correct intention/action per input,
-unchanged context on add. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
+unchanged context on add. Proof: [V2 report](reports/V2.md); stage verdict: **PASS (V2 implemented observations)**.
 - **T06** — Expected: Compare bounding boxes at hover/focus; on touch + appears only on relations and hybrid actions
-remain usable. Proof: `evidence/<gate>/T06.*`; current verdict: `NOT_RUN`.
+remain usable. Proof: `evidence/<gate>/T06.*`; stage verdict: `NOT_RUN`.
 - **T07** — Expected: Add customer.address.city as an object; assert target identity/type and existing
 representative rendering after reload. Proof: [V2 report](reports/V2.md);
-current verdict: **PASS (V2 implemented observations)**.
+stage verdict: **PASS (V2 implemented observations)**.
 - **T08** — Expected: Use a long breadcrumb on narrow/touch screens; scroll and activate remembered levels with no
-add/drag. Proof: `evidence/<gate>/T08.*`; current verdict: `NOT_RUN`.
+add/drag. Proof: `evidence/<gate>/T08.*`; stage verdict: `NOT_RUN`.
 - **T09** — Expected: Search customer country name with reordered/accented/case-varied words; see terminal and
 object results by full path. **PASS**, [fresh retest](evidence/RETEST-V3-1/replay-V3/results.json).
 - **T10** — Expected: Search from Address, assert all results descend from it; return to root with the same query
@@ -971,19 +1001,19 @@ noncycles with provider traces. **PASS**, [fresh real/static traces](evidence/RE
 - **T14** — Expected: Combine recent ancestor, two maximal used branches and duplicate advice; assert stable
 six-or-configured destination limit. Author proof: [L4](reports/L4.md),
 [browser observations](evidence/L4/browser.json);
-current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
+stage verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T15** — Expected: Confirm new add, click duplicate, move existing and abort new drag; only the committed new add
-becomes recent. Author proof: [L4](reports/L4.md); current verdict: `PASS L4 CLICK/CONTRACT`,
+becomes recent. Author proof: [L4](reports/L4.md); stage verdict: `PASS L4 CLICK/CONTRACT`,
 independent V4 click/generic outcomes **PASS RETEST-V4-1**; actual drag/move/cancel **PASS V5**:
 [proof](evidence/V5/results.json).
 - **T16** — Expected: Set branch/query/scroll, fold/reopen and full reload; expire that actual session and verify
 all selector state is forgotten. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
+stage verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T17** — Expected: Switch saved list config, remove a metadata path and reload; used advice updates, recents
 remain, invalid branch truncates. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
-current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
+stage verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T18** — Expected: Click absent/existing columns rapidly; new appends, existing stays at index, both reveal/flash
-and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; current verdict: `NOT_RUN`.
+and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; stage verdict: `NOT_RUN`.
 - **T19** — Expected: Drag new path through legal positions; a true column appears immediately, receives real data
 and commits only at valid drop. **PASS V5**: [independent proof](evidence/V5/results.json).
 - **T20** — Expected: Drag an existing column, validate movement, then repeat and abandon; assert one column and
@@ -1003,7 +1033,7 @@ independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/r
 explicit pane closure. Proof: `evidence/<gate>/T25.*`; author: [PASS L6](reports/L6.md);
 independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 - **T26** — Expected: Use 500+ metadata contexts, 120 roots, slow/failing endpoints and overlapping actions; bounded
-work and unique columns persist. Proof: `evidence/<gate>/T26.*`; current verdict: `NOT_RUN`.
+work and unique columns persist. Proof: `evidence/<gate>/T26.*`; stage verdict: `NOT_RUN`.
 - **T27** — Expected: Scroll a wide table to both ends; pane/header controls remain visible and open the same pane
 on desktop and touch. Proof: `evidence/<gate>/T27.*`; author: [PASS L6](reports/L6.md);
 independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
@@ -1021,7 +1051,7 @@ Implementation: `S02 S03 S04 S05 S06 S07`. Independent gates: `VSQL V2 V7`. Meth
 Expected: Project number and customer.address.city.name; compare four seed roots, types, order and canonical
 descriptors.
 
-Proof: `evidence/<gate>/SQL-01.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-01.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 S04 metadata prerequisite: `PASS` for direct/deep final owners, object targets, optional ancestry and canonical
 paths. [Tests](evidence/S04/reflect-path-test.txt), reflect-path
@@ -1060,7 +1090,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Project City with nested Country representative fields; assert prototype/id/loaded fields, converted
 values and zero rendering queries.
 
-Proof: `evidence/<gate>/SQL-02.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-02.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1070,7 +1100,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Project city plus city.name and two different address paths; verify consistent object identity/values and
 no alias/join collision.
 
-Proof: `evidence/<gate>/SQL-03.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-03.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1080,7 +1110,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Filter deliveryAddress.city.name while displaying only number/customer city; check actual bound criterion
 and mandatory scope in select/count.
 
-Proof: `evidence/<gate>/SQL-04.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-04.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1090,7 +1120,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Distinguish absent customer, absent address, null city.name, empty note and no matches; a required
 descendant under optional parent preserves roots.
 
-Proof: `evidence/<gate>/SQL-05.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-05.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 S02 contract observation: `PASS` for separate typed loaded null/undefined, absent relation and ignored scalar cells,
 partial object metadata and empty-result descriptors. Public API typecheck:
@@ -1105,7 +1135,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Use homonymous fields, long paths, id/p0-like names, invalid/ambiguous paths and injection-looking values;
 quoted metadata and bound values stay separate.
 
-Proof: `evidence/<gate>/SQL-06.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-06.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1115,7 +1145,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Exercise decimal, date, boolean, nullable, empty string and custom nested SQL/READ/SAVE converters, async
 conversion, scalar IGNORE versus loaded undefined, object-field IGNORE and conversion rejection.
 
-Proof: `evidence/<gate>/SQL-07.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-07.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1125,7 +1155,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Use 120 roots with tied relational sort values; assert root-id tie-breaker, first/next/last pages,
 offset/limit zero, empty page and count equality.
 
-Proof: `evidence/<gate>/SQL-08.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-08.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1135,7 +1165,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Navigate inverse/N-N metadata; selecting/sorting any plural column rejects before SQL, even with one
 child; no first-value or multiplied root fallback.
 
-Proof: `evidence/<gate>/SQL-09.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-09.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 
 S04 multiplicity prerequisite: `PASS` for logical collection/record/generic-array descendants, explicit inverse/N-N
 facts and accumulated `many`. [Tests](evidence/S04/reflect-path-test.txt), reflect-path
@@ -1149,7 +1179,7 @@ VSQL independent storage observation: `PASS`; UI refusal remains `NOT_RUN` until
 Expected: Known 1-N/inverse/N-N hidden filters with zero/one/several matches use shared EXISTS semantics;
 same-prefix AND conditions share a child; root count/pages stay unique.
 
-Proof: `evidence/<gate>/SQL-10.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-10.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1159,7 +1189,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Call dataSource().select via configured engine; preserve existing search/count/functions and
 mysql-maintainer composition. Unsupported adapter rejects without search fallback.
 
-Proof: `evidence/<gate>/SQL-11.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-11.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 S02 adapter observation: `PASS` for inherited unsupported-selection with zero search fallback and zero connections,
 including installed MySQL and maintained MySQL adapters. [Runtime tests](evidence/S02/storage-test.txt) and
@@ -1175,7 +1205,7 @@ VSQL independent storage observation: `PASS`.
 Expected: One projection query plus separate count, zero cell/render reads; Identifiers restricts loaded rows and
 scope. Empty ids return none; preview movement reuses pending read.
 
-Proof: `evidence/<gate>/SQL-12.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/SQL-12.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 
 S02 option observation: `PASS` for the public readonly `Identifiers` carrier and existing option-port compatibility.
 [Runtime tests](evidence/S02/storage-test.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
@@ -1189,7 +1219,7 @@ VSQL independent storage observation: `PASS`; preview reuse **PASS V5**: [SQL pr
 Expected: Object equality targets id, null means absence; function operands convert by final property;
 query/conversion errors retain causes and no fake successful empty cell.
 
-Proof: `evidence/<gate>/SQL-13.*` and `reports/<gate>.md`. Current verdict: `PASS` (storage observations).
+Proof: `evidence/<gate>/SQL-13.*` and `reports/<gate>.md`. Stage verdict: `PASS` (storage observations).
 
 VSQL independent storage observation: `PASS`.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
@@ -1199,7 +1229,7 @@ VSQL independent storage observation: `PASS`.
 Expected: Archive actual SQL/result assertions separately from V2 City/deep-field render, filter/sort/feed/reload
 evidence using the exact delivered modules.
 
-Proof: [VSQL report](reports/VSQL.md) and [V2 report](reports/V2.md). Current verdict: **PASS (VSQL/V2)**.
+Proof: [VSQL report](reports/VSQL.md) and [V2 report](reports/V2.md). Stage verdict: **PASS (VSQL/V2)**.
 
 VSQL independent storage and V2 browser linkage observations: **PASS**.
 [V2 results](evidence/V2/results.json), [typed rendering](evidence/V2/typed-rendering.json),
@@ -1215,7 +1245,7 @@ Implementation: `S03 S04 L1-META`. Independent gates: `VSQL V3 V7`. Methods: U,C
 Expected: Direct/inherited/optional/collection and logical inverse/N-N descriptions match owner metadata, unknowns
 remain explicit; no value getter/read occurs.
 
-Proof: `evidence/<gate>/META-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/META-01.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 
 S03 owner observation: `PASS` for direct/inherited/optional/collection targets, explicit inverse/N-N/unknown facts,
 inherited defaults and zero record getter/constructor reads. [Tests](evidence/S03/reflect-test.txt) and
@@ -1235,7 +1265,7 @@ L1-META provider observation: **PASS**; see [author observations](#l1-meta-autho
 Expected: Both enumerate and resolve full path enforce the same authorisation; labels/order reuse display owners and
 include accessible fields beyond initial list columns.
 
-Proof: `evidence/<gate>/META-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/META-02.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 L1-META provider/HTTP permission and presentation observation: **PASS**.
 [Real browser responses](evidence/L1-META/browser.json); independent V3 remains NOT_RUN.
 
@@ -1244,7 +1274,7 @@ L1-META provider/HTTP permission and presentation observation: **PASS**.
 Expected: Resolve two-level/deep paths and multiple routes to same class; ambiguous unions reject; unknown inverse
 never permits uncertain automatic return.
 
-Proof: `evidence/<gate>/META-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/META-03.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 
 S03 owner observation: `PASS` for preserving ambiguous candidates with unknown target/multiplicity and for late
 resolution of deferred metadata. [Tests](evidence/S03/reflect-test.txt), reflect
@@ -1264,7 +1294,7 @@ L1-META finite provider paths and ambiguous/unknown handling: **PASS**; automati
 Expected: Change allowed paths between save/restore; truncate branch to valid prefix, discard invalid advice and
 rerun query from the validated context.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
+Proof: [independent retest](reports/RETEST-V4-1.md). Stage verdict: **PASS**.
 
 L1-META catalogue-change capability: **PASS**; [browser proof](evidence/L1-META/browser.json).
 Persisted branch/query/advice restoration: **PASS RETEST-V4-1**.
@@ -1279,25 +1309,25 @@ Independent gates: `V2-UI V2-TABLE V3 V4 V5 V7`. Methods: U,C,I,B.
 Expected: No forbidden host imports; missing provider is explicit configuration error, optional consumer only
 observes, translation fallback is deterministic and UI stays simple.
 
-Proof: `evidence/<gate>/PORT-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-01.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### PORT-02: Intent identity and disposal
 
 Expected: Reject mismatched/duplicate/late outcomes; maintain stable path across begin/move/end/cancel; only an
 applied new addition affects recents; dispose cancels work once.
 
-Proof: `evidence/<gate>/PORT-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-02.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### PORT-03: Lazy budgets and errors
 
 Expected: Large static catalogue loads progressively with cached contexts, bounded concurrent
 requests/depth/results; abort and stale generations work, errors preserve current context.
 
-Proof: `evidence/<gate>/PORT-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-03.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### PORT-04: Table contract substitutions
 
 Expected: Exercise opaque-id generic consumer independent of selector/list, asynchronous header/cells, transaction
 commit/cancel and no persistence of transient columns.
 
-Proof: `evidence/<gate>/PORT-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-04.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 Generic table stage: **PASS** through [RETEST-V2-TABLE-1](reports/RETEST-V2-TABLE-1.md), resolving the
 historical frozen-boundary reveal failure. External transport **PASS V5**; final replay remains V7.
 
@@ -1306,19 +1336,19 @@ historical frozen-boundary reveal failure. External transport **PASS V5**; final
 Expected: Identity translation fallback, technical label fallback, provider business order, static root advice,
 six-result default and configured limit are observable without phase 2 settings.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
+Proof: [independent retest](reports/RETEST-V4-1.md). Stage verdict: **PASS**.
 ### PORT-06: Search rank and focus
 
 Expected: Reverse network completion order; same metadata yields same rank, selected focus remains,
 empty/loading/limited/error states stay distinct.
 
-Proof: `evidence/<gate>/PORT-06.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/PORT-06.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### PORT-07: Canonical key and isolation
 
 Expected: Query variants of the same canonical list route share selector state; route-identifying segments and two
 real sessions remain distinct; table namespace is separate.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS**.
+Proof: [independent retest](reports/RETEST-V4-1.md). Stage verdict: **PASS**.
 ### PORT-08: State sequencing and expiry
 
 Expected: Race same-key and distinct-key writes with list configuration saves and response autosave. Revoke/expire
@@ -1327,7 +1357,7 @@ secret. Also remove/recreate a selector key while an old write is pending; its t
 No lost namespace, skipped nested-state save, stale overwrite or expired-state resurrection. Use two store
 instances with identical synthetic session ids to prove cache isolation; retain the two-user browser check.
 
-Proof: [fresh retest](reports/RETEST-V4-1.md). Current verdict: **PASS; V4-01 CLOSED**.
+Proof: [fresh retest](reports/RETEST-V4-1.md). Stage verdict: **PASS; V4-01 CLOSED**.
 Historical [V4 reproduction](evidence/V4/revocation.json) remains unchanged.
 ### PORT-09: Storage and preview failures
 
@@ -1335,7 +1365,7 @@ Expected: Unavailable state store preserves live context and signals error; fail
 responsive, valid drop outcome independent of data completion and retry available.
 
 Proof: [session retest](reports/RETEST-V4-1.md), V5/V6 and [L7 retest](reports/RETEST-L7-1.md).
-Current verdict: **PASS current obligations; L7-02 CLOSED**. The original L7 visible-error failure remains
+Stage verdict: **PASS current obligations; L7-02 CLOSED**. The original L7 visible-error failure remains
 historical evidence. Fresh aborted-HTTP and HTTP 503/native scroll/save/Retry proof passes at all four dimensions.
 Combined final acceptance remains V7.
 
@@ -1347,7 +1377,7 @@ and zero server libraries in browser or host imports in selector.
 Proof: [independent L7 retest](reports/RETEST-L7-1.md),
 [AST imports/exports](evidence/RETEST-L7-1/imports-independent.json) and
 [build/public inventories](evidence/RETEST-L7-1/build/results.json).
-Current verdict: **PASS current obligations; L7-01 CLOSED**. Historical failed L7 imports remain recorded.
+Stage verdict: **PASS current obligations; L7-01 CLOSED**. Historical failed L7 imports remain recorded.
 Combined final acceptance remains V7.
 
 S02 owner observation: `PASS` for public CJS exports/declarations, package allowlist and neutral dependency direction.
@@ -1376,42 +1406,42 @@ Expected: No content means no pane command; first arbitrary content starts folde
 notifications/breadcrumb while closed.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
+Stage verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-02: Opened command and desktop layout
 
 Expected: Same command moves left of pane title and reverses icon; main table shrinks but stays interactive and
 scrollable.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
+Stage verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-03: Occupancy and restoration tokens
 
 Expected: Competing owner registration rejects; temporary fold preserves instance; release restores former state;
 removal/navigation invalidates tokens and prevents stale reopening.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
+Stage verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-04: Focus and mobile modal region
 
 Expected: Explicit close focuses visible trigger, mobile hidden main is unfocusable, desktop main remains accessible
 and drag restoration avoids search focus.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
+Stage verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
 ### PANE-05: Header control and click flow
 
 Expected: Pinned right header add button opens the one existing pane at every horizontal scroll position; mobile
 click adds without a placement dialogue.
 
 Proof: [V2 assertions](evidence/V2/results.json) and [report](reports/V2.md).
-Current verdict: **PASS (V2 click integration)**; later gesture observations remain at V6.
+Stage verdict: **PASS (V2 click integration)**; later gesture observations remain at V6.
 ### PANE-06: Responsive presentation
 
 Expected: Desktop/narrow/portrait/landscape pass no overflow, long breadcrumb access, comfortable touch targets,
 contrast, visible focus, themes and reduced motion.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS V2-HOME shell and V6 integration**; see [V6](reports/V6.md).
+Stage verdict: **PASS V2-HOME shell and V6 integration**; see [V6](reports/V6.md).
 
 ## LIFE additional cases
 
@@ -1422,19 +1452,19 @@ Implementation: `L1 L2-LIST L5 L6 L7`. Independent gates: `V2 V5 V6 V7`. Methods
 Expected: Initial load, fragment insertion and reinsertion mount once; server binding finishes before metadata is
 cached and browser composition loads public modules only.
 
-Proof: `evidence/<gate>/LIFE-01.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/LIFE-01.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### LIFE-02: Navigation during operations
 
 Expected: Navigate away during metadata, state or preview load/drag; listeners/pointer/temporary DOM are cleaned, no
 stale data/pane recreation.
 
-Proof: `evidence/<gate>/LIFE-02.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/LIFE-02.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 ### LIFE-03: Existing list behaviour
 
 Expected: Retain scoped entity JSON, HTML filtering/sort/feed, header-origin reorder/removal, frozen columns, row
 selection and keyboard after repeated reset.
 
-Proof: `evidence/<gate>/LIFE-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: `evidence/<gate>/LIFE-03.*` and `reports/<gate>.md`. Stage verdict: `NOT_RUN`.
 Generic table header/sort/reset/freeze regression portions independently **PASS** in
 [RETEST-V2-TABLE-1](reports/RETEST-V2-TABLE-1.md), including the resolved reveal defect.
 Integrated list observations remain later gates.

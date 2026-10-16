@@ -1,0 +1,13 @@
+✔ existing adapter rejects projection asynchronously without an entity search fallback (2.093292ms)
+✔ identifiers use the existing option port and retain readonly-compatible identifier inputs (0.350452ms)
+✔ public errors preserve every code, path and original cause (0.418772ms)
+✔ projection-aware adapters substitute through the same public DataSource method (0.394994ms)
+✔ the package public facade resolves to this checkout and retains existing exports (1.365783ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 29.083921

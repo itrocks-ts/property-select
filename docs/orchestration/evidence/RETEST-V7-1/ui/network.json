@@ -1,0 +1,384 @@
+{
+  "fetches": [
+    {
+      "context": 1,
+      "page": 1,
+      "id": 1,
+      "document": 1792135120115.7,
+      "time": 1792135120162.4,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 1,
+      "document": 1792135120115.7,
+      "time": 1792135120167.5,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 1,
+      "document": 1792135120115.7,
+      "time": 1792135121521,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 2,
+      "document": 1792135120115.7,
+      "time": 1792135121554.0999,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 2,
+      "document": 1792135120115.7,
+      "time": 1792135121568.2,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 1,
+      "document": 1792135121636,
+      "time": 1792135121659,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 1,
+      "page": 1,
+      "id": 1,
+      "document": 1792135121636,
+      "time": 1792135121660.6,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 1,
+      "document": 1792135121727.3,
+      "time": 1792135121752.2,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 1,
+      "document": 1792135121727.3,
+      "time": 1792135121755.4001,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 1,
+      "document": 1792135121727.3,
+      "time": 1792135123054.6,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 2,
+      "document": 1792135121727.3,
+      "time": 1792135123088.2,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 2,
+      "document": 1792135121727.3,
+      "time": 1792135123101.3,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 1,
+      "document": 1792135123165.6,
+      "time": 1792135123188.5,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 2,
+      "page": 2,
+      "id": 1,
+      "document": 1792135123165.6,
+      "time": 1792135123190.5,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 1,
+      "document": 1792135123258.7,
+      "time": 1792135123291.5,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 1,
+      "document": 1792135123258.7,
+      "time": 1792135123294.5999,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 1,
+      "document": 1792135123258.7,
+      "time": 1792135125068.8,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 2,
+      "document": 1792135123258.7,
+      "time": 1792135125118.5999,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 2,
+      "document": 1792135123258.7,
+      "time": 1792135125134.7,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 1,
+      "document": 1792135125246.1,
+      "time": 1792135125278.1,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 3,
+      "page": 3,
+      "id": 1,
+      "document": 1792135125246.1,
+      "time": 1792135125279.3,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 1,
+      "document": 1792135125342.1,
+      "time": 1792135125366.3,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 1,
+      "document": 1792135125342.1,
+      "time": 1792135125371.1,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 1,
+      "document": 1792135125342.1,
+      "time": 1792135127319.3,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 2,
+      "document": 1792135125342.1,
+      "time": 1792135127371.4001,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 2,
+      "document": 1792135125342.1,
+      "time": 1792135127384.6,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 1,
+      "document": 1792135127497.6,
+      "time": 1792135127532.4001,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 4,
+      "page": 4,
+      "id": 1,
+      "document": 1792135127497.6,
+      "time": 1792135127533.8,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 1,
+      "document": 1792135127593.9,
+      "time": 1792135127618.4,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 1,
+      "document": 1792135127593.9,
+      "time": 1792135127622.5,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 2,
+      "document": 1792135127593.9,
+      "time": 1792135127642.9,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 2,
+      "document": 1792135127593.9,
+      "time": 1792135127644.2998,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 2,
+      "document": 1792135127593.9,
+      "time": 1792135127674.2,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 3,
+      "document": 1792135127593.9,
+      "time": 1792135127684.9,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "start"
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 3,
+      "document": 1792135127593.9,
+      "time": 1792135127686.7,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "response",
+      "status": 200
+    },
+    {
+      "context": 5,
+      "page": 5,
+      "id": 3,
+      "document": 1792135127593.9,
+      "time": 1792135127785.7998,
+      "url": "http://127.0.0.1:13721/undefined",
+      "method": "GET",
+      "event": "abort"
+    }
+  ],
+  "failures": [],
+  "injections": [],
+  "browser": "151.0.7922.34",
+  "sandbox": true,
+  "status": "PASS"
+}

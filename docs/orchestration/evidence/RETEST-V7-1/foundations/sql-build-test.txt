@@ -1,0 +1,50 @@
+
+> @itrocks/sql-build@0.2.0 test
+> npm run build && npm run test:types && tsx --test --test-isolation=none test/sql-build.test.ts && node --test --test-isolation=none test/property-select.test.mjs
+
+
+> @itrocks/sql-build@0.2.0 build
+> tsc
+
+
+> @itrocks/sql-build@0.2.0 test:types
+> tsc --ignoreConfig --module nodenext --noEmit --types node test/*.test.ts
+
+✔ builds a parameterized SELECT for root columns (2.441652ms)
+✔ shares joins between selected and filtered property paths (0.725431ms)
+✔ uses sql-join for one-to-many paths and accepts explicit output aliases (0.287824ms)
+✔ renders null filters without binding a value (0.292611ms)
+✔ builds COUNT queries with the same joins and values (1.158176ms)
+✔ selects the root wildcard and rejects relationship projections (0.504221ms)
+✔ allows adapters to number placeholders (0.501352ms)
+✔ allows adapters to resolve arbitrary definitions and identifier quoting (0.382176ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 407.095326
+✔ SQL-01/03/05: scalar metadata, shared paths and deterministic aliases (4.264641ms)
+✔ SQL-02/03/07: object expansion, nested identities and overlapping scalar aliases (1.346008ms)
+✔ SQL-04: undisplayed criteria, object identities and null retain common predicates (0.588582ms)
+✔ SQL-06: aliases and quoted identifiers do not interpret property syntax (1.045768ms)
+✔ SQL-09: plural and unknown projection or ordering reject before rendering (1.06998ms)
+✔ SQL-10: shared plural predicates use one existing child and independent branches use separate scopes (0.648066ms)
+✔ SQL-10: nested plural scopes correlate to their actual parent and preserve shared prefixes (0.442772ms)
+✔ SQL-08/12: root restrictions, stable order and zero or finite limits stay bound (0.638747ms)
+✔ trusted functions and numbered placeholders share one parameter stream (0.629979ms)
+✔ metadata adapters control object fields without record construction or runtime value reads (0.479297ms)
+✔ legacy low-level projection keeps plural joins, explicit aliases and wildcard behaviour (0.923485ms)
+✔ SQL-06/07: long cyclic paths preserve final metadata and configurable table aliases (0.615299ms)
+✔ SQL-09/10: singular inverse and plural physical mappings retain owner columns (0.278137ms)
+✔ SQL-02: default object discovery omits plural and unmapped relations without reading records (0.28326ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 34.367269

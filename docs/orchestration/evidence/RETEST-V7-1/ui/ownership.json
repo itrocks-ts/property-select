@@ -1,0 +1,19 @@
+{
+  "args": [
+    "/usr/bin/node",
+    "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+    "--ps-environment=/tmp/property-select/RETEST-V7-1-ui",
+    "--ps-port=13721",
+    "--ps-token=02c55da0-fa96-4a14-aafa-8c3d010a8dc3"
+  ],
+  "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+  "executable": "/usr/bin/node",
+  "start": "153347362",
+  "state": "R",
+  "uid": 1000,
+  "directory": "/tmp/property-select/RETEST-V7-1-ui",
+  "name": "standalone",
+  "pid": 2640176,
+  "port": 13721,
+  "token": "02c55da0-fa96-4a14-aafa-8c3d010a8dc3"
+}

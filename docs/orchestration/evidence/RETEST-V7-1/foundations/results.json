@@ -1,0 +1,285 @@
+[
+  {
+    "owner": "storage",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "storage",
+    "label": "types",
+    "command": [
+      "node",
+      "../../.bin/tsc",
+      "-p",
+      "test/tsconfig.json"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "storage",
+    "label": "test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "storage",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/storage.js"
+    ]
+  },
+  {
+    "owner": "reflect",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect",
+    "label": "types",
+    "command": [
+      "npm",
+      "run",
+      "build:test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect",
+    "label": "test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./esm/reflect.js",
+      "./cjs/reflect.js"
+    ]
+  },
+  {
+    "owner": "reflect-path",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect-path",
+    "label": "types",
+    "command": [
+      "npm",
+      "run",
+      "build:test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect-path",
+    "label": "test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "reflect-path",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/reflect-path.js"
+    ]
+  },
+  {
+    "owner": "sql-join",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "sql-join",
+    "label": "test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "sql-join",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/sql-join.js"
+    ]
+  },
+  {
+    "owner": "sql-build",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "sql-build",
+    "label": "test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "sql-build",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/sql-build.js"
+    ]
+  },
+  {
+    "owner": "mysql",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "mysql",
+    "label": "test",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "mysql",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/mysql.js"
+    ]
+  },
+  {
+    "owner": "mysql-maintainer",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "mysql-maintainer",
+    "label": "test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "mysql-maintainer",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/mysql-maintainer.js"
+    ]
+  },
+  {
+    "owner": "fastify-file-session-store",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify-file-session-store",
+    "label": "test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify-file-session-store",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/fastify-file-session-store.js"
+    ]
+  },
+  {
+    "owner": "fastify",
+    "label": "build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify",
+    "label": "test",
+    "command": [
+      "npm",
+      "test"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify",
+    "label": "exports",
+    "status": "PASS",
+    "exports": [
+      "./cjs/fastify.js"
+    ]
+  }
+]

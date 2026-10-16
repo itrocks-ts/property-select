@@ -1,0 +1,6 @@
+PASS table 0.4.0
+PASS property-select 0.7.7
+PASS list 0.12.1
+PASS home 0.7.0
+PASS framework 0.11.0
+npm warn gitignore-fallback No .npmignore file found, using .gitignore for file exclusion. Consider creating a .npmignore file to explicitly control published files.

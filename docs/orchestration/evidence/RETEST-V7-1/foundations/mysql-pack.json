@@ -1,0 +1,56 @@
+[
+  {
+    "id": "@itrocks/mysql@0.3.2",
+    "name": "@itrocks/mysql",
+    "version": "0.3.2",
+    "size": 14186,
+    "unpackedSize": 55874,
+    "shasum": "1cdccc138df30c61d85af1aee36a4cadbfd25c23",
+    "integrity": "sha512-F9HVCTx3b8478JaEqioejIOZqL+dGvnqD93Wjj7XP7R/7DgGuz0+msGo4jFuCClIn8STx+D/NE3xhbUGOuP1KQ==",
+    "filename": "itrocks-mysql-0.3.2.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 4261,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql.d.ts",
+        "size": 5080,
+        "mode": 420
+      },
+      {
+        "path": "cjs/mysql.js",
+        "size": 25863,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.d.ts",
+        "size": 649,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.js",
+        "size": 5730,
+        "mode": 420
+      },
+      {
+        "path": "docs/dependencies.md",
+        "size": 5486,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1153,
+        "mode": 420
+      }
+    ],
+    "entryCount": 8,
+    "bundled": []
+  }
+]

@@ -1,0 +1,40 @@
+[
+	{
+		"args": [
+			"/usr/bin/node",
+			"/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+			"--ps-environment=/tmp/property-select/RETEST-V7-1-integration",
+			"--ps-port=13829",
+			"--ps-token=78c3a156-ae4f-4351-b532-e3bbbc6f1f92"
+		],
+		"boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+		"executable": "/usr/bin/node",
+		"start": "153448289",
+		"state": "R",
+		"uid": 1000,
+		"directory": "/tmp/property-select/RETEST-V7-1-integration",
+		"name": "app",
+		"pid": 2674728,
+		"port": 13829,
+		"token": "78c3a156-ae4f-4351-b532-e3bbbc6f1f92"
+	},
+	{
+		"args": [
+			"/usr/bin/node",
+			"/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+			"--ps-environment=/tmp/property-select/RETEST-V7-1-integration",
+			"--ps-port=13830",
+			"--ps-token=ecb38d78-28b8-4e3b-955a-2ad2cf156e76"
+		],
+		"boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+		"executable": "/usr/bin/node",
+		"start": "153448322",
+		"state": "R",
+		"uid": 1000,
+		"directory": "/tmp/property-select/RETEST-V7-1-integration",
+		"name": "standalone",
+		"pid": 2674747,
+		"port": 13830,
+		"token": "ecb38d78-28b8-4e3b-955a-2ad2cf156e76"
+	}
+]

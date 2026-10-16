@@ -1,0 +1,33 @@
+[
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.RETEST-V7-1-imports.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:18:33.884Z",
+    "finished": "2026-10-16T07:18:34.565Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports/run.txt",
+    "environment": {
+      "PS_RETEST_NETWORK": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports/network.json",
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports/",
+      "PS_VSQL_RAW": "/tmp/property-select/RETEST-V7-1-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_V4_DIRECTORY": "/tmp/property-select/RETEST-V7-1-imports",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/imports",
+      "PS_TABLE_URL": "http://127.0.0.1:14092/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14091/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14091",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14092"
+    }
+  }
+]

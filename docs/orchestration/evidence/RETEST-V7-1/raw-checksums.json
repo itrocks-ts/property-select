@@ -1,0 +1,6 @@
+{
+  "path": "/tmp/property-select/RETEST-V7-1-sql/mysql-general.raw.log",
+  "sha256": "1345e80dd25627cbb6793a0618dcdf73f85deab1c7dff253711390404aaf332e",
+  "bytes": 39027,
+  "committedJournal": "sql/mysql-general.log"
+}

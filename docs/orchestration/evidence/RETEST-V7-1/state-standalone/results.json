@@ -1,0 +1,1510 @@
+{
+  "assertions": [
+    {
+      "name": "configured bound and maximal priorities",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "metadata label without translator",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "Customer › Address › City",
+      "expected": "Customer › Address › City",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed terminal destination",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "consumer commits one chosen path",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate has no second commit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected choice preserves recent",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves complete state",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps deepest branch",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps query and recents",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "expected": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut drops remembered suffix",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fold restores wheel scroll",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "full reload restores wheel scroll",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure keeps local query",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure preserves durable query",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry recovers latest snapshot",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration preserves recents and advice priority",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated branch truncates",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated suggestions disappear",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query reruns allowed result",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query excludes removed paths",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "native interactions trusted",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ended fixture session clears state",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "expected": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configured bound and maximal priorities",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "metadata label without translator",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "Customer › Address › City",
+      "expected": "Customer › Address › City",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed terminal destination",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "consumer commits one chosen path",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate has no second commit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected choice preserves recent",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves complete state",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps deepest branch",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps query and recents",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "expected": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut drops remembered suffix",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fold restores wheel scroll",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "full reload restores wheel scroll",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure keeps local query",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure preserves durable query",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry recovers latest snapshot",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration preserves recents and advice priority",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated branch truncates",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated suggestions disappear",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query reruns allowed result",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query excludes removed paths",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "native interactions trusted",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ended fixture session clears state",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "expected": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configured bound and maximal priorities",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "metadata label without translator",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "Customer › Address › City",
+      "expected": "Customer › Address › City",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed terminal destination",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "consumer commits one chosen path",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate has no second commit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected choice preserves recent",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves complete state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps deepest branch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps query and recents",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "expected": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut drops remembered suffix",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fold restores wheel scroll",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "full reload restores wheel scroll",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure keeps local query",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure preserves durable query",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry recovers latest snapshot",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration preserves recents and advice priority",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated branch truncates",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated suggestions disappear",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query reruns allowed result",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query excludes removed paths",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "native interactions trusted",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ended fixture session clears state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "expected": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configured bound and maximal priorities",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "metadata label without translator",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "Customer › Address › City",
+      "expected": "Customer › Address › City",
+      "status": "PASS"
+    },
+    {
+      "name": "confirmed terminal destination",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "consumer commits one chosen path",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "duplicate has no second commit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer.name"
+      ],
+      "expected": [
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "rejected choice preserves recent",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold preserves complete state",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "branch": [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        "current": 2,
+        "query": "name",
+        "recent": [
+          "customer"
+        ],
+        "scroll": {},
+        "version": 1
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps deepest branch",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "full reload keeps query and recents",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "expected": [
+        "name",
+        [
+          "customer"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut drops remembered suffix",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fold restores wheel scroll",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "full reload restores wheel scroll",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure keeps local query",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "storage failure preserves durable query",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "Retry recovers latest snapshot",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "failed-local-query",
+      "expected": "failed-local-query",
+      "status": "PASS"
+    },
+    {
+      "name": "changed configuration preserves recents and advice priority",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated branch truncates",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "invalidated suggestions disappear",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query reruns allowed result",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restored query excludes removed paths",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "native interactions trusted",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "ended fixture session clears state",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "expected": [
+        [],
+        "",
+        [],
+        {}
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "no browser exceptions",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "no browser console errors",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "standalone",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-standalone",
+      "output": ""
+    },
+    {
+      "action": "stop-standalone",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-standalone",
+      "output": "PASS: owned standalone 2652567 stopped\n"
+    }
+  ],
+  "errors": [],
+  "console": [],
+  "networkFailures": [],
+  "screenshots": [
+    {
+      "name": "remembered-before-1280x720.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "restored-after-1280x720.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "storage-failure-1280x720.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "metadata-restored-1280x720.png",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "remembered-before-768x900.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "restored-after-768x900.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "storage-failure-768x900.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "metadata-restored-768x900.png",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "remembered-before-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "restored-after-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "storage-failure-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "metadata-restored-390x844.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "remembered-before-844x390.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "restored-after-844x390.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "storage-failure-844x390.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    },
+    {
+      "name": "metadata-restored-844x390.png",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "url": "http://127.0.0.1:13912/state-fixture"
+    }
+  ],
+  "seed": "static catalogue; sessionStorage test port; suggestionLimit 3",
+  "url": "http://127.0.0.1:13912/state-fixture",
+  "inputs": [],
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

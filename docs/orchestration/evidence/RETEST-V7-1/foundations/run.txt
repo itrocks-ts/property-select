@@ -1,0 +1,13 @@
+PASS storage
+PASS reflect
+PASS reflect-path
+PASS sql-join
+PASS sql-build
+PASS mysql
+PASS mysql-maintainer
+PASS fastify-file-session-store
+PASS fastify
+[itrocks-fastify] Request failed { code: 'EIO', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'EIO', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }

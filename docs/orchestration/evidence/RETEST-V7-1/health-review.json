@@ -1,0 +1,157 @@
+{
+  "status": "PASS",
+  "rule": "Each ERR_ABORTED requires a uniquely matched original product signal before failure, or the same completed HTTP 204 response. Explicit fixture aborts classify only ERR_FAILED. Diagnostic and earlier observer runs are excluded.",
+  "stages": [
+    {
+      "stage": "ui",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "ui/network.json"
+    },
+    {
+      "stage": "pane",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "pane/network.json"
+    },
+    {
+      "stage": "table",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "table/network.json"
+    },
+    {
+      "stage": "geometry",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "geometry/network.json"
+    },
+    {
+      "stage": "integration",
+      "status": "PASS",
+      "failures": 21,
+      "attribution": {
+        "completed bodyless HTTP 204": 9,
+        "product AbortSignal": 12
+      },
+      "evidence": "integration/network.json"
+    },
+    {
+      "stage": "search",
+      "status": "PASS",
+      "failures": 2,
+      "attribution": {
+        "product AbortSignal": 2
+      },
+      "evidence": "search/network.json"
+    },
+    {
+      "stage": "search-focus",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "search-focus/network.json"
+    },
+    {
+      "stage": "state",
+      "status": "PASS",
+      "failures": 11,
+      "attribution": {
+        "completed bodyless HTTP 204": 4,
+        "product AbortSignal": 7
+      },
+      "evidence": "state/network.json"
+    },
+    {
+      "stage": "session-regression",
+      "status": "PASS",
+      "failures": 21,
+      "attribution": {
+        "completed bodyless HTTP 204": 8,
+        "product AbortSignal": 13
+      },
+      "evidence": "session-regression/network.json"
+    },
+    {
+      "stage": "state-integrated",
+      "status": "PASS",
+      "failures": 37,
+      "attribution": {
+        "product AbortSignal": 33,
+        "completed bodyless HTTP 204": 4
+      },
+      "evidence": "state-integrated/network.json"
+    },
+    {
+      "stage": "state-standalone",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "state-standalone/network.json"
+    },
+    {
+      "stage": "state-races",
+      "status": "PASS",
+      "failures": 6,
+      "attribution": {
+        "completed bodyless HTTP 204": 2,
+        "product AbortSignal": 4
+      },
+      "evidence": "state-races/network.json"
+    },
+    {
+      "stage": "desktop",
+      "status": "PASS",
+      "failures": 203,
+      "attribution": {
+        "product AbortSignal": 191,
+        "completed bodyless HTTP 204": 12
+      },
+      "evidence": "desktop/network.json"
+    },
+    {
+      "stage": "transport",
+      "status": "PASS",
+      "failures": 0,
+      "attribution": {},
+      "evidence": "transport/network.json"
+    },
+    {
+      "stage": "touch",
+      "status": "PASS",
+      "failures": 88,
+      "attribution": {
+        "completed bodyless HTTP 204": 12,
+        "product AbortSignal": 76
+      },
+      "evidence": "touch/network.json"
+    },
+    {
+      "stage": "load",
+      "status": "PASS",
+      "failures": 17,
+      "attribution": {
+        "product AbortSignal": 5,
+        "explicit fixture abort": 8,
+        "completed bodyless HTTP 204": 4
+      },
+      "evidence": "load/network.json"
+    },
+    {
+      "stage": "error",
+      "status": "PASS",
+      "failures": 22,
+      "attribution": {
+        "completed bodyless HTTP 204": 8,
+        "product AbortSignal": 14
+      },
+      "evidence": "error/network.json"
+    }
+  ],
+  "total": 428,
+  "unclassified": 0
+}

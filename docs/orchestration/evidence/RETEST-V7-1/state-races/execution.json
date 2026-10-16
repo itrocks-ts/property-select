@@ -1,0 +1,85 @@
+{
+  "sourcePath": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V4-1-challenges.mjs",
+  "sourceSha256": "9d2a29d295da574adc4392e9dab0b1b8b426d7a2a346c37985b4f8f716a6a6e7",
+  "executedSha256": "388740bb4d0cfa6011cb044b8844b86aa06a46a4e5a2f030e0eee6ef68514d35",
+  "networkObserverSha256": "282d91081f76caccbd77c732843b3dbb35c9a3c7af39174efd8b6bb1a77254bf",
+  "checkpoints": {
+    "property-select": {
+      "sha": "2083bb37b8f7bdb0e390730135213e0e89be69a7",
+      "version": "0.7.6",
+      "status": ""
+    },
+    "list": {
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "version": "0.12.1",
+      "status": ""
+    },
+    "table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0",
+      "status": ""
+    },
+    "home": {
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0",
+      "status": ""
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    },
+    "reflect": {
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    "reflect-path": {
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "storage": {
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    "sql-build": {
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "sql-join": {
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "mysql": {
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "mysql-maintainer": {
+      "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify": {
+      "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify-file-session-store": {
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    }
+  },
+  "trackingVersion": "0.7.7",
+  "adaptations": [
+    "fresh output",
+    "owned directories and ports",
+    "current provenance",
+    "V2 aborts require observed AbortSignal; V3 opens fresh sessions; functional assertions unchanged"
+  ]
+}

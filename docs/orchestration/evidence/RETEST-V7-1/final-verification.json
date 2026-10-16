@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "checks": [
+    "28 fresh successful command stages",
+    "64 mandatory cases PASS with existing evidence",
+    "428 individually attributed network failures, zero unclassified",
+    "243 owner tests, zero failure/skip/cancellation",
+    "new drivers node --check",
+    "authored document links and 120-column layout",
+    "executed source hashes match execution metadata",
+    "all JSON evidence parse",
+    "final preservation PASS"
+  ],
+  "visualReview": [
+    "session-regression/390x844-revoke-ended.png",
+    "error/844x390-retained.png",
+    "touch/integration-390-folded-preview.png",
+    "touch/integration-844-restored.png",
+    "touch/integration-390-dark-reduced-motion.png"
+  ]
+}

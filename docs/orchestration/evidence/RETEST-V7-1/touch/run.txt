@@ -1,0 +1,5 @@
+Running integration-390
+Running integration-844
+Running integration-1280
+Running integration-768
+PASS 281 assertions /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/touch

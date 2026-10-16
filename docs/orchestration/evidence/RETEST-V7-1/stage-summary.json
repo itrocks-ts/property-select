@@ -1,0 +1,170 @@
+[
+  {
+    "stage": "foundations",
+    "status": "PASS",
+    "evidence": "foundations/results.json",
+    "commands": "commands-foundations.json"
+  },
+  {
+    "stage": "build",
+    "status": "PASS",
+    "evidence": "build/results.json",
+    "commands": "commands-build.json"
+  },
+  {
+    "stage": "architecture",
+    "status": "PASS",
+    "evidence": "architecture/architecture.json",
+    "commands": "commands-architecture.json"
+  },
+  {
+    "stage": "imports",
+    "status": "PASS",
+    "evidence": "imports/imports-independent.json",
+    "commands": "commands-imports.json"
+  },
+  {
+    "stage": "sql",
+    "status": "PASS",
+    "evidence": "sql/results.json",
+    "commands": "commands-sql.json"
+  },
+  {
+    "stage": "ui",
+    "status": "PASS",
+    "evidence": "ui/results.json",
+    "commands": "commands-ui.json"
+  },
+  {
+    "stage": "pane",
+    "status": "PASS",
+    "evidence": "pane/results.json",
+    "commands": "commands-pane.json"
+  },
+  {
+    "stage": "table",
+    "status": "PASS",
+    "evidence": "table/results.json",
+    "commands": "commands-table.json"
+  },
+  {
+    "stage": "geometry",
+    "status": "PASS",
+    "evidence": "geometry/results.json",
+    "commands": "commands-geometry.json"
+  },
+  {
+    "stage": "integration",
+    "status": "PASS",
+    "evidence": "integration/results.json",
+    "commands": "commands-integration.json"
+  },
+  {
+    "stage": "search",
+    "status": "PASS",
+    "evidence": "search/results.json",
+    "commands": "commands-search.json"
+  },
+  {
+    "stage": "search-focus",
+    "status": "PASS",
+    "evidence": "search-focus/results.json",
+    "commands": "commands-search-focus.json"
+  },
+  {
+    "stage": "search-bounds",
+    "status": "PASS",
+    "evidence": "search-bounds/bounds.json",
+    "commands": "commands-search-bounds.json"
+  },
+  {
+    "stage": "state",
+    "status": "PASS",
+    "evidence": "state/results.json",
+    "commands": "commands-state.json"
+  },
+  {
+    "stage": "session-regression",
+    "status": "PASS",
+    "evidence": "session-regression/results.json",
+    "commands": "commands-session-regression.json"
+  },
+  {
+    "stage": "state-integrated",
+    "status": "PASS",
+    "evidence": "state-integrated/results.json",
+    "commands": "commands-state-integrated.json"
+  },
+  {
+    "stage": "state-standalone",
+    "status": "PASS",
+    "evidence": "state-standalone/results.json",
+    "commands": "commands-state-standalone.json"
+  },
+  {
+    "stage": "state-races",
+    "status": "PASS",
+    "evidence": "state-races/results.json",
+    "commands": "commands-state-races.json"
+  },
+  {
+    "stage": "state-revoke",
+    "status": "PASS",
+    "evidence": "state-revoke/revocation.json",
+    "commands": "commands-state-revoke.json"
+  },
+  {
+    "stage": "state-contract",
+    "status": "PASS",
+    "evidence": "state-contract/contracts.json",
+    "commands": "commands-state-contract.json"
+  },
+  {
+    "stage": "desktop",
+    "status": "PASS",
+    "evidence": "desktop/results.json",
+    "commands": "commands-desktop.json"
+  },
+  {
+    "stage": "transport",
+    "status": "PASS",
+    "evidence": "transport/results.json",
+    "commands": "commands-transport.json"
+  },
+  {
+    "stage": "touch",
+    "status": "PASS",
+    "evidence": "touch/results.json",
+    "commands": "commands-touch.json"
+  },
+  {
+    "stage": "interruption",
+    "status": "PASS",
+    "evidence": "interruption/run.txt",
+    "commands": "commands-interruption.json"
+  },
+  {
+    "stage": "load",
+    "status": "PASS",
+    "evidence": "load/results.json",
+    "commands": "commands-load.json"
+  },
+  {
+    "stage": "error",
+    "status": "PASS",
+    "evidence": "error/results.json",
+    "commands": "commands-error.json"
+  },
+  {
+    "stage": "scope",
+    "status": "PASS",
+    "evidence": "scope/scope-independent.json",
+    "commands": "commands-scope.json"
+  },
+  {
+    "stage": "review",
+    "status": "PASS",
+    "evidence": "review/results.json",
+    "commands": "commands-review.json"
+  }
+]

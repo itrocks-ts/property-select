@@ -1,0 +1,1 @@
+PASS: 2 interruption contract scenarios, 10 assertions

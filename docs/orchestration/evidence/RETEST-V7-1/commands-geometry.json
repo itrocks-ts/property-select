@@ -1,0 +1,142 @@
+[
+  {
+    "program": "mysqladmin",
+    "args": [
+      "--no-defaults",
+      "--socket=/tmp/showtime-property-select-env/mysql.sock",
+      "-u",
+      "root",
+      "ping"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:19:50.878Z",
+    "finished": "2026-10-16T07:19:50.885Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/database-status.txt",
+    "environment": {}
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "app"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:19:50.885Z",
+    "finished": "2026-10-16T07:19:50.922Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/app-start.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/RETEST-V7-1-geometry-owned",
+      "PS_APP_PORT": "14091",
+      "PS_STANDALONE_PORT": "14092",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "standalone"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:19:50.923Z",
+    "finished": "2026-10-16T07:19:50.961Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/standalone-start.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/RETEST-V7-1-geometry-owned",
+      "PS_APP_PORT": "14091",
+      "PS_STANDALONE_PORT": "14092",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:19:52.274Z",
+    "finished": "2026-10-16T07:19:52.364Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/status.txt",
+    "environment": {
+      "PS_APP_PORT": "14091"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.RETEST-V7-1-geometry.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:19:52.364Z",
+    "finished": "2026-10-16T07:20:09.839Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/run.txt",
+    "environment": {
+      "PS_RETEST_NETWORK": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/network.json",
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/",
+      "PS_VSQL_RAW": "/tmp/property-select/RETEST-V7-1-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_V4_DIRECTORY": "/tmp/property-select/RETEST-V7-1-geometry",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry",
+      "PS_TABLE_URL": "http://127.0.0.1:14092/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14091/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14091",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14092"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-standalone"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:20:09.840Z",
+    "finished": "2026-10-16T07:20:09.927Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/standalone-stop.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/RETEST-V7-1-geometry-owned",
+      "PS_APP_PORT": "14091",
+      "PS_STANDALONE_PORT": "14092",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-app"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T07:20:09.927Z",
+    "finished": "2026-10-16T07:20:10.012Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/geometry/app-stop.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/RETEST-V7-1-geometry-owned",
+      "PS_APP_PORT": "14091",
+      "PS_STANDALONE_PORT": "14092",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V4-fixture.cjs"
+    }
+  }
+]

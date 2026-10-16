@@ -1,0 +1,1 @@
+PASS 130 assertions; /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V7-1/desktop

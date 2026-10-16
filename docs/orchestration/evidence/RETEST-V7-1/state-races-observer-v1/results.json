@@ -1,0 +1,315 @@
+{
+  "assertions": [
+    {
+      "name": "revoke: nonempty remembered state",
+      "actual": [
+        [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        2,
+        [
+          "customer"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        2,
+        [
+          "customer"
+        ],
+        true
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: exact stale response",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: all durable state absent after restart",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: all mounted state reset",
+      "actual": {
+        "branch": [],
+        "current": 0,
+        "query": "",
+        "recent": [],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "version": 1,
+        "branch": [],
+        "current": 0,
+        "query": "",
+        "recent": [],
+        "scroll": {}
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: nonempty remembered state",
+      "actual": [
+        [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        2,
+        [
+          "customer"
+        ],
+        true
+      ],
+      "expected": [
+        [
+          "customer",
+          "address",
+          "city",
+          "country"
+        ],
+        2,
+        [
+          "customer"
+        ],
+        true
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "expire: exact stale response",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: all durable state absent after restart",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: all mounted state reset",
+      "actual": {
+        "branch": [],
+        "current": 0,
+        "query": "",
+        "recent": [],
+        "scroll": {},
+        "version": 1
+      },
+      "expected": {
+        "version": 1,
+        "branch": [],
+        "current": 0,
+        "query": "",
+        "recent": [],
+        "scroll": {}
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: distinct key commits",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: list config commits",
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: autosave response",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: production write response",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: durable selector namespaces",
+      "actual": [
+        "autosave-first",
+        "other-autosave-first"
+      ],
+      "expected": [
+        "autosave-first",
+        "other-autosave-first"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: durable real list columns",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "autosave-first: durable autosave nested edit",
+      "actual": "autosave-first",
+      "expected": "autosave-first",
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: distinct key commits",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: list config commits",
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: production write response",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: autosave response",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: durable selector namespaces",
+      "actual": [
+        "state-first",
+        "other-state-first"
+      ],
+      "expected": [
+        "state-first",
+        "other-state-first"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: durable real list columns",
+      "actual": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "state-first: durable autosave nested edit",
+      "actual": "state-first",
+      "expected": "state-first",
+      "status": "PASS"
+    },
+    {
+      "name": "no browser exception",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": "PASS: owned app 2653498 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": "PASS: owned app 2653841 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": "PASS: owned app 2654068 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": "PASS: owned app 2654270 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-races",
+      "output": "PASS: owned app 2654493 stopped\n"
+    }
+  ],
+  "errors": [],
+  "responses": [],
+  "screenshots": [
+    "revoke-nonempty-before.png",
+    "revoke-empty-after.png",
+    "expire-nonempty-before.png",
+    "expire-empty-after.png"
+  ],
+  "url": "http://127.0.0.1:13911/property-select-invoice",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "input": "mouse/keyboard",
+  "seed": "synthetic invoice fixture; existing database 13316",
+  "browser": "151.0.7922.34",
+  "console": [
+    "Failed to load resource: the server responded with a status of 410 (Gone)",
+    "Failed to load resource: the server responded with a status of 410 (Gone)"
+  ],
+  "status": "PASS"
+}

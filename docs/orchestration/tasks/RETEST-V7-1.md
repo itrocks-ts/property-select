@@ -3,7 +3,8 @@
 ## Objective and prerequisites
 
 Independently verify FIX-V7-1 and complete every obligation in [V7](V7.md).
-Status: `PENDING`. Require attributable corrective commits and a validated FIX-V7-1 report before starting.
+Status: `DONE / independent PASS`. [Report](../reports/RETEST-V7-1.md); all 64 final cases pass.
+FIX-V7-1 checkpoint `2083bb37` / 0.7.6; tracking/tests patch 0.7.7. D8 is ready but unexecuted.
 Use a fresh verifier distinct from the corrector and earlier V7 agent. No subdelegation or D8.
 Read application/owner instructions, handbook routes, [COMMON.md](../COMMON.md), [EXECUTION.md](../EXECUTION.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),

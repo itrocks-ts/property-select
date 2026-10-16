@@ -1,0 +1,106 @@
+[
+  {
+    "id": "@itrocks/sql-join@0.2.0",
+    "name": "@itrocks/sql-join",
+    "version": "0.2.0",
+    "size": 13679,
+    "unpackedSize": 54096,
+    "shasum": "330205373869a9fb646503666979bf45e44a4cb0",
+    "integrity": "sha512-Aohy1D0/qIII9PjNBRJDh1RHX5j2vHDJW6n+BRagTl1x2VdxdQgb0WH8jmBaccCiDz+GipzMtp1asnMLDaGfcA==",
+    "filename": "itrocks-sql-join-0.2.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 13205,
+        "mode": 420
+      },
+      {
+        "path": "cjs/dependencies.d.ts",
+        "size": 1706,
+        "mode": 420
+      },
+      {
+        "path": "cjs/dependencies.js",
+        "size": 4027,
+        "mode": 420
+      },
+      {
+        "path": "cjs/join.d.ts",
+        "size": 1502,
+        "mode": 420
+      },
+      {
+        "path": "cjs/join.js",
+        "size": 2444,
+        "mode": 420
+      },
+      {
+        "path": "cjs/joins.d.ts",
+        "size": 1905,
+        "mode": 420
+      },
+      {
+        "path": "cjs/joins.js",
+        "size": 9084,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relationship-graph.d.ts",
+        "size": 1024,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relationship-graph.js",
+        "size": 5993,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relationship.d.ts",
+        "size": 984,
+        "mode": 420
+      },
+      {
+        "path": "cjs/relationship.js",
+        "size": 1276,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-join.d.ts",
+        "size": 810,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sql-join.js",
+        "size": 1587,
+        "mode": 420
+      },
+      {
+        "path": "cjs/subquery.d.ts",
+        "size": 305,
+        "mode": 420
+      },
+      {
+        "path": "cjs/subquery.js",
+        "size": 1030,
+        "mode": 420
+      },
+      {
+        "path": "docs/dependencies.md",
+        "size": 5312,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1135,
+        "mode": 420
+      }
+    ],
+    "entryCount": 18,
+    "bundled": []
+  }
+]

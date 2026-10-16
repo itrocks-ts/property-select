@@ -1,0 +1,19 @@
+FAIL 11 independent assertions
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: simultaneous storage message visible
+
+false !== true
+
+    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.RETEST-V7-1-error.mjs:17:9)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.RETEST-V7-1-error.mjs:111:3 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'deepStrictEqual'
+}
+
+Node.js v24.0.1

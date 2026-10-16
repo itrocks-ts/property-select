@@ -1,0 +1,3663 @@
+{
+  "verdict": "PASS",
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "chromiumSandbox": true,
+  "url": "http://127.0.0.1:13721/",
+  "fixture": "static catalogue invoice/customer/address/city/country and cyclic parent; no records",
+  "checkpoint": "2083bb37b8f7bdb0e390730135213e0e89be69a7",
+  "version": "0.7.7",
+  "records": [
+    {
+      "name": "clean initial ownership reservation",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: one list and business DOM order",
+      "expected": [
+        "customer",
+        "number"
+      ],
+      "observed": [
+        "customer",
+        "number"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: exactly one property list",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no table columns",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: viewport",
+      "expected": [
+        1280,
+        720
+      ],
+      "observed": [
+        1280,
+        720
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: hover preserves row/main geometry",
+      "expected": [
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: hovered plus visible",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard focus preserves geometry",
+      "expected": [
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 305,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: full remembered branch",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: remembered descendant retained",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: descendant restores object",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: divergent suffix only",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: navigation emits no selection",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: terminal and relation plus each emit once",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: object plus retains current context",
+      "expected": "customer.address",
+      "observed": "customer.address",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: Tab reaches sibling plus",
+      "expected": "select:customer.address.street",
+      "observed": "select:customer.address.street",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: visible keyboard outline",
+      "expected": "solid",
+      "observed": "solid",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: Enter and Space each emit once",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard reaches relation plus",
+      "expected": "select:customer.address.city",
+      "observed": "select:customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard selects exact object once",
+      "expected": [
+        "customer.address.city",
+        "customer.address"
+      ],
+      "observed": [
+        "customer.address.city",
+        "customer.address"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: object keyboard emits once",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: intention ids unique",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: real input scrolls breadcrumb",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: scroll/cancel emits no selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: long branch levels reachable without selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no document horizontal overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: disposal removes surface",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: remount one surface",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: remount has one listener",
+      "expected": 7,
+      "observed": 7,
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: fresh reload instance state",
+      "expected": [
+        "",
+        []
+      ],
+      "observed": [
+        "",
+        []
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: one list and business DOM order",
+      "expected": [
+        "customer",
+        "number"
+      ],
+      "observed": [
+        "customer",
+        "number"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: exactly one property list",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: no table columns",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: viewport",
+      "expected": [
+        768,
+        900
+      ],
+      "observed": [
+        768,
+        900
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: hover preserves row/main geometry",
+      "expected": [
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: hovered plus visible",
+      "expected": "1",
+      "observed": "1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard focus preserves geometry",
+      "expected": [
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "observed": [
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 670,
+          "height": 44
+        },
+        {
+          "x": 49,
+          "y": 254.875,
+          "width": 626,
+          "height": 44
+        },
+        "626px 44px"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: full remembered branch",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: remembered descendant retained",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: descendant restores object",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: divergent suffix only",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: navigation emits no selection",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: terminal and relation plus each emit once",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: object plus retains current context",
+      "expected": "customer.address",
+      "observed": "customer.address",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: Tab reaches sibling plus",
+      "expected": "select:customer.address.street",
+      "observed": "select:customer.address.street",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: visible keyboard outline",
+      "expected": "solid",
+      "observed": "solid",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: Enter and Space each emit once",
+      "expected": 5,
+      "observed": 5,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard reaches relation plus",
+      "expected": "select:customer.address.city",
+      "observed": "select:customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: keyboard selects exact object once",
+      "expected": [
+        "customer.address.city",
+        "customer.address"
+      ],
+      "observed": [
+        "customer.address.city",
+        "customer.address"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: object keyboard emits once",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: intention ids unique",
+      "expected": 6,
+      "observed": 6,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: real input scrolls breadcrumb",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: scroll/cancel emits no selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: long branch levels reachable without selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.street",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: no document horizontal overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: disposal removes surface",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: remount one surface",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: remount has one listener",
+      "expected": 7,
+      "observed": 7,
+      "verdict": "PASS"
+    },
+    {
+      "name": "narrow: fresh reload instance state",
+      "expected": [
+        "",
+        []
+      ],
+      "observed": [
+        "",
+        []
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: one list and business DOM order",
+      "expected": [
+        "customer",
+        "number"
+      ],
+      "observed": [
+        "customer",
+        "number"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: exactly one property list",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: no table columns",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: viewport",
+      "expected": [
+        390,
+        844
+      ],
+      "observed": [
+        390,
+        844
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: touch without hover",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: relation plus visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: terminal plus hidden",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: full remembered branch",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: remembered descendant retained",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: descendant restores object",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: divergent suffix only",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: navigation emits no selection",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: terminal and relation plus each emit once",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: object plus retains current context",
+      "expected": "customer.address",
+      "observed": "customer.address",
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: intention ids unique",
+      "expected": 2,
+      "observed": 2,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: real input scrolls breadcrumb",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: scroll/cancel emits no selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: long branch levels reachable without selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: no document horizontal overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: disposal removes surface",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: remount one surface",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: remount has one listener",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "portrait: fresh reload instance state",
+      "expected": [
+        "",
+        []
+      ],
+      "observed": [
+        "",
+        []
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: one list and business DOM order",
+      "expected": [
+        "customer",
+        "number"
+      ],
+      "observed": [
+        "customer",
+        "number"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: exactly one property list",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: no table columns",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: viewport",
+      "expected": [
+        844,
+        390
+      ],
+      "observed": [
+        844,
+        390
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: touch without hover",
+      "expected": [
+        true,
+        false
+      ],
+      "observed": [
+        true,
+        false
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: relation plus visible",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: terminal plus hidden",
+      "expected": false,
+      "observed": false,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: full remembered branch",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: remembered descendant retained",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.city",
+        "customer.address.city.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: descendant restores object",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: divergent suffix only",
+      "expected": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "observed": [
+        "",
+        "customer",
+        "customer.address",
+        "customer.address.country"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: navigation emits no selection",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: terminal and relation plus each emit once",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: object plus retains current context",
+      "expected": "customer.address",
+      "observed": "customer.address",
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: intention ids unique",
+      "expected": 2,
+      "observed": 2,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: real input scrolls breadcrumb",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: scroll/cancel emits no selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: long branch levels reachable without selection",
+      "expected": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "observed": [
+        "customer.address.country.name",
+        "customer.address.city"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: no document horizontal overflow",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: disposal removes surface",
+      "expected": 0,
+      "observed": 0,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: remount one surface",
+      "expected": 1,
+      "observed": 1,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: remount has one listener",
+      "expected": 3,
+      "observed": 3,
+      "verdict": "PASS"
+    },
+    {
+      "name": "landscape: fresh reload instance state",
+      "expected": [
+        "",
+        []
+      ],
+      "observed": [
+        "",
+        []
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "missing provider configuration error",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "idempotent mount and dynamic insertion",
+      "expected": [
+        true,
+        1
+      ],
+      "observed": [
+        true,
+        1
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "optional defaults",
+      "expected": [
+        [],
+        [],
+        "Identity"
+      ],
+      "observed": [
+        [],
+        [],
+        "Identity"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "array canonical path",
+      "expected": "customer.address.city",
+      "observed": "customer.address.city",
+      "verdict": "PASS"
+    },
+    {
+      "name": "optional consumer observes only; one confirmation; disposal",
+      "expected": {
+        "before": 0,
+        "first": true,
+        "duplicate": false,
+        "after": 1,
+        "count": 0,
+        "late": false
+      },
+      "observed": {
+        "before": 0,
+        "first": true,
+        "duplicate": false,
+        "after": 1,
+        "count": 0,
+        "late": false
+      },
+      "verdict": "PASS"
+    },
+    {
+      "name": "late provider cannot revive disposed view",
+      "expected": [
+        0,
+        "disposed"
+      ],
+      "observed": [
+        0,
+        "disposed"
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "name": "all observed product input trusted",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "each phone receives touch input",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "each phone receives trusted movement and cancellation",
+      "expected": true,
+      "observed": true,
+      "verdict": "PASS"
+    },
+    {
+      "name": "console errors and failed browser requests",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    },
+    {
+      "name": "browser graph contains only standalone assets",
+      "expected": [],
+      "observed": [],
+      "verdict": "PASS"
+    }
+  ],
+  "failures": [],
+  "requests": [
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "desktop",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "narrow",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "portrait",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/",
+      "type": "document"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.css",
+      "type": "stylesheet"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/demo.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/catalogue.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/property-select.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/pointer-transport.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/controller.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/path.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/state.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/intentions.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/navigation.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/search.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/suggestions.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/metadata.js",
+      "type": "script"
+    },
+    {
+      "name": "landscape",
+      "url": "http://127.0.0.1:13721/assets/front/property-select.html",
+      "type": "fetch"
+    }
+  ],
+  "inputs": [
+    {
+      "name": "desktop",
+      "width": 1280,
+      "height": 720,
+      "touch": false,
+      "events": [
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "name": "narrow",
+      "width": 768,
+      "height": 900,
+      "touch": false,
+      "events": [
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": " "
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Shift"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Tab"
+        },
+        {
+          "type": "keydown",
+          "trusted": true,
+          "key": "Enter"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": ""
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "mouse"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "mouse"
+        }
+      ]
+    },
+    {
+      "name": "portrait",
+      "width": 390,
+      "height": 844,
+      "touch": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchcancel",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    },
+    {
+      "name": "landscape",
+      "width": 844,
+      "height": 390,
+      "touch": true,
+      "events": [
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "touchmove",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "touchcancel",
+          "trusted": true
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerdown",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "pointerup",
+          "trusted": true,
+          "pointerType": "touch"
+        },
+        {
+          "type": "click",
+          "trusted": true,
+          "pointerType": "touch"
+        }
+      ]
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "/usr/bin/node",
+        "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+        "standalone"
+      ],
+      "stdout": ""
+    }
+  ]
+}

@@ -1,0 +1,667 @@
+{
+  "verdict": "PASS",
+  "checkpoint": {
+    "property-select": {
+      "sha": "2083bb37b8f7bdb0e390730135213e0e89be69a7",
+      "version": "0.7.6",
+      "status": ""
+    },
+    "list": {
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "version": "0.12.1",
+      "status": ""
+    },
+    "table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0",
+      "status": ""
+    },
+    "home": {
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0",
+      "status": ""
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    },
+    "reflect": {
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    "reflect-path": {
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "storage": {
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    "sql-build": {
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "sql-join": {
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "mysql": {
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "mysql-maintainer": {
+      "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify": {
+      "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify-file-session-store": {
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    }
+  },
+  "trackingVersion": "0.7.7",
+  "rule": "Fresh RETEST-V7-1 execution only, including all composite obligations; historical and diagnostic runs are excluded. Physical device limits are confined to VAL-05.",
+  "cases": [
+    {
+      "id": "T01",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "T02",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "T03",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "T04",
+      "status": "PASS",
+      "evidence": [
+        "state/results.json",
+        "state-integrated/results.json",
+        "state-standalone/results.json"
+      ]
+    },
+    {
+      "id": "T05",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "T06",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T07",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "T08",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T09",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "T10",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "T11",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "desktop/results.json",
+        "transport/results.json"
+      ]
+    },
+    {
+      "id": "T12",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "T13",
+      "status": "PASS",
+      "evidence": [
+        "foundations/results.json",
+        "sql/results.json",
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "T14",
+      "status": "PASS",
+      "evidence": [
+        "state/results.json",
+        "state-integrated/results.json",
+        "state-standalone/results.json"
+      ]
+    },
+    {
+      "id": "T15",
+      "status": "PASS",
+      "evidence": [
+        "state/results.json",
+        "state-contract/contracts.json",
+        "desktop/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T16",
+      "status": "PASS",
+      "evidence": [
+        "session-regression/results.json",
+        "state-integrated/results.json",
+        "state-races/results.json",
+        "state-revoke/revocation.json"
+      ]
+    },
+    {
+      "id": "T17",
+      "status": "PASS",
+      "evidence": [
+        "state-integrated/results.json",
+        "state-standalone/results.json",
+        "state-races/results.json"
+      ]
+    },
+    {
+      "id": "T18",
+      "status": "PASS",
+      "evidence": [
+        "integration/results.json",
+        "desktop/results.json"
+      ]
+    },
+    {
+      "id": "T19",
+      "status": "PASS",
+      "evidence": [
+        "desktop/results.json",
+        "transport/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T20",
+      "status": "PASS",
+      "evidence": [
+        "desktop/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T21",
+      "status": "PASS",
+      "evidence": [
+        "desktop/results.json",
+        "transport/results.json",
+        "touch/results.json",
+        "interruption/run.txt",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "T22",
+      "status": "PASS",
+      "evidence": [
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T23",
+      "status": "PASS",
+      "evidence": [
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T24",
+      "status": "PASS",
+      "evidence": [
+        "touch/results.json",
+        "interruption/run.txt"
+      ]
+    },
+    {
+      "id": "T25",
+      "status": "PASS",
+      "evidence": [
+        "ui/results.json",
+        "pane/results.json",
+        "integration/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "T26",
+      "status": "PASS",
+      "evidence": [
+        "search-bounds/bounds.json",
+        "transport/results.json",
+        "load/results.json",
+        "error/results.json"
+      ]
+    },
+    {
+      "id": "T27",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "integration/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "SQL-01",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-02",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-03",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-04",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-05",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-06",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-07",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-08",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-09",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-10",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-11",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-12",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json",
+        "desktop/results.json",
+        "transport/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "SQL-13",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "SQL-14",
+      "status": "PASS",
+      "evidence": [
+        "sql/results.json",
+        "integration/results.json",
+        "scope/scope-independent.json"
+      ]
+    },
+    {
+      "id": "META-01",
+      "status": "PASS",
+      "evidence": [
+        "foundations/results.json",
+        "build/results.json",
+        "sql/results.json",
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "META-02",
+      "status": "PASS",
+      "evidence": [
+        "build/results.json",
+        "search/results.json",
+        "search-focus/results.json",
+        "state-integrated/results.json"
+      ]
+    },
+    {
+      "id": "META-03",
+      "status": "PASS",
+      "evidence": [
+        "foundations/results.json",
+        "sql/results.json",
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "META-04",
+      "status": "PASS",
+      "evidence": [
+        "state-integrated/results.json",
+        "state-races/results.json",
+        "state-standalone/results.json"
+      ]
+    },
+    {
+      "id": "PORT-01",
+      "status": "PASS",
+      "evidence": [
+        "build/results.json",
+        "architecture/architecture.json",
+        "imports/imports-independent.json",
+        "ui/results.json"
+      ]
+    },
+    {
+      "id": "PORT-02",
+      "status": "PASS",
+      "evidence": [
+        "build/results.json",
+        "state-contract/contracts.json",
+        "desktop/results.json",
+        "transport/results.json",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "PORT-03",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "search-focus/results.json",
+        "search-bounds/bounds.json",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "PORT-04",
+      "status": "PASS",
+      "evidence": [
+        "table/results.json",
+        "geometry/results.json",
+        "desktop/results.json",
+        "transport/results.json"
+      ]
+    },
+    {
+      "id": "PORT-05",
+      "status": "PASS",
+      "evidence": [
+        "state-standalone/results.json",
+        "state-contract/contracts.json"
+      ]
+    },
+    {
+      "id": "PORT-06",
+      "status": "PASS",
+      "evidence": [
+        "search/results.json",
+        "search-focus/results.json"
+      ]
+    },
+    {
+      "id": "PORT-07",
+      "status": "PASS",
+      "evidence": [
+        "state/results.json",
+        "state-integrated/results.json",
+        "state-contract/contracts.json"
+      ]
+    },
+    {
+      "id": "PORT-08",
+      "status": "PASS",
+      "evidence": [
+        "foundations/results.json",
+        "session-regression/results.json",
+        "state-integrated/results.json",
+        "state-races/results.json",
+        "state-revoke/revocation.json"
+      ]
+    },
+    {
+      "id": "PORT-09",
+      "status": "PASS",
+      "evidence": [
+        "session-regression/results.json",
+        "state-standalone/results.json",
+        "desktop/results.json",
+        "transport/results.json",
+        "touch/results.json",
+        "load/results.json",
+        "error/results.json"
+      ]
+    },
+    {
+      "id": "PORT-10",
+      "status": "PASS",
+      "evidence": [
+        "foundations/results.json",
+        "build/results.json",
+        "architecture/architecture.json",
+        "imports/imports-independent.json",
+        "review/results.json"
+      ]
+    },
+    {
+      "id": "PANE-01",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "PANE-02",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "integration/results.json"
+      ]
+    },
+    {
+      "id": "PANE-03",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "transport/results.json",
+        "touch/results.json",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "PANE-04",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "integration/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "PANE-05",
+      "status": "PASS",
+      "evidence": [
+        "integration/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "PANE-06",
+      "status": "PASS",
+      "evidence": [
+        "pane/results.json",
+        "geometry/results.json",
+        "ui/results.json",
+        "touch/results.json"
+      ]
+    },
+    {
+      "id": "LIFE-01",
+      "status": "PASS",
+      "evidence": [
+        "build/results.json",
+        "integration/results.json",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "LIFE-02",
+      "status": "PASS",
+      "evidence": [
+        "integration/results.json",
+        "desktop/results.json",
+        "transport/results.json",
+        "touch/results.json",
+        "interruption/run.txt",
+        "load/results.json"
+      ]
+    },
+    {
+      "id": "LIFE-03",
+      "status": "PASS",
+      "evidence": [
+        "integration/results.json",
+        "table/results.json",
+        "geometry/results.json",
+        "touch/results.json",
+        "scope/scope-independent.json"
+      ]
+    }
+  ]
+}

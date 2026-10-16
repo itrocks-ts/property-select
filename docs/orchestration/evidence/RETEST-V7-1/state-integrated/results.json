@@ -1,0 +1,2934 @@
+{
+  "assertions": [
+    {
+      "name": "revoke: session ends",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: browser requests Reload",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry is still 410",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry creates no state",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no state after process restart",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: full reload clears local query",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: current generation persists",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "recovered-revoke",
+      "expected": "recovered-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: session ends",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: acquired browser PUT is 410",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: browser requests Reload",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry is still 410",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry creates no state",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no state after process restart",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: full reload clears local query",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: current generation persists",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "recovered-expire",
+      "expected": "recovered-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary transaction error is 500",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 500,
+      "expected": 500,
+      "status": "PASS"
+    },
+    {
+      "name": "failed save retains local input",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "retry-storage-failure",
+      "expected": "retry-storage-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary Retry succeeds",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "save real list configuration",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration refresh keeps recent and updates used branch",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "expected": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold retains native wheel position",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores native wheel position",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata truncates remembered branch",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata drops advice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "truncation preserves and restarts search",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search contains allowed local result",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search excludes removed paths",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "page exceptions",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted mouse keyboard and wheel inputs",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: session ends",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: browser requests Reload",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry is still 410",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry creates no state",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no state after process restart",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: full reload clears local query",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: current generation persists",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "recovered-revoke",
+      "expected": "recovered-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: session ends",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: acquired browser PUT is 410",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: browser requests Reload",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry is still 410",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry creates no state",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no state after process restart",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: full reload clears local query",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: current generation persists",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "recovered-expire",
+      "expected": "recovered-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary transaction error is 500",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 500,
+      "expected": 500,
+      "status": "PASS"
+    },
+    {
+      "name": "failed save retains local input",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "retry-storage-failure",
+      "expected": "retry-storage-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary Retry succeeds",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "save real list configuration",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration refresh keeps recent and updates used branch",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "expected": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold retains native wheel position",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores native wheel position",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata truncates remembered branch",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata drops advice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "truncation preserves and restarts search",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search contains allowed local result",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search excludes removed paths",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "page exceptions",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted mouse keyboard and wheel inputs",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: session ends",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: browser requests Reload",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry is still 410",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry creates no state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no state after process restart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: full reload clears local query",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: current generation persists",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "recovered-revoke",
+      "expected": "recovered-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: session ends",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: acquired browser PUT is 410",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: browser requests Reload",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry is still 410",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry creates no state",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no state after process restart",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: full reload clears local query",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: current generation persists",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "recovered-expire",
+      "expected": "recovered-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary transaction error is 500",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 500,
+      "expected": 500,
+      "status": "PASS"
+    },
+    {
+      "name": "failed save retains local input",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "retry-storage-failure",
+      "expected": "retry-storage-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary Retry succeeds",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "save real list configuration",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration refresh keeps recent and updates used branch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "expected": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold retains native wheel position",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores native wheel position",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata truncates remembered branch",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata drops advice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "truncation preserves and restarts search",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search contains allowed local result",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search excludes removed paths",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "page exceptions",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted mouse keyboard and wheel inputs",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: session ends",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: browser requests Reload",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry is still 410",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry creates no state",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no state after process restart",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: full reload clears local query",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: current generation persists",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "recovered-revoke",
+      "expected": "recovered-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: session ends",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: acquired browser PUT is 410",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: browser requests Reload",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry is still 410",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry creates no state",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no state after process restart",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "expire: full reload clears local query",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: current generation persists",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "recovered-expire",
+      "expected": "recovered-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary transaction error is 500",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 500,
+      "expected": 500,
+      "status": "PASS"
+    },
+    {
+      "name": "failed save retains local input",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "retry-storage-failure",
+      "expected": "retry-storage-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary Retry succeeds",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "save real list configuration",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "configuration reload renders saved columns",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration refresh keeps recent and updates used branch",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "expected": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold retains native wheel position",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores native wheel position",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata truncates remembered branch",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata drops advice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "truncation preserves and restarts search",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search contains allowed local result",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search excludes removed paths",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "page exceptions",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted mouse keyboard and wheel inputs",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2677503 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2677843 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2678092 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2678394 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2678657 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2678957 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2679246 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2679507 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/RETEST-V7-1-state-integrated",
+      "output": "PASS: owned app 2679764 stopped\n"
+    }
+  ],
+  "errors": [],
+  "responses": [
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 500
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 500
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 500
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 500
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    }
+  ],
+  "screenshots": [
+    "revoke-reload-guidance-1280x720.png",
+    "expire-reload-guidance-1280x720.png",
+    "ordinary-storage-failure-1280x720.png",
+    "restored-search-1280x720.png",
+    "revoke-reload-guidance-768x900.png",
+    "expire-reload-guidance-768x900.png",
+    "ordinary-storage-failure-768x900.png",
+    "restored-search-768x900.png",
+    "revoke-reload-guidance-390x844.png",
+    "expire-reload-guidance-390x844.png",
+    "ordinary-storage-failure-390x844.png",
+    "restored-search-390x844.png",
+    "revoke-reload-guidance-844x390.png",
+    "expire-reload-guidance-844x390.png",
+    "ordinary-storage-failure-844x390.png",
+    "restored-search-844x390.png"
+  ],
+  "url": "http://127.0.0.1:13911/property-select-invoice",
+  "viewport": {
+    "width": 844,
+    "height": 390
+  },
+  "input": "mouse/keyboard",
+  "seed": "synthetic invoice fixture; existing database 13316",
+  "browser": "151.0.7922.34",
+  "console": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 500 (Internal Server Error)"
+    }
+  ],
+  "networkFailures": [
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=amount&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=number&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=number&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 768,
+        "height": 900
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=amount&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=number&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=customer.parent.address&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/context/json?path=tags.invoices.customer&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    },
+    {
+      "url": "http://127.0.0.1:13911/property-select/resolve/json?path=number&root=invoice",
+      "error": {
+        "errorText": "net::ERR_ABORTED"
+      },
+      "viewport": {
+        "width": 844,
+        "height": 390
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "inputs": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "wheel",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "inputs": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "wheel",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "inputs": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "wheel",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "inputs": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "wheel",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "status": "PASS"
+}

@@ -1,0 +1,24 @@
+{
+  "method": "Synthetic EventTarget blur contract; no physical interruption",
+  "results": [
+    {
+      "scenario": "Active transport interrupted",
+      "status": "PASS",
+      "expected": "Aborted, capture released, one cancellation, no end or surviving listeners",
+      "observed": [
+        "begin:customer.address.city",
+        "move",
+        "cancel"
+      ]
+    },
+    {
+      "scenario": "Pending begin interrupted",
+      "status": "PASS",
+      "expected": "Aborted, capture released, one cancellation, no end or surviving listeners",
+      "observed": [
+        "begin:customer.address.city",
+        "cancel"
+      ]
+    }
+  ]
+}

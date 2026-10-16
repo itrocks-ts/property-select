@@ -1,0 +1,41 @@
+[
+  {
+    "id": "@itrocks/fastify-file-session-store@0.4.0",
+    "name": "@itrocks/fastify-file-session-store",
+    "version": "0.4.0",
+    "size": 7159,
+    "unpackedSize": 21185,
+    "shasum": "1bb57869e2cbdde8f106cbb5dcbb49422e85cfa7",
+    "integrity": "sha512-GRcQE6GNvrg2UG99IptyDLlRJ5U0xK1ML4FLYr84XjwUpDohgmbIjy1gEMdxFdUvYywgOJeWiIj4IKakfnqbFg==",
+    "filename": "itrocks-fastify-file-session-store-0.4.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 9302,
+        "mode": 420
+      },
+      {
+        "path": "cjs/fastify-file-session-store.d.ts",
+        "size": 1299,
+        "mode": 420
+      },
+      {
+        "path": "cjs/fastify-file-session-store.js",
+        "size": 8816,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1001,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  }
+]
