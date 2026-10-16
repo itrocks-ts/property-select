@@ -17,8 +17,12 @@ export class PropertySelectView
 	private mounting?: Promise<boolean>
 	private query?: HTMLInputElement
 	private root?: HTMLElement
+	private resize?: ResizeObserver
 	private readonly rows = new Map<string, HTMLLIElement>()
 	private searchScope = ''
+	private scrollScope = ''
+	private shortcuts?: HTMLElement
+	private persistence?: HTMLElement
 	private status?: HTMLElement
 	private unsubscribe?: () => void
 
@@ -38,6 +42,7 @@ export class PropertySelectView
 			return
 		this.disposed = true
 		this.abort.abort()
+		this.resize?.disconnect()
 		this.unsubscribe?.()
 		this.selector.dispose()
 		this.root?.remove()
@@ -62,6 +67,10 @@ export class PropertySelectView
 			return
 		event.stopPropagation()
 		this.status!.textContent = ''
+		if (button.dataset.action === 'retry') {
+			void this.selector.flushState().catch(() => {})
+			return
+		}
 		if (button.dataset.action === 'clear') {
 			this.selector.setQuery('')
 			this.query!.focus()
@@ -69,7 +78,8 @@ export class PropertySelectView
 		}
 		const path = button.dataset.path!
 		const action = button.dataset.action
-		const operation = action === 'navigate' ? this.selector.navigate(path)
+		const operation = action === 'shortcut' ? this.selector.shortcut(path)
+			: action === 'navigate' ? this.selector.navigate(path)
 			: action === 'select' ? this.selector.select(path) : this.selector.activate(path)
 		void operation.catch(() => {
 			if (!this.disposed)
@@ -105,6 +115,8 @@ export class PropertySelectView
 			this.breadcrumb = this.root.querySelector('.ps-breadcrumb') as HTMLElement
 			this.list = this.root.querySelector('.ps-properties') as HTMLElement
 			this.status = this.root.querySelector('.ps-status') as HTMLElement
+			this.shortcuts = this.root.querySelector('.ps-suggestions') as HTMLElement
+			this.persistence = this.root.querySelector('.ps-persistence') as HTMLElement
 			this.query = this.root.querySelector('.ps-query') as HTMLInputElement
 			this.query.setAttribute('aria-label', this.selector.translate('Search properties'))
 			this.root.querySelector('.ps-clear')!.textContent = this.selector.translate('Clear')
@@ -114,6 +126,14 @@ export class PropertySelectView
 			this.root.setAttribute('aria-label', this.selector.translate('Property selection'))
 			this.breadcrumb.setAttribute('aria-label', this.selector.translate('Object path'))
 			this.list.setAttribute('aria-label', this.selector.translate('Properties'))
+			for (const [element, key] of [[this.breadcrumb, 'breadcrumb'], [this.list, 'properties']] as const) {
+				element.addEventListener('scroll', () => {
+					if (this.selector.status !== 'ready' || this.selector.search.status === 'loading') return
+					this.selector.setScroll(key === 'breadcrumb' ? key : this.scrollKey(), {
+						left: element.scrollLeft, top: element.scrollTop
+					})
+				}, { passive: true, signal: this.abort.signal })
+			}
 			this.root.addEventListener('click', event => this.activate(event), { signal: this.abort.signal })
 			this.root.addEventListener('focusout', event => {
 				if (!(event.target as Element).closest('.ps-property[data-retained]'))
@@ -126,13 +146,18 @@ export class PropertySelectView
 				}, 0)
 			}, { signal: this.abort.signal })
 			this.unsubscribe = this.selector.subscribe(event => {
-				if (event.type === 'error')
+				if (event.type === 'error') {
+					this.renderPersistence()
 					this.status!.textContent = event.error instanceof Error ? event.error.message
 						: this.selector.translate('Unable to complete the operation. Try again.')
+				}
 				if (event.type === 'change')
 					this.render()
 			})
 			this.host.append(this.root)
+			this.resize = new ResizeObserver(() => this.restoreScroll())
+			this.resize.observe(this.list)
+			this.resize.observe(this.breadcrumb)
 			return await this.selector.mount()
 		}
 		catch (error) {
@@ -143,8 +168,34 @@ export class PropertySelectView
 		}
 	}
 
+	private scrollKey(): string
+	{
+		return `properties:${this.selector.path}:${this.selector.snapshot().query}`
+	}
+
+	private restoreScroll(): void
+	{
+		if (!this.list?.clientHeight || this.selector.search.status === 'loading') return
+		const state = this.selector.snapshot()
+		const position = state.scroll[this.scrollKey()] ?? { left: 0, top: 0 }
+		this.list.scrollLeft = position.left
+		this.list.scrollTop = position.top
+		if (this.breadcrumb) this.breadcrumb.scrollLeft = state.scroll.breadcrumb?.left ?? 0
+	}
+
+	private renderPersistence(): void
+	{
+		if (!this.persistence) return
+		this.persistence.replaceChildren()
+		if (this.selector.persistenceError) {
+			this.persistence.append(this.selector.translate('Unable to save selector state. '),
+				this.button(this.selector.translate('Retry'), 'retry', ''))
+		}
+	}
+
 	private render(): void
 	{
+		this.renderPersistence()
 		const context = this.selector.context
 		const state = this.selector.snapshot()
 		const search = this.selector.search
@@ -174,11 +225,13 @@ export class PropertySelectView
 		const retainFocus = !!searchScope && (searchScope === this.searchScope)
 		this.searchScope = searchScope
 		const fingerprint = JSON.stringify([
-			context, state.branch, state.current, state.query, search.results, search.status
+			context, state.branch, state.current, state.query, search.results, search.status, this.selector.suggestions
 		])
 		if (fingerprint === this.fingerprint)
 			return
 		this.fingerprint = fingerprint
+		this.shortcuts!.replaceChildren(...this.selector.suggestions.map(item =>
+			this.button(item.label, 'shortcut', item.path)))
 		const active = this.host.ownerDocument.activeElement as HTMLElement | null
 		const focus = this.root!.contains(active) ? active?.dataset.focus : undefined
 		const left = this.breadcrumb!.scrollLeft
@@ -192,7 +245,7 @@ export class PropertySelectView
 				button.setAttribute('aria-current', 'location')
 			this.breadcrumb!.append(button)
 		}
-		this.breadcrumb!.scrollLeft = left
+		this.breadcrumb!.scrollLeft = state.scroll.breadcrumb?.left ?? left
 		let results: readonly SearchResult[] = search.status === 'idle'
 			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
@@ -231,6 +284,13 @@ export class PropertySelectView
 		}
 		if (retained && (this.list!.lastElementChild !== retained))
 			this.list!.append(retained)
+		const scrollKey = this.scrollKey()
+		if (this.scrollScope !== scrollKey || search.status !== 'loading') {
+			this.scrollScope = scrollKey
+			const position = state.scroll[scrollKey] ?? { left: 0, top: 0 }
+			this.list!.scrollLeft = position.left
+			this.list!.scrollTop = position.top
+		}
 		if (focus) {
 			const buttons = Array.from(this.root!.querySelectorAll<HTMLElement>('[data-focus]'))
 			const target = buttons.find(button => button.dataset.focus === focus)

@@ -1,0 +1,105 @@
+{
+  "fastify-file-session-store": {
+    "version": "0.4.0",
+    "base": "338cd8de5e109ab5539b604cf545a4f733d458f6",
+    "exports": [
+      "./cjs/fastify-file-session-store.js"
+    ],
+    "files": 5,
+    "packCommand": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L4/npm-cache"
+    ]
+  },
+  "fastify": {
+    "version": "0.4.0",
+    "base": "17f4b577f5c0b3e4be0498b64811a7007a180f2f",
+    "exports": [
+      "./cjs/fastify.js"
+    ],
+    "files": 5,
+    "packCommand": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L4/npm-cache"
+    ]
+  },
+  "list": {
+    "version": "0.10.0",
+    "base": "ec7e4b071f4ee40113b294587ee794c44adfc8ac",
+    "exports": [
+      "./cjs/list.js",
+      "./cjs/projection.js",
+      "./property-select.js",
+      "./cjs/selector-state.js",
+      "./selector-state.js"
+    ],
+    "files": 47,
+    "packCommand": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L4/npm-cache"
+    ]
+  },
+  "framework": {
+    "version": "0.11.0",
+    "base": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+    "exports": [
+      "./cjs/framework.js",
+      "./cjs/property-select.js",
+      "./cjs/property-select-actions.js",
+      "./property-select-list.js",
+      "./property-select-metadata.js",
+      "./cjs/sql-projection.js",
+      "./cjs/sql-relationships.js"
+    ],
+    "files": 44,
+    "packCommand": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L4/npm-cache"
+    ]
+  },
+  "property-select": {
+    "version": "0.5.0",
+    "base": "a8e975a6e6dd257429e299eb604277c8beec7107",
+    "exports": [
+      "./property-select.d.ts",
+      "./property-select.js",
+      "./cjs/property-select.js",
+      "./front/property-select.css",
+      "./front/property-select.html",
+      "./front/property-select.d.ts",
+      "./front/property-select.js",
+      "./property-select.d.ts",
+      "./property-select.js"
+    ],
+    "files": 1413,
+    "packCommand": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/L4/npm-cache"
+    ]
+  }
+}

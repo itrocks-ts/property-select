@@ -43,3 +43,9 @@
 .ps-query:focus-visible { outline: 2px solid Highlight; }
 .ps-result-path { font-size: .875rem; grid-column: 1 / -1; min-width: 0; overflow-wrap: anywhere; }
 .property-select .ps-result-path button { padding: .25rem .5rem; }
+
+.ps-suggestions { display: flex; flex-wrap: wrap; gap: .25rem; margin: .5rem; }
+.property-select .ps-suggestions button { background: color-mix(in srgb, CanvasText 5%, Canvas); font-size: .875rem; }
+.ps-suggestions:empty, .ps-persistence:empty { display: none; }
+.ps-properties { max-height: 60vh; overflow: auto; overscroll-behavior: contain; }
+.ps-persistence { font-size: .875rem; margin: .5rem .75rem; }

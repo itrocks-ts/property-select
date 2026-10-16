@@ -81,6 +81,32 @@ export class Navigation
 		return context
 	}
 
+	invalidate(): void
+	{
+		this.abort?.abort()
+		this.generation ++
+		this.contexts.clear()
+	}
+
+	async restore(branch: readonly string[], current: number): Promise<boolean>
+	{
+		this.invalidate()
+		const generation = this.generation
+		const abort = this.abort = new AbortController()
+		let context = await this.loadContext('', abort.signal)
+		const valid: string[] = []
+		for (const segment of branch) {
+			const edge = context.properties.find(property => property.name === segment && property.kind === 'relation')
+			if (!edge) break
+			try { context = await this.loadContext(edge.path, abort.signal) }
+			catch { break }
+			valid.push(segment)
+		}
+		if (this.disposed || generation !== this.generation) return false
+		this.branchValue = valid
+		return this.navigate(valid.slice(0, Math.min(current, valid.length)))
+	}
+
 	async navigate(input: PropertyPath): Promise<boolean>
 	{
 		if (this.disposed)

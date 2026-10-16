@@ -706,7 +706,8 @@ breadcrumb. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 imple
 - **T03** — Expected: Open a sibling relation from Address; retain the shared prefix and replace only the divergent
 suffix. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T04** — Expected: Activate a shortcut from a different branch; full destination replaces branch and search
-clears. Proof: `evidence/<gate>/T04.*`; current verdict: `NOT_RUN`.
+clears. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
+current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
 - **T05** — Expected: Click terminal, relation main and relation +; assert one correct intention/action per input,
 unchanged context on add. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T06** — Expected: Compare bounding boxes at hover/focus; on touch + appears only on relations and hybrid actions
@@ -728,13 +729,18 @@ loading/empty/limited differ. **PASS**, recovery and HTTP races: [proof](evidenc
 - **T13** — Expected: Run known N→1/N-N inverse return, 1→N excluded return, unknown relations and same-type
 noncycles with provider traces. **PASS**, [fresh real/static traces](evidence/RETEST-V3-1/independent/results.json).
 - **T14** — Expected: Combine recent ancestor, two maximal used branches and duplicate advice; assert stable
-six-or-configured destination limit. Proof: `evidence/<gate>/T14.*`; current verdict: `NOT_RUN`.
+six-or-configured destination limit. Author proof: [L4](reports/L4.md),
+[browser observations](evidence/L4/browser.json);
+current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
 - **T15** — Expected: Confirm new add, click duplicate, move existing and abort new drag; only the committed new add
-becomes recent. Proof: `evidence/<gate>/T15.*`; current verdict: `NOT_RUN`.
+becomes recent. Author proof: [L4](reports/L4.md); current verdict: `PASS L4 CLICK/CONTRACT`,
+actual drag/move/cancel and independent V4/V5 remain `NOT_RUN`.
 - **T16** — Expected: Set branch/query/scroll, fold/reopen and full reload; expire that actual session and verify
-all selector state is forgotten. Proof: `evidence/<gate>/T16.*`; current verdict: `NOT_RUN`.
+all selector state is forgotten. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
+current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
 - **T17** — Expected: Switch saved list config, remove a metadata path and reload; used advice updates, recents
-remain, invalid branch truncates. Proof: `evidence/<gate>/T17.*`; current verdict: `NOT_RUN`.
+remain, invalid branch truncates. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
+current verdict: `PASS L4 AUTHOR`, independent V4 `NOT_RUN`.
 - **T18** — Expected: Click absent/existing columns rapidly; new appends, existing stays at index, both reveal/flash
 and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; current verdict: `NOT_RUN`.
 - **T19** — Expected: Drag new path through legal positions; a true column appears immediately, receives real data
@@ -1383,3 +1389,26 @@ Full commands and cleanup are in the report. No source or configuration was inst
   identified explicitly; no other failed request, page exception or console warning/error remains.
 
 Later search, selector persistence, gestures, combined requirements and final V7/D8 verdicts remain NOT_RUN.
+
+
+## L4 author session and suggestions observations
+
+**PASS**, 16 October 2026, selector 0.5.0 and the [four delivered owner commits](evidence/L4/owner-commits.json).
+[Report](reports/L4.md), [56 browser assertions / eight screenshots](evidence/L4/browser.json),
+[build/test commands](evidence/L4/commands.json), [public artifacts](evidence/L4/public-inventory.json).
+
+- NAV-06 / T04: native shortcut clicks replace the whole branch and clear the query.
+- REC-01–06 / DEP-06 / T14: priority merge, maximal used branches, recent ancestors, full-path deduplication,
+  configured bound, advice and configuration refresh PASS.
+- REC-07 / T15 current portion: actual new click adds recents; duplicate click and non-added contract outcomes do not.
+  Actual moved/cancelled browser drags remain L5/V5.
+- STA-01–03 / DEP-05 / T16: router keys retain identifying ids, two actual sessions isolate; branch/current/query,
+  recents and native wheel scroll survive full reload and actual process restart. Revoke/expiry clear the session
+  and reject old mounted writes. Selector and list namespaces survive concurrent whole-session autosave.
+- STA-04–05 / META-04 / T17: metadata removal truncates the branch, drops obsolete advice, reruns the saved query;
+  configuration changes preserve recents.
+- PORT-07–09: CAS conflicts, tombstones, coalesced writes, same-request transactions, corrupt storage, durable-write
+  failure, recovery and lock release PASS. Initial/expired sessions retain only used paths and configured advice.
+- SOLID/public exports/builds PASS in all five product owners and the application. Showtime baseline is preserved.
+
+This section records author checks only. Independent V4 and later gesture/final acceptance remain NOT_RUN.

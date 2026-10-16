@@ -1,0 +1,31 @@
+
+> @itrocks/fastify@0.4.0 test
+> npm run build && node --test --test-isolation=none test/*.test.js
+
+
+> @itrocks/fastify@0.4.0 build
+> tsc
+
+▶ Fastify front script allowlist
+  ✔ serves only public asset types and configured scripts (84.646261ms)
+  ✔ discovers bounded imports and escaped configured calls inside the asset path (1.998565ms)
+  ✔ resolves recursive public dependencies before a restarted browser requests cached parents (14.901078ms)
+  ✔ ignores a source file outside the asset path (1.097692ms)
+✔ Fastify front script allowlist (104.156773ms)
+▶ Fastify session integration
+  ✔ rejects cross-origin mutations and adds configured response headers (5.740127ms)
+  ✔ keeps the transport-neutral session attached after regeneration (0.299427ms)
+  ✔ sets expiring HttpOnly SameSite cookies and Secure over HTTPS (3.701112ms)
+  ✔ preserves proxy-friendly generic cookie defaults (3.438514ms)
+✔ Fastify session integration (13.748621ms)
+✔ actual request bridge coordinates response autosave, selectors, lists, restart and revoke (34.320276ms)
+ℹ tests 9
+ℹ suites 2
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 243.8119
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }

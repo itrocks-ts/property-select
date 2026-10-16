@@ -1,0 +1,41 @@
+[
+  {
+    "id": "@itrocks/fastify@0.4.0",
+    "name": "@itrocks/fastify",
+    "version": "0.4.0",
+    "size": 10694,
+    "unpackedSize": 34489,
+    "shasum": "ad4a6918e83127addf527ee5a48f0bf04d4c6867",
+    "integrity": "sha512-k2+CtprsUmDpPTPk94QFXTFMWfXHbazbdAK43hrNLRq3yaZ3jUxMzjT9n79I5UVGfl7MjiwlyZXzYTEGNgEw1Q==",
+    "filename": "itrocks-fastify-0.4.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 14520,
+        "mode": 420
+      },
+      {
+        "path": "cjs/fastify.d.ts",
+        "size": 3345,
+        "mode": 420
+      },
+      {
+        "path": "cjs/fastify.js",
+        "size": 14642,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1215,
+        "mode": 420
+      }
+    ],
+    "entryCount": 5,
+    "bundled": []
+  }
+]

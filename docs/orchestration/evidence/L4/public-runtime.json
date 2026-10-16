@@ -1,0 +1,59 @@
+[
+  {
+    "owner": "property-select",
+    "entry": "@itrocks/property-select",
+    "names": [
+      "PropertySelect",
+      "StateConflictError",
+      "validateSelectorState"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "list",
+    "entry": "@itrocks/list/selector-state",
+    "names": [
+      "SessionStateStore",
+      "SelectorStateAction",
+      "selectorStateKey",
+      "listStateDependsOn"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "framework",
+    "entry": "@itrocks/framework/property-select",
+    "names": [
+      "bindPropertySelect"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify",
+    "entry": "@itrocks/fastify",
+    "names": [
+      "sessionTransaction",
+      "fastifyRequest"
+    ],
+    "status": "PASS"
+  },
+  {
+    "owner": "fastify-file-session-store",
+    "entry": "@itrocks/fastify-file-session-store",
+    "names": [
+      "FileStore",
+      "SessionExpiredError"
+    ],
+    "status": "PASS"
+  },
+  {
+    "entry": "@itrocks/list/selector-state.js",
+    "name": "HttpStateStore",
+    "status": "PASS"
+  },
+  {
+    "entry": "@itrocks/property-select/property-select.js",
+    "name": "PropertySelect",
+    "status": "PASS"
+  }
+]

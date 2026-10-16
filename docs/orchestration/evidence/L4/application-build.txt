@@ -1,0 +1,7 @@
+
+> showtime@0.0.6 build
+> concurrently npm:build:back npm:build:front npm:build:scss
+
+[build:scss] npm run build:scss exited with code 0
+[build:front] npm run build:front exited with code 0
+[build:back] npm run build:back exited with code 0

@@ -1,4 +1,5 @@
-const { mkdirSync } = require('node:fs')
+const { mkdirSync, readFileSync, writeFileSync } = require('node:fs')
+const { randomBytes } = require('node:crypto')
 const path = require('node:path')
 const directory = process.argv[2]?.slice('--ps-environment='.length)
 const port = Number(process.argv[3]?.slice('--ps-port='.length))
@@ -19,8 +20,13 @@ configuration.scanConfigFiles = async (...args) => {
 	}
 	config.server = { ...config.server, host: '127.0.0.1', port }
 	const sessionPath = path.join(directory, 'sessions')
+	mkdirSync(directory, { recursive: true, mode: 0o700 })
+	const secretPath = path.join(directory, 'session-secret')
+	try { writeFileSync(secretPath, randomBytes(48).toString('base64url'), { flag: 'wx', mode: 0o600 }) }
+	catch (error) { if (error.code !== 'EEXIST') throw error }
 	config.session = {
-		path: path.relative(require('@itrocks/app-dir').appDir, sessionPath), cookie: 'property_select_recipe'
+		secret: readFileSync(secretPath, 'utf8'),
+		path: path.relative(require('@itrocks/app-dir').appDir, sessionPath), cookie: { sameSite: 'lax', secure: false }
 	}
 	delete config.secret
 	delete config.smtp

@@ -1,6 +1,6 @@
-import { PropertySelect }        from '@itrocks/property-select'
 import type { ConsumerPort }     from '@itrocks/property-select'
 import type { MetadataProvider } from '@itrocks/property-select'
+import { PropertySelect }        from '@itrocks/property-select'
 import type { SearchOptions }    from '@itrocks/property-select'
 import type { SearchSnapshot }   from '@itrocks/property-select'
 import type { SelectorState }    from '@itrocks/property-select'
@@ -33,3 +33,11 @@ const searching = new PropertySelect({ metadata, root: 'invoice', search: budget
 const searchState: SearchSnapshot = searching.search
 const results: readonly SearchResult[] = searchState.results
 void results
+
+const persisted = new PropertySelect({
+	metadata, root: 'invoice', stateKey: 'opaque', stateMode: 'session', stateStore: store
+})
+void persisted.flushState()
+void persisted.refresh()
+void persisted.shortcut('customer')
+void persisted.suggestions.map(destination => destination.path)

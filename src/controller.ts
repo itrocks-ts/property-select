@@ -1,5 +1,5 @@
-import { Intentions }               from './intentions.js'
 import type { IntentionEvent }      from './intentions.js'
+import { Intentions }               from './intentions.js'
 import { Navigation }               from './navigation.js'
 import type { NavigationStatus }    from './navigation.js'
 import { normalisePath }            from './path.js'
@@ -13,9 +13,13 @@ import type { PropertyPath }        from './ports.js'
 import type { RootId }              from './ports.js'
 import type { SelectionIntent }     from './ports.js'
 import type { SelectorState }       from './ports.js'
+import type { StateStore }          from './ports.js'
 import { Search }                   from './search.js'
 import type { SearchOptions }       from './search.js'
 import type { SearchSnapshot }      from './search.js'
+import { StatePersistence }         from './state.js'
+import type { Suggestion }          from './suggestions.js'
+import { suggestions }              from './suggestions.js'
 
 export type SelectorEvent = IntentionEvent | { type: 'change' } | { type: 'error'; error: unknown }
 
@@ -26,7 +30,10 @@ export interface PropertySelectOptions
 	metadata: MetadataProvider
 	root: RootId
 	search?: SearchOptions
-	stateMode?: 'instance'
+	stateKey?: string
+	stateMode?: 'instance' | 'session'
+	stateStore?: StateStore
+	suggestionLimit?: number
 	translate?: (text: string) => string
 	usedPaths?: readonly PropertyPath[]
 }
@@ -36,6 +43,13 @@ export class PropertySelect
 
 	private adviceValue: string[]
 	private disposed = false
+	private mounted = false
+	private readonly metadata: MetadataProvider
+	private readonly persistence?: StatePersistence
+	private persistenceErrorValue?: unknown
+	private readonly suggestionLimit: number
+	private suggestionsAbort?: AbortController
+	private suggestionsValue: Suggestion[] = []
 	private readonly intentions: Intentions
 	private readonly listeners = new Set<(event: SelectorEvent) => void>()
 	private readonly navigation: Navigation
@@ -47,7 +61,7 @@ export class PropertySelect
 	private usedValue: string[]
 
 	readonly root: RootId
-	readonly stateMode: 'instance'
+	readonly stateMode: 'instance' | 'session'
 	readonly translate: (text: string) => string
 
 	constructor(options: PropertySelectOptions)
@@ -58,8 +72,16 @@ export class PropertySelect
 		if ((typeof options.root !== 'string') || !options.root)
 			throw new TypeError('PropertySelect requires an opaque root identifier')
 		this.stateMode = options.stateMode || 'instance'
-		if (this.stateMode !== 'instance')
-			throw new TypeError('Session persistence requires the session adapter delivery; use instance mode')
+		if (!['instance', 'session'].includes(this.stateMode)) throw new TypeError('Invalid state mode')
+		if (this.stateMode === 'session') {
+			if (!options.stateStore || !options.stateKey)
+				throw new TypeError('Session persistence requires a store and opaque key')
+			this.persistence = new StatePersistence(options.stateStore, options.stateKey)
+		}
+		this.metadata = options.metadata
+		this.suggestionLimit = options.suggestionLimit ?? 6
+		if (!Number.isSafeInteger(this.suggestionLimit) || this.suggestionLimit < 1 || this.suggestionLimit > 100)
+			throw new TypeError('Suggestion limit must be an integer from 1 to 100')
 		this.root        = options.root
 		this.translate   = options.translate || (text => text)
 		this.adviceValue = (options.advice || []).map(normalisePath)
@@ -86,6 +108,16 @@ export class PropertySelect
 	get path(): string
 	{
 		return this.navigation.path
+	}
+
+	get persistenceError(): unknown
+	{
+		return this.persistenceErrorValue
+	}
+
+	get suggestions(): readonly Suggestion[]
+	{
+		return structuredClone(this.suggestionsValue)
 	}
 
 	get search(): SearchSnapshot
@@ -136,6 +168,7 @@ export class PropertySelect
 		if (this.disposed)
 			return
 		this.disposed = true
+		this.suggestionsAbort?.abort()
 		this.searchEngine.cancel()
 		this.navigation.dispose()
 		this.intentions.dispose()
@@ -147,9 +180,60 @@ export class PropertySelect
 		return this.intentions.end(id, sample)
 	}
 
-	mount(): Promise<boolean>
+	async mount(): Promise<boolean>
 	{
-		return this.navigate(this.path)
+		if (this.mounted) return true
+		let state: SelectorState | undefined
+		try { state = await this.persistence?.read() }
+		catch (error) { this.persistenceFailed(error) }
+		if (this.disposed) return false
+		if (state) {
+			this.queryValue = state.query
+			this.recentValue = [...state.recent]
+			this.scrollValue = { ...state.scroll }
+		}
+		const mounted = state ? await this.navigation.restore(state.branch, state.current) : await this.navigate('')
+		if (this.disposed) return false
+		this.mounted = true
+		this.searchEngine.start(this.queryValue, this.navigation.trail)
+		await this.refreshSuggestions()
+		this.saveState()
+		return mounted
+	}
+
+	async flushState(): Promise<void>
+	{
+		try {
+			await this.persistence?.flush()
+			this.persistenceErrorValue = undefined
+			if (!this.disposed) this.emit({ type: 'change' })
+		}
+		catch (error) { this.persistenceFailed(error); throw error }
+	}
+
+	async refresh(): Promise<boolean>
+	{
+		this.assertLive()
+		const state = this.snapshot()
+		this.searchEngine.cancel()
+		const restored = await this.navigation.restore(state.branch, state.current)
+		if (this.disposed) return false
+		await this.refreshSuggestions()
+		this.searchEngine.start(this.queryValue, this.navigation.trail)
+		this.saveState()
+		return restored
+	}
+
+	async shortcut(input: PropertyPath): Promise<boolean>
+	{
+		this.assertLive()
+		const path = normalisePath(input)
+		if (!this.suggestionsValue.some(item => item.path === path)) return false
+		this.queryValue = ''
+		this.searchEngine.cancel()
+		const result = await this.navigation.restore(path.split('.'), path.split('.').length)
+		this.saveState()
+		return result
 	}
 
 	move(id: string, sample: PointerSample): void
@@ -165,6 +249,7 @@ export class PropertySelect
 		const committed = await this.navigation.navigate(path)
 		if (!this.disposed && (generation === this.navigationGeneration))
 			this.searchEngine.start(this.queryValue, this.navigation.trail)
+		if (committed) this.saveState()
 		return committed
 	}
 
@@ -181,6 +266,7 @@ export class PropertySelect
 		if (configuration.usedPaths !== undefined)
 			this.usedValue = configuration.usedPaths.map(normalisePath)
 		this.emit({ type: 'change' })
+		void this.refreshSuggestions()
 	}
 
 	setQuery(query: string): void
@@ -190,6 +276,7 @@ export class PropertySelect
 			throw new TypeError('The query must be a string')
 		this.queryValue = query
 		this.searchEngine.start(query, this.navigation.status === 'loading' ? [] : this.navigation.trail)
+		this.saveState()
 	}
 
 	setScroll(key: string, position: { left: number; top: number }): void
@@ -200,6 +287,7 @@ export class PropertySelect
 		Object.defineProperty(this.scrollValue, key, {
 			configurable: true, enumerable: true, value: { left: position.left, top: position.top }
 		})
+		this.saveState()
 		this.emit({ type: 'change' })
 	}
 
@@ -226,9 +314,45 @@ export class PropertySelect
 	{
 		const destination = property.kind === 'relation' ? property.path : property.path.split('.').slice(0, -1).join('.')
 		if (destination) {
-			this.recentValue = [destination, ...this.recentValue.filter(path => path !== destination)]
+			this.recentValue = [destination, ...this.recentValue.filter(path => path !== destination)].slice(0, 100)
+			this.saveState()
+			void this.refreshSuggestions()
 			this.emit({ type: 'change' })
 		}
+	}
+
+	private persistenceFailed(error: unknown): void
+	{
+		if (this.disposed) return
+		this.persistenceErrorValue = error
+		this.emit({ type: 'error', error })
+	}
+
+	private async refreshSuggestions(): Promise<void>
+	{
+		this.suggestionsAbort?.abort()
+		const abort = this.suggestionsAbort = new AbortController()
+		try {
+			const validRecent: string[] = []
+			for (const path of this.recentValue) {
+				try { await this.metadata.context(this.root, path, abort.signal); validRecent.push(path) }
+				catch { /* Removed metadata is not a suggestion. */ }
+			}
+			const items = await suggestions(this.metadata, this.root, validRecent, this.usedValue,
+				this.adviceValue, this.suggestionLimit, abort.signal, this.translate)
+			if (this.disposed || abort.signal.aborted) return
+			this.recentValue = validRecent
+			this.suggestionsValue = items
+			this.emit({ type: 'change' })
+		}
+		catch (error) { if (!abort.signal.aborted && !this.disposed) this.emit({ type: 'error', error }) }
+	}
+
+	private saveState(): void
+	{
+		if (!this.mounted || this.disposed || !this.persistence) return
+		this.persistence.queue(this.snapshot())
+		queueMicrotask(() => { void this.flushState().catch(() => {}) })
 	}
 
 	private assertLive(): void

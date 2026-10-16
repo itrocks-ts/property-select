@@ -111,13 +111,22 @@ A context failure preserves the preceding object, branch and current depth. Late
 `snapshot(): SelectorState` returns a detached, JSON-serialisable version-1 state: remembered `branch`, `current` depth,
 `query`, confirmed `recent` destinations and `scroll`. Navigation to a remembered ancestor keeps all descendants;
 divergence replaces the suffix. `setQuery(text)` and `setScroll(viewKey, { left, top })` update local state.
-`stateMode` defaults to `instance`; this is mounted-instance state only. Session mode is explicitly rejected.
-`StateStore`, `StateRecord` and `SelectorState` define the neutral persistence contract for host adapters; this delivery
-does not read, write or restore sessions.
+`stateMode` defaults to `instance`, retaining state for the mounted instance. Use `stateMode: 'session'` with a
+`stateKey` supplied by the host and a `stateStore` implementing the exported `StateStore` port to restore after reload.
+`mount()` reads and validates persisted branch/current/query/recents/scroll. Invalid relations truncate the remembered
+branch; unknown versions reset. `refresh()` invalidates cached metadata, revalidates the branch and rebuilds
+suggestions.
+`flushState()` waits for durable writes and retries a failed pending snapshot. `persistenceError` exposes recoverable
+storage failure. Per-instance writes coalesce; revision conflicts reread and reapply the newest local snapshot.
+`StateConflictError` identifies a compare-and-set conflict; removals retain revision tombstones.
+`validateSelectorState(value)` returns a bounded detached state or undefined. Transient intentions/results are excluded.
 
 `usedPaths` and `advice` default to empty arrays. `setConfiguration({ advice?, usedPaths? })` updates them without
 clearing local recents. `translate(text)` defaults to identity or calls the supplied translation function.
-Suggestion fusion belongs to a subsequent delivery.
+`suggestions` exposes `{ path, label }` destinations, ordered by confirmed recents, maximal used contexts per branch,
+then advice. Full paths deduplicate entries; translated metadata labels distinguish equal names by ancestry. `suggestionLimit` defaults to six (1–100).
+`shortcut(path)` replaces the complete branch and clears the query. Configuration changes preserve session recents.
+The view displays the fused destinations, saves breadcrumb/property scroll and offers Retry after persistence failures.
 
 ## Descendant search
 

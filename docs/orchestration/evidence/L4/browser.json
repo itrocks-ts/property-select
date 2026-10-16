@@ -1,0 +1,1062 @@
+{
+  "input": [
+    {
+      "interface": "standalone",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "framework",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "standalone",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "framework",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "standalone",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "framework",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "standalone",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "interface": "framework",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "transport": [
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":2,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":3,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":4,\"state\":{\"branch\":[\"customer\",\"address\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":5,\"state\":{\"branch\":[\"customer\",\"address\",\"city\"],\"current\":3,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":6,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":4,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":7,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":9,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":9,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":10,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":11,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":0,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":12,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":0,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{\"properties::name\":{\"left\":0,\"top\":400}},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":12,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":0,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{\"properties::name\":{\"left\":0,\"top\":400}},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":13,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":0,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{\"properties::name\":{\"left\":0,\"top\":400}},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":14,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":0,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{\"properties::name\":{\"left\":0,\"top\":400}},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":15,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":16,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 503,
+      "body": "{}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":17,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"retained locally\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":2,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":3,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":4,\"state\":{\"branch\":[\"customer\",\"address\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":5,\"state\":{\"branch\":[\"customer\",\"address\",\"city\"],\"current\":3,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":6,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":4,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":7,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":9,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":2,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":3,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":4,\"state\":{\"branch\":[\"customer\",\"address\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":5,\"state\":{\"branch\":[\"customer\",\"address\",\"city\"],\"current\":3,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":6,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":4,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":7,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":9,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":0}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":1,\"state\":{\"branch\":[],\"current\":0,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":2,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":3,\"state\":{\"branch\":[\"customer\"],\"current\":1,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":4,\"state\":{\"branch\":[\"customer\",\"address\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":5,\"state\":{\"branch\":[\"customer\",\"address\",\"city\"],\"current\":3,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":6,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":4,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":7,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "GET",
+      "status": 200,
+      "body": "{\"revision\":8,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    },
+    {
+      "url": "http://127.0.0.1:13901/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "method": "PUT",
+      "status": 200,
+      "body": "{\"revision\":9,\"state\":{\"branch\":[\"customer\",\"address\",\"city\",\"country\"],\"current\":2,\"query\":\"name\",\"recent\":[\"customer\"],\"scroll\":{},\"version\":1}}"
+    }
+  ],
+  "checks": [
+    {
+      "name": "standalone maximal used 1280x720",
+      "observed": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query 1280x720",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut exact branch 1280x720",
+      "observed": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration retains recent 1280x720",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone input 1280x720",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "click duplicate leaves recents 1280x720",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 1280x720",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload deepest branch 1280x720",
+      "observed": "customer.address.city.country",
+      "expected": "customer.address.city.country",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recents 1280x720",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "second actual session starts empty",
+      "status": "PASS"
+    },
+    {
+      "name": "distinct key starts empty",
+      "status": "PASS"
+    },
+    {
+      "name": "query arguments canonicalise to same key",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "durable restart keeps query",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "fold/reopen retains real scroll",
+      "observed": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores real wheel scroll",
+      "observed": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "invalid restored branch truncates",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "invalid advice disappears",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "storage error preserves local query",
+      "observed": "retained locally",
+      "expected": "retained locally",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke rejects mounted old session writes",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke forgets query",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke forgets recents",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "expire rejects mounted old session writes",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire forgets query",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire forgets recents",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted framework input 1280x720",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone maximal used 768x900",
+      "observed": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query 768x900",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut exact branch 768x900",
+      "observed": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration retains recent 768x900",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone input 768x900",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "click duplicate leaves recents 768x900",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 768x900",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload deepest branch 768x900",
+      "observed": "customer.address.city.country",
+      "expected": "customer.address.city.country",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recents 768x900",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted framework input 768x900",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone maximal used 390x844",
+      "observed": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query 390x844",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut exact branch 390x844",
+      "observed": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration retains recent 390x844",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone input 390x844",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "click duplicate leaves recents 390x844",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 390x844",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload deepest branch 390x844",
+      "observed": "customer.address.city.country",
+      "expected": "customer.address.city.country",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recents 390x844",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted framework input 390x844",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone maximal used 844x390",
+      "observed": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "expected": [
+        "customer.address.city",
+        "customer.billingAddress.country",
+        "customer.address",
+        "customer.billingAddress"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut clears query 844x390",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "shortcut exact branch 844x390",
+      "observed": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "expected": [
+        "",
+        "customer",
+        "customer.address"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration retains recent 844x390",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "name": "trusted standalone input 844x390",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "click duplicate leaves recents 844x390",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "reload query 844x390",
+      "observed": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "reload deepest branch 844x390",
+      "observed": "customer.address.city.country",
+      "expected": "customer.address.city.country",
+      "status": "PASS"
+    },
+    {
+      "name": "reload recents 844x390",
+      "observed": [
+        "customer"
+      ],
+      "expected": [
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "trusted framework input 844x390",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "browser exceptions",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": ""
+    },
+    {
+      "action": "standalone",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": ""
+    },
+    {
+      "action": "stop-app",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": "PASS: owned app 2468060 stopped\n"
+    },
+    {
+      "action": "app",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": ""
+    },
+    {
+      "action": "stop-app",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": "PASS: owned app 2468446 stopped\n"
+    },
+    {
+      "action": "stop-standalone",
+      "env": {
+        "PS_ENV_DIRECTORY": "/tmp/property-select/L4",
+        "PS_APP_PORT": "13901",
+        "PS_STANDALONE_PORT": "13902",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs"
+      },
+      "stdout": "PASS: owned standalone 2468079 stopped\n"
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "standalone-1280x720.png",
+    "integrated-1280x720.png",
+    "standalone-768x900.png",
+    "integrated-768x900.png",
+    "standalone-390x844.png",
+    "integrated-390x844.png",
+    "standalone-844x390.png",
+    "integrated-844x390.png"
+  ],
+  "seed": "synthetic invoice fixture",
+  "urls": [
+    "http://127.0.0.1:13901/property-select-invoice",
+    "http://127.0.0.1:13902/state-fixture"
+  ],
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

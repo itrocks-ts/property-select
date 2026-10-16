@@ -1,0 +1,132 @@
+[
+  {
+    "name": "fastify-file-session-store-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/fastify-file-session-store",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "fastify-file-session-store-test.txt"
+  },
+  {
+    "name": "fastify-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/fastify",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "fastify-test.txt"
+  },
+  {
+    "name": "property-select-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "property-select-test.txt"
+  },
+  {
+    "name": "list-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-test.txt"
+  },
+  {
+    "name": "framework-test",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-test.txt"
+  },
+  {
+    "name": "list-build",
+    "command": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-build.txt"
+  },
+  {
+    "name": "application-build",
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "application-build.txt"
+  },
+  {
+    "name": "list-explicit",
+    "command": [
+      "node",
+      "--test",
+      "node_modules/@itrocks/list/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 1,
+    "output": "list-explicit.txt"
+  },
+  {
+    "name": "list-focused",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "exit": 0,
+    "output": "list-focused.txt"
+  },
+  {
+    "name": "framework-explicit",
+    "command": [
+      "node",
+      "--test",
+      "node_modules/@itrocks/framework/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 1,
+    "output": "framework-explicit.txt"
+  },
+  {
+    "name": "framework-focused",
+    "command": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+    "exit": 0,
+    "output": "framework-focused.txt"
+  }
+]

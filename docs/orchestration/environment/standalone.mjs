@@ -1,6 +1,6 @@
 import { createReadStream } from 'node:fs'
-import { createServer } from 'node:http'
-import { fileURLToPath } from 'node:url'
+import { createServer }     from 'node:http'
+import { fileURLToPath }    from 'node:url'
 
 const port = Number(process.argv[3]?.slice('--ps-port='.length))
 if (!process.argv[2]?.startsWith('--ps-environment=') || !process.argv[3]?.startsWith('--ps-port='))
@@ -11,12 +11,17 @@ const assets = new Map([
 	['/', new URL('./demo/index.html', import.meta.url)],
 	['/catalogue.js', new URL('./demo/catalogue.js', import.meta.url)],
 	['/demo.js', new URL('./demo/demo.js', import.meta.url)],
+	['/state-fixture', new URL('./demo/state.html', import.meta.url)],
+	['/state-fixture.js', new URL('./demo/state.js', import.meta.url)],
 	['/search-fixture', new URL('./demo/search.html', import.meta.url)],
 	['/search-fixture.js', new URL('./demo/search.js', import.meta.url)],
 	['/search-graph.js', new URL('../../../test/fixtures/search-graph.mjs', import.meta.url)]
 ])
-for (const name of ['controller.js', 'front/property-select.css', 'front/property-select.html', 'front/property-select.js',
-	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js', 'search.js'])
+for (const name of [
+	'controller.js', 'front/property-select.css', 'front/property-select.html', 'front/property-select.js',
+	'intentions.js', 'metadata.js', 'navigation.js', 'path.js', 'ports.js', 'property-select.js', 'search.js',
+	'state.js', 'suggestions.js'
+])
 	assets.set(`/assets/${name}`, new URL(`../../../${name}`, import.meta.url))
 
 // Generic table fixture is a separate consumer of public table/plugin browser entries.
