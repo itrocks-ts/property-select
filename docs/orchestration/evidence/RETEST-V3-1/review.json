@@ -1,0 +1,73 @@
+{
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa",
+    "working_absences": {
+      "audit-itrocks-dependencies.json": true,
+      "audit-itrocks-dependencies.txt": true
+    }
+  },
+  "historical_unchanged": true,
+  "other_owners_unchanged": {
+    "framework": {
+      "head": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+      "status": "",
+      "version": "0.10.3"
+    },
+    "reflect": {
+      "head": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "status": "",
+      "version": "0.3.1"
+    },
+    "reflect-path": {
+      "head": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "status": "",
+      "version": "0.3.2"
+    },
+    "list": {
+      "head": "ec7e4b071f4ee40113b294587ee794c44adfc8ac",
+      "status": "",
+      "version": "0.9.0"
+    },
+    "table": {
+      "head": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+      "status": "",
+      "version": "0.3.1"
+    },
+    "home": {
+      "head": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+      "status": "",
+      "version": "0.6.0"
+    }
+  },
+  "cleanup": [
+    {
+      "port": 13871,
+      "closed": true
+    },
+    {
+      "port": 13872,
+      "closed": true
+    },
+    {
+      "port": 13874,
+      "closed": true
+    },
+    {
+      "port": 13875,
+      "closed": true
+    },
+    {
+      "port": 13881,
+      "closed": true
+    },
+    {
+      "port": 13882,
+      "closed": true
+    }
+  ],
+  "solid": "View retains DOM focus only. Controller/cache/traversal and authorised HTTP metadata keep their own owners. Narrow providers remain substitutable; no SQL, hydration, host or table dependency added.",
+  "product_source_diff": ""
+}

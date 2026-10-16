@@ -1,0 +1,62 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "commands": [
+    {
+      "command": "npm --prefix node_modules/@itrocks/property-select test",
+      "exit": 0,
+      "output": "test.txt"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V3-1.mjs",
+      "exit": 1,
+      "output": "independent.txt"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V3-1.mjs",
+      "exit": 1,
+      "output": "independent-approved.txt"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V3-1.mjs",
+      "exit": 0,
+      "output": "independent-final.txt"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V3-1/replay-reproducer node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-reproduce.mjs",
+      "exit": 0,
+      "output": "replay-reproducer.txt"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V3-1/replay-bounds node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-bounds.mjs",
+      "exit": 0,
+      "output": "replay-bounds.txt"
+    },
+    {
+      "command": "PS_V3_OUTPUT=node_modules/@itrocks/property-select/docs/orchestration/evidence/RETEST-V3-1/replay-V3 node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3.mjs",
+      "exit": 0,
+      "output": "replay-V3.txt"
+    },
+    {
+      "command": "npm pack --dry-run --json --offline --cache /tmp/property-select/RETEST-V3-1/npm-cache (owner cwd)",
+      "exit": 0,
+      "output": "package-files.json"
+    }
+  ],
+  "source_hashes": {
+    "docs/orchestration/environment/checks/RETEST-V3-1.mjs": "653cc0800bc87aa948a82020ab612cb9e25e97ac8249cc54e2629b8632cbcb24",
+    "docs/orchestration/environment/checks/V3.mjs": "bbeaae0add3bbd4036345c82c89332baa9ff85bf30518d3f83df74b772186772",
+    "docs/orchestration/environment/checks/V3-bounds.mjs": "4af1fdc0846a19701b4f0c509ecd03764e8bb48a0ca0610d91e591c9c1f2d2ca",
+    "docs/orchestration/environment/checks/V3-reproduce.mjs": "3601eba6ec1b77486df50ddf0766d389692e3a11c12ae8fd966fcb8065b90048"
+  },
+  "node": "v24.0.1",
+  "npm": "11.6.4",
+  "command_notes": [
+    "The first independent launch failed with restricted spawnSync git EPERM before starting servers.",
+    "The first approved independent execution had one wrong incoming-1-N harness expectation; initial-harness retains 361 PASS and 1 FAIL.",
+    "The final independent execution and browser replays used normal escalation and Chromium sandboxing.",
+    "An initial npm --prefix owner pack --dry-run ran a read-only Showtime inventory because pack ignores prefix for cwd; it was discarded. The retained inventory uses the owner cwd.",
+    "The restricted final socket cleanup check failed EPERM; the same check passed through normal escalation."
+  ],
+  "source_layout_note": "After execution, two long JavaScript lines were wrapped without changing tokens; node --check passes. source_hashes preserve executed fingerprints; delivered_driver_sha256 records the final layout.",
+  "delivered_driver_sha256": "167173a626a8e80fc66a080df7a8b897e7e89256c494bec6d71d286e981dda09"
+}

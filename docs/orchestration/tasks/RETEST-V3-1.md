@@ -3,7 +3,8 @@
 ## Objective and prerequisite
 
 Independently clear [V3-01](../defects/V3-01.md) and complete V3 on attributable corrective commits.
-Prerequisite: `FIX-V3-1` correction report and rebuilt outputs. Current status: `PENDING`.
+Prerequisite: `FIX-V3-1` correction report and rebuilt outputs. Current status: `DONE`;
+see [independent report](../reports/RETEST-V3-1.md).
 Fresh verifier distinct from the corrector and V3 executor; no sub-agent or next task.
 
 Read instructions/handbook, owner README, [COMMON.md](../COMMON.md), [EXECUTION.md](../EXECUTION.md),

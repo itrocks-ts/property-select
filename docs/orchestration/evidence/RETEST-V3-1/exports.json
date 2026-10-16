@@ -1,0 +1,52 @@
+{
+  "exports": {
+    "./cjs/property-select.js": {
+      "exists": true,
+      "sha256": "0480e2d68b9ec6d57b2e1f1e9f79af4e64d20a9d81a1247161a7e11e63e41969"
+    },
+    "./front/property-select.css": {
+      "exists": true,
+      "sha256": "d67df892dbf235a919890778bf9d87bd7330532d76b93f71574b456e5faba4f0"
+    },
+    "./front/property-select.d.ts": {
+      "exists": true,
+      "sha256": "372e43104598e71e741e1401a55fdbc20f64d80018a63160f631118e5ddd73e3"
+    },
+    "./front/property-select.html": {
+      "exists": true,
+      "sha256": "cf3584119fbbebd6b7b500d3ba0c6edf8856edd7dd44a4d57b0a40b7afe5bee8"
+    },
+    "./front/property-select.js": {
+      "exists": true,
+      "sha256": "53b93e2e84aea17fb28e50a1e591fc14190fb3f9f42f863f7a6f168d68468bf7"
+    },
+    "./property-select.d.ts": {
+      "exists": true,
+      "sha256": "29b2ccee0af9ce3e04784732e6a07110758ecc3894e20c2288a917a0d06bfaca"
+    },
+    "./property-select.js": {
+      "exists": true,
+      "sha256": "48edec919f0957ce5eaaffab90ad1d9c8f4c94abf899e8fe3ff5456017902a79"
+    }
+  },
+  "files": [
+    "/*.d.ts",
+    "/*.js",
+    "COPYING",
+    "LICENSE",
+    "README.md",
+    "cjs/*.d.ts",
+    "cjs/*.js",
+    "docs",
+    "front"
+  ],
+  "dependencies": {
+    "devDependencies": {
+      "@itrocks/prepare-module": "latest",
+      "typescript": "^6.0"
+    }
+  },
+  "product_diff": "",
+  "cjs": "public CJS PASS\n",
+  "esm": "public ESM PASS\n"
+}

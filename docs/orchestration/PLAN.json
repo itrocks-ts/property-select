@@ -1553,7 +1553,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "verification",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Navigation generations and asynchronous focus retention require independent DOM identity and metadata checks.",
@@ -1565,7 +1565,23 @@
         "SEA-07",
         "QUA-01",
         "VAL-07"
-      ]
+      ],
+      "validation": "PASS: 379 fresh independent assertions, all 138 full V3 replay assertions, eight reproductions, 21 bounds and 24 selector tests/build/types. Both interfaces/four dimensions pass ordinary/error/Clear rows, main/plus exact focus, bounded retention/final rank, metadata cycles/permissions/Date/zero business reads and stale generations. V3-01 closed; L4 prerequisite cleared; T11 drag remains V5.",
+      "evidence": [
+        "evidence/RETEST-V3-1/independent/results.json",
+        "evidence/RETEST-V3-1/replay-V3/results.json",
+        "evidence/RETEST-V3-1/replay-reproducer/reproducer.json",
+        "evidence/RETEST-V3-1/replay-bounds/bounds.json",
+        "evidence/RETEST-V3-1/review.json",
+        "evidence/RETEST-V3-1/commands.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "216b150a0ec823a4397835fe0fdc2df7822f2415",
+          "base_version": "0.4.5",
+          "version": "0.4.6"
+        }
+      }
     },
     {
       "id": "L4",

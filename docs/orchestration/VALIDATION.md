@@ -1,5 +1,24 @@
 # Phase 1 validation matrix
 
+## RETEST-V3-1 independent closure
+
+**PASS**, corrective selector `216b150a0ec823a4397835fe0fdc2df7822f2415` / `0.4.5`, rebuilt tracking `0.4.6`.
+[Report](reports/RETEST-V3-1.md), [379 fresh assertions](evidence/RETEST-V3-1/independent/results.json),
+[138 full V3 assertions](evidence/RETEST-V3-1/replay-V3/results.json),
+[eight reproductions](evidence/RETEST-V3-1/replay-reproducer/reproducer.json),
+[21 bounds](evidence/RETEST-V3-1/replay-bounds/bounds.json), [24 tests](evidence/RETEST-V3-1/test.txt).
+
+- SEA-01–09 / T09–T13 search/navigation and NAV-08: both interfaces at all four V3 dimensions pass complete
+  ordinary/error/Clear rows, normalised words, distinct paths, segments, local scope and query retention.
+- SEA-06 / PORT-06: main/plus exact focus during enrichment and budget eviction, bounded retained rows,
+  removal across query/context changes and final ranking after blur pass independently.
+- META-01–03 / PORT-03: fresh real metadata proves N-1/N-N/1-N/unknown/incoming history rules, Date terminal,
+  identical context/resolve permissions and zero additional business reads. Delayed/reversed HTTP generations,
+  cancellation, explicit empty/error/limited and browser health pass.
+
+[V3-01](defects/V3-01.md) is closed. L4's V3 prerequisite is cleared; the original failed V3 observations below
+remain historical. T11 drag remains V5, and combined/session/gesture/final acceptance cases remain pending.
+
 ## FIX-V3-1 author correction observations
 
 **DONE (author)** on selector base `f426ab2547111691649ea1b0e574a3beb5afad3b`, rebuilt version `0.4.5`.
@@ -15,7 +34,8 @@
   Date terminal metadata and zero business SQL during metadata search. Original V3 evidence is preserved.
 
 These are correction-author replays of independently authored drivers, plus fresh author assertions.
-[V3-01](defects/V3-01.md) remains open pending distinct RETEST-V3-1; L4 stays gated by that retest.
+At the author checkpoint, [V3-01](defects/V3-01.md) awaited distinct RETEST-V3-1;
+the independent closure above now clears that gate.
 Original independent failure observations below remain historical. T11 drag and later combined gates remain pending.
 
 ## V3 independent search observations
@@ -697,15 +717,16 @@ current verdict: **PASS (V2 implemented observations)**.
 - **T08** — Expected: Use a long breadcrumb on narrow/touch screens; scroll and activate remembered levels with no
 add/drag. Proof: `evidence/<gate>/T08.*`; current verdict: `NOT_RUN`.
 - **T09** — Expected: Search customer country name with reordered/accented/case-varied words; see terminal and
-object results by full path. V3 observation: **PASS**; [proof](evidence/V3/results.json).
+object results by full path. **PASS**, [fresh retest](evidence/RETEST-V3-1/replay-V3/results.json).
 - **T10** — Expected: Search from Address, assert all results descend from it; return to root with the same query
-and relaunch. V3 scoped search passes; **FAIL** ordinary-navigation scope after Clear: [V3-01](defects/V3-01.md).
+and relaunch. **PASS**, including ordinary navigation/Clear;
+[proof](evidence/RETEST-V3-1/independent/results.json).
 - **T11** — Expected: Find Country through billing/delivery paths; navigate and drag intermediate segment using each
 exact full path. Proof: `evidence/<gate>/T11.*`; current verdict: `NOT_RUN`.
 - **T12** — Expected: Delay old query, change text/context and release late response; current results remain,
-loading/empty/limited differ. **FAIL** V3 recovery: [V3-01](defects/V3-01.md); remaining HTTP races NOT_RUN.
+loading/empty/limited differ. **PASS**, recovery and HTTP races: [proof](evidence/RETEST-V3-1/replay-V3/results.json).
 - **T13** — Expected: Run known N→1/N-N inverse return, 1→N excluded return, unknown relations and same-type
-noncycles with provider traces. Proof: `evidence/<gate>/T13.*`; current verdict: `NOT_RUN`.
+noncycles with provider traces. **PASS**, [fresh real/static traces](evidence/RETEST-V3-1/independent/results.json).
 - **T14** — Expected: Combine recent ancestor, two maximal used branches and duplicate advice; assert stable
 six-or-configured destination limit. Proof: `evidence/<gate>/T14.*`; current verdict: `NOT_RUN`.
 - **T15** — Expected: Confirm new add, click duplicate, move existing and abort new drag; only the committed new add
