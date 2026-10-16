@@ -1,0 +1,71 @@
+{
+  "assertions": [
+    {
+      "name": "revoke: session ends",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/V7-state-integrated",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/V7-state-integrated",
+      "output": "PASS: owned app 2609022 stopped\n"
+    }
+  ],
+  "errors": [],
+  "responses": [
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    }
+  ],
+  "screenshots": [],
+  "url": "http://127.0.0.1:13911/property-select-invoice",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "input": "mouse/keyboard",
+  "seed": "synthetic invoice fixture; existing database 13316",
+  "browser": "151.0.7922.34",
+  "console": [
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    }
+  ],
+  "status": "FAIL",
+  "failure": {
+    "message": "Reload advice",
+    "stack": "Error: Reload advice\n    at until (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-state-integrated.mjs:43:8)\n    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-state-integrated.mjs:129:3"
+  }
+}

@@ -1,0 +1,32 @@
+
+> @itrocks/fastify@0.4.1 test
+> npm run build && node --test --test-isolation=none test/*.test.js
+
+
+> @itrocks/fastify@0.4.1 build
+> tsc
+
+✔ actual HTTP preserves handled expiry and revoke errors without response autosave or cookie renewal (194.403144ms)
+✔ ordinary transaction and response storage failures remain visible through actual HTTP (16.726256ms)
+✔ a late stale transaction does not detach a regenerated request session (12.306804ms)
+▶ Fastify front script allowlist
+  ✔ serves only public asset types and configured scripts (17.633437ms)
+  ✔ discovers bounded imports and escaped configured calls inside the asset path (1.591348ms)
+  ✔ resolves recursive public dependencies before a restarted browser requests cached parents (7.432004ms)
+  ✔ ignores a source file outside the asset path (1.047031ms)
+✔ Fastify front script allowlist (28.283893ms)
+▶ Fastify session integration
+  ✔ rejects cross-origin mutations and adds configured response headers (4.410423ms)
+  ✔ keeps the transport-neutral session attached after regeneration (0.386792ms)
+  ✔ sets expiring HttpOnly SameSite cookies and Secure over HTTPS (2.933947ms)
+  ✔ preserves proxy-friendly generic cookie defaults (3.077352ms)
+✔ Fastify session integration (11.359168ms)
+✔ actual request bridge coordinates response autosave, selectors, lists, restart and revoke (18.838089ms)
+ℹ tests 12
+ℹ suites 2
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 378.924933

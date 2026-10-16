@@ -1,0 +1,3001 @@
+{
+  "assertions": [
+    {
+      "name": "export target exists: property-select/./property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./cjs/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.html",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./front/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: property-select/./property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: list/./cjs/list.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: list/./cjs/projection.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: list/./property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: list/./cjs/selector-state.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: list/./selector-state.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/build",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/table",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/list-properties",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/core-transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/core-transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/reflect-path",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/reflect-path",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/action-request",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/request-response",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/sort",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/sort",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select/front/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: list:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/contenteditable",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "relative import remains under installed package root",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: table:@itrocks/plugin",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: home/./cjs/output.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: home/./right-pane.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: home/./right-pane.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: home/./right-pane.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: home:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: home:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: home:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: home:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./cjs/framework.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./cjs/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./cjs/property-select-actions.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./property-select-list.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./property-select-metadata.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./cjs/sql-projection.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "export target exists: framework/./cjs/sql-relationships.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/asset-loader",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/auto-focus",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/auto-redirect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/breadcrumb",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/build",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/collapse",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/contained-auto-width",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/notifications",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/notifications",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/real-viewport-height",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/xtarget",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/autocomplete",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/links",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/links/links.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/air-datepicker",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/lazy-loading",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/class-file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/collection",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/collection",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/core-transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/core-transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/list-properties",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/password",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/password",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/password",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/password/transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-translate/transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/rename",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/rename",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/required",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/storage",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/string-formats",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/string-formats",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/string-formats",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/string-formats/transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/template",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/template-insight",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:date-fns",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/class-file/automation",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/compose",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/default-action-workflow",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action-request",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action-request",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/app-dir",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/fastify-file-session-store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/fastify",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/request-response",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/session",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/template",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/translate",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/action",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/class-file",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect-path",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/config",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/fastify",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/list",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/list",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/list",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/list/selector-state",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/property-select",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/route",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/uses",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/uses",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/core-transformers",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/reflect",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/property-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/rename",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/sql-join",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/decorator",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/decorator/property",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/lazy-loading",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/mysql",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/rename",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/sql-build",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/sql-functions",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/transformer",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-type",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/composition",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/mysql",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect-path",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/reflect-path",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/rename",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/required",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/sql-join",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/sql-join",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/class-view",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/store",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/asset-loader",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "direct runtime declaration: framework:@itrocks/list",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "public entry: @itrocks/list/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "reachable declared graph is acyclic",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "selector public CJS facade works",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "all three corrected list imports were encountered",
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "imports": [
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/build/build.js",
+      "dependency": "@itrocks/build",
+      "entry": "build.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-add.js",
+      "dependency": "@itrocks/table",
+      "entry": "column-add.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-reorder-freeze.js",
+      "dependency": "@itrocks/table",
+      "entry": "column-reorder-freeze.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/column-reorder.js",
+      "dependency": "@itrocks/table",
+      "entry": "column-reorder.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/feed.js",
+      "dependency": "@itrocks/table",
+      "entry": "feed.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze.js",
+      "dependency": "@itrocks/table",
+      "entry": "freeze.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze/inherit-background.js",
+      "dependency": "@itrocks/table",
+      "entry": "freeze/inherit-background.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/freeze/inherit-border.js",
+      "dependency": "@itrocks/table",
+      "entry": "freeze/inherit-border.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/link.js",
+      "dependency": "@itrocks/table",
+      "entry": "link.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/table/table.js",
+      "dependency": "@itrocks/table",
+      "entry": "table.js"
+    },
+    {
+      "owner": "list",
+      "file": "build.js",
+      "specifier": "@itrocks/xtarget/xtarget.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "xtarget.js"
+    },
+    {
+      "owner": "list",
+      "file": "cjs/columns.js",
+      "specifier": "@itrocks/list-properties",
+      "dependency": "@itrocks/list-properties",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/feed.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/list.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/persist.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "@itrocks/core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "@itrocks/core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "@itrocks/property-view",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "@itrocks/reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "@itrocks/reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "@itrocks/action-request",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "@itrocks/property-select",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "@itrocks/property-select",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/selector-state.js",
+      "specifier": "@itrocks/request-response",
+      "dependency": "@itrocks/request-response",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/sort",
+      "dependency": "@itrocks/sort",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/sort",
+      "dependency": "@itrocks/sort",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "cjs/sort.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "list",
+      "file": "property-select.js",
+      "specifier": "@itrocks/property-select/front/property-select.js",
+      "dependency": "@itrocks/property-select",
+      "entry": "front/property-select.js"
+    },
+    {
+      "owner": "list",
+      "file": "property-select.js",
+      "specifier": "@itrocks/property-select/property-select.js",
+      "dependency": "@itrocks/property-select",
+      "entry": "property-select.js"
+    },
+    {
+      "owner": "list",
+      "file": "selector-state.js",
+      "specifier": "@itrocks/property-select/property-select.js",
+      "dependency": "@itrocks/property-select",
+      "entry": "property-select.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-add.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-add.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder-freeze.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "column-reorder.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "edit.js",
+      "specifier": "../contenteditable/contenteditable.js",
+      "dependency": "@itrocks/contenteditable",
+      "entry": "contenteditable.js"
+    },
+    {
+      "owner": "table",
+      "file": "edit.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "feed.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "freeze.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "link.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "link.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "table",
+      "file": "table.js",
+      "specifier": "../plugin/plugin.js",
+      "dependency": "@itrocks/plugin",
+      "entry": "plugin.js"
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "home",
+      "file": "cjs/output.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/asset-loader/asset-loader.js",
+      "dependency": "@itrocks/asset-loader",
+      "entry": "asset-loader.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/auto-focus/auto-focus.js",
+      "dependency": "@itrocks/auto-focus",
+      "entry": "auto-focus.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/auto-redirect/build.js",
+      "dependency": "@itrocks/auto-redirect",
+      "entry": "build.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/breadcrumb/breadcrumb.js",
+      "dependency": "@itrocks/breadcrumb",
+      "entry": "breadcrumb.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/build/build.js",
+      "dependency": "@itrocks/build",
+      "entry": "build.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/collapse/collapse.js",
+      "dependency": "@itrocks/collapse",
+      "entry": "collapse.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/contained-auto-width/contained-auto-width.js",
+      "dependency": "@itrocks/contained-auto-width",
+      "entry": "contained-auto-width.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/notifications/notifications.js",
+      "dependency": "@itrocks/notifications",
+      "entry": "notifications.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/notifications/notifications.js",
+      "dependency": "@itrocks/notifications",
+      "entry": "notifications.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/real-viewport-height/real-viewport-height.js",
+      "dependency": "@itrocks/real-viewport-height",
+      "entry": "real-viewport-height.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/begin-end.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "begin-end.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/build.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "build.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/secure-click.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "secure-click.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/composite.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "composite.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/default-target.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "default-target.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/xtarget.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "xtarget.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/head.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "head.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/headers-size.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "headers-size.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/history.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "history.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/hold-on.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "hold-on.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/main-target.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "main-target.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/xtarget/modifier.js",
+      "dependency": "@itrocks/xtarget",
+      "entry": "modifier.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/autocomplete/autocomplete.js",
+      "dependency": "@itrocks/autocomplete",
+      "entry": "autocomplete.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/links/links.js",
+      "dependency": "@itrocks/links",
+      "entry": "links.js"
+    },
+    {
+      "owner": "framework",
+      "file": "app.js",
+      "specifier": "@itrocks/air-datepicker/air-datepicker.js",
+      "dependency": "@itrocks/air-datepicker",
+      "entry": "air-datepicker.js"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/lazy-loading",
+      "dependency": "@itrocks/lazy-loading",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "@itrocks/app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-file",
+      "dependency": "@itrocks/class-file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/collection",
+      "dependency": "@itrocks/collection",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "@itrocks/core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "@itrocks/core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/file",
+      "dependency": "@itrocks/file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/list-properties",
+      "dependency": "@itrocks/list-properties",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/password",
+      "dependency": "@itrocks/password",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/password/transformers",
+      "dependency": "@itrocks/password",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-translate",
+      "dependency": "@itrocks/property-translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-translate/transformers",
+      "dependency": "@itrocks/property-translate",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "@itrocks/property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "@itrocks/property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "@itrocks/rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "@itrocks/rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/required",
+      "dependency": "@itrocks/required",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/storage",
+      "dependency": "@itrocks/storage",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/string-formats",
+      "dependency": "@itrocks/string-formats",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/string-formats/transformers",
+      "dependency": "@itrocks/string-formats",
+      "entry": "transformers"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/template",
+      "dependency": "@itrocks/template",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/template-insight",
+      "dependency": "@itrocks/template-insight",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "date-fns",
+      "dependency": "date-fns",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/dependencies.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/class-file/automation",
+      "dependency": "@itrocks/class-file",
+      "entry": "automation"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/compose",
+      "dependency": "@itrocks/compose",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/framework.js",
+      "specifier": "@itrocks/default-action-workflow",
+      "dependency": "@itrocks/default-action-workflow",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "@itrocks/app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/language.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "@itrocks/action-request",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action-request",
+      "dependency": "@itrocks/action-request",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/app-dir",
+      "dependency": "@itrocks/app-dir",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/fastify-file-session-store",
+      "dependency": "@itrocks/fastify-file-session-store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/fastify",
+      "dependency": "@itrocks/fastify",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/request-response",
+      "dependency": "@itrocks/request-response",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/session",
+      "dependency": "@itrocks/session",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/template",
+      "dependency": "@itrocks/template",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/main.js",
+      "specifier": "@itrocks/translate",
+      "dependency": "@itrocks/translate",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-actions.js",
+      "specifier": "@itrocks/action",
+      "dependency": "@itrocks/action",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-file",
+      "dependency": "@itrocks/class-file",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "@itrocks/property-select",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "@itrocks/property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "@itrocks/reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/property-view",
+      "dependency": "@itrocks/property-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select-provider.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "@itrocks/reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/config",
+      "dependency": "@itrocks/config",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/fastify",
+      "dependency": "@itrocks/fastify",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/list",
+      "dependency": "@itrocks/list",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/list/selector-state",
+      "dependency": "@itrocks/list",
+      "entry": "selector-state"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/property-select",
+      "dependency": "@itrocks/property-select",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/property-select.js",
+      "specifier": "@itrocks/route",
+      "dependency": "@itrocks/route",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-class.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "@itrocks/reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-class.js",
+      "specifier": "@itrocks/uses",
+      "dependency": "@itrocks/uses",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/core-transformers",
+      "dependency": "@itrocks/core-transformers",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/reflect",
+      "dependency": "@itrocks/reflect",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/reflect-property.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/property-type",
+      "dependency": "@itrocks/property-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "@itrocks/rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "@itrocks/sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-join-dependencies.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/decorator/property",
+      "dependency": "@itrocks/decorator",
+      "entry": "property"
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/lazy-loading",
+      "dependency": "@itrocks/lazy-loading",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/mysql",
+      "dependency": "@itrocks/mysql",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "@itrocks/rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/sql-build",
+      "dependency": "@itrocks/sql-build",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/sql-functions",
+      "dependency": "@itrocks/sql-functions",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-projection.js",
+      "specifier": "@itrocks/transformer",
+      "dependency": "@itrocks/transformer",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/class-type",
+      "dependency": "@itrocks/class-type",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/composition",
+      "dependency": "@itrocks/composition",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/mysql",
+      "dependency": "@itrocks/mysql",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "@itrocks/reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/reflect-path",
+      "dependency": "@itrocks/reflect-path",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/rename",
+      "dependency": "@itrocks/rename",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/required",
+      "dependency": "@itrocks/required",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "@itrocks/sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/sql-join",
+      "dependency": "@itrocks/sql-join",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/sql-relationships.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/store-representative.js",
+      "specifier": "@itrocks/class-view",
+      "dependency": "@itrocks/class-view",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "cjs/store-representative.js",
+      "specifier": "@itrocks/store",
+      "dependency": "@itrocks/store",
+      "entry": ""
+    },
+    {
+      "owner": "framework",
+      "file": "property-select-list.js",
+      "specifier": "@itrocks/asset-loader/asset-loader.js",
+      "dependency": "@itrocks/asset-loader",
+      "entry": "asset-loader.js"
+    },
+    {
+      "owner": "framework",
+      "file": "property-select-list.js",
+      "specifier": "@itrocks/list/property-select.js",
+      "dependency": "@itrocks/list",
+      "entry": "property-select.js"
+    }
+  ],
+  "exports": [
+    {
+      "owner": "property-select",
+      "entry": "./property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./cjs/property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.css"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.html"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./front/property-select.js"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.d.ts"
+    },
+    {
+      "owner": "property-select",
+      "entry": "./property-select.js"
+    },
+    {
+      "owner": "list",
+      "entry": "./cjs/list.js"
+    },
+    {
+      "owner": "list",
+      "entry": "./cjs/projection.js"
+    },
+    {
+      "owner": "list",
+      "entry": "./property-select.js"
+    },
+    {
+      "owner": "list",
+      "entry": "./cjs/selector-state.js"
+    },
+    {
+      "owner": "list",
+      "entry": "./selector-state.js"
+    },
+    {
+      "owner": "home",
+      "entry": "./cjs/output.js"
+    },
+    {
+      "owner": "home",
+      "entry": "./right-pane.css"
+    },
+    {
+      "owner": "home",
+      "entry": "./right-pane.d.ts"
+    },
+    {
+      "owner": "home",
+      "entry": "./right-pane.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./cjs/framework.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./cjs/property-select.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./cjs/property-select-actions.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./property-select-list.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./property-select-metadata.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./cjs/sql-projection.js"
+    },
+    {
+      "owner": "framework",
+      "entry": "./cjs/sql-relationships.js"
+    }
+  ],
+  "cycles": [],
+  "status": "PASS"
+}

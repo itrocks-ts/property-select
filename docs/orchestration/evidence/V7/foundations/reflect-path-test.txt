@@ -1,0 +1,21 @@
+✔ ambiguous terminal and intermediate targets reject without choosing a candidate (144.055748ms)
+✔ collections traverse logical elements and retain accumulated multiplicity (204.407465ms)
+✔ cyclic paths are finite inputs and distinct routes preserve full path identity (0.517586ms)
+✔ deferred and custom reflection contexts remain substitutable (0.890971ms)
+✔ direct inherited and deep final properties use the correct metadata owner (190.342693ms)
+✔ metadata access executes no value getter and constructs no domain object (0.723385ms)
+✔ missing and nullable values resolve through metadata without reading records (54.375289ms)
+✔ native date paths retain scalar multiplicity and reject native methods (1.027292ms)
+✔ normalisation copies segments and exposes stable readonly descriptor containers (0.812836ms)
+✔ public require and import expose descriptors errors and legacy reflection (3.779738ms)
+✔ runtime validation rejects malformed paths unknown names and terminal traversal (0.703673ms)
+✔ singular explicit value access keeps the final owner and snapshots on first access (0.392581ms)
+✔ unresolved composed syntax is explicit without a duplicate type parser (0.257011ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 641.991486

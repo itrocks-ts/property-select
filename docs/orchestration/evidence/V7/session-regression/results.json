@@ -1,0 +1,1170 @@
+{
+  "assertions": [
+    {
+      "name": "1280x720-revoke: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-revoke: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-revoke: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "1280x720-revoke: live query retained",
+      "observed": "obsolete-1280x720-revoke",
+      "expected": "obsolete-1280x720-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-revoke: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-revoke: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-revoke: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "1280x720-expire: live query retained",
+      "observed": "obsolete-1280x720-expire",
+      "expected": "obsolete-1280x720-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "1280x720-expire: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "768x900-revoke: live query retained",
+      "observed": "obsolete-768x900-revoke",
+      "expected": "obsolete-768x900-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-revoke: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "768x900-expire: live query retained",
+      "observed": "obsolete-768x900-expire",
+      "expected": "obsolete-768x900-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "768x900-expire: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "390x844-revoke: live query retained",
+      "observed": "obsolete-390x844-revoke",
+      "expected": "obsolete-390x844-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-revoke: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "390x844-expire: live query retained",
+      "observed": "obsolete-390x844-expire",
+      "expected": "obsolete-390x844-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "390x844-expire: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "844x390-revoke: live query retained",
+      "observed": "obsolete-844x390-revoke",
+      "expected": "obsolete-844x390-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-revoke: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: session operation accepted",
+      "observed": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: acquired write returns 410",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: visible session-ended reload guidance",
+      "observed": false,
+      "expected": true,
+      "status": "FAIL"
+    },
+    {
+      "name": "844x390-expire: live query retained",
+      "observed": "obsolete-844x390-expire",
+      "expected": "obsolete-844x390-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: columns retained",
+      "observed": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "expected": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: offered Retry remains rejected",
+      "observed": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "844x390-expire: ended state not resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "Every captured product input trusted",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "No page exception",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "scenarios": [
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "input": "mouse/keyboard",
+      "before": {
+        "revision": 4,
+        "state": {
+          "branch": [
+            "customer"
+          ],
+          "current": 1,
+          "query": "name",
+          "recent": [
+            "customer"
+          ],
+          "scroll": {},
+          "version": 1
+        }
+      },
+      "columns": [
+        "number",
+        "amount",
+        "customer.name"
+      ],
+      "observed": {
+        "status": "No matching properties.",
+        "persistence": "Unable to save selector state. Retry",
+        "visible": "invoice\ncustomer\nClear\ncustomer\ncustomer › address\ndelivery address\ntags\n\nUnable to save selector state. Retry\n\nNo matching properties."
+      },
+      "expected": "The selector session has ended. Reload the page."
+    }
+  ],
+  "inputs": [
+    {
+      "name": "1280x720-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "1280x720-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "768x900-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "768x900-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "390x844-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "390x844-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "844x390-revoke",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "click",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "input",
+      "trusted": true
+    },
+    {
+      "name": "844x390-expire",
+      "type": "click",
+      "trusted": true
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "name": "1280x720-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "1280x720-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "1280x720-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "1280x720-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "768x900-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "768x900-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "768x900-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "768x900-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "390x844-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "390x844-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "390x844-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "390x844-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "844x390-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "844x390-revoke",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "844x390-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    },
+    {
+      "name": "844x390-expire",
+      "text": "Failed to load resource: the server responded with a status of 410 (Gone)"
+    }
+  ],
+  "network": [
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "checkpoints": {
+    "property-select": {
+      "sha": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+      "version": "0.7.4",
+      "status": ""
+    },
+    "list": {
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "version": "0.12.1",
+      "status": ""
+    },
+    "table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0",
+      "status": ""
+    },
+    "home": {
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0",
+      "status": ""
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    },
+    "reflect": {
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    "reflect-path": {
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "storage": {
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    "sql-build": {
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "sql-join": {
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    "mysql": {
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    "mysql-maintainer": {
+      "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify": {
+      "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    "fastify-file-session-store": {
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    }
+  },
+  "chromiumSandbox": true,
+  "playwright": "1.62.1",
+  "seed": "120 synthetic roots; real file sessions; production state endpoint with fixture delay gate",
+  "browser": "151.0.7922.34",
+  "status": "FAIL"
+}

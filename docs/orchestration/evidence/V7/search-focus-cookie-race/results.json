@@ -1,0 +1,4925 @@
+{
+  "checks": [
+    {
+      "name": "standalone-1280: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: root query preserved",
+      "expected": " CÔDE  CLIENT pays ",
+      "observed": " CÔDE  CLIENT pays ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: root query preserved",
+      "expected": " CUSTOMER   nAmE country ",
+      "observed": " CUSTOMER   nAmE country ",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: root query preserved",
+      "expected": " CÔDE  CLIENT pays ",
+      "observed": " CÔDE  CLIENT pays ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-768: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: root query preserved",
+      "expected": " CUSTOMER   nAmE country ",
+      "observed": " CUSTOMER   nAmE country ",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-768: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: root query preserved",
+      "expected": " CÔDE  CLIENT pays ",
+      "observed": " CÔDE  CLIENT pays ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-390: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: root query preserved",
+      "expected": " CUSTOMER   nAmE country ",
+      "observed": " CUSTOMER   nAmE country ",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-enrich: no duplicate paths",
+      "expected": 16,
+      "observed": 16,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: no duplicate paths",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: exact ceiling",
+      "expected": 100,
+      "observed": 100,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: final rank on blur",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-390: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: root query preserved",
+      "expected": " CÔDE  CLIENT pays ",
+      "observed": " CÔDE  CLIENT pays ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-844: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: root query preserved",
+      "expected": " CUSTOMER   nAmE country ",
+      "observed": " CUSTOMER   nAmE country ",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-844: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "standalone-1280-before",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "customer",
+        "lines",
+        "number",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "standalone-1280-ordinary-after",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-1280-recovery-after",
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-1280-main-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:slow.name"
+    },
+    {
+      "name": "standalone-1280-plus-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:slow.name"
+    },
+    {
+      "name": "integrated-1280-before",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "active",
+        "amount",
+        "customer",
+        "deliveryAddress",
+        "issuedAt",
+        "lines",
+        "note",
+        "number",
+        "p0",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "integrated-1280-ordinary-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-1280-recovery-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-1280-main-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:tags.name"
+    },
+    {
+      "name": "integrated-1280-plus-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:tags.name"
+    },
+    {
+      "name": "standalone-768-before",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "customer",
+        "lines",
+        "number",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "standalone-768-ordinary-after",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-768-recovery-after",
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-768-main-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:slow.name"
+    },
+    {
+      "name": "standalone-768-plus-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:slow.name"
+    },
+    {
+      "name": "integrated-768-before",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "active",
+        "amount",
+        "customer",
+        "deliveryAddress",
+        "issuedAt",
+        "lines",
+        "note",
+        "number",
+        "p0",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "integrated-768-ordinary-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-768-recovery-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-768-main-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:tags.name"
+    },
+    {
+      "name": "integrated-768-plus-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:tags.name"
+    },
+    {
+      "name": "standalone-390-before",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "customer",
+        "lines",
+        "number",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "standalone-390-ordinary-after",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-390-recovery-after",
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-390-main-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:slow.name"
+    },
+    {
+      "name": "standalone-390-plus-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:slow.name"
+    },
+    {
+      "name": "integrated-390-before",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "active",
+        "amount",
+        "customer",
+        "deliveryAddress",
+        "issuedAt",
+        "lines",
+        "note",
+        "number",
+        "p0",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "integrated-390-ordinary-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-390-recovery-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-390-main-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:tags.name"
+    },
+    {
+      "name": "integrated-390-plus-budget-focused",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "rows": [
+        "customer.retestName0",
+        "customer.retestName1",
+        "customer.retestName2",
+        "customer.retestName3",
+        "customer.retestName4",
+        "customer.retestName5",
+        "customer.retestName6",
+        "customer.retestName7",
+        "customer.retestName8",
+        "customer.retestName9",
+        "customer.retestName10",
+        "customer.retestName11",
+        "customer.retestName12",
+        "customer.retestName13",
+        "customer.retestName14",
+        "customer.retestName15",
+        "customer.retestName16",
+        "customer.retestName17",
+        "customer.retestName18",
+        "customer.retestName19",
+        "customer.retestName20",
+        "customer.retestName21",
+        "customer.retestName22",
+        "customer.retestName23",
+        "customer.retestName24",
+        "customer.retestName25",
+        "customer.retestName26",
+        "customer.retestName27",
+        "customer.retestName28",
+        "customer.retestName29",
+        "customer.retestName30",
+        "customer.retestName31",
+        "customer.retestName32",
+        "customer.retestName33",
+        "customer.retestName34",
+        "customer.retestName35",
+        "customer.retestName36",
+        "customer.retestName37",
+        "customer.retestName38",
+        "customer.retestName39",
+        "customer.retestName40",
+        "customer.retestName41",
+        "customer.retestName42",
+        "customer.retestName43",
+        "customer.retestName44",
+        "customer.retestName45",
+        "customer.retestName46",
+        "customer.retestName47",
+        "customer.retestName48",
+        "customer.retestName49",
+        "customer.retestName50",
+        "customer.retestName51",
+        "customer.retestName52",
+        "customer.retestName53",
+        "customer.retestName54",
+        "customer.retestName55",
+        "customer.retestName56",
+        "customer.retestName57",
+        "customer.retestName58",
+        "customer.retestName59",
+        "customer.retestName60",
+        "customer.retestName61",
+        "customer.retestName62",
+        "customer.retestName63",
+        "customer.retestName64",
+        "customer.retestName65",
+        "customer.retestName66",
+        "customer.retestName67",
+        "customer.retestName68",
+        "customer.retestName69",
+        "customer.retestName70",
+        "customer.retestName71",
+        "customer.retestName72",
+        "customer.retestName73",
+        "customer.retestName74",
+        "customer.retestName75",
+        "customer.retestName76",
+        "customer.retestName77",
+        "customer.retestName78",
+        "customer.retestName79",
+        "customer.retestName80",
+        "customer.retestName81",
+        "customer.retestName82",
+        "customer.retestName83",
+        "customer.retestName84",
+        "customer.retestName85",
+        "customer.retestName86",
+        "customer.retestName87",
+        "customer.retestName88",
+        "customer.retestName89",
+        "customer.retestName90",
+        "customer.retestName91",
+        "customer.retestName92",
+        "customer.retestName93",
+        "customer.retestName94",
+        "customer.retestName95",
+        "customer.retestName96",
+        "customer.retestName97",
+        "customer.retestName98",
+        "tags.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:tags.name"
+    },
+    {
+      "name": "standalone-844-before",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "customer",
+        "lines",
+        "number",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "standalone-844-ordinary-after",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-844-recovery-after",
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-844-main-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:slow.name"
+    },
+    {
+      "name": "standalone-844-plus-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:slow.name"
+    },
+    {
+      "name": "integrated-844-before",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "active",
+        "amount",
+        "customer",
+        "deliveryAddress",
+        "issuedAt",
+        "lines",
+        "note",
+        "number",
+        "p0",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "integrated-844-ordinary-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "integrated-844-recovery-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "failure",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "stdout": "",
+      "overrides": {
+        "PS_V7_FROM": "search-focus",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "standalone",
+      "stdout": "",
+      "overrides": {
+        "PS_V7_FROM": "search-focus",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "stop-standalone",
+      "stdout": "PASS: owned standalone 2605119 stopped\n",
+      "overrides": {
+        "PS_V7_FROM": "search-focus",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "stop-app",
+      "stdout": "PASS: owned app 2605101 stopped\n",
+      "overrides": {
+        "PS_V7_FROM": "search-focus",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-1280",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-1280",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-768",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-768",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-390",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "integrated-390",
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-844",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "health": [
+    {
+      "label": "integrated-1280",
+      "type": "http",
+      "status": 503,
+      "url": "http://127.0.0.1:13881/property-select/context/json?path=customer&root=invoice"
+    },
+    {
+      "label": "integrated-1280",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    },
+    {
+      "label": "integrated-768",
+      "type": "http",
+      "status": 503,
+      "url": "http://127.0.0.1:13881/property-select/context/json?path=customer&root=invoice"
+    },
+    {
+      "label": "integrated-768",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    },
+    {
+      "label": "integrated-390",
+      "type": "http",
+      "status": 503,
+      "url": "http://127.0.0.1:13881/property-select/context/json?path=customer&root=invoice"
+    },
+    {
+      "label": "integrated-390",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    },
+    {
+      "label": "integrated-844",
+      "type": "http",
+      "status": 503,
+      "url": "http://127.0.0.1:13881/property-select/context/json?path=customer&root=invoice"
+    },
+    {
+      "label": "integrated-844",
+      "type": "error",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    }
+  ],
+  "trace": [],
+  "metadata": [],
+  "checkpoint": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+  "version": "0.7.5",
+  "fixture": "Public search-graph and real synthetic invoice, no reset; mouse/keyboard at all dimensions",
+  "browser": "151.0.7922.34",
+  "status": "FAIL",
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ps-main[data-path=\"tags\"]') to be visible\u001b[22m\n\n    at open (/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-search-focus.mjs:69:101)\n    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-search-focus.mjs:198:6\n"
+}

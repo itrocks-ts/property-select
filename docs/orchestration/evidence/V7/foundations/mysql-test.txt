@@ -1,0 +1,14 @@
+✔ projection merges identities and selected fields without constructors or additional reads (5.962922ms)
+✔ ignored and undefined scalar and object fields have distinct loading states (1.522979ms)
+✔ criteria use final owners and preserve trusted operators and caller inputs (1.320621ms)
+✔ validation precedes connection and conversion errors preserve path and cause (1.99119ms)
+✔ identity values preserve large integers and null relation cells (0.62298ms)
+✔ unsupported adapters reject without invoking full entity search (0.268027ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 91.081043

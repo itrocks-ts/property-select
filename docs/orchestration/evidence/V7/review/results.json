@@ -1,0 +1,483 @@
+{
+  "owners": [
+    {
+      "owner": "property-select",
+      "sha": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+      "version": "0.7.4",
+      "status": " M package.json\n?? docs/orchestration/defects/V7-01.md\n?? docs/orchestration/environment/checks/.V7-review.mjs\n?? docs/orchestration/environment/checks/V7-foundations.mjs\n?? docs/orchestration/environment/checks/V7-review.mjs\n?? docs/orchestration/environment/checks/V7-session-regression.mjs\n?? docs/orchestration/environment/checks/V7.mjs\n?? docs/orchestration/evidence/V7/\n?? docs/orchestration/tasks/FIX-V7-1.md\n?? docs/orchestration/tasks/RETEST-V7-1.md\n"
+    },
+    {
+      "owner": "list",
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "version": "0.12.1",
+      "status": ""
+    },
+    {
+      "owner": "table",
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0",
+      "status": ""
+    },
+    {
+      "owner": "home",
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0",
+      "status": ""
+    },
+    {
+      "owner": "framework",
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    },
+    {
+      "owner": "reflect",
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    {
+      "owner": "reflect-path",
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    {
+      "owner": "storage",
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    {
+      "owner": "sql-build",
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    {
+      "owner": "sql-join",
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    {
+      "owner": "mysql",
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    {
+      "owner": "mysql-maintainer",
+      "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "version": "0.4.1",
+      "status": ""
+    },
+    {
+      "owner": "fastify",
+      "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    {
+      "owner": "fastify-file-session-store",
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    }
+  ],
+  "sourceReview": [
+    {
+      "path": "list/src/list.ts",
+      "sha256": "61a495a1d6936537829950e7afdea3bbbe31d46c4b2a4e92f5b60f88ba69a512",
+      "observation": "HTML and visible columns call configured select with scope and ids; JSON keeps entity search."
+    },
+    {
+      "path": "list/src/projection.ts",
+      "sha256": "7c8e31800674bfdc0b4b493e2a70e7e14802a9a249582ce2c2bfebb1fc674a38",
+      "observation": "Public typed path and representation transformers; no SQL builder or hydration."
+    },
+    {
+      "path": "list/src/front/property-select.ts",
+      "sha256": "52c145677f6a48498e0c735910b2dd07ea2a592db6855168a10359f8d1eff018",
+      "observation": "Consumer adapts paths and data; beginExternal owns geometry, pane token owns fold."
+    },
+    {
+      "path": "framework/src/front/property-select-list.ts",
+      "sha256": "759dba6904c26202fb56387e689980126cd777bb25de0c14c84c304a785f9773",
+      "observation": "Public dynamic activation, injected pane registration and cleanup."
+    },
+    {
+      "path": "framework/src/front/property-select-metadata.ts",
+      "sha256": "a187c141a53c6124cf586bb8bdb05f92e5c794f47142148b140b5849aeae1dd9",
+      "observation": "HTTP descriptions only; forwards cancellation signal."
+    },
+    {
+      "path": "property-select/src/property-select.ts",
+      "sha256": "2bf05f2d470bea10d8d2e1d54f37be87cf4ded1acfc722946366bf870d85e66b",
+      "observation": "Generic metadata, consumer and state ports; no host/table/data dependency."
+    },
+    {
+      "path": "table/src/column-add.ts",
+      "sha256": "3aa6f2d7ea85e6fbd00a3dfce6ee02e153e77dbf30b5cc68b501bf5ee9754e12",
+      "observation": "Generic opaque identity and column transactions reuse public reorder operations."
+    },
+    {
+      "path": "home/src/front/right-pane.ts",
+      "sha256": "0fc2c36e7059a80facc6765cdd2b9ba538e4d406ffe4a43a0b4d96b4a0c9e6ac",
+      "observation": "Single generic pane owns registration, focus and responsive suspension."
+    },
+    {
+      "path": "mysql/src/mysql.ts",
+      "sha256": "774a04415a9cf1ce36642cf415f59914f9e242a3bec59e0d460c0d75b5e645b5",
+      "observation": "Projection executes sql-build and delegates typed reconstruction to its own projection code."
+    },
+    {
+      "path": "sql-build/src/select.ts",
+      "sha256": "1aa120ecf05e2077b4b19f6abb5a0b960fb0ba41a64867106a14747125d946cd",
+      "observation": "Projection and criteria share the SQL relationship graph."
+    }
+  ],
+  "preservation": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  },
+  "assertions": [
+    {
+      "name": "property-select: checkpoint unchanged",
+      "actual": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+      "expected": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+      "status": "PASS"
+    },
+    {
+      "name": "property-select: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "list: checkpoint unchanged",
+      "actual": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "expected": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "status": "PASS"
+    },
+    {
+      "name": "list: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "list: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "table: checkpoint unchanged",
+      "actual": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "expected": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "status": "PASS"
+    },
+    {
+      "name": "table: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "table: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "home: checkpoint unchanged",
+      "actual": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "expected": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "status": "PASS"
+    },
+    {
+      "name": "home: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "home: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "framework: checkpoint unchanged",
+      "actual": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "expected": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "status": "PASS"
+    },
+    {
+      "name": "framework: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "framework: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect: checkpoint unchanged",
+      "actual": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "expected": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect-path: checkpoint unchanged",
+      "actual": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "expected": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect-path: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "reflect-path: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "storage: checkpoint unchanged",
+      "actual": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "expected": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "status": "PASS"
+    },
+    {
+      "name": "storage: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "storage: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-build: checkpoint unchanged",
+      "actual": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "expected": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-build: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-build: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-join: checkpoint unchanged",
+      "actual": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "expected": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-join: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "sql-join: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql: checkpoint unchanged",
+      "actual": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "expected": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql-maintainer: checkpoint unchanged",
+      "actual": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "expected": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql-maintainer: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "mysql-maintainer: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify: checkpoint unchanged",
+      "actual": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "expected": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify-file-session-store: checkpoint unchanged",
+      "actual": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "expected": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify-file-session-store: product sources unchanged",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "fastify-file-session-store: clean owner",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "list/src/list.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "list/src/projection.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "list/src/front/property-select.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "framework/src/front/property-select-list.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "framework/src/front/property-select-metadata.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "property-select/src/property-select.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "table/src/column-add.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "home/src/front/right-pane.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "mysql/src/mysql.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "sql-build/src/select.ts: inspected source exists",
+      "actual": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "name": "Showtime preserved exactly",
+      "actual": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      },
+      "expected": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      },
+      "status": "PASS"
+    },
+    {
+      "name": "audit-itrocks-dependencies.json: still absent",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "name": "audit-itrocks-dependencies.txt: still absent",
+      "actual": false,
+      "expected": false,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

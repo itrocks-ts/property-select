@@ -1,0 +1,15 @@
+{
+  "checkpoints.json": "cb513d67fdaa287f1345e1fb8258ff7fdc3aca215f4c3f3224eb4c2b478bdbd2",
+  "cleanup.txt": "bac285046e4d585e2f5163efb103131a9bb22e910dc87560966983da0c751d88",
+  "desktop-after.png": "5770956c4a9bae235665fbceffaf7be1be122e8c7bdd0ac0b67bdafc47e4cb0a",
+  "desktop-before.png": "ff79d6026354a592355dbdda33fd305aa30b87ef286f5b42db4db475b088b2cb",
+  "execution.json": "bfe807ea64577524b339c56469bcfe0d3cd71ccdc80dc7801a21c4a799f0a9f8",
+  "landscape-after.png": "5e3f6687f6f143f01d6af3d760a7f8b68ade1898a7fda424eb9ab168abb06ebb",
+  "landscape-before.png": "083cb63fddbf4e2b7921279e39f269066e26cd536576c64b73912b60f8ef1507",
+  "narrow-after.png": "0007c4457438d611ee72aa5d3a7ec451d28634a2b282b77aed4fbd603266f7eb",
+  "narrow-before.png": "48d9242b98ae817cc7c872107e2f4508e186172b63350a882f274e7d27b4a252",
+  "ownership.json": "fb0107c91bb34e5580b4c2ee327666cdabb71128e4b9cf92d7498769358df384",
+  "portrait-after.png": "e73ef4f96b957250acc5148befb6660f26a0819bce10ee1e1685bc945ab984cc",
+  "portrait-before.png": "e34d9fea1952be8c42ae65267e4f28c9c128c1b319348a80a81612d4f429e3d0",
+  "results.json": "69b16caf62e64099ae29f8e358fd8bb1bb819ece915be146ce3f741106f3a197"
+}

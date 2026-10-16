@@ -1,0 +1,933 @@
+[
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/COMMON.md",
+    "sha256": "c5f821219c44499ef24d7f97936e3c761d66a31eaa41443fcc8d4b05173e4149",
+    "lines": 110,
+    "headings": [
+      "# Property selector shared handover",
+      "## Task references",
+      "## Instructions and ownership",
+      "## Git checkpoints and delivery",
+      "## Local execution and validation",
+      "## Planning handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/PHP-COMPARISON.md",
+    "sha256": "a46fb8fc8ae937c0e4c4526b57f3df0f7d64b4a3b9e6fa67165416ae4ec96cc6",
+    "lines": 100,
+    "headings": [
+      "# PHP projection comparison",
+      "## Inspected reference and scope",
+      "## Selection facade and list data",
+      "## Object expansion and reconstruction",
+      "## Shared graph, aliases and optional joins",
+      "## Criteria, conversion and pagination",
+      "## Scenario correspondence",
+      "## Review decision"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/CONTRACTS.md",
+    "sha256": "0f8e60746aeeb66364e5945c7910d56c0f0f3fef1c612ae2f165d666f0ecebe5",
+    "lines": 290,
+    "headings": [
+      "# Selector and host architecture contracts",
+      "## Status, boundaries and surfaces",
+      "## Paths and metadata port",
+      "## Intentions and acknowledgements",
+      "## State and suggestions",
+      "## Search and navigation state",
+      "## Table addition and public reorder extension",
+      "## Pane service and composition",
+      "## Technical transport and tests"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/AUDIT.md",
+    "sha256": "09968069eb4e7d95d6ae19049b0eb974454aa65626d5c88efd94948319cd3b7b",
+    "lines": 333,
+    "headings": [
+      "# Property selector initial audit",
+      "## Scope and result",
+      "## Initial Git state and preservation",
+      "## Existing components, exports and gaps",
+      "### Selector and metadata",
+      "### List, table and pane",
+      "### Storage and SQL",
+      "## PHP reference and TypeScript adaptation",
+      "## Manifest entries and local linkage",
+      "## Commands and validation boundaries",
+      "### `property-select` commands",
+      "### `framework` commands",
+      "### `list` commands",
+      "### `table` commands",
+      "### `home` commands",
+      "### `reflect` commands",
+      "### `reflect-path` commands",
+      "### `storage` commands",
+      "### `mysql` commands",
+      "### `sql-build` commands",
+      "### `sql-join` commands",
+      "## Version and commit rules",
+      "## Audit validation report"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/EXECUTION.md",
+    "sha256": "012e954b04907c6130b8fde86b899d1fae8ce17681e63322f6d65bd8c4ee5a50",
+    "lines": 135,
+    "headings": [
+      "# Sequential execution and evidence",
+      "## Authoritative plan and checkpoints",
+      "## Launcher and calibration",
+      "## Build and fixture readiness",
+      "## Browser gates and evidence",
+      "## Correction protocol",
+      "## Final acceptance and delivery"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/VERIFY-ENVIRONMENT.md",
+    "sha256": "d6169d98f9582404a14070dc00804130620852ec3b171dd1608972bab89e958b",
+    "lines": 83,
+    "headings": [
+      "# Independent environment verification",
+      "## Verdict and checkpoints",
+      "## Independent execution",
+      "## Observed results",
+      "## Scope and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/SELECT-CONTRACT.md",
+    "sha256": "e4742b617fb016d131ceb19d697e1de267e5b910423da195ed8985c1ece3f2d8",
+    "lines": 220,
+    "headings": [
+      "# Path projection contract",
+      "## Status and ownership",
+      "## Public storage API",
+      "## Normalisation, defaults and options",
+      "## Selected objects and representation",
+      "## Builder API and join invariants",
+      "## Cardinality and root rows",
+      "## Real integration gate"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/ENVIRONMENT.md",
+    "sha256": "263127ff411eedbbdcedc30d29209bdedb6a934c4d32ee47bd3ae589b5de3b6a",
+    "lines": 245,
+    "headings": [
+      "# Property selector validation environment",
+      "## Scope and checkpoint",
+      "## Tools and reconstruction",
+      "## Framework initializer hook",
+      "## Start and check the isolated stack",
+      "## Fixtures and query observation",
+      "## Browser procedure and touch input",
+      "## Integrated check, shutdown and continuation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/VALIDATION.md",
+    "sha256": "eda09cfa91041a9c99559b0dde912900f19b1fdf7f171426349fd1cd8ee65c1b",
+    "lines": 1623,
+    "headings": [
+      "# Phase 1 validation matrix",
+      "## RETEST-L7-1 independent completion",
+      "## FIX-L7-1 author correction",
+      "## L7 regression and load verdict",
+      "## V6 independent touch and responsive verdict",
+      "## L6 author touch delivery \u2014 16 October 2026",
+      "## V5 independent desktop verification \u2014 16 October 2026",
+      "## L5 author delivery \u2014 16 October 2026",
+      "## RETEST-V4-1 independent completion",
+      "## FIX-V4-1 author correction observations",
+      "## V4 independent session observations",
+      "## RETEST-V3-1 independent closure",
+      "## FIX-V3-1 author correction observations",
+      "## V3 independent search observations",
+      "## L3 author search checkpoint",
+      "## FIX-L3-1 author correction",
+      "## RETEST-L3-1 independent observations",
+      "## Verdict and reading rules",
+      "## L1 author observations",
+      "## L2-UI author observations",
+      "## V2-UI independent observations",
+      "## L1-META author observations",
+      "## FIX-L1-META-1 author observations",
+      "## RETEST-L1-META-1 independent observations",
+      "## FIX-L1-META-2 author observations",
+      "## RETEST-L1-META-2 independent observations",
+      "## Package ownership key",
+      "## Functional requirements",
+      "### ARC requirements",
+      "### API requirements",
+      "### NAV requirements",
+      "### UI requirements",
+      "### ACT requirements",
+      "### REC requirements",
+      "### SEA requirements",
+      "### STA requirements",
+      "### DRA requirements",
+      "### TAB requirements",
+      "### QUA requirements",
+      "## Dependency requirements",
+      "## Validation protocol requirements",
+      "## T01\u2013T27 execution matrix",
+      "## SQL additional cases",
+      "### SQL-01: Direct and deep scalar paths",
+      "### SQL-02: Object and representative values",
+      "### SQL-03: Shared prefix and overlapping projections",
+      "### SQL-04: Criteria outside projection",
+      "### SQL-05: Null, absence and empty results",
+      "### SQL-06: Aliases, identifiers and invalid input",
+      "### SQL-07: Final-property conversion",
+      "### SQL-08: Stable sorting, count and pages",
+      "### SQL-09: Plural projection policy",
+      "### SQL-10: Plural criteria",
+      "### SQL-11: Compatibility and configured bindings",
+      "### SQL-12: Bounded reads and visible-row reload",
+      "### SQL-13: Object criteria and errors",
+      "### SQL-14: Independent SQL and browser linkage",
+      "## META additional cases",
+      "### META-01: Relation facts and typed traversal",
+      "### META-02: Permission and presentation",
+      "### META-03: Path ambiguity and cycles",
+      "### META-04: Invalidated catalogue",
+      "## PORT additional cases",
+      "### PORT-01: Standalone contract and presentation",
+      "### PORT-02: Intent identity and disposal",
+      "### PORT-03: Lazy budgets and errors",
+      "### PORT-04: Table contract substitutions",
+      "### PORT-05: Labels, advice and defaults",
+      "### PORT-06: Search rank and focus",
+      "### PORT-07: Canonical key and isolation",
+      "### PORT-08: State sequencing and expiry",
+      "### PORT-09: Storage and preview failures",
+      "### PORT-10: Public build and architecture",
+      "## PANE additional cases",
+      "### PANE-01: Empty and folded state",
+      "### PANE-02: Opened command and desktop layout",
+      "### PANE-03: Occupancy and restoration tokens",
+      "### PANE-04: Focus and mobile modal region",
+      "### PANE-05: Header control and click flow",
+      "### PANE-06: Responsive presentation",
+      "## LIFE additional cases",
+      "### LIFE-01: Activation",
+      "### LIFE-02: Navigation during operations",
+      "### LIFE-03: Existing list behaviour",
+      "## Stage obligations",
+      "## Browser itinerary and fixture readiness",
+      "## Remaining limits",
+      "## L2-HOME author observations",
+      "## Independent V2-HOME result",
+      "## L2-LIST author observations",
+      "## V2 independent integrated observations",
+      "## L4 author session and suggestions observations"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L5.md",
+    "sha256": "612c9e8e172f5137dcdba11b9bbbeb55c095cbddb6cb20aa4670faa825b1a46e",
+    "lines": 167,
+    "headings": [
+      "# L5 \u2014 Desktop external drag and rollback",
+      "## Verdict and prerequisites",
+      "## Delivery and ownership",
+      "## Checkpoints",
+      "## Expected and observed results",
+      "## Commands and reproducibility",
+      "## Diagnostic history and limitations",
+      "## Local handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L1-META.md",
+    "sha256": "635bf7187e3caa96ec0b49ae02a4df3878c46b73cb20a861957cf49f9e28f562",
+    "lines": 146,
+    "headings": [
+      "# L1-META authorised framework metadata",
+      "## Verdict and checkpoints",
+      "## Delivered contracts",
+      "## Executed validation",
+      "## Reproducible defect and correction handover",
+      "## Environment, ownership and SOLID"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V2.md",
+    "sha256": "aa02c587e8633ce626414e18a9d5380ecd7e650c7c0b6a444efae7008a8c7ad5",
+    "lines": 141,
+    "headings": [
+      "# Independent integrated click and data verification",
+      "## Verdict and checkpoints",
+      "## Independent execution and observations",
+      "## Commands and resource ownership",
+      "## SOLID, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-V3-1.md",
+    "sha256": "4a6bf8e195d1e6b729e5f2c2d94639f89cdbaa090e93c5dc8bc306231e088bca",
+    "lines": 100,
+    "headings": [
+      "# Independent navigation and search focus retest",
+      "## Verdict and checkpoints",
+      "## Fresh independent observations",
+      "## Supplementary replay and build",
+      "## Execution, review and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V2-UI.md",
+    "sha256": "591428bc6be56a129309deec2c98148adac292c9a43a8fb71fe78922478e7f10",
+    "lines": 106,
+    "headings": [
+      "# V2-UI independent standalone verification",
+      "## Verdict and checkpoints",
+      "## Independent assertions and observations",
+      "## Commands, ownership and diagnostics",
+      "## SOLID, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/VSQL.md",
+    "sha256": "0bcf1f93fb8fceb2f0b81bf7a6fb93ecc6756f9f1c35ce18f69f0140e1b17a1a",
+    "lines": 117,
+    "headings": [
+      "# VSQL independent database verification",
+      "## Verdict and checkpoints",
+      "## Independent oracle and execution",
+      "## Observed acceptance",
+      "## Delivery, SOLID and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-L1-META-2.md",
+    "sha256": "adba31c3a11134eb6903b36d3e7052600f6adbb23987101ec9ab024e86ae14f8",
+    "lines": 138,
+    "headings": [
+      "# RETEST-L1-META-2 independent recovery verification",
+      "## Verdict and checkpoints",
+      "## Fresh observations",
+      "## Reproduction and diagnostics",
+      "## Environment, ownership and cleanup",
+      "## Ownership, limits and preservation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/P04.md",
+    "sha256": "db20330dd33387f715787940079b3d1adb3e5210234ceaa0581b2b1eee8a9724",
+    "lines": 99,
+    "headings": [
+      "# P04 independent plan review",
+      "## Verdict and scope",
+      "## Repaired findings",
+      "## Coverage and architectural judgement",
+      "## Executed checks and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-V4-1.md",
+    "sha256": "34875a2f75a7d6416603393a703174e155df96980763f663b82ab984c99b0e92",
+    "lines": 124,
+    "headings": [
+      "# Preserve ended-session responses through autosave",
+      "## Verdict and checkpoints",
+      "## Correction and regression",
+      "## Fresh observations",
+      "## Reproduction, resources and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S02.md",
+    "sha256": "9a4f81ddc0a578acc386c43b6d0bdbeb182134f3dccc52d00511231e9fef38c3",
+    "lines": 96,
+    "headings": [
+      "# S02 neutral storage projection contract",
+      "## Verdict and checkpoints",
+      "## Delivered public contract",
+      "## Executed checks",
+      "## Adapter scan and scope limits",
+      "## SOLID and preservation review"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V6.md",
+    "sha256": "4664c743419b8c4ec5626d878c8c37767ebf9c7619b3ec0bb1657b66422f428c",
+    "lines": 130,
+    "headings": [
+      "# V6 \u2014 Independent touch and responsive check",
+      "## Verdict and checkpoints",
+      "## Independent evidence",
+      "## Reproduction and environment",
+      "## Ownership and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S06.md",
+    "sha256": "3653dafab786e11aaec31cd6c9a37119f372e1689b60ca9f03adf68bfa6ba11c",
+    "lines": 102,
+    "headings": [
+      "# S06 projection and criteria SQL builder",
+      "## Verdict and checkpoints",
+      "## Delivered public contract",
+      "## Executed validation",
+      "## SOLID, limits and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L1.md",
+    "sha256": "6f466b551d043da3859ae5c6346b60f1a4bb6ceb2ee6ec2e8ea54c725f080982",
+    "lines": 91,
+    "headings": [
+      "# L1 generic controller delivery",
+      "## Verdict and checkpoints",
+      "## Implementation and behavioural evidence",
+      "## Executed checks",
+      "## SOLID, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-L1-META-2.md",
+    "sha256": "481a5c12912ad8175eec1a645aa5a6679812ba62ccd31abb1baee15d453db37c",
+    "lines": 121,
+    "headings": [
+      "# FIX-L1-META-2 explicit empty column saves",
+      "## Status and checkpoints",
+      "## Correction and oracle",
+      "## Executed checks and reproduction",
+      "## Environment and cleanup",
+      "## SOLID, preservation and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-V2-TABLE-1.md",
+    "sha256": "f57797310a4e23aa5846da99039684fb26e67b5fc6b8053fc20313175f81f59e",
+    "lines": 133,
+    "headings": [
+      "# Reveal columns between frozen table edges",
+      "## Verdict and checkpoints",
+      "## Correction and contract review",
+      "## Final validation",
+      "## Reproduction and service ownership",
+      "## Handover and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-L7-1.md",
+    "sha256": "486099d04f8c54fa13c0a436382a7991e888c7cf7a96e1b695980bead1ea1c78",
+    "lines": 135,
+    "headings": [
+      "# RETEST-L7-1: Independent correction and regression verification",
+      "## Verdict and checkpoints",
+      "## Independent observations",
+      "## Commands, services and preservation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/P03.md",
+    "sha256": "6419eda8c9acfe7917a94b1af76dff545b92e664b309547040c25f8122256890",
+    "lines": 78,
+    "headings": [
+      "# P03 contracts and plan report",
+      "## Result and scope",
+      "## Contracts and sequencing",
+      "## Planning verification",
+      "## Limits and next task"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S04.md",
+    "sha256": "c01a1057bd7c3997e2ef9004ef9646965ddf3907a0566e539a70c6764154c690",
+    "lines": 89,
+    "headings": [
+      "# S04 metadata property paths",
+      "## Verdict and checkpoints",
+      "## Delivered contract and observations",
+      "## Executed checks",
+      "## Ownership and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S07.md",
+    "sha256": "4ea4a98e5ba34896db7b116d4ec229da44d876680e818a9c7ae9f165ba9e9d51",
+    "lines": 124,
+    "headings": [
+      "# S07 MySQL execution and typed reconstruction",
+      "## Verdict and checkpoints",
+      "## Implementation and ownership",
+      "## Executed validation",
+      "## Reproducible environment and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L4.md",
+    "sha256": "0967b5c95e18f1fbf323ca47ecefb409ef0f1a44bbbc72cf49170f3c920ee4e4",
+    "lines": 117,
+    "headings": [
+      "# L4 \u2014 Selector suggestions and session restoration",
+      "## Verdict and checkpoints",
+      "## Delivered responsibilities",
+      "## Expected and observed acceptance",
+      "## Builds, commands and public surface",
+      "## Corrections found during author checks and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L3.md",
+    "sha256": "9bf7b05d083be677d383e16e3576be5d5de380f66603a64f58080373ee032609",
+    "lines": 108,
+    "headings": [
+      "# Bounded descendant search delivery and metadata diagnostic",
+      "## Verdict and checkpoints",
+      "## Implementation and author observations",
+      "## Executed validation and defect",
+      "## Resources, SOLID and preservation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-V3-1.md",
+    "sha256": "a7e751c93acb52b961eb4383de6b01bfee0125338b12ad1cc4c25a8d94aea8f2",
+    "lines": 103,
+    "headings": [
+      "# Complete ordinary navigation after focused results",
+      "## Verdict and checkpoints",
+      "## Correction and boundaries",
+      "## Executed validation",
+      "## Resources, execution adjustments and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L6.md",
+    "sha256": "c9f926a61ec7dec0564bd3860133344708f789e2101dc802b18372bcb7dce431",
+    "lines": 142,
+    "headings": [
+      "# L6 \u2014 Touch gesture arbitration and responsive completion",
+      "## Verdict and checkpoints",
+      "## Implementation and contracts",
+      "## Validation",
+      "## Reproduction and diagnostics"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-L1-META-1.md",
+    "sha256": "070d09887729c7a07a2e4b0abe31659450a317256abe6994a44abf0deeb43c80",
+    "lines": 152,
+    "headings": [
+      "# RETEST-L1-META-1 independent metadata and list recovery gate",
+      "## Verdict and checkpoints",
+      "## Independent observations",
+      "## Blocking defect and baseline classification",
+      "## Reproduction, environment and ownership",
+      "## Ownership, limits and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-V2-TABLE-1.md",
+    "sha256": "34fef9d849c5925eb8db4609e12a8a2ec1434f28eeb7fb79acba119a1da365f5",
+    "lines": 140,
+    "headings": [
+      "# Independent frozen column reveal retest",
+      "## Verdict and tested checkpoints",
+      "## Independent observations",
+      "## Builds and public delivery checks",
+      "## Ownership, preservation and scope"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-V4-1.md",
+    "sha256": "d49a8d9ed4d4c3cc3a89b7931a472424a3d131d6718a009672e21557ffc0e8d8",
+    "lines": 119,
+    "headings": [
+      "# Independent session and suggestions acceptance",
+      "## Verdict and checkpoints",
+      "## Fresh acceptance evidence",
+      "## Builds, public surface and boundaries",
+      "## Reproduction and environment"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V2-TABLE.md",
+    "sha256": "9cd39368cb2f5e9dded8d8d098255d80e6e24b7370e84fbdd4de80374b5b4071",
+    "lines": 119,
+    "headings": [
+      "# Independent generic table validation",
+      "## Verdict and checkpoints",
+      "## Results and evidence",
+      "## Reproduction and service ownership",
+      "## Ownership, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-L7-1.md",
+    "sha256": "d211cfc808f422dadcb1446a596dc035dc014fbde5edad4d251af4a6d2a5fe4c",
+    "lines": 112,
+    "headings": [
+      "# FIX-L7-1: Declare dependencies and retain recoverable errors",
+      "## Verdict and checkpoints",
+      "## Corrections and regression proof",
+      "## Validation",
+      "## Reproduction and service ownership"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-L1-META-1.md",
+    "sha256": "02ca61299241b5c9e1003e860b16765340b77901629646d7195c0a68cc280303",
+    "lines": 119,
+    "headings": [
+      "# FIX-L1-META-1 default list pagination",
+      "## Status and checkpoints",
+      "## Change and regression coverage",
+      "## Executed validation",
+      "## Environment and ownership",
+      "## Review, limits and handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L7.md",
+    "sha256": "4467e36d312d71fd8860a2702740586e1f74a732fa1b1b858fb96b400c59a33d",
+    "lines": 116,
+    "headings": [
+      "# L7: Cross-module regression and load coverage",
+      "## Verdict and checkpoints",
+      "## Results and ownership",
+      "## Reproduction and evidence"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L2-HOME.md",
+    "sha256": "f3ba57c501541e7c95d534dc46c2b898a43c3e47084e9c50d4d55fb2cb852aa4",
+    "lines": 118,
+    "headings": [
+      "# L2-HOME generic right pane",
+      "## Verdict and checkpoints",
+      "## Product contract and review",
+      "## Validation and evidence",
+      "## Isolated fixture and process ownership",
+      "## Preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V3.md",
+    "sha256": "2723f07076e3b3ed0ad3db70df9ec5ea96f18e86c4097077d80ad7e96bba8f9c",
+    "lines": 103,
+    "headings": [
+      "# Independent search and navigation verification",
+      "## Verdict and checkpoints",
+      "## Independent observations",
+      "## Commands, resources and review"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S05.md",
+    "sha256": "b254df573e1f1a5910b955863352f50f2bff1ad5387c09593cc6e4f21b1cc0c4",
+    "lines": 113,
+    "headings": [
+      "# S05 shared relationship graph",
+      "## Verdict and checkpoints",
+      "## Delivered contract",
+      "## Executed validation",
+      "## SOLID, limits and next consumer"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/S03.md",
+    "sha256": "0ed1c9123f3f624d36a9cc6f22d99b96121fdec29c0484ad2c9b3357b19ff3d6",
+    "lines": 87,
+    "headings": [
+      "# S03 reflection relation facts",
+      "## Verdict and checkpoints",
+      "## Delivered facts",
+      "## Executed checks",
+      "## Ownership and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L2-UI.md",
+    "sha256": "0fb95262f037bcd3798ebe844f01a2d4bdc6cc91b9cbb7923ce85600787c0935",
+    "lines": 119,
+    "headings": [
+      "# L2-UI standalone browser surface",
+      "## Verdict and checkpoints",
+      "## Delivered behaviour",
+      "## Executed validation",
+      "## Reproduction and process ownership",
+      "## SOLID, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/FIX-L3-1.md",
+    "sha256": "f810dd10140c77f22884c77eb21a96e9098158015acdefdd11caa9cab4305d92",
+    "lines": 130,
+    "headings": [
+      "# Native Date metadata correction",
+      "## Verdict and checkpoints",
+      "## Correction and boundary review",
+      "## Executed validation",
+      "## Resources, permissions and preservation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/RETEST-L3-1.md",
+    "sha256": "09b81d1d56096b1e717da4aecce776fee07828db8a9d9c1b843f9c05fe8938ea",
+    "lines": 130,
+    "headings": [
+      "# Independent scalar metadata and search retest",
+      "## Verdict and checkpoints",
+      "## Independent observations",
+      "## Commands and supplementary regression",
+      "## Resources, review and preservation"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V5.md",
+    "sha256": "7b448138c53cbcf512830563981bfa1d2c41e8e7b0a6cb7a97366c703f5375fc",
+    "lines": 132,
+    "headings": [
+      "# V5 \u2014 Independent desktop drag verification",
+      "## Verdict and checkpoints",
+      "## Independent results",
+      "## Reproduction and environment",
+      "## Diagnostic limits and architecture"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V4.md",
+    "sha256": "36e6813a2ce34fab84db86fe727a3325a00466f9c4cffe8fac3bf0d78a9b368d",
+    "lines": 96,
+    "headings": [
+      "# Independent session and suggestions verification",
+      "## Verdict and checkpoints",
+      "## Independent observations",
+      "## Commands, resources and review"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L2-LIST.md",
+    "sha256": "fea1cbb967f5834a872a6af2ef71343a79284f65817857cb9e1f31f8cf444084",
+    "lines": 155,
+    "headings": [
+      "# L2-LIST projected lists and click integration",
+      "## Verdict",
+      "## Checkpoints and ownership",
+      "## Implemented contracts",
+      "## Validation and evidence",
+      "## SOLID and public boundary review",
+      "## Reproduction and V2 handover"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/V2-HOME.md",
+    "sha256": "ce942d5689631513034bc0fa6ebf395abc2c99d83f32fe96c8293fe78f69123f",
+    "lines": 112,
+    "headings": [
+      "# Independent generic pane verification",
+      "## Verdict and checkpoints",
+      "## Independent browser observations",
+      "## Commands and resource ownership",
+      "## Boundaries, preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/reports/L2-TABLE.md",
+    "sha256": "82a356ba3cf9f4537df68953f9481e1fd8e087f1dad9082c90ad0a055fbdf755",
+    "lines": 140,
+    "headings": [
+      "# Generic table column addition",
+      "## Verdict and checkpoints",
+      "## Public contract and ownership",
+      "## Checks and evidence",
+      "## Reproduction and live fixture",
+      "## Preservation and limits"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/L7-02.md",
+    "sha256": "e07444f15f57031cc4835f484d68fe65a19f576850fc646542fef44c454dc8be",
+    "lines": 49,
+    "headings": [
+      "# L7-02: Scroll persistence clears a recoverable selection error",
+      "## Reproducer and evidence",
+      "## Diagnosis and correction boundary",
+      "## Author correction",
+      "## Independent closure"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/V3-01.md",
+    "sha256": "d9f67e1d4873d2415e25ee5bba5ede7ac78ff4ccbab5880837598e6e101f8241",
+    "lines": 66,
+    "headings": [
+      "# V3-01: Focus retention hides a property after ordinary navigation",
+      "## Reproduction",
+      "## Evidence and cause",
+      "## Required correction and independent retest",
+      "## Correction author checkpoint",
+      "## Independent closure"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/L7-01.md",
+    "sha256": "597da89503ef4bb6ed43e4d30eef3bb90e426259392e48aef0b42e114d90168d",
+    "lines": 38,
+    "headings": [
+      "# L7-01: List runtime dependencies are undeclared",
+      "## Reproducer and evidence",
+      "## Author correction",
+      "## Independent closure"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/L3-01.md",
+    "sha256": "3aeb6fae448df1972f467d0dc71f833ec50fba7480cf94f1f7819de9a9161c82",
+    "lines": 71,
+    "headings": [
+      "# L3-01: Scalar Date is explored as a domain relation",
+      "## Reproducer and checkpoints",
+      "## Diagnosis and required correction",
+      "## Author correction checkpoint",
+      "## Independent resolution"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/V4-01.md",
+    "sha256": "0f71b16c226da1d46d41c83fcd4bec8011de44e800182f75eeaab99d49fcd608",
+    "lines": 64,
+    "headings": [
+      "# V4-01: Expired request autosave replaces the documented session response",
+      "## Status and impact",
+      "## Independent reproduction",
+      "## Required correction and independent retest"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/orchestration/defects/V2-TABLE-1.md",
+    "sha256": "dcc30f827ecadfeebbeb7fa365f930489c6d858fe8f2bc6ac6bb1293e996103b",
+    "lines": 66,
+    "headings": [
+      "# V2-TABLE-1: Revealed column remains behind frozen cells",
+      "## Status and owner",
+      "## Minimal reproduction",
+      "## Diagnosis and acceptance for correction",
+      "## Correction checkpoint",
+      "## Independent closure"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/validation.md",
+    "sha256": "8de643d5ac9cfb8d18d63edc53ae524b9aa12c106124c0c7b840b2f32c574a75",
+    "lines": 182,
+    "headings": [
+      "# Validation et livraison autonome de la phase 1",
+      "## 1. Pr\u00e9parer une recette r\u00e9ellement ex\u00e9cutable",
+      "## 2. Planifier les contr\u00f4les avant l\u2019impl\u00e9mentation",
+      "## 3. Deux environnements fonctionnels obligatoires",
+      "## 4. Contr\u00f4les navigateur progressifs",
+      "## 5. Preuves et d\u00e9cisions de validation",
+      "## 6. Corrections autonomes et nouvelle v\u00e9rification",
+      "## 7. Recette finale et remise en \u00e9tat de livraison"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/it-rocks-selecteur-relationnel-specifications.md",
+    "sha256": "3a24fe835838fc2bcc0b55abbafb1e7fbca0f99dc21d6e596fc0227c0cab746c",
+    "lines": 738,
+    "headings": [
+      "# S\u00e9lecteur relationnel de propri\u00e9t\u00e9s pour `@itrocks/property-select`",
+      "## 0. Lecture et r\u00e8gles de r\u00e9alisation",
+      "## 1. Objectif, p\u00e9rim\u00e8tre et architecture",
+      "### 1.1 Objectif",
+      "### 1.2 Fronti\u00e8re de responsabilit\u00e9",
+      "### 1.3 Hors p\u00e9rim\u00e8tre",
+      "## 2. Chemins, contrats et \u00e9tat de navigation",
+      "### 2.1 Identit\u00e9 et contrats minimaux",
+      "### 2.2 Branche m\u00e9moris\u00e9e et position courante",
+      "## 3. Pr\u00e9sentation et actions",
+      "### 3.1 Implantation",
+      "### 3.2 Zones de clic",
+      "## 4. Acc\u00e8s rapides : r\u00e9cents, chemins utilis\u00e9s et conseils",
+      "## 5. Recherche de propri\u00e9t\u00e9s",
+      "### 5.1 P\u00e9rim\u00e8tre V1 et correspondance",
+      "### 5.2 R\u00e9sultats et interactions",
+      "### 5.3 Exploration born\u00e9e et cycles",
+      "## 6. Conservation pendant la session",
+      "## 7. Glisser-d\u00e9poser : geste commun et transitions mobiles",
+      "### 7.1 Source g\u00e9n\u00e9rique et reconnaissance",
+      "### 7.2 Cycle de vie",
+      "## 8. Int\u00e9gration au tableau",
+      "### 8.1 S\u00e9lection par clic et doublons",
+      "### 8.2 Aper\u00e7u r\u00e9el pendant le drag",
+      "### 8.3 Robustesse et limites de l'int\u00e9gration",
+      "## 9. Crit\u00e8res d'acceptation et recette",
+      "## 10. Phase 2 : hors du d\u00e9veloppement actuel",
+      "### P2-A. \u00c9largissement de recherche",
+      "### P2-B. R\u00e9glages d'affichage",
+      "### P2-C. M\u00e9tadonn\u00e9es enrichies",
+      "## 11. D\u00e9coupage et ex\u00e9cution par agents en contexte neuf",
+      "### 11.1 Pr\u00e9paration dans le d\u00e9p\u00f4t",
+      "### 11.2 Pr\u00e9-d\u00e9coupage indicatif",
+      "### 11.3 Contenu d'une fiche de t\u00e2che",
+      "### 11.4 R\u00e8gles pour l'orchestrateur",
+      "## 12. Prompt de pr\u00e9paration \u00e0 donner \u00e0 Codex",
+      "## Annexe : r\u00e9f\u00e9rences techniques"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/select.md",
+    "sha256": "f38218dac4c62a7576c008f0e0f17a250573d8392ab75e5d2e3ae923c332217d",
+    "lines": 167,
+    "headings": [
+      "# S\u00e9lection de donn\u00e9es par chemins de propri\u00e9t\u00e9s",
+      "## 1. Contrat et responsabilit\u00e9s",
+      "## 2. Comportements requis pour la phase 1",
+      "## 3. Points de d\u00e9part TypeScript constat\u00e9s",
+      "## 4. R\u00e9f\u00e9rence PHP dans `../boust`",
+      "## 5. Sous-t\u00e2ches et validations obligatoires"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/itrocks-property-select-prompt-orchestrateur.md",
+    "sha256": "06bb674aaa2c177b1c6794ff5ba16010f78c9002b9ca0d8377ae270218bd2517",
+    "lines": 233,
+    "headings": [
+      "# Orchestration du d\u00e9veloppement de `@itrocks/property-select`",
+      "## 1. R\u00f4le, autonomie et \u00e9tat initial",
+      "## 2. Ex\u00e9cution strictement successive",
+      "## 3. Calibrage des sous-t\u00e2ches",
+      "## 4. Pr\u00e9paration : quatre sous-t\u00e2ches successives",
+      "### 4.1 Audit : `gpt-6.1-sol` / `medium`",
+      "### 4.2 Environnement : `gpt-6.1-sol` / `medium`",
+      "### 4.3 Contrats et plan : profil `high` selon la section 3",
+      "### 4.4 Revue ind\u00e9pendante du plan : profil `high` selon la section 3",
+      "## 5. R\u00e9alisation, v\u00e9rification et corrections",
+      "## 6. Commits, versions et \u00e9tat de travail",
+      "## 7. Retours, reprise et cl\u00f4ture"
+    ]
+  },
+  {
+    "path": "node_modules/@itrocks/property-select/docs/dependencies.md",
+    "sha256": "76a5598ab1f1cb7d36ad2e2e48125508462664ebba9a5c674a0d4ab38dfbe8df",
+    "lines": 323,
+    "headings": [
+      "# D\u00e9pendances et contrats d\u2019int\u00e9gration de `@itrocks/property-select`",
+      "## 1. Fronti\u00e8re du s\u00e9lecteur",
+      "## 2. Propri\u00e9taires et sens des d\u00e9pendances",
+      "## 3. Ports du s\u00e9lecteur \u00e0 stabiliser",
+      "### 3.1 M\u00e9tadonn\u00e9es et r\u00e9solution des chemins",
+      "### 3.2 Consommateur et interaction source",
+      "### 3.3 Stockage d\u2019\u00e9tat de session",
+      "### 3.4 Pr\u00e9sentation et suggestions m\u00e9tier",
+      "## 4. Contrats des modules h\u00f4tes",
+      "### 4.1 Ajout de colonnes dans `table`",
+      "### 4.2 Adaptateur m\u00e9tier dans `list`",
+      "### 4.3 Volet droit standard dans `home`",
+      "### 4.4 S\u00e9lection de donn\u00e9es par chemins",
+      "## 5. Composition par le framework et usage autonome",
+      "## 6. Autres modules utiles et points constat\u00e9s",
+      "## 7. Prise en compte obligatoire dans le plan"
+    ]
+  }
+]

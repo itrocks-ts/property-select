@@ -1,0 +1,40 @@
+[
+	{
+		"args": [
+			"/usr/bin/node",
+			"/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+			"--ps-environment=/tmp/property-select/V7-integration",
+			"--ps-port=13829",
+			"--ps-token=6ea98996-01ef-4677-a3e0-44df019b08d5"
+		],
+		"boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+		"executable": "/usr/bin/node",
+		"start": "153105148",
+		"state": "R",
+		"uid": 1000,
+		"directory": "/tmp/property-select/V7-integration",
+		"name": "app",
+		"pid": 2599524,
+		"port": 13829,
+		"token": "6ea98996-01ef-4677-a3e0-44df019b08d5"
+	},
+	{
+		"args": [
+			"/usr/bin/node",
+			"/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+			"--ps-environment=/tmp/property-select/V7-integration",
+			"--ps-port=13830",
+			"--ps-token=3a1fdcbe-b311-4c13-8439-881fc2f15db1"
+		],
+		"boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+		"executable": "/usr/bin/node",
+		"start": "153105152",
+		"state": "R",
+		"uid": 1000,
+		"directory": "/tmp/property-select/V7-integration",
+		"name": "standalone",
+		"pid": 2599543,
+		"port": 13830,
+		"token": "3a1fdcbe-b311-4c13-8439-881fc2f15db1"
+	}
+]

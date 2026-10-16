@@ -1,10 +1,35 @@
 # Phase 1 validation matrix
 
+## V7 independent final acceptance
+
+**NEEDS_FIX**, 16 October 2026. [Report](reports/V7.md), [fresh final-case inventory](evidence/V7/coverage.json).
+Selector base `6909c625` / 0.7.4, unchanged runtime 0.7.3; tracking/tests patch **0.7.5**.
+This section is the current final-gate verdict; historical stage passes below remain historical.
+
+- **FAIL T16 / STA-03 / DEP-05 / PORT-08–09 / QUA-01 — [V7-01](defects/V7-01.md):**
+  [eight fresh browser scenarios](evidence/V7/session-regression/results.json), revoke and expiry at all four sizes,
+  receive HTTP 410 but hide the supplied session-ended/reload guidance. Retry returns 410 again. Query/columns remain
+  intact and stale state is not resurrected. The focused reproducer also retains unclassified network failures;
+  no global health PASS is claimed. The [initial V4 replay](evidence/V7/state-integrated/results.json) also fails.
+- **PASS completed observations:** standalone UI 116, generic pane 147, table itinerary 182 and geometry 2,362,
+  integrated data/clicks 261, search 138, focus/rank 379, bounds 21 and initial state 84 assertions.
+  [SQL](evidence/V7/sql/results.json): 14 groups, 1,390 observations, 110 statements; independent 137-root seed.
+  [Builds](evidence/V7/build/results.json), [foundation builds/tests](evidence/V7/foundations/results.json),
+  [imports](evidence/V7/imports/imports-independent.json) and [source/preservation review](evidence/V7/review/results.json)
+  pass. Report links identify every observation and command.
+- **NOT_RUN final portions:** extended state races/standalone recovery/contracts, desktop transport, V6 touch
+  movement/cancellation/hybrid/rotation, interruption, load/error and complete-entity scope replays.
+  Partial phone taps and historical V6 proof do not accept the final touch gate. Composite rows stay NOT_RUN as
+  recorded in the inventory, including SQL-12's final drag-preview portion.
+
+`FIX-V7-1` must preserve generic persistence recovery information and L7 operation errors. A distinct `RETEST-V7-1`
+must reproduce recovery and complete the entire final matrix on corrected checkpoints. **D8 is blocked**.
+
 ## RETEST-L7-1 independent completion
 
 **DONE / independent PASS**, 16 October 2026. [Report](reports/RETEST-L7-1.md), runtime selector **0.7.3**,
 tracking/tests **0.7.4**, list **0.12.1**. L7-01 and L7-02 are **CLOSED**; all L7 obligations pass.
-Historical L7 failure evidence is retained. V7's prerequisite is cleared; V7 and D8 remain unexecuted.
+Historical L7 failure evidence is retained. V7 subsequently fails on V7-01 above; D8 remains unexecuted.
 
 - DEP-02/PORT-10: [new AST audit](evidence/RETEST-L7-1/imports-independent.json), 287 assertions over 208 runtime
   imports, plus the [delivered audit](evidence/RETEST-L7-1/architecture.json): direct declarations, public entries,

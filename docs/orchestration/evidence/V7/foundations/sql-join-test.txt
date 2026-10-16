@@ -1,0 +1,44 @@
+
+> @itrocks/sql-join@0.2.0 test
+> npm run test:types && tsx --test --test-isolation=none test/sql-join.test.ts && npm run build && node --test --test-isolation=none test/property-select.test.mjs
+
+
+> @itrocks/sql-join@0.2.0 test:types
+> tsc --ignoreConfig --module nodenext --noEmit --types node test/*.test.ts
+
+✔ renders explicit joins, operators and qualified references with safe identifiers (1.318202ms)
+✔ remembers scalar column paths without creating joins (0.662529ms)
+✔ creates object joins recursively and keeps optional descendants left joined (1.127836ms)
+✔ creates a one-to-many join through its right column definition (0.298128ms)
+✔ is idempotent and accepts a manually constructed join (0.256934ms)
+✔ reports incomplete relationship definitions (0.547816ms)
+✔ renders subqueries without importing a query builder (0.230942ms)
+✔ allows dependency adapters to resolve arbitrary definitions and physical column names (0.607518ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 141.360258
+
+> @itrocks/sql-join@0.2.0 build
+> tsc
+
+✔ deterministic registration shares prefixes and keeps paths to the same type distinct (2.413147ms)
+✔ an optional ancestor forces every required descendant to remain left joined (0.861941ms)
+✔ plural inverse facts retain physical columns and accumulated multiplicity (0.266043ms)
+✔ nested plural branches and finite cycles retain full paths and inherited multiplicity (0.230358ms)
+✔ invalid paths and traversal through terminal properties fail before rendering (1.448917ms)
+✔ manual aliases reject duplicates and generated aliases skip reserved aliases (0.743891ms)
+✔ physical N-N edges expose both steps and support escaped names and alternate adapters (0.30001ms)
+✔ unknown multiplicity remains explicit and malformed physical mappings reject (0.296064ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 30.042144

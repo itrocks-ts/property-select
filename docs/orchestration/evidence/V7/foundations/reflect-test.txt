@@ -1,0 +1,17 @@
+✔ ambiguous and unresolved declarations retain uncertainty (171.554634ms)
+✔ collection elements and optionality do not invent opposite-end cardinality (0.606538ms)
+✔ declarations and inherited defaults stay independent of record values (112.959498ms)
+✔ deferred type targets resolve when their metadata becomes available (0.616835ms)
+✔ explicit inverse and all known cardinalities survive unchanged (167.060562ms)
+✔ metadata defaults, inheritance and overrides use the public decorator convention (0.797946ms)
+✔ native dates are terminal while retaining nullable optional and collection type metadata (0.302462ms)
+✔ nullable singular targets and absent declarations keep separate facts (0.195687ms)
+✔ public import and require expose the additive API and legacy classes (152.431386ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 656.013321

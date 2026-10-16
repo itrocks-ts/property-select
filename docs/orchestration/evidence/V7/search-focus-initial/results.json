@@ -1,0 +1,764 @@
+{
+  "checks": [
+    {
+      "name": "standalone-1280: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: partial error",
+      "expected": "error",
+      "observed": "error",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: partial tags result survives",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: Clear restores idle",
+      "expected": "idle",
+      "observed": "idle",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: recovered exact rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: recovered no retention",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: normalised all words",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: segment scope",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: root query preserved",
+      "expected": " CÔDE  CLIENT pays ",
+      "observed": " CÔDE  CLIENT pays ",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: root row never retained in new scope",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: only destination results",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: second Clear complete",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-main-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: no duplicate paths",
+      "expected": 15,
+      "observed": 15,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-enrich: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: capture pending",
+      "expected": "loading",
+      "observed": "loading",
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: same focused node",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: no duplicate paths",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: exact ceiling",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: focused path retained",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: one retained marker",
+      "expected": 1,
+      "observed": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: final rank on blur",
+      "expected": [
+        "fast.name"
+      ],
+      "observed": [
+        "fast.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: retention released",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: new query has no old row",
+      "expected": [],
+      "observed": [],
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280-plus-budget: new query has no retained marker",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "standalone-1280: trusted final run",
+      "expected": true,
+      "observed": true,
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: ordinary rows",
+      "expected": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "observed": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "integrated-1280: ordinary retention absent",
+      "expected": 0,
+      "observed": 0,
+      "status": "PASS"
+    }
+  ],
+  "snapshots": [
+    {
+      "name": "standalone-1280-before",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "customer",
+        "lines",
+        "number",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "standalone-1280-ordinary-after",
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-1280-recovery-after",
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "standalone-1280-main-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "main:slow.name"
+    },
+    {
+      "name": "standalone-1280-plus-budget-focused",
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "slow.name"
+      ],
+      "query": "name",
+      "status": "limited",
+      "retained": 1,
+      "focus": "select:slow.name"
+    },
+    {
+      "name": "integrated-1280-before",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "active",
+        "amount",
+        "customer",
+        "deliveryAddress",
+        "issuedAt",
+        "lines",
+        "note",
+        "number",
+        "p0",
+        "tags"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    },
+    {
+      "name": "integrated-1280-ordinary-after",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0,
+      "focus": "main:tags.invoices"
+    },
+    {
+      "name": "failure",
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "rows": [
+        "tags.invoices",
+        "tags.name"
+      ],
+      "query": "",
+      "status": "idle",
+      "retained": 0
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "stdout": "",
+      "overrides": {
+        "PS_V7_FROM": "search",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "standalone",
+      "stdout": "",
+      "overrides": {
+        "PS_V7_FROM": "search",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "stop-standalone",
+      "stdout": "PASS: owned standalone 2604479 stopped\n",
+      "overrides": {
+        "PS_V7_FROM": "search",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    },
+    {
+      "action": "stop-app",
+      "stdout": "PASS: owned app 2604461 stopped\n",
+      "overrides": {
+        "PS_V7_FROM": "search",
+        "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus/",
+        "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+        "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V4_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/search-focus",
+        "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+        "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+        "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+        "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072",
+        "PS_APP_PORT": "13881",
+        "PS_STANDALONE_PORT": "13882",
+        "PS_ENV_DIRECTORY": "/tmp/property-select/V7-search-focus",
+        "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V3-initialise.cjs"
+      }
+    }
+  ],
+  "inputs": [
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?error",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture?focusLimit",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13882/search-fixture",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "label": "standalone-1280",
+      "events": [
+        {
+          "type": "input",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "keydown",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "input",
+          "trusted": true
+        }
+      ]
+    },
+    {
+      "url": "http://127.0.0.1:13881/property-select-invoice",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "events": [
+        {
+          "type": "click",
+          "trusted": true
+        },
+        {
+          "type": "click",
+          "trusted": true
+        }
+      ]
+    }
+  ],
+  "health": [],
+  "trace": [],
+  "metadata": [],
+  "checkpoint": "6909c625425c951dba7e79fd9b9b7b991c900e5c",
+  "version": "0.7.5",
+  "fixture": "Public search-graph and real synthetic invoice, no reset; mouse/keyboard at all dimensions",
+  "browser": "151.0.7922.34",
+  "status": "FAIL",
+  "error": "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ps-main[data-path=\"tags\"]') to be visible\u001b[22m\n\n    at open (/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-search-focus.mjs:68:101)\n    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-search-focus.mjs:143:4\n"
+}

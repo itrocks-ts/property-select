@@ -1,0 +1,108 @@
+{
+  "status": "FAIL",
+  "reason": "Twenty requestfailed events have no captured product AbortSignal in this focused reproducer; none is waived as expected. Attribution remains for independent retest.",
+  "requests": [
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "1280x720-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "768x900-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "390x844-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-revoke",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14071/property-select-invoice/list?columns=number,amount,customer.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "name": "844x390-expire",
+      "url": "http://127.0.0.1:14071/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "knownConsole": "16 deliberate HTTP410 messages; no page exceptions",
+  "semanticResult": "Eight missing recovery guidance failures remain established separately"
+}

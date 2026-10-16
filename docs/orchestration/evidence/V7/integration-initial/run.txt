@@ -1,0 +1,233 @@
+node:internal/modules/run_main:105
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: browser console/network health
++ actual - expected
+
++ [
++   {
++     kind: 'request',
++     mode: 'desktop',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'desktop',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'desktop',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'desktop',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city.country&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'narrow',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'narrow',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'narrow',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'narrow',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'portrait',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'portrait',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'portrait',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'landscape',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'landscape',
++     status: 200,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'landscape',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice'
++   },
++   {
++     kind: 'request',
++     mode: 'landscape',
++     status: undefined,
++     text: 'net::ERR_ABORTED',
++     url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice'
++   }
++ ]
+- []
+
+    at check (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-integration.mjs:52:9)
+    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-integration.mjs:393:2
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: [
+    {
+      mode: 'desktop',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'desktop',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'desktop',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'desktop',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city.country&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'narrow',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'narrow',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'narrow',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'narrow',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'portrait',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'portrait',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'portrait',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'landscape',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=amount&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'landscape',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=number&root=invoice',
+      status: 200,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'landscape',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/resolve/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    },
+    {
+      mode: 'landscape',
+      kind: 'request',
+      url: 'http://127.0.0.1:13829/property-select/context/json?path=customer.address.city&root=invoice',
+      status: undefined,
+      text: 'net::ERR_ABORTED'
+    }
+  ],
+  expected: [],
+  operator: 'deepStrictEqual'
+}
+
+Node.js v24.0.1

@@ -1,0 +1,3 @@
+
+> @itrocks/fastify@0.4.1 build
+> tsc

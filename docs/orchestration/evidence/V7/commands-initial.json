@@ -1,0 +1,171 @@
+[
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-build.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:35:44.524Z",
+    "finished": "2026-10-16T06:36:10.209Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build/run.txt",
+    "environment": {
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build/",
+      "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_V4_DIRECTORY": "/tmp/property-select/V7-build",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/build",
+      "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-architecture.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:36:10.211Z",
+    "finished": "2026-10-16T06:36:10.283Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture/run.txt",
+    "environment": {
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture/",
+      "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_V4_DIRECTORY": "/tmp/property-select/V7-architecture",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/architecture",
+      "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-imports.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:36:10.284Z",
+    "finished": "2026-10-16T06:36:10.441Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports/run.txt",
+    "environment": {
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports/",
+      "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_V4_DIRECTORY": "/tmp/property-select/V7-imports",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/imports",
+      "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-sql.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:36:10.442Z",
+    "finished": "2026-10-16T06:36:13.679Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql/run.txt",
+    "environment": {
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql/",
+      "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_V4_DIRECTORY": "/tmp/property-select/V7-sql",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/sql",
+      "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/.V7-ui.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:36:13.681Z",
+    "finished": "2026-10-16T06:36:22.106Z",
+    "status": 0,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui/run.txt",
+    "environment": {
+      "PS_L7_BUILD_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_L7_ARCHITECTURE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_VSQL_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui/",
+      "PS_VSQL_RAW": "/tmp/property-select/V7-sql",
+      "PS_V3_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_V4_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_V4_DIRECTORY": "/tmp/property-select/V7-ui",
+      "PS_V5_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_V5_SUPPORT_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_V6_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_L7_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_TABLE_OUTPUT": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/ui",
+      "PS_TABLE_URL": "http://127.0.0.1:14072/table-fixture",
+      "PS_PANE_URL": "http://127.0.0.1:14071/pane-fixture",
+      "PS_V5_SUPPORT_APP": "http://127.0.0.1:14071",
+      "PS_V5_SUPPORT_DEMO": "http://127.0.0.1:14072"
+    }
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "started": "2026-10-16T06:36:22.108Z",
+    "finished": "2026-10-16T06:36:22.147Z",
+    "status": 1,
+    "signal": null,
+    "log": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/V7/pane/status.txt",
+    "environment": {
+      "PS_ENV_DIRECTORY": "/tmp/property-select/V7-pane-owned",
+      "PS_APP_PORT": "14071",
+      "PS_STANDALONE_PORT": "14072",
+      "PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/home/fixture.cjs"
+    }
+  }
+]
