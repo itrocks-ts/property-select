@@ -1,0 +1,59 @@
+
+> @itrocks/property-select@0.7.1 test
+> npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs
+
+
+> @itrocks/property-select@0.7.1 build
+> tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs
+
+✔ T01: public CJS and browser facades agree; missing provider and invalid paths are explicit (9.201706ms)
+✔ T01: observer-only intentions receive unique canonical ids without implicit additions (0.928929ms)
+✔ T02: remembered branch survives ancestor, root, and descendant navigation with query and scroll (4.193498ms)
+✔ T03: divergent relation replaces only the suffix (0.906448ms)
+✔ T05 navigation: relation main opens; relation selection and terminal activation keep context/query (2.150253ms)
+✔ PORT-01: provider business ordering, label fallback and snapshot isolation (0.678875ms)
+✔ PORT-02: acknowledgements validate identity/path/status; only applied added changes recents (0.658302ms)
+✔ PORT-02: transport contract carries a stable intent with exactly one terminal call (0.842699ms)
+✔ PORT-02: disposal cancels transport/selections once and ignores late outcomes (1.350559ms)
+✔ PORT-02: out-of-order confirmations belong to their own attempt (0.7801ms)
+✔ PORT-03 navigation: stale metadata cannot replace the context or revive disposal (0.84404ms)
+✔ PORT-09 core: consumer rejection is recoverable and preserves context (0.527233ms)
+✔ PORT-02: reentrant disposal still sends exactly one terminal transport callback (0.265999ms)
+✔ PORT-02: disposal during metadata resolution never emits a selection or begins transport (0.246433ms)
+✔ PORT-02: source cancellation prevents late begin and permits the next drag (0.431641ms)
+✔ native tap never begins transport, including later horizontal movement (0.945093ms)
+✔ native hold never begins transport, including later horizontal movement (60.622011ms)
+✔ native vertical never begins transport, including later horizontal movement (0.301567ms)
+✔ native diagonal never begins transport, including later horizontal movement (0.301873ms)
+✔ native right zone never begins transport, including later horizontal movement (0.322545ms)
+✔ native breadcrumb never begins transport, including later horizontal movement (0.205428ms)
+✔ horizontal recognition has no timer and locks through vertical diagonals; one end and suppressed click (0.607391ms)
+✔ delayed begin cannot survive pointerup (0.364987ms)
+✔ delayed begin cannot survive pointercancel (0.252152ms)
+✔ delayed begin cannot survive second contact (0.266593ms)
+✔ delayed begin cannot survive dispose (0.217277ms)
+✔ implicit capture transfer is ignored, loss on surviving capture cancels exactly once (0.346151ms)
+✔ a new contact outside the selector is not swallowed after a cancelled drag (0.329937ms)
+✔ T09: all words normalise case/accents/spacing and match full labelled paths (20.139975ms)
+✔ T10: descendants only, navigation preserves the query and cache avoids reloading ancestors (6.924732ms)
+✔ T11/NAV-08: distinct paths, terminal/object activation and remembered prefixes (14.843734ms)
+✔ T12/PORT-03: obsolete queries and context ignore late abort-insensitive responses (1.765474ms)
+✔ T12: loading, empty, complete, error and limited are distinct; errors preserve usable context (1.113909ms)
+✔ T13: known N-1/N-N return once, 1-N/unknown/asymmetric inverse excluded; manual navigation remains (3.298484ms)
+✔ T13: incoming edges, sibling paths and distinct self relations (0.97776ms)
+✔ PORT-06: reversed provider arrivals preserve rank; local depth/name/business/path tie-breaking (50.933497ms)
+✔ T12/T26: large cyclic catalogue is bounded by contexts/depth/results and pending providers (9.447409ms)
+✔ T12: context replacement and disposal reject late search metadata (1.160344ms)
+✔ T04/T14/T15: maximal used branches, recent ancestors, exact shortcuts and confirmed additions (33.212509ms)
+✔ T16/T17: restore deep remembered branch, current/query/scroll and discard obsolete metadata (18.086275ms)
+✔ state conflicts reapply the newest local snapshot; storage failure retains state and retries (1.895558ms)
+✔ untrusted state versions, lengths and numeric coordinates are validated before restore (0.190481ms)
+✔ coalesced writes discard intermediate snapshots while an older durable acknowledgement is pending (1.723767ms)
+ℹ tests 43
+ℹ suites 0
+ℹ pass 43
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 293.725952

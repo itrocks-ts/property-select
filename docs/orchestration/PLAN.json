@@ -2042,7 +2042,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Real touch input must distinguish scroll from drag and verify restoration under delayed data.",
@@ -2057,7 +2057,39 @@
         "T27",
         "VAL-05",
         "VAL-06"
-      ]
+      ],
+      "validation": "PASS: 282 independent browser assertions, 10 interruption contract assertions; real CDP touch at both phone dimensions, desktop/narrow/hybrid input, scroll/diagonal/pinch/cancel, delayed admission/save/values, rotation, exact restored and persisted DOM order, SQL scope and loaded ids, console and screenshots. Five owner builds/public files and 119 owner tests pass. Physical keyboard/edge/OS interruption limit only; V7 final acceptance remains pending.",
+      "evidence": [
+        "evidence/V6/results.json",
+        "evidence/V6/sql.json",
+        "evidence/V6/interruption.json",
+        "evidence/V6/build/results.json",
+        "evidence/V6/source-verification.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "sha": "aa1d729191117019bc25fa4d1c5b96d0bcafdb79",
+          "version": "0.7.1",
+          "runtime_version": "0.7.0",
+          "note": "Unchanged L6 runtime; tests/tracking patch 0.7.1"
+        },
+        "@itrocks/home": {
+          "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+          "version": "0.7.0"
+        },
+        "@itrocks/list": {
+          "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+          "version": "0.12.0"
+        },
+        "@itrocks/table": {
+          "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+          "version": "0.4.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        }
+      }
     },
     {
       "id": "L7",

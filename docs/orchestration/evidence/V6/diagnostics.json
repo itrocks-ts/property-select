@@ -1,0 +1,34 @@
+[
+  {
+    "path": "/tmp/property-select/V6/application-build-raw.txt",
+    "sha256": "719f7321ab91541b8a7764c92f8b616a8672ab70f817c635027d1a8b3c868a17"
+  },
+  {
+    "path": "/tmp/property-select/V6/diagnostic-1/results.json",
+    "sha256": "aae23091296c247b7d8b2896bca39bd563e91601870a0e8b57422106c430e719"
+  },
+  {
+    "path": "/tmp/property-select/V6/diagnostic-1/standalone-1280-failure.png",
+    "sha256": "fa80ef2a70d721a0332beb7b76e9b538da37d26aef488321514e32129b6b6574"
+  },
+  {
+    "path": "/tmp/property-select/V6/diagnostic-2/results.json",
+    "sha256": "2e038509dcca97d916d4e83f7ecff5476623e1d0af47fa2193be77e77ba02af4"
+  },
+  {
+    "path": "/tmp/property-select/V6/diagnostic-3/results.json",
+    "sha256": "fab8b6a59380595c35eec1ad6b8c8b21edc4327f4b56444ea568cd842a7d9f6f"
+  },
+  {
+    "path": "/tmp/property-select/V6/first-complete/results.json",
+    "sha256": "f4540116e5d6ece9e1dbd88ee9001506315073f93ab0b8c9dd9545bd4fe0b601"
+  },
+  {
+    "path": "/tmp/property-select/V6/integration-390-failure.png",
+    "sha256": "84f09e8ad261eb1e81ab0183734b2b4177052f336c7699607c50207b4e53beb7"
+  },
+  {
+    "path": "/tmp/property-select/V6/standalone-1280-failure.png",
+    "sha256": "fa80ef2a70d721a0332beb7b76e9b538da37d26aef488321514e32129b6b6574"
+  }
+]

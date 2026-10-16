@@ -1,0 +1,22 @@
+{
+  "property-select": {
+    "sha": "aa1d729191117019bc25fa4d1c5b96d0bcafdb79",
+    "version": "0.7.1"
+  },
+  "home": {
+    "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+    "version": "0.7.0"
+  },
+  "list": {
+    "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+    "version": "0.12.0"
+  },
+  "table": {
+    "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+    "version": "0.4.0"
+  },
+  "framework": {
+    "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+    "version": "0.11.0"
+  }
+}

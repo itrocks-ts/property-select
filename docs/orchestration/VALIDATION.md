@@ -1,8 +1,29 @@
 # Phase 1 validation matrix
 
+## V6 independent touch and responsive verdict
+
+**DONE / independent PASS**, 16 October 2026. [Report](reports/V6.md),
+[browser assertions](evidence/V6/results.json), [executed SQL](evidence/V6/sql.json),
+[interruption contract](evidence/V6/interruption.json) and [builds](evidence/V6/build/results.json).
+Tested L6 source: selector `aa1d729` / 0.7.0, home `6c17970` / 0.7.0, list `912c8ac` / 0.12.0,
+table `5e32fd6` / 0.4.0 and framework `7211a97` / 0.11.0. Tracking/tests patch: selector 0.7.1.
+
+- T06/T08/T22/ACT-05–06/DRA-01–04: PASS genuine trusted touch, scroll/drag arbitration, diagonal locking, left/right
+  zones, hold/jitter, native pinch, second contact/cancel and long breadcrumb.
+- T21/T23/T24/DRA-05–08/ARC-05: PASS actual mobile folding, independently delayed admission/values/save replies,
+  restore without search focus, rollback/no late resurrection, active rotation, hybrid input and departure cleanup.
+- T25/T27/PANE-04–06/QUA-02: PASS terminal tap/click and object keyboard addition, visible close/focus, 44 px targets,
+  dark/light/reduced-motion views, real table edge scroll and anchored header command at both horizontal extremes.
+- VAL-05/VAL-06: PASS V6 obligations, 282 browser plus 10 independent interruption assertions. Both environments at
+  390 × 844 and 844 × 390 use `hasTouch: true`, `isMobile: true`; 1280 × 720 and 768 × 900 use mouse/keyboard.
+  Browser/SQL evidence is separate. Five owner builds/public inventories and 119 owner tests pass without skips.
+
+No product defect remains. Physical keyboard, screen-edge and OS interruptions are unverified; the separate blur
+contract and genuine browser cancellation pass. Final combined acceptance remains V7; L7 was not executed by V6.
+
 ## L6 author touch delivery — 16 October 2026
 
-**DONE / author PASS**; independent **V6 remains NOT_RUN**. See [report](reports/L6.md),
+**DONE / author PASS**; independent **V6 PASS** ([report](reports/V6.md)). See [report](reports/L6.md),
 [155 browser assertions](evidence/L6/results.json), [builds and suites](evidence/L6/build/results.json), and
 [exact runtime checkpoints](evidence/L6/source-checkpoints.json).
 
@@ -866,24 +887,24 @@ and commits only at valid drop. **PASS V5**: [independent proof](evidence/V5/res
 - **T20** — Expected: Drag an existing column, validate movement, then repeat and abandon; assert one column and
 restoration to original index. **PASS V5**: [independent proof](evidence/V5/results.json).
 - **T21** — Expected: Drop above/below/outside, Escape, touchCancel and depart view with delayed data; no
-commit/resurrection and clean listeners. **PASS V5 desktop/contract**; touch NOT_RUN until L6/V6.
+commit/resurrection and clean listeners. **PASS V5 desktop/contract and V6 touch**; see [V6](reports/V6.md).
 - **T22** — Expected: Trusted vertical touch scrolls; dominant horizontal gesture in left source zone transports
 without hold or residual click. Proof: `evidence/<gate>/T22.*`; author: [PASS L6](reports/L6.md);
-independent verdict: `NOT_RUN` (V6).
+independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 - **T23** — Expected: Recognise mobile drag, observe pane folding, edge autoscroll and restore after success/cancel
 without search focus. Proof: `evidence/<gate>/T23.*`; author: [PASS L6](reports/L6.md);
-independent verdict: `NOT_RUN` (V6).
+independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 - **T24** — Expected: Test diagonal locked intent, edge zone, long breadcrumb, portrait/landscape and hybrid mouse;
 record physical-device limit. Proof: `evidence/<gate>/T24.*`; author: [PASS L6](reports/L6.md);
-independent verdict: `NOT_RUN` (V6).
+independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 - **T25** — Expected: Add terminal/object via keyboard and tap without drag; visible focus returns correctly after
 explicit pane closure. Proof: `evidence/<gate>/T25.*`; author: [PASS L6](reports/L6.md);
-independent verdict: `NOT_RUN` (V6).
+independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 - **T26** — Expected: Use 500+ metadata contexts, 120 roots, slow/failing endpoints and overlapping actions; bounded
 work and unique columns persist. Proof: `evidence/<gate>/T26.*`; current verdict: `NOT_RUN`.
 - **T27** — Expected: Scroll a wide table to both ends; pane/header controls remain visible and open the same pane
 on desktop and touch. Proof: `evidence/<gate>/T27.*`; author: [PASS L6](reports/L6.md);
-independent verdict: `NOT_RUN` (V6).
+independent verdict: **PASS V6** ([report](reports/V6.md), [proof](evidence/V6/results.json)).
 
 S03 prerequisite facts for T13: `PASS` for explicit N-1/1-N/N-N inverse/cardinality and unknown defaults;
 [owner tests](evidence/S03/reflect-test.txt) and [report](reports/S03.md), reflect
@@ -1281,7 +1302,7 @@ Expected: Desktop/narrow/portrait/landscape pass no overflow, long breadcrumb ac
 contrast, visible focus, themes and reduced motion.
 
 Proof: [V2-HOME assertions](evidence/V2-HOME/results.json) and [report](reports/V2-HOME.md).
-Current verdict: **PASS (V2-HOME shell)**; later integration observations remain at their assigned gates.
+Current verdict: **PASS V2-HOME shell and V6 integration**; see [V6](reports/V6.md).
 
 ## LIFE additional cases
 

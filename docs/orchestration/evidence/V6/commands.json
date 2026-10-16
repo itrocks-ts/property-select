@@ -1,0 +1,24 @@
+{
+  "cwd": "/home/baptiste/itrocks/showtime",
+  "escalation": "Normal require_escalated after EPERM; Chromium sandbox retained",
+  "commands": [
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V6-build.mjs",
+      "exit": 0,
+      "result": "5 owner builds/public inventories; application build; 119 tests PASS",
+      "output": "build/results.json"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V6.mjs",
+      "exit": 0,
+      "result": "PASS 282 assertions",
+      "output": "results.json"
+    },
+    {
+      "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V6-interruption.mjs",
+      "exit": 0,
+      "result": "PASS 10 assertions",
+      "output": "interruption.json"
+    }
+  ]
+}
