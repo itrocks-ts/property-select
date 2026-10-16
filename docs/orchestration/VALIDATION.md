@@ -1,18 +1,34 @@
 # Phase 1 validation matrix
 
 
+## V5 independent desktop verification — 16 October 2026
+
+**DONE / PASS** on the L5 owner checkpoints; [report](reports/V5.md).
+The independent [integration proof](evidence/V5/results.json) has 130 passing assertions;
+[standalone/header/lifecycle proof](evidence/V5/support/results.json) has 72.
+[SQL evidence](evidence/V5/sql.json) records one actual visible-row projection across each sequence of pointer positions.
+
+- T11 drag, T15 actual moved/cancelled outcomes, T19, T20 and T21 desktop/contract cancellation: **PASS**.
+- PORT-02/04 external transport, PORT-09 desktop preview errors and SQL-12 preview query reuse: **PASS**.
+- T26 L5 slow/failing/concurrent operations: **PASS**; later load/final observations remain NOT_RUN until V7.
+- Trusted autoscroll at frozen bounds, exact reload order/count, no provisional save, no source deletion and no
+  departed pane resurrection: **PASS**. Four viewport sizes checked; five owners rebuild and package exports pass.
+- Physical OS interruption is represented by the separate lifecycle contract; native capture-loss cancellation is
+  also exercised. Touch pointercancel/arbitration/mobile restoration remain NOT_RUN until L6/V6.
+
+
 ## L5 author delivery — 16 October 2026
 
-**DONE / author PASS**; independent **V5 remains PENDING**. See [report](reports/L5.md) and
+**DONE / author PASS**; independent **V5 PASS** is recorded above. See [report](reports/L5.md) and
 [final browser evidence](evidence/L5/browser-final-delivery/browser.json).
 
 | Cases | Author observation | Independent status |
 | --- | --- | --- |
-| T11, T19, PORT-02/04 | Real source gestures, object segments, immediate column and asynchronous values | V5 pending |
-| T15, T20 | Existing column moved once; cancellation restores position and recents | V5 pending |
-| T21 desktop, LIFE-02/03 | Outside/Escape/lost capture/dispose/XTarget cancellation; no late preview | V5 pending |
-| T26 L5, PORT-09 | Concurrent request refused; delayed/failing values, retry and pending admission | V5 pending |
-| SQL-12 preview | One real joined projection across repeated movement at each of two sizes | V5 pending |
+| T11, T19, PORT-02/04 | Real source gestures, object segments, immediate column and asynchronous values | PASS V5    |
+| T15, T20 | Existing column moved once; cancellation restores position and recents | PASS V5    |
+| T21 desktop, LIFE-02/03 | Outside/Escape/lost capture/dispose/XTarget cancellation; no late preview | PASS V5    |
+| T26 L5, PORT-09 | Concurrent request refused; delayed/failing values, retry and pending admission | PASS V5    |
+| SQL-12 preview | One real joined projection across repeated movement at each of two sizes | PASS V5    |
 | Header regression | 182 assertions, four sizes: native reorder/removal, freeze, sorting and reset | Author replay only |
 
 The final browser run has 64 passing assertions at 1280×720 and 768×900. Public table fault injection adds 14
@@ -799,7 +815,8 @@ object results by full path. **PASS**, [fresh retest](evidence/RETEST-V3-1/repla
 and relaunch. **PASS**, including ordinary navigation/Clear;
 [proof](evidence/RETEST-V3-1/independent/results.json).
 - **T11** — Expected: Find Country through billing/delivery paths; navigate and drag intermediate segment using each
-exact full path. Proof: `evidence/<gate>/T11.*`; current verdict: `NOT_RUN`.
+exact full path. **PASS V5 drag**: [support proof](evidence/V5/support/results.json);
+V3 navigation observations retain their independent proof.
 - **T12** — Expected: Delay old query, change text/context and release late response; current results remain,
 loading/empty/limited differ. **PASS**, recovery and HTTP races: [proof](evidence/RETEST-V3-1/replay-V3/results.json).
 - **T13** — Expected: Run known N→1/N-N inverse return, 1→N excluded return, unknown relations and same-type
@@ -810,7 +827,8 @@ six-or-configured destination limit. Author proof: [L4](reports/L4.md),
 current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
 - **T15** — Expected: Confirm new add, click duplicate, move existing and abort new drag; only the committed new add
 becomes recent. Author proof: [L4](reports/L4.md); current verdict: `PASS L4 CLICK/CONTRACT`,
-independent V4 click/generic outcomes **PASS RETEST-V4-1**; actual drag/move/cancel remains **NOT_RUN V5**.
+independent V4 click/generic outcomes **PASS RETEST-V4-1**; actual drag/move/cancel **PASS V5**:
+[proof](evidence/V5/results.json).
 - **T16** — Expected: Set branch/query/scroll, fold/reopen and full reload; expire that actual session and verify
 all selector state is forgotten. Author proof: [L4](reports/L4.md), [browser observations](evidence/L4/browser.json);
 current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST-V4-1.md).
@@ -820,11 +838,11 @@ current verdict: **PASS independent RETEST-V4-1**; [fresh report](reports/RETEST
 - **T18** — Expected: Click absent/existing columns rapidly; new appends, existing stays at index, both reveal/flash
 and retain keyboard focus. Proof: `evidence/<gate>/T18.*`; current verdict: `NOT_RUN`.
 - **T19** — Expected: Drag new path through legal positions; a true column appears immediately, receives real data
-and commits only at valid drop. L5 author PASS: `evidence/L5/browser-final-delivery/browser.json`; V5 pending.
+and commits only at valid drop. **PASS V5**: [independent proof](evidence/V5/results.json).
 - **T20** — Expected: Drag an existing column, validate movement, then repeat and abandon; assert one column and
-restoration to original index. L5 author PASS: `evidence/L5/browser-final-delivery/browser.json`; V5 pending.
+restoration to original index. **PASS V5**: [independent proof](evidence/V5/results.json).
 - **T21** — Expected: Drop above/below/outside, Escape, touchCancel and depart view with delayed data; no
-commit/resurrection and clean listeners. L5 desktop author PASS; V5 pending and touch NOT_RUN until L6/V6.
+commit/resurrection and clean listeners. **PASS V5 desktop/contract**; touch NOT_RUN until L6/V6.
 - **T22** — Expected: Trusted vertical touch scrolls; dominant horizontal gesture in left source zone transports
 without hold or residual click. Proof: `evidence/<gate>/T22.*`; current verdict: `NOT_RUN`.
 - **T23** — Expected: Recognise mobile drag, observe pane folding, edge autoscroll and restore after success/cancel
@@ -1011,7 +1029,7 @@ S02 option observation: `PASS` for the public readonly `Identifiers` carrier and
 [Runtime tests](evidence/S02/storage-test.txt), `storage` `a298863052d9db37fe28c72e175896bdeec9366d` / `0.3.0`.
 Deduplication, bound predicates, scope intersection and actual restricted reads pass in independent VSQL.
 
-VSQL independent storage observation: `PASS`; preview reuse remains `NOT_RUN` until V5.
+VSQL independent storage observation: `PASS`; preview reuse **PASS V5**: [SQL proof](evidence/V5/sql.json).
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ### SQL-13: Object criteria and errors
@@ -1129,7 +1147,7 @@ commit/cancel and no persistence of transient columns.
 
 Proof: `evidence/<gate>/PORT-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
 Generic table stage: **PASS** through [RETEST-V2-TABLE-1](reports/RETEST-V2-TABLE-1.md), resolving the
-historical frozen-boundary reveal failure. External transport remains V5/V7.
+historical frozen-boundary reveal failure. External transport **PASS V5**; final replay remains V7.
 
 ### PORT-05: Labels, advice and defaults
 
@@ -1164,7 +1182,8 @@ Historical [V4 reproduction](evidence/V4/revocation.json) remains unchanged.
 Expected: Unavailable state store preserves live context and signals error; failed/slow data keeps gesture
 responsive, valid drop outcome independent of data completion and retry available.
 
-Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS storage portion; preview NOT_RUN until V5/V6**.
+Proof: [independent retest](reports/RETEST-V4-1.md). Current verdict: **PASS storage and V5 desktop preview portions**;
+touch remains V6.
 ### PORT-10: Public build and architecture
 
 Expected: Check direct runtime imports, npm dependency graph, public CJS/browser exports, types/assets/files, SOLID

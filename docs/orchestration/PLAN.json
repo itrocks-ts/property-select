@@ -1866,7 +1866,7 @@
         "TAB-11",
         "QUA-01"
       ],
-      "validation": "PASS author: five builds/tests/package exports; 64 browser assertions at two sizes, 14 external-table contract assertions, 182 header regression assertions; real SQL preview reuse. V5 pending.",
+      "validation": "PASS author: five builds/tests/package exports; 64 browser assertions at two sizes, 14 external-table contract assertions, 182 header regression assertions; real SQL preview reuse. Independent V5 PASS; see its report.",
       "evidence": "evidence/L5/",
       "tested_checkpoints": {
         "@itrocks/table": {
@@ -1914,7 +1914,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Independent real input must test rollback with slow data, header-origin differences and concurrent additions.",
@@ -1928,7 +1928,37 @@
         "T26",
         "VAL-04",
         "VAL-06"
-      ]
+      ],
+      "validation": "PASS: 130 independent real-browser integration assertions and 72 standalone/header/lifecycle assertions; four viewports, actual pointer autoscroll, exact saved/reloaded order, one SQL projection across positions, no provisional persistence or late resurrection; five owner builds/public files verified. Touch remains V6.",
+      "evidence": [
+        "evidence/V5/results.json",
+        "evidence/V5/sql.json",
+        "evidence/V5/support/results.json",
+        "evidence/V5/build/results.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "2b3bc81d9367cc3a548ed62401507528f72bf910",
+          "version": "0.6.1",
+          "source": "Runtime unchanged from L5 0.6.0; tracking/tests patch 0.6.1"
+        },
+        "@itrocks/table": {
+          "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+          "version": "0.4.0"
+        },
+        "@itrocks/list": {
+          "sha": "468c53f0b75f6b88df83e5a9a0ded0799460eecf",
+          "version": "0.11.0"
+        },
+        "@itrocks/home": {
+          "sha": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+          "version": "0.6.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        }
+      }
     },
     {
       "id": "L6",

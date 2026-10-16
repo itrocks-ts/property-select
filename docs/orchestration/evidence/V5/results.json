@@ -1,0 +1,3598 @@
+{
+  "assertions": [
+    {
+      "mode": "integrated-1280",
+      "name": "Clean baseline",
+      "observed": [
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Immediate header and one placeholder per row",
+      "observed": 50,
+      "expected": 50,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra request at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra SQL at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra request at position number0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra SQL at position number0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra request at position amount0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra SQL at position amount0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra request at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No extra SQL at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Durable list has no provisional path",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No provisional configuration save",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "No provisional recent",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Selector source retained",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Actual green addition marker",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Same and other concurrent add do not persist during preview",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Concurrent attempts leave unique paths",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Drop commits before data completes",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Committed column remains loading",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Real row projection is Paris",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "SQL uses only loaded row identities",
+      "observed": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25",
+        "27",
+        "29",
+        "31",
+        "33",
+        "35",
+        "37",
+        "39",
+        "41",
+        "43",
+        "45",
+        "47",
+        "49",
+        "51",
+        "53",
+        "55",
+        "57",
+        "59",
+        "61",
+        "63",
+        "65",
+        "67",
+        "69",
+        "71",
+        "73",
+        "75",
+        "77",
+        "79",
+        "81",
+        "83",
+        "85",
+        "87",
+        "89",
+        "91",
+        "93",
+        "95",
+        "97"
+      ],
+      "expected": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25",
+        "27",
+        "29",
+        "31",
+        "33",
+        "35",
+        "37",
+        "39",
+        "41",
+        "43",
+        "45",
+        "47",
+        "49",
+        "51",
+        "53",
+        "55",
+        "57",
+        "59",
+        "61",
+        "63",
+        "65",
+        "67",
+        "69",
+        "71",
+        "73",
+        "75",
+        "77",
+        "79",
+        "81",
+        "83",
+        "85",
+        "87",
+        "89",
+        "91",
+        "93",
+        "95",
+        "97"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Reload exact order/count",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Reload keeps recents",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "All rows align with header count",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Exact accepted insertion note",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Exact accepted insertion issuedAt",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount",
+        "issuedAt"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount",
+        "issuedAt"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing path moved to last without duplication",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation restores exact order: above",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation saves nothing: above",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation preserves recent: above",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation restores exact order: below",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation saves nothing: below",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation preserves recent: below",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation restores exact order: outside",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation saves nothing: outside",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation preserves recent: outside",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation restores exact order: Escape",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation saves nothing: Escape",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation preserves recent: Escape",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation restores exact order: lostcapture",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation saves nothing: lostcapture",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Existing cancellation preserves recent: lostcapture",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Late cancelled values cannot resurrect: above",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "New cancellation saves nothing: above",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Late cancelled values cannot resurrect: below",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "New cancellation saves nothing: below",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Late cancelled values cannot resurrect: outside",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "New cancellation saves nothing: outside",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Late cancelled values cannot resurrect: Escape",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "New cancellation saves nothing: Escape",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Late cancelled values cannot resurrect: lostcapture",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "New cancellation saves nothing: lostcapture",
+      "observed": 4,
+      "expected": 4,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Reload exact order/count",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Reload keeps recents",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "All rows align with header count",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Failed values still admit column",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Retry keeps exact order",
+      "observed": [
+        "active",
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "active",
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Retry does not persist another addition",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Intermediate segment transports own path",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Departure has no late preview",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Departure saves no preview",
+      "observed": 6,
+      "expected": 6,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-1280",
+      "name": "Departed pane never reopens",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Clean baseline",
+      "observed": [
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Immediate header and one placeholder per row",
+      "observed": 50,
+      "expected": 50,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra request at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra SQL at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra request at position number0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra SQL at position number0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra request at position amount0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra SQL at position amount0.9",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra request at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No extra SQL at position number0.1",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Durable list has no provisional path",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No provisional configuration save",
+      "observed": 6,
+      "expected": 6,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "No provisional recent",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Selector source retained",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Actual green addition marker",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Same and other concurrent add do not persist during preview",
+      "observed": 6,
+      "expected": 6,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Concurrent attempts leave unique paths",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Drop commits before data completes",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Committed column remains loading",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Real row projection is Paris",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "SQL uses only loaded row identities",
+      "observed": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25",
+        "27",
+        "29",
+        "31",
+        "33",
+        "35",
+        "37",
+        "39",
+        "41",
+        "43",
+        "45",
+        "47",
+        "49",
+        "51",
+        "53",
+        "55",
+        "57",
+        "59",
+        "61",
+        "63",
+        "65",
+        "67",
+        "69",
+        "71",
+        "73",
+        "75",
+        "77",
+        "79",
+        "81",
+        "83",
+        "85",
+        "87",
+        "89",
+        "91",
+        "93",
+        "95",
+        "97"
+      ],
+      "expected": [
+        "1",
+        "3",
+        "4",
+        "5",
+        "7",
+        "9",
+        "11",
+        "13",
+        "15",
+        "17",
+        "19",
+        "21",
+        "23",
+        "25",
+        "27",
+        "29",
+        "31",
+        "33",
+        "35",
+        "37",
+        "39",
+        "41",
+        "43",
+        "45",
+        "47",
+        "49",
+        "51",
+        "53",
+        "55",
+        "57",
+        "59",
+        "61",
+        "63",
+        "65",
+        "67",
+        "69",
+        "71",
+        "73",
+        "75",
+        "77",
+        "79",
+        "81",
+        "83",
+        "85",
+        "87",
+        "89",
+        "91",
+        "93",
+        "95",
+        "97"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Reload exact order/count",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Reload keeps recents",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "All rows align with header count",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Exact accepted insertion note",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Exact accepted insertion issuedAt",
+      "observed": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount",
+        "issuedAt"
+      ],
+      "expected": [
+        "customer.address.city.name",
+        "number",
+        "note",
+        "amount",
+        "issuedAt"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing path moved to last without duplication",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation restores exact order: above",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation saves nothing: above",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation preserves recent: above",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation restores exact order: below",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation saves nothing: below",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation preserves recent: below",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation restores exact order: outside",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation saves nothing: outside",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation preserves recent: outside",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation restores exact order: Escape",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation saves nothing: Escape",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation preserves recent: Escape",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation restores exact order: lostcapture",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation saves nothing: lostcapture",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Existing cancellation preserves recent: lostcapture",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Late cancelled values cannot resurrect: above",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "New cancellation saves nothing: above",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Late cancelled values cannot resurrect: below",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "New cancellation saves nothing: below",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Late cancelled values cannot resurrect: outside",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "New cancellation saves nothing: outside",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Late cancelled values cannot resurrect: Escape",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "New cancellation saves nothing: Escape",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Late cancelled values cannot resurrect: lostcapture",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "New cancellation saves nothing: lostcapture",
+      "observed": 10,
+      "expected": 10,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Reload exact order/count",
+      "observed": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Reload keeps recents",
+      "observed": [
+        "customer.address.city"
+      ],
+      "expected": [
+        "customer.address.city"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "All rows align with header count",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Failed values still admit column",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Retry keeps exact order",
+      "observed": [
+        "number",
+        "active",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "active",
+        "note",
+        "amount",
+        "issuedAt",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Retry does not persist another addition",
+      "observed": 11,
+      "expected": 11,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Intermediate segment transports own path",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Real pointer autoscrolls right",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Real pointer autoscrolls left at frozen edge",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Autoscroll adds no value request",
+      "observed": 24,
+      "expected": 24,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Autoscroll adds no SQL projection",
+      "observed": 142,
+      "expected": 142,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Departure has no late preview",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Departure saves no preview",
+      "observed": 12,
+      "expected": 12,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Departed pane never reopens",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "All browser input is trusted",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integrated-768",
+      "name": "Browser exceptions",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "contexts": [
+    {
+      "mode": "integrated-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13953/property-select-invoice"
+    },
+    {
+      "mode": "integrated-768",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13953/property-select-invoice"
+    }
+  ],
+  "inputs": [
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse"
+    },
+    {
+      "mode": "integrated-768",
+      "type": "keydown",
+      "trusted": true
+    }
+  ],
+  "network": [
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,amount"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=note&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=note&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=issuedAt&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=issuedAt&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount,issuedAt"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=active,number,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city,active,number,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=deliveryAddress.city.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-1280",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=deliveryAddress.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,amount"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=note&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=note&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=issuedAt&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=issuedAt&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount,issuedAt"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city.name&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,active,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "save",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city,number,active,note,amount,issuedAt,customer.address.city.name"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "values",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=deliveryAddress.city.name&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integrated-768",
+      "kind": "admission",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=deliveryAddress.city.name&validate=1"
+    }
+  ],
+  "errors": [],
+  "console": [
+    {
+      "mode": "integrated-1280",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    },
+    {
+      "mode": "integrated-768",
+      "text": "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    }
+  ],
+  "screenshots": [
+    "integrated-1280-before.png",
+    "integrated-1280-slow-preview.png",
+    "integrated-1280-after-cancellation.png",
+    "integrated-1280-departed.png",
+    "integrated-768-before.png",
+    "integrated-768-slow-preview.png",
+    "integrated-768-after-cancellation.png",
+    "integrated-768-departed.png"
+  ],
+  "chromiumSandbox": true,
+  "node": "v24.0.1",
+  "playwright": "1.62.1",
+  "seed": "Synthetic 120 invoice roots; mandatory active scope; static standalone graph",
+  "checkpoints": {
+    "property-select": {
+      "sha": "2b3bc81d9367cc3a548ed62401507528f72bf910",
+      "version": "0.6.1"
+    },
+    "table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0"
+    },
+    "list": {
+      "sha": "468c53f0b75f6b88df83e5a9a0ded0799460eecf",
+      "version": "0.11.0"
+    },
+    "home": {
+      "sha": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+      "version": "0.6.0"
+    },
+    "framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0"
+    }
+  },
+  "browser": "151.0.7922.34",
+  "failedRequests": [
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city.name&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount,issuedAt",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city.name&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=note&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=note&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=note&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=active,number,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city,active,number,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-1280",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city.name&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city.name,number,note,amount,issuedAt",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city.name&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=deliveryAddress&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=note&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=number,active,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select-invoice/list?columns=customer.address.city,number,active,note,amount,issuedAt,customer.address.city.name",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address.city.name&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=deliveryAddress&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=tags&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integrated-768",
+      "url": "http://127.0.0.1:13953/property-select/resolve/json?path=customer&root=invoice",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "autoscroll": {
+    "initial": {
+      "left": 89.375,
+      "right": 422.40625,
+      "scroll": 20,
+      "y": 215.15625
+    },
+    "right": {
+      "left": 89.375,
+      "right": 422.40625,
+      "scroll": 574,
+      "y": 215.15625
+    },
+    "left": {
+      "left": 89.375,
+      "right": 422.40625,
+      "scroll": 58,
+      "y": 215.15625
+    }
+  },
+  "status": "PASS",
+  "sqlEvidence": "sql.json"
+}

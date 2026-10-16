@@ -1,0 +1,30 @@
+[
+  {
+    "path": "/tmp/property-select/V5-diagnostics/screenshots/standalone-1280-failure.png",
+    "sha256": "083f4585fe83eb579b86a2a80dca80214914130954ef8f19dd5058b8f05f4d6d"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/screenshots/integrated-768-failure.png",
+    "sha256": "5f54e3f628990621e03eb0fa9834d040326d879b3bb282a80138a86361b188e0"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/screenshots/integrated-1280-failure.png",
+    "sha256": "1bc20409498e19488dc66368c89de2d49b7cf29e8b590d508b0278aa719bff1f"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/scroll-fit/results.json",
+    "sha256": "cb4fb3a118dd6ffe6111a3fb54e4375349f73648fd3a79d92174d402d4428228"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/first-full/results.json",
+    "sha256": "d0979aa5667d939656972e01712dc3fa84bda84afce6ba8b40470bd6d500d11c"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/support-root/results.json",
+    "sha256": "4dbad0b9a8dc945219f41f2bf13c5bd9b0ddbc5877117f7fcbf2e99969ffb77c"
+  },
+  {
+    "path": "/tmp/property-select/V5-diagnostics/geometry/results.json",
+    "sha256": "ba4be211710b13b179b6caa94f1351df050057e55c54f34cf55e6dd16a11ef42"
+  }
+]

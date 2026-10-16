@@ -1,0 +1,1428 @@
+{
+  "assertions": [
+    {
+      "mode": "standalone-1280",
+      "name": "Responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Terminal path transported",
+      "observed": [
+        "number"
+      ],
+      "expected": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "No residual select",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Ancestor drag supplies stable path",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Escape emits one cancellation",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Drag preserves navigation",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Root cannot transport",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Disposal cancels once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Remount has one selection listener",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Distinct country segment transports its full path: customer.address.country",
+      "observed": "customer.address.country",
+      "expected": "customer.address.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Distinct country segment transports its full path: customer.billingAddress.country",
+      "observed": "customer.billingAddress.country",
+      "expected": "customer.billingAddress.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Standalone owns no table",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-1280",
+      "name": "Integrated responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Terminal path transported",
+      "observed": [
+        "number"
+      ],
+      "expected": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "No residual select",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Ancestor drag supplies stable path",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Escape emits one cancellation",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Drag preserves navigation",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Root cannot transport",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Disposal cancels once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Remount has one selection listener",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Distinct country segment transports its full path: customer.address.country",
+      "observed": "customer.address.country",
+      "expected": "customer.address.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Distinct country segment transports its full path: customer.billingAddress.country",
+      "observed": "customer.billingAddress.country",
+      "expected": "customer.billingAddress.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Standalone owns no table",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-768",
+      "name": "Integrated responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Terminal path transported",
+      "observed": [
+        "number"
+      ],
+      "expected": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "No residual select",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Ancestor drag supplies stable path",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Escape emits one cancellation",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Drag preserves navigation",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Root cannot transport",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Disposal cancels once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Remount has one selection listener",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Distinct country segment transports its full path: customer.address.country",
+      "observed": "customer.address.country",
+      "expected": "customer.address.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Distinct country segment transports its full path: customer.billingAddress.country",
+      "observed": "customer.billingAddress.country",
+      "expected": "customer.billingAddress.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Standalone owns no table",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Integrated responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Terminal path transported",
+      "observed": [
+        "number"
+      ],
+      "expected": [
+        "number"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "No residual select",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Ancestor drag supplies stable path",
+      "observed": "customer",
+      "expected": "customer",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Escape emits one cancellation",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Drag preserves navigation",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Root cannot transport",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Disposal cancels once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Remount has one selection listener",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Distinct country segment transports its full path: customer.address.country",
+      "observed": "customer.address.country",
+      "expected": "customer.address.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Distinct country segment transports its full path: customer.billingAddress.country",
+      "observed": "customer.billingAddress.country",
+      "expected": "customer.billingAddress.country",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Standalone owns no table",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Integrated responsive shell fits",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Generic baseline",
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Header reorders through native pointer",
+      "observed": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Header drag does not sort",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Header outside removes whereas selector outside restores",
+      "observed": [
+        "Select",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Header removal callback once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Header row body alignment",
+      "observed": [
+        [
+          "Select",
+          "B1",
+          "C1",
+          "D1",
+          "Open"
+        ],
+        [
+          "Select",
+          "B2",
+          "C2",
+          "D2",
+          "Open"
+        ]
+      ],
+      "expected": [
+        [
+          "Select",
+          "B1",
+          "C1",
+          "D1",
+          "Open"
+        ],
+        [
+          "Select",
+          "B2",
+          "C2",
+          "D2",
+          "Open"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Public lifecycle cancel cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Public lifecycle reset cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-1280",
+      "name": "Public lifecycle dispose cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Generic baseline",
+      "observed": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "a",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Header reorders through native pointer",
+      "observed": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "b",
+        "a",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Header drag does not sort",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Header outside removes whereas selector outside restores",
+      "observed": [
+        "Select",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "expected": [
+        "Select",
+        "b",
+        "c",
+        "d",
+        "Actions"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Header removal callback once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Header row body alignment",
+      "observed": [
+        [
+          "Select",
+          "B1",
+          "C1",
+          "D1",
+          "Open"
+        ],
+        [
+          "Select",
+          "B2",
+          "C2",
+          "D2",
+          "Open"
+        ]
+      ],
+      "expected": [
+        [
+          "Select",
+          "B1",
+          "C1",
+          "D1",
+          "Open"
+        ],
+        [
+          "Select",
+          "B2",
+          "C2",
+          "D2",
+          "Open"
+        ]
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Public lifecycle cancel cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Public lifecycle reset cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Public lifecycle dispose cancels pending admission and late values",
+      "observed": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "expected": {
+        "before": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "after": [
+          "Select",
+          "a",
+          "b",
+          "c",
+          "d",
+          "Actions"
+        ],
+        "terminal": "cancelled",
+        "remnants": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Recorded inputs trusted",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "header-768",
+      "name": "Browser exceptions",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "contexts": [
+    {
+      "mode": "standalone-1280",
+      "width": 1280,
+      "height": 720,
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13954"
+    },
+    {
+      "mode": "standalone-768",
+      "width": 768,
+      "height": 900,
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13954"
+    },
+    {
+      "mode": "standalone-390",
+      "width": 390,
+      "height": 844,
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13954"
+    },
+    {
+      "mode": "standalone-844",
+      "width": 844,
+      "height": 390,
+      "hasTouch": false,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13954"
+    }
+  ],
+  "errors": [],
+  "inputs": [
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-1280",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-768",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "keydown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true
+    }
+  ],
+  "screenshots": [
+    "standalone-1280-before.png",
+    "standalone-1280-after.png",
+    "standalone-1280-integrated-shell.png",
+    "standalone-768-before.png",
+    "standalone-768-after.png",
+    "standalone-768-integrated-shell.png",
+    "standalone-390-before.png",
+    "standalone-390-after.png",
+    "standalone-390-integrated-shell.png",
+    "standalone-844-before.png",
+    "standalone-844-after.png",
+    "standalone-844-integrated-shell.png",
+    "header-1280-native-header-after.png",
+    "header-768-native-header-after.png"
+  ],
+  "chromiumSandbox": true,
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

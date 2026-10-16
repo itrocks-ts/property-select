@@ -1,0 +1,29 @@
+{
+  "property-select": {
+    "head": "2b3bc81d9367cc3a548ed62401507528f72bf910",
+    "status": " M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/V5.md\n M package.json\n?? docs/orchestration/environment/checks/V5-build.mjs\n?? docs/orchestration/environment/checks/V5-support.mjs\n?? docs/orchestration/environment/checks/V5.mjs\n?? docs/orchestration/evidence/V5/\n?? docs/orchestration/reports/V5.md\n"
+  },
+  "table": {
+    "head": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+    "status": ""
+  },
+  "list": {
+    "head": "468c53f0b75f6b88df83e5a9a0ded0799460eecf",
+    "status": ""
+  },
+  "home": {
+    "head": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+    "status": ""
+  },
+  "framework": {
+    "head": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+    "status": ""
+  },
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "auditIndex": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa",
+    "audit_workfiles_absent": true
+  }
+}
