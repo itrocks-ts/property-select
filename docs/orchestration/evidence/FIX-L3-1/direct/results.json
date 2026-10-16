@@ -1,0 +1,262 @@
+{
+	"checks": [
+		{
+			"name": "Integrated search finishes without metadata error",
+			"expected": true,
+			"observed": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Country.Name match exists",
+			"expected": 1,
+			"observed": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "Automatic search never requests native Date context",
+			"expected": false,
+			"observed": false,
+			"status": "PASS"
+		},
+		{
+			"name": "Root Date is terminal",
+			"expected": "terminal",
+			"observed": "terminal",
+			"status": "PASS"
+		},
+		{
+			"name": "Root Date has no target or relation",
+			"expected": [
+				null,
+				null
+			],
+			"observed": [
+				null,
+				null
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "context issuedAt status",
+			"expected": 400,
+			"observed": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "context issuedAt body",
+			"expected": {
+				"error": "invalid-path"
+			},
+			"observed": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "context issuedAt.getTime status",
+			"expected": 400,
+			"observed": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "context issuedAt.getTime body",
+			"expected": {
+				"error": "invalid-path"
+			},
+			"observed": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "resolve issuedAt.getTime status",
+			"expected": 400,
+			"observed": 400,
+			"status": "PASS"
+		},
+		{
+			"name": "resolve issuedAt.getTime body",
+			"expected": {
+				"error": "invalid-path"
+			},
+			"observed": {
+				"error": "invalid-path"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "resolve issuedAt status",
+			"expected": 200,
+			"observed": 200,
+			"status": "PASS"
+		},
+		{
+			"name": "resolve issuedAt body",
+			"expected": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"observed": {
+				"kind": "terminal",
+				"label": "issued at",
+				"name": "issuedAt",
+				"order": 4,
+				"path": "issuedAt"
+			},
+			"status": "PASS"
+		},
+		{
+			"name": "Date column selected",
+			"expected": 1,
+			"observed": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "Date column renders converted value",
+			"expected": "01/01/2026",
+			"observed": "01/01/2026",
+			"status": "PASS"
+		},
+		{
+			"name": "Null Date renders empty",
+			"expected": "",
+			"observed": "",
+			"status": "PASS"
+		},
+		{
+			"name": "No browser exceptions or warnings",
+			"expected": [],
+			"observed": [],
+			"status": "PASS"
+		},
+		{
+			"name": "No failing browser request",
+			"expected": [],
+			"observed": [],
+			"status": "PASS"
+		}
+	],
+	"commands": [
+		{
+			"action": "app",
+			"stdout": "",
+			"directory": "/tmp/property-select-FIX-L3-1-direct",
+			"port": 13851,
+			"initializer": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+		},
+		{
+			"action": "stop-app",
+			"stdout": "PASS: owned app 2379101 stopped\n",
+			"directory": "/tmp/property-select-FIX-L3-1-direct",
+			"port": 13851,
+			"initializer": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs"
+		}
+	],
+	"errors": [],
+	"httpErrors": [],
+	"requests": [
+		"http://127.0.0.1:13851/property-select-invoice",
+		"http://127.0.0.1:13851/@itrocks/ux-core/css/app.css",
+		"http://127.0.0.1:13851/@itrocks/home/right-pane.css",
+		"http://127.0.0.1:13851/@itrocks/notifications/css/notifications.css",
+		"http://127.0.0.1:13851/app/menu/menu.css",
+		"http://127.0.0.1:13851/@itrocks/framework/app.js",
+		"http://127.0.0.1:13851/@itrocks/home/container.js",
+		"http://127.0.0.1:13851/@itrocks/action-bar/action.css",
+		"http://127.0.0.1:13851/@itrocks/delete/css/action.css",
+		"http://127.0.0.1:13851/@itrocks/list/list.css",
+		"http://127.0.0.1:13851/@itrocks/new/css/action.css",
+		"http://127.0.0.1:13851/@itrocks/ux-core/css/article.css",
+		"http://127.0.0.1:13851/@itrocks/list/build.js",
+		"http://127.0.0.1:13851/@itrocks/asset-loader/asset-loader.js",
+		"http://127.0.0.1:13851/@itrocks/auto-focus/auto-focus.js",
+		"http://127.0.0.1:13851/@itrocks/auto-redirect/build.js",
+		"http://127.0.0.1:13851/@itrocks/breadcrumb/breadcrumb.js",
+		"http://127.0.0.1:13851/@itrocks/build/build.js",
+		"http://127.0.0.1:13851/@itrocks/collapse/collapse.js",
+		"http://127.0.0.1:13851/@itrocks/contained-auto-width/contained-auto-width.js",
+		"http://127.0.0.1:13851/@itrocks/notifications/notifications.js",
+		"http://127.0.0.1:13851/@itrocks/real-viewport-height/real-viewport-height.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/begin-end.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/build.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/secure-click.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/composite.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/default-target.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/xtarget.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/head.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/headers-size.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/history.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/hold-on.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/main-target.js",
+		"http://127.0.0.1:13851/@itrocks/xtarget/modifier.js",
+		"http://127.0.0.1:13851/@itrocks/framework/property-select-list.js",
+		"http://127.0.0.1:13851/@itrocks/framework/property-select-metadata.js",
+		"http://127.0.0.1:13851/@itrocks/table/column-add.js",
+		"http://127.0.0.1:13851/@itrocks/table/column-reorder-freeze.js",
+		"http://127.0.0.1:13851/@itrocks/table/column-reorder.js",
+		"http://127.0.0.1:13851/@itrocks/table/feed.js",
+		"http://127.0.0.1:13851/@itrocks/table/freeze.js",
+		"http://127.0.0.1:13851/@itrocks/table/freeze/inherit-background.js",
+		"http://127.0.0.1:13851/@itrocks/table/freeze/inherit-border.js",
+		"http://127.0.0.1:13851/@itrocks/table/link.js",
+		"http://127.0.0.1:13851/@itrocks/table/table.js",
+		"http://127.0.0.1:13851/@itrocks/home/right-pane.js",
+		"http://127.0.0.1:13851/@itrocks/ux-core/css/logo/itrocks.svg",
+		"http://127.0.0.1:13851/@itrocks/ux-core/css/action/back.svg",
+		"http://127.0.0.1:13851/@itrocks/new/css/new.svg",
+		"http://127.0.0.1:13851/@itrocks/delete/css/delete.svg",
+		"http://127.0.0.1:13851/@itrocks/asset-loader/load-css.js",
+		"http://127.0.0.1:13851/@itrocks/asset-loader/load-script.js",
+		"http://127.0.0.1:13851/@itrocks/sorted-array/sorted-array.js",
+		"http://127.0.0.1:13851/@itrocks/plugin/plugin.js",
+		"http://127.0.0.1:13851/@itrocks/form-fetch/form-fetch.js",
+		"http://127.0.0.1:13851/@itrocks/list/property-select.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/front/property-select.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/property-select.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/controller.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/path.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/intentions.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/navigation.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/search.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/metadata.js",
+		"http://127.0.0.1:13851/@itrocks/property-select/front/property-select.css",
+		"http://127.0.0.1:13851/@itrocks/table/column-add.css",
+		"http://127.0.0.1:13851/property-select/template/html",
+		"http://127.0.0.1:13851/property-select/context/json?path=&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=deliveryAddress&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=lines&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.address&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.parent&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=deliveryAddress.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.address.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.parent.address&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=deliveryAddress.city.country&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.deliveryAddress&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.lines&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.address.city.country&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.parent.address.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.address&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.parent&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.deliveryAddress.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=customer.parent.address.city.country&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.address.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.parent.address&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.deliveryAddress.city.country&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.address.city.country&root=invoice",
+		"http://127.0.0.1:13851/property-select/context/json?path=tags.invoices.customer.parent.address.city&root=invoice",
+		"http://127.0.0.1:13851/property-select/resolve/json?path=issuedAt&root=invoice",
+		"http://127.0.0.1:13851/property-select-invoice/list?column=issuedAt&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+		"http://127.0.0.1:13851/property-select-invoice/list?columns=number,amount,issuedAt"
+	],
+	"url": "http://127.0.0.1:13851",
+	"browser": "151.0.7922.34",
+	"searchStatus": "limited",
+	"status": "PASS"
+}

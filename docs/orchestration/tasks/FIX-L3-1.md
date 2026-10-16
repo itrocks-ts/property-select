@@ -3,7 +3,8 @@
 ## Objective and prerequisite
 
 Correct [L3-01](../defects/L3-01.md). Prerequisite: the completed L3 diagnostic report; this is the correction exception
-to the successful-prerequisite rule in [EXECUTION.md](../EXECUTION.md). Current status: `PENDING`.
+to the successful-prerequisite rule in [EXECUTION.md](../EXECUTION.md). Current status: `DONE` (author); independent
+`RETEST-L3-1` remains pending.
 
 Read owner/application instructions, applicable handbook routes, READMEs, [COMMON.md](../COMMON.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md), [VALIDATION.md](../VALIDATION.md),
@@ -11,7 +12,8 @@ Read owner/application instructions, applicable handbook routes, READMEs, [COMMO
 
 ## Scope and entry points
 
-Inspect `reflect/src/relation-fact.ts`, its type abstraction and framework `src/property-select-provider.ts`.
+Inspect `reflect/src/relation-fact.ts`, its type abstraction, `reflect-path` runtime/static scalar path handling
+and framework `src/property-select-provider.ts`.
 The readable reproduction is `environment/models/invoice.ts` (`issuedAt: Date | null`). Fix scalar classification
 at its owning abstraction, with narrow regressions for optional/nullable Date and real domain classes.
 Property-select owns tracking only unless a concrete selector defect is independently established.

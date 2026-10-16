@@ -1328,16 +1328,18 @@
       ],
       "packages": [
         "@itrocks/reflect",
+        "@itrocks/reflect-path",
         "@itrocks/framework",
         "@itrocks/property-select"
       ],
       "repositories": [
         "node_modules/@itrocks/reflect",
+        "node_modules/@itrocks/reflect-path",
         "node_modules/@itrocks/framework",
         "node_modules/@itrocks/property-select"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Scalar classification crosses reflection, typed path resolution and the metadata provider; preserve real domain relations and search error handling.",
@@ -1349,6 +1351,34 @@
         "META-02",
         "QUA-01",
         "VAL-07"
+      ],
+      "validation": "PASS author: 9 reflect/13 reflect-path/6 META/24 selector tests, full framework suite, 41 original browser assertions, 18 focused browser checks and 6 real SQL date checks. Date metadata is terminal; direct traversal is HTTP 400; country name ends limited without metadata errors. Independent RETEST-L3-1 remains mandatory.",
+      "tested_checkpoints": {
+        "@itrocks/reflect": {
+          "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+          "version": "0.3.1"
+        },
+        "@itrocks/reflect-path": {
+          "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+          "version": "0.3.2"
+        },
+        "@itrocks/framework": {
+          "sha": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+          "version": "0.10.3",
+          "runtime_source_sha": "d5024b5ac28c826ca01d576c0f0e3c6911279d53",
+          "browser_version": "0.10.1"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "1ddb156fe92edbb7bbae8a43451bbcc47d4eff9d",
+          "base_version": "0.4.0",
+          "version": "0.4.1"
+        }
+      },
+      "evidence": [
+        "evidence/FIX-L3-1/reproducer/browser-results.json",
+        "evidence/FIX-L3-1/direct/results.json",
+        "evidence/FIX-L3-1/date-sql.json",
+        "evidence/FIX-L3-1/review.json"
       ]
     },
     {
@@ -1360,11 +1390,13 @@
       ],
       "packages": [
         "@itrocks/reflect",
+        "@itrocks/reflect-path",
         "@itrocks/framework",
         "@itrocks/property-select"
       ],
       "repositories": [
         "node_modules/@itrocks/reflect",
+        "node_modules/@itrocks/reflect-path",
         "node_modules/@itrocks/framework",
         "node_modules/@itrocks/property-select"
       ],

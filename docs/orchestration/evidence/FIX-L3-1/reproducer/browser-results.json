@@ -1,0 +1,666 @@
+{
+	"checks": [
+		{
+			"name": "PORT-06 pending customer",
+			"observed": "loading",
+			"expected": "loading",
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 exact focused element survives enrichment",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 focus survives top-result budget eviction",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 focused row retained within display budget",
+			"observed": [
+				"slow.name"
+			],
+			"expected": [
+				"slow.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 retained action",
+			"observed": [
+				"slow.name"
+			],
+			"expected": [
+				"slow.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 final rank applies after focus leaves",
+			"observed": [
+				"fast.name"
+			],
+			"expected": [
+				"fast.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "PORT-06 reversed responses produce identical order",
+			"observed": [
+				"tags.name",
+				"customer.name",
+				"customer.parent.name",
+				"customer.address.country.name",
+				"customer.billingAddress.country.name",
+				"customer.address.city.name",
+				"customer.billingAddress.city.name",
+				"tags.invoices.customer.name",
+				"customer.address.city.country.name",
+				"customer.billingAddress.city.country.name",
+				"customer.parent.address.country.name",
+				"customer.parent.billingAddress.country.name",
+				"customer.parent.address.city.name",
+				"customer.parent.billingAddress.city.name",
+				"tags.invoices.customer.parent.name"
+			],
+			"expected": [
+				"tags.name",
+				"customer.name",
+				"customer.parent.name",
+				"customer.address.country.name",
+				"customer.billingAddress.country.name",
+				"customer.address.city.name",
+				"customer.billingAddress.city.name",
+				"tags.invoices.customer.name",
+				"customer.address.city.country.name",
+				"customer.billingAddress.city.country.name",
+				"customer.parent.address.country.name",
+				"customer.parent.billingAddress.country.name",
+				"customer.parent.address.city.name",
+				"customer.parent.billingAddress.city.name",
+				"tags.invoices.customer.parent.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T09 normalised all words match labelled path",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T09 distinct billing result",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T09 root-to-parent segments",
+			"observed": [
+				"Facture",
+				"Client",
+				"Adresse",
+				"Pays"
+			],
+			"expected": [
+				"Facture",
+				"Client",
+				"Adresse",
+				"Pays"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T11 terminal emits exact path once",
+			"observed": [
+				"customer.address.country.code"
+			],
+			"expected": [
+				"customer.address.country.code"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "NAV-07 query retained after selection",
+			"observed": " CÔDE   pAyS CLIENT ",
+			"expected": " CÔDE   pAyS CLIENT ",
+			"status": "PASS"
+		},
+		{
+			"name": "T10 scope is current descendants",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "NAV-08 real segment path",
+			"observed": [
+				"customer",
+				"address"
+			],
+			"expected": [
+				"customer",
+				"address"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T10 root return keeps query",
+			"observed": " CÔDE   pAyS CLIENT ",
+			"expected": " CÔDE   pAyS CLIENT ",
+			"status": "PASS"
+		},
+		{
+			"name": "NAV-08 remembered suffix remains",
+			"observed": 1,
+			"expected": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "NAV-08 divergent suffix replaced",
+			"observed": [
+				"customer",
+				"billingAddress",
+				"country"
+			],
+			"expected": [
+				"customer",
+				"billingAddress",
+				"country"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "SEA-05 immediate clear",
+			"observed": "",
+			"expected": "",
+			"status": "PASS"
+		},
+		{
+			"name": "SEA-05 clear shows neighbouring properties",
+			"observed": [
+				"customer.billingAddress.country.code",
+				"customer.billingAddress.country.name"
+			],
+			"expected": [
+				"customer.billingAddress.country.code",
+				"customer.billingAddress.country.name"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "SEA-05 clear retains input focus",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T12 leaf empty state",
+			"observed": "empty",
+			"expected": "empty",
+			"status": "PASS"
+		},
+		{
+			"name": "T12 newer query excludes stale codes",
+			"observed": [
+				"number",
+				"tags.invoices.number"
+			],
+			"expected": [
+				"number",
+				"tags.invoices.number"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T12 late old response cannot replace results",
+			"observed": [
+				"number",
+				"tags.invoices.number"
+			],
+			"expected": [
+				"number",
+				"tags.invoices.number"
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "T13 one N-N inverse is followed",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T13 1-N inverse is not explored",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "T13 unknown repeated edge is not explored",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "T12 large graph limit",
+			"observed": "limited",
+			"expected": "limited",
+			"status": "PASS"
+		},
+		{
+			"name": "T26 contexts bounded",
+			"observed": 25,
+			"expected": 25,
+			"status": "PASS"
+		},
+		{
+			"name": "T26 results bounded",
+			"observed": 8,
+			"expected": 8,
+			"status": "PASS"
+		},
+		{
+			"name": "T26 at most four current provider requests",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "T12 zero results after budget is limited, not empty",
+			"observed": "limited",
+			"expected": "limited",
+			"status": "PASS"
+		},
+		{
+			"name": "T12 error state",
+			"observed": "error",
+			"expected": "error",
+			"status": "PASS"
+		},
+		{
+			"name": "QUA-01 ordinary navigation survives search error",
+			"observed": 1,
+			"expected": 1,
+			"status": "PASS"
+		},
+		{
+			"name": "Responsive 1280 no horizontal page overflow",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Responsive 768 no horizontal page overflow",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Responsive 390 no horizontal page overflow",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Responsive 844 no horizontal page overflow",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Standalone imports contain no host/framework/reflection modules",
+			"observed": false,
+			"expected": false,
+			"status": "PASS"
+		},
+		{
+			"name": "Integrated search works",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Control route still displays synthetic country",
+			"observed": true,
+			"expected": true,
+			"status": "PASS"
+		},
+		{
+			"name": "Browser exceptions/warnings/errors",
+			"observed": [],
+			"expected": [],
+			"status": "PASS"
+		}
+	],
+	"commands": [
+		{
+			"action": "standalone",
+			"stdout": "",
+			"environment": {
+				"PS_APP_PORT": "13849",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13850"
+			}
+		},
+		{
+			"action": "app",
+			"stdout": "",
+			"environment": {
+				"PS_APP_PORT": "13849",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13850"
+			}
+		},
+		{
+			"action": "status",
+			"stdout": "mysqld is alive\nPASS: framework list HTTP 200 with Recipe France\n",
+			"environment": {
+				"PS_APP_PORT": "13849",
+				"PS_ENV_DIRECTORY": "/tmp/showtime-property-select-env",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13850"
+			}
+		},
+		{
+			"action": "stop-app",
+			"stdout": "PASS: owned app 2376926 stopped\n",
+			"environment": {
+				"PS_APP_PORT": "13849",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13850"
+			}
+		},
+		{
+			"action": "stop-standalone",
+			"stdout": "PASS: owned standalone 2376904 stopped\n",
+			"environment": {
+				"PS_APP_PORT": "13849",
+				"PS_ENV_DIRECTORY": "/tmp/property-select-FIX-L3-1",
+				"PS_FRAMEWORK_INITIALIZER": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/list/fixture.cjs",
+				"PS_STANDALONE_PORT": "13850"
+			}
+		}
+	],
+	"errors": [],
+	"httpErrors": [],
+	"input": [
+		"Trusted fill name; Tab focus during delayed/reordered enrichment"
+	],
+	"requests": [
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/search-fixture",
+		"/assets/front/property-select.css",
+		"/search-fixture.js",
+		"/assets/front/property-select.js",
+		"/search-graph.js",
+		"/assets/property-select.js",
+		"/assets/controller.js",
+		"/assets/path.js",
+		"/assets/intentions.js",
+		"/assets/navigation.js",
+		"/assets/search.js",
+		"/assets/metadata.js",
+		"/assets/front/property-select.html",
+		"/property-select-invoice",
+		"/@itrocks/ux-core/css/app.css",
+		"/@itrocks/home/right-pane.css",
+		"/@itrocks/notifications/css/notifications.css",
+		"/app/menu/menu.css",
+		"/@itrocks/framework/app.js",
+		"/@itrocks/home/container.js",
+		"/@itrocks/action-bar/action.css",
+		"/@itrocks/delete/css/action.css",
+		"/@itrocks/list/list.css",
+		"/@itrocks/new/css/action.css",
+		"/@itrocks/ux-core/css/article.css",
+		"/@itrocks/list/build.js",
+		"/@itrocks/asset-loader/asset-loader.js",
+		"/@itrocks/auto-focus/auto-focus.js",
+		"/@itrocks/auto-redirect/build.js",
+		"/@itrocks/breadcrumb/breadcrumb.js",
+		"/@itrocks/build/build.js",
+		"/@itrocks/collapse/collapse.js",
+		"/@itrocks/contained-auto-width/contained-auto-width.js",
+		"/@itrocks/notifications/notifications.js",
+		"/@itrocks/real-viewport-height/real-viewport-height.js",
+		"/@itrocks/xtarget/begin-end.js",
+		"/@itrocks/xtarget/build.js",
+		"/@itrocks/xtarget/secure-click.js",
+		"/@itrocks/xtarget/composite.js",
+		"/@itrocks/xtarget/default-target.js",
+		"/@itrocks/xtarget/xtarget.js",
+		"/@itrocks/xtarget/head.js",
+		"/@itrocks/xtarget/headers-size.js",
+		"/@itrocks/xtarget/history.js",
+		"/@itrocks/xtarget/hold-on.js",
+		"/@itrocks/xtarget/main-target.js",
+		"/@itrocks/xtarget/modifier.js",
+		"/@itrocks/framework/property-select-list.js",
+		"/@itrocks/framework/property-select-metadata.js",
+		"/@itrocks/ux-core/css/logo/itrocks.svg",
+		"/@itrocks/ux-core/css/action/back.svg",
+		"/@itrocks/new/css/new.svg",
+		"/@itrocks/delete/css/delete.svg",
+		"/@itrocks/home/right-pane.js",
+		"/@itrocks/table/column-add.js",
+		"/@itrocks/table/column-reorder-freeze.js",
+		"/@itrocks/table/column-reorder.js",
+		"/@itrocks/table/feed.js",
+		"/@itrocks/table/freeze.js",
+		"/@itrocks/table/freeze/inherit-background.js",
+		"/@itrocks/table/freeze/inherit-border.js",
+		"/@itrocks/table/link.js",
+		"/@itrocks/table/table.js",
+		"/@itrocks/asset-loader/load-css.js",
+		"/@itrocks/asset-loader/load-script.js",
+		"/@itrocks/sorted-array/sorted-array.js",
+		"/@itrocks/plugin/plugin.js",
+		"/@itrocks/form-fetch/form-fetch.js",
+		"/@itrocks/list/property-select.js",
+		"/@itrocks/property-select/front/property-select.js",
+		"/@itrocks/property-select/property-select.js",
+		"/@itrocks/property-select/controller.js",
+		"/@itrocks/property-select/path.js",
+		"/@itrocks/property-select/intentions.js",
+		"/@itrocks/property-select/navigation.js",
+		"/@itrocks/property-select/search.js",
+		"/@itrocks/property-select/metadata.js",
+		"/@itrocks/property-select/front/property-select.css",
+		"/@itrocks/table/column-add.css",
+		"/property-select/template/html",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/property-select/context/json",
+		"/country",
+		"/@itrocks/ux-core/css/app.css",
+		"/@itrocks/home/right-pane.css",
+		"/@itrocks/notifications/css/notifications.css",
+		"/app/menu/menu.css",
+		"/@itrocks/framework/app.js",
+		"/@itrocks/home/container.js",
+		"/@itrocks/action-bar/action.css",
+		"/@itrocks/delete/css/action.css",
+		"/@itrocks/list/list.css",
+		"/@itrocks/new/css/action.css",
+		"/@itrocks/ux-core/css/article.css",
+		"/@itrocks/list/build.js",
+		"/@itrocks/asset-loader/asset-loader.js",
+		"/@itrocks/auto-focus/auto-focus.js",
+		"/@itrocks/auto-redirect/build.js",
+		"/@itrocks/breadcrumb/breadcrumb.js",
+		"/@itrocks/build/build.js",
+		"/@itrocks/collapse/collapse.js",
+		"/@itrocks/contained-auto-width/contained-auto-width.js",
+		"/@itrocks/notifications/notifications.js",
+		"/@itrocks/real-viewport-height/real-viewport-height.js",
+		"/@itrocks/xtarget/begin-end.js",
+		"/@itrocks/xtarget/build.js",
+		"/@itrocks/xtarget/secure-click.js",
+		"/@itrocks/xtarget/composite.js",
+		"/@itrocks/xtarget/default-target.js",
+		"/@itrocks/xtarget/xtarget.js",
+		"/@itrocks/xtarget/head.js",
+		"/@itrocks/xtarget/headers-size.js",
+		"/@itrocks/xtarget/history.js",
+		"/@itrocks/xtarget/hold-on.js",
+		"/@itrocks/xtarget/main-target.js",
+		"/@itrocks/xtarget/modifier.js",
+		"/@itrocks/framework/property-select-list.js",
+		"/@itrocks/framework/property-select-metadata.js",
+		"/@itrocks/home/right-pane.js",
+		"/@itrocks/table/column-add.js",
+		"/@itrocks/table/column-reorder-freeze.js",
+		"/@itrocks/table/column-reorder.js",
+		"/@itrocks/table/feed.js",
+		"/@itrocks/table/freeze.js",
+		"/@itrocks/table/freeze/inherit-background.js",
+		"/@itrocks/table/freeze/inherit-border.js",
+		"/@itrocks/table/link.js",
+		"/@itrocks/table/table.js",
+		"/@itrocks/asset-loader/load-css.js",
+		"/@itrocks/asset-loader/load-script.js",
+		"/@itrocks/ux-core/css/logo/itrocks.svg",
+		"/@itrocks/ux-core/css/action/back.svg",
+		"/@itrocks/new/css/new.svg",
+		"/@itrocks/delete/css/delete.svg",
+		"/@itrocks/sorted-array/sorted-array.js",
+		"/@itrocks/plugin/plugin.js",
+		"/@itrocks/form-fetch/form-fetch.js",
+		"/country/list"
+	],
+	"urls": [
+		"http://127.0.0.1:13850",
+		"http://127.0.0.1:13849"
+	],
+	"checkpoint": "1ddb156fe92edbb7bbae8a43451bbcc47d4eff9d",
+	"version": "0.4.1",
+	"seed": "test/fixtures/search-graph.mjs; environment/models; synthetic existing database only",
+	"browser": "151.0.7922.34",
+	"integrated": {
+		"searchStatus": "limited",
+		"message": "Search limit reached. Refine your query.",
+		"issuedAt": {
+			"kind": "terminal",
+			"label": "issued at",
+			"name": "issuedAt",
+			"order": 4,
+			"path": "issuedAt"
+		},
+		"paths": [
+			"deliveryAddress.city.country.name",
+			"customer.address.city.country.name",
+			"customer.parent.address.city.country.name",
+			"tags.invoices.deliveryAddress.city.country.name",
+			"tags.invoices.customer.address.city.country.name"
+		]
+	},
+	"status": "PASS"
+}

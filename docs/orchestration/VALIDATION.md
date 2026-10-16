@@ -16,6 +16,28 @@ receives HTTP 500/ENOENT. The selector retains context/results and reports `erro
 independent V3 verdicts; META-01/META-02 have this new blocking observation. T11 drag remains V5, and later
 session/gesture/final acceptance observations remain NOT_RUN.
 
+## FIX-L3-1 author correction
+
+**PASS (author)**: [report](reports/FIX-L3-1.md), [review/checkpoints](evidence/FIX-L3-1/review.json).
+Reflect `0.3.1`, reflect-path `0.3.2`, framework `0.10.3` and tracking `0.4.1` supply the correction.
+The original L3 failure remains historical; independent `RETEST-L3-1` is mandatory before V3.
+
+- **META-01/META-03/API-03 / PASS author**: Date, nullable/optional dates and Date collections are terminal;
+  Date paths retain scalar multiplicity and reject native methods, including six negative typed paths. Domain,
+  deferred, inverse/cardinality/N-N and unknown-target behaviour remain valid. Nine reflection, thirteen path and
+  six META tests pass alongside the full framework and twenty-four selector tests.
+- **META-02/SEA-07/QUA-01 / PASS author affected observations**: The actual root descriptor is terminal;
+  direct Date context/native-method requests return documented HTTP 400 `invalid-path`, and Date resolve returns 200.
+  Integrated `country name` produces the expected full paths with `limited` under the normal exploration budget,
+  without failed metadata requests, browser warnings or page exceptions. Permission checks and recoverable errors
+  remain covered by the existing suites. [41 original assertions](evidence/FIX-L3-1/reproducer/browser-results.json),
+  [18 focused browser assertions](evidence/FIX-L3-1/direct/results.json).
+- **SQL-07 Date regression / PASS author**: One real bounded projection returns Date values/null for roots 1–4;
+  native-method projection rejects before SQL. Date column selection renders the original date and null value.
+  [Six SQL assertions](evidence/FIX-L3-1/date-sql.json), [Date column](evidence/FIX-L3-1/direct/date-column.png).
+
+The defect remains OPEN pending independent retest; broader V3, drag, session and final acceptance verdicts are unchanged.
+
 ## Verdict and reading rules
 
 Planning coverage is complete; product acceptance is **NOT_RUN**. The only completed execution gate is VAL-01,

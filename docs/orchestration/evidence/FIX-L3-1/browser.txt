@@ -1,0 +1,1 @@
+{"status":"PASS","assertions":41,"output":"/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L3-1/reproducer","browser":"151.0.7922.34"}

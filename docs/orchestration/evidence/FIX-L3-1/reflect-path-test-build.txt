@@ -1,0 +1,3 @@
+
+> @itrocks/reflect-path@0.3.2 build:test
+> tsc -p tsconfig.test.json

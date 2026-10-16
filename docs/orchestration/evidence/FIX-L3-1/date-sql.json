@@ -1,0 +1,123 @@
+{
+	"checks": [
+		{
+			"name": "Date projection is scalar",
+			"expected": [
+				{
+					"kind": "scalar",
+					"path": "issuedAt"
+				}
+			],
+			"observed": [
+				{
+					"path": "issuedAt",
+					"kind": "scalar"
+				}
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "Original synthetic roots",
+			"expected": [
+				1,
+				2,
+				3,
+				4
+			],
+			"observed": [
+				1,
+				2,
+				3,
+				4
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "Date instances and terminal null",
+			"expected": [
+				true,
+				true,
+				null,
+				true
+			],
+			"observed": [
+				true,
+				true,
+				null,
+				true
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "Original date components",
+			"expected": [
+				[
+					2026,
+					0,
+					1,
+					12
+				],
+				[
+					2026,
+					0,
+					2,
+					12
+				],
+				null,
+				[
+					2026,
+					0,
+					4,
+					12
+				]
+			],
+			"observed": [
+				[
+					2026,
+					0,
+					1,
+					12
+				],
+				[
+					2026,
+					0,
+					2,
+					12
+				],
+				null,
+				[
+					2026,
+					0,
+					4,
+					12
+				]
+			],
+			"status": "PASS"
+		},
+		{
+			"name": "Scalar date target multiplicity",
+			"expected": "one",
+			"observed": "one",
+			"status": "PASS"
+		},
+		{
+			"name": "Invalid scalar traversal executes no query",
+			"expected": 1,
+			"observed": 1,
+			"status": "PASS"
+		}
+	],
+	"statements": [
+		{
+			"sql": "SELECT `t0`.`id` AS `p0`, `t0`.`issued_at` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (?, ?, ?, ?)\nORDER BY `t0`.`id` ASC",
+			"values": [
+				1,
+				2,
+				3,
+				4
+			]
+		}
+	],
+	"status": "PASS",
+	"journal": "2026-10-16T02:05:18.422749Z\t  166 Connect\troot@localhost on property_select_recipe using TCP/IP\n2026-10-16T02:05:18.558430Z\t  166 Query\tSELECT `t0`.`id` AS `p0`, `t0`.`issued_at` AS `p1`\nFROM `ps_invoice` AS `t0`\nWHERE `t0`.`id` IN (1, 2, 3, 4)\nORDER BY `t0`.`id` ASC\n2026-10-16T02:05:18.563267Z\t  166 Quit\t\n"
+}

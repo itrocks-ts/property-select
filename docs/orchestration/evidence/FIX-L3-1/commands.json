@@ -1,0 +1,114 @@
+{
+	"cwd": "/home/baptiste/itrocks/showtime",
+	"final_commands": [
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect run build",
+			"exit_code": 0,
+			"evidence": "reflect-build.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect run build:test",
+			"exit_code": 0,
+			"evidence": "reflect-test-build.txt"
+		},
+		{
+			"command": "node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/test/property-select.test.mjs",
+			"exit_code": 0,
+			"evidence": "reflect-test.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect-path run build",
+			"exit_code": 0,
+			"evidence": "reflect-path-build.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect-path run build:test",
+			"exit_code": 0,
+			"evidence": "reflect-path-test-build.txt"
+		},
+		{
+			"command": "node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path/test/property-select.test.mjs",
+			"exit_code": 0,
+			"evidence": "reflect-path-test.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/framework test",
+			"exit_code": 0,
+			"evidence": "framework-test.txt"
+		},
+		{
+			"command": "node --test --test-isolation=none /home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select-metadata.test.mjs",
+			"exit_code": 0,
+			"evidence": "metadata-test.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/property-select test",
+			"exit_code": 0,
+			"evidence": "selector-test.txt"
+		},
+		{
+			"command": "PS_SEARCH_OUTPUT=/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/evidence/FIX-L3-1/reproducer PS_SEARCH_DIRECTORY=/tmp/property-select-FIX-L3-1 PS_SEARCH_PORT=13850 PS_SEARCH_APP_PORT=13849 node node_modules/@itrocks/property-select/test/browser-search.mjs",
+			"exit_code": 0,
+			"evidence": "browser.txt"
+		},
+		{
+			"command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-L3-1-browser.mjs",
+			"exit_code": 0,
+			"evidence": "direct-browser.txt"
+		},
+		{
+			"command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-L3-1-date.mjs",
+			"exit_code": 0,
+			"evidence": "date-sql.txt"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect pack node_modules/@itrocks/reflect --dry-run --json --ignore-scripts --offline --cache /tmp/property-select-FIX-L3-1-pack-cache",
+			"exit_code": 0,
+			"evidence": "reflect-files.json"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/reflect-path pack node_modules/@itrocks/reflect-path --dry-run --json --ignore-scripts --offline --cache /tmp/property-select-FIX-L3-1-pack-cache",
+			"exit_code": 0,
+			"evidence": "reflect-path-files.json"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/framework pack node_modules/@itrocks/framework --dry-run --json --ignore-scripts --offline --cache /tmp/property-select-FIX-L3-1-pack-cache",
+			"exit_code": 0,
+			"evidence": "framework-files.json"
+		},
+		{
+			"command": "npm --prefix node_modules/@itrocks/property-select pack node_modules/@itrocks/property-select --dry-run --json --ignore-scripts --offline --cache /tmp/property-select-FIX-L3-1-pack-cache",
+			"exit_code": 0,
+			"evidence": "property-select-files.json"
+		},
+		{
+			"command": "python3 node_modules/@itrocks/property-select/docs/orchestration/environment/checks/FIX-L3-1-review.py",
+			"exit_code": 0,
+			"evidence": "review.json"
+		}
+	],
+	"initial_restricted_attempts": [
+		{
+			"command": "original browser reproducer with recorded overrides",
+			"result": "spawnSync git EPERM before services",
+			"resolved": "same command with normal require_escalated"
+		},
+		{
+			"command": "FIX-L3-1-date.mjs",
+			"result": "connect EPERM localhost:13316",
+			"resolved": "same command with normal require_escalated"
+		}
+	],
+	"author_iterations": [
+		"Relative node --test path was not resolved; final checks use documented absolute paths.",
+		"Existing META unknown-target regression caught an overly broad terminal context guard; final guard preserves unknown multiplicity.",
+		"Focused browser driver waited on actual column-add-loading before asserting rendered date/null."
+	],
+	"constraints": {
+		"install_update": false,
+		"implicit_download": false,
+		"vcs_modules": false,
+		"browser_sandbox_disabled": false,
+		"application_source_docs_commits": false
+	}
+}

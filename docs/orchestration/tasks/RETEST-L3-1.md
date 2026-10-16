@@ -16,8 +16,9 @@ Read applicable owner/application instructions and handbook routes, [COMMON.md](
 Write `environment/checks/RETEST-L3-1.mjs`. Use real synthetic HTTP metadata and trusted browser input.
 Check the root `issuedAt` descriptor, terminal path rejection without 500, and ordinary Date selection when supported.
 Open the integrated pane, type `country name`, wait for completion and independently assert matching complete paths,
-usable context, no failed metadata request and no console/page error. Check optional/nullable Date, domain relations
-and explicit inverse facts through the real composed adapter. Replay affected owner suites and the author regression
+usable context, no failed metadata request and no console/page error. Check the corrected `reflect-path` scalar
+multiplicity and static Date-method restrictions, optional/nullable Date, domain relations and explicit inverse facts
+through the real composed adapter. Replay affected owner suites and the author regression
 as supplementary evidence, retaining independent assertions. Verify country control and isolated-server cleanup.
 
 Do not suppress errors, replace the provider or use records/private data as a metadata oracle.

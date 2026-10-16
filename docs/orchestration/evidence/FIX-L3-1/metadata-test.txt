@@ -1,0 +1,14 @@
+✔ META-01 metadata relation facts, inheritance and logical inverse/N-N are serialisable (245.030089ms)
+✔ META-02 same authorisation on enumeration and every full-path prefix; presentation beyond List (3.102857ms)
+✔ META-03 two routes, finite cycles, ambiguous/unknown paths and denied ancestors (104.849712ms)
+✔ META-04 per-instance catalogue change, explicit path grants and aborted authorisation (2.792057ms)
+✔ META-01 composition merges only an unambiguous ownership inverse (3.423532ms)
+✔ META-03 native dates stay terminal and context or method traversal rejects with a path error (7.012805ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 510.95066

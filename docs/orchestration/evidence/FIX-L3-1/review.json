@@ -1,0 +1,98 @@
+{
+	"status": "PASS",
+	"owners": {
+		"reflect": {
+			"base_sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+			"sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+			"version": "0.3.1",
+			"export_targets": [
+				"./cjs/reflect.js",
+				"./esm/reflect.js"
+			],
+			"packaged_files": 25,
+			"source_snapshot_sha256": {
+				"README.md": "26f19593bb9ebe2d12b51058c62157a9a0ede6a04e185bfa8b0a13ac88a0a840",
+				"package.json": "403eacb233f49097b90502abd4c2efd3b5ffa28fe8578a3b18e1da0587a58ecc",
+				"src/relation-fact.ts": "cef0df49095c51d04fa9cae0d9654c6aaedad918becd663411ee9caad06c54fa",
+				"test/fixtures/invoice.ts": "995ef649752ef9e57211d49cc2d53543f7b366e07ebfc804b81eb13a87635c14",
+				"test/property-select.test.mjs": "c6801623b11950d0b2fbefb4638708114e4ff35c71b034c20e9048751ac46800"
+			}
+		},
+		"reflect-path": {
+			"base_sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+			"sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+			"version": "0.3.2",
+			"export_targets": [
+				"./cjs/reflect-path.js"
+			],
+			"packaged_files": 11,
+			"source_snapshot_sha256": {
+				"README.md": "dcf1cb8ec5d21f7f83bcb55e89413c83692ea2252087ac5cf498807b259940b3",
+				"package.json": "211f1122e3803d7e9f53bad6b5688113ab9c440d6376292afaa9fc185244c4c2",
+				"src/resolve-property-path.ts": "e82d609d765418f9de14539b7a4e115b963263624abaa1fc4dee95912823f523",
+				"src/types.ts": "a8aa9b96e709257214f1ed6c46067388df1baf831f3634e44c03a062697edc66",
+				"test/fixtures/invoice.ts": "ea3b6434b5eae7e1a6ff983b67b49748e8479bc376edcd2780bdf9a7c60b1b15",
+				"test/property-select.test.mjs": "1365e1ed191e4cd8d8769173cef85602ed9e7f625be273b249c167f434cae523",
+				"test/types.ts": "5437d2ebf759bd2d494f49d30a769a8b1241ddb3902cbb0828ccea723050b59b"
+			}
+		},
+		"framework": {
+			"base_sha": "7a302cd606ff007276038ada4d12fc0bd2161d54",
+			"sha": "e5d976aafce2c09266381c643d2cfe6788eb0014",
+			"version": "0.10.3",
+			"export_targets": [
+				"./cjs/framework.js",
+				"./cjs/property-select-actions.js",
+				"./cjs/property-select.js",
+				"./cjs/sql-projection.js",
+				"./cjs/sql-relationships.js",
+				"./property-select-list.js",
+				"./property-select-metadata.js"
+			],
+			"packaged_files": 44,
+			"source_snapshot_sha256": {
+				"docs/property-select.md": "54a4ccc781e2f4419d3d28b8ba71d0b09253b6f3ab91b529b5ddb2ccb3f3fc1f",
+				"package.json": "205da2fa3d8c65f4597337bd2eef2bd05f4333987eae4e689089b2a4560f2ff8",
+				"src/property-select-provider.ts": "a9cd46b8fe88461a1c22265a9c4d62e6f51bad98d2e855d35a7ee7d67a474352",
+				"test/fixtures/metadata.ts": "6ed4ad5f36ad05a2a01292869f6477c3799bcf61eb88ce284bec2b56f383ea24",
+				"test/property-select-metadata.test.mjs": "c844283b858cd4e7a7a8f90a0dd8117daf0a08745507156edaf463ab3e9fb7bd"
+			}
+		},
+		"property-select": {
+			"base_sha": "1ddb156fe92edbb7bbae8a43451bbcc47d4eff9d",
+			"sha": "1ddb156fe92edbb7bbae8a43451bbcc47d4eff9d",
+			"version": "0.4.1",
+			"export_targets": [
+				"./cjs/property-select.js",
+				"./front/property-select.css",
+				"./front/property-select.d.ts",
+				"./front/property-select.html",
+				"./front/property-select.js",
+				"./property-select.d.ts",
+				"./property-select.js"
+			],
+			"packaged_files": 1026,
+			"source_snapshot_sha256": {}
+		}
+	},
+	"solid": {
+		"relation_classification": "reflect targetFacts retains property-type TypeType for converters",
+		"path_contract": "reflect-path owns runtime multiplicity and native Date typed-path exclusion",
+		"metadata_transport": "framework maps known terminal context to existing MetadataError/400",
+		"selector": "runtime source unchanged; no Date exception, fixture filter or swallowed error",
+		"substitution": "existing custom/deferred metadata, public ports and inverse/cardinality suites pass"
+	},
+	"generated_files": "PASS: changed source present in emitted CJS/ESM/declarations; public targets packaged",
+	"framework_documentation_followups": "Runtime src/test diff is empty after source commit d5024b5",
+	"application": {
+		"sha": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+		"status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt",
+		"staged_blobs": {
+			"audit-itrocks-dependencies.json": "ff4dc939cce17af3aa7c14d8063034c5cc85b867",
+			"audit-itrocks-dependencies.txt": "de960a87ea9b4f6eb1cece85ab32596baef11fcd"
+		},
+		"working_files_absent": true
+	},
+	"owned_process_records": "PASS: all author app/standalone PID and owner files removed by controller",
+	"documentation_and_code_widths": "PASS for task additions; existing README badges remain unchanged"
+}
