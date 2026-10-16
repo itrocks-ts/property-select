@@ -2,6 +2,7 @@ import { PropertySelect } from '@itrocks/property-select'
 import { StateConflictError } from '@itrocks/property-select'
 import { FileStore } from '@itrocks/fastify-file-session-store'
 import assert from 'node:assert/strict'
+import { mkdir } from 'node:fs/promises'
 import { mkdtemp } from 'node:fs/promises'
 import { writeFile } from 'node:fs/promises'
 import { setTimeout as delay } from 'node:timers/promises'
@@ -94,6 +95,8 @@ await set(left, loaded)
 check('same id different stores isolate cache', (await get(right)).propertySelect.marker, 'right')
 check('nested mutation is durably saved',
 	(await get(new FileStore(root + '/left'))).propertySelect.marker, 'changed-left')
-await writeFile('node_modules/@itrocks/property-select/docs/orchestration/evidence/V4/contracts.json',
+const output = process.env.PS_V4_OUTPUT || 'node_modules/@itrocks/property-select/docs/orchestration/evidence/V4'
+await mkdir(output, { recursive: true })
+await writeFile(output + '/contracts.json',
 	JSON.stringify({ status: 'PASS', observations }, null, 2) + '\n')
 console.log(`PASS ${observations.length} independent contract assertions`)

@@ -1,5 +1,22 @@
 # Phase 1 validation matrix
 
+## FIX-V4-1 author correction observations
+
+**DONE (author)**, Fastify `aca7bf377b0fd543c15004df3ebfb71fd10ab65f` / **0.4.1**, tracking **0.5.2**.
+[Report](reports/FIX-V4-1.md), [strict before](evidence/FIX-V4-1/before/revocation.json),
+[strict after](evidence/FIX-V4-1/after/revocation.json), [V4 replay](evidence/FIX-V4-1/browser/results.json),
+[additional browser observations](evidence/FIX-V4-1/additional/results.json).
+
+- PORT-08 / DEP-05 / STA-03: acquired production PUT returns 410 after revoke and expiry; stale Retry cannot persist.
+  Reload guidance, full reload recovery and absence of obsolete state after a real process restart pass.
+- T04/T14–T17 / PORT-05/07/08/09 / META-04: 84 strict V4 assertions pass in both environments at all four sizes.
+  Thirty additional desktop assertions cover native wheel restore, actual saved list column configuration, removed
+  catalogue truncation/search restart, ordinary visible storage failure/Retry and browser expiry recovery.
+- Public contracts: 14 assertions pass; Fastify 12, file store 9, selector 29 and list state 2 tests pass. Ordinary
+  transaction/autosave failures remain 500, concurrent regeneration survives, and public builds/exports pass.
+- V4 remains **NEEDS_FIX** historically; independent **RETEST-V4-1 is PENDING** and L5 remains blocked.
+  These author observations do not close combined requirements or substitute for independent verification.
+
 ## V4 independent session observations
 
 Gate: **NEEDS_FIX**, selector base `0dd1a69163c37632e5433dd471365ce57feac0d1` / 0.5.0, tracking 0.5.1.

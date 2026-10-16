@@ -3,7 +3,7 @@
 ## Objective and prerequisite
 
 Correct [V4-01](../defects/V4-01.md). Prerequisite: completed V4 diagnostic report, under the correction exception in
-[EXECUTION.md](../EXECUTION.md). Status: `PENDING`.
+[EXECUTION.md](../EXECUTION.md). Status: `DONE (author)`; see [report](../reports/FIX-V4-1.md).
 Read application/owner instructions, handbook routes, owner READMEs, [COMMON.md](../COMMON.md),
 [CONTRACTS.md](../CONTRACTS.md), [SELECT-CONTRACT.md](../SELECT-CONTRACT.md),
 [VALIDATION.md](../VALIDATION.md), [ENVIRONMENT.md](../ENVIRONMENT.md),

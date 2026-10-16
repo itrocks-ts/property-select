@@ -11,7 +11,7 @@ const { chromium } = require(process.env.PS_PLAYWRIGHT_MODULE
 	|| '/home/baptiste/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright')
 const owner = resolve('node_modules/@itrocks/property-select')
 const recipe = `${owner}/docs/orchestration/environment`
-const output = `${owner}/docs/orchestration/evidence/V4`
+const output = process.env.PS_V4_OUTPUT || `${owner}/docs/orchestration/evidence/V4`
 const directory = process.env.PS_V4_DIRECTORY || '/tmp/property-select/V4'
 const app = 'http://127.0.0.1:13911'
 const standalone = 'http://127.0.0.1:13912'

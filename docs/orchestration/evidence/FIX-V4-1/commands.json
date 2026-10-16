@@ -1,0 +1,44 @@
+[
+  {
+    "command": "npm --prefix node_modules/@itrocks/fastify test",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "fastify-test.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/fastify-file-session-store test",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "file-store-test.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/property-select test",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "property-select-test.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/list run build",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-build.txt"
+  },
+  {
+    "command": "npm --prefix node_modules/@itrocks/framework run build",
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-build.txt"
+  },
+  {
+    "command": "node --test --test-isolation=none test/selector-state.test.mjs",
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "exit": 0,
+    "output": "list-state-test.txt"
+  },
+  {
+    "command": "node /tmp/fix-v4-public-review.cjs",
+    "exit": 0,
+    "output": "public-review.json",
+    "notes": "npm pack --dry-run --json --ignore-scripts, temporary cache; checks exports, files and resolved entry paths"
+  }
+]

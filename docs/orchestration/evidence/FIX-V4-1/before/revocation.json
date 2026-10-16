@@ -1,0 +1,113 @@
+{
+  "assertions": [
+    {
+      "name": "revoke: production action preserves stale-session 410",
+      "actual": 500,
+      "expected": 410,
+      "status": "FAIL"
+    },
+    {
+      "name": "revoke: newly arriving old generation is 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: new request succeeds after restart",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no obsolete state resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: fresh generation remains writable",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: production action preserves stale-session 410",
+      "actual": 500,
+      "expected": 410,
+      "status": "FAIL"
+    },
+    {
+      "name": "expire: newly arriving old generation is 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: new request succeeds after restart",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no obsolete state resurrected",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: fresh generation remains writable",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "output": "PASS: owned app 2481269 stopped\n"
+    },
+    {
+      "action": "app",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "output": "PASS: owned app 2481399 stopped\n"
+    },
+    {
+      "action": "app",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "output": "PASS: owned app 2481529 stopped\n"
+    }
+  ],
+  "requests": [
+    {
+      "operation": "revoke",
+      "method": "PUT",
+      "url": "http://127.0.0.1:13911/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "code": "SESSION_STALE",
+        "error": "Internal Server Error",
+        "message": "The session has expired or been revoked"
+      }
+    },
+    {
+      "operation": "expire",
+      "method": "PUT",
+      "url": "http://127.0.0.1:13911/property-select/state/json?key=%2Fproperty-select-invoice%2Flist",
+      "status": 500,
+      "body": {
+        "statusCode": 500,
+        "code": "SESSION_STALE",
+        "error": "Internal Server Error",
+        "message": "The session has expired or been revoked"
+      }
+    }
+  ],
+  "status": "NEEDS_FIX"
+}

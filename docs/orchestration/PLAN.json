@@ -1740,7 +1740,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "correction",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Session generations, response autosave and durable HTTP error handling require cross-owner verification.",
@@ -1757,7 +1757,20 @@
         "PORT-08",
         "PORT-09",
         "VAL-07"
-      ]
+      ],
+      "validation": "PASS author: strict pre-fix revoke/expiry failures reproduced; corrected production PUT 410 in both cases, durable process restart, 84 V4 browser and 30 additional browser assertions, 14 contracts, Fastify 12/store 9/selector 29/list state 2 tests. V4 remains NEEDS_FIX until independent RETEST-V4-1.",
+      "evidence": [
+        "evidence/FIX-V4-1/before/revocation.json",
+        "evidence/FIX-V4-1/after/revocation.json",
+        "evidence/FIX-V4-1/browser/results.json",
+        "evidence/FIX-V4-1/additional/results.json",
+        "evidence/FIX-V4-1/contracts/contracts.json",
+        "evidence/FIX-V4-1/commands.json",
+        "evidence/FIX-V4-1/public-review.json"
+      ],
+      "owner_commits": {
+        "@itrocks/fastify": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f"
+      }
     },
     {
       "id": "RETEST-V4-1",

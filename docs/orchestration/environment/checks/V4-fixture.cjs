@@ -5,6 +5,7 @@ const { sessionTransaction } = require('@itrocks/fastify')
 const parent = require('../session/fixture.cjs')
 const gates = new Map()
 let armed
+let failing = false
 class V4Fixture extends Action
 {
 
@@ -12,6 +13,10 @@ class V4Fixture extends Action
 	{
 		const input = request.data
 		const session = request.request.session
+		if (input.operation === 'failure') {
+			failing = input.enabled === true
+			return this.jsonResponse({ failing })
+		}
 		if (input.operation === 'arm') {
 			armed = input.id
 			return this.jsonResponse({ armed })
@@ -42,6 +47,7 @@ class V4Fixture extends Action
 module.exports = { V4Fixture }
 module.exports.ready = parent.ready.then(() => {
 	listStateDependsOn({ transaction: async (session, operation) => {
+		if (failing) throw Object.assign(new Error('Synthetic transaction storage failure'), { code: 'EIO' })
 		if (armed) {
 			const id = armed
 			armed = undefined

@@ -1,0 +1,350 @@
+{
+  "assertions": [
+    {
+      "name": "revoke: session ends",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: acquired browser PUT is 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: browser requests Reload",
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry is still 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: stale Retry creates no state",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: no state after process restart",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: full reload clears local query",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "revoke: current generation persists",
+      "actual": "recovered-revoke",
+      "expected": "recovered-revoke",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: session ends",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: acquired browser PUT is 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: browser requests Reload",
+      "actual": "The selector session has ended. Reload the page.",
+      "expected": "The selector session has ended. Reload the page.",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry is still 410",
+      "actual": 410,
+      "expected": 410,
+      "status": "PASS"
+    },
+    {
+      "name": "expire: stale Retry creates no state",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: no state after process restart",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: full reload clears local query",
+      "actual": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "name": "expire: current generation persists",
+      "actual": "recovered-expire",
+      "expected": "recovered-expire",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary transaction error is 500",
+      "actual": 500,
+      "expected": 500,
+      "status": "PASS"
+    },
+    {
+      "name": "failed save retains local input",
+      "actual": "retry-storage-failure",
+      "expected": "retry-storage-failure",
+      "status": "PASS"
+    },
+    {
+      "name": "ordinary Retry succeeds",
+      "actual": 200,
+      "expected": 200,
+      "status": "PASS"
+    },
+    {
+      "name": "save real list configuration",
+      "actual": 204,
+      "expected": 204,
+      "status": "PASS"
+    },
+    {
+      "name": "configuration reload renders saved columns",
+      "actual": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city.name"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "configuration refresh keeps recent and updates used branch",
+      "actual": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "expected": [
+        "customer",
+        "customer.address.city",
+        "customer.address",
+        "deliveryAddress",
+        "tags"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "fold retains native wheel position",
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "reload restores native wheel position",
+      "actual": 400,
+      "expected": 400,
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata truncates remembered branch",
+      "actual": [
+        "",
+        "customer"
+      ],
+      "expected": [
+        "",
+        "customer"
+      ],
+      "status": "PASS"
+    },
+    {
+      "name": "removed metadata drops advice",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "truncation preserves and restarts search",
+      "actual": "name",
+      "expected": "name",
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search contains allowed local result",
+      "actual": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "name": "restarted search excludes removed paths",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "name": "page exceptions",
+      "actual": [],
+      "expected": [],
+      "status": "PASS"
+    }
+  ],
+  "commands": [
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": "PASS: owned app 2484455 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": "PASS: owned app 2484765 stopped\n"
+    },
+    {
+      "action": "app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": ""
+    },
+    {
+      "action": "stop-app",
+      "directory": "/tmp/property-select/FIX-V4-1-additional",
+      "output": "PASS: owned app 2484991 stopped\n"
+    }
+  ],
+  "errors": [],
+  "responses": [
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 410
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 500
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    },
+    {
+      "method": "PUT",
+      "status": 200
+    }
+  ],
+  "screenshots": [
+    "revoke-reload-guidance.png",
+    "expire-reload-guidance.png",
+    "ordinary-storage-failure.png",
+    "restored-search.png"
+  ],
+  "url": "http://127.0.0.1:13911/property-select-invoice",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  },
+  "input": "mouse/keyboard",
+  "seed": "synthetic invoice fixture; existing database 13316",
+  "browser": "151.0.7922.34",
+  "status": "PASS"
+}

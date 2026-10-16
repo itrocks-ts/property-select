@@ -1,0 +1,27 @@
+
+> @itrocks/fastify-file-session-store@0.4.0 test
+> npm run build && node --test --test-isolation=none test/*.test.js
+
+
+> @itrocks/fastify-file-session-store@0.4.0 build
+> tsc
+
+▶ FileStore
+  ✔ creates private storage and revokes sessions idempotently (4.306143ms)
+  ✔ lists stored sessions for transport-neutral management (2.993177ms)
+✔ FileStore (8.636687ms)
+✔ nested mutation is durable and store instances never share cached identity (3.177641ms)
+✔ concurrent autosaves merge changed leaves and transactions retain every namespace (3.751208ms)
+✔ revocation, expiry and missing reload reject every stale generation (55.223257ms)
+✔ failed durable writes do not publish mutated snapshots or retain locks (3.368457ms)
+✔ malformed storage rejects rather than recreating an authoritative session (1.18212ms)
+✔ expiry during an outstanding transaction rejects its commit (82.388999ms)
+✔ concurrent transactions using the same request object preserve both queued updates (4.577936ms)
+ℹ tests 9
+ℹ suites 1
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 186.26136

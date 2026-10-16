@@ -1,0 +1,36 @@
+
+> @itrocks/fastify@0.4.1 test
+> npm run build && node --test --test-isolation=none test/*.test.js
+
+
+> @itrocks/fastify@0.4.1 build
+> tsc
+
+✔ actual HTTP preserves handled expiry and revoke errors without response autosave or cookie renewal (202.940249ms)
+[itrocks-fastify] Request failed { code: 'EIO', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'EIO', name: 'Error', statusCode: undefined }
+✔ ordinary transaction and response storage failures remain visible through actual HTTP (15.945126ms)
+✔ a late stale transaction does not detach a regenerated request session (12.156625ms)
+▶ Fastify front script allowlist
+  ✔ serves only public asset types and configured scripts (14.285945ms)
+  ✔ discovers bounded imports and escaped configured calls inside the asset path (1.639653ms)
+  ✔ resolves recursive public dependencies before a restarted browser requests cached parents (7.34471ms)
+  ✔ ignores a source file outside the asset path (0.857998ms)
+✔ Fastify front script allowlist (24.661091ms)
+▶ Fastify session integration
+  ✔ rejects cross-origin mutations and adds configured response headers (3.888141ms)
+  ✔ keeps the transport-neutral session attached after regeneration (0.390377ms)
+  ✔ sets expiring HttpOnly SameSite cookies and Secure over HTTPS (2.978008ms)
+  ✔ preserves proxy-friendly generic cookie defaults (3.123716ms)
+✔ Fastify session integration (10.886377ms)
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }
+[itrocks-fastify] Request failed { code: 'SESSION_STALE', name: 'Error', statusCode: undefined }
+✔ actual request bridge coordinates response autosave, selectors, lists, restart and revoke (20.060121ms)
+ℹ tests 12
+ℹ suites 2
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 383.403785

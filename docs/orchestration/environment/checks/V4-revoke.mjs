@@ -3,14 +3,16 @@ import { execFileSync } from 'node:child_process'
 import { createRequire } from 'node:module'
 import { resolve } from 'node:path'
 import { setTimeout as delay } from 'node:timers/promises'
-import { writeFileSync } from 'node:fs'
+import { mkdirSync, writeFileSync } from 'node:fs'
 const require = createRequire(import.meta.url)
 const { request } = require('/home/baptiste/.cache/codex-runtimes/codex-primary-runtime'
 	+ '/dependencies/node/node_modules/playwright')
 const owner = resolve('node_modules/@itrocks/property-select')
 const recipe = owner + '/docs/orchestration/environment'
 const app = 'http://127.0.0.1:13911'
-const directory = '/tmp/property-select/V4-revoke'
+const directory = process.env.PS_V4_DIRECTORY || '/tmp/property-select/V4-revoke'
+const output = process.env.PS_V4_OUTPUT || owner + '/docs/orchestration/evidence/V4'
+mkdirSync(output, { recursive: true })
 const env = { ...process.env, PS_ENV_DIRECTORY: directory, PS_APP_PORT: '13911',
 	PS_FRAMEWORK_INITIALIZER: recipe + '/checks/V4-fixture.cjs' }
 const endpoint = app + '/property-select/state/json?key=%2Fproperty-select-invoice%2Flist'
@@ -93,7 +95,7 @@ finally {
 	if (started) command('stop-app')
 	results.status = results.failure ? 'FAILED'
 		: results.assertions.some(item => item.status === 'FAIL') ? 'NEEDS_FIX' : 'PASS'
-	writeFileSync(owner + '/docs/orchestration/evidence/V4/revocation.json', JSON.stringify(results, null, 2) + '\n')
+	writeFileSync(output + '/revocation.json', JSON.stringify(results, null, 2) + '\n')
 	console.log(JSON.stringify(results.assertions))
 	if (results.status !== 'PASS') process.exitCode = 1
 }
