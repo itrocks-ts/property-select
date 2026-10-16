@@ -181,33 +181,7 @@ acknowledgements and releases subscriptions. Cancellation is advisory; generatio
 
 The remaining exported aliases are `Cardinality`, `InteractionId`, `PropertyPath`, `RootId` and `TypeId`.
 The shared metadata, selection, consumer, outcome, pointer and state interfaces are exported from both entries.
-See the [architecture contracts](docs/orchestration/CONTRACTS.md) for their structural payloads.
-
-## Build and verification
-
-With the compiler and preparation utility already available, `npm run build` creates CJS in `cjs/` and browser ESM
-and declarations at the package root. Generated files are ignored. `npm test` rebuilds, checks public TypeScript
-imports and runs the Node contract suite. The reusable `test/fixtures/static-graph.mjs` and non-table
-recording consumer are test resources, outside the published runtime.
-`test/search.test.mjs` covers normalised matching, scope, path identity, known/unknown cycles, reversed and delayed
-providers and a large cyclic graph. `test/browser-search.mjs` owns local recipe servers, exercises actual browser
-inputs and records author evidence in [the L3 report](docs/orchestration/reports/L3.md).
-The separate `test/browser-ui.mjs` drives the standalone demo through real mouse, keyboard and emulated touch input;
-its author evidence and ownership-checked launch recipe are in
-[the L2-UI report](docs/orchestration/reports/L2-UI.md).
-The separate `test/browser-smoke.mjs` imports the actual public entry in sandboxed Chromium; set
-`PS_PLAYWRIGHT_MODULE` to an existing Playwright module. It starts and closes its own ephemeral localhost server.
-
-Read the [functional specifications](docs/it-rocks-selecteur-relationnel-specifications.md), written in French.
-They cover navigation, search, suggestions, session state, desktop and touch interactions,
-and the first integration with table column selection.
-The [orchestration prompt](docs/itrocks-property-select-prompt-orchestrateur.md) describes the preparation and execution
-workflow in French.
-The [dependency and integration contracts](docs/dependencies.md), also in French, define the package boundaries,
-framework bindings and standalone use required by the development plan.
-The [validation and autonomous delivery protocol](docs/validation.md), also in French, requires progressive browser
-checks, independent verification and correction tasks before delivery.
-The [data selection contract](docs/select.md) specifies the storage and SQL work required for related columns.
+Their structural payloads are available in the published TypeScript declarations.
 
 ## Licence
 
@@ -236,4 +210,3 @@ and pinch zoom remain native; a second contact abandons pending or active transp
 breadcrumb keeps native touch navigation and mouse/pen transport. Touch users can transport the same object through
 its relation row or result segment. Relation plus controls remain visible on devices with any coarse pointer.
 A new primary contact resets residual-click suppression, including contacts outside the selector.
-The standalone demonstration records begin/move/end/cancel intentions without importing table, list, home or framework.
