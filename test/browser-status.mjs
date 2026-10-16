@@ -23,10 +23,10 @@ try {
 		let reject = true, failSave = false, holdSelection = false, revision = 0, completeSelection
 		let rejection = Error('Column failed'), storageError = Error('Storage failed')
 		const terminal = { kind: 'terminal', label: 'Note', name: 'note', order: 0, path: 'note' }
-		const relation = { kind: 'relation', label: 'Child', name: 'child', order: 1, path: 'child', target: 'Child' }
+		const relation = { kind: 'relation', label: 'Loaned to', name: 'child', order: 1, path: 'child', target: 'Child' }
 		const metadata = {
 			async context(_root, path) {
-				return { label: 'Example', path, properties: path ? [{ ...terminal, path: 'child.note' }]
+				return { label: path ? 'Friend' : 'Film', path, properties: path ? [{ ...terminal, path: 'child.note' }]
 					: [terminal, relation], type: 'Example' }
 			},
 			async resolve(_root, path) { return path === 'child' ? relation : { ...terminal, path } }
@@ -50,6 +50,8 @@ try {
 		const status = () => host.querySelector('.ps-status').textContent
 		try {
 			await view.mount()
+			check('restored breadcrumb retains the root and relation labels',
+				[...host.querySelectorAll('.ps-level')].map(level => level.textContent), ['Film', 'Loaned to'])
 			await view.selector.flushState()
 			const before = view.selector.snapshot()
 			await view.selector.select('child.note')

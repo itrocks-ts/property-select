@@ -242,11 +242,13 @@ export class PropertySelectView
 			this.status!.textContent = this.operationError
 		if (!context)
 			return
-		if (!this.labels.has(context.path))
-			this.labels.set(context.path, context.label || context.type)
-		for (const property of context.properties)
-			if (property.kind === 'relation')
-				this.labels.set(property.path, property.label || property.name)
+		for (const item of this.selector.branchContexts) {
+			if (!this.labels.has(item.path))
+				this.labels.set(item.path, item.label || item.type)
+			for (const property of item.properties)
+				if (property.kind === 'relation')
+					this.labels.set(property.path, property.label || property.name)
+		}
 		const searchScope = (search.status !== 'idle') && (search.visited > 0) && (this.selector.status !== 'loading')
 			? JSON.stringify([context.path, state.query]) : ''
 		const retainFocus = !!searchScope && (searchScope === this.searchScope)

@@ -81,6 +81,10 @@ test('T16/T17: restore deep remembered branch, current/query/scroll and discard 
 	await second.mount()
 	assert.deepEqual(second.snapshot(), saved)
 	assert.equal(second.path, 'customer.address')
+	assert.deepEqual(second.branchContexts.map(context => [context.path, context.label]), [
+		['', 'Invoice'], ['customer', 'Customer'], ['customer.address', 'Address'],
+		['customer.address.city', 'City'], ['customer.address.city.country', 'Country']
+	])
 	const provider = staticProvider()
 	const context = provider.context.bind(provider)
 	provider.context = async (...args) => {

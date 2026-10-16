@@ -100,6 +100,11 @@ export class PropertySelect
 		return [...this.adviceValue]
 	}
 
+	get branchContexts(): readonly ObjectContext[]
+	{
+		return this.navigation.branchContexts
+	}
+
 	get context(): ObjectContext | undefined
 	{
 		return this.navigation.context

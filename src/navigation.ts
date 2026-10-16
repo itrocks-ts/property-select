@@ -31,6 +31,13 @@ export class Navigation
 		return [...this.branchValue]
 	}
 
+	get branchContexts(): readonly ObjectContext[]
+	{
+		const paths = ['', ...this.branchValue.map((_, index) => this.branchValue.slice(0, index + 1).join('.'))]
+		return paths.map(path => this.contexts.get(path)).filter((item): item is ObjectContext => !!item)
+			.map(item => structuredClone(item))
+	}
+
 	get context(): ObjectContext | undefined
 	{
 		return this.contextValue && structuredClone(this.contextValue)
@@ -53,10 +60,7 @@ export class Navigation
 
 	get trail(): readonly ObjectContext[]
 	{
-		const paths = ['', ...this.path.split('.').filter(Boolean).map((_, index, parts) =>
-			parts.slice(0, index + 1).join('.'))]
-		return paths.map(path => this.contexts.get(path)).filter((item): item is ObjectContext => !!item)
-			.map(item => structuredClone(item))
+		return this.branchContexts.slice(0, this.currentValue + 1)
 	}
 
 	dispose(): void

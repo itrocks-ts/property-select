@@ -111,6 +111,8 @@ Root is navigable and cannot be selected or transported.
 Invalid configuration/path syntax throws.
 `context`, `path` and `status` expose the current object and lifecycle:
 `idle`, `loading`, `ready`, `error` or `disposed`.
+`branchContexts` exposes the loaded contexts from the root through the remembered branch, including descendants of
+the current object, so a reopened view can recover every breadcrumb label.
 A context failure preserves the preceding object, branch and current depth. Late responses cannot replace newer work.
 
 `snapshot(): SelectorState` returns a detached, JSON-serialisable version-1 state: remembered `branch`, `current` depth,
