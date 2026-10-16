@@ -1,0 +1,226 @@
+[
+  {
+    "name": "property-select",
+    "version": "0.7.8",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/cjs/property-select.js",
+    "checked": [
+      "property-select.d.ts",
+      "property-select.js",
+      "cjs/property-select.js",
+      "front/property-select.css",
+      "front/property-select.html",
+      "front/property-select.d.ts",
+      "front/property-select.js",
+      "front/pointer-transport.js"
+    ],
+    "fileCount": 3597,
+    "hashes": {
+      "property-select.d.ts": "79d490f4e974c281557419834cd8ae5edd5ef3e30ad2a515aaa5d787d1d8a7e5",
+      "property-select.js": "cb029fdd061f741d34bc4649970dd5398607b5857ba3720fa64f8640945c0e5d",
+      "cjs/property-select.js": "6845cf0043715e09a15595db3ed7f83d9ee348c18aba3c5cd62bffe93a97ce8d",
+      "front/property-select.css": "3cb7f9f74cbde901aaba1eb3493f0af485939c2e7312dfbf155d84210c1bc186",
+      "front/property-select.html": "0a512968c78bcea8a3201025ad4e115c1595cda1df7ea61dba66fc0a420f28b5",
+      "front/property-select.d.ts": "a5a80df32d2da404bef8d36d0acd911d32e65bf3564ad5b896138ce44bd15597",
+      "front/property-select.js": "50033d9cfd6206663a8f3d4a294cf51179176fad0fdb977700daa4cc9e7cabbe",
+      "front/pointer-transport.js": "65b606a5a96b26d97c00aca7b070b62e195a778d393303d9c59bb445d0c7952b"
+    }
+  },
+  {
+    "name": "list",
+    "version": "0.12.1",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/cjs/list.js",
+    "checked": [
+      "cjs/list.js",
+      "cjs/projection.js",
+      "property-select.js",
+      "cjs/selector-state.js",
+      "selector-state.js",
+      "list.css",
+      "column-move.svg",
+      "column-remove.svg"
+    ],
+    "fileCount": 47,
+    "hashes": {
+      "cjs/list.js": "b0941e4815d4290d49c1b18ec7a8f94754073f213ac102dcf26609dfd7e87bb3",
+      "cjs/projection.js": "9fdc354fbe386cfc75889b5b5bb7ba7f5ce9023d7d178785dc430a3112f6d9af",
+      "property-select.js": "4383040f54ecbda242a9ce57debb38fd4019b1a0849b0e3b0d9695f2d513a0be",
+      "cjs/selector-state.js": "c5e442b9f0c8e99984f28a7bd10e7f225626481b6b31e4cb7e83c935b59c2568",
+      "selector-state.js": "83c26018f6686beeb384eeaa36e149335cee440c671d35b35530a95d2436a2c1",
+      "list.css": "bc037e469e864262a648e91eb9a0243137dc09ec52525e40dec0b821c0970583",
+      "column-move.svg": "e324d4d3d5c7332400d13fd6ce65f4a806c5a8ef5d82498241dd3552fdf906f2",
+      "column-remove.svg": "f89f8c89bc418a9215432119ba2b56fc117a4f1d471745fadc73cb50ff5ffeb1"
+    }
+  },
+  {
+    "name": "table",
+    "version": "0.4.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table/column-add.js",
+    "checked": [
+      "column-add.js",
+      "column-add.d.ts",
+      "column-add.css",
+      "column-reorder.js"
+    ],
+    "fileCount": 32,
+    "hashes": {
+      "column-add.js": "a97653fefcc7b8773d589f1c53ce5f4b4e5c04ba65c39637664a1e5c68e40b2b",
+      "column-add.d.ts": "08a7e834565081cb006a9ea0ecddd7d483a7b928ec806565d4714d8f097d1740",
+      "column-add.css": "5dabe936509b389b8b544db387522360221ac4ec7ad1a7df461dd6f185af1c04",
+      "column-reorder.js": "ef34bcabda84291d4b31b727d7cdb15b310f2204b56cede8240440afb0414c0a"
+    }
+  },
+  {
+    "name": "home",
+    "version": "0.7.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home/cjs/output.js",
+    "checked": [
+      "cjs/output.js",
+      "right-pane.css",
+      "right-pane.d.ts",
+      "right-pane.js",
+      "cjs/output.html"
+    ],
+    "fileCount": 13,
+    "hashes": {
+      "cjs/output.js": "91afd1e3995bed934bbc177f7af445b9b3a2c36edaa7c3c66762b625a43db7bb",
+      "right-pane.css": "56030f82d7bb7abbe5675b631d443f0dff9ec4bcca5a52da8ce1e5a284389f9c",
+      "right-pane.d.ts": "863d541dcdcb7078502818aa0dd3bdd0d7fedce01a01f7f21aea31fb2b6fd20c",
+      "right-pane.js": "f2d1e495fa77d01ee57309c9f1c17c724842b5747649bc301958f7ffaa0c8859",
+      "cjs/output.html": "1b9ed0b64a2aaca3ef015c400815ff1294c9b9ef9af65aa141340482c92b7dc8"
+    }
+  },
+  {
+    "name": "framework",
+    "version": "0.11.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/cjs/framework.js",
+    "checked": [
+      "cjs/framework.js",
+      "cjs/property-select.js",
+      "cjs/property-select-actions.js",
+      "property-select-list.js",
+      "property-select-metadata.js",
+      "cjs/sql-projection.js",
+      "cjs/sql-relationships.js"
+    ],
+    "fileCount": 44,
+    "hashes": {
+      "cjs/framework.js": "bff174ec59a80c1a3e5e14c1f21ea96ff39d49d0c02ed5b7948ba25924d001d9",
+      "cjs/property-select.js": "24a19df930bd379cc7fb7cc13b15d974c482a458c9a405be032af4a392de3131",
+      "cjs/property-select-actions.js": "8f0981ff2fcf891f56c1c6194d005f1d643d81a2b19c8f7b43f53a5821f9ab33",
+      "property-select-list.js": "041ce7493c32a79eb7e479e93692bc9f2be90a5e4ec4cf6414a2ea30edd698f3",
+      "property-select-metadata.js": "fee51c525c477fa5721266fc78312ffbe5b9b1f23f50633baa4b25119231dc1e",
+      "cjs/sql-projection.js": "54b7176c86ce1a5ed277e03e0a7d2886868c039f0ba680b27a2feebfbf33fb45",
+      "cjs/sql-relationships.js": "5046560818fb195647b2af9fcbab43a071968fe085f94b1895047b8643d96387"
+    }
+  },
+  {
+    "name": "reflect",
+    "version": "0.3.1",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect/cjs/reflect.js",
+    "checked": [
+      "esm/reflect.js",
+      "cjs/reflect.js"
+    ],
+    "fileCount": 25,
+    "hashes": {
+      "esm/reflect.js": "768d3a771cd4f37f7d49327a48ae2dbb1080e0862f3e3e15893dd6004543f4dc",
+      "cjs/reflect.js": "cf621d9c92feeba75db0bc2acb765886dd727f6adb2d39acf8d664f0a401c372"
+    }
+  },
+  {
+    "name": "reflect-path",
+    "version": "0.3.2",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path/cjs/reflect-path.js",
+    "checked": [
+      "cjs/reflect-path.js"
+    ],
+    "fileCount": 11,
+    "hashes": {
+      "cjs/reflect-path.js": "6f5e21b2c8eeca388ce1fb1ebef2b56764d016923819ee28c2424842ea080ba7"
+    }
+  },
+  {
+    "name": "storage",
+    "version": "0.3.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/storage/cjs/storage.js",
+    "checked": [
+      "cjs/storage.js"
+    ],
+    "fileCount": 21,
+    "hashes": {
+      "cjs/storage.js": "532bdb41bfd720f6d64f9e28ff2e9199aab06ce8f68c7d8facb2819eb93ddfec"
+    }
+  },
+  {
+    "name": "sql-build",
+    "version": "0.2.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build/cjs/sql-build.js",
+    "checked": [
+      "cjs/sql-build.js"
+    ],
+    "fileCount": 28,
+    "hashes": {
+      "cjs/sql-build.js": "b2801cab62500e78b49a385d710913926f333eb9bb99cec6e651f50fdc223c59"
+    }
+  },
+  {
+    "name": "sql-join",
+    "version": "0.2.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-join/cjs/sql-join.js",
+    "checked": [
+      "cjs/sql-join.js"
+    ],
+    "fileCount": 18,
+    "hashes": {
+      "cjs/sql-join.js": "cfeea4be4655f95494cd12ffa9b3da12c73244516a6bfd74dd8cf19981997829"
+    }
+  },
+  {
+    "name": "mysql",
+    "version": "0.3.2",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/mysql/cjs/mysql.js",
+    "checked": [
+      "cjs/mysql.js"
+    ],
+    "fileCount": 8,
+    "hashes": {
+      "cjs/mysql.js": "c21df1f14c81b8db88788234c7d1eb4e79c49cc394b52caa288c3ede167e71ff"
+    }
+  },
+  {
+    "name": "mysql-maintainer",
+    "version": "0.4.1",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/mysql-maintainer/cjs/mysql-maintainer.js",
+    "checked": [
+      "cjs/mysql-maintainer.js"
+    ],
+    "fileCount": 11,
+    "hashes": {
+      "cjs/mysql-maintainer.js": "409c61514d573c983c1281a6dcf81bc819bfc55723024157a55b4b79113d0b67"
+    }
+  },
+  {
+    "name": "fastify",
+    "version": "0.4.1",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/fastify/cjs/fastify.js",
+    "checked": [
+      "cjs/fastify.js"
+    ],
+    "fileCount": 5,
+    "hashes": {
+      "cjs/fastify.js": "68282d145d27b68f8cab70edc95b6b9b830abfc4454a6947ba7fe7a13ca331b6"
+    }
+  },
+  {
+    "name": "fastify-file-session-store",
+    "version": "0.4.0",
+    "entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/fastify-file-session-store/cjs/fastify-file-session-store.js",
+    "checked": [
+      "cjs/fastify-file-session-store.js"
+    ],
+    "fileCount": 5,
+    "hashes": {
+      "cjs/fastify-file-session-store.js": "c440c86ef5755a16b611a3cc49479484f194abfd526ead1233ba3be22e895efe"
+    }
+  }
+]

@@ -1,0 +1,12 @@
+[
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "started": "2026-10-16T07:57:41.699Z",
+    "status": "PASS",
+    "log": "status-final.txt"
+  }
+]

@@ -1,0 +1,187 @@
+{
+  "status": "PASS",
+  "showtime": {
+    "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+    "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+    "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+    "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+  },
+  "owners": [
+    {
+      "name": "property-select",
+      "sha": "5c0fcfa090d0540d773eec4d279db14ded9ce9f6",
+      "version": "0.7.8",
+      "status": " M docs/orchestration/ENVIRONMENT.md\n M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M docs/orchestration/tasks/D8.md\n M package.json\n?? docs/orchestration/environment/checks/D8.mjs\n?? docs/orchestration/evidence/D8/\n?? docs/orchestration/reports/D8.md\n"
+    },
+    {
+      "name": "list",
+      "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "version": "0.12.1",
+      "status": ""
+    },
+    {
+      "name": "table",
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0",
+      "status": ""
+    },
+    {
+      "name": "home",
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0",
+      "status": ""
+    },
+    {
+      "name": "framework",
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0",
+      "status": ""
+    },
+    {
+      "name": "reflect",
+      "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "version": "0.3.1",
+      "status": ""
+    },
+    {
+      "name": "reflect-path",
+      "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "version": "0.3.2",
+      "status": ""
+    },
+    {
+      "name": "storage",
+      "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "version": "0.3.0",
+      "status": ""
+    },
+    {
+      "name": "sql-build",
+      "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "version": "0.2.0",
+      "status": ""
+    },
+    {
+      "name": "sql-join",
+      "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "version": "0.2.0",
+      "status": ""
+    },
+    {
+      "name": "mysql",
+      "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "version": "0.3.2",
+      "status": ""
+    },
+    {
+      "name": "mysql-maintainer",
+      "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "version": "0.4.1",
+      "status": ""
+    },
+    {
+      "name": "fastify",
+      "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "version": "0.4.1",
+      "status": ""
+    },
+    {
+      "name": "fastify-file-session-store",
+      "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "version": "0.4.0",
+      "status": ""
+    }
+  ],
+  "runtimeHashesUnchanged": true,
+  "inheritedListenersPreserved": [
+    13316,
+    13318,
+    13319,
+    13320,
+    13752,
+    13819
+  ],
+  "ownedLive": {
+    "app": {
+      "initial": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14119",
+          "--ps-token=b527b57e-2348-4203-8001-e63761f8be32"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572243",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "app",
+        "pid": 2694618,
+        "port": 14119,
+        "token": "b527b57e-2348-4203-8001-e63761f8be32"
+      },
+      "final": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14119",
+          "--ps-token=da484ca0-d194-42e4-b073-4346e2210505"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572383",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "app",
+        "pid": 2694675,
+        "port": 14119,
+        "token": "da484ca0-d194-42e4-b073-4346e2210505"
+      }
+    },
+    "standalone": {
+      "initial": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14120",
+          "--ps-token=bbfa7960-a855-4dbb-8be3-7c1f486f3262"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572524",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "standalone",
+        "pid": 2694732,
+        "port": 14120,
+        "token": "bbfa7960-a855-4dbb-8be3-7c1f486f3262"
+      },
+      "final": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14120",
+          "--ps-token=b86ebba0-9b87-4819-b233-cbdbc4aea954"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572550",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "standalone",
+        "pid": 2694766,
+        "port": 14120,
+        "token": "b86ebba0-9b87-4819-b233-cbdbc4aea954"
+      }
+    }
+  },
+  "recorded": "2026-10-16T07:58:46.865Z"
+}

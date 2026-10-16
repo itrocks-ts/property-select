@@ -1,0 +1,94 @@
+[
+  {
+    "program": "mysqladmin",
+    "args": [
+      "--no-defaults",
+      "--socket=/tmp/showtime-property-select-env/mysql.sock",
+      "-u",
+      "root",
+      "ping"
+    ],
+    "started": "2026-10-16T07:51:43.177Z",
+    "status": "PASS",
+    "log": "database.txt"
+  },
+  {
+    "program": "ss",
+    "args": [
+      "-ltnp"
+    ],
+    "started": "2026-10-16T07:51:43.183Z",
+    "status": "PASS",
+    "log": "listeners-before.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "app"
+    ],
+    "started": "2026-10-16T07:51:43.261Z",
+    "status": "PASS",
+    "log": "app-start.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-app"
+    ],
+    "started": "2026-10-16T07:51:44.555Z",
+    "status": "PASS",
+    "log": "app-restart-stop.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "app"
+    ],
+    "started": "2026-10-16T07:51:44.643Z",
+    "status": "PASS",
+    "log": "app-restart-start.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "standalone"
+    ],
+    "started": "2026-10-16T07:51:45.923Z",
+    "status": "PASS",
+    "log": "standalone-start.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "stop-standalone"
+    ],
+    "started": "2026-10-16T07:51:46.073Z",
+    "status": "PASS",
+    "log": "standalone-restart-stop.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "standalone"
+    ],
+    "started": "2026-10-16T07:51:46.171Z",
+    "status": "PASS",
+    "log": "standalone-restart-start.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "started": "2026-10-16T07:51:46.318Z",
+    "status": "PASS",
+    "log": "status.txt"
+  }
+]

@@ -1,0 +1,251 @@
+[
+  {
+    "id": "@itrocks/list@0.12.1",
+    "name": "@itrocks/list",
+    "version": "0.12.1",
+    "size": 27444,
+    "unpackedSize": 102075,
+    "shasum": "baa7c06133a59f6134defc79e83c440d8f1e4c3c",
+    "integrity": "sha512-Mo8KFWKT9Q3G9jr2C5SSVrzqPTa7nboTCS5JH/w+4Isit1CEIhf0nPvDgKg6QwAxyscJvXOCHXL1DmG5PgvOiA==",
+    "filename": "itrocks-list-0.12.1.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 767,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 11589,
+        "mode": 420
+      },
+      {
+        "path": "build.d.ts",
+        "size": 11,
+        "mode": 420
+      },
+      {
+        "path": "build.js",
+        "size": 3720,
+        "mode": 420
+      },
+      {
+        "path": "cjs/access.d.ts",
+        "size": 393,
+        "mode": 420
+      },
+      {
+        "path": "cjs/access.js",
+        "size": 418,
+        "mode": 420
+      },
+      {
+        "path": "cjs/access.js.map",
+        "size": 422,
+        "mode": 420
+      },
+      {
+        "path": "cjs/columns.d.ts",
+        "size": 1012,
+        "mode": 420
+      },
+      {
+        "path": "cjs/columns.js",
+        "size": 2793,
+        "mode": 420
+      },
+      {
+        "path": "cjs/columns.js.map",
+        "size": 2952,
+        "mode": 420
+      },
+      {
+        "path": "cjs/feed.d.ts",
+        "size": 465,
+        "mode": 420
+      },
+      {
+        "path": "cjs/feed.html",
+        "size": 367,
+        "mode": 420
+      },
+      {
+        "path": "cjs/feed.js",
+        "size": 1050,
+        "mode": 420
+      },
+      {
+        "path": "cjs/feed.js.map",
+        "size": 1035,
+        "mode": 420
+      },
+      {
+        "path": "cjs/filter.d.ts",
+        "size": 614,
+        "mode": 420
+      },
+      {
+        "path": "cjs/filter.js",
+        "size": 2057,
+        "mode": 420
+      },
+      {
+        "path": "cjs/filter.js.map",
+        "size": 2115,
+        "mode": 420
+      },
+      {
+        "path": "cjs/list.d.ts",
+        "size": 843,
+        "mode": 420
+      },
+      {
+        "path": "cjs/list.html",
+        "size": 1893,
+        "mode": 420
+      },
+      {
+        "path": "cjs/list.js",
+        "size": 8895,
+        "mode": 420
+      },
+      {
+        "path": "cjs/list.js.map",
+        "size": 5180,
+        "mode": 420
+      },
+      {
+        "path": "cjs/parameter.d.ts",
+        "size": 362,
+        "mode": 420
+      },
+      {
+        "path": "cjs/parameter.js",
+        "size": 316,
+        "mode": 420
+      },
+      {
+        "path": "cjs/parameter.js.map",
+        "size": 269,
+        "mode": 420
+      },
+      {
+        "path": "cjs/persist.d.ts",
+        "size": 330,
+        "mode": 420
+      },
+      {
+        "path": "cjs/persist.js",
+        "size": 1107,
+        "mode": 420
+      },
+      {
+        "path": "cjs/persist.js.map",
+        "size": 1179,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.d.ts",
+        "size": 1173,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.js",
+        "size": 3840,
+        "mode": 420
+      },
+      {
+        "path": "cjs/projection.js.map",
+        "size": 3267,
+        "mode": 420
+      },
+      {
+        "path": "cjs/selector-state.d.ts",
+        "size": 1151,
+        "mode": 420
+      },
+      {
+        "path": "cjs/selector-state.js",
+        "size": 5504,
+        "mode": 420
+      },
+      {
+        "path": "cjs/selector-state.js.map",
+        "size": 4849,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sort.d.ts",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sort.js",
+        "size": 2985,
+        "mode": 420
+      },
+      {
+        "path": "cjs/sort.js.map",
+        "size": 2910,
+        "mode": 420
+      },
+      {
+        "path": "column-move.svg",
+        "size": 210,
+        "mode": 420
+      },
+      {
+        "path": "column-remove.svg",
+        "size": 173,
+        "mode": 420
+      },
+      {
+        "path": "config.yaml",
+        "size": 110,
+        "mode": 420
+      },
+      {
+        "path": "filter-reset.svg",
+        "size": 230,
+        "mode": 420
+      },
+      {
+        "path": "list.css",
+        "size": 5134,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 2542,
+        "mode": 420
+      },
+      {
+        "path": "property-select.d.ts",
+        "size": 1991,
+        "mode": 420
+      },
+      {
+        "path": "property-select.js",
+        "size": 10374,
+        "mode": 420
+      },
+      {
+        "path": "selector-state.d.ts",
+        "size": 784,
+        "mode": 420
+      },
+      {
+        "path": "selector-state.js",
+        "size": 1800,
+        "mode": 420
+      },
+      {
+        "path": "sort.svg",
+        "size": 94,
+        "mode": 420
+      }
+    ],
+    "entryCount": 47,
+    "bundled": []
+  }
+]

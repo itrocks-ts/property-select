@@ -1,0 +1,89 @@
+{
+  "directory": "/tmp/property-select/D8-owned",
+  "owners": {
+    "app": {
+      "initial": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14119",
+          "--ps-token=b527b57e-2348-4203-8001-e63761f8be32"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572243",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "app",
+        "pid": 2694618,
+        "port": 14119,
+        "token": "b527b57e-2348-4203-8001-e63761f8be32"
+      },
+      "final": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14119",
+          "--ps-token=da484ca0-d194-42e4-b073-4346e2210505"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572383",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "app",
+        "pid": 2694675,
+        "port": 14119,
+        "token": "da484ca0-d194-42e4-b073-4346e2210505"
+      }
+    },
+    "standalone": {
+      "initial": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14120",
+          "--ps-token=bbfa7960-a855-4dbb-8be3-7c1f486f3262"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572524",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "standalone",
+        "pid": 2694732,
+        "port": 14120,
+        "token": "bbfa7960-a855-4dbb-8be3-7c1f486f3262"
+      },
+      "final": {
+        "args": [
+          "/usr/bin/node",
+          "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/standalone.mjs",
+          "--ps-environment=/tmp/property-select/D8-owned",
+          "--ps-port=14120",
+          "--ps-token=b86ebba0-9b87-4819-b233-cbdbc4aea954"
+        ],
+        "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+        "executable": "/usr/bin/node",
+        "start": "153572550",
+        "state": "R",
+        "uid": 1000,
+        "directory": "/tmp/property-select/D8-owned",
+        "name": "standalone",
+        "pid": 2694766,
+        "port": 14120,
+        "token": "b86ebba0-9b87-4819-b233-cbdbc4aea954"
+      }
+    }
+  },
+  "app": "http://127.0.0.1:14119",
+  "demo": "http://127.0.0.1:14120",
+  "initializer": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/session/fixture.cjs",
+  "inheritedProcesses": "preserved; no inherited stop/reset"
+}

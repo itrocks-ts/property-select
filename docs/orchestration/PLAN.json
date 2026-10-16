@@ -10,7 +10,7 @@
     "effective_attestation": "No independent model/effort attestation exposed to executor; never infer from self-report"
   },
   "review_status": "APPROVED_P04",
-  "product_verdict": "PASS_FINAL_ACCEPTANCE",
+  "product_verdict": "PASS_PHASE_1_DELIVERED",
   "order": [
     "P01",
     "P02",
@@ -2318,7 +2318,7 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "delivery",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "medium",
       "model_justification": "Delivery checks are procedural once independent functional gates pass.",
@@ -2327,7 +2327,25 @@
         "VAL-08",
         "VAL-06"
       ],
-      "validation": "READY: independent RETEST-V7-1 passes the complete final matrix and closes V7-01; acceptance prerequisite cleared. No D8 delivery executed."
+      "validation": "Independent delivery PASS: 175 assertions; five owner builds, application/model build; 14 local npm pack --dry-run inventories, public exports/assets and local resolutions. Accepted product/runtime unchanged. Owned services restarted and retained on 14119/14120; terminal/object additions, exact DOM columns/data and session reload pass at all four sizes. Browser health individually attributed; final HTTP 200 and preservation pass. VAL-06/VAL-08 complete; physical-device VAL-05 limit retained.",
+      "version_changes": {
+        "@itrocks/property-select": "0.7.7 → 0.7.8"
+      },
+      "checkpoints": "evidence/D8/checkpoints.json",
+      "evidence": [
+        "evidence/D8/results-all.json",
+        "evidence/D8/distribution.json",
+        "evidence/D8/services.json",
+        "evidence/D8/network.json",
+        "evidence/D8/final-preservation.json",
+        "evidence/D8/http-final.json",
+        "evidence/D8/SHA256SUMS"
+      ],
+      "live_urls": [
+        "http://127.0.0.1:14120/",
+        "http://127.0.0.1:14119/property-select-invoice",
+        "http://127.0.0.1:14119/country"
+      ]
     },
     {
       "id": "FIX-L7-1",

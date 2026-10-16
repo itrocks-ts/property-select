@@ -1,0 +1,416 @@
+{
+  "assertions": [
+    {
+      "name": "property-select: expected HEAD",
+      "observed": "5c0fcfa090d0540d773eec4d279db14ded9ce9f6",
+      "expected": "5c0fcfa090d0540d773eec4d279db14ded9ce9f6"
+    },
+    {
+      "name": "property-select: delivered version",
+      "observed": "0.7.8",
+      "expected": "0.7.8"
+    },
+    {
+      "name": "property-select: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "list: expected HEAD",
+      "observed": "258f26c95f0b35df4176ba73225c35df6b56b449",
+      "expected": "258f26c95f0b35df4176ba73225c35df6b56b449"
+    },
+    {
+      "name": "list: delivered version",
+      "observed": "0.12.1",
+      "expected": "0.12.1"
+    },
+    {
+      "name": "list: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "list: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "table: expected HEAD",
+      "observed": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "expected": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6"
+    },
+    {
+      "name": "table: delivered version",
+      "observed": "0.4.0",
+      "expected": "0.4.0"
+    },
+    {
+      "name": "table: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "table: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "home: expected HEAD",
+      "observed": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "expected": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd"
+    },
+    {
+      "name": "home: delivered version",
+      "observed": "0.7.0",
+      "expected": "0.7.0"
+    },
+    {
+      "name": "home: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "home: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "framework: expected HEAD",
+      "observed": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "expected": "7211a97419add5165a8ac0f24f96afd5efd1b3fc"
+    },
+    {
+      "name": "framework: delivered version",
+      "observed": "0.11.0",
+      "expected": "0.11.0"
+    },
+    {
+      "name": "framework: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "framework: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "reflect: expected HEAD",
+      "observed": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+      "expected": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a"
+    },
+    {
+      "name": "reflect: delivered version",
+      "observed": "0.3.1",
+      "expected": "0.3.1"
+    },
+    {
+      "name": "reflect: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "reflect: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "reflect-path: expected HEAD",
+      "observed": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+      "expected": "bc6e4bdd17b884d93ecc72451078896c9a119696"
+    },
+    {
+      "name": "reflect-path: delivered version",
+      "observed": "0.3.2",
+      "expected": "0.3.2"
+    },
+    {
+      "name": "reflect-path: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "reflect-path: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "storage: expected HEAD",
+      "observed": "a298863052d9db37fe28c72e175896bdeec9366d",
+      "expected": "a298863052d9db37fe28c72e175896bdeec9366d"
+    },
+    {
+      "name": "storage: delivered version",
+      "observed": "0.3.0",
+      "expected": "0.3.0"
+    },
+    {
+      "name": "storage: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "storage: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "sql-build: expected HEAD",
+      "observed": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+      "expected": "a267327e072df4f6ffa855c15eae6a4c5776ee6d"
+    },
+    {
+      "name": "sql-build: delivered version",
+      "observed": "0.2.0",
+      "expected": "0.2.0"
+    },
+    {
+      "name": "sql-build: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "sql-build: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "sql-join: expected HEAD",
+      "observed": "55db310bdf3e92330ec216677c81577f6854e3f0",
+      "expected": "55db310bdf3e92330ec216677c81577f6854e3f0"
+    },
+    {
+      "name": "sql-join: delivered version",
+      "observed": "0.2.0",
+      "expected": "0.2.0"
+    },
+    {
+      "name": "sql-join: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "sql-join: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "mysql: expected HEAD",
+      "observed": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+      "expected": "275d7f3b0ae3739e9c1a2b6361fc173d98612581"
+    },
+    {
+      "name": "mysql: delivered version",
+      "observed": "0.3.2",
+      "expected": "0.3.2"
+    },
+    {
+      "name": "mysql: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "mysql: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "mysql-maintainer: expected HEAD",
+      "observed": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+      "expected": "89ff36a3b1a41a60b040c0ed553f867bec0f6086"
+    },
+    {
+      "name": "mysql-maintainer: delivered version",
+      "observed": "0.4.1",
+      "expected": "0.4.1"
+    },
+    {
+      "name": "mysql-maintainer: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "mysql-maintainer: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "fastify: expected HEAD",
+      "observed": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+      "expected": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f"
+    },
+    {
+      "name": "fastify: delivered version",
+      "observed": "0.4.1",
+      "expected": "0.4.1"
+    },
+    {
+      "name": "fastify: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "fastify: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "fastify-file-session-store: expected HEAD",
+      "observed": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+      "expected": "c62849840b82316d6e8b0594d2ba4eb962a1cefe"
+    },
+    {
+      "name": "fastify-file-session-store: delivered version",
+      "observed": "0.4.0",
+      "expected": "0.4.0"
+    },
+    {
+      "name": "fastify-file-session-store: clean repository",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "fastify-file-session-store: untouched product sources",
+      "observed": "",
+      "expected": ""
+    },
+    {
+      "name": "Showtime preserved",
+      "observed": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      },
+      "expected": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      }
+    },
+    {
+      "name": "property-select: packed property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed cjs/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed front/property-select.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed front/property-select.html",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed front/property-select.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed front/property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: packed front/pointer-transport.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "property-select: local resolution",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed cjs/list.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed cjs/projection.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed property-select.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed cjs/selector-state.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed selector-state.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed list.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed column-move.svg",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: packed column-remove.svg",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "list: local resolution",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "table: packed column-add.js",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "table: packed column-add.d.ts",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "table: packed column-add.css",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "table: packed column-reorder.js",
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "cases": [],
+  "chromiumSandbox": true,
+  "console": [],
+  "failed": [],
+  "responses": [],
+  "inputs": [],
+  "seed": "canonical synthetic 120 invoices",
+  "stage": "build",
+  "started": "2026-10-16T07:51:57.930Z",
+  "status": "FAIL",
+  "failure": "Error: Cannot find module '@itrocks/table'\nRequire stack:\n- /home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs\n    at Module._resolveFilename (node:internal/modules/cjs/loader:1405:15)\n    at require.resolve (node:internal/modules/helpers:145:19)\n    at build (file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs:152:25)\n    at file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs:258:46\n    at ModuleJob.run (node:internal/modules/esm/module_job:303:25)\n    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:663:26)\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:99:5)",
+  "finished": "2026-10-16T07:52:17.591Z"
+}

@@ -1,0 +1,47 @@
+State  Recv-Q Send-Q      Local Address:Port  Peer Address:PortProcess
+LISTEN 0      511               0.0.0.0:3456       0.0.0.0:*
+LISTEN 0      200               0.0.0.0:3306       0.0.0.0:*
+LISTEN 0      70                0.0.0.0:33060      0.0.0.0:*
+LISTEN 0      50                0.0.0.0:445        0.0.0.0:*
+LISTEN 0      4096              0.0.0.0:22         0.0.0.0:*
+LISTEN 0      50                0.0.0.0:139        0.0.0.0:*
+LISTEN 0      4096              0.0.0.0:8081       0.0.0.0:*
+LISTEN 0      511             127.0.0.1:13320      0.0.0.0:*
+LISTEN 0      151             127.0.0.1:13316      0.0.0.0:*    users:(("mysqld",pid=2083302,fd=18))
+LISTEN 0      511             127.0.0.1:13319      0.0.0.0:*
+LISTEN 0      511             127.0.0.1:13318      0.0.0.0:*
+LISTEN 0      511             127.0.0.1:13819      0.0.0.0:*
+LISTEN 0      4096           127.0.0.54:53         0.0.0.0:*
+LISTEN 0      511             127.0.0.1:13752      0.0.0.0:*
+LISTEN 0      4096              0.0.0.0:38311      0.0.0.0:*    users:(("spotify",pid=637001,fd=138))
+LISTEN 0      511             127.0.0.1:14120      0.0.0.0:*
+LISTEN 0      511             127.0.0.1:14119      0.0.0.0:*
+LISTEN 0      5                 0.0.0.0:8765       0.0.0.0:*    users:(("python3",pid=1615999,fd=3))
+LISTEN 0      4096            127.0.0.1:631        0.0.0.0:*
+LISTEN 0      200             127.0.0.1:5433       0.0.0.0:*
+LISTEN 0      1024            127.0.0.1:30000      0.0.0.0:*    users:(("cef_server",pid=1992753,fd=83))
+LISTEN 0      10                0.0.0.0:57621      0.0.0.0:*    users:(("spotify",pid=637001,fd=134))
+LISTEN 0      4096        127.0.0.53%lo:53         0.0.0.0:*
+LISTEN 0      4096   [::ffff:127.0.0.1]:41471            *:*    users:(("embeddings-serv",pid=1989393,fd=5))
+LISTEN 0      511    [::ffff:127.0.0.1]:41675            *:*    users:(("phpstorm",pid=2659362,fd=633))
+LISTEN 0      50                   [::]:445           [::]:*
+LISTEN 0      511                     *:80               *:*
+LISTEN 0      4096                 [::]:22            [::]:*
+LISTEN 0      50                   [::]:139           [::]:*
+LISTEN 0      4096                 [::]:8081          [::]:*
+LISTEN 0      511    [::ffff:127.0.0.1]:46465            *:*    users:(("phpstorm",pid=2659362,fd=505))
+LISTEN 0      511    [::ffff:127.0.0.1]:36499            *:*    users:(("phpstorm",pid=2659362,fd=626))
+LISTEN 0      511    [::ffff:127.0.0.1]:35387            *:*    users:(("phpstorm",pid=2659362,fd=628))
+LISTEN 0      511    [::ffff:127.0.0.1]:33991            *:*    users:(("webstorm",pid=1986725,fd=385))
+LISTEN 0      4096                    *:9800             *:*    users:(("fluidsynth",pid=2910,fd=7))
+LISTEN 0      511    [::ffff:127.0.0.1]:37283            *:*    users:(("phpstorm",pid=2659362,fd=624))
+LISTEN 0      4096   [::ffff:127.0.0.1]:37853            *:*    users:(("embeddings-serv",pid=2660778,fd=5))
+LISTEN 0      511    [::ffff:127.0.0.1]:37677            *:*    users:(("phpstorm",pid=2659362,fd=636))
+LISTEN 0      4096                [::1]:631           [::]:*
+LISTEN 0      511    [::ffff:127.0.0.1]:64642            *:*    users:(("webstorm",pid=1986725,fd=376))
+LISTEN 0      511    [::ffff:127.0.0.1]:64543            *:*    users:(("webstorm",pid=1986725,fd=379))
+LISTEN 0      511    [::ffff:127.0.0.1]:64542            *:*    users:(("phpstorm",pid=2659362,fd=533))
+LISTEN 0      50     [::ffff:127.0.0.1]:30001            *:*    users:(("webstorm",pid=1986725,fd=421))
+LISTEN 0      4096   [::ffff:127.0.0.1]:63343            *:*    users:(("phpstorm",pid=2659362,fd=26))
+LISTEN 0      4096   [::ffff:127.0.0.1]:63342            *:*    users:(("webstorm",pid=1986725,fd=28))
+LISTEN 0      511    [::ffff:127.0.0.1]:50055            *:*    users:(("phpstorm",pid=2659362,fd=621))

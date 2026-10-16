@@ -1,5 +1,17 @@
 # Property selector validation environment
 
+## Current live delivery
+
+[D8 independent delivery](reports/D8.md) is **DONE / PASS**, 16 October 2026, selector tracking **0.7.8**.
+Live standalone: <http://127.0.0.1:14120/>; integration:
+<http://127.0.0.1:14119/property-select-invoice>; control: <http://127.0.0.1:14119/country>.
+Both services remain running under `/tmp/property-select/D8-owned`, with ownership-checked targeted stop/restart
+commands and exact PIDs in the D8 report/evidence. The inherited 13319/13320 listeners remain untouched.
+D8 uses the unchanged synthetic database on 13316 and the versioned session fixture initializer.
+Five owner builds, all 14 packs/exports/local imports, native additions and four-size reloads pass.
+The sections below retain the initial environment verification and baseline commands; current product acceptance is
+[RETEST-V7-1](reports/RETEST-V7-1.md), and final operational commands are in D8.
+
 ## Scope and checkpoint
 
 Task 4.2 and VAL-01: independently verified `PASS` on 15 October 2026. Application/standalone process ownership,

@@ -1,0 +1,199 @@
+{
+  "property-select": {
+    "sha": "5c0fcfa090d0540d773eec4d279db14ded9ce9f6",
+    "version": "0.7.8",
+    "scripts": {
+      "build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
+      "test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
+    },
+    "status": " M package.json\n?? docs/orchestration/environment/checks/D8.mjs\n?? docs/orchestration/evidence/D8/\n",
+    "exported": {
+      ".": {
+        "types": "./property-select.d.ts",
+        "import": "./property-select.js",
+        "require": "./cjs/property-select.js"
+      },
+      "./front/property-select.css": "./front/property-select.css",
+      "./front/property-select.html": "./front/property-select.html",
+      "./front/property-select.js": {
+        "types": "./front/property-select.d.ts",
+        "default": "./front/property-select.js"
+      },
+      "./property-select.js": {
+        "types": "./property-select.d.ts",
+        "default": "./property-select.js"
+      }
+    }
+  },
+  "list": {
+    "sha": "258f26c95f0b35df4176ba73225c35df6b56b449",
+    "version": "0.12.1",
+    "scripts": {
+      "build": "npm run build:cjs && npm run build:css && npm run build:front",
+      "build:cjs": "tsc && node -e \"const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.html'))fs.copyFileSync(path.join('src',file),path.join('cjs',file))\"",
+      "build:css": "sass --no-source-map src/list.scss:list.css && node -e \"const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.svg'))fs.copyFileSync(path.join('src',file),file)\"",
+      "build:front": "tsc -p src/front/tsconfig.json",
+      "test": "npm run build:cjs && node --test \"test/**/*.test.mjs\""
+    },
+    "status": "",
+    "exported": {
+      ".": "./cjs/list.js",
+      "./projection": "./cjs/projection.js",
+      "./property-select.js": "./property-select.js",
+      "./selector-state": "./cjs/selector-state.js",
+      "./selector-state.js": "./selector-state.js"
+    }
+  },
+  "table": {
+    "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+    "version": "0.4.0",
+    "scripts": {
+      "build": "tsc && sass --no-source-map demo:demo src/column-add.scss:column-add.css && node ../prepare-module/prepare-module.js"
+    },
+    "status": ""
+  },
+  "home": {
+    "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+    "version": "0.7.0",
+    "scripts": {
+      "build": "npm run build:cjs && npm run build:front && npm run build:css",
+      "build:cjs": "tsc && node -e \"const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.html'))fs.copyFileSync(path.join('src',file),path.join('cjs',file))\"",
+      "build:front": "tsc -p src/front/tsconfig.json",
+      "build:css": "sass --no-source-map src/right-pane.scss:right-pane.css"
+    },
+    "status": "",
+    "exported": {
+      ".": "./cjs/output.js",
+      "./right-pane.css": "./right-pane.css",
+      "./right-pane.js": {
+        "types": "./right-pane.d.ts",
+        "default": "./right-pane.js"
+      }
+    }
+  },
+  "framework": {
+    "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+    "version": "0.11.0",
+    "scripts": {
+      "build": "npm run build:back && npm run build:front",
+      "build:back": "tsc",
+      "build:front": "tsc -p src/front/tsconfig.json && node -e \"const fs=require('node:fs');for(const file of fs.readdirSync('.').filter(file=>file.endsWith('.js')||file.endsWith('.d.ts')))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('../../',''))\"",
+      "build:test": "tsc -p test/tsconfig.json",
+      "test": "npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs"
+    },
+    "status": "",
+    "exported": {
+      ".": "./cjs/framework.js",
+      "./property-select": "./cjs/property-select.js",
+      "./property-select-actions": "./cjs/property-select-actions.js",
+      "./property-select-list.js": "./property-select-list.js",
+      "./property-select-metadata.js": "./property-select-metadata.js",
+      "./sql-projection": "./cjs/sql-projection.js",
+      "./sql-relationships": "./cjs/sql-relationships.js"
+    }
+  },
+  "reflect": {
+    "sha": "41e6e672f935bf1dd88ec61e2fe0be35c405af9a",
+    "version": "0.3.1",
+    "scripts": {
+      "build": "npm run build:cjs && npm run build:esm",
+      "build:cjs": "tsc -p tsconfig.cjs.json",
+      "build:esm": "tsc -p tsconfig.esm.json && node esm/esm",
+      "build:demo": "npm run build:demo:cjs && npm run build:demo:esm",
+      "build:demo:cjs": "tsc -p tsconfig.demo.cjs.json",
+      "build:demo:esm": "tsc -p tsconfig.demo.esm.json",
+      "build:test": "npm run build:test:cjs && npm run build:test:esm",
+      "build:test:cjs": "tsc -p tsconfig.test.cjs.json",
+      "build:test:esm": "tsc -p tsconfig.test.esm.json",
+      "build:all": "npm run build && npm run build:demo",
+      "start:demo:cjs": "node demo/cjs/index",
+      "start:demo:esm": "node demo/esm/index"
+    },
+    "status": "",
+    "exported": {
+      "import": "./esm/reflect.js",
+      "require": "./cjs/reflect.js"
+    }
+  },
+  "reflect-path": {
+    "sha": "bc6e4bdd17b884d93ecc72451078896c9a119696",
+    "version": "0.3.2",
+    "scripts": {
+      "build": "tsc",
+      "build:test": "tsc -p tsconfig.test.json"
+    },
+    "status": "",
+    "exported": "./cjs/reflect-path.js"
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "version": "0.3.0",
+    "scripts": {
+      "build": "tsc"
+    },
+    "status": "",
+    "exported": "./cjs/storage.js"
+  },
+  "sql-build": {
+    "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "version": "0.2.0",
+    "scripts": {
+      "build": "tsc",
+      "test": "npm run build && npm run test:types && tsx --test --test-isolation=none test/sql-build.test.ts && node --test --test-isolation=none test/property-select.test.mjs",
+      "test:types": "tsc --ignoreConfig --module nodenext --noEmit --types node test/*.test.ts"
+    },
+    "status": "",
+    "exported": "./cjs/sql-build.js"
+  },
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "version": "0.2.0",
+    "scripts": {
+      "build": "tsc",
+      "test": "npm run test:types && tsx --test --test-isolation=none test/sql-join.test.ts && npm run build && node --test --test-isolation=none test/property-select.test.mjs",
+      "test:types": "tsc --ignoreConfig --module nodenext --noEmit --types node test/*.test.ts"
+    },
+    "status": "",
+    "exported": "./cjs/sql-join.js"
+  },
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "version": "0.3.2",
+    "scripts": {
+      "build": "tsc"
+    },
+    "status": "",
+    "exported": "./cjs/mysql.js"
+  },
+  "mysql-maintainer": {
+    "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+    "version": "0.4.1",
+    "scripts": {
+      "build": "tsc",
+      "test": "npm run build && node --test \"test/**/*.test.mjs\"",
+      "test:integration": "npm run build && node --test \"test/**/*.integration.mjs\""
+    },
+    "status": "",
+    "exported": "./cjs/mysql-maintainer.js"
+  },
+  "fastify": {
+    "sha": "aca7bf377b0fd543c15004df3ebfb71fd10ab65f",
+    "version": "0.4.1",
+    "scripts": {
+      "build": "tsc",
+      "test": "npm run build && node --test --test-isolation=none test/*.test.js"
+    },
+    "status": "",
+    "exported": "./cjs/fastify.js"
+  },
+  "fastify-file-session-store": {
+    "sha": "c62849840b82316d6e8b0594d2ba4eb962a1cefe",
+    "version": "0.4.0",
+    "scripts": {
+      "build": "tsc",
+      "test": "npm run build && node --test --test-isolation=none test/*.test.js"
+    },
+    "status": "",
+    "exported": "./cjs/fastify-file-session-store.js"
+  }
+}

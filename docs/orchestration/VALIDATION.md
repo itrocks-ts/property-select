@@ -1,12 +1,26 @@
 # Phase 1 validation matrix
 
+## D8 independent live delivery
+
+**DONE / independent PASS**, 16 October 2026. [Report](reports/D8.md),
+[175 fresh assertions](evidence/D8/results-all.json), [distribution](evidence/D8/distribution.json),
+[owned restart](evidence/D8/services.json), [final HTTP](evidence/D8/http-final.json).
+Selector checkpoint `5c0fcfa0`, tracking patch **0.7.8**; accepted runtime sources/assets remain unchanged.
+Five owner builds, app/model build and all 14 owner pack/export/local-resolution checks pass.
+Both environments pass trusted terminal/object selection and reload at all four sizes; exact integrated columns,
+actual cells and branch/recents restore. Browser console/HTTP health passes; every request failure is attributed.
+Live URLs: <http://127.0.0.1:14120/> and <http://127.0.0.1:14119/property-select-invoice>.
+D8 processes stay alive under `/tmp/property-select/D8-owned`; exact targeted stop/restart commands are in the report.
+Showtime and inherited processes are preserved. VAL-06 and VAL-08 PASS; phase 1 delivered on the executed environments.
+The physical-device VAL-05 limitation remains as recorded by independent final acceptance.
+
 ## RETEST-V7-1 complete final acceptance
 
 **DONE / independent PASS**, 16 October 2026. [Report](reports/RETEST-V7-1.md),
 [64 individual final cases](evidence/RETEST-V7-1/coverage.json),
 [28 fresh stage results](evidence/RETEST-V7-1/stage-summary.json).
 Corrected runtime `2083bb37` / **0.7.6**; tracking/tests **0.7.7**. All other final owner SHAs are unchanged.
-[V7-01](defects/V7-01.md) is **CLOSED**. D8's prerequisite is cleared; D8 remains PENDING and was not executed.
+[V7-01](defects/V7-01.md) is **CLOSED**. Independent [D8 delivery](reports/D8.md) is **DONE / PASS**.
 
 | Final family | Cases | Verdict | Fresh proof owner                          |
 | ------------ | ----- | ------- | ------------------------------------------ |
@@ -906,12 +920,12 @@ rendering prove it.
 | ----------- | -------------------- | ---------------- | ------- |
 | VAL-01      | P02                  | P02 retest       | PASS    |
 | VAL-02      | P03                  | P04              | PASS    |
-| VAL-03      | L2-UI L2-LIST        | V2-UI VSQL V2 V7 | NOT_RUN |
-| VAL-04      | L2..L6               | V2..V6 V7        | NOT_RUN |
-| VAL-05      | L6                   | V6 V7            | NOT_RUN |
-| VAL-06      | All executors        | All gates        | NOT_RUN |
-| VAL-07      | Fix/retest as needed | New verifier     | NOT_RUN |
-| VAL-08      | V7 D8                | V7 then D8       | NOT_RUN |
+| VAL-03      | L2-UI L2-LIST        | V2-UI VSQL V2 V7 | PASS    |
+| VAL-04      | L2..L6               | V2..V6 V7        | PASS    |
+| VAL-05      | L6                   | V6 V7            | PASS    |
+| VAL-06      | All executors        | All gates        | PASS    |
+| VAL-07      | Fix/retest as needed | New verifier     | PASS    |
+| VAL-08      | V7 D8                | V7 then D8       | PASS    |
 
 - **VAL-01 / ENV-01**: Owned isolated stack, browser/touch capability, synthetic fixtures and query logs were
 independently exercised.
@@ -929,6 +943,9 @@ evidence.
 criteria.
 - **VAL-08 / DELIVERY-01**: Fresh full acceptance precedes separate live delivery, assets/version checks and usable
 URLs.
+
+VAL-03–07 evidence: [complete independent acceptance](reports/RETEST-V7-1.md).
+VAL-06/08 and DELIVERY-01 evidence: [independent live delivery](reports/D8.md).
 
 VAL-01 evidence: [independent environment report](VERIFY-ENVIRONMENT.md) and its linked assertion records.
 PLAN-01 evidence: [planning report](reports/P03.md); independent approval: [P04 report](reports/P04.md).

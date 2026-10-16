@@ -1,0 +1,25 @@
+{
+  "assertions": [
+    {
+      "name": "app: new owned process after restart",
+      "observed": true,
+      "expected": true
+    },
+    {
+      "name": "standalone: new owned process after restart",
+      "observed": true,
+      "expected": true
+    }
+  ],
+  "cases": [],
+  "chromiumSandbox": true,
+  "console": [],
+  "failed": [],
+  "responses": [],
+  "inputs": [],
+  "seed": "canonical synthetic 120 invoices",
+  "stage": "services",
+  "started": "2026-10-16T07:51:43.177Z",
+  "status": "PASS",
+  "finished": "2026-10-16T07:51:46.400Z"
+}

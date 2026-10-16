@@ -1,0 +1,11 @@
+{
+  "command": "node node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs",
+  "driver_sha256": "c5ef70a0420e606edd558c17a51e55fd76cd2ab6090a338522c75e7b8d9153e1",
+  "network_observer": "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-V7-1-network.cjs",
+  "observer_sha256": "7e4dfe721bbd6cb0966a24b610166d93a9527d3f0f5afb18ea5a3ad6bc9c6cf4",
+  "stage": "all",
+  "status": "PASS",
+  "assertions": 175,
+  "product_changes": false,
+  "tracking_version": "0.7.8"
+}

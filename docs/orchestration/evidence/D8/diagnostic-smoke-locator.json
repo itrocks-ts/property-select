@@ -1,0 +1,104 @@
+{
+  "assertions": [],
+  "cases": [],
+  "chromiumSandbox": true,
+  "console": [],
+  "failed": [],
+  "responses": [
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/front/property-select.css",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/demo.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/front/property-select.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/catalogue.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/property-select.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/front/pointer-transport.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/controller.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/path.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/state.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/intentions.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/navigation.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/search.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/suggestions.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/metadata.js",
+      "status": 200
+    },
+    {
+      "mode": "1280x720",
+      "url": "http://127.0.0.1:14120/assets/front/property-select.html",
+      "status": 200
+    }
+  ],
+  "inputs": [
+    {
+      "mode": "1280x720",
+      "type": "click",
+      "trusted": true
+    }
+  ],
+  "seed": "canonical synthetic 120 invoices",
+  "stage": "smoke",
+  "started": "2026-10-16T07:52:00.782Z",
+  "browser": "151.0.7922.34",
+  "playwright": "1.62.1",
+  "status": "FAIL",
+  "failure": "locator.focus: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ps-plus[data-path=\"customer\"]')\u001b[22m\n\n    at smoke (/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs:195:57)\n    at async file:///home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/D8.mjs:260:40",
+  "finished": "2026-10-16T07:52:31.438Z"
+}

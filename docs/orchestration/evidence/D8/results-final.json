@@ -1,0 +1,45 @@
+{
+  "assertions": [
+    {
+      "name": "Live HTTP http://127.0.0.1:14120/",
+      "observed": 200,
+      "expected": 200
+    },
+    {
+      "name": "Live HTTP http://127.0.0.1:14119/country",
+      "observed": 200,
+      "expected": 200
+    },
+    {
+      "name": "Live HTTP http://127.0.0.1:14119/property-select-invoice",
+      "observed": 200,
+      "expected": 200
+    },
+    {
+      "name": "Showtime still preserved",
+      "observed": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      },
+      "expected": {
+        "head": "d7ca948292e28c248bdcc0283724e47c2a82bba4",
+        "status": "AD audit-itrocks-dependencies.json\nAD audit-itrocks-dependencies.txt\n M config.yaml\n",
+        "index": "100644 ff4dc939cce17af3aa7c14d8063034c5cc85b867 0\taudit-itrocks-dependencies.json\n100644 de960a87ea9b4f6eb1cece85ab32596baef11fcd 0\taudit-itrocks-dependencies.txt\n",
+        "config_sha256": "67806429869be3aeb65018a1be6c7664f25d9933ca41c9b63826cde8c53647fa"
+      }
+    }
+  ],
+  "cases": [],
+  "chromiumSandbox": true,
+  "console": [],
+  "failed": [],
+  "responses": [],
+  "inputs": [],
+  "seed": "canonical synthetic 120 invoices",
+  "stage": "final",
+  "started": "2026-10-16T07:57:41.644Z",
+  "status": "PASS",
+  "finished": "2026-10-16T07:57:41.795Z"
+}

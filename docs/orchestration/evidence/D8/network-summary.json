@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "failures": 24,
+  "unclassified": 0,
+  "attributions": [
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "product AbortSignal",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "product AbortSignal",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal",
+    "product AbortSignal",
+    "product AbortSignal",
+    "completed bodyless HTTP 204",
+    "product AbortSignal"
+  ]
+}

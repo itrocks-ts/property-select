@@ -1,0 +1,307 @@
+[
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table",
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:42.919Z",
+    "status": "PASS",
+    "log": "table-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:44.304Z",
+    "status": "PASS",
+    "log": "property-select-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:45.993Z",
+    "status": "PASS",
+    "log": "list-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:48.837Z",
+    "status": "PASS",
+    "log": "home-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:50.997Z",
+    "status": "PASS",
+    "log": "framework-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "run",
+      "build"
+    ],
+    "started": "2026-10-16T07:52:53.459Z",
+    "status": "PASS",
+    "log": "showtime-build.txt"
+  },
+  {
+    "program": "node",
+    "args": [
+      "/home/baptiste/itrocks/showtime/node_modules/.bin/tsc",
+      "-p",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/models/tsconfig.json"
+    ],
+    "started": "2026-10-16T07:52:55.384Z",
+    "status": "PASS",
+    "log": "models-build.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:52:55.781Z",
+    "status": "PASS",
+    "log": "property-select-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:02.555Z",
+    "status": "PASS",
+    "log": "list-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/table",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:02.851Z",
+    "status": "PASS",
+    "log": "table-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:03.172Z",
+    "status": "PASS",
+    "log": "home-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:03.474Z",
+    "status": "PASS",
+    "log": "framework-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:03.785Z",
+    "status": "PASS",
+    "log": "reflect-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/reflect-path",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:04.068Z",
+    "status": "PASS",
+    "log": "reflect-path-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/storage",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:04.346Z",
+    "status": "PASS",
+    "log": "storage-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-build",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:04.612Z",
+    "status": "PASS",
+    "log": "sql-build-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/sql-join",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:04.898Z",
+    "status": "PASS",
+    "log": "sql-join-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/mysql",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:05.174Z",
+    "status": "PASS",
+    "log": "mysql-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/mysql-maintainer",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:05.457Z",
+    "status": "PASS",
+    "log": "mysql-maintainer-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/fastify",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:05.719Z",
+    "status": "PASS",
+    "log": "fastify-pack.txt"
+  },
+  {
+    "program": "npm",
+    "args": [
+      "--prefix",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/fastify-file-session-store",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--cache",
+      "/tmp/property-select/D8-npm-cache"
+    ],
+    "started": "2026-10-16T07:53:05.984Z",
+    "status": "PASS",
+    "log": "fastify-file-session-store-pack.txt"
+  }
+]
