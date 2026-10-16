@@ -8,6 +8,12 @@
 
 Interactive property selection through business object relationships.
 
+*This documentation was written by an artificial intelligence and may contain errors or approximations.
+The development of this package was also entrusted to an artificial intelligence, based on a detailed feature design.
+The generated code does not yet meet the [it.rocks](https://it.rocks) goals of keeping code as clean and optimised as
+possible and following the KISS principle. The documentation has not yet been fully reviewed by a human.
+If anything seems unclear or incomplete, please feel free to contact the author of this package.*
+
 The selector lets users browse related objects from a business root and search for properties by name or label.
 Users can select a field or a related object itself, identified by its full path, such as `customer.address.city`.
 Host components receive selection and drag intentions and decide how to use the chosen property.
