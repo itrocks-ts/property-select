@@ -1,0 +1,298 @@
+[
+  {
+    "width": 1280,
+    "height": 720,
+    "url": "http://127.0.0.1:13762/table-fixture",
+    "browser": "151.0.7922.34",
+    "chromiumSandbox": true,
+    "actual": {
+      "scrollLeft": 0,
+      "metric": {
+        "left": 930,
+        "right": 1148.140625,
+        "width": 218.140625
+      },
+      "left": {
+        "left": 16,
+        "right": 98,
+        "width": 82
+      },
+      "right": {
+        "left": 1148.140625,
+        "right": 1230.140625,
+        "width": 82
+      },
+      "main": {
+        "left": 16,
+        "right": 1264,
+        "width": 1248
+      },
+      "freezeInner": {
+        "left": 98,
+        "right": 1149.140625
+      },
+      "cols": [
+        {
+          "left": 16,
+          "right": 98,
+          "width": 82
+        },
+        {
+          "left": 98,
+          "right": 306,
+          "width": 208
+        },
+        {
+          "left": 306,
+          "right": 514,
+          "width": 208
+        },
+        {
+          "left": 514,
+          "right": 722,
+          "width": 208
+        },
+        {
+          "left": 722,
+          "right": 930,
+          "width": 208
+        },
+        {
+          "left": 930,
+          "right": 1148.140625,
+          "width": 218.140625
+        },
+        {
+          "left": 1148.140625,
+          "right": 1230.140625,
+          "width": 82
+        }
+      ]
+    },
+    "expectedVisible": 218.140625,
+    "observedVisible": 218.140625,
+    "verdict": "PASS"
+  },
+  {
+    "width": 768,
+    "height": 900,
+    "url": "http://127.0.0.1:13762/table-fixture",
+    "browser": "151.0.7922.34",
+    "chromiumSandbox": true,
+    "actual": {
+      "scrollLeft": 386,
+      "metric": {
+        "left": 544,
+        "right": 752,
+        "width": 208
+      },
+      "left": {
+        "left": 16,
+        "right": 98,
+        "width": 82
+      },
+      "right": {
+        "left": 670,
+        "right": 752,
+        "width": 82
+      },
+      "main": {
+        "left": 16,
+        "right": 752,
+        "width": 736
+      },
+      "freezeInner": {
+        "left": -288,
+        "right": 753
+      },
+      "cols": [
+        {
+          "left": -370,
+          "right": -288,
+          "width": 82
+        },
+        {
+          "left": -288,
+          "right": -80,
+          "width": 208
+        },
+        {
+          "left": -80,
+          "right": 128,
+          "width": 208
+        },
+        {
+          "left": 128,
+          "right": 336,
+          "width": 208
+        },
+        {
+          "left": 336,
+          "right": 544,
+          "width": 208
+        },
+        {
+          "left": 544,
+          "right": 752,
+          "width": 208
+        },
+        {
+          "left": 752,
+          "right": 834,
+          "width": 82
+        }
+      ]
+    },
+    "expectedVisible": 208,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "url": "http://127.0.0.1:13762/table-fixture",
+    "browser": "151.0.7922.34",
+    "chromiumSandbox": true,
+    "actual": {
+      "scrollLeft": 764,
+      "metric": {
+        "left": 166,
+        "right": 374,
+        "width": 208
+      },
+      "left": {
+        "left": 16,
+        "right": 98,
+        "width": 82
+      },
+      "right": {
+        "left": 292,
+        "right": 374,
+        "width": 82
+      },
+      "main": {
+        "left": 16,
+        "right": 374,
+        "width": 358
+      },
+      "freezeInner": {
+        "left": -666,
+        "right": 375
+      },
+      "cols": [
+        {
+          "left": -748,
+          "right": -666,
+          "width": 82
+        },
+        {
+          "left": -666,
+          "right": -458,
+          "width": 208
+        },
+        {
+          "left": -458,
+          "right": -250,
+          "width": 208
+        },
+        {
+          "left": -250,
+          "right": -42,
+          "width": 208
+        },
+        {
+          "left": -42,
+          "right": 166,
+          "width": 208
+        },
+        {
+          "left": 166,
+          "right": 374,
+          "width": 208
+        },
+        {
+          "left": 374,
+          "right": 456,
+          "width": 82
+        }
+      ]
+    },
+    "expectedVisible": 194,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "url": "http://127.0.0.1:13762/table-fixture",
+    "browser": "151.0.7922.34",
+    "chromiumSandbox": true,
+    "actual": {
+      "scrollLeft": 310,
+      "metric": {
+        "left": 620,
+        "right": 828,
+        "width": 208
+      },
+      "left": {
+        "left": 16,
+        "right": 98,
+        "width": 82
+      },
+      "right": {
+        "left": 746,
+        "right": 828,
+        "width": 82
+      },
+      "main": {
+        "left": 16,
+        "right": 828,
+        "width": 812
+      },
+      "freezeInner": {
+        "left": -212,
+        "right": 829
+      },
+      "cols": [
+        {
+          "left": -294,
+          "right": -212,
+          "width": 82
+        },
+        {
+          "left": -212,
+          "right": -4,
+          "width": 208
+        },
+        {
+          "left": -4,
+          "right": 204,
+          "width": 208
+        },
+        {
+          "left": 204,
+          "right": 412,
+          "width": 208
+        },
+        {
+          "left": 412,
+          "right": 620,
+          "width": 208
+        },
+        {
+          "left": 620,
+          "right": 828,
+          "width": 208
+        },
+        {
+          "left": 828,
+          "right": 910,
+          "width": 82
+        }
+      ]
+    },
+    "expectedVisible": 208,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  }
+]

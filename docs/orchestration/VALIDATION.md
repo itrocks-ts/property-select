@@ -921,6 +921,9 @@ Expected: Exercise opaque-id generic consumer independent of selector/list, asyn
 commit/cancel and no persistence of transient columns.
 
 Proof: `evidence/<gate>/PORT-04.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Generic V2-TABLE stage: **FAIL**, frozen-boundary reveal; other implemented portions pass.
+See [independent report](reports/V2-TABLE.md); external transport remains V5/V7.
+
 ### PORT-05: Labels, advice and defaults
 
 Expected: Identity translation fallback, technical label fallback, provider business order, static root advice,
@@ -1045,6 +1048,8 @@ Expected: Retain scoped entity JSON, HTML filtering/sort/feed, header-origin reo
 selection and keyboard after repeated reset.
 
 Proof: `evidence/<gate>/LIFE-03.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Generic table header/sort/reset/freeze regression portions independently **PASS** in
+[V2-TABLE](reports/V2-TABLE.md); the reveal defect blocks the gate. Integrated list observations remain later gates.
 
 ## Stage obligations
 
@@ -1089,7 +1094,12 @@ an implemented feature or use a simulated replacement for a required browser/dat
   L2-TABLE author observations **PASS**: 20 Node tests and 127 browser assertions on public table `0.3.0`, including
   TAB-02/TAB-04/TAB-05/TAB-06 click portions, provisional/committed separation, reset/late work and real header
   reorder/remove/sort/freeze. See [report](reports/L2-TABLE.md) and [evidence](evidence/L2-TABLE/results.json).
-  V2-TABLE remains NOT_RUN; no combined PORT-04, T18 or DEP-07 verdict is completed here.
+  V2-TABLE independent **NEEDS_FIX**: 179 PASS / 3 FAIL browser assertions on table
+  `c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97` / `0.3.0`. TAB-02/TAB-04 reveal fails at narrow/portrait/landscape:
+  sticky Actions masks part of the revealed column. TAB-05/TAB-06, generic reset/late work and header regressions pass.
+  See [report](reports/V2-TABLE.md), [evidence](evidence/V2-TABLE/results.json) and
+  [defect](defects/V2-TABLE-1.md). FIX-V2-TABLE-1 then independent RETEST-V2-TABLE-1 block L2-LIST.
+  Combined PORT-04, T18 and DEP-07 remain unfinished; no final PASS is claimed.
 - V2: SQL-14 browser linkage, object/deep-column data, plural refusal, visible-row reload and PANE-05. L2 navigation
   cases are complete except observations explicitly assigned to later touch/search/drag features.
 - V3: T09–T13 search/navigation and PORT-03/06, plus META-01–META-03. T11 intermediate-segment drag is V5.

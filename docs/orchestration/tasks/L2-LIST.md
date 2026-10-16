@@ -4,7 +4,7 @@
 
 Add object and nested terminal columns with real values through the configured data source.
 
-Prerequisites: V2-TABLE. Current status: `PENDING`.
+Prerequisites: RETEST-V2-TABLE-1 (must PASS after the failed V2-TABLE gate). Current status: `PENDING`.
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points

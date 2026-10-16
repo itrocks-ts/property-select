@@ -1,0 +1,26 @@
+[
+  {
+    "width": 1280,
+    "expectedVisible": 218.140625,
+    "observedVisible": 218.140625,
+    "verdict": "PASS"
+  },
+  {
+    "width": 768,
+    "expectedVisible": 208,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  },
+  {
+    "width": 390,
+    "expectedVisible": 194,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  },
+  {
+    "width": 844,
+    "expectedVisible": 208,
+    "observedVisible": 126,
+    "verdict": "FAIL"
+  }
+]

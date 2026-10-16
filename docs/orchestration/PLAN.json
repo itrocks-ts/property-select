@@ -36,6 +36,8 @@
     "V2-HOME",
     "L2-TABLE",
     "V2-TABLE",
+    "FIX-V2-TABLE-1",
+    "RETEST-V2-TABLE-1",
     "L2-LIST",
     "V2",
     "L3",
@@ -950,11 +952,83 @@
         "node_modules/@itrocks/property-select"
       ],
       "category": "browser",
-      "status": "PENDING",
+      "status": "NEEDS_FIX",
       "model": "gpt-6.1-sol",
       "model_reasoning_effort": "high",
       "model_justification": "Async column insertion must not regress existing reorder, deletion, sorting or freeze geometry.",
       "report": "reports/V2-TABLE.md",
+      "requirements": [
+        "DEP-07",
+        "TAB-04",
+        "TAB-05",
+        "TAB-06",
+        "VAL-04",
+        "VAL-06"
+      ],
+      "delivery": {
+        "verdict": "NEEDS_FIX",
+        "tested_table_sha": "c7c9a65fb5497b1e76d809622eb0d3f4e44f1f97",
+        "tested_table_version": "0.3.0",
+        "tracking_version": "0.2.5",
+        "evidence": "evidence/V2-TABLE/results.json",
+        "assertions": {
+          "PASS": 179,
+          "FAIL": 3
+        },
+        "defect": "defects/V2-TABLE-1.md",
+        "next_gate": "RETEST-V2-TABLE-1",
+        "scope": "Generic table addition; combined list/external transport cases remain NOT_RUN"
+      }
+    },
+    {
+      "id": "FIX-V2-TABLE-1",
+      "title": "Reveal columns between sticky boundaries",
+      "card": "tasks/FIX-V2-TABLE-1.md",
+      "dependencies": [
+        "V2-TABLE"
+      ],
+      "packages": [
+        "@itrocks/table",
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/table",
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "correction",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Sticky geometry across addition/freeze ports must preserve header gestures.",
+      "report": "reports/FIX-V2-TABLE-1.md",
+      "requirements": [
+        "DEP-07",
+        "TAB-04",
+        "TAB-05",
+        "TAB-06",
+        "VAL-04",
+        "VAL-06"
+      ]
+    },
+    {
+      "id": "RETEST-V2-TABLE-1",
+      "title": "Independently verify frozen column reveal",
+      "card": "tasks/RETEST-V2-TABLE-1.md",
+      "dependencies": [
+        "FIX-V2-TABLE-1"
+      ],
+      "packages": [
+        "@itrocks/property-select"
+      ],
+      "repositories": [
+        "node_modules/@itrocks/property-select"
+      ],
+      "category": "browser",
+      "status": "PENDING",
+      "model": "gpt-6.1-sol",
+      "model_reasoning_effort": "high",
+      "model_justification": "Independent sticky-boundary and async header regression verification.",
+      "report": "reports/RETEST-V2-TABLE-1.md",
       "requirements": [
         "DEP-07",
         "TAB-04",
@@ -969,7 +1043,7 @@
       "title": "Real projected list and click integration",
       "card": "tasks/L2-LIST.md",
       "dependencies": [
-        "V2-TABLE"
+        "RETEST-V2-TABLE-1"
       ],
       "packages": [
         "@itrocks/list",

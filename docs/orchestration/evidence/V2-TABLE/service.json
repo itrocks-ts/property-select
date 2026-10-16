@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:13762/table-fixture",
+  "http_before_each_stop": 200,
+  "environment": "/tmp/property-select-V2-TABLE-independent",
+  "owned_stopped_pids": [
+    2289231,
+    2292371
+  ],
+  "final_stop": "PASS: owned standalone 2292371 stopped",
+  "pid_and_owner_records_removed": true,
+  "author_port_13752": "untouched"
+}

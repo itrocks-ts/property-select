@@ -4,7 +4,7 @@
 
 Verify actual plugin DOM behaviour before list integration.
 
-Prerequisites: L2-TABLE. Current status: `PENDING`.
+Prerequisites: L2-TABLE. Current status: `NEEDS_FIX`; see [independent report](../reports/V2-TABLE.md).
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points
