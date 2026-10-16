@@ -85,6 +85,18 @@ export class Navigation
 		return context
 	}
 
+	async resolve(path: string, signal: AbortSignal)
+	{
+		signal.throwIfAborted()
+		if (!path) return this.loadContext('', signal)
+		const parent = path.split('.').slice(0, -1).join('.')
+		const context = await this.loadContext(parent, signal)
+		signal.throwIfAborted()
+		const property = context.properties.find(property => property.path === path)
+		if (!property) throw new TypeError(`Unknown property: ${path}`)
+		return structuredClone(property)
+	}
+
 	invalidate(): void
 	{
 		this.abort?.abort()

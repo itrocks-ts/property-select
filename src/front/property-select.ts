@@ -3,7 +3,7 @@ import type { PropertySelectOptions } from '../property-select.js'
 import type { SearchResult }          from '../property-select.js'
 import { PointerTransport }           from './pointer-transport.js'
 
-export type PropertySelectViewOptions = { templateUrl?: string | URL }
+export type PropertySelectViewOptions = { template?: string; templateUrl?: string | URL }
 
 /** Owns one mounted controller and its DOM. Importing this module never activates a host. */
 export class PropertySelectView
@@ -20,9 +20,10 @@ export class PropertySelectView
 	private query?: HTMLInputElement
 	private root?: HTMLElement
 	private resize?: ResizeObserver
+	private readonly restoredScroll = new WeakMap<HTMLElement, { left: number; top: number }>()
 	private readonly rows = new Map<string, HTMLLIElement>()
-	private searchScope = ''
 	private scrollScope = ''
+	private searchScope = ''
 	private shortcuts?: HTMLElement
 	private transport?: PointerTransport
 	private persistence?: HTMLElement
@@ -107,12 +108,13 @@ export class PropertySelectView
 	private async initialise(): Promise<boolean>
 	{
 		try {
-			const response = await fetch(this.viewOptions.templateUrl ?? new URL('./property-select.html', import.meta.url), {
-				signal: this.abort.signal
-			})
-			if (!response.ok)
-				throw new Error(`Unable to load selector template (${response.status})`)
-			const markup = await response.text()
+			let markup = this.viewOptions.template
+			if (markup === undefined) {
+				const url = this.viewOptions.templateUrl ?? new URL('./property-select.html', import.meta.url)
+				const response = await fetch(url, { signal: this.abort.signal })
+				if (!response.ok) throw new Error(`Unable to load selector template (${response.status})`)
+				markup = await response.text()
+			}
 			if (this.disposed)
 				return false
 			const template = this.host.ownerDocument.createElement('template')
@@ -138,6 +140,9 @@ export class PropertySelectView
 			this.list.setAttribute('aria-label', this.selector.translate('Properties'))
 			for (const [element, key] of [[this.breadcrumb, 'breadcrumb'], [this.list, 'properties']] as const) {
 				element.addEventListener('scroll', () => {
+					const restored = this.restoredScroll.get(element)
+					if (restored?.left === element.scrollLeft && restored.top === element.scrollTop) return
+					this.restoredScroll.delete(element)
 					if (this.selector.status !== 'ready' || this.selector.search.status === 'loading') return
 					this.selector.setScroll(key === 'breadcrumb' ? key : this.scrollKey(), {
 						left: element.scrollLeft, top: element.scrollTop
@@ -191,14 +196,21 @@ export class PropertySelectView
 		return `properties:${this.selector.path}:${this.selector.snapshot().query}`
 	}
 
+	private positionScroll(element: HTMLElement, left: number, top: number): void
+	{
+		element.scrollLeft = left
+		element.scrollTop = top
+		// A restored offset may be clamped by the viewport; that is not a user state change.
+		this.restoredScroll.set(element, { left: element.scrollLeft, top: element.scrollTop })
+	}
+
 	private restoreScroll(): void
 	{
 		if (!this.list?.clientHeight || this.selector.search.status === 'loading') return
 		const state = this.selector.snapshot()
 		const position = state.scroll[this.scrollKey()] ?? { left: 0, top: 0 }
-		this.list.scrollLeft = position.left
-		this.list.scrollTop = position.top
-		if (this.breadcrumb) this.breadcrumb.scrollLeft = state.scroll.breadcrumb?.left ?? 0
+		this.positionScroll(this.list, position.left, position.top)
+		if (this.breadcrumb) this.positionScroll(this.breadcrumb, state.scroll.breadcrumb?.left ?? 0, 0)
 	}
 
 	private renderPersistence(): void
@@ -274,7 +286,7 @@ export class PropertySelectView
 				button.setAttribute('aria-current', 'location')
 			this.breadcrumb!.append(button)
 		}
-		this.breadcrumb!.scrollLeft = state.scroll.breadcrumb?.left ?? left
+		this.positionScroll(this.breadcrumb!, state.scroll.breadcrumb?.left ?? left, 0)
 		let results: readonly SearchResult[] = search.status === 'idle'
 			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
@@ -317,8 +329,7 @@ export class PropertySelectView
 		if (this.scrollScope !== scrollKey || search.status !== 'loading') {
 			this.scrollScope = scrollKey
 			const position = state.scroll[scrollKey] ?? { left: 0, top: 0 }
-			this.list!.scrollLeft = position.left
-			this.list!.scrollTop = position.top
+			this.positionScroll(this.list!, position.left, position.top)
 		}
 		if (focus) {
 			const buttons = Array.from(this.root!.querySelectorAll<HTMLElement>('[data-focus]'))

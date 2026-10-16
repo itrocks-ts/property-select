@@ -78,7 +78,6 @@ export class PropertySelect
 				throw new TypeError('Session persistence requires a store and opaque key')
 			this.persistence = new StatePersistence(options.stateStore, options.stateKey)
 		}
-		this.metadata = options.metadata
 		this.suggestionLimit = options.suggestionLimit ?? 6
 		if (!Number.isSafeInteger(this.suggestionLimit) || this.suggestionLimit < 1 || this.suggestionLimit > 100)
 			throw new TypeError('Suggestion limit must be an integer from 1 to 100')
@@ -88,9 +87,13 @@ export class PropertySelect
 		this.usedValue   = (options.usedPaths || []).map(normalisePath)
 		this.navigation  = new Navigation(options.metadata, options.root, () => this.emit({ type: 'change' }),
 			error => this.emit({ type: 'error', error }))
+		this.metadata = {
+			context: (_root, path, signal) => this.navigation.loadContext(path, signal ?? new AbortController().signal),
+			resolve: (_root, path, signal) => this.navigation.resolve(path, signal ?? new AbortController().signal)
+		}
 		this.searchEngine = new Search((path, signal) => this.navigation.loadContext(path, signal),
 			() => this.emit({ type: 'change' }), error => this.emit({ type: 'error', error }), options.search)
-		this.intentions = new Intentions(options.metadata, options.root, options.consumer,
+		this.intentions = new Intentions(this.metadata, options.root, options.consumer,
 			event => this.emit(event), property => this.addRecent(property),
 			error => this.emit({ type: 'error', error }))
 	}
@@ -202,7 +205,6 @@ export class PropertySelect
 		this.mounted = true
 		this.searchEngine.start(this.queryValue, this.navigation.trail)
 		await this.refreshSuggestions()
-		this.saveState()
 		return mounted
 	}
 
@@ -266,12 +268,13 @@ export class PropertySelect
 	setConfiguration(configuration: { advice?: readonly PropertyPath[]; usedPaths?: readonly PropertyPath[] }): void
 	{
 		this.assertLive()
-		if (configuration.advice !== undefined)
-			this.adviceValue = configuration.advice.map(normalisePath)
-		if (configuration.usedPaths !== undefined)
-			this.usedValue = configuration.usedPaths.map(normalisePath)
+		const advice = configuration.advice?.map(normalisePath) ?? this.adviceValue
+		const used = configuration.usedPaths?.map(normalisePath) ?? this.usedValue
+		if (JSON.stringify([advice, used]) === JSON.stringify([this.adviceValue, this.usedValue])) return
+		this.adviceValue = advice
+		this.usedValue = used
 		this.emit({ type: 'change' })
-		void this.refreshSuggestions()
+		if (this.mounted) void this.refreshSuggestions()
 	}
 
 	setQuery(query: string): void
@@ -289,6 +292,8 @@ export class PropertySelect
 		this.assertLive()
 		if (!Number.isFinite(position.left) || !Number.isFinite(position.top))
 			throw new TypeError('Scroll coordinates must be finite')
+		const previous = this.scrollValue[key] ?? { left: 0, top: 0 }
+		if (previous.left === position.left && previous.top === position.top) return
 		Object.defineProperty(this.scrollValue, key, {
 			configurable: true, enumerable: true, value: { left: position.left, top: position.top }
 		})

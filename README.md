@@ -61,6 +61,8 @@ The provider implements `MetadataProvider.context(root, path, signal?)` and `res
 It supplies full root-relative paths, stable business order, authorised relation facts and no business records.
 `resolve(root, '')` returns an `ObjectContext`; other resolutions return a `PropertyDescription`.
 A missing provider throws a configuration error. Provider failures emit an `error` event and retain the last context.
+Navigation, search, suggestions and selection reuse loaded contexts, including their property descriptions.
+Unchanged configuration and scroll positions do not trigger work; mounting does not write session state.
 Cached contexts belong to one root and one authorised provider catalogue snapshot per instance; recreate the
 controller when that catalogue changes. Labels fall back to technical names. Equal orders use path as a tie-breaker.
 
@@ -95,7 +97,8 @@ Desktop hover or keyboard focus reveals the reserved `+`; without hover only rel
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
 
-The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `templateUrl?: string | URL`.
+The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `template?: string` and
+`templateUrl?: string | URL`. A supplied template is mounted directly without a fetch.
 Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
 Recoverable consumer errors display their message as text, allowing hosts to explain an unsupported selection.
 

@@ -171,3 +171,32 @@ test('coalesced writes discard intermediate snapshots while an older durable ack
 	assert.equal((await store.read('key')).state.query, 'latest')
 	selector.dispose()
 })
+
+test('mount, unchanged configuration, reorder and removal reuse metadata without session writes', async () => {
+	const metadata = staticProvider()
+	let writes = 0
+	const selector = new PropertySelect({
+		metadata, root: 'invoice', stateMode: 'session', stateKey: 'list',
+		stateStore: {
+			read: async () => ({ revision: 0 }),
+			write: async () => { writes ++; return { revision: writes } },
+			remove: async () => ({ revision: 0 })
+		},
+		usedPaths: ['number', 'customer.name', 'customer.address.city.name']
+	})
+	await selector.mount()
+	assert.equal(writes, 0)
+	assert.equal(metadata.calls.filter(call => call.kind === 'resolve').length, 0)
+	const before = metadata.calls.length
+	selector.setConfiguration({ usedPaths: selector.usedPaths })
+	selector.setConfiguration({ usedPaths: [...selector.usedPaths].reverse() })
+	await tick()
+	selector.setConfiguration({ usedPaths: ['number', 'customer.name'] })
+	selector.setScroll('breadcrumb', { left: 0, top: 0 })
+	await tick()
+	assert.equal(metadata.calls.length, before)
+	assert.equal(writes, 0)
+	await selector.select('number')
+	assert.equal(metadata.calls.length, before)
+	selector.dispose()
+})
