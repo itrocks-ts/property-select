@@ -1,0 +1,44 @@
+
+> @itrocks/list@0.12.0 test
+> npm run build:cjs && node --test "test/**/*.test.mjs"
+
+
+> @itrocks/list@0.12.0 build:cjs
+> tsc && node -e "const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.html'))fs.copyFileSync(path.join('src',file),path.join('cjs',file))"
+
+✔ columns accept reordering and removing properties without restoring defaults (93.975235ms)
+✔ columns reject duplicates, unknown properties and malformed requests (0.811417ms)
+✔ removed columns, including the last column, survive session restoration (0.711285ms)
+✔ column changes persist and return 204 before any data query, even for an empty list (1.125261ms)
+✔ column saves preserve validation and restore an empty session on the next request (1.20518ms)
+✔ an absent offset resets the feed to the first page with a finite limit (0.969715ms)
+✔ explicit valid offsets and viewport limits retain their pagination values (0.357039ms)
+✔ invalid explicit offsets remain visible to downstream validation (0.19693ms)
+✔ html combines user filters and a mandatory scope for projection and count (2.467613ms)
+✔ html keeps the mandatory scope on paginated feed requests (0.343132ms)
+✔ html restores session filters for queries and inputs, and accepts clearing them (1.697899ms)
+✔ json forwards its mandatory scope directly to the data source (0.358606ms)
+✔ omitting the scope preserves html filters and the json query (0.338691ms)
+✔ pane restoration waits for both admission and durable column save (1.800159ms)
+✔ rejection during admission releases the pane token (0.251105ms)
+✔ rejection during save releases the pane token (0.212126ms)
+✔ cancellation restores before delayed completion and never starts a save (0.267015ms)
+✔ the pane folds before external geometry starts and restores on synchronous rejection (0.718328ms)
+✔ object and deep columns derive a finite representation closure through reflection (185.422706ms)
+✔ plural, cyclic and undeclared custom representation closures fail before projection (0.513684ms)
+✔ path columns persist, filter both form trees and query keys, and expand representative ordering (1.448578ms)
+✔ visible row projection intersects mandatory scope and preserves full JSON entities (1.980523ms)
+✔ access denial is checked before projection and object-field authorisation is explicit (0.755763ms)
+✔ default route resolves List after adding public dependency hooks (0.459003ms)
+✔ undeclared object transformers fail before querying; declared fields are accepted (0.859518ms)
+✔ external admission validates representation and authorisation without loading rows (0.665366ms)
+✔ actual session CAS, tombstones, distinct route keys and isolated sessions (92.249254ms)
+✔ public browser transport carries credentials, revisions and a session generation (29.658725ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 308.339554

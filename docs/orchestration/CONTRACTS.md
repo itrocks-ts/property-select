@@ -244,7 +244,7 @@ type PaneState = { present: boolean; open: boolean; suspended: boolean }
 interface PaneHandle {
   open(): void
   close(): void
-  suspend(): { restore(): void }
+  suspend(options?: { mobileOnly?: boolean }): { restore(): void }
   subscribe(listener: (state: PaneState) => void): () => void
   remove(): void
 }
@@ -258,6 +258,8 @@ same owner updates title/content only while inactive; during active transport it
 command. New content starts folded. Removal is idempotent and invalidates every outstanding restore token.
 `suspend()` folds visually without destroying content or transport; its restore token restores the preceding open/scroll
 state only for the same owner/generation. Nested suspensions restore only after the final valid token is released.
+`mobileOnly` tokens suspend only while the host's mobile layout matches, including a viewport change during transport.
+List reserves this token before table geometry is measured and restores after admission and column persistence settle.
 Explicit close restores focus to a visible trigger; temporary drag restoration never focuses the search input.
 
 Home owns one movable control: top right after notifications while folded, left of pane title with reversed icon while

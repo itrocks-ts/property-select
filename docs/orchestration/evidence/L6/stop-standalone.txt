@@ -1,0 +1,2 @@
+PASS: owned standalone 2546629 stopped
+Command: PS_ENV_DIRECTORY=/tmp/property-select/L6-owned node docs/orchestration/environment/control.mjs stop-standalone

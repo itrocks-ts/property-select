@@ -1,0 +1,35 @@
+[
+  {
+    "path": "/tmp/property-select/L6-initial-diagnostic/results.json",
+    "sha256": "5d0c28f36a26b86026c2d44f14e47a0fb05266251110575cad3c4f7f79f98bc5"
+  },
+  {
+    "path": "/tmp/property-select/L6-diagnostic-2/results.json",
+    "sha256": "1d0c3ee6be9ba0252979f4a8dec8304127ce3625cec7c509c88a30d1d3f0edd8"
+  },
+  {
+    "path": "/tmp/property-select/L6-diagnostic-3/results.json",
+    "sha256": "f3b06699c077b0f7a4d40e397ef3111603ff2f2856f8f984ca53f5e4041ab7bc"
+  },
+  {
+    "path": "/tmp/property-select/L6-integration-diagnostic/results.json",
+    "sha256": "2fa658f3e075376536cd8c513f266758aa48062a0ee8033564b41daa9b26ba51"
+  },
+  {
+    "path": "/tmp/property-select/L6-integration-diagnostic-2/results.json",
+    "sha256": "cf2e1f2a7bca95b5cfa990ac73188145659e419350c8ac901a09c1f9d9e643b9"
+  },
+  {
+    "path": "/tmp/property-select/L6-integration-diagnostic-3/results.json",
+    "sha256": "481f591246aef05ec88d97e03ba6ac06adfa03bf06ccd0f000ec2203b0d26f64"
+  },
+  {
+    "path": "/tmp/property-select/L6-extra-diagnostic/results.json",
+    "sha256": "ee90b3be843a54076668f7c253c4993dfd006ae177615a546991423044fa8fcd"
+  },
+  {
+    "path": "/tmp/property-select/L6-application-build-raw.txt",
+    "sha256": "bd85c4faf562a61255838a94785bd14a20aa4872a0e0c5e9a06bbdf5d9f3906f",
+    "note": "Raw successful build output; versioned copy removes trailing whitespace only."
+  }
+]

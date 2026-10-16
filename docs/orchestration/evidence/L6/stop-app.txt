@@ -1,0 +1,2 @@
+PASS: owned app 2546606 stopped
+Command: PS_ENV_DIRECTORY=/tmp/property-select/L6-owned node docs/orchestration/environment/control.mjs stop-app

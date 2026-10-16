@@ -1,5 +1,29 @@
 # Phase 1 validation matrix
 
+## L6 author touch delivery — 16 October 2026
+
+**DONE / author PASS**; independent **V6 remains NOT_RUN**. See [report](reports/L6.md),
+[155 browser assertions](evidence/L6/results.json), [builds and suites](evidence/L6/build/results.json), and
+[exact runtime checkpoints](evidence/L6/source-checkpoints.json).
+
+- T22 / DRA-02–04 / ACT-06: trusted tap, 800 ms hold, native vertical scroll, horizontal recognition without delay,
+  locked diagonals, left/right source zones, browser pointercancel and real pinch scaling pass.
+- T23 / DRA-05–08: mobile-only fold, admission-held release, restoration without query focus, existing-column rollback,
+  new-column cancellation before late admission/values, active viewport changes and departure pass.
+- T24 / ARC-05 / ACT-05: portrait/landscape touch and dual touch/mouse contexts at 768/1280 pass; the same mounted model
+  supports mouse and keyboard after resize. Physical hardware remains untested under VAL-05.
+- T08/T25 / NAV-09 / QUA-02: native horizontal breadcrumb scroll, all five levels, object plus, terminal tap,
+  keyboard navigation, mobile focus containment, explicit close focus and reduced motion pass.
+- T27 / PANE-06: table-owned edge scrolling moves 0 → 480 → 12 px in both mobile sizes; anchored header commands
+  stay on screen at horizontal extremes and reopen the same pane.
+- Contracts: 13 source timing tests, five independent consumer-port timing tests and extended home lifecycle coverage
+  pass. Full owner suites pass 43 selector, 47 table, 28 list and one home test. Five builds/exports and app build pass.
+
+The source suppression defect discovered during author testing is corrected: a fresh primary contact outside the
+selector no longer loses its click after cancellation. The final replay passes. These author observations do not
+complete the independent V6 gate or final combined cases.
+
+
 
 ## V5 independent desktop verification — 16 October 2026
 
@@ -844,17 +868,22 @@ restoration to original index. **PASS V5**: [independent proof](evidence/V5/resu
 - **T21** — Expected: Drop above/below/outside, Escape, touchCancel and depart view with delayed data; no
 commit/resurrection and clean listeners. **PASS V5 desktop/contract**; touch NOT_RUN until L6/V6.
 - **T22** — Expected: Trusted vertical touch scrolls; dominant horizontal gesture in left source zone transports
-without hold or residual click. Proof: `evidence/<gate>/T22.*`; current verdict: `NOT_RUN`.
+without hold or residual click. Proof: `evidence/<gate>/T22.*`; author: [PASS L6](reports/L6.md);
+independent verdict: `NOT_RUN` (V6).
 - **T23** — Expected: Recognise mobile drag, observe pane folding, edge autoscroll and restore after success/cancel
-without search focus. Proof: `evidence/<gate>/T23.*`; current verdict: `NOT_RUN`.
+without search focus. Proof: `evidence/<gate>/T23.*`; author: [PASS L6](reports/L6.md);
+independent verdict: `NOT_RUN` (V6).
 - **T24** — Expected: Test diagonal locked intent, edge zone, long breadcrumb, portrait/landscape and hybrid mouse;
-record physical-device limit. Proof: `evidence/<gate>/T24.*`; current verdict: `NOT_RUN`.
+record physical-device limit. Proof: `evidence/<gate>/T24.*`; author: [PASS L6](reports/L6.md);
+independent verdict: `NOT_RUN` (V6).
 - **T25** — Expected: Add terminal/object via keyboard and tap without drag; visible focus returns correctly after
-explicit pane closure. Proof: `evidence/<gate>/T25.*`; current verdict: `NOT_RUN`.
+explicit pane closure. Proof: `evidence/<gate>/T25.*`; author: [PASS L6](reports/L6.md);
+independent verdict: `NOT_RUN` (V6).
 - **T26** — Expected: Use 500+ metadata contexts, 120 roots, slow/failing endpoints and overlapping actions; bounded
 work and unique columns persist. Proof: `evidence/<gate>/T26.*`; current verdict: `NOT_RUN`.
 - **T27** — Expected: Scroll a wide table to both ends; pane/header controls remain visible and open the same pane
-on desktop and touch. Proof: `evidence/<gate>/T27.*`; current verdict: `NOT_RUN`.
+on desktop and touch. Proof: `evidence/<gate>/T27.*`; author: [PASS L6](reports/L6.md);
+independent verdict: `NOT_RUN` (V6).
 
 S03 prerequisite facts for T13: `PASS` for explicit N-1/1-N/N-N inverse/cardinality and unknown defaults;
 [owner tests](evidence/S03/reflect-test.txt) and [report](reports/S03.md), reflect

@@ -14,7 +14,7 @@ Host components receive selection and drag intentions and decide how to use the 
 
 The public controller runs without it.rocks, a DOM view or a table. It loads metadata lazily, remembers navigation,
 emits selection/transport intentions and exports instance state. The browser view provides a single property list and
-remembered breadcrumbs and bounded descendant search. Session persistence belongs to a subsequent delivery.
+remembered breadcrumbs and bounded descendant search. An optional session store restores the same navigation model.
 
 ## Standalone use
 
@@ -88,7 +88,6 @@ The main button selects a field or opens a relation; its adjacent `+` selects ei
 Desktop hover or keyboard focus reveals the reserved `+`; without hover only relation buttons show it.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
-Shortcuts and recognised drag gestures remain separate deliveries.
 
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `templateUrl?: string | URL`.
 Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
@@ -215,7 +214,7 @@ Copyright (C) 2026, Baptiste Pillot <baptiste@pillot.fr>.
 This package is licensed under the GNU Lesser General Public License, version 3 or any later version
 (`LGPL-3.0-or-later`). See [LICENSE](LICENSE) for the LGPL terms and [COPYING](COPYING) for the incorporated GPL terms.
 
-## Desktop source gestures
+## Source gestures
 
 The rendered view recognises a primary mouse/pen movement of 10 pixels from property names, breadcrumb relations and
 search-result relation segments. It transports their fixed full path through the generic consumer port. The root,
@@ -225,5 +224,14 @@ thumbnail or insertion indicator is rendered by the selector. Target decisions b
 Pointer capture belongs to the document element so replacing source rows or folding a containing pane preserves the
 controller. Pointer cancellation, lost capture, Escape, window blur and disposal cancel the operation once. An optional
 abort signal on `begin` also cancels pending metadata resolution, preventing a late begin after the pointer is released.
-Desktop target decisions and rollback belong to the consumer. Touch gesture recognition remains a separate delivery.
+Target decisions and rollback belong to the consumer. Touch uses the same controller, with no hold timer: after
+10 pixels, horizontal movement must dominate vertical movement by at least 1.5 and start within 96 CSS pixels of the
+selector's left edge. Otherwise the gesture remains native until release. Recognition stays locked through diagonals.
+These are technical recognition constants, not user preferences.
+
+Property names and result path segments declare `touch-action: pan-y pinch-zoom` before contact. Vertical scrolling
+and pinch zoom remain native; a second contact abandons pending or active transport. The horizontally scrollable
+breadcrumb keeps native touch navigation and mouse/pen transport. Touch users can transport the same object through
+its relation row or result segment. Relation plus controls remain visible on devices with any coarse pointer.
+A new primary contact resets residual-click suppression, including contacts outside the selector.
 The standalone demonstration records begin/move/end/cancel intentions without importing table, list, home or framework.

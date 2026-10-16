@@ -51,3 +51,10 @@
 .ps-persistence { font-size: .875rem; margin: .5rem .75rem; }
 
 .ps-main, .ps-level, .ps-result-path button { user-select: none; -webkit-user-select: none; }
+
+/* Set before pointerdown; keep breadcrumb panning and pinch zoom native. */
+.ps-main, .ps-result-path button { touch-action: pan-y pinch-zoom; }
+@media (any-pointer: coarse) {
+	.ps-property[data-kind="terminal"] .ps-add { display: none; }
+	.ps-property[data-kind="relation"] .ps-add { opacity: 1; pointer-events: auto; }
+}

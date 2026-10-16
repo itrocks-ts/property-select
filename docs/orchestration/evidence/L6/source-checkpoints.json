@@ -1,0 +1,40 @@
+{
+  "checkpoints": {
+    "@itrocks/property-select": {
+      "base_sha": "dc5cb1a3b83cd68ee3636ed965c7cd5d98201587",
+      "version": "0.7.0"
+    },
+    "@itrocks/home": {
+      "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0"
+    },
+    "@itrocks/list": {
+      "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+      "version": "0.12.0"
+    },
+    "@itrocks/table": {
+      "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0"
+    },
+    "@itrocks/framework": {
+      "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0"
+    }
+  },
+  "sha256": {
+    "property-select/src/front/pointer-transport.ts": "95f7892366ed775caf13844ff6300e1a1b0b4945d1dc5dda2eb93c2b9e00e3a1",
+    "property-select/front/pointer-transport.js": "65b606a5a96b26d97c00aca7b070b62e195a778d393303d9c59bb445d0c7952b",
+    "property-select/src/front/property-select.css": "3cb7f9f74cbde901aaba1eb3493f0af485939c2e7312dfbf155d84210c1bc186",
+    "property-select/front/property-select.css": "3cb7f9f74cbde901aaba1eb3493f0af485939c2e7312dfbf155d84210c1bc186",
+    "home/src/front/right-pane.ts": "0fc2c36e7059a80facc6765cdd2b9ba538e4d406ffe4a43a0b4d96b4a0c9e6ac",
+    "home/right-pane.js": "f2d1e495fa77d01ee57309c9f1c17c724842b5747649bc301958f7ffaa0c8859",
+    "home/src/right-pane.scss": "b8780aff0ac997d0ccf55b2b7df5ff65bc50548c00228d36b8ec822c1db77afb",
+    "home/right-pane.css": "56030f82d7bb7abbe5675b631d443f0dff9ec4bcca5a52da8ce1e5a284389f9c",
+    "list/src/front/property-select.ts": "52c145677f6a48498e0c735910b2dd07ea2a592db6855168a10359f8d1eff018",
+    "list/property-select.js": "4383040f54ecbda242a9ce57debb38fd4019b1a0849b0e3b0d9695f2d513a0be",
+    "property-select/docs/orchestration/environment/checks/L6.mjs": "87478840ba466977cbb3fbffdf42efa164b9eaf45e60ec92f464eaa0f87f8002",
+    "property-select/docs/orchestration/environment/checks/L6-build.mjs": "93b89856927e32cb8264729a2cd57e35ad3977dcefa138f66f65e5ed00a967ae",
+    "property-select/test/pointer-timing.test.mjs": "e42f6f36901ea4241a48f4c41f9eef3098a0da599965867bfc50929f6fbdf48e",
+    "list/test/pane-timing.test.mjs": "01a7df19cffb2bdca0ec5f2ecdb4ae122e2b99fb7cd0d125155c3a5af9db9c02"
+  }
+}

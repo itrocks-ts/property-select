@@ -4,17 +4,23 @@ import type { PropertySelect } from '../property-select.js'
 type Press = {
 	abort: AbortController
 	id?: string
+	intent: 'pending' | 'native' | 'transport'
+	left: number
 	origin: PointerSample
 	path: string
 	recognised: boolean
 	sample: PointerSample
 }
 
+const recognitionDistance = 10
+const touchDominance = 1.5
+const touchLeftZone = 96
+
 const sampleOf = (event: PointerEvent): PointerSample => ({
 	clientX: event.clientX, clientY: event.clientY, pointerId: event.pointerId, pointerType: event.pointerType
 })
 
-/** Source-only desktop recognition. The consumer owns every target decision. */
+/** Source recognition only. The consumer owns every target decision. */
 export class PointerTransport
 {
 
@@ -25,6 +31,10 @@ export class PointerTransport
 	constructor(private readonly root: HTMLElement, private readonly selector: PropertySelect)
 	{
 		const document = root.ownerDocument
+		document.addEventListener('pointerdown', event => {
+			if (event.isPrimary) this.suppressClick = false
+			if (event.pointerType === 'touch' && !event.isPrimary) this.cancel('multiple contacts')
+		}, { capture: true, signal: this.abort.signal })
 		root.addEventListener('pointerdown', event => this.down(event), { signal: this.abort.signal })
 		for (const type of ['pointermove', 'pointerup', 'pointercancel', 'lostpointercapture'] as const)
 			document.addEventListener(type, event => this.pointer(event), { capture: true, signal: this.abort.signal })
@@ -60,19 +70,23 @@ export class PointerTransport
 
 	private down(event: PointerEvent): void
 	{
-		if (this.press || !event.isPrimary || event.button !== 0 || event.pointerType === 'touch') return
+		if (this.press || !event.isPrimary || event.button !== 0) return
 		this.suppressClick = false
 		const button = (event.target as Element).closest<HTMLElement>('button[data-path]')
 		if (!button || !this.root.contains(button) || !button.dataset.path
 			|| button.closest('.ps-suggestions') || button.classList.contains('ps-add')) return
+		// Horizontal breadcrumb scrolling keeps its native touch policy.
+		if (event.pointerType === 'touch' && button.closest('.ps-breadcrumb')) return
 		const sample = sampleOf(event)
-		this.press = { abort: new AbortController(), origin: sample, path: button.dataset.path, recognised: false, sample }
+		this.press = { abort: new AbortController(), intent: 'pending', left: this.root.getBoundingClientRect().left,
+			origin: sample, path: button.dataset.path, recognised: false, sample }
 	}
 
 	private pointer(event: PointerEvent): void
 	{
 		const press = this.press
 		if (!press || event.pointerId !== press.origin.pointerId) return
+		if (event.type === 'lostpointercapture' && event.target !== this.root.ownerDocument.documentElement) return
 		if (event.type === 'pointercancel' || event.type === 'lostpointercapture') {
 			this.cancel(event.type)
 			return
@@ -86,8 +100,17 @@ export class PointerTransport
 			else press.abort.abort()
 			return
 		}
+		if (press.intent === 'native') return
 		if (!press.recognised) {
-			if (Math.hypot(event.clientX - press.origin.clientX, event.clientY - press.origin.clientY) < 10) return
+			const x = Math.abs(event.clientX - press.origin.clientX)
+			const y = Math.abs(event.clientY - press.origin.clientY)
+			if (Math.hypot(x, y) < recognitionDistance) return
+			if (press.origin.pointerType === 'touch'
+				&& (x < y * touchDominance || press.origin.clientX - press.left > touchLeftZone)) {
+				press.intent = 'native'
+				return
+			}
+			press.intent = 'transport'
 			press.recognised = true
 			this.suppressClick = true
 			this.root.ownerDocument.documentElement.setPointerCapture(event.pointerId)

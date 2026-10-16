@@ -1,0 +1,5053 @@
+{
+  "assertions": [
+    {
+      "mode": "standalone-390",
+      "name": "No horizontal page overflow",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Touch action before contact",
+      "observed": "pan-y pinch-zoom",
+      "expected": "pan-y pinch-zoom",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Relation plus available without hover",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Terminal has no plus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Tap selects exactly once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Object plus selects without navigation",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Plus keeps root",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Stationary hold does not begin",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Horizontal then vertical stays transported",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "No residual selection",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Right source zone cannot start",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Vertical motion performs native list scroll",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Vertical then horizontal never changes intent",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Browser pointercancel terminates once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Escape terminates once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Long breadcrumb retains all five levels",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Breadcrumb swipe never transports",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Breadcrumb scrolls horizontally",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Pinch changes real visual viewport scale",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-390",
+      "name": "Pinch creates no transport",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "No horizontal page overflow",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Touch action before contact",
+      "observed": "pan-y pinch-zoom",
+      "expected": "pan-y pinch-zoom",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Relation plus available without hover",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Terminal has no plus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Tap selects exactly once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Object plus selects without navigation",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Plus keeps root",
+      "observed": "",
+      "expected": "",
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Stationary hold does not begin",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Horizontal then vertical stays transported",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "No residual selection",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Right source zone cannot start",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Vertical motion performs native list scroll",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Vertical then horizontal never changes intent",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Browser pointercancel terminates once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Escape terminates once",
+      "observed": 2,
+      "expected": 2,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Long breadcrumb retains all five levels",
+      "observed": 5,
+      "expected": 5,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Breadcrumb swipe never transports",
+      "observed": 3,
+      "expected": 3,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Pinch changes real visual viewport scale",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "standalone-844",
+      "name": "Pinch creates no transport",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Mobile main inert / desktop interactive",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Pane fits viewport",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Recognition folds mobile only",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Actual provisional column exists",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Mobile remains folded while admission is pending",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Accepted column exists once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Restoration does not focus query",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Navigation restored",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "outside restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "outside no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "pointercancel restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "pointercancel no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Escape restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Escape no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Explicit close focus is visible command",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Header opens same pane",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Reload retains committed order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Mouse after touch and resize leaves desktop pane open",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Mouse cancellation keeps order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Keyboard navigation after touch remains available",
+      "observed": "customer.address.city",
+      "expected": "customer.address.city",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "One compatible model retains branch after resize",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Touch uses table edge scrolling right",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Touch uses frozen table edge scrolling left",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Active token follows desktop layout",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Rotation never duplicates preview or requests",
+      "observed": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Cancellation restores before pending HTTP settles",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Late admission and values cannot resurrect cancelled column",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Restoration preserves query",
+      "observed": "active",
+      "expected": "active",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Reduced motion removes pane animation",
+      "observed": "none",
+      "expected": "none",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Table reaches horizontal end 2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Header command remains on screen after horizontal scroll 2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Table reaches horizontal end -2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Header command remains on screen after horizontal scroll -2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Departure cannot restore the old pane",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-390",
+      "name": "Departure removes provisional cells",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Mobile main inert / desktop interactive",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Pane fits viewport",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Recognition folds mobile only",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Actual provisional column exists",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Mobile remains folded while admission is pending",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Accepted column exists once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Restoration does not focus query",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Navigation restored",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "outside restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "outside no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "pointercancel restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "pointercancel no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Escape restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Escape no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Explicit close focus is visible command",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Header opens same pane",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Reload retains committed order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Mouse after touch and resize leaves desktop pane open",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Mouse cancellation keeps order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Keyboard navigation after touch remains available",
+      "observed": "customer.address.city",
+      "expected": "customer.address.city",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "One compatible model retains branch after resize",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Touch uses table edge scrolling right",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Touch uses frozen table edge scrolling left",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Active token follows desktop layout",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Rotation never duplicates preview or requests",
+      "observed": [
+        1,
+        2
+      ],
+      "expected": [
+        1,
+        2
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Cancellation restores before pending HTTP settles",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Late admission and values cannot resurrect cancelled column",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Restoration preserves query",
+      "observed": "active",
+      "expected": "active",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Reduced motion removes pane animation",
+      "observed": "none",
+      "expected": "none",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Table reaches horizontal end 2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Header command remains on screen after horizontal scroll 2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Table reaches horizontal end -2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Header command remains on screen after horizontal scroll -2000",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Departure cannot restore the old pane",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-844",
+      "name": "Departure removes provisional cells",
+      "observed": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Mobile main inert / desktop interactive",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Pane fits viewport",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Recognition folds mobile only",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Actual provisional column exists",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Mobile remains folded while admission is pending",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Accepted column exists once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Restoration does not focus query",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Navigation restored",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "outside restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "outside no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "pointercancel restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "pointercancel no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Escape restores exact column order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Escape no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Explicit close focus is visible command",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Header opens same pane",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Reload retains committed order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Mouse after touch and resize leaves desktop pane open",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Mouse cancellation keeps order",
+      "observed": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "expected": [
+        "number",
+        "customer.address.city",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "Keyboard navigation after touch remains available",
+      "observed": "customer.address.city",
+      "expected": "customer.address.city",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-768",
+      "name": "One compatible model retains branch after resize",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Mobile main inert / desktop interactive",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Pane fits viewport",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Recognition folds mobile only",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Actual provisional column exists",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Mobile remains folded while admission is pending",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Accepted column exists once",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Restoration does not focus query",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Navigation restored",
+      "observed": "customer.address",
+      "expected": "customer.address",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "outside restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "outside no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "pointercancel restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "pointercancel no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Escape restores exact column order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Escape no query focus",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Explicit close focus is visible command",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Header opens same pane",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Reload retains committed order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Mouse after touch and resize leaves desktop pane open",
+      "observed": false,
+      "expected": false,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Mouse cancellation keeps order",
+      "observed": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "expected": [
+        "customer.address.city",
+        "number",
+        "amount"
+      ],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Keyboard navigation after touch remains available",
+      "observed": "customer.address.city",
+      "expected": "customer.address.city",
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "One compatible model retains branch after resize",
+      "observed": 1,
+      "expected": 1,
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "No browser exceptions",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "No console errors",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "Only intentional request cancellation",
+      "observed": [],
+      "expected": [],
+      "status": "PASS"
+    },
+    {
+      "mode": "integration-1280",
+      "name": "All observed touch events trusted",
+      "observed": true,
+      "expected": true,
+      "status": "PASS"
+    }
+  ],
+  "contexts": [
+    {
+      "mode": "standalone-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "hasTouch": true,
+      "isMobile": true,
+      "url": "http://127.0.0.1:13964"
+    },
+    {
+      "mode": "standalone-844",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "hasTouch": true,
+      "isMobile": true,
+      "url": "http://127.0.0.1:13964"
+    },
+    {
+      "mode": "integration-390",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "hasTouch": true,
+      "isMobile": true,
+      "url": "http://127.0.0.1:13963/property-select-invoice"
+    },
+    {
+      "mode": "integration-844",
+      "viewport": {
+        "width": 844,
+        "height": 390
+      },
+      "hasTouch": true,
+      "isMobile": true,
+      "url": "http://127.0.0.1:13963/property-select-invoice"
+    },
+    {
+      "mode": "integration-768",
+      "viewport": {
+        "width": 768,
+        "height": 900
+      },
+      "hasTouch": true,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13963/property-select-invoice"
+    },
+    {
+      "mode": "integration-1280",
+      "viewport": {
+        "width": 1280,
+        "height": 720
+      },
+      "hasTouch": true,
+      "isMobile": false,
+      "url": "http://127.0.0.1:13963/property-select-invoice"
+    }
+  ],
+  "inputs": [
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 173,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 173,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 173,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 173,
+      "y": 321,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 351,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 351,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 351,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 351,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 321,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 67,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 67,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 67,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 187,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 227,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 227,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 39,
+      "y": 276.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 63,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 63,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 63,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 39,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 63,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 63,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 277,
+      "detail": 2
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 173,
+      "y": 277,
+      "detail": 3
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 173,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 173,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 118.953125,
+      "y": 170.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 99,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 159,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 400,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 400,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 400,
+      "y": 320.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 400,
+      "y": 321,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 735,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 735,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 735,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 735,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 321,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 137,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 137,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 137,
+      "y": 410.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 257,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 297,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 297,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 109,
+      "y": 276.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 133,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 133,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 133,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 109,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 133,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 133,
+      "y": 292.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 277,
+      "detail": 2
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 400,
+      "y": 277,
+      "detail": 3
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 400,
+      "y": 276.8699951171875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city.country",
+      "x": 400,
+      "y": 277,
+      "detail": 1
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 188.953125,
+      "y": 170.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 169,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 229,
+      "y": 320.875,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "standalone-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "number",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 173,
+      "y": 340,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 173,
+      "y": 252,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 54,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 54,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "HTML",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 94,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 30,
+      "y": 327.1875,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 386,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 93.375,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 93.375,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 368,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-390",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 30,
+      "y": 327.1875,
+      "detail": 0
+    },
+    {
+      "mode": "integration-390",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "A",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 400,
+      "y": 340,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 400,
+      "y": 252,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 54,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 54,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 30,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 54,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "HTML",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 93.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "",
+      "x": 22,
+      "y": 94,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 30,
+      "y": 279.1875,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 840,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 93.375,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 93.375,
+      "y": 210.15625,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 26,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 822,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-844",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "active",
+      "x": 30,
+      "y": 279.1875,
+      "detail": 0
+    },
+    {
+      "mode": "integration-844",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "A",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 573.7000122070312,
+      "y": 387.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 573.7000122070312,
+      "y": 387.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 573.7000122070312,
+      "y": 387.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 574,
+      "y": 388,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 573.7000122070312,
+      "y": 299.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 573.7000122070312,
+      "y": 299.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 573.7000122070312,
+      "y": 299.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 574,
+      "y": 300,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 453.40625,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 453.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 453.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 477.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 477.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 477.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 453.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 477.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 477.40625,
+      "y": 347.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 449.3999938964844,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 449.3999938964844,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 449.3999938964844,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 449,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 746,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "HTML",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299,
+      "detail": 1
+    },
+    {
+      "mode": "integration-768",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 1066.5,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 1066.5,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 1066.5,
+      "y": 339.5899963378906,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer",
+      "x": 1067,
+      "y": 340,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 1066.5,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 1066.5,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 1066.5,
+      "y": 251.58999633789062,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address",
+      "x": 1067,
+      "y": 252,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 251.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 161,
+      "y": 221,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 3,
+      "y": 3,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 951,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointercancel",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 951,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "HTML",
+      "x": 951,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 951,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 951,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 923,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 923,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 923,
+      "y": 30.790000915527344,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "SPAN",
+      "x": 923,
+      "y": 31,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "touch",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "x": 1258,
+      "y": 79,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerdown",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 927,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "lostpointercapture",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "HTML",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "pointerup",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "SPAN",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299.59375,
+      "detail": 0
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "mouse",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 952,
+      "y": 299,
+      "detail": 1
+    },
+    {
+      "mode": "integration-1280",
+      "type": "click",
+      "trusted": true,
+      "pointerType": "",
+      "target": "BUTTON",
+      "path": "customer.address.city",
+      "x": 0,
+      "y": 0,
+      "detail": 0
+    }
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=customer.address.city&validate=1"
+    }
+  ],
+  "screenshots": [
+    "standalone-390-navigation.png",
+    "standalone-844-navigation.png",
+    "integration-390-preview.png",
+    "integration-390-restored.png",
+    "integration-390-departed.png",
+    "integration-844-preview.png",
+    "integration-844-restored.png",
+    "integration-844-departed.png",
+    "integration-768-preview.png",
+    "integration-768-restored.png",
+    "integration-1280-preview.png",
+    "integration-1280-restored.png"
+  ],
+  "console": [],
+  "failedRequests": [
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=amount&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?columns=number,customer.address.city,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-390",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?columns=customer.address.city,number,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&validate=1",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?column=active&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-844",
+      "url": "http://127.0.0.1:13963/property-select/context/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?columns=number,customer.address.city,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-768",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=number&root=invoice",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select-invoice/list?columns=customer.address.city,number,amount",
+      "error": "net::ERR_ABORTED"
+    },
+    {
+      "mode": "integration-1280",
+      "url": "http://127.0.0.1:13963/property-select/resolve/json?path=customer.address.city&root=invoice",
+      "error": "net::ERR_ABORTED"
+    }
+  ],
+  "chromiumSandbox": true,
+  "playwright": "1.62.1",
+  "checkpoints": {
+    "property-select": {
+      "base": "dc5cb1a3b83cd68ee3636ed965c7cd5d98201587",
+      "version": "0.7.0"
+    },
+    "home": {
+      "base": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+      "version": "0.7.0"
+    },
+    "list": {
+      "base": "912c8acdab38a741b7714b8fa964704741bc9126",
+      "version": "0.12.0"
+    },
+    "table": {
+      "base": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+      "version": "0.4.0"
+    },
+    "framework": {
+      "base": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+      "version": "0.11.0"
+    }
+  },
+  "browser": "151.0.7922.34",
+  "geometry": [
+    {
+      "mode": "integration-390",
+      "before": {
+        "left": 89.375,
+        "right": 390,
+        "scroll": 0,
+        "maximum": 1139,
+        "y": 210.15625
+      },
+      "right": {
+        "left": 89.375,
+        "right": 390,
+        "scroll": 480,
+        "maximum": 1139,
+        "y": 210.15625
+      },
+      "left": {
+        "left": 89.375,
+        "right": 390,
+        "scroll": 12,
+        "maximum": 1139,
+        "y": 210.15625
+      }
+    },
+    {
+      "mode": "integration-844",
+      "before": {
+        "left": 89.375,
+        "right": 844,
+        "scroll": 0,
+        "maximum": 685,
+        "y": 210.15625
+      },
+      "right": {
+        "left": 89.375,
+        "right": 844,
+        "scroll": 480,
+        "maximum": 685,
+        "y": 210.15625
+      },
+      "left": {
+        "left": 89.375,
+        "right": 844,
+        "scroll": 12,
+        "maximum": 685,
+        "y": 210.15625
+      }
+    }
+  ]
+}

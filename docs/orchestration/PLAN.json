@@ -1980,7 +1980,7 @@
         "node_modules/@itrocks/list"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Scroll/drag arbitration, pointer lifetime and pane restoration under async rollback are cross-component risks.",
@@ -1998,7 +1998,35 @@
         "DRA-08",
         "NAV-09",
         "QUA-02"
-      ]
+      ],
+      "validation": "PASS author: 155 trusted-browser assertions (standalone portrait/landscape; integration 390/844/768/1280), native scroll/pinch, locked gestures, fold/restore, delayed admission/save/cancellation, active resize, edge scrolling, departure and mouse/keyboard. Selector 43, table 47, list 28 and home 1 tests; five builds/public exports plus application build PASS. Independent V6 remains PENDING.",
+      "evidence": [
+        "evidence/L6/results.json",
+        "evidence/L6/build/results.json",
+        "evidence/L6/source-checkpoints.json"
+      ],
+      "tested_checkpoints": {
+        "@itrocks/property-select": {
+          "base_sha": "dc5cb1a3b83cd68ee3636ed965c7cd5d98201587",
+          "version": "0.7.0"
+        },
+        "@itrocks/home": {
+          "sha": "6c1797058fa2162bde1c88fa12fb1b3320e7e4cd",
+          "version": "0.7.0"
+        },
+        "@itrocks/list": {
+          "sha": "912c8acdab38a741b7714b8fa964704741bc9126",
+          "version": "0.12.0"
+        },
+        "@itrocks/table": {
+          "sha": "5e32fd6d1fe53f4511007f19804ba1a6b42a7ca6",
+          "version": "0.4.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7211a97419add5165a8ac0f24f96afd5efd1b3fc",
+          "version": "0.11.0"
+        }
+      }
     },
     {
       "id": "V6",
