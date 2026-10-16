@@ -1434,8 +1434,8 @@
         "@itrocks/property-select": {
           "base_sha": "b1b47f985a6ecea0dba00cc73193618a40074581",
           "base_version": "0.4.1",
-          "version": "0.4.2",
-          "source": "Tracking and independent test resources only; runtime unchanged"
+          "version": "0.4.3",
+          "source": "Tracking and independent tests only; post-commit evidence comparison corrected, all 133 assertions rerun; runtime unchanged"
         }
       },
       "evidence": [

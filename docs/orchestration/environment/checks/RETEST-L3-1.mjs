@@ -5,6 +5,7 @@ import { createRequire } from 'node:module'
 import net from 'node:net'
 import { resolve } from 'node:path'
 import { setTimeout as delay } from 'node:timers/promises'
+import { isDeepStrictEqual } from 'node:util'
 import { models } from '../models/load.mjs'
 
 const require = createRequire(import.meta.url)
@@ -30,7 +31,7 @@ const requestFailureDetails = []
 
 function check(name, observed, expected)
 {
-	results.assertions.push({ name, observed, expected, status: JSON.stringify(observed) === JSON.stringify(expected)
+	results.assertions.push({ name, observed, expected, status: isDeepStrictEqual(observed, expected)
 		? 'PASS' : 'FAIL' })
 	assert.deepEqual(observed, expected, name)
 }

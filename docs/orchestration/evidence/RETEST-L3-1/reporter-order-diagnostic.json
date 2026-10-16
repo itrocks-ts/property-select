@@ -1,0 +1,21 @@
+{
+  "diagnostic": "JSON key order falsely marked a successful assert.deepEqual as FAIL; replace reporter comparison with isDeepStrictEqual and rerun",
+  "assertions": [
+    {
+      "name": "SQL date scalar descriptor",
+      "observed": [
+        {
+          "path": "issuedAt",
+          "kind": "scalar"
+        }
+      ],
+      "expected": [
+        {
+          "kind": "scalar",
+          "path": "issuedAt"
+        }
+      ],
+      "status": "FAIL"
+    }
+  ]
+}

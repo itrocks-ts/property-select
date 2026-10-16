@@ -174,5 +174,15 @@
     ],
     "exit": 1,
     "diagnostic": "TS5112; final invocation adds --ignoreConfig and passes"
+  },
+  {
+    "name": "independent-final-deep-equality-reporter",
+    "command": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/RETEST-L3-1.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "version": "0.4.3",
+    "exit": 0
   }
 ]

@@ -44,7 +44,7 @@ Independent retest below closes the defect; broader V3, drag, session and final 
 **PASS**: [report](reports/RETEST-L3-1.md), [133 assertions](evidence/RETEST-L3-1/results.json),
 [checkpoint/export review](evidence/RETEST-L3-1/review.json).
 Tested reflect `41e6e67` / `0.3.1`, reflect-path `bc6e4bd` / `0.3.2`, framework `e5d976a` / `0.10.3`
-and selector `b1b47f9` / `0.4.1`; this tracking-only delivery is `0.4.2`.
+and selector `b1b47f9` / `0.4.1`; this tracking-only task ends at `0.4.3` after an evidence-reporter follow-up.
 
 - **META-01/META-03/API-03 affected scalar observations / PASS**: Real HTTP Date descriptors, scalar/collection
   multiplicities, optional/nullable dates, direct context/method rejection with HTTP 400, public static Date-method

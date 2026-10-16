@@ -17,7 +17,8 @@ All affected framework repositories were initially clean:
 - Framework `e5d976aafce2c09266381c643d2cfe6788eb0014`, version `0.10.3`.
 - Property-select `b1b47f985a6ecea0dba00cc73193618a40074581`, version `0.4.1`.
 
-This tracking/test-only delivery increments property-select to `0.4.2` on the first edit.
+This tracking/test-only task increments property-select to `0.4.2` on the first edit, then `0.4.3` for the
+post-commit evidence-reporter correction described below, following the handbook patch rule.
 Product source, exports, dependency declarations and the other owners are unchanged.
 [Initial status/index records](../evidence/RETEST-L3-1/baseline.json) retain staged, unstaged and untracked information.
 
@@ -80,6 +81,7 @@ is in the command record. No application rebuild is required for these unchanged
 
 The unchanged original author browser reproducer passes **41/41**, with fresh redirected evidence, directory and ports:
 [observations](../evidence/RETEST-L3-1/author-replay/browser-results.json).
+That replay used tracking version `0.4.2`; the final `0.4.3` only corrects independent evidence reporting.
 Its environment overrides are recorded in the command record, together with the actual launch/status/stop records.
 This supplementary replay does not replace the independently authored assertions.
 
@@ -93,6 +95,10 @@ The final driver waits for completed work and records response status before ass
 [save diagnostic](../evidence/RETEST-L3-1/bodyless-save-diagnostic.json).
 The initial standalone TypeScript invocation required the installed compiler's `--ignoreConfig` option;
 the corrected invocation passes without changing any assertions.
+The initial evidence reporter compared JSON key order and falsely labelled the successful SQL descriptor assertion
+as FAIL. It now uses `isDeepStrictEqual`, matching the unchanged runtime assertion, and the entire independent driver
+passes again with all 133 recorded statuses PASS.
+[Reporter diagnostic](../evidence/RETEST-L3-1/reporter-order-diagnostic.json).
 
 ## Resources, review and preservation
 

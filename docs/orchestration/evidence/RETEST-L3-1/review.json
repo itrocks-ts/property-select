@@ -72,8 +72,8 @@
       "runtime_entry": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework"
     },
     "property-select": {
-      "sha": "b1b47f985a6ecea0dba00cc73193618a40074581",
-      "version": "0.4.2",
+      "sha": "c590104662ddb7c6a19a6c59b69fc32f1b6d6636",
+      "version": "0.4.3",
       "export_targets": [
         "./property-select.d.ts",
         "./property-select.js",
@@ -85,9 +85,9 @@
         "./property-select.d.ts",
         "./property-select.js"
       ],
-      "packaged_files": 1053,
+      "packaged_files": 1054,
       "inventory_path": "/tmp/property-select-RETEST-L3-1-review/property-select-files.json",
-      "inventory_sha256": "99c17ac51c0696331d524a4596ffdaeff2ad118f6dfc7fbd40d8aa25c251a062",
+      "inventory_sha256": "97ecaed6d76db73c8cc125172956817029cba3957b0db4ff5462e7ab7fa591d7",
       "command": [
         "npm",
         "pack",
@@ -163,12 +163,12 @@
   "documentation_checks": "PASS: new scripts/report/task width <=120; syntax and git whitespace checks",
   "solid": "Classification, traversal, HTTP and conversion remain with owners; selector runtime unchanged",
   "independent_driver_sha256": {
-    "RETEST-L3-1.mjs": "340eac77b2f0ee6b87eb52cab259408a5690a48d848edc530b919b368045cc48",
+    "RETEST-L3-1.mjs": "9c34fd8e95a75d6a6fafd0159d84a06e67a31bb75274c5ed73b788fac6582a00",
     "RETEST-L3-1-types.ts": "e8ca6828a24363d61df486483b674ad05a850fa7811745b9b2e580a8e0dce5bf",
     "RETEST-L3-1-initialise.cjs": "258400303e9fbe420ab23fa35342f5c58030fa5bc9e2e405177ac1d9f7360faa"
   },
   "final_review_driver": {
     "path": "/tmp/RETEST-L3-1-final-review.py",
-    "sha256": "3de1b714285dad917092a8c5bc849f611ee1f064efc5b649a8fe2060b4faa5af"
+    "sha256": "980fbf922b4f9a99920d8c65fff120008be0350c91887ca00b521ce77a54d4b0"
   }
 }
