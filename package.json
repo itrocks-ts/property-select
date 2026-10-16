@@ -29,14 +29,15 @@
 		}
 	},
 	"files": [
-		"/*.d.ts",
-		"/*.js",
 		"COPYING",
 		"LICENSE",
 		"README.md",
 		"cjs/*.d.ts",
 		"cjs/*.js",
-		"front"
+		"front",
+		"/*.d.ts",
+		"/*.js",
+		"!*.map"
 	],
 	"homepage": "https://it.rocks",
 	"keywords": [
@@ -64,5 +65,5 @@
 		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
 		"test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
 	},
-	"version": "0.7.11"
+	"version": "0.7.12"
 }
