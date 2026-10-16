@@ -1,0 +1,45 @@
+
+> @itrocks/framework@0.10.0 test
+> npm run build && npm run build:test && node --test test/*.test.js test/*.test.mjs
+
+
+> @itrocks/framework@0.10.0 build
+> npm run build:back && npm run build:front
+
+
+> @itrocks/framework@0.10.0 build:back
+> tsc
+
+
+> @itrocks/framework@0.10.0 build:front
+> tsc -p src/front/tsconfig.json && node -e "const fs=require('node:fs');for(const file of fs.readdirSync('.').filter(file=>file.endsWith('.js')||file.endsWith('.d.ts')))fs.writeFileSync(file,fs.readFileSync(file,'utf8').replaceAll('../../',''))"
+
+
+> @itrocks/framework@0.10.0 build:test
+> tsc -p test/tsconfig.json
+
+✔ selects an exact or compatible supported browser language (1.131207ms)
+✔ does not load main before the framework composition phase (156.626516ms)
+✔ META-01 metadata relation facts, inheritance and logical inverse/N-N are serialisable (256.098309ms)
+✔ META-02 same authorisation on enumeration and every full-path prefix; presentation beyond List (2.425918ms)
+✔ META-03 two routes, finite cycles, ambiguous/unknown paths and denied ancestors (95.936302ms)
+✔ META-04 per-instance catalogue change, explicit path grants and aborted authorisation (2.82346ms)
+✔ META-01 composition merges only an unambiguous ownership inverse (2.696825ms)
+✔ public binding uses metadata without constructors and propagates optional ancestry (191.375711ms)
+✔ logical inverses resolve the explicit back-reference to its physical foreign key (49.528328ms)
+✔ N-N mapping reuses existing storage naming in both directions (48.901061ms)
+✔ ambiguous and unresolved targets and invalid inverse identities reject (1.650386ms)
+✔ schema override handles self links without inventing ambiguous conventional columns (0.878636ms)
+✔ unambiguous component metadata resolves a legacy back-reference (0.870628ms)
+✔ explicit inverse identity may be qualified and conflicting cardinality fails (0.599641ms)
+✔ singular inverse mappings preserve target multiplicity and require known ownership (0.560261ms)
+✔ public projection binding applies final property SQL read and save transformers (8.044238ms)
+✔ selector template route serves only its published fragment (93.169638ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 547.669227

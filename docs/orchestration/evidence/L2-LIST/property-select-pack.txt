@@ -1,0 +1,4382 @@
+npm warn gitignore-fallback No .npmignore file found, using .gitignore for file exclusion. Consider creating a .npmignore file to explicitly control published files.
+[
+  {
+    "id": "@itrocks/property-select@0.3.0",
+    "name": "@itrocks/property-select",
+    "version": "0.3.0",
+    "size": 7630147,
+    "unpackedSize": 14836526,
+    "shasum": "6bf70a3e8e337d67148f3b33ab0acdcd7425e0d8",
+    "integrity": "sha512-kZZPNIy0FW8UqKwRqjikGo2LQyfZW2UX/e7ewd8wdM4wp5MqwQUT3+RG/aR9yd8oD0AUJ+mn6IeDaSpl7uSnng==",
+    "filename": "itrocks-property-select-0.3.0.tgz",
+    "files": [
+      {
+        "path": "COPYING",
+        "size": 35149,
+        "mode": 420
+      },
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 11289,
+        "mode": 420
+      },
+      {
+        "path": "cjs/controller.d.ts",
+        "size": 2540,
+        "mode": 420
+      },
+      {
+        "path": "cjs/controller.js",
+        "size": 5483,
+        "mode": 420
+      },
+      {
+        "path": "cjs/intentions.d.ts",
+        "size": 1737,
+        "mode": 420
+      },
+      {
+        "path": "cjs/intentions.js",
+        "size": 6121,
+        "mode": 420
+      },
+      {
+        "path": "cjs/metadata.d.ts",
+        "size": 587,
+        "mode": 420
+      },
+      {
+        "path": "cjs/metadata.js",
+        "size": 2040,
+        "mode": 420
+      },
+      {
+        "path": "cjs/navigation.d.ts",
+        "size": 1004,
+        "mode": 420
+      },
+      {
+        "path": "cjs/navigation.js",
+        "size": 3598,
+        "mode": 420
+      },
+      {
+        "path": "cjs/path.d.ts",
+        "size": 115,
+        "mode": 420
+      },
+      {
+        "path": "cjs/path.js",
+        "size": 686,
+        "mode": 420
+      },
+      {
+        "path": "cjs/ports.d.ts",
+        "size": 2227,
+        "mode": 420
+      },
+      {
+        "path": "cjs/ports.js",
+        "size": 110,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property-select.d.ts",
+        "size": 1038,
+        "mode": 420
+      },
+      {
+        "path": "cjs/property-select.js",
+        "size": 523,
+        "mode": 420
+      },
+      {
+        "path": "controller.d.ts",
+        "size": 2540,
+        "mode": 420
+      },
+      {
+        "path": "controller.js",
+        "size": 5205,
+        "mode": 420
+      },
+      {
+        "path": "docs/dependencies.md",
+        "size": 26339,
+        "mode": 420
+      },
+      {
+        "path": "docs/it-rocks-selecteur-relationnel-specifications.md",
+        "size": 46956,
+        "mode": 420
+      },
+      {
+        "path": "docs/itrocks-property-select-prompt-orchestrateur.md",
+        "size": 18967,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/AUDIT.md",
+        "size": 23923,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/COMMON.md",
+        "size": 8279,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/CONTRACTS.md",
+        "size": 19409,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/defects/V2-TABLE-1.md",
+        "size": 4349,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/ENVIRONMENT.md",
+        "size": 17362,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/app.cjs",
+        "size": 1440,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/browser-evidence.md",
+        "size": 2498,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/FIX-V2-TABLE-1.mjs",
+        "size": 6597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/L2-HOME.mjs",
+        "size": 8795,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/L2-LIST-SQL.mjs",
+        "size": 638,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/L2-LIST.mjs",
+        "size": 11030,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/L2-TABLE.mjs",
+        "size": 11188,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/RETEST-V2-TABLE-1-header.mjs",
+        "size": 17065,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/RETEST-V2-TABLE-1-itinerary.mjs",
+        "size": 17939,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/RETEST-V2-TABLE-1.mjs",
+        "size": 8647,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/S07.mjs",
+        "size": 14426,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/V2-HOME.mjs",
+        "size": 15914,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/V2-TABLE-reveal.cjs",
+        "size": 2805,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/V2-TABLE.mjs",
+        "size": 16754,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/V2-UI.mjs",
+        "size": 16794,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/checks/VSQL.mjs",
+        "size": 20955,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/control.mjs",
+        "size": 10432,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/database-smoke.mjs",
+        "size": 1498,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/demo/catalogue.js",
+        "size": 1643,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/demo/demo.js",
+        "size": 1039,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/demo/index.html",
+        "size": 1196,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/demo/touch-probe.html",
+        "size": 1547,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/final-independent-results.json",
+        "size": 35590,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/fixtures.sql",
+        "size": 9139,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/home/fixture.cjs",
+        "size": 400,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/home/fixture.html",
+        "size": 795,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/home/fixture.js",
+        "size": 1575,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/independent-results.json",
+        "size": 9538,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/environment/list/fixture.cjs",
+        "size": 1837,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/list/initialise.mjs",
+        "size": 56,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/address.ts",
+        "size": 92,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/city.ts",
+        "size": 121,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/country.ts",
+        "size": 47,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/customer.ts",
+        "size": 122,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/invalid.ts",
+        "size": 155,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/invoice.ts",
+        "size": 387,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/line.ts",
+        "size": 134,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/load.mjs",
+        "size": 2247,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/maintenance.ts",
+        "size": 52,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/tag.ts",
+        "size": 105,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/models/tsconfig.json",
+        "size": 195,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/ownership-independent-results.json",
+        "size": 108893,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/PROCESS-OWNERSHIP-CORRECTION.md",
+        "size": 4993,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/process-ownership-mysql-results.txt",
+        "size": 1149,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/process-ownership-regression.mjs",
+        "size": 6001,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/process-ownership-results.txt",
+        "size": 474,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/SHUTDOWN-CORRECTION.md",
+        "size": 4105,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/shutdown-regression.mjs",
+        "size": 3806,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/shutdown-results.txt",
+        "size": 1007,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/sql-evidence.txt",
+        "size": 915,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/standalone.mjs",
+        "size": 2291,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/test-results.txt",
+        "size": 1109,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/TOUCH-DIAGNOSTIC.md",
+        "size": 5709,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/environment/touch-evidence.json",
+        "size": 8607,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/environment/touch-probe.mjs",
+        "size": 5043,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/app.log",
+        "size": 193,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/baseline-columns-test.txt",
+        "size": 1362,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/baseline-list-test.json",
+        "size": 983,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/baseline-list-test.txt",
+        "size": 621,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/baseline.py",
+        "size": 1743,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-browser.json",
+        "size": 710,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-core.json",
+        "size": 5099,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-focused.json",
+        "size": 1542,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-integration.json",
+        "size": 1508,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-red.json",
+        "size": 1052,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-start.json",
+        "size": 734,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/commands-stop.json",
+        "size": 738,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/country.json",
+        "size": 656,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/country.mjs",
+        "size": 1179,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/environment.json",
+        "size": 1187,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/feed-before-fix.txt",
+        "size": 1130,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/feed-test.txt",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/framework-build.txt",
+        "size": 412,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/framework-test.txt",
+        "size": 899,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/list-build.txt",
+        "size": 652,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/list-scopes-test.txt",
+        "size": 529,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/list-test.txt",
+        "size": 657,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/metadata-browser.json",
+        "size": 14653,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/metadata-test.txt",
+        "size": 615,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/owned-status.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/projection-test.txt",
+        "size": 957,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/review.json",
+        "size": 1559,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/review.py",
+        "size": 2941,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/run-checks.py",
+        "size": 3169,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-1/stop.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/browser.mjs",
+        "size": 10958,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/checkpoints.json",
+        "size": 374,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/columns-before.txt",
+        "size": 1379,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/columns-browser-initial.txt",
+        "size": 730,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/columns-browser.mjs",
+        "size": 2419,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/columns-browser.txt",
+        "size": 930,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-absolute-list.json",
+        "size": 1017,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-browser-initial.json",
+        "size": 1633,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-browser.json",
+        "size": 1685,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-core.json",
+        "size": 6161,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-defect.json",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-preflight.json",
+        "size": 738,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-red.json",
+        "size": 428,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-start-initial.json",
+        "size": 763,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-start.json",
+        "size": 789,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-status-initial.json",
+        "size": 780,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-status.json",
+        "size": 806,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-stop-initial.json",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/commands-stop.json",
+        "size": 792,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/empty-columns-http.txt",
+        "size": 251,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/empty-columns.mjs",
+        "size": 606,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/environment-initial.json",
+        "size": 722,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/environment.json",
+        "size": 781,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/fixture.cjs",
+        "size": 905,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/framework-test.txt",
+        "size": 897,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/list-assertions.txt",
+        "size": 1262,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/list-build.txt",
+        "size": 652,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/list-build.txt.gz",
+        "size": 272,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/list-test.txt",
+        "size": 547,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/metadata-browser-initial.txt",
+        "size": 44367,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/metadata-browser.txt",
+        "size": 44367,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/metadata.txt",
+        "size": 615,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/owned-status-initial.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/owned-status.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/preflight.json",
+        "size": 148,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/preflight.py",
+        "size": 701,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/preflight.txt",
+        "size": 16,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/preflight.txt.gz",
+        "size": 37,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/projection-relative.txt",
+        "size": 79,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/projection.txt",
+        "size": 955,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/restricted-preflight.txt",
+        "size": 249,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/review.json",
+        "size": 868,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/review.py",
+        "size": 3103,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/run.py",
+        "size": 3062,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/selector-test.txt",
+        "size": 1771,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/SHA256SUMS.json",
+        "size": 4607,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/start-initial.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/stop-initial.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-L1-META-2/stop.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/artifacts.json",
+        "size": 1935,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author-run.txt",
+        "size": 21,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/desktop-after.png",
+        "size": 64454,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/landscape-after.png",
+        "size": 44057,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/landscape-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/narrow-after.png",
+        "size": 60319,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/portrait-after.png",
+        "size": 40134,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/author/results.json",
+        "size": 21698,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/checksums.json",
+        "size": 8739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/diagnostic/driver-natural-edge.png",
+        "size": 61620,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/diagnostic/geometry-driver-natural-edge.json",
+        "size": 656,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/diagnostic/header-refresh-before-fix.json",
+        "size": 12258,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry-run.txt",
+        "size": 64,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-colgroup-both.png",
+        "size": 45937,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-colgroup-left.png",
+        "size": 44171,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-colgroup-right.png",
+        "size": 44869,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-header-both.png",
+        "size": 45937,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-header-left.png",
+        "size": 44171,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/390-header-right.png",
+        "size": 44869,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-colgroup-both.png",
+        "size": 52692,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-colgroup-left.png",
+        "size": 51246,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-colgroup-right.png",
+        "size": 51939,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-header-both.png",
+        "size": 52692,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-header-left.png",
+        "size": 51246,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/768-header-right.png",
+        "size": 51939,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-colgroup-both.png",
+        "size": 33995,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-colgroup-left.png",
+        "size": 34131,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-colgroup-right.png",
+        "size": 34156,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-header-both.png",
+        "size": 33995,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-header-left.png",
+        "size": 34131,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/844-header-right.png",
+        "size": 34156,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-colgroup-both.png",
+        "size": 54129,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-colgroup-left.png",
+        "size": 52264,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-colgroup-right.png",
+        "size": 52917,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-header-both.png",
+        "size": 54129,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-header-left.png",
+        "size": 52264,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/1280-header-right.png",
+        "size": 52917,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/geometry/results.json",
+        "size": 83757,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer-run.txt",
+        "size": 438,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer/reveal-390.png",
+        "size": 48664,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer/reveal-768.png",
+        "size": 57219,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer/reveal-844.png",
+        "size": 39625,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer/reveal-1280.png",
+        "size": 59289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/reproducer/reveal-reproducer.json",
+        "size": 5573,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/selector-build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/standalone.owner.json",
+        "size": 529,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/stop.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/table-build.txt",
+        "size": 149,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/table-pack.json",
+        "size": 3432,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/table-tests.txt",
+        "size": 4085,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier-run.txt",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/desktop-after.png",
+        "size": 63473,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/desktop-flash.png",
+        "size": 56604,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/landscape-after.png",
+        "size": 29933,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/landscape-before.png",
+        "size": 40450,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/landscape-flash.png",
+        "size": 39638,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/narrow-after.png",
+        "size": 59068,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/narrow-flash.png",
+        "size": 54583,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/portrait-after.png",
+        "size": 39556,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/portrait-flash.png",
+        "size": 42895,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/FIX-V2-TABLE-1/verifier/results.json",
+        "size": 161308,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/application-head.txt",
+        "size": 41,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/application-index.txt",
+        "size": 163,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/application-status.txt",
+        "size": 69,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/browser.json",
+        "size": 14653,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/build.txt",
+        "size": 412,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/checkpoints.json",
+        "size": 1724,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/cleanup.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/commands.json",
+        "size": 4973,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/defect-offset.mjs",
+        "size": 560,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/defect-offset.txt",
+        "size": 847,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/environment.json",
+        "size": 696,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/existing-projection-absolute.txt",
+        "size": 956,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/existing-projection-test.txt",
+        "size": 79,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/final-artifacts.json",
+        "size": 821,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/framework-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/framework-diff.txt",
+        "size": 49601,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/framework-test.txt",
+        "size": 899,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/metadata-test.txt",
+        "size": 614,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/owned-status.txt",
+        "size": 593,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/package-files.json",
+        "size": 4582,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/property-select-diff.txt",
+        "size": 32463,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/review.json",
+        "size": 2640,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/review.py",
+        "size": 3751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/run-checks.py",
+        "size": 2562,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1-META/tracking-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/application-head.txt",
+        "size": 41,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/application-index.txt",
+        "size": 163,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/application-status.txt",
+        "size": 69,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/browser-smoke.json",
+        "size": 299,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/build.txt",
+        "size": 146,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/commands.json",
+        "size": 2010,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/package-files.json",
+        "size": 31520,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/review.json",
+        "size": 392,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/review.mjs",
+        "size": 2705,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/test.txt",
+        "size": 1770,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L1/tooling-notes.md",
+        "size": 1521,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/artifacts.json",
+        "size": 1685,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/build.txt",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/cleanup.json",
+        "size": 306,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/cleanup.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/contracts.txt",
+        "size": 743,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/desktop-dark.png",
+        "size": 75431,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/desktop-folded.png",
+        "size": 15638,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/desktop-open.png",
+        "size": 67959,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/landscape-dark.png",
+        "size": 29728,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/landscape-folded.png",
+        "size": 11264,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/landscape-open.png",
+        "size": 30446,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/narrow-dark.png",
+        "size": 45445,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/narrow-folded.png",
+        "size": 15370,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/narrow-open.png",
+        "size": 39387,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/pack.json",
+        "size": 1607,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/portrait-dark.png",
+        "size": 22535,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/portrait-folded.png",
+        "size": 11974,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/portrait-open.png",
+        "size": 19600,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/results.json",
+        "size": 22797,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-HOME/SHA256SUMS.json",
+        "size": 2181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/application-build.txt",
+        "size": 558,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/browser.json",
+        "size": 17660,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/commands.json",
+        "size": 8319,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/core-transformers-build.txt",
+        "size": 49,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/core-transformers-pack.txt",
+        "size": 1703,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/core-transformers-tests.txt",
+        "size": 350,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/core-transformers-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/desktop-columns.png",
+        "size": 70060,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/framework-build.txt",
+        "size": 416,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/framework-contracts.txt",
+        "size": 1035,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/framework-pack.txt",
+        "size": 4791,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/framework-tests.txt",
+        "size": 2291,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/framework-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/home-build.txt",
+        "size": 489,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/home-contracts.txt",
+        "size": 796,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/home-pack.txt",
+        "size": 1607,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/home-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/landscape-columns.png",
+        "size": 9901,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/list-build.txt",
+        "size": 653,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/list-contracts.txt",
+        "size": 813,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/list-pack.txt",
+        "size": 4316,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/list-tests.txt",
+        "size": 2284,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/list-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/narrow-columns.png",
+        "size": 55876,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/portrait-columns.png",
+        "size": 10747,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/property-select-build.txt",
+        "size": 182,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/property-select-pack.txt",
+        "size": 117434,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/property-select-tests.txt",
+        "size": 1807,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/property-select-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/run.py",
+        "size": 1796,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/sql-regression/mysql-general.log",
+        "size": 39025,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/sql-regression/results.json",
+        "size": 392949,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/sql-regression/sql.json",
+        "size": 43625,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/transformer-build.txt",
+        "size": 43,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/transformer-pack.txt",
+        "size": 1092,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/transformer-tests.txt",
+        "size": 356,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-LIST/transformer-whitespace.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/artifacts.json",
+        "size": 1245,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/checksums.json",
+        "size": 1544,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/desktop-after.png",
+        "size": 64356,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/landscape-after.png",
+        "size": 44050,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/landscape-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/narrow-after.png",
+        "size": 60322,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/portrait-after.png",
+        "size": 40134,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/preservation.json",
+        "size": 344,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/results.json",
+        "size": 21635,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/selector-build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/service.json",
+        "size": 999,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/standalone.owner.json",
+        "size": 531,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/table-build.txt",
+        "size": 149,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/table-pack.json",
+        "size": 3432,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-TABLE/table-tests.txt",
+        "size": 1993,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/browser.json",
+        "size": 7483,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/browser.txt",
+        "size": 91,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/build.raw.gz",
+        "size": 137,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-browser.json",
+        "size": 759,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-core.json",
+        "size": 1718,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-pack.json",
+        "size": 974,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-preflight-restricted.json",
+        "size": 802,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-preflight.json",
+        "size": 791,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-review-initial.json",
+        "size": 793,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-review.json",
+        "size": 871,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-start.json",
+        "size": 800,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-status.json",
+        "size": 789,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/commands-stop.json",
+        "size": 804,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/desktop.png",
+        "size": 27935,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/owned-status.txt",
+        "size": 709,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/pack.txt",
+        "size": 68949,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/portrait.png",
+        "size": 24378,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/preflight-restricted.txt",
+        "size": 418,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/preflight.py",
+        "size": 338,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/preflight.txt",
+        "size": 63,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/review-harness.txt",
+        "size": 335,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/review-initial.txt",
+        "size": 317,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/review.json",
+        "size": 1165,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/review.py",
+        "size": 2478,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/review.txt",
+        "size": 1165,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/run.py",
+        "size": 2146,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/SHA256SUMS.json",
+        "size": 2763,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/status.mjs",
+        "size": 746,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/stop.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/L2-UI/test.txt",
+        "size": 1805,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/P04/checker-output.txt",
+        "size": 365,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/P04/checker-source.txt",
+        "size": 3887,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/P04/checks.md",
+        "size": 3046,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/baseline-columns.txt",
+        "size": 1385,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/baseline-test.txt",
+        "size": 622,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/baseline.json",
+        "size": 411,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-keyboard-diagnostic-commands-browser.json",
+        "size": 847,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-keyboard-diagnostic-independent-browser.txt",
+        "size": 504,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-label-diagnostic-commands-browser.json",
+        "size": 844,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-label-diagnostic-independent-browser.txt",
+        "size": 517,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-unknown-diagnostic-commands-browser.json",
+        "size": 846,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser-unknown-diagnostic-independent-browser.txt",
+        "size": 514,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/browser.mjs",
+        "size": 10958,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/checkpoints.json",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-baseline.json",
+        "size": 2372,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-browser.json",
+        "size": 819,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-core.json",
+        "size": 7869,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-defect.json",
+        "size": 823,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-focused.json",
+        "size": 1605,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-pack.json",
+        "size": 1739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-public-pack.json",
+        "size": 1759,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-review.json",
+        "size": 794,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-start.json",
+        "size": 758,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-status.json",
+        "size": 775,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/commands-stop.json",
+        "size": 761,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/current-columns.txt",
+        "size": 1379,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/diff-record.json",
+        "size": 397,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/empty-columns-http.txt",
+        "size": 796,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/empty-columns.mjs",
+        "size": 606,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/environment.json",
+        "size": 1088,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/feed-test.txt",
+        "size": 375,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-pack-retry.txt",
+        "size": 8982,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-pack-valid.txt",
+        "size": 4582,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-pack.txt",
+        "size": 967,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-review.diff",
+        "size": 49601,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-review.diff.gz",
+        "size": 12750,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/framework-test.txt",
+        "size": 899,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/independent-browser.txt",
+        "size": 44367,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-build.txt",
+        "size": 652,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-build.txt.gz",
+        "size": 272,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-review.diff",
+        "size": 2500,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-review.diff.gz",
+        "size": 1045,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-scopes-test.txt",
+        "size": 530,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/list-test.txt",
+        "size": 658,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/metadata.txt",
+        "size": 615,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/owned-status.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/projection-relative.txt",
+        "size": 79,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/projection.txt",
+        "size": 957,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/restricted-commands-start.json",
+        "size": 769,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/restricted-commands-status.json",
+        "size": 786,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/restricted-owned-status.txt",
+        "size": 1090,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/restricted-start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/review.json",
+        "size": 3190,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/review.py",
+        "size": 3186,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/review.txt",
+        "size": 109,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/run.py",
+        "size": 4584,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/selector-pack-retry.txt",
+        "size": 8982,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/selector-pack-valid.txt",
+        "size": 46406,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/selector-pack.txt",
+        "size": 967,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/selector-test.txt",
+        "size": 1770,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/SHA256SUMS.json",
+        "size": 5715,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-1/stop.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/browser-initial.txt",
+        "size": 75700,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/browser.mjs",
+        "size": 11887,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/browser.txt",
+        "size": 75700,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/checkpoints.json",
+        "size": 783,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-browser-initial.json",
+        "size": 837,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-browser.json",
+        "size": 829,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-core.json",
+        "size": 8544,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-independent-list.json",
+        "size": 844,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-pack.json",
+        "size": 1887,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-preflight.json",
+        "size": 837,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-review-initial.json",
+        "size": 1667,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-review.json",
+        "size": 1659,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-start-initial.json",
+        "size": 824,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-start.json",
+        "size": 824,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-status-readiness.json",
+        "size": 851,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-status.json",
+        "size": 841,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-stop-initial.json",
+        "size": 835,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/commands-stop.json",
+        "size": 827,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/diff-record.json",
+        "size": 288,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/environment-initial.json",
+        "size": 924,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/environment.json",
+        "size": 924,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/framework-pack.txt",
+        "size": 4582,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/framework-test.txt",
+        "size": 897,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/independent-list-initial.txt",
+        "size": 701,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/independent-list.txt",
+        "size": 1365,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list-assertions.txt",
+        "size": 1261,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list-build.txt",
+        "size": 652,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list-build.txt.gz",
+        "size": 272,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list-correction.diff.gz",
+        "size": 921,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list-test.txt",
+        "size": 547,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/list.mjs",
+        "size": 1596,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/metadata.txt",
+        "size": 615,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/owned-status-readiness.txt",
+        "size": 665,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/owned-status.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/preflight.py",
+        "size": 782,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/preflight.txt",
+        "size": 159,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/projection-relative.txt",
+        "size": 79,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/projection.txt",
+        "size": 957,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/public-cjs.txt",
+        "size": 47,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/public.cjs",
+        "size": 560,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/restricted-commands-preflight.json",
+        "size": 848,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/restricted-preflight.txt",
+        "size": 453,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/review-initial.json",
+        "size": 1346,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/review-initial.txt",
+        "size": 1346,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/review.json",
+        "size": 1346,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/review.py",
+        "size": 4956,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/review.txt",
+        "size": 1346,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/run.py",
+        "size": 2878,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/selector-pack.txt",
+        "size": 63676,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/selector-test.txt",
+        "size": 1771,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/SHA256SUMS.json",
+        "size": 4976,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/start.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/stop-initial.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-L1-META-2/stop.txt",
+        "size": 32,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/artifacts.json",
+        "size": 3901,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/checksums.json",
+        "size": 15473,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order-run.txt",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/desktop-after.png",
+        "size": 63473,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/desktop-flash.png",
+        "size": 56661,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/landscape-after.png",
+        "size": 29938,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/landscape-before.png",
+        "size": 40450,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/landscape-flash.png",
+        "size": 39638,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/narrow-after.png",
+        "size": 59067,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/narrow-flash.png",
+        "size": 54583,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/portrait-after.png",
+        "size": 39556,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/portrait-flash.png",
+        "size": 42895,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/colgroup-order/results.json",
+        "size": 181186,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full-run.txt",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/desktop-after.png",
+        "size": 63162,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/desktop-flash.png",
+        "size": 56661,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/landscape-after.png",
+        "size": 29940,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/landscape-before.png",
+        "size": 40450,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/landscape-flash.png",
+        "size": 39655,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/narrow-after.png",
+        "size": 58756,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/narrow-flash.png",
+        "size": 54590,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/portrait-after.png",
+        "size": 40027,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/portrait-flash.png",
+        "size": 42895,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/full/results.json",
+        "size": 161308,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header-run.txt",
+        "size": 46,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/desktop-after.png",
+        "size": 63536,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/desktop-flash.png",
+        "size": 56661,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/landscape-after.png",
+        "size": 29977,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/landscape-before.png",
+        "size": 40450,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/landscape-flash.png",
+        "size": 39655,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/narrow-after.png",
+        "size": 59144,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/narrow-flash.png",
+        "size": 54583,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/portrait-after.png",
+        "size": 39545,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/portrait-flash.png",
+        "size": 42895,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/header/results.json",
+        "size": 161308,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/http.txt",
+        "size": 75,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final-run.txt",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/390-colgroup-both-after.png",
+        "size": 40471,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/390-colgroup-both-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/390-header-both-after.png",
+        "size": 40471,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/390-header-both-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/768-colgroup-both-after.png",
+        "size": 47289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/768-colgroup-both-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/768-header-both-after.png",
+        "size": 47289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/768-header-both-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/844-colgroup-both-after.png",
+        "size": 34240,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/844-colgroup-both-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/844-header-both-after.png",
+        "size": 34240,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/844-header-both-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/1280-colgroup-both-after.png",
+        "size": 48739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/1280-colgroup-both-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/1280-header-both-after.png",
+        "size": 48739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/1280-header-both-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/driver.mjs",
+        "size": 8640,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-final/results.json",
+        "size": 737741,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent-run.txt",
+        "size": 59,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/390-colgroup-both-after.png",
+        "size": 40471,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/390-colgroup-both-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/390-header-both-after.png",
+        "size": 40471,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/390-header-both-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/768-colgroup-both-after.png",
+        "size": 47289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/768-colgroup-both-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/768-header-both-after.png",
+        "size": 47289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/768-header-both-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/844-colgroup-both-after.png",
+        "size": 34240,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/844-colgroup-both-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/844-header-both-after.png",
+        "size": 34240,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/844-header-both-before.png",
+        "size": 35597,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/1280-colgroup-both-after.png",
+        "size": 48739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/1280-colgroup-both-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/1280-header-both-after.png",
+        "size": 48739,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/1280-header-both-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/driver.mjs",
+        "size": 8666,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/independent/results.json",
+        "size": 752165,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/preservation.json",
+        "size": 12015,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/public-imports.txt",
+        "size": 68,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer-run.txt",
+        "size": 438,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer/reveal-390.png",
+        "size": 48664,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer/reveal-768.png",
+        "size": 57219,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer/reveal-844.png",
+        "size": 39553,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer/reveal-1280.png",
+        "size": 59289,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/reproducer/reveal-reproducer.json",
+        "size": 5573,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/selector-build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/selector-pack.json",
+        "size": 103280,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/selector-tests.txt",
+        "size": 1802,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/standalone.owner.json",
+        "size": 535,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/stop.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/table-build.txt",
+        "size": 149,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/table-pack.json",
+        "size": 3432,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/RETEST-V2-TABLE-1/table-tests.txt",
+        "size": 4087,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/adapter-compatibility.mjs",
+        "size": 1097,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/adapter-compatibility.txt",
+        "size": 268,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/adapter-scan.txt",
+        "size": 3382,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/checkpoints.json",
+        "size": 766,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/commands.json",
+        "size": 1851,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/compiler-version.txt",
+        "size": 62,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/mysql-build.txt",
+        "size": 100,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/mysql-maintainer-build.txt",
+        "size": 121,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/public-typecheck.txt",
+        "size": 97,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/review.txt",
+        "size": 582,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/storage-build.txt",
+        "size": 103,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/storage-pack.txt",
+        "size": 2555,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/storage-test.txt",
+        "size": 730,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S02/tooling-notes.txt",
+        "size": 1101,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/checkpoints.json",
+        "size": 1220,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/commands.json",
+        "size": 1445,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/development-test-failure.txt",
+        "size": 1602,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/reflect-build-test.txt",
+        "size": 236,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/reflect-build.txt",
+        "size": 217,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/reflect-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/reflect-pack.json",
+        "size": 2760,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/reflect-test.txt",
+        "size": 810,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/review.txt",
+        "size": 1991,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/tooling-notes.txt",
+        "size": 1659,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S03/tracking-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/application-index.txt",
+        "size": 163,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/application-status.txt",
+        "size": 69,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/checkpoints.json",
+        "size": 1162,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/commands.json",
+        "size": 4548,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/property-select-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-build-test.txt",
+        "size": 70,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-build.txt",
+        "size": 43,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-diff-check.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-pack.json",
+        "size": 1491,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-status.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-test.txt",
+        "size": 1233,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/reflect-path-version-diff.txt",
+        "size": 0,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/relative-discovery.txt",
+        "size": 82,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/review-command.txt",
+        "size": 50,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/review.py",
+        "size": 7351,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/review.txt",
+        "size": 7519,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S04/tooling-notes.txt",
+        "size": 1094,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/checkpoints.json",
+        "size": 1380,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/commands.json",
+        "size": 3872,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/development-fixture-build.txt",
+        "size": 2144,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/framework-build.txt",
+        "size": 412,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/framework-pack.txt",
+        "size": 3222,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/framework-projection.txt",
+        "size": 860,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/framework-test.txt",
+        "size": 1612,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/review.txt",
+        "size": 1259,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/run-checks.py",
+        "size": 2113,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/sql-build-compatibility.txt",
+        "size": 928,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/sql-join-build.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/sql-join-pack.txt",
+        "size": 2146,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/sql-join-projection.txt",
+        "size": 888,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/sql-join-test.txt",
+        "size": 1999,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S05/tooling-notes.txt",
+        "size": 1479,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/checkpoints.json",
+        "size": 1032,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/commands.json",
+        "size": 1729,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/product-files.json",
+        "size": 1376,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/review.txt",
+        "size": 1241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/run-checks.py",
+        "size": 1532,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/sql-build-build.txt",
+        "size": 40,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/sql-build-pack.txt",
+        "size": 3099,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/sql-build-projection.txt",
+        "size": 1510,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/sql-build-test.txt",
+        "size": 2563,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S06/tooling-notes.txt",
+        "size": 1249,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/application-build.txt",
+        "size": 558,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/artifacts-sha256.json",
+        "size": 2387,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/checkpoints.json",
+        "size": 1908,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/commands.json",
+        "size": 5940,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/database-projection.txt",
+        "size": 1415,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/database-reset.txt",
+        "size": 1,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/database-smoke.txt",
+        "size": 102,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/framework-build.txt",
+        "size": 412,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/framework-pack.txt",
+        "size": 3523,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/framework-projection.txt",
+        "size": 952,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/framework-test.txt",
+        "size": 1710,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/maintainer-projection.txt",
+        "size": 315,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/maintainer-regression.md",
+        "size": 1407,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/maintainer-test.txt",
+        "size": 1272,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/model-build.txt",
+        "size": 1,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-build.txt",
+        "size": 36,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-general.log",
+        "size": 24393,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-maintainer-build.txt",
+        "size": 47,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-maintainer-pack.txt",
+        "size": 1527,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-pack.txt",
+        "size": 1165,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/mysql-test.txt",
+        "size": 661,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/results.json",
+        "size": 1085,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/review.txt",
+        "size": 1729,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/run-checks.py",
+        "size": 2540,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/service-status.txt",
+        "size": 418,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/sql.json",
+        "size": 24408,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/S07/tooling-notes.txt",
+        "size": 1590,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/app.owner.json",
+        "size": 511,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/artifacts.json",
+        "size": 1100,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/checksums.json",
+        "size": 3030,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/cleanup.json",
+        "size": 284,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/desktop-dark.png",
+        "size": 75431,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/desktop-empty.png",
+        "size": 13737,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/desktop-folded.png",
+        "size": 15638,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/desktop-open.png",
+        "size": 63612,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/home-build.txt",
+        "size": 488,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/home-pack.json",
+        "size": 1607,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/landscape-dark.png",
+        "size": 29728,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/landscape-empty.png",
+        "size": 9865,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/landscape-folded.png",
+        "size": 11264,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/landscape-open.png",
+        "size": 31309,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/narrow-dark.png",
+        "size": 45445,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/narrow-empty.png",
+        "size": 13460,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/narrow-folded.png",
+        "size": 15370,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/narrow-open.png",
+        "size": 30585,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/portrait-dark.png",
+        "size": 22535,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/portrait-empty.png",
+        "size": 10944,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/portrait-folded.png",
+        "size": 11974,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/portrait-open.png",
+        "size": 19759,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/results.json",
+        "size": 49517,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-HOME/selector-build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/application-build.txt",
+        "size": 241,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/artifacts.json",
+        "size": 1627,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/browser-run.txt",
+        "size": 408,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/checksums.json",
+        "size": 3364,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/desktop-after.png",
+        "size": 63202,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/desktop-before.png",
+        "size": 40318,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/desktop-flash.png",
+        "size": 56661,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/failure.png",
+        "size": 52746,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/landscape-after.png",
+        "size": 29933,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/landscape-before.png",
+        "size": 40450,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/landscape-flash.png",
+        "size": 38068,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/narrow-after.png",
+        "size": 58756,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/narrow-before.png",
+        "size": 40674,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/narrow-flash.png",
+        "size": 52786,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/portrait-after.png",
+        "size": 39556,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/portrait-before.png",
+        "size": 38751,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/portrait-flash.png",
+        "size": 41183,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/results.json",
+        "size": 161538,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-390.png",
+        "size": 46247,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-768.png",
+        "size": 55424,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-844.png",
+        "size": 38074,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-1280.png",
+        "size": 59207,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-reproducer.json",
+        "size": 5578,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/reveal-run.txt",
+        "size": 438,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/selector-build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/service.json",
+        "size": 337,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/standalone.owner.json",
+        "size": 541,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/table-build.txt",
+        "size": 149,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/table-pack.json",
+        "size": 3432,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-TABLE/table-tests.txt",
+        "size": 1994,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/artifacts.json",
+        "size": 1001,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/build.txt",
+        "size": 181,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/cleanup.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/desktop-after.png",
+        "size": 41156,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/desktop-before.png",
+        "size": 18944,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/harness-scroll-direction.json",
+        "size": 6690,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/landscape-after.png",
+        "size": 18745,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/landscape-before.png",
+        "size": 15900,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/narrow-after.png",
+        "size": 40513,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/narrow-before.png",
+        "size": 18725,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/ownership.json",
+        "size": 585,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/pack.json",
+        "size": 70866,
+        "mode": 384
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/portrait-after.png",
+        "size": 24677,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/portrait-before.png",
+        "size": 16475,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/preflight-restricted.json",
+        "size": 505,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/results.json",
+        "size": 78344,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/review.mjs",
+        "size": 2107,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/V2-UI/SHA256SUMS.json",
+        "size": 1646,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/checkpoints.json",
+        "size": 1207,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/commands.json",
+        "size": 5865,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/framework-build.txt",
+        "size": 412,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/framework-pack.txt",
+        "size": 3523,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/model-build.txt",
+        "size": 1,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/mysql-build.txt",
+        "size": 36,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/mysql-general.log",
+        "size": 39025,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/mysql-maintainer-build.txt",
+        "size": 47,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/mysql-maintainer-pack.txt",
+        "size": 1527,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/mysql-pack.txt",
+        "size": 1165,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/property-select-pack.txt",
+        "size": 27596,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/queries.txt",
+        "size": 440645,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/reflect-build.txt",
+        "size": 217,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/reflect-path-build.txt",
+        "size": 43,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/results.json",
+        "size": 392949,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/review.txt",
+        "size": 1007,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/run-checks.py",
+        "size": 1966,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/sql-build-build.txt",
+        "size": 40,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/sql-join-build.txt",
+        "size": 39,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/sql.json",
+        "size": 43625,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/status.txt",
+        "size": 65,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/storage-build.txt",
+        "size": 250,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/syntax.txt",
+        "size": 1,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/evidence/VSQL/VSQL.txt",
+        "size": 1385,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/EXECUTION.md",
+        "size": 10609,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/PHP-COMPARISON.md",
+        "size": 8150,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/PLAN.json",
+        "size": 47495,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/planning-check.txt",
+        "size": 4519,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/FIX-L1-META-1.md",
+        "size": 8341,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/FIX-L1-META-2.md",
+        "size": 8847,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/FIX-V2-TABLE-1.md",
+        "size": 9420,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/L1-META.md",
+        "size": 11565,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/L1.md",
+        "size": 7282,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/L2-HOME.md",
+        "size": 8816,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/L2-TABLE.md",
+        "size": 10298,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/L2-UI.md",
+        "size": 8788,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/P03.md",
+        "size": 5701,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/P04.md",
+        "size": 8279,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/RETEST-L1-META-1.md",
+        "size": 11063,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/RETEST-L1-META-2.md",
+        "size": 10471,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/RETEST-V2-TABLE-1.md",
+        "size": 10577,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S02.md",
+        "size": 7517,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S03.md",
+        "size": 6833,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S04.md",
+        "size": 7199,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S05.md",
+        "size": 9027,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S06.md",
+        "size": 8537,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/S07.md",
+        "size": 9923,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/V2-HOME.md",
+        "size": 8697,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/V2-TABLE.md",
+        "size": 9061,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/V2-UI.md",
+        "size": 8229,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/reports/VSQL.md",
+        "size": 9316,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/SELECT-CONTRACT.md",
+        "size": 16163,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/D8.md",
+        "size": 7956,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/FIX-L1-META-1.md",
+        "size": 3613,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/FIX-L1-META-2.md",
+        "size": 3908,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/FIX-V2-TABLE-1.md",
+        "size": 4770,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L1-META.md",
+        "size": 5781,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L1.md",
+        "size": 5640,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L2-HOME.md",
+        "size": 5423,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L2-LIST.md",
+        "size": 6825,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L2-TABLE.md",
+        "size": 5470,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L2-UI.md",
+        "size": 5612,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L3.md",
+        "size": 5529,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L4.md",
+        "size": 7364,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L5.md",
+        "size": 6785,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L6.md",
+        "size": 6482,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/L7.md",
+        "size": 6048,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/P01.md",
+        "size": 4632,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/P02.md",
+        "size": 4812,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/P03.md",
+        "size": 4867,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/P04.md",
+        "size": 5288,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/RETEST-L1-META-1.md",
+        "size": 4129,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/RETEST-L1-META-2.md",
+        "size": 3798,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/RETEST-V2-TABLE-1.md",
+        "size": 4356,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S01.md",
+        "size": 4817,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S02.md",
+        "size": 5501,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S03.md",
+        "size": 5574,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S04.md",
+        "size": 5689,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S05.md",
+        "size": 5963,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S06.md",
+        "size": 5595,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/S07.md",
+        "size": 6849,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V2-HOME.md",
+        "size": 7719,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V2-TABLE.md",
+        "size": 7689,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V2-UI.md",
+        "size": 7709,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V2.md",
+        "size": 7919,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V3.md",
+        "size": 7813,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V4.md",
+        "size": 8246,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V5.md",
+        "size": 7962,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V6.md",
+        "size": 7983,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/V7.md",
+        "size": 7861,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/tasks/VSQL.md",
+        "size": 5681,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/VALIDATION.md",
+        "size": 82789,
+        "mode": 420
+      },
+      {
+        "path": "docs/orchestration/VERIFY-ENVIRONMENT.md",
+        "size": 6632,
+        "mode": 420
+      },
+      {
+        "path": "docs/select.md",
+        "size": 13563,
+        "mode": 420
+      },
+      {
+        "path": "docs/validation.md",
+        "size": 14973,
+        "mode": 420
+      },
+      {
+        "path": "front/property-select.css",
+        "size": 1649,
+        "mode": 420
+      },
+      {
+        "path": "front/property-select.d.ts",
+        "size": 923,
+        "mode": 420
+      },
+      {
+        "path": "front/property-select.html",
+        "size": 254,
+        "mode": 420
+      },
+      {
+        "path": "front/property-select.js",
+        "size": 7197,
+        "mode": 420
+      },
+      {
+        "path": "intentions.d.ts",
+        "size": 1737,
+        "mode": 420
+      },
+      {
+        "path": "intentions.js",
+        "size": 5902,
+        "mode": 420
+      },
+      {
+        "path": "metadata.d.ts",
+        "size": 587,
+        "mode": 420
+      },
+      {
+        "path": "metadata.js",
+        "size": 1812,
+        "mode": 420
+      },
+      {
+        "path": "navigation.d.ts",
+        "size": 1004,
+        "mode": 420
+      },
+      {
+        "path": "navigation.js",
+        "size": 3394,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 1654,
+        "mode": 420
+      },
+      {
+        "path": "path.d.ts",
+        "size": 115,
+        "mode": 420
+      },
+      {
+        "path": "path.js",
+        "size": 545,
+        "mode": 420
+      },
+      {
+        "path": "ports.d.ts",
+        "size": 2227,
+        "mode": 420
+      },
+      {
+        "path": "ports.js",
+        "size": 11,
+        "mode": 420
+      },
+      {
+        "path": "property-select.d.ts",
+        "size": 1038,
+        "mode": 420
+      },
+      {
+        "path": "property-select.js",
+        "size": 93,
+        "mode": 420
+      }
+    ],
+    "entryCount": 873,
+    "bundled": []
+  }
+]

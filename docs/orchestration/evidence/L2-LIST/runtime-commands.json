@@ -1,0 +1,38 @@
+[
+  {
+    "argv": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L2-LIST-SQL.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "sql-regression.txt",
+    "sha256": "350df322abe40fc559bea69674f12c1efdd79f94b2f2843542108ba9ec30e5fb",
+    "permissions": "normal escalation; Chromium sandbox unchanged"
+  },
+  {
+    "argv": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/checks/L2-LIST.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "browser.txt",
+    "sha256": "15d504516851be68ec350077ea8142306e5622644e711f411fe6b0a8e35b517f",
+    "permissions": "normal escalation; Chromium sandbox unchanged"
+  },
+  {
+    "argv": [
+      "node",
+      "node_modules/@itrocks/property-select/docs/orchestration/environment/control.mjs",
+      "status"
+    ],
+    "env": {
+      "PS_APP_PORT": "13819"
+    },
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "service-status.txt",
+    "sha256": "c457d2622b091eb56ae4f89e8d6149107bd5e3a2157d2a99706fda86d2e4a79b"
+  }
+]

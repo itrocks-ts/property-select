@@ -90,6 +90,10 @@ Native buttons support Enter, Space, Tab and visible focus. The horizontally scr
 descendants and marks the current object with `aria-current`, bold text and an underline.
 Search, shortcuts and recognised drag gestures remain separate deliveries.
 
+The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `templateUrl?: string | URL`.
+Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
+Recoverable consumer errors display their message as text, allowing hosts to explain an unsupported selection.
+
 ## Navigation and state
 
 `normalisePath(path: string | readonly string[]): string` preserves identifiers and joins segments with dots.

@@ -1,0 +1,831 @@
+{
+	"url": "http://127.0.0.1:13819/property-select-invoice",
+	"checks": [
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: folded initial pane",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: scope total",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 50,
+			"expected": 50,
+			"name": "desktop: first page",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "desktop: pending duplicate has one column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "desktop: new object rendering",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: click keeps pane open",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address",
+			"expected": "customer.address",
+			"name": "desktop: click retains address context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: selection keeps focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "desktop: duplicate executes one projection and no rendering reads",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: bounded visible ids and scope",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: scalar representation fields projected",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: added confirmation flashes actual column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"name": "desktop: existing column keeps order",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: existing reveal preserves row selection",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 3,
+			"expected": 3,
+			"name": "desktop: existing column needs no query",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "desktop: deep terminal matches object",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: close returns command focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": {
+				"x": 1236,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"expected": {
+				"x": 1236,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"name": "desktop: header button remains anchored",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "desktop: header button in main bounds",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address.city",
+			"expected": "customer.address.city",
+			"name": "desktop: reopen preserves context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 4,
+			"expected": 4,
+			"name": "desktop: plural leaves columns intact",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 4,
+			"expected": 4,
+			"name": "desktop: plural executes no SQL",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"name": "desktop: reload preserves saved paths",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "desktop: reload renders representative values",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 61,
+			"expected": 61,
+			"name": "feed: fixed scope, distinct roots",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "sort: replaced view has one selector",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "sort: object orders by representation and identity",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "filter: scoped nested count",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "filter: nested value survives rendering",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "filter: all projected roots match",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "filter: session reload retains criterion",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 204,
+			"expected": 204,
+			"name": "hidden filter: removing column saves",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "hidden filter: count persists without displayed path",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "control: country renders through projection",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 0,
+			"expected": 0,
+			"name": "cleanup: control route has no registered selector",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: folded initial pane",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: scope total",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 50,
+			"expected": 50,
+			"name": "narrow: first page",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "narrow: pending duplicate has one column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "narrow: new object rendering",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: click keeps pane open",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address",
+			"expected": "customer.address",
+			"name": "narrow: click retains address context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: selection keeps focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "narrow: duplicate executes one projection and no rendering reads",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: bounded visible ids and scope",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: scalar representation fields projected",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: added confirmation flashes actual column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"name": "narrow: existing column keeps order",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: existing reveal preserves row selection",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 21,
+			"expected": 21,
+			"name": "narrow: existing column needs no query",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "narrow: deep terminal matches object",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: close returns command focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": {
+				"x": 724,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"expected": {
+				"x": 724,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"name": "narrow: header button remains anchored",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "narrow: header button in main bounds",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address.city",
+			"expected": "customer.address.city",
+			"name": "narrow: reopen preserves context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 4,
+			"expected": 4,
+			"name": "narrow: plural leaves columns intact",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 22,
+			"expected": 22,
+			"name": "narrow: plural executes no SQL",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"name": "narrow: reload preserves saved paths",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "narrow: reload renders representative values",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: folded initial pane",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: scope total",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 50,
+			"expected": 50,
+			"name": "portrait: first page",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "portrait: pending duplicate has one column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "portrait: new object rendering",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: click keeps pane open",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address",
+			"expected": "customer.address",
+			"name": "portrait: click retains address context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "portrait: duplicate executes one projection and no rendering reads",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: bounded visible ids and scope",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: scalar representation fields projected",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: added confirmation flashes actual column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"name": "portrait: existing column keeps order",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: existing reveal preserves row selection",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 27,
+			"expected": 27,
+			"name": "portrait: existing column needs no query",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "portrait: deep terminal matches object",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: close returns command focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": {
+				"x": 346,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"expected": {
+				"x": 346,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"name": "portrait: header button remains anchored",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "portrait: header button in main bounds",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address.city",
+			"expected": "customer.address.city",
+			"name": "portrait: reopen preserves context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 4,
+			"expected": 4,
+			"name": "portrait: plural leaves columns intact",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 28,
+			"expected": 28,
+			"name": "portrait: plural executes no SQL",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"name": "portrait: reload preserves saved paths",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "portrait: reload renders representative values",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: folded initial pane",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: scope total",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 50,
+			"expected": 50,
+			"name": "landscape: first page",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "landscape: pending duplicate has one column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "landscape: new object rendering",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: click keeps pane open",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address",
+			"expected": "customer.address",
+			"name": "landscape: click retains address context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 1,
+			"expected": 1,
+			"name": "landscape: duplicate executes one projection and no rendering reads",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: bounded visible ids and scope",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: scalar representation fields projected",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: added confirmation flashes actual column",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city"
+			],
+			"name": "landscape: existing column keeps order",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: existing reveal preserves row selection",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 33,
+			"expected": 33,
+			"name": "landscape: existing column needs no query",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris",
+			"expected": "Recipe Paris",
+			"name": "landscape: deep terminal matches object",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: close returns command focus",
+			"verdict": "PASS"
+		},
+		{
+			"actual": {
+				"x": 800,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"expected": {
+				"x": 800,
+				"y": 57,
+				"width": 44,
+				"height": 44
+			},
+			"name": "landscape: header button remains anchored",
+			"verdict": "PASS"
+		},
+		{
+			"actual": true,
+			"expected": true,
+			"name": "landscape: header button in main bounds",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "customer.address.city",
+			"expected": "customer.address.city",
+			"name": "landscape: reopen preserves context",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 4,
+			"expected": 4,
+			"name": "landscape: plural leaves columns intact",
+			"verdict": "PASS"
+		},
+		{
+			"actual": 34,
+			"expected": 34,
+			"name": "landscape: plural executes no SQL",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"expected": [
+				"number",
+				"amount",
+				"customer.address.city",
+				"customer.address.city.name"
+			],
+			"name": "landscape: reload preserves saved paths",
+			"verdict": "PASS"
+		},
+		{
+			"actual": "Recipe Paris RECIPE FRANCE",
+			"expected": "Recipe Paris RECIPE FRANCE",
+			"name": "landscape: reload renders representative values",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				}
+			],
+			"expected": [
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				},
+				{
+					"status": 400,
+					"path": "lines"
+				}
+			],
+			"name": "only expected plural refusals reach HTTP error status",
+			"verdict": "PASS"
+		},
+		{
+			"actual": [],
+			"expected": [],
+			"name": "browser health",
+			"verdict": "PASS"
+		}
+	],
+	"health": [],
+	"http": [
+		{
+			"status": 400,
+			"url": "http://127.0.0.1:13819/property-select-invoice/list?column=lines&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+		},
+		{
+			"status": 400,
+			"url": "http://127.0.0.1:13819/property-select-invoice/list?column=lines&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+		},
+		{
+			"status": 400,
+			"url": "http://127.0.0.1:13819/property-select-invoice/list?column=lines&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+		},
+		{
+			"status": 400,
+			"url": "http://127.0.0.1:13819/property-select-invoice/list?column=lines&rowIds=1%2C3%2C4%2C5%2C7%2C9%2C11%2C13%2C15%2C17%2C19%2C21%2C23%2C25%2C27%2C29%2C31%2C33%2C35%2C37%2C39%2C41%2C43%2C45%2C47%2C49%2C51%2C53%2C55%2C57%2C59%2C61%2C63%2C65%2C67%2C69%2C71%2C73%2C75%2C77%2C79%2C81%2C83%2C85%2C87%2C89%2C91%2C93%2C95%2C97"
+		}
+	],
+	"inputs": [
+		{
+			"mode": "desktop",
+			"events": []
+		},
+		{
+			"mode": "narrow",
+			"events": []
+		},
+		{
+			"mode": "portrait",
+			"events": []
+		},
+		{
+			"mode": "landscape",
+			"events": []
+		}
+	],
+	"browser": "151.0.7922.34"
+}

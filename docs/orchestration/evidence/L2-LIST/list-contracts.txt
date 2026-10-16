@@ -1,0 +1,15 @@
+✔ object and deep columns derive a finite representation closure through reflection (182.689871ms)
+✔ plural, cyclic and undeclared custom representation closures fail before projection (0.520429ms)
+✔ path columns persist, filter both form trees and query keys, and expand representative ordering (1.50973ms)
+✔ visible row projection intersects mandatory scope and preserves full JSON entities (1.947638ms)
+✔ access denial is checked before projection and object-field authorisation is explicit (0.701273ms)
+✔ default route resolves List after adding public dependency hooks (0.466759ms)
+✔ undeclared object transformers fail before querying; declared fields are accepted (0.856147ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 256.486899

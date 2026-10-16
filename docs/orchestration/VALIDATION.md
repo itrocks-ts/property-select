@@ -241,7 +241,7 @@ Combined cases, rendered selector, search, selector persistence and gestures rem
 | L2-UI          | property-select                                     |
 | L2-HOME        | home                                                |
 | L2-TABLE       | table                                               |
-| L2-LIST        | list, framework, property-select                    |
+| L2-LIST        | list, framework, property-select + supporting owners |
 | L3             | property-select                                     |
 | L4             | selector/list/framework; HTTP/session below         |
 | L5             | property-select, table, list, home, framework       |
@@ -1200,3 +1200,31 @@ including mouse/keyboard at 1280 × 720 and 768 × 900 plus trusted emulated tou
 states, one relocated command, title, focus, shrinking/scrollable desktop main, mobile modal isolation, preservation,
 competing owners, nested restoration, stale removal, resize, dynamic insertion, reload and clean network/console.
 Combined UI/DEP requirements keep their later list, selector and product drag observations NOT_RUN. PANE-05 is NOT_RUN.
+
+
+## L2-LIST author observations
+
+[Report](reports/L2-LIST.md), [browser proof](evidence/L2-LIST/browser.json),
+[commands](evidence/L2-LIST/commands.json) and [checkpoint inventory](evidence/L2-LIST/checkpoints.json):
+**PASS (author), 16 October 2026**. V2 remains PENDING and no combined phase-1 requirement is accepted here.
+
+- ARC-03 / DEP-07–11: configured HTML projection, final-property rendering, public metadata/pane/table composition,
+  disposal and ordinary list control pass. Minimal home and transformer/core-transformers public ports are owned,
+  versioned and tested separately; no SQL/hydration/geometry copy or home-to-framework dependency exists.
+- UI-01–03 / TAB-12 / PANE-05 / T27: real invoice route starts folded, preserves open/reopen context, returns close
+  focus and keeps its header command anchored at four viewport sizes, including trusted emulated touch.
+- ACT-06 click / TAB-01–02/04–06 / T05/T07/T18: full-path City and deep-name columns contain actual converted values;
+  pending choices share one bounded query; existing choices keep order/focus/row selection and produce zero queries.
+  Added highlight and plural refusal pass. External drag and later recents/session behaviour retain their later gates.
+- DEP-11 / SQL-14 / VAL-03: scope total 61, feed 61 distinct roots, representative sorting, nested filter count 20,
+  hidden criteria and reload pass; rendering makes no extra query. Undeclared custom object property/type transformers
+  and nested representative overrides are refused before query; declared custom fields have a narrow list resolver.
+- VSQL regression: the unchanged independent assertions replay with redirected evidence, 14 groups, 1,390 observations
+  and 110 statements PASS. Original VSQL evidence and storage/reflection/SQL/table checkpoints remain unchanged.
+- Browser health: 107 assertions PASS, eight screenshots; only four expected plural HTTP 400 responses, no other error.
+  Six owner builds/tests/public inventories and the application build pass. Showtime HEAD and both original AD files
+  remain preserved. This is author evidence; V2 must independently challenge the integrated click/data contract.
+
+Live recipe: `http://127.0.0.1:13819/property-select-invoice`, initializer `environment/list/initialise.mjs` after
+framework bootstrap; app ownership/session directory `/tmp/property-select-L2-LIST`, existing synthetic database 13316.
+Full commands and cleanup are in the report. No source or configuration was installed into showtime.

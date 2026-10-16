@@ -1,6 +1,8 @@
 import { PropertySelect }             from '../property-select.js'
 import type { PropertySelectOptions } from '../property-select.js'
 
+export type PropertySelectViewOptions = { templateUrl?: string | URL }
+
 /** Owns one mounted controller and its DOM. Importing this module never activates a host. */
 export class PropertySelectView
 {
@@ -18,7 +20,10 @@ export class PropertySelectView
 
 	readonly selector: PropertySelect
 
-	constructor(private readonly host: HTMLElement, options: PropertySelectOptions)
+	constructor(
+		private readonly host: HTMLElement, options: PropertySelectOptions,
+		private readonly viewOptions: PropertySelectViewOptions = {}
+	)
 	{
 		this.selector = new PropertySelect(options)
 	}
@@ -75,7 +80,7 @@ export class PropertySelectView
 	private async initialise(): Promise<boolean>
 	{
 		try {
-			const response = await fetch(new URL('./property-select.html', import.meta.url), {
+			const response = await fetch(this.viewOptions.templateUrl ?? new URL('./property-select.html', import.meta.url), {
 				signal: this.abort.signal
 			})
 			if (!response.ok)
@@ -95,7 +100,8 @@ export class PropertySelectView
 			this.root.addEventListener('click', event => this.activate(event), { signal: this.abort.signal })
 			this.unsubscribe = this.selector.subscribe(event => {
 				if (event.type === 'error')
-					this.status!.textContent = this.selector.translate('Unable to complete the operation. Try again.')
+					this.status!.textContent = event.error instanceof Error ? event.error.message
+						: this.selector.translate('Unable to complete the operation. Try again.')
 				if (event.type === 'change')
 					this.render()
 			})

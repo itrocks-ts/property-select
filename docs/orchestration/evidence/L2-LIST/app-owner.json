@@ -1,0 +1,17 @@
+{
+  "args": [
+    "/usr/bin/node",
+    "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/app.cjs",
+    "--ps-environment=/tmp/property-select-L2-LIST",
+    "--ps-port=13819"
+  ],
+  "boot": "206e55d9-7ffb-4159-9ec4-88fc78e33a5a",
+  "executable": "/usr/bin/node",
+  "start": "151172482",
+  "state": "R",
+  "uid": 1000,
+  "directory": "/tmp/property-select-L2-LIST",
+  "name": "app",
+  "pid": 2335899,
+  "port": 13819
+}

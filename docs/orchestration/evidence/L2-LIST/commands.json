@@ -1,0 +1,415 @@
+[
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/transformer",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "transformer-build.txt",
+    "sha256": "23da45f66e7a862aa0ee45b07311e200351a974ea91de045cffdcbb5845e8b4b",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/transformer-build.txt",
+    "raw_sha256": "68877cdecd60c0621de90cdf0e7754d3289ee0f2ee64dd2e24d49c0d33e3bac9"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/transformer",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "transformer-tests.txt",
+    "sha256": "e80977423d5345eea0df48593bd76db3031e53bd79d973f2e67841966a390b57",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/transformer-tests.txt",
+    "raw_sha256": "e80977423d5345eea0df48593bd76db3031e53bd79d973f2e67841966a390b57"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/core-transformers",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "core-transformers-build.txt",
+    "sha256": "a005df141c6b32a55648367a169e3109e99f6856ad8e98ccd45f94051933f4d1",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/core-transformers-build.txt",
+    "raw_sha256": "02ce6ca3c90bcadffcbd946bf8535473eed19de0e64d6913049591a0e8d70764"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/core-transformers",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "core-transformers-tests.txt",
+    "sha256": "9f4cd57ff9422126e1231a331b1246bd0e53b4a692ae29f90ba7111cd568a427",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/core-transformers-tests.txt",
+    "raw_sha256": "9f4cd57ff9422126e1231a331b1246bd0e53b4a692ae29f90ba7111cd568a427"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "property-select-build.txt",
+    "sha256": "4befe31935dfb49ea4fb37bbd7c2983c8b4d9461adb6fbfb76ffe3a62d81b039",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/property-select-build.txt",
+    "raw_sha256": "fbf00482e64200be24225d4357b1ead120a28984a628de0251cb01fe5995a2d1"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/property-select",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "property-select-tests.txt",
+    "sha256": "1c5dcbe0b21277f87fc9c4042ce12884cb96c81b3ee7a30e45b58d2296f9aa67",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/property-select-tests.txt",
+    "raw_sha256": "1c5dcbe0b21277f87fc9c4042ce12884cb96c81b3ee7a30e45b58d2296f9aa67"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-build.txt",
+    "sha256": "674db1556dff2adfec0d9932e7ce588440d818843581c67f5ba96df20801e4a5",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/list-build.txt",
+    "raw_sha256": "e48e0440cb261f303f55e75e0e3df698d5d30e6a3ca980f096810a3e1e0bf0d4"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/list",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-tests.txt",
+    "sha256": "6eca851b7567ef9ba53ded936cfac164ce41b4afb55f1434eb05de83b14e335b",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/list-tests.txt",
+    "raw_sha256": "6eca851b7567ef9ba53ded936cfac164ce41b4afb55f1434eb05de83b14e335b"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-build.txt",
+    "sha256": "185dabb2215c6e3f7f11f9d7820d976763dd53906ab300a0232fc5b6643d7f26",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/framework-build.txt",
+    "raw_sha256": "417e63d73753159735f483cfac618522179f87eea280e4f43744d96e71e493c2"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/framework",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-tests.txt",
+    "sha256": "9c13feaa713785d38dd214619b315529509edc071c80e8c0e5e26c905d16fbc6",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/framework-tests.txt",
+    "raw_sha256": "9c13feaa713785d38dd214619b315529509edc071c80e8c0e5e26c905d16fbc6"
+  },
+  {
+    "argv": [
+      "npm",
+      "--prefix",
+      "node_modules/@itrocks/home",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "home-build.txt",
+    "sha256": "da4e643f280e36e113f8f71110c24ad1e9ab67be06ef3cb291be141801e8e688",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/home-build.txt",
+    "raw_sha256": "9116760599c59b7f88752f0f9c9bd577e482ef380ff44bfb721649f97f64430d"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-contracts.txt",
+    "sha256": "fa73a23db452d02e490d850c723a095707b12d935c5f7e5a31adfaebedf65741",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/list-contracts.txt",
+    "raw_sha256": "fa73a23db452d02e490d850c723a095707b12d935c5f7e5a31adfaebedf65741"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-contracts.txt",
+    "sha256": "3d1ae07d398866cff8e099e73313d3ff9d319259379cfe46b9a71e1769ff2d18",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/framework-contracts.txt",
+    "raw_sha256": "3d1ae07d398866cff8e099e73313d3ff9d319259379cfe46b9a71e1769ff2d18"
+  },
+  {
+    "argv": [
+      "node",
+      "--test",
+      "--test-isolation=none",
+      "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home/test/property-select.test.mjs"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "home-contracts.txt",
+    "sha256": "7bb8e0747f8c0a8207c4d3fbdd4b1a3e902454f7e8585cd7fe3a70bf4145f233",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/home-contracts.txt",
+    "raw_sha256": "7bb8e0747f8c0a8207c4d3fbdd4b1a3e902454f7e8585cd7fe3a70bf4145f233"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "application-build.txt",
+    "sha256": "c5465053434f1ecb0b31e153ec50e26673c14d9f0cde1fc823c221dd08638628",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/application-build.txt",
+    "raw_sha256": "bd85c4faf562a61255838a94785bd14a20aa4872a0e0c5e9a06bbdf5d9f3906f"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/transformer",
+    "exit": 0,
+    "output": "transformer-pack.txt",
+    "sha256": "fd62ea721af4e815f75914f6c10f27ff1c6a3ed4ae2ff1d3eb6076503bb5b4b6",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/transformer-pack.txt",
+    "raw_sha256": "fd62ea721af4e815f75914f6c10f27ff1c6a3ed4ae2ff1d3eb6076503bb5b4b6"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/transformer",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "transformer-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/transformer-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/core-transformers",
+    "exit": 0,
+    "output": "core-transformers-pack.txt",
+    "sha256": "579d891d299734196dec7411fe3a90a42dc5fc289544a449a2fb26463ca7dce7",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/core-transformers-pack.txt",
+    "raw_sha256": "579d891d299734196dec7411fe3a90a42dc5fc289544a449a2fb26463ca7dce7"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/core-transformers",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "core-transformers-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/core-transformers-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "exit": 0,
+    "output": "list-pack.txt",
+    "sha256": "085d4106e73b23b6fb2acef8e0bb6164fa143350eb0e2d7a8ee7ab1b0d4778da",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/list-pack.txt",
+    "raw_sha256": "085d4106e73b23b6fb2acef8e0bb6164fa143350eb0e2d7a8ee7ab1b0d4778da"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/list",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "list-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/list-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+    "exit": 0,
+    "output": "framework-pack.txt",
+    "sha256": "f0b060cc946a8f128a285148a9b525af2986728f85738a8e1b8e5cc724927bf3",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/framework-pack.txt",
+    "raw_sha256": "f0b060cc946a8f128a285148a9b525af2986728f85738a8e1b8e5cc724927bf3"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/framework",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "framework-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/framework-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+    "exit": 0,
+    "output": "home-pack.txt",
+    "sha256": "a1dc70e1b4669db7258c03aa9493ca747eda84ba3c57d1d641728e6683b9ca05",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/home-pack.txt",
+    "raw_sha256": "a1dc70e1b4669db7258c03aa9493ca747eda84ba3c57d1d641728e6683b9ca05"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/home",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "home-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/home-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "argv": [
+      "npm",
+      "pack",
+      "--dry-run",
+      "--json",
+      "--ignore-scripts",
+      "--offline",
+      "--cache",
+      "/tmp/property-select-L2-LIST-npm-cache"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+    "exit": 0,
+    "output": "property-select-pack.txt",
+    "sha256": "98ddfb5b835fba507757b749096d9bd359a35cb8411a964706e265f89b0908bc",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/property-select-pack.txt",
+    "raw_sha256": "98ddfb5b835fba507757b749096d9bd359a35cb8411a964706e265f89b0908bc"
+  },
+  {
+    "argv": [
+      "git",
+      "-C",
+      "node_modules/@itrocks/property-select",
+      "diff",
+      "--check"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime",
+    "exit": 0,
+    "output": "property-select-whitespace.txt",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "raw_output": "/tmp/property-select/L2-LIST/commands/property-select-whitespace.txt",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+]

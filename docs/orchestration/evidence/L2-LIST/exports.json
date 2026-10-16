@@ -1,0 +1,62 @@
+[
+  {
+    "owner": "transformer",
+    "version": "0.3.0",
+    "required_files": [
+      "cjs/transformer.js",
+      "cjs/transformer.d.ts"
+    ],
+    "verdict": "PASS"
+  },
+  {
+    "owner": "core-transformers",
+    "version": "0.3.0",
+    "required_files": [
+      "cjs/core-transformers.js",
+      "cjs/store.js"
+    ],
+    "verdict": "PASS"
+  },
+  {
+    "owner": "list",
+    "version": "0.9.0",
+    "required_files": [
+      "cjs/list.js",
+      "cjs/projection.js",
+      "property-select.js",
+      "property-select.d.ts",
+      "list.css"
+    ],
+    "verdict": "PASS"
+  },
+  {
+    "owner": "framework",
+    "version": "0.10.0",
+    "required_files": [
+      "property-select-list.js",
+      "property-select-list.d.ts",
+      "cjs/property-select-actions.js"
+    ],
+    "verdict": "PASS"
+  },
+  {
+    "owner": "home",
+    "version": "0.6.0",
+    "required_files": [
+      "container.js",
+      "right-pane.js",
+      "right-pane.css"
+    ],
+    "verdict": "PASS"
+  },
+  {
+    "owner": "property-select",
+    "version": "0.3.0",
+    "required_files": [
+      "front/property-select.js",
+      "front/property-select.html",
+      "front/property-select.css"
+    ],
+    "verdict": "PASS"
+  }
+]

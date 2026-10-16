@@ -1,0 +1,36 @@
+
+> @itrocks/list@0.9.0 test
+> npm run build:cjs && node --test "test/**/*.test.mjs"
+
+
+> @itrocks/list@0.9.0 build:cjs
+> tsc && node -e "const fs=require('node:fs'),path=require('node:path');for(const file of fs.readdirSync('src'))if(file.endsWith('.html'))fs.copyFileSync(path.join('src',file),path.join('cjs',file))"
+
+✔ columns accept reordering and removing properties without restoring defaults (95.590504ms)
+✔ columns reject duplicates, unknown properties and malformed requests (0.695592ms)
+✔ removed columns, including the last column, survive session restoration (0.560391ms)
+✔ column changes persist and return 204 before any data query, even for an empty list (0.992018ms)
+✔ column saves preserve validation and restore an empty session on the next request (1.331859ms)
+✔ an absent offset resets the feed to the first page with a finite limit (1.004965ms)
+✔ explicit valid offsets and viewport limits retain their pagination values (0.37476ms)
+✔ invalid explicit offsets remain visible to downstream validation (0.214462ms)
+✔ html combines user filters and a mandatory scope for projection and count (2.557055ms)
+✔ html keeps the mandatory scope on paginated feed requests (0.368735ms)
+✔ html restores session filters for queries and inputs, and accepts clearing them (1.806104ms)
+✔ json forwards its mandatory scope directly to the data source (0.387295ms)
+✔ omitting the scope preserves html filters and the json query (0.418146ms)
+✔ object and deep columns derive a finite representation closure through reflection (188.03921ms)
+✔ plural, cyclic and undeclared custom representation closures fail before projection (0.553438ms)
+✔ path columns persist, filter both form trees and query keys, and expand representative ordering (1.542378ms)
+✔ visible row projection intersects mandatory scope and preserves full JSON entities (2.336524ms)
+✔ access denial is checked before projection and object-field authorisation is explicit (0.984436ms)
+✔ default route resolves List after adding public dependency hooks (0.477035ms)
+✔ undeclared object transformers fail before querying; declared fields are accepted (0.928254ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 306.473664

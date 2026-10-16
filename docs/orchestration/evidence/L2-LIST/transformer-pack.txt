@@ -1,0 +1,51 @@
+[
+  {
+    "id": "@itrocks/transformer@0.3.0",
+    "name": "@itrocks/transformer",
+    "version": "0.3.0",
+    "size": 7553,
+    "unpackedSize": 28551,
+    "shasum": "dfe5acacfdbeed7a2d8a00f6c0d1797a07e1e168",
+    "integrity": "sha512-reICBXTJnSk/rcTV2AsSxed7l4uW2aJguNFcIA0eQGABHt5BgjV/z1YrcNKIjJkn8i5qRmnYVkaEPAk9nBBAOw==",
+    "filename": "itrocks-transformer-0.3.0.tgz",
+    "files": [
+      {
+        "path": "LICENSE",
+        "size": 7652,
+        "mode": 420
+      },
+      {
+        "path": "README.md",
+        "size": 10186,
+        "mode": 420
+      },
+      {
+        "path": "cjs/transform.d.ts",
+        "size": 608,
+        "mode": 420
+      },
+      {
+        "path": "cjs/transform.js",
+        "size": 1374,
+        "mode": 420
+      },
+      {
+        "path": "cjs/transformer.d.ts",
+        "size": 2359,
+        "mode": 420
+      },
+      {
+        "path": "cjs/transformer.js",
+        "size": 5377,
+        "mode": 420
+      },
+      {
+        "path": "package.json",
+        "size": 995,
+        "mode": 420
+      }
+    ],
+    "entryCount": 7,
+    "bundled": []
+  }
+]

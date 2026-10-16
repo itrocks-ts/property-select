@@ -1,0 +1,17 @@
+
+> @itrocks/transformer@0.3.0 test
+> npm run build && node --test test/*.test.mjs
+
+
+> @itrocks/transformer@0.3.0 build
+> tsc
+
+✔ resolution shares property/type fallback, false and async invocation semantics without executing (102.33145ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 173.728259

@@ -4,7 +4,8 @@
 
 Add object and nested terminal columns with real values through the configured data source.
 
-Prerequisites: RETEST-V2-TABLE-1 (must PASS after the failed V2-TABLE gate). Current status: `PENDING`.
+Prerequisites: RETEST-V2-TABLE-1 (must PASS after the failed V2-TABLE gate).
+Current status: `PASS`; see `reports/RETEST-V2-TABLE-1.md`.
 Do not proceed until each prerequisite has a validated report, attributable checkpoint and no open blocking defect.
 
 ## References and entry points
@@ -34,7 +35,8 @@ metadata/rendering to path/value cells without SQL/hydration. Bind metadata and 
 paths and add anchored header button. Install actual synthetic graph class routes via recipe hook after bootstrap
 binding; no durable showtime code.
 
-Product owners: `@itrocks/list`, `@itrocks/framework`, `@itrocks/property-select`. Tracking stays in
+Product owners: `@itrocks/list`, `@itrocks/framework`, `@itrocks/property-select`, the minimal `@itrocks/home` bridge,
+and public transformer identity ports in `@itrocks/transformer` and `@itrocks/core-transformers`. Tracking stays in
 `property-select`.
 Exclude phase 2, permanent application changes, installs/updates, private data, unrelated refactors and new
 infrastructure

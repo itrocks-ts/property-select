@@ -397,7 +397,7 @@
           "version": "0.4.1"
         }
       },
-      "validation": "PASS: owner builds/tests, application build, SQL-01\u2013SQL-13 author database assertions, SQL-14 executed SQL archive and packages; independent VSQL and browser linkage remain NOT_RUN"
+      "validation": "PASS: owner builds/tests, application build, SQL-01–SQL-13 author database assertions, SQL-14 executed SQL archive and packages; independent VSQL and browser linkage remain NOT_RUN"
     },
     {
       "id": "VSQL",
@@ -424,7 +424,7 @@
         "VAL-06",
         "VAL-07"
       ],
-      "validation": "PASS: independent 137-root SQL-01\u2013SQL-13 storage checks and SQL-14 SQL archive; browser/list/preview observations remain NOT_RUN at V2/V5",
+      "validation": "PASS: independent 137-root SQL-01–SQL-13 storage checks and SQL-14 SQL archive; browser/list/preview observations remain NOT_RUN at V2/V5",
       "tested_checkpoints": {
         "@itrocks/storage": {
           "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
@@ -1080,17 +1080,23 @@
         "RETEST-V2-TABLE-1"
       ],
       "packages": [
-        "@itrocks/list",
+        "@itrocks/core-transformers",
         "@itrocks/framework",
-        "@itrocks/property-select"
+        "@itrocks/home",
+        "@itrocks/list",
+        "@itrocks/property-select",
+        "@itrocks/transformer"
       ],
       "repositories": [
-        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/core-transformers",
         "node_modules/@itrocks/framework",
-        "node_modules/@itrocks/property-select"
+        "node_modules/@itrocks/home",
+        "node_modules/@itrocks/list",
+        "node_modules/@itrocks/property-select",
+        "node_modules/@itrocks/transformer"
       ],
       "category": "implementation",
-      "status": "PENDING",
+      "status": "DONE",
       "model": "gpt-6-astra",
       "model_reasoning_effort": "high",
       "model_justification": "Projection metadata, representative rendering, scope, count/feed and public host composition must agree.",
@@ -1113,7 +1119,41 @@
         "DEP-10",
         "DEP-11",
         "VAL-03"
-      ]
+      ],
+      "validation": "PASS author: six owner builds/tests and application build; 107 real Chromium assertions across four mouse/touch viewports; projected City and deep name, scopes, nested filters, sort/count/feed/reload, pending/existing deduplication, focus/highlight, plural and undeclared custom object refusal before queries; VSQL unchanged replay 14 groups/1390 assertions/110 statements; exports and application preservation. Independent V2 remains PENDING.",
+      "tested_checkpoints": {
+        "@itrocks/core-transformers": {
+          "sha": "e62b34c51b3ab0e9e316d946fdbb805daef0f149",
+          "version": "0.3.0"
+        },
+        "@itrocks/framework": {
+          "sha": "7a302cd606ff007276038ada4d12fc0bd2161d54",
+          "version": "0.10.0"
+        },
+        "@itrocks/home": {
+          "sha": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+          "version": "0.6.0"
+        },
+        "@itrocks/list": {
+          "sha": "ec7e4b071f4ee40113b294587ee794c44adfc8ac",
+          "version": "0.9.0"
+        },
+        "@itrocks/transformer": {
+          "sha": "311c9fcc9c1825ecf0bc387713e8d52ba369352d",
+          "version": "0.3.0"
+        },
+        "@itrocks/property-select": {
+          "base_sha": "75219b9c3be800af8c690dc89bf89756ba449d29",
+          "base_version": "0.2.7",
+          "version": "0.3.0",
+          "source": "Optional view template transport, error message, synthetic list recipe and author tracking"
+        }
+      },
+      "runtime": {
+        "url": "http://127.0.0.1:13819/property-select-invoice",
+        "initializer": "environment/list/initialise.mjs",
+        "process_directory": "/tmp/property-select-L2-LIST"
+      }
     },
     {
       "id": "V2",
