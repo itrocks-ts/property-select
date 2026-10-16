@@ -1,0 +1,12 @@
+{
+	"sourcePath": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select/docs/orchestration/environment/checks/V2-UI.mjs",
+	"sourceSha256": "c700201068aa9b433dcb65b4a9711402ab6e9505cbbb8603ac9a3ca3ca490103",
+	"executable": "/tmp/property-select-V2-standalone-replay.mjs",
+	"executedSha256": "29dfb2068613a6fca93cdcecf47a2560eede34d6052d6df42462f188d7d1fe6e",
+	"changes": [
+		"evidence destination",
+		"owned directory",
+		"port 13831",
+		"current checkpoint/version metadata"
+	]
+}

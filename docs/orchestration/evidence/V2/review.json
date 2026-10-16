@@ -1,0 +1,60 @@
+{
+  "property-select": {
+    "sha": "439a989d44d390a62024b36bd5dffffdff3b2cfb",
+    "status": "M docs/orchestration/PLAN.json\n M docs/orchestration/VALIDATION.md\n M package.json\n?? docs/orchestration/environment/checks/V2-initialise.mjs\n?? docs/orchestration/environment/checks/V2-observer.cjs\n?? docs/orchestration/environment/checks/V2-review.py\n?? docs/orchestration/environment/checks/V2-standalone-replay.mjs\n?? docs/orchestration/environment/checks/V2.mjs\n?? docs/orchestration/evidence/V2/\n?? docs/orchestration/reports/V2.md"
+  },
+  "list": {
+    "sha": "ec7e4b071f4ee40113b294587ee794c44adfc8ac",
+    "status": ""
+  },
+  "framework": {
+    "sha": "7a302cd606ff007276038ada4d12fc0bd2161d54",
+    "status": ""
+  },
+  "home": {
+    "sha": "83cc7d76ca374ff0e99073ac0f104b001f01fdf7",
+    "status": ""
+  },
+  "transformer": {
+    "sha": "311c9fcc9c1825ecf0bc387713e8d52ba369352d",
+    "status": ""
+  },
+  "core-transformers": {
+    "sha": "e62b34c51b3ab0e9e316d946fdbb805daef0f149",
+    "status": ""
+  },
+  "table": {
+    "sha": "7537cf58863ad0efc5c3edb2b15a0537d54568df",
+    "status": ""
+  },
+  "mysql": {
+    "sha": "275d7f3b0ae3739e9c1a2b6361fc173d98612581",
+    "status": ""
+  },
+  "storage": {
+    "sha": "a298863052d9db37fe28c72e175896bdeec9366d",
+    "status": ""
+  },
+  "sql-build": {
+    "sha": "a267327e072df4f6ffa855c15eae6a4c5776ee6d",
+    "status": ""
+  },
+  "sql-join": {
+    "sha": "55db310bdf3e92330ec216677c81577f6854e3f0",
+    "status": ""
+  },
+  "reflect": {
+    "sha": "8e42bd2009a6ba4e708ae20ca519fc44681ebbb7",
+    "status": ""
+  },
+  "reflect-path": {
+    "sha": "7d1534eece60d23339f2ad8355d49c8d5074c08d",
+    "status": ""
+  },
+  "mysql-maintainer": {
+    "sha": "89ff36a3b1a41a60b040c0ed553f867bec0f6086",
+    "status": ""
+  },
+  "preservation": "PASS: original showtime HEAD and two AD blobs/absences; all product owners unchanged",
+  "cleanup": "PASS: no verifier app/standalone PID reservations; inherited 13819 status PASS"
+}

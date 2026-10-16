@@ -1,0 +1,234 @@
+{
+  "id": "@itrocks/framework@0.10.0",
+  "name": "@itrocks/framework",
+  "version": "0.10.0",
+  "size": 28864,
+  "unpackedSize": 101435,
+  "shasum": "8e36cd8efe71d641be043c00916dad276c2382eb",
+  "integrity": "sha512-huoZJyHtLDYfEsscjMQOTRrwjbIPhOaq0VH3z2XzcmFjQTBGf+0Vz47ySoT9w+FWyubt/VCpyz8mDI8O03SRwQ==",
+  "filename": "itrocks-framework-0.10.0.tgz",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 767,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 12443,
+      "mode": 420
+    },
+    {
+      "path": "app.d.ts",
+      "size": 212,
+      "mode": 420
+    },
+    {
+      "path": "app.js",
+      "size": 2859,
+      "mode": 420
+    },
+    {
+      "path": "cjs/dependencies.d.ts",
+      "size": 38,
+      "mode": 420
+    },
+    {
+      "path": "cjs/dependencies.js",
+      "size": 6657,
+      "mode": 420
+    },
+    {
+      "path": "cjs/framework.d.ts",
+      "size": 328,
+      "mode": 420
+    },
+    {
+      "path": "cjs/framework.js",
+      "size": 1512,
+      "mode": 420
+    },
+    {
+      "path": "cjs/language.d.ts",
+      "size": 414,
+      "mode": 420
+    },
+    {
+      "path": "cjs/language.js",
+      "size": 3962,
+      "mode": 420
+    },
+    {
+      "path": "cjs/main.d.ts",
+      "size": 46,
+      "mode": 420
+    },
+    {
+      "path": "cjs/main.js",
+      "size": 5657,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select-actions.d.ts",
+      "size": 793,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select-actions.js",
+      "size": 2475,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select-provider.d.ts",
+      "size": 1083,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select-provider.js",
+      "size": 8143,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select.d.ts",
+      "size": 1195,
+      "mode": 420
+    },
+    {
+      "path": "cjs/property-select.js",
+      "size": 3962,
+      "mode": 420
+    },
+    {
+      "path": "cjs/reflect-class.d.ts",
+      "size": 560,
+      "mode": 420
+    },
+    {
+      "path": "cjs/reflect-class.js",
+      "size": 2362,
+      "mode": 420
+    },
+    {
+      "path": "cjs/reflect-property.d.ts",
+      "size": 534,
+      "mode": 420
+    },
+    {
+      "path": "cjs/reflect-property.js",
+      "size": 1706,
+      "mode": 420
+    },
+    {
+      "path": "cjs/servers.d.ts",
+      "size": 59,
+      "mode": 420
+    },
+    {
+      "path": "cjs/servers.js",
+      "size": 169,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-join-dependencies.d.ts",
+      "size": 972,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-join-dependencies.js",
+      "size": 3508,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-projection.d.ts",
+      "size": 51,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-projection.js",
+      "size": 2489,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-relationships.d.ts",
+      "size": 709,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sql-relationships.js",
+      "size": 7150,
+      "mode": 420
+    },
+    {
+      "path": "cjs/store-representative.d.ts",
+      "size": 122,
+      "mode": 420
+    },
+    {
+      "path": "cjs/store-representative.js",
+      "size": 437,
+      "mode": 420
+    },
+    {
+      "path": "config.yaml",
+      "size": 252,
+      "mode": 420
+    },
+    {
+      "path": "docs/dependencies.md",
+      "size": 2601,
+      "mode": 420
+    },
+    {
+      "path": "docs/property-select.md",
+      "size": 8299,
+      "mode": 420
+    },
+    {
+      "path": "docs/sql-projection.md",
+      "size": 1443,
+      "mode": 420
+    },
+    {
+      "path": "docs/sql-relationships.md",
+      "size": 3350,
+      "mode": 420
+    },
+    {
+      "path": "favicon.png",
+      "size": 1271,
+      "mode": 420
+    },
+    {
+      "path": "fr-FR.csv",
+      "size": 2375,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 3892,
+      "mode": 420
+    },
+    {
+      "path": "property-select-list.d.ts",
+      "size": 290,
+      "mode": 420
+    },
+    {
+      "path": "property-select-list.js",
+      "size": 2290,
+      "mode": 420
+    },
+    {
+      "path": "property-select-metadata.d.ts",
+      "size": 886,
+      "mode": 420
+    },
+    {
+      "path": "property-select-metadata.js",
+      "size": 1112,
+      "mode": 420
+    }
+  ],
+  "entryCount": 44,
+  "bundled": []
+}

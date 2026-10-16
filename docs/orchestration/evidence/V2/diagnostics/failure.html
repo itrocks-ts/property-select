@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="fr" style="--real-vh: 720px;"><head>
+	<link href="/@itrocks/ux-core/css/app.css" rel="stylesheet">
+	<link href="/@itrocks/home/right-pane.css" rel="stylesheet">
+	<link href="/@itrocks/notifications/css/notifications.css" rel="stylesheet"><link href="/app/menu/menu.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="/favicon.png" rel="icon">
+	<link href="/favicon.png" rel="apple-touch-icon">
+	<link href="/manifest.json" rel="manifest">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="default" name="apple-mobile-web-app-status-bar-style">
+	<script type="importmap"> { "imports": { "@itrocks/": "/@itrocks/" } } </script>
+	<script src="/@itrocks/framework/app.js" type="module"></script>
+	<script src="/@itrocks/home/container.js" type="module"></script>
+	<title>Invoices</title>
+	<link href="/@itrocks/action-bar/action.css" rel="stylesheet">
+	<link href="/@itrocks/delete/css/action.css" rel="stylesheet">
+	<link href="/@itrocks/list/list.css" rel="stylesheet">
+	<link href="/@itrocks/new/css/action.css" rel="stylesheet">
+	<link href="/@itrocks/ux-core/css/article.css" rel="stylesheet">
+	<script src="/@itrocks/list/build.js" type="module"></script>
+<link href="/@itrocks/property-select/front/property-select.css" rel="stylesheet"><link href="/@itrocks/table/column-add.css" rel="stylesheet"></head>
+<body>
+
+	<header>
+		<div class="main logo"></div>
+	</header>
+
+
+
+	<button class="collapse">collapse</button>
+
+	<ol class="breadcrumb">
+		<li class="home"><a href="/">Accueil</a></li>
+	<li data-action="list"><a href="http://127.0.0.1:13829/property-select-invoice/list?sort=customer.address.city" target="main">Invoices</a></li></ol>
+
+	<main>
+	<article data-action="list" data-class="" data-route="/property-select-invoice" data-property-root="invoice">
+		<header>
+			<h2>Invoices</h2>
+			<button class="add-column" type="button" aria-label="Ajouter column">+</button>
+			<section class="summary">61 éléments</section>
+			<ul class="general actions">
+				<li class="new">
+
+	<a href="/property-select-invoice/new" target="#">Nouveau</a>
+
+</li>
+			</ul>
+		</header>
+		<form action="/property-select-invoice/list" autocomplete="off" method="post" target="main">
+			<table class="objects itrocks" data-feed-fields="search.*" data-link="/property-select-invoice" data-table-id="2">
+				<thead>
+					<tr class="properties">
+						<th class="select" data-freeze=""><input name="select" type="checkbox" value="all" style="">
+							<input name="reset" title="réinitialise les filtres de recherche" type="submit" value="réinitialiser" style=""></th>
+						<th data-property="number">
+							<span class="label">number</span>
+							<input aria-label="Filter number" data-property-filter="number" name="search.number" value="" style="">
+						</th>
+						<th data-property="amount">
+							<span class="label">amount</span>
+							<input aria-label="Filter amount" data-property-filter="amount" name="search.amount" value="" style="">
+						</th>
+						<th data-property="customer.address.city" data-sort="1">
+							<span class="label">customer › address › city</span>
+							<input aria-label="Filter customer › address › city" data-property-filter="customer.address.city" name="search.customer%2Eaddress%2Ecity" value="" style="">
+						</th>
+						<th data-property="customer.address.city.country.name">
+							<span class="label">customer › address › city › country › name</span>
+							<input aria-label="Filter customer › address › city › country › name" data-property-filter="customer.address.city.country.name" name="search.customer%2Eaddress%2Ecity%2Ecountry%2Ename" value="" style="">
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+
+
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="3" style=""></th>
+			<td>REC-003</td>
+			<td>-6</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="4" style=""></th>
+			<td>REC-004</td>
+			<td>100</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="5" style=""></th>
+			<td>REC-005</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="11" style=""></th>
+			<td>REC-011</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="17" style=""></th>
+			<td>REC-017</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="23" style=""></th>
+			<td>REC-023</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="29" style=""></th>
+			<td>REC-029</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="35" style=""></th>
+			<td>REC-035</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="41" style=""></th>
+			<td>REC-041</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="47" style=""></th>
+			<td>REC-047</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="53" style=""></th>
+			<td>REC-053</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="59" style=""></th>
+			<td>REC-059</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="65" style=""></th>
+			<td>REC-065</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="71" style=""></th>
+			<td>REC-071</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="77" style=""></th>
+			<td>REC-077</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="83" style=""></th>
+			<td>REC-083</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="89" style=""></th>
+			<td>REC-089</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="95" style=""></th>
+			<td>REC-095</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="101" style=""></th>
+			<td>REC-101</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="107" style=""></th>
+			<td>REC-107</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="113" style=""></th>
+			<td>REC-113</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="119" style=""></th>
+			<td>REC-119</td>
+			<td>1</td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<th class="select"><input name="id" type="checkbox" value="7" style=""></th>
+			<td>REC-007</td>
+			<td>1</td>
+			<td>Recipe London RECIPE UNITED KINGDOM</td>
+			<td>RECIPE UNITED KINGDOM</td>
+		</tr>
+
+
+				</tbody>
+			</table>
+			<footer>
+				<ul class="selection actions">
+					<li class="delete">
+
+	<input formaction="/property-select-invoice/delete" formtarget="#notification:prepend" type="submit" value="Supprimer" style="">
+
+</li>
+				</ul>
+			</footer>
+		</form>
+	</article>
+	</main>
+
+	<ol id="notifications"></ol>
+
+	<div class="right-pane-dock"><button aria-controls="right-pane-content" aria-expanded="false" class="right-pane-toggle" type="button" aria-label="Open Add columns"><span aria-hidden="true">‹</span><span class="right-pane-label">Open pane</span></button></div>
+	<aside class="right-pane" aria-labelledby="right-pane-title" hidden="" tabindex="-1">
+		<header>
+
+			<h2 id="right-pane-title">Add columns</h2>
+		</header>
+		<div id="right-pane-content"><div><section class="property-select" aria-label="Property selection" aria-busy="false">
+	<nav class="ps-breadcrumb" aria-label="Object path"><button type="button" data-action="navigate" data-path="" data-focus="navigate:" class="ps-level" data-position="current" aria-current="location">invoice</button></nav>
+	<p class="ps-status" role="status" aria-live="polite"></p>
+	<ul class="ps-properties" aria-label="Properties"><li class="ps-property" data-kind="terminal"><button type="button" data-action="activate" data-path="active" data-focus="activate:active" class="ps-main">active</button><button type="button" data-action="select" data-path="active" data-focus="select:active" class="ps-add" aria-label="Select active">+</button></li><li class="ps-property" data-kind="terminal"><button type="button" data-action="activate" data-path="amount" data-focus="activate:amount" class="ps-main">amount</button><button type="button" data-action="select" data-path="amount" data-focus="select:amount" class="ps-add" aria-label="Select amount">+</button></li><li class="ps-property" data-kind="relation"><button type="button" data-action="activate" data-path="customer" data-focus="activate:customer" class="ps-main">customer<span class="ps-chevron" aria-hidden="true">›</span></button><button type="button" data-action="select" data-path="customer" data-focus="select:customer" class="ps-add" aria-label="Select customer">+</button></li><li class="ps-property" data-kind="relation"><button type="button" data-action="activate" data-path="deliveryAddress" data-focus="activate:deliveryAddress" class="ps-main">delivery address<span class="ps-chevron" aria-hidden="true">›</span></button><button type="button" data-action="select" data-path="deliveryAddress" data-focus="select:deliveryAddress" class="ps-add" aria-label="Select delivery address">+</button></li><li class="ps-property" data-kind="relation"><button type="button" data-action="activate" data-path="issuedAt" data-focus="activate:issuedAt" class="ps-main">issued at<span class="ps-chevron" aria-hidden="true">›</span></button><button type="button" data-action="select" data-path="issuedAt" data-focus="select:issuedAt" class="ps-add" aria-label="Select issued at">+</button></li><li class="ps-property" data-kind="relation"><button type="button" data-action="activate" data-path="lines" data-focus="activate:lines" class="ps-main">lines<span class="ps-chevron" aria-hidden="true">›</span></button><button type="button" data-action="select" data-path="lines" data-focus="select:lines" class="ps-add" aria-label="Select lines">+</button></li><li class="ps-property" data-kind="terminal"><button type="button" data-action="activate" data-path="note" data-focus="activate:note" class="ps-main">note</button><button type="button" data-action="select" data-path="note" data-focus="select:note" class="ps-add" aria-label="Select note">+</button></li><li class="ps-property" data-kind="terminal"><button type="button" data-action="activate" data-path="number" data-focus="activate:number" class="ps-main">number</button><button type="button" data-action="select" data-path="number" data-focus="select:number" class="ps-add" aria-label="Select number">+</button></li><li class="ps-property" data-kind="terminal"><button type="button" data-action="activate" data-path="p0" data-focus="activate:p0" class="ps-main">p0</button><button type="button" data-action="select" data-path="p0" data-focus="select:p0" class="ps-add" aria-label="Select p0">+</button></li><li class="ps-property" data-kind="relation"><button type="button" data-action="activate" data-path="tags" data-focus="activate:tags" class="ps-main">tags<span class="ps-chevron" aria-hidden="true">›</span></button><button type="button" data-action="select" data-path="tags" data-focus="select:tags" class="ps-add" aria-label="Select tags">+</button></li></ul>
+</section></div></div>
+	</aside>
+
+
+
+</body></html>

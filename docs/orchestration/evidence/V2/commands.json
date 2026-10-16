@@ -1,0 +1,107 @@
+[
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/transformer",
+    "code": 0,
+    "output": "transformer-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/core-transformers",
+    "code": 0,
+    "output": "core-transformers-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+    "code": 0,
+    "output": "property-select-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/home",
+    "code": 0,
+    "output": "home-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "code": 0,
+    "output": "list-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+    "code": 0,
+    "output": "framework-build.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/property-select",
+    "code": 0,
+    "output": "property-select-test.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/list",
+    "code": 0,
+    "output": "list-test.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/framework",
+    "code": 0,
+    "output": "framework-test.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/transformer",
+    "code": 0,
+    "output": "transformer-test.txt"
+  },
+  {
+    "argv": [
+      "npm",
+      "test"
+    ],
+    "cwd": "/home/baptiste/itrocks/showtime/node_modules/@itrocks/core-transformers",
+    "code": 0,
+    "output": "core-transformers-test.txt"
+  }
+]

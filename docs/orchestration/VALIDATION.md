@@ -579,19 +579,20 @@ after V7 audits the correction protocol and confirms no unresolved failure; it i
 | T27  | L2-HOME L2-LIST L6 | V2 V6             | B       |
 
 - **T01** — Expected: Mount without hosts; normalise strings/segments; observe explicit intentions and
-acknowledgements. Proof: `evidence/<gate>/T01.*`; current verdict: `NOT_RUN`.
+acknowledgements. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T02** — Expected: Open Customer→Address→City→Country, return to Address then City; Country stays in remembered
-breadcrumb. Proof: `evidence/<gate>/T02.*`; current verdict: `NOT_RUN`.
+breadcrumb. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T03** — Expected: Open a sibling relation from Address; retain the shared prefix and replace only the divergent
-suffix. Proof: `evidence/<gate>/T03.*`; current verdict: `NOT_RUN`.
+suffix. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T04** — Expected: Activate a shortcut from a different branch; full destination replaces branch and search
 clears. Proof: `evidence/<gate>/T04.*`; current verdict: `NOT_RUN`.
 - **T05** — Expected: Click terminal, relation main and relation +; assert one correct intention/action per input,
-unchanged context on add. Proof: `evidence/<gate>/T05.*`; current verdict: `NOT_RUN`.
+unchanged context on add. Proof: [V2 report](reports/V2.md); current verdict: **PASS (V2 implemented observations)**.
 - **T06** — Expected: Compare bounding boxes at hover/focus; on touch + appears only on relations and hybrid actions
 remain usable. Proof: `evidence/<gate>/T06.*`; current verdict: `NOT_RUN`.
 - **T07** — Expected: Add customer.address.city as an object; assert target identity/type and existing
-representative rendering after reload. Proof: `evidence/<gate>/T07.*`; current verdict: `NOT_RUN`.
+representative rendering after reload. Proof: [V2 report](reports/V2.md);
+current verdict: **PASS (V2 implemented observations)**.
 - **T08** — Expected: Use a long breadcrumb on narrow/touch screens; scroll and activate remembered levels with no
 add/drag. Proof: `evidence/<gate>/T08.*`; current verdict: `NOT_RUN`.
 - **T09** — Expected: Search customer country name with reordered/accented/case-varied words; see terminal and
@@ -824,9 +825,11 @@ VSQL independent storage observation: `PASS`.
 Expected: Archive actual SQL/result assertions separately from V2 City/deep-field render, filter/sort/feed/reload
 evidence using the exact delivered modules.
 
-Proof: `evidence/<gate>/SQL-14.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [VSQL report](reports/VSQL.md) and [V2 report](reports/V2.md). Current verdict: **PASS (VSQL/V2)**.
 
-VSQL independent storage observation: `PASS`; browser linkage remains `NOT_RUN` until V2.
+VSQL independent storage and V2 browser linkage observations: **PASS**.
+[V2 results](evidence/V2/results.json), [typed rendering](evidence/V2/typed-rendering.json),
+[executed SQL](evidence/V2/executed-sql.json) and [V2 report](reports/V2.md). Final replay remains V7.
 [Independent results](evidence/VSQL/results.json) and [report](reports/VSQL.md), 137 synthetic roots.
 
 ## META additional cases
@@ -1017,7 +1020,8 @@ Current verdict: **PASS (V2-HOME shell)**; later integration observations remain
 Expected: Pinned right header add button opens the one existing pane at every horizontal scroll position; mobile
 click adds without a placement dialogue.
 
-Proof: `evidence/<gate>/PANE-05.*` and `reports/<gate>.md`. Current verdict: `NOT_RUN`.
+Proof: [V2 assertions](evidence/V2/results.json) and [report](reports/V2.md).
+Current verdict: **PASS (V2 click integration)**; later gesture observations remain at V6.
 ### PANE-06: Responsive presentation
 
 Expected: Desktop/narrow/portrait/landscape pass no overflow, long breadcrumb access, comfortable touch targets,
@@ -1228,3 +1232,32 @@ Combined UI/DEP requirements keep their later list, selector and product drag ob
 Live recipe: `http://127.0.0.1:13819/property-select-invoice`, initializer `environment/list/initialise.mjs` after
 framework bootstrap; app ownership/session directory `/tmp/property-select-L2-LIST`, existing synthetic database 13316.
 Full commands and cleanup are in the report. No source or configuration was installed into showtime.
+
+
+## V2 independent integrated observations
+
+**PASS**, 16 October 2026, on property-select `439a989d44d390a62024b36bd5dffffdff3b2cfb` / `0.3.0` and the
+[recorded owner checkpoints](evidence/V2/checkpoints.json). Tracking-only patch `0.3.1`; no product changes.
+[Report](reports/V2.md), [261 new assertions](evidence/V2/results.json),
+[116 fresh standalone assertions](evidence/V2/standalone-replay/results.json),
+[typed renderer observations](evidence/V2/typed-rendering.json), [SQL](evidence/V2/executed-sql.json) and
+[database journal](evidence/V2/mysql-general.log).
+
+- T01–T03/T05/T07 current observations PASS: both environments, exact remembered/divergent paths, single actions,
+  true City/Country prototypes, deep Country.Name conversion, absent links and complete value/column reload.
+- T06/T08/T25 current portions PASS: stable hover/focus geometry, no-hover relation plus, trusted keyboard/taps,
+  long breadcrumb scrolling/cancellation, one confirmation, duplicate/late refusal and disposal/remount.
+- T18 click portions PASS: final insertion, pending path deduplication, one bounded projection, existing order,
+  focus/row selection and same highlight. External transport remains V5/V6.
+- T27/PANE-05 click portions PASS: initial fold, preserved reopening context, close focus and anchored header command
+  at both ends of a wide table. Four viewports include genuine touch contexts; later gesture arbitration remains V6.
+- DEP-11/SQL-14 PASS integration observations: independent 61-root scope oracle, exact page/feed identities and values,
+  stable duplicate sorting, 20-root deep criterion, real header removal retaining hidden filter, scope intersection
+  for explicit visible ids, empty ids and plural refusal before SQL. Rendering performs no extra reads.
+- LIFE-01–03 current portions PASS: fragment activation once, ordinary country control, navigation cleanup and real
+  header removal/persistence. Standalone lifecycle and public port substitution pass.
+- VAL-03/04/06 PASS V2 portions: two real environments, independent assertions, separate SQL/browser evidence,
+  screenshots, six owner builds/public inventories and all applicable suites. Completed HTTP 204 save events are
+  identified explicitly; no other failed request, page exception or console warning/error remains.
+
+Later search, selector persistence, gestures, combined requirements and final V7/D8 verdicts remain NOT_RUN.

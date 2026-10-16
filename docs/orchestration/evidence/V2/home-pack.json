@@ -1,0 +1,79 @@
+{
+  "id": "@itrocks/home@0.6.0",
+  "name": "@itrocks/home",
+  "version": "0.6.0",
+  "size": 9927,
+  "unpackedSize": 29256,
+  "shasum": "0b12c6fdc94bb47a572b71bdea2e01fe8138e03f",
+  "integrity": "sha512-Fg+MPZKoWzPlS9vKpmarM0pHOhmd/QrtbBJG39KXPQurX5FQxnVtvngKlXey4MX6EJ0SgvO7srb2Pmq2Tb9kwA==",
+  "filename": "itrocks-home-0.6.0.tgz",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 767,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 7635,
+      "mode": 420
+    },
+    {
+      "path": "cjs/container.html",
+      "size": 2122,
+      "mode": 420
+    },
+    {
+      "path": "cjs/output.d.ts",
+      "size": 225,
+      "mode": 420
+    },
+    {
+      "path": "cjs/output.html",
+      "size": 402,
+      "mode": 420
+    },
+    {
+      "path": "cjs/output.js",
+      "size": 3589,
+      "mode": 420
+    },
+    {
+      "path": "config.yaml",
+      "size": 96,
+      "mode": 420
+    },
+    {
+      "path": "container.d.ts",
+      "size": 11,
+      "mode": 420
+    },
+    {
+      "path": "container.js",
+      "size": 392,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 1766,
+      "mode": 420
+    },
+    {
+      "path": "right-pane.css",
+      "size": 2270,
+      "mode": 420
+    },
+    {
+      "path": "right-pane.d.ts",
+      "size": 1007,
+      "mode": 420
+    },
+    {
+      "path": "right-pane.js",
+      "size": 8974,
+      "mode": 420
+    }
+  ],
+  "entryCount": 13,
+  "bundled": []
+}

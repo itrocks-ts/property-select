@@ -1,0 +1,79 @@
+{
+  "id": "@itrocks/core-transformers@0.3.0",
+  "name": "@itrocks/core-transformers",
+  "version": "0.3.0",
+  "size": 10801,
+  "unpackedSize": 45208,
+  "shasum": "4c8c34b96d67f5f9c9fcd421e3f239f5aa604d6f",
+  "integrity": "sha512-ehNKehlcaT9tfRMhBnP+UGmGg1GO+1UoZWS+dr2DzzDM2TALKC/8ydARm6SJVKa/5Fp9B23CbAJQs3q5R+cBdw==",
+  "filename": "itrocks-core-transformers-0.3.0.tgz",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 767,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 14645,
+      "mode": 420
+    },
+    {
+      "path": "cjs/collection-type.d.ts",
+      "size": 768,
+      "mode": 420
+    },
+    {
+      "path": "cjs/collection-type.js",
+      "size": 6493,
+      "mode": 420
+    },
+    {
+      "path": "cjs/container.d.ts",
+      "size": 222,
+      "mode": 420
+    },
+    {
+      "path": "cjs/container.js",
+      "size": 1310,
+      "mode": 420
+    },
+    {
+      "path": "cjs/core-transformers.d.ts",
+      "size": 1032,
+      "mode": 420
+    },
+    {
+      "path": "cjs/core-transformers.js",
+      "size": 4478,
+      "mode": 420
+    },
+    {
+      "path": "cjs/primitive.d.ts",
+      "size": 1092,
+      "mode": 420
+    },
+    {
+      "path": "cjs/primitive.js",
+      "size": 7443,
+      "mode": 420
+    },
+    {
+      "path": "cjs/store.d.ts",
+      "size": 1135,
+      "mode": 420
+    },
+    {
+      "path": "cjs/store.js",
+      "size": 4611,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 1212,
+      "mode": 420
+    }
+  ],
+  "entryCount": 13,
+  "bundled": []
+}

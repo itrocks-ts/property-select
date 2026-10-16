@@ -1,0 +1,224 @@
+{
+  "id": "@itrocks/list@0.9.0",
+  "name": "@itrocks/list",
+  "version": "0.9.0",
+  "size": 21841,
+  "unpackedSize": 78781,
+  "shasum": "3bcbc44ea8422db216b2d3922928613c8b048040",
+  "integrity": "sha512-Jb0BlraO7l5GA1qyQuvG8zFepo5fmKSZZD/I3lwjNZkkjSn5ELxFBabsvpnlnrEmSW8JSAGfc0fUwFTBB8kFTw==",
+  "filename": "itrocks-list-0.9.0.tgz",
+  "files": [
+    {
+      "path": "LICENSE",
+      "size": 767,
+      "mode": 420
+    },
+    {
+      "path": "README.md",
+      "size": 8548,
+      "mode": 420
+    },
+    {
+      "path": "build.d.ts",
+      "size": 11,
+      "mode": 420
+    },
+    {
+      "path": "build.js",
+      "size": 3691,
+      "mode": 420
+    },
+    {
+      "path": "cjs/access.d.ts",
+      "size": 393,
+      "mode": 420
+    },
+    {
+      "path": "cjs/access.js",
+      "size": 418,
+      "mode": 420
+    },
+    {
+      "path": "cjs/access.js.map",
+      "size": 422,
+      "mode": 420
+    },
+    {
+      "path": "cjs/columns.d.ts",
+      "size": 1012,
+      "mode": 420
+    },
+    {
+      "path": "cjs/columns.js",
+      "size": 2793,
+      "mode": 420
+    },
+    {
+      "path": "cjs/columns.js.map",
+      "size": 2952,
+      "mode": 420
+    },
+    {
+      "path": "cjs/feed.d.ts",
+      "size": 465,
+      "mode": 420
+    },
+    {
+      "path": "cjs/feed.html",
+      "size": 367,
+      "mode": 420
+    },
+    {
+      "path": "cjs/feed.js",
+      "size": 1050,
+      "mode": 420
+    },
+    {
+      "path": "cjs/feed.js.map",
+      "size": 1035,
+      "mode": 420
+    },
+    {
+      "path": "cjs/filter.d.ts",
+      "size": 614,
+      "mode": 420
+    },
+    {
+      "path": "cjs/filter.js",
+      "size": 2057,
+      "mode": 420
+    },
+    {
+      "path": "cjs/filter.js.map",
+      "size": 2115,
+      "mode": 420
+    },
+    {
+      "path": "cjs/list.d.ts",
+      "size": 843,
+      "mode": 420
+    },
+    {
+      "path": "cjs/list.html",
+      "size": 1856,
+      "mode": 420
+    },
+    {
+      "path": "cjs/list.js",
+      "size": 8619,
+      "mode": 420
+    },
+    {
+      "path": "cjs/list.js.map",
+      "size": 4980,
+      "mode": 420
+    },
+    {
+      "path": "cjs/parameter.d.ts",
+      "size": 362,
+      "mode": 420
+    },
+    {
+      "path": "cjs/parameter.js",
+      "size": 316,
+      "mode": 420
+    },
+    {
+      "path": "cjs/parameter.js.map",
+      "size": 269,
+      "mode": 420
+    },
+    {
+      "path": "cjs/persist.d.ts",
+      "size": 330,
+      "mode": 420
+    },
+    {
+      "path": "cjs/persist.js",
+      "size": 1107,
+      "mode": 420
+    },
+    {
+      "path": "cjs/persist.js.map",
+      "size": 1179,
+      "mode": 420
+    },
+    {
+      "path": "cjs/projection.d.ts",
+      "size": 1173,
+      "mode": 420
+    },
+    {
+      "path": "cjs/projection.js",
+      "size": 3840,
+      "mode": 420
+    },
+    {
+      "path": "cjs/projection.js.map",
+      "size": 3267,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sort.d.ts",
+      "size": 800,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sort.js",
+      "size": 2985,
+      "mode": 420
+    },
+    {
+      "path": "cjs/sort.js.map",
+      "size": 2910,
+      "mode": 420
+    },
+    {
+      "path": "column-move.svg",
+      "size": 210,
+      "mode": 420
+    },
+    {
+      "path": "column-remove.svg",
+      "size": 173,
+      "mode": 420
+    },
+    {
+      "path": "config.yaml",
+      "size": 33,
+      "mode": 420
+    },
+    {
+      "path": "filter-reset.svg",
+      "size": 230,
+      "mode": 420
+    },
+    {
+      "path": "list.css",
+      "size": 5134,
+      "mode": 420
+    },
+    {
+      "path": "package.json",
+      "size": 2293,
+      "mode": 420
+    },
+    {
+      "path": "property-select.d.ts",
+      "size": 1639,
+      "mode": 420
+    },
+    {
+      "path": "property-select.js",
+      "size": 5429,
+      "mode": 420
+    },
+    {
+      "path": "sort.svg",
+      "size": 94,
+      "mode": 420
+    }
+  ],
+  "entryCount": 42,
+  "bundled": []
+}
