@@ -101,7 +101,7 @@ The target button appears on row hover on desktop and remains visible on smartph
 `.action` hover colour. Each parent segment and the right-hand chevron highlights
 independently; the final name highlights only its own area. The host confirms usage through `usedPaths`.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb separates levels with chevrons and retains remembered
-descendants and marks the current object with `aria-current`, bold text and an underline.
+descendants and marks the current object with `aria-current`, a bold name and normal-weight chevrons, without underlining.
 
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `template?: string` and
 `templateUrl?: string | URL`. A supplied template is mounted directly without a fetch.
