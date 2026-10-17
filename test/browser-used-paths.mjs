@@ -39,17 +39,42 @@ try {
 		const child = { kind: 'relation', label: 'Child', name: 'child', order: 2, path: 'child', target: 'Child' }
 		const metadata = {
 			async context(_root, path) {
-				return { label: 'Example', path, properties: path ? [{ ...name, path: 'child.name' }]
+				return { label: 'Example', path, properties: path === 'child.child'
+					? [{ ...name, path: 'child.child.name' }] : path ? [{ ...name, path: 'child.name' },
+					{ ...note, path: 'child.note' }, { ...child, path: 'child.child' }]
 					: [child, name, note], type: 'Example' }
 			},
 			async resolve(_root, path) { return path === 'child' ? child : { ...name, path } }
 		}
 		const host = document.querySelector('#host')
-		const view = new PropertySelectView(host, { metadata, root: 'example', usedPaths: ['name'] })
+		const view = new PropertySelectView(host, {
+			metadata, root: 'example', translate: text => ({ Name: 'Zulu', Note: 'Alpha' })[text] || text,
+			usedPaths: ['name', 'child.name', 'child.note', ['child', 'name'], 'child.child', 'child.child.name', 'missing.name']
+		})
 		const marked = () => [...host.querySelectorAll('.ps-used')].map(row => row.dataset.path)
 		try {
 			await view.mount()
-			check('configured properties are marked on mount', marked(), ['name'])
+			check('configured nested columns are highlighted once after direct properties', marked(),
+				['name', 'child.note', 'child.child', 'child.child.name', 'child.name'])
+			check('nested columns follow direct properties and use translated alphabetical order',
+				[...host.querySelectorAll('.ps-main')].map(button => button.textContent),
+				['Child›', 'Name', 'Note', 'Child.Alpha', 'Child.Child›', 'Child.Child.Zulu', 'Child.Zulu'])
+			const selected = []
+			view.selector.subscribe(event => { if (event.type === 'select') selected.push(event.intent.path) })
+			host.querySelector('[data-path="child.note"] .ps-main').click()
+			while (!selected.length) await new Promise(resolve => setTimeout(resolve, 0))
+			check('extra terminal rows select their full path', [...selected], ['child.note'])
+			view.selector.setQuery('unmatched')
+			while (view.selector.search.status === 'loading') await new Promise(resolve => setTimeout(resolve, 0))
+			check('configured columns are not injected into search results', marked(), [])
+			view.selector.setQuery('')
+			await view.selector.navigate('child')
+			check('nested contexts only show their own properties',
+				[...host.querySelectorAll('.ps-property')].map(row => row.dataset.path),
+				['child.child', 'child.name', 'child.note'])
+			await view.selector.navigate('')
+			view.selector.setConfiguration({ usedPaths: ['name'] })
+			check('removing nested configured paths removes the extra rows immediately', marked(), ['name'])
 			const row = host.querySelector('.ps-property[data-path="name"]')
 			const unused = host.querySelector('.ps-property[data-path="note"]')
 			check('configured properties have a distinct background',
@@ -73,6 +98,15 @@ try {
 			while (view.selector.search.status === 'loading')
 				await new Promise(resolve => setTimeout(resolve, 0))
 			check('search highlights exact full paths', marked(), ['child.name'])
+			view.selector.setQuery('')
+			while (!host.querySelector('.ps-property[data-path="child.name"]'))
+				await new Promise(resolve => setTimeout(resolve, 0))
+			check('configuration changes resolve new root rows', marked(), ['child.name'])
+			host.querySelector('.ps-property[data-path="child.name"] .ps-add').click()
+			while (selected.length < 2) await new Promise(resolve => setTimeout(resolve, 0))
+			check('extra row plus selects the full configured path', selected[1], 'child.name')
+			view.selector.setQuery('name')
+			while (view.selector.search.status === 'loading') await new Promise(resolve => setTimeout(resolve, 0))
 			view.selector.setConfiguration({ usedPaths: [] })
 			check('removing all columns clears highlights in search results', marked(), [])
 		}

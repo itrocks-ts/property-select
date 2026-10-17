@@ -58,6 +58,7 @@ export class PropertySelect
 	private recentValue: string[] = []
 	private scrollValue: Record<string, { left: number; top: number }> = {}
 	private readonly searchEngine: Search
+	private usedPropertiesValue: PropertyDescription[] = []
 	private usedValue: string[]
 
 	readonly root: RootId
@@ -143,6 +144,12 @@ export class PropertySelect
 		return [...this.usedValue]
 	}
 
+	/** Configured nested columns, with translated full labels, for the root property list. */
+	get usedProperties(): readonly PropertyDescription[]
+	{
+		return structuredClone(this.usedPropertiesValue)
+	}
+
 	acknowledge(outcome: Outcome): boolean
 	{
 		return this.intentions.acknowledge(outcome)
@@ -156,6 +163,8 @@ export class PropertySelect
 			return this.navigate(path)
 		const property = this.search.results.find(result => result.property.path === path)?.property
 			|| this.context?.properties.find(candidate => candidate.path === path)
+			|| (!this.path && this.search.status === 'idle'
+				? this.usedPropertiesValue.find(candidate => candidate.path === path) : undefined)
 		if (property)
 			return property.kind === 'relation' ? this.navigate(path) : this.select(path)
 		throw new TypeError('Activate a property in the displayed context; use navigate/select for complete paths')
@@ -273,6 +282,7 @@ export class PropertySelect
 		if (JSON.stringify([advice, used]) === JSON.stringify([this.adviceValue, this.usedValue])) return
 		this.adviceValue = advice
 		this.usedValue = used
+		this.usedPropertiesValue = []
 		this.emit({ type: 'change' })
 		if (this.mounted) void this.refreshSuggestions()
 	}
@@ -348,14 +358,39 @@ export class PropertySelect
 				try { await this.metadata.context(this.root, path, abort.signal); validRecent.push(path) }
 				catch { /* Removed metadata is not a suggestion. */ }
 			}
+			const properties = await this.resolveUsedProperties(abort.signal)
 			const items = await suggestions(this.metadata, this.root, validRecent, this.usedValue,
 				this.adviceValue, this.suggestionLimit, abort.signal, this.translate)
 			if (this.disposed || abort.signal.aborted) return
 			this.recentValue = validRecent
 			this.suggestionsValue = items
+			this.usedPropertiesValue = properties
 			this.emit({ type: 'change' })
 		}
 		catch (error) { if (!abort.signal.aborted && !this.disposed) this.emit({ type: 'error', error }) }
+	}
+
+	private async resolveUsedProperties(signal: AbortSignal): Promise<PropertyDescription[]>
+	{
+		const properties: PropertyDescription[] = []
+		for (const path of new Set(this.usedValue.filter(path => path.includes('.')))) {
+			signal.throwIfAborted()
+			try {
+				const labels: string[] = []
+				const segments = path.split('.')
+				let property: PropertyDescription | undefined
+				for (let depth = 1; depth <= segments.length; depth ++) {
+					const resolved = await this.metadata.resolve(this.root, segments.slice(0, depth).join('.'), signal)
+					if ('properties' in resolved || (depth < segments.length && resolved.kind !== 'relation'))
+						throw new TypeError(`Not a property path: ${path}`)
+					property = resolved
+					labels.push(this.translate(resolved.label || resolved.name))
+				}
+				properties.push({ ...property!, label: labels.join('.') })
+			}
+			catch (error) { if (signal.aborted) throw error }
+		}
+		return properties
 	}
 
 	private saveState(): void

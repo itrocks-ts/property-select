@@ -133,6 +133,9 @@ storage failure. Per-instance writes coalesce; revision conflicts reread and rea
 
 `usedPaths` and `advice` default to empty arrays. `setConfiguration({ advice?, usedPaths? })` updates them without
 clearing local recents. `translate(text)` defaults to identity or calls the supplied translation function.
+`usedProperties` exposes a detached list of configured nested column descriptions with translated full labels.
+The browser appends these highlighted columns after the direct properties at the root, alphabetically by those labels.
+They are excluded from search results and nested object views; unknown paths are omitted.
 `suggestions` exposes `{ path, label }` destinations, ordered by confirmed recents, maximal used contexts per branch,
 then advice. Full paths deduplicate entries; translated metadata labels distinguish equal names by ancestry.
 `suggestionLimit` defaults to six (1–100).

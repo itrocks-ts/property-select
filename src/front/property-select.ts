@@ -268,7 +268,7 @@ export class PropertySelectView
 		const usedPaths = this.selector.usedPaths
 		const fingerprint = JSON.stringify([
 			context, state.branch, state.current, state.query, search.results, search.status,
-			this.selector.suggestions, usedPaths
+			this.selector.suggestions, usedPaths, this.selector.usedProperties
 		])
 		if (fingerprint === this.fingerprint)
 			return
@@ -293,8 +293,15 @@ export class PropertySelectView
 			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
 		if (search.status === 'idle')
 			results = [...results].sort((a, b) =>
-				(a.property.label || a.property.name).localeCompare(b.property.label || b.property.name,
+				(a.property.label || a.property.name).localeCompare(
+					b.property.label || b.property.name,
 					undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
+		if (search.status === 'idle' && !context.path) {
+			const related = this.selector.usedProperties.map(property => ({ depth: 0, property, segments: [] }))
+			related.sort((a, b) => a.property.label.localeCompare(b.property.label,
+				undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
+			results = [...results, ...related]
+		}
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
 		const retained = retainFocus && focusedRow && this.list!.contains(focusedRow)
 			&& !results.some(result => result.property.path === focusedRow.dataset.path) ? focusedRow : undefined
