@@ -130,18 +130,10 @@ export class PropertySelectView
 			this.shortcuts = this.root.querySelector('.ps-suggestions') as HTMLElement
 			this.persistence = this.root.querySelector('.ps-persistence') as HTMLElement
 			this.query = this.root.querySelector('.ps-query') as HTMLInputElement
-			this.query.setAttribute('aria-label', this.selector.translate('Search properties'))
-			this.query.placeholder = this.selector.translate('Recherche...')
-			const clear = this.root.querySelector<HTMLButtonElement>('.ps-clear')!
-			clear.setAttribute('aria-label', this.selector.translate('Clear search'))
-			clear.title = this.selector.translate('Clear search')
 			this.query.addEventListener('input', () => {
 				this.operationError = ''
 				this.selector.setQuery(this.query!.value)
 			}, { signal: this.abort.signal })
-			this.root.setAttribute('aria-label', this.selector.translate('Property selection'))
-			this.breadcrumb.setAttribute('aria-label', this.selector.translate('Object path'))
-			this.list.setAttribute('aria-label', this.selector.translate('Properties'))
 			for (const [element, key] of [[this.breadcrumb, 'breadcrumb'], [this.list, 'properties']] as const) {
 				element.addEventListener('scroll', () => {
 					const restored = this.restoredScroll.get(element)

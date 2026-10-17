@@ -101,6 +101,7 @@ descendants and marks the current object with `aria-current`, bold text and an u
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `template?: string` and
 `templateUrl?: string | URL`. A supplied template is mounted directly without a fetch.
 Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
+Static labels and accessibility attributes come from the template; serve a localised template when needed.
 Recoverable consumer errors display their message as text, allowing hosts to explain an unsupported selection.
 
 ## Navigation and state
