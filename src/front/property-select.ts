@@ -265,8 +265,10 @@ export class PropertySelectView
 			? JSON.stringify([context.path, state.query]) : ''
 		const retainFocus = !!searchScope && (searchScope === this.searchScope)
 		this.searchScope = searchScope
+		const usedPaths = this.selector.usedPaths
 		const fingerprint = JSON.stringify([
-			context, state.branch, state.current, state.query, search.results, search.status, this.selector.suggestions
+			context, state.branch, state.current, state.query, search.results, search.status,
+			this.selector.suggestions, usedPaths
 		])
 		if (fingerprint === this.fingerprint)
 			return
@@ -327,6 +329,9 @@ export class PropertySelectView
 			if (before !== row)
 				this.list!.insertBefore(row, before || null)
 		}
+		const used = new Set(usedPaths)
+		for (const [path, row] of this.rows)
+			row.classList.toggle('ps-used', used.has(path))
 		if (retained && (this.list!.lastElementChild !== retained))
 			this.list!.append(retained)
 		const scrollKey = this.scrollKey()

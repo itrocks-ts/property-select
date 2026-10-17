@@ -96,6 +96,7 @@
 	grid-template-columns: minmax(0, 1fr) 29px;
 	line-height: 1.15;
 }
+.ps-property.ps-used { background: #e7f4e7; }
 .property-select .ps-main {
 	box-sizing: border-box;
 	min-width: 0;
