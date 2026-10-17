@@ -85,7 +85,7 @@ try {
 		}
 		await page.mouse.move(0, 0)
 		const open = page.locator('.ps-property[data-path="customer"] .ps-open')
-		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), '0')
+		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), width <= 600 ? '1' : '0')
 		await page.locator('.ps-property[data-path="customer"]').hover()
 		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), '1')
 		await page.locator('.ps-property[data-path="customer"] .ps-main').hover()

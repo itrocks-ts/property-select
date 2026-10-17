@@ -188,11 +188,12 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
   The name transports its full path when dragged.
 - **ACT-02.** The checkbox in the first cell reflects committed usage for both kinds. Checking requests addition;
   unchecking requests removal. It does not navigate or start transport.
-- **ACT-03.** Used rows expose a target button on hover or keyboard focus (always visible on touch devices).
+- **ACT-03.** Used rows expose a target button on row hover (always visible on smartphones).
   It locates the existing column without removal or navigation. Its hover area is independent.
   Relations have a separate chevron button aligned on the right. Clicking it opens the related object.
-- **ACT-04.** Desktop hover or keyboard focus reveals that chevron. Reserve its space to avoid layout changes.
-- **ACT-05.** On touch and hybrid devices the chevron remains visible. All actions remain accessible without hover.
+- **ACT-04.** Desktop row hover reveals both buttons; keyboard focus reveals only the focused button. Reserve its space to avoid layout changes.
+- **ACT-05.** At widths up to 600 px, or with a coarse primary pointer or no hover, both buttons remain visible.
+  This includes smartphone portrait and landscape. All actions remain accessible without hover.
 - **ACT-06.** A recognised drag suppresses its residual click. Each control performs only its own action.
 - **ACT-07.** Intermediate relation segments in displayed paths remain navigation targets and drag sources.
   Each target contains the relation label, its following chevron and space (for example `Customer › `).

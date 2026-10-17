@@ -71,8 +71,8 @@ try {
 	check('T06: row height does not move', await main('customer.address.city').locator('..').boundingBox(), rowBefore)
 	await page.locator('h1').hover()
 	await main('customer.address.city').focus()
-	check('T06: keyboard focus reveals chevron', await openRelation('customer.address.city').evaluate(
-		element => getComputedStyle(element).opacity), '1')
+	check('T06: name focus does not reveal row controls', await openRelation('customer.address.city').evaluate(
+		element => getComputedStyle(element).opacity), '0')
 	await page.keyboard.press('Shift+Tab')
 	check('ACT-08: checkbox before name', await add('customer.address.city').evaluate(
 		element => element === document.activeElement), true)

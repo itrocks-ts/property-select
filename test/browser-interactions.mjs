@@ -56,6 +56,33 @@ try {
 			})
 			await view.mount()
 		})
+		const relation = page.locator('.ps-property[data-path="customer"]')
+		const opacity = button => button.evaluate(node => getComputedStyle(node).opacity)
+		await page.mouse.move(0, 0)
+		await relation.locator('.ps-main').focus()
+		assert.equal(await opacity(relation.locator('.ps-open')), touch ? '1' : '0')
+		assert.equal(await opacity(relation.locator('.ps-locate')), touch ? '1' : '0')
+		await relation.locator('.ps-check').focus()
+		assert.equal(await opacity(relation.locator('.ps-open')), touch ? '1' : '0')
+		assert.equal(await opacity(relation.locator('.ps-locate')), touch ? '1' : '0')
+		if (!touch) {
+			await relation.locator('.ps-locate').focus()
+			assert.equal(await opacity(relation.locator('.ps-locate')), '1')
+			assert.equal(await opacity(relation.locator('.ps-open')), '0')
+			await page.locator('.ps-query').focus()
+			await page.setViewportSize({ width: 375, height: 720 })
+			assert.equal(await opacity(relation.locator('.ps-open')), '1')
+			assert.equal(await opacity(relation.locator('.ps-locate')), '1')
+			await page.setViewportSize({ width: 1280, height: 720 })
+			assert.equal(await opacity(relation.locator('.ps-open')), '0')
+			assert.equal(await opacity(relation.locator('.ps-locate')), '0')
+		}
+		else {
+			await page.setViewportSize({ width: 844, height: 390 })
+			assert.equal(await opacity(relation.locator('.ps-open')), '1')
+			assert.equal(await opacity(relation.locator('.ps-locate')), '1')
+			await page.setViewportSize({ width: 375, height: 720 })
+		}
 		assert.equal(await page.locator('.ps-locate[data-path="tags"]').isVisible(), false)
 		assert.equal(await page.locator('.ps-locate[data-path="tags"]').isDisabled(), true)
 		for (const path of ['number', 'customer', 'customer.address.country.code']) {

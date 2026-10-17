@@ -118,14 +118,12 @@
 	visibility: hidden;
 }
 .ps-property.ps-used .ps-locate { visibility: visible; }
-@media (hover: hover) and (pointer: fine) {
-	.ps-open, .ps-locate { opacity: 0; pointer-events: none; }
-	.ps-property:hover :is(.ps-open, .ps-locate), .ps-property:focus-within :is(.ps-open, .ps-locate) {
-		opacity: 1;
-		pointer-events: auto;
-	}
+.ps-open, .ps-locate { opacity: 0; pointer-events: none; }
+.ps-property:hover :is(.ps-open, .ps-locate), .ps-open:focus-visible, .ps-locate:focus-visible {
+	opacity: 1;
+	pointer-events: auto;
 }
-@media (any-pointer: coarse) {
+@media (max-width: 600px), (hover: none), (pointer: coarse) {
 	.ps-open, .ps-locate { opacity: 1; pointer-events: auto; }
 }
 .ps-check-cell {
