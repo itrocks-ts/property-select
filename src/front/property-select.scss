@@ -34,7 +34,7 @@
 .property-select .ps-level { flex-shrink: 0; min-height: 27px; padding: 4px 0; white-space: nowrap; }
 .property-select .ps-level:first-child { padding-left: 8px; }
 .property-select .ps-level:last-child { padding-right: 8px; }
-.ps-level + .ps-level::before { content: '.'; }
+.ps-level:not(:last-child)::after { content: ' › '; white-space: pre; }
 .ps-level[aria-current] { font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
 .ps-level[data-position="descendant"] { font-style: italic; }
 

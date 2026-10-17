@@ -96,7 +96,7 @@ The main button requests addition only for either a field or a relation, preserv
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
 A separate chevron on the right opens a relation. It appears on row hover or keyboard focus and stays visible
 on touch devices. All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
-Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
+Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb separates levels with chevrons and retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
 
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `template?: string` and
