@@ -235,7 +235,8 @@ A checkbox in the first cell reflects committed usage and requests addition or r
 Its hover follows COL-02, like every other property.
 
 **COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`
-and separators are `#ddd`. Target and chevron buttons have white backgrounds. Only the target has a left border and the same width as
+and separators are `#ddd`. Target buttons have white backgrounds. A selected relation’s chevron area shares the row’s green background;
+unselected chevrons remain white. Only the target has a left border and the same width as
 the search reset button. The chevron has no border and expands after the name. Only their own hover changes their background to COL-02.
 These neutral colours carry no addition, deletion or grouping meaning.
 

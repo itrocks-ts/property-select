@@ -124,6 +124,7 @@
 	padding: .6em .6em .6em .3em;
 	white-space: nowrap;
 }
+.property-select .ps-property.ps-used > .ps-open:not(:hover) { background-color: inherit; }
 .property-select .ps-locate {
 	background: #fff url('locate.svg') center no-repeat;
 	display: none;
