@@ -96,8 +96,9 @@
 	overflow: hidden;
 }
 .ps-property.ps-used { background: color-mix(in srgb, #2f8943 10%, white); }
-.ps-property:hover { background: #f4f4f4; }
-.property-select .ps-property > button:hover { background-color: transparent; }
+.property-select .ps-property:has(.ps-check-cell:hover, .ps-main:hover, .ps-segment:hover) > :not(.ps-open) {
+	background: #f4f4f4;
+}
 .property-select .ps-level:hover { background: #f4f4f4; }
 .property-select .ps-main {
 	box-sizing: border-box;

@@ -216,7 +216,7 @@ The SVG swatches below are part of this reference and must be updated with the c
 | ![Colour](colours/group.svg)      | Functional group heading (future) | COL-06 | `#e8f0fa` |
 
 **COL-02. Selector hover.** All selector rows and navigation controls use the same neutral `#f4f4f4` hover as `.action` in `@itrocks/action-bar`.
-Child controls keep the row background. Hover does not encode addition, removal or navigation.
+The right-hand chevron has its own hover area, separate from the checkbox and name. Hover does not encode addition, removal or navigation.
 The provisional table column and its addition indicator in TAB-08 remain unchanged.
 
 **COL-03. Already used property.** A property whose full normalised path is already used has a subtle green `color-mix(in srgb, #2f8943 10%, white)` background.
