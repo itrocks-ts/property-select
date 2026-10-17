@@ -94,7 +94,8 @@ Create a new view after disposal. No import activates the DOM or registers a glo
 
 The main button selects a field or opens a relation. A checkbox in the first cell reflects whether the full path
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
-All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
+A separate chevron on the right opens a relation. It appears on row hover or keyboard focus and stays visible
+on touch devices. All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
 

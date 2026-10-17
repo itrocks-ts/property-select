@@ -377,13 +377,6 @@ export class PropertySelectView
 		const main = this.button(label, property.kind === 'relation' ? 'navigate' : 'select', property.path)
 		main.className = 'ps-main'
 		main.dataset.focus = `main:${property.path}`
-		if (property.kind === 'relation') {
-			const chevron = this.host.ownerDocument.createElement('span')
-			chevron.className = 'ps-chevron'
-			chevron.setAttribute('aria-hidden', 'true')
-			chevron.textContent = '›'
-			main.append(chevron)
-		}
 		const cell = this.host.ownerDocument.createElement('label')
 		cell.className = 'ps-check-cell'
 		const checkbox = this.host.ownerDocument.createElement('input')
@@ -406,6 +399,12 @@ export class PropertySelectView
 			}
 		}
 		row.append(main)
+		if (property.kind === 'relation') {
+			const open = this.button('›', 'navigate', property.path)
+			open.className = 'ps-open'
+			open.setAttribute('aria-label', `${this.selector.translate('Open')} ${label}`)
+			row.append(open)
+		}
 		return row
 	}
 

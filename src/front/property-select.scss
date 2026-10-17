@@ -108,7 +108,14 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.ps-chevron { display: inline; margin-left: 8px; }
+.property-select .ps-open { flex: none; padding: 0; text-align: center; width: 29px; }
+@media (hover: hover) and (pointer: fine) {
+	.ps-open { opacity: 0; pointer-events: none; }
+	.ps-property:hover .ps-open, .ps-property:focus-within .ps-open { opacity: 1; pointer-events: auto; }
+}
+@media (any-pointer: coarse) {
+	.ps-open { opacity: 1; pointer-events: auto; }
+}
 .ps-check-cell {
 	align-items: center;
 	border-right: 1px solid #ddd;

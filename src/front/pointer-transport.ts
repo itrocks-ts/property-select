@@ -74,7 +74,7 @@ export class PointerTransport
 		this.suppressClick = false
 		const button = (event.target as Element).closest<HTMLElement>('button[data-path]')
 		if (!button || !this.root.contains(button) || !button.dataset.path
-			|| button.closest('.ps-suggestions') || button.classList.contains('ps-add')) return
+			|| button.closest('.ps-suggestions') || button.classList.contains('ps-open')) return
 		// Horizontal breadcrumb scrolling keeps its native touch policy.
 		if (event.pointerType === 'touch' && button.closest('.ps-breadcrumb')) return
 		const sample = sampleOf(event)

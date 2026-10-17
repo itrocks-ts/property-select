@@ -64,6 +64,15 @@ try {
 			assert.equal(await background(relation), await relation.evaluate(node =>
 				node.classList.contains('ps-level') ? 'rgb(221, 221, 221)' : 'rgba(0, 0, 0, 0)'))
 		}
+		await page.mouse.move(0, 0)
+		const open = page.locator('.ps-property[data-path="customer"] .ps-open')
+		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), '0')
+		await page.locator('.ps-property[data-path="customer"]').hover()
+		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), '1')
+		await open.click()
+		await page.waitForFunction(() => view.selector.path === 'customer')
+		assert.deepEqual(await page.evaluate(() => selections), [])
+		await page.evaluate(() => view.selector.navigate(''))
 		const ordinaryHeight = await page.locator('.ps-property').first()
 			.evaluate(row => row.getBoundingClientRect().height)
 		for (const path of ['customer', 'customer.address', 'customer.address.country']) {
