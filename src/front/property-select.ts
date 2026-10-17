@@ -89,6 +89,7 @@ export class PropertySelectView
 		const action = button.dataset.action
 		const operation = action === 'shortcut' ? this.selector.shortcut(path)
 			: action === 'navigate' ? this.selector.navigate(path)
+			: action === 'add' ? this.selector.select(path, 'add')
 			: action === 'select' ? this.selector.select(path) : this.selector.activate(path)
 		void operation.catch(() => {
 			if (!this.disposed)
@@ -386,7 +387,7 @@ export class PropertySelectView
 			chevron.textContent = '›'
 			main.append(chevron)
 		}
-		const add = this.button('+', 'select', property.path)
+		const add = this.button('+', 'add', property.path)
 		add.className = 'ps-add'
 		add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
 		const segments = result.segments.filter(segment => segment.path)

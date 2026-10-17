@@ -274,9 +274,9 @@ export class PropertySelect
 		return committed
 	}
 
-	select(path: PropertyPath): Promise<Outcome | undefined>
+	select(path: PropertyPath, action?: SelectionIntent['action']): Promise<Outcome | undefined>
 	{
-		return this.intentions.select(path)
+		return this.intentions.select(path, action)
 	}
 
 	setConfiguration(configuration: { advice?: readonly PropertyPath[]; usedPaths?: readonly PropertyPath[] }): void

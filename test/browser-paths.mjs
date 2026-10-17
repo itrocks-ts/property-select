@@ -37,11 +37,45 @@ try {
 				usedPaths: ['customer.address.country.code']
 			})
 			window.selections = []
+			window.actions = []
 			view.selector.subscribe(event => {
-				if (event.type === 'select') selections.push(event.intent.path)
+				if (event.type === 'select') {
+					selections.push(event.intent.path)
+					actions.push(event.intent.action)
+				}
 			})
 			await view.mount()
 		})
+		const usedRow = page.locator('.ps-used').first()
+		const unusedRow = page.locator('.ps-property:not(.ps-used)').first()
+		const background = locator => locator.evaluate(node => getComputedStyle(node).backgroundColor)
+		await page.mouse.move(0, 0)
+		assert.equal(await background(usedRow), 'rgb(248, 248, 248)')
+		const colours = await page.evaluate(() => {
+			const sample = document.createElement('div')
+			document.body.append(sample)
+			const values = ['#2f8943 15%', '#2674c6 15%', '#2f8943 25%'].map(colour => {
+				sample.style.background = `color-mix(in srgb, ${colour}, white)`
+				return getComputedStyle(sample).backgroundColor
+			})
+			sample.remove()
+			return values
+		})
+		await unusedRow.hover()
+		assert.equal(await background(unusedRow), colours[0])
+		await usedRow.hover()
+		assert.equal(await background(usedRow), colours[1])
+		const plus = usedRow.locator('.ps-add')
+		await plus.hover()
+		assert.equal(await background(plus), colours[2])
+		await unusedRow.hover()
+		await unusedRow.locator('.ps-add').hover()
+		assert.equal(await background(unusedRow.locator('.ps-add')), colours[2])
+		for (const relation of [unusedRow.locator('[data-action="navigate"]').first(),
+			usedRow.locator('.ps-segment').first(), page.locator('.ps-level').first()]) {
+			await relation.hover()
+			assert.equal(await background(relation), 'rgb(221, 221, 221)')
+		}
 		const ordinaryHeight = await page.locator('.ps-property').first()
 			.evaluate(row => row.getBoundingClientRect().height)
 		for (const path of ['customer', 'customer.address', 'customer.address.country']) {
@@ -53,6 +87,9 @@ try {
 			assert.equal(bounds.height, ordinaryHeight - 1)
 			await relation.click({ position: { x: bounds.width / 2, y: 1 } })
 			await page.waitForFunction(path => view.selector.path === path, path)
+			const current = page.locator('.ps-level[aria-current]')
+			await current.hover()
+			assert.equal(await background(current), 'rgb(221, 221, 221)')
 			assert.deepEqual(await page.evaluate(() => selections), [])
 			assert.equal(await page.locator('.ps-query').inputValue(), '')
 			const displayed = await page.locator('.ps-property').evaluateAll(rows => rows.map(row => row.dataset.path))
@@ -96,9 +133,11 @@ try {
 		assert.equal(observed.title, observed.label)
 		await page.screenshot({ path: `/tmp/property-select-paths-full-${width}.png` })
 		await row.locator('.ps-add').click({ force: true })
+		assert.equal(await page.evaluate(() => actions.at(-1)), 'add')
 		assert.deepEqual(await page.evaluate(() => selections), ['customer.address.country.code'])
 		await page.evaluate(() => { selections.length = 0 })
 		await row.locator('.ps-main').click()
+		assert.equal(await page.evaluate(() => actions.at(-1)), undefined)
 		assert.deepEqual(await page.evaluate(() => selections), ['customer.address.country.code'])
 		await row.locator('button[data-path="customer"]').click()
 		await page.waitForFunction(() => view.selector.path === 'customer')

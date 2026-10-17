@@ -158,9 +158,9 @@ export class Intentions
 		}
 	}
 
-	async select(path: PropertyPath): Promise<Outcome | undefined>
+	async select(path: PropertyPath, action?: SelectionIntent['action']): Promise<Outcome | undefined>
 	{
-		const pending = this.create(path)
+		const pending = this.create(path, action)
 		try {
 			pending.property = await resolveProperty(this.provider, this.root, pending.intent.path, pending.abort.signal)
 			if (!this.live(pending))
@@ -178,14 +178,16 @@ export class Intentions
 		}
 	}
 
-	private create(input: PropertyPath): Pending
+	private create(input: PropertyPath, action?: SelectionIntent['action']): Pending
 	{
 		if (this.disposed)
 			throw new Error('The selector is disposed')
 		const path = normalisePath(input)
 		if (!path)
 			throw new TypeError('The root cannot be selected or transported')
-		const intent = Object.freeze({ id: `selector-${this.instance}-${++ this.sequence}`, path, root: this.root })
+		const intent = Object.freeze({
+			...(action && { action }), id: `selector-${this.instance}-${++ this.sequence}`, path, root: this.root
+		})
 		const pending: Pending = { abort: new AbortController(), intent, phase: 'resolving' }
 		this.pending.set(intent.id, pending)
 		return pending

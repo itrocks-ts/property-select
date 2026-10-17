@@ -23,7 +23,7 @@
 .ps-breadcrumb {
 	align-items: center;
 	background: #f8f8f8;
-	border-bottom: 1px solid #d8d8d8;
+	border-bottom: 1px solid #ddd;
 	display: flex;
 	flex: none;
 	height: 28px;
@@ -40,7 +40,7 @@
 
 .ps-search {
 	background: #fff;
-	border-bottom: 1px solid #d8d8d8;
+	border-bottom: 1px solid #ddd;
 	display: flex;
 	flex: none;
 	height: 29px;
@@ -59,7 +59,7 @@
 .ps-query:focus-visible { box-shadow: inset 0 0 0 2px Highlight; outline: 0; }
 .property-select .ps-clear {
 	background: #fff url('filter-reset.svg') center no-repeat;
-	border-left: 1px solid #d8d8d8;
+	border-left: 1px solid #ddd;
 	flex: none;
 	font-size: 0;
 	padding: 0;
@@ -70,7 +70,7 @@
 .ps-suggestions { display: flex; flex: none; flex-wrap: wrap; gap: 4px; min-height: 32px; padding: 4px 8px; }
 .property-select .ps-suggestions button {
 	background: #f8f8f8;
-	border: 1px solid #d8d8d8;
+	border: 1px solid #ddd;
 	border-radius: 4px;
 	padding: 2px 6px;
 }
@@ -90,12 +90,18 @@
 }
 .ps-property {
 	background: #fff;
-	border-bottom: 1px solid #d8d8d8;
+	border-bottom: 1px solid #ddd;
 	box-sizing: border-box;
 	display: flex;
 	overflow: hidden;
 }
-.ps-property.ps-used { background: #e7f4e7; }
+.ps-property.ps-used { background: #eee; }
+.ps-property:hover { background: color-mix(in srgb, #2f8943 15%, white); }
+.ps-property.ps-used:hover { background: color-mix(in srgb, #d51d2c 15%, white); }
+.property-select .ps-property > button:hover { background-color: transparent; }
+.property-select .ps-property > .ps-add:hover { background: color-mix(in srgb, #2f8943 25%, white); }
+.property-select .ps-level:hover,
+.property-select .ps-property > button[data-action="navigate"]:hover { background: #ddd; }
 .property-select .ps-main {
 	box-sizing: border-box;
 	flex: 1;

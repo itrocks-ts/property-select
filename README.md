@@ -92,7 +92,8 @@ Metadata errors return false and remain observable through `selector`; the host 
 `dispose(): void` is idempotent, aborts pending work, removes the owned section and releases its listeners/references.
 Create a new view after disposal. No import activates the DOM or registers a global instance.
 
-The main button selects a field or opens a relation; its adjacent `+` selects either path without navigating.
+The main button selects a field or opens a relation; its adjacent `+` selects either path without navigating,
+with `action: 'add'` to request addition only.
 Desktop hover or keyboard focus reveals the reserved `+`; without hover only relation buttons show it.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
@@ -109,7 +110,8 @@ An empty string or array denotes the root. Empty, dotted or whitespace-containin
 
 `mount()` and `navigate(path)` return `Promise<boolean>`: true after the context is committed, false on a reported
 provider error or superseded request. Navigate through relations only. `activate(path)` navigates a displayed relation
-or selects a displayed terminal. `select(path)` selects either kind without changing navigation or query.
+or selects a displayed terminal. `select(path, action?)` selects either kind without changing navigation or query.
+Pass `'add'` to request addition only; the consumer must reveal an existing item rather than toggle it.
 Root is navigable and cannot be selected or transported.
 Invalid configuration/path syntax throws.
 `context`, `path` and `status` expose the current object and lifecycle:

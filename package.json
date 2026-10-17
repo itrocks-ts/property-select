@@ -6,6 +6,7 @@
 	"description": "Interactive property selection through business object relationships",
 	"devDependencies": {
 		"@itrocks/prepare-module": "latest",
+		"sass": "^1.95",
 		"typescript": "^6.0"
 	},
 	"engines": {
@@ -62,8 +63,8 @@
 		"url": "git+https://github.com/itrocks-ts/property-select.git"
 	},
 	"scripts": {
-		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && node scripts/browser-assets.mjs",
+		"build": "tsc -p tsconfig.json && tsc -p tsconfig.front.json && node ../prepare-module/prepare-module.js .browser && sass --no-source-map src/front/property-select.scss:front/property-select.css && node scripts/browser-assets.mjs",
 		"test": "npm run build && tsc -p test/tsconfig.json && node --test --test-isolation=none test/*.test.mjs"
 	},
-	"version": "0.10.1"
+	"version": "0.11.0"
 }

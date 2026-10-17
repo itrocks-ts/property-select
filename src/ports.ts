@@ -57,6 +57,7 @@ export interface PropertyDescription
 
 export interface SelectionIntent
 {
+	action?: 'add'
 	id: InteractionId
 	path: string
 	root: RootId
