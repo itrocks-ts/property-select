@@ -174,9 +174,15 @@ export class PropertySelectView
 			})
 			this.host.append(this.root)
 			this.transport = new PointerTransport(this.root, this.selector)
-			this.resize = new ResizeObserver(() => this.restoreScroll())
+			this.resize = new ResizeObserver(() => {
+				this.positionShortcuts()
+				this.restoreScroll()
+			})
 			this.resize.observe(this.list)
 			this.resize.observe(this.breadcrumb)
+			const heading = this.root.closest('.right-pane')?.querySelector('.right-pane-title-bar > h2')
+			if (heading) this.resize.observe(heading)
+			this.positionShortcuts()
 			return await this.selector.mount()
 		}
 		catch (error) {
@@ -190,6 +196,15 @@ export class PropertySelectView
 	private scrollKey(): string
 	{
 		return `properties:${this.selector.path}:${this.selector.snapshot().query}`
+	}
+
+	private positionShortcuts(): void
+	{
+		const pane = this.root?.closest<HTMLElement>('.right-pane')
+		const heading = pane?.querySelector<HTMLElement>('.right-pane-title-bar > h2')
+		if (!pane || !heading) return
+		const end = heading.getBoundingClientRect().right - pane.getBoundingClientRect().left - pane.clientLeft
+		this.root!.style.setProperty('--ps-title-end', `${end}px`)
 	}
 
 	private positionScroll(element: HTMLElement, left: number, top: number): void

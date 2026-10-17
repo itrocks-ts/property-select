@@ -166,10 +166,11 @@
 .right-pane:has(.property-select) .right-pane-tab:hover { background-color: #f4f4f4; }
 
 .right-pane:has(.property-select) .right-pane-title-bar > h2 {
-	max-width: 100px;
+	max-width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+	width: max-content;
 }
 
 .right-pane:has(.property-select) .ps-suggestions {
@@ -177,7 +178,7 @@
 	flex-wrap: nowrap;
 	gap: 4px;
 	height: var(--right-pane-title-height);
-	left: 114px;
+	left: var(--ps-title-end, 100%);
 	min-height: 0;
 	overflow-x: auto;
 	overflow-y: hidden;

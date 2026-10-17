@@ -103,6 +103,8 @@ independently; the final name highlights only its own area. The host confirms us
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb separates levels with chevrons and retains remembered
 descendants and marks the current object with `aria-current`, a bold name and normal-weight chevrons, without underlining.
 
+In the right pane, the heading uses the translated text width; quick access follows it without a fixed offset.
+
 The optional third `PropertySelectView` argument is `PropertySelectViewOptions`, with `template?: string` and
 `templateUrl?: string | URL`. A supplied template is mounted directly without a fetch.
 Hosts that serve HTML through an action can provide its URL; omission fetches the adjacent published template.
