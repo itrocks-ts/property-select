@@ -95,10 +95,11 @@ Create a new view after disposal. No import activates the DOM or registers a glo
 Clicking a field or relation name, its checkbox or the surrounding checkbox cell toggles the selection. A checkbox in the first cell reflects whether the full path
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
 A target button on used rows locates the existing column through an addition-only intention without toggling it.
-A separate chevron on the right opens a relation. Both buttons appear on row hover on desktop and remain visible
-on smartphone-sized or touch screens. Keyboard focus reveals the focused button only. All action areas share the light
+An always-visible chevron immediately after a relation name opens it. Its borderless click area fills the remaining
+width up to the target button, when present. The name ends with padding, and the chevron begins with separate padding.
+The target button appears on row hover on desktop and remains visible on smartphone-sized or touch screens. All action areas share the light
 `.action` hover colour. Each parent segment and the right-hand chevron highlights
-independently; the final name highlights only its remaining area. The host confirms usage through `usedPaths`.
+independently; the final name highlights only its own area. The host confirms usage through `usedPaths`.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb separates levels with chevrons and retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
 

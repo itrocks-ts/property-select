@@ -62,8 +62,8 @@ try {
 	await page.locator('h1').hover()
 	const before = await main('customer.address.city').boundingBox()
 	const rowBefore = await main('customer.address.city').locator('..').boundingBox()
-	check('T06: desktop chevron initially contextual', await openRelation('customer.address.city').evaluate(
-		element => getComputedStyle(element).opacity), '0')
+	check('T06: desktop chevron always visible', await openRelation('customer.address.city').evaluate(
+		element => getComputedStyle(element).opacity), '1')
 	await main('customer.address.city').hover()
 	check('T06: hover reveals chevron', await openRelation('customer.address.city').evaluate(
 		element => getComputedStyle(element).opacity), '1')
@@ -71,8 +71,8 @@ try {
 	check('T06: row height does not move', await main('customer.address.city').locator('..').boundingBox(), rowBefore)
 	await page.locator('h1').hover()
 	await main('customer.address.city').focus()
-	check('T06: name focus does not reveal row controls', await openRelation('customer.address.city').evaluate(
-		element => getComputedStyle(element).opacity), '0')
+	check('T06: chevron remains visible with name focus', await openRelation('customer.address.city').evaluate(
+		element => getComputedStyle(element).opacity), '1')
 	await page.keyboard.press('Shift+Tab')
 	check('ACT-08: checkbox before name', await add('customer.address.city').evaluate(
 		element => element === document.activeElement), true)

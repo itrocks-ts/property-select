@@ -404,13 +404,14 @@ export class PropertySelectView
 		locate.className = 'ps-locate'
 		locate.setAttribute('aria-label', `${this.selector.translate('Locate')} ${label}`)
 		locate.title = locate.getAttribute('aria-label')!
-		row.append(main, locate)
+		row.append(main)
 		if (property.kind === 'relation') {
 			const open = this.button('›', 'navigate', property.path)
 			open.className = 'ps-open'
 			open.setAttribute('aria-label', `${this.selector.translate('Open')} ${label}`)
 			row.append(open)
 		}
+		row.append(locate)
 		return row
 	}
 

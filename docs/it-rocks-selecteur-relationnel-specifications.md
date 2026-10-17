@@ -191,9 +191,11 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
 - **ACT-03.** Used rows expose a target button on row hover (always visible on smartphones).
   It locates the existing column without removal or navigation. Its hover area is independent.
   Unused rows have no target button space; that width belongs to the property name.
-  Relations have a separate chevron button aligned on the right. Clicking it opens the related object.
-- **ACT-04.** Desktop row hover reveals both buttons; keyboard focus reveals only the focused button. Reserve its space to avoid layout changes.
-- **ACT-05.** At widths up to 600 px, or with a coarse primary pointer or no hover, both buttons remain visible.
+  Relations have an always-visible, borderless chevron immediately after the final property name.
+  The name ends with click padding, and the chevron area begins with separate padding. The latter fills the remaining
+  width up to the target button, when present. Clicking anywhere in this area opens the related object.
+- **ACT-04.** Desktop row hover reveals the target button; direct keyboard focus also reveals it. The chevron is always visible.
+- **ACT-05.** At widths up to 600 px, or with a coarse primary pointer or no hover, the target button remains visible.
   This includes smartphone portrait and landscape. All actions remain accessible without hover.
 - **ACT-06.** A recognised drag suppresses its residual click. Each control performs only its own action.
 - **ACT-07.** Intermediate relation segments in displayed paths remain navigation targets and drag sources.
@@ -222,7 +224,7 @@ The SVG swatches below are part of this reference and must be updated with the c
 
 **COL-02. Selector hover.** All selector action areas and navigation controls use the same neutral `#f4f4f4` hover as `.action` in `@itrocks/action-bar`.
 The right-hand chevron has its own hover area, separate from the checkbox and name.
-In nested paths, each parent segment highlights alone. Hovering the final name highlights its remaining width,
+In nested paths, each parent segment highlights alone. Hovering the final name highlights only its own area,
 excluding parent segments, the checkbox cell and the right-hand navigation button.
 For direct properties, the checkbox cell and name share their hover area. Hover does not encode addition, removal or navigation.
 The provisional table column and its addition indicator in TAB-08 remain unchanged.
@@ -233,8 +235,8 @@ A checkbox in the first cell reflects committed usage and requests addition or r
 Its hover follows COL-02, like every other property.
 
 **COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`
-and separators are `#ddd`. Right-hand target and chevron buttons have white backgrounds and a left border,
-with the same width as the search reset button. Only their own hover changes their background to COL-02.
+and separators are `#ddd`. Target and chevron buttons have white backgrounds. Only the target has a left border and the same width as
+the search reset button. The chevron has no border and expands after the name. Only their own hover changes their background to COL-02.
 These neutral colours carry no addition, deletion or grouping meaning.
 
 **COL-05. Column confirmation.** The green flash, transition to white and return to the standard background in TAB-05

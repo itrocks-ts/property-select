@@ -57,7 +57,7 @@
 }
 .ps-query::-webkit-search-cancel-button { display: none; }
 .ps-query:focus-visible { box-shadow: inset 0 0 0 2px Highlight; outline: 0; }
-.property-select .ps-clear, .property-select .ps-open, .property-select .ps-locate {
+.property-select .ps-clear, .property-select .ps-locate {
 	background-color: #fff;
 	border-left: 1px solid #ddd;
 	box-sizing: border-box;
@@ -115,20 +115,29 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.property-select .ps-open, .property-select .ps-locate { text-align: center; }
+.property-select .ps-property[data-kind="relation"] > .ps-main { flex: 0 1 auto; padding-right: .3em; }
+.property-select .ps-open {
+	background-color: #fff;
+	box-sizing: border-box;
+	flex: 1;
+	min-width: 1.5em;
+	padding: .6em .6em .6em .3em;
+	white-space: nowrap;
+}
 .property-select .ps-locate {
 	background: #fff url('locate.svg') center no-repeat;
 	display: none;
 	font-size: 0;
+	text-align: center;
 }
 .ps-property.ps-used .ps-locate { display: block; }
-.ps-open, .ps-locate { opacity: 0; pointer-events: none; }
-.ps-property:hover :is(.ps-open, .ps-locate), .ps-open:focus-visible, .ps-locate:focus-visible {
+.ps-locate { opacity: 0; pointer-events: none; }
+.ps-property:hover .ps-locate, .ps-locate:focus-visible {
 	opacity: 1;
 	pointer-events: auto;
 }
 @media (max-width: 600px), (hover: none), (pointer: coarse) {
-	.ps-open, .ps-locate { opacity: 1; pointer-events: auto; }
+	.ps-locate { opacity: 1; pointer-events: auto; }
 }
 .ps-check-cell {
 	align-items: center;
