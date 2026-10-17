@@ -136,7 +136,7 @@ try {
 	check('T09 distinct billing result', (await paths()).includes('customer.billingAddress.country.code'), true)
 	const row = main('customer.address.country.code').locator('..')
 	check('T09 root-to-parent segments', await row.locator('.ps-segment').allTextContents(),
-		['Client.', 'Adresse.', 'Pays.'])
+		['Client › ', 'Adresse › ', 'Pays › '])
 	await main('customer.address.country.code').click()
 	await page.locator('#intentions li').waitFor()
 	check('T11 terminal emits exact path once', await page.locator('#intentions li').allTextContents(),
@@ -154,14 +154,16 @@ try {
 	check('T10 root return keeps query', await query.inputValue(), ' CÔDE   pAyS CLIENT ')
 	await query.fill('country')
 	await waitSearch()
-	await main('customer.address.country').click()
+	await main('customer.address.country').hover()
+	await page.locator('.ps-open[data-path="customer.address.country"]').click()
 	await waitContext('customer.address.country')
 	await waitSearch()
 	await crumb('customer').click()
 	await waitContext('customer')
 	await waitSearch()
 	check('NAV-08 remembered suffix remains', await crumb('customer.address.country').count(), 1)
-	await main('customer.billingAddress.country').click()
+	await main('customer.billingAddress.country').hover()
+	await page.locator('.ps-open[data-path="customer.billingAddress.country"]').click()
 	await waitContext('customer.billingAddress.country')
 	await waitSearch()
 	check('NAV-08 divergent suffix replaced', await page.evaluate(() => window.searchFixture.state.branch),

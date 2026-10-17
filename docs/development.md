@@ -16,6 +16,10 @@ keyboard and emulated touch input; its author evidence and ownership-checked lau
 `test/browser-smoke.mjs` imports the public entry in sandboxed Chromium. Set `PS_PLAYWRIGHT_MODULE` to an existing
 Playwright module. The test starts and closes its own ephemeral localhost server.
 
+`test/browser-interactions.mjs` checks committed terminal/relation checkboxes, addition-only names, touch chevrons
+and transport from terminal, relation and intermediate path names without a residual selection.
+It uses the same Playwright configuration and local server lifecycle as the path checks.
+
 `test/browser-paths.mjs` checks ordered inline property paths, navigation and selection, equal row heights and
 truncation at desktop and mobile viewport widths. It starts and closes its own ephemeral localhost server and uses
 `PS_PLAYWRIGHT_MODULE` when supplied.

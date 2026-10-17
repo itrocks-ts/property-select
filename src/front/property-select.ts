@@ -74,8 +74,6 @@ export class PropertySelectView
 		if (!button || !this.root?.contains(button))
 			return
 		event.stopPropagation()
-		if (button instanceof HTMLInputElement)
-			event.preventDefault()
 		if (button.dataset.action === 'retry') {
 			void this.selector.flushState().catch(() => {})
 			return
@@ -273,6 +271,8 @@ export class PropertySelectView
 			context, state.branch, state.current, state.query, search.results, search.status,
 			this.selector.suggestions, usedPaths, this.selector.usedProperties, [...this.related.values()]
 		])
+		for (const [path, row] of this.rows)
+			row.querySelector<HTMLInputElement>('.ps-check')!.checked = usedPaths.includes(path)
 		if (fingerprint === this.fingerprint)
 			return
 		this.fingerprint = fingerprint
@@ -344,8 +344,7 @@ export class PropertySelectView
 				this.list!.insertBefore(row, before || null)
 		}
 		const used = new Set(usedPaths)
-		for (const [path, row] of this.rows)
-		{
+		for (const [path, row] of this.rows) {
 			row.classList.toggle('ps-used', used.has(path))
 			row.querySelector<HTMLInputElement>('.ps-check')!.checked = used.has(path)
 		}

@@ -112,7 +112,7 @@ try {
 			await navigating
 			check('successful navigation clears error', status(), '')
 			check('main properties use translated alphabetical labels',
-				[...host.querySelectorAll('.ps-property button[data-action="select"], .ps-property button[data-action="navigate"]')]
+				[...host.querySelectorAll('.ps-property .ps-main')]
 					.map(button => button.textContent), ['Loaned to', 'Note'])
 			rejection = undefined
 			await view.selector.select('note')

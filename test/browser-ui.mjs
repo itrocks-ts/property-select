@@ -21,7 +21,8 @@ try {
 	page.on('request', request => imports.add(new URL(request.url()).pathname))
 	await page.goto(url)
 	const main = path => page.locator(`.ps-main[data-path="${path}"]`)
-	const add = path => page.locator(`.ps-add[data-path="${path}"]`)
+	const add = path => page.locator(`.ps-check[data-path="${path}"]`)
+	const openRelation = path => page.locator(`.ps-open[data-path="${path}"]`)
 	const crumb = path => page.locator(`.ps-level[data-path="${path}"]`)
 	const selected = () => page.locator('#intentions li').allTextContents()
 	const current = () => page.locator('[aria-current="location"]').getAttribute('data-path')
@@ -32,11 +33,13 @@ try {
 	await main('number').click()
 	await page.waitForFunction(() => document.querySelectorAll('#intentions li').length === 1)
 	check('T05: terminal main emits once', await selected(), ['number'])
-	await main('customer').click()
+	await main('customer').hover()
+	await openRelation('customer').click()
 	await waitContext('customer')
-	check('T05: relation main navigates only', await selected(), ['number'])
+	check('T05: relation chevron navigates only', await selected(), ['number'])
 	for (const path of ['customer.address', 'customer.address.city', 'customer.address.city.country']) {
-		await main(path).click()
+		await main(path).hover()
+		await openRelation(path).click()
 		await waitContext(path)
 	}
 	check('T02: full labelled branch', await page.locator('.ps-level').allTextContents(),
@@ -49,7 +52,8 @@ try {
 	check('T02: remembered country survives return', await crumb('customer.address.city.country').count(), 1)
 	await crumb('customer.address').click()
 	await waitContext('customer.address')
-	await main('customer.address.country').click()
+	await main('customer.address.country').hover()
+	await openRelation('customer.address.country').click()
 	await waitContext('customer.address.country')
 	check('T03: divergent suffix only', await page.locator('.ps-level').allTextContents(),
 		['Invoice', 'Customer', 'Address', 'Country'])
@@ -58,32 +62,32 @@ try {
 	await page.locator('h1').hover()
 	const before = await main('customer.address.city').boundingBox()
 	const rowBefore = await main('customer.address.city').locator('..').boundingBox()
-	check('T06: desktop plus initially contextual', await add('customer.address.city').evaluate(
+	check('T06: desktop chevron initially contextual', await openRelation('customer.address.city').evaluate(
 		element => getComputedStyle(element).opacity), '0')
 	await main('customer.address.city').hover()
-	check('T06: hover reveals plus', await add('customer.address.city').evaluate(
+	check('T06: hover reveals chevron', await openRelation('customer.address.city').evaluate(
 		element => getComputedStyle(element).opacity), '1')
 	check('T06: label and chevron do not move', await main('customer.address.city').boundingBox(), before)
 	check('T06: row height does not move', await main('customer.address.city').locator('..').boundingBox(), rowBefore)
 	await page.locator('h1').hover()
 	await main('customer.address.city').focus()
-	check('T06: keyboard focus reveals plus', await add('customer.address.city').evaluate(
+	check('T06: keyboard focus reveals chevron', await openRelation('customer.address.city').evaluate(
 		element => getComputedStyle(element).opacity), '1')
-	await page.keyboard.press('Tab')
-	check('ACT-08: main then plus order', await add('customer.address.city').evaluate(
+	await page.keyboard.press('Shift+Tab')
+	check('ACT-08: checkbox before name', await add('customer.address.city').evaluate(
 		element => element === document.activeElement), true)
 	check('ACT-08: focus is visible', await add('customer.address.city').evaluate(
 		element => getComputedStyle(element).outlineStyle), 'solid')
 	await page.keyboard.press('Space')
 	await page.waitForFunction(() => document.querySelectorAll('#intentions li').length === 2)
 	check('T07/T25: object intention by keyboard, no navigation', await current(), 'customer.address')
-	check('T05/T07: plus emits object once', await selected(), ['number', 'customer.address.city'])
+	check('T05/T07: checkbox emits object once', await selected(), ['number', 'customer.address.city'])
 	await main('customer.address.street').hover()
 	await add('customer.address.street').click()
 	await page.waitForFunction(() => document.querySelectorAll('#intentions li').length === 3)
-	check('T05: terminal plus emits once', await selected(),
+	check('T05: terminal checkbox emits once', await selected(),
 		['number', 'customer.address.city', 'customer.address.street'])
-	await main('customer.address.city').focus()
+	await openRelation('customer.address.city').focus()
 	await page.keyboard.press('Enter')
 	await waitContext('customer.address.city')
 	check('ACT-08: Enter navigates relation', await current(), 'customer.address.city')
@@ -101,7 +105,8 @@ try {
 	let parent = 'customer'
 	for (let depth = 0; depth < 8; depth ++) {
 		parent += '.parent'
-		await main(parent).click()
+		await main(parent).hover()
+		await openRelation(parent).click()
 		await waitContext(parent)
 	}
 	check('T08: narrow long breadcrumb scrolls', await page.locator('.ps-breadcrumb').evaluate(
@@ -140,15 +145,14 @@ try {
 	mobile.on('pageerror', error => errors.push(error.message))
 	await mobile.goto(url)
 	await mobile.locator('.ps-main[data-path="customer"]').waitFor()
-	check('T06: no-hover relation plus always visible', await mobile.locator('.ps-add[data-path="customer"]').evaluate(
+	check('T06: no-hover relation chevron always visible', await mobile.locator('.ps-open[data-path="customer"]').evaluate(
 		element => getComputedStyle(element).display !== 'none' && getComputedStyle(element).opacity === '1'), true)
-	check('T06: no-hover terminal plus absent', await mobile.locator('.ps-add[data-path="number"]').evaluate(
-		element => getComputedStyle(element).display), 'none')
-	await mobile.locator('.ps-add[data-path="customer"]').tap()
+	check('T06: no-hover terminal chevron absent', await mobile.locator('.ps-open[data-path="number"]').count(), 0)
+	await mobile.locator('.ps-check[data-path="customer"]').tap()
 	await mobile.waitForFunction(() => document.querySelectorAll('#intentions li').length === 1)
-	check('T05: real touch plus selects once without navigation',
+	check('T05: real touch checkbox selects once without navigation',
 		await mobile.locator('[aria-current]').getAttribute('data-path'), '')
-	await mobile.locator('.ps-main[data-path="customer"]').tap()
+	await mobile.locator('.ps-open[data-path="customer"]').tap()
 	await mobile.locator('.ps-main[data-path="customer.name"]').waitFor()
 	await mobile.locator('.ps-main[data-path="customer.name"]').tap()
 	await mobile.waitForFunction(() => document.querySelectorAll('#intentions li').length === 2)
@@ -156,7 +160,7 @@ try {
 		['customer', 'customer.name'])
 	await mobile.setViewportSize({ width: 844, height: 390 })
 	check('ACT-05: landscape keeps relation action accessible',
-		await mobile.locator('.ps-add[data-path="customer.address"]').isVisible(), true)
+		await mobile.locator('.ps-check[data-path="customer.address"]').isVisible(), true)
 	const lifecycle = await page.evaluate(async () => {
 		const { PropertySelectView } = await import('/assets/front/property-select.js')
 		const { staticProvider } = await import('/catalogue.js')
