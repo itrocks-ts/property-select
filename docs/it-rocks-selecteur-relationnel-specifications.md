@@ -183,8 +183,9 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
 
 ### 3.2 Zones de clic
 
-- **ACT-01.** Clicking a terminal or relation name requests addition only. An existing column is revealed and
-  highlighted without removal. The name transports its full path when dragged.
+- **ACT-01.** Clicking a terminal or relation name, its checkbox or the surrounding checkbox cell toggles selection:
+  add an unused column or remove a used one. The checkbox and green background reflect confirmed usage.
+  The name transports its full path when dragged.
 - **ACT-02.** The checkbox in the first cell reflects committed usage for both kinds. Checking requests addition;
   unchecking requests removal. It does not navigate or start transport.
 - **ACT-03.** Relations have a separate chevron button aligned on the right. Clicking it opens the related object.
@@ -193,7 +194,7 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
 - **ACT-06.** A recognised drag suppresses its residual click. Each control performs only its own action.
 - **ACT-07.** Intermediate relation segments in displayed paths remain navigation targets and drag sources.
   Each target contains the relation label, its following chevron and space (for example `Customer › `).
-  The root is never transported. The final property name requests addition as in ACT-01.
+  The root is never transported. The final property name toggles selection as in ACT-01.
 
 **ACT-08.** Préserver l'usage clavier : ordre logique, focus visible, activation des zones principales et boutons sans
 drag. Réutiliser les composants accessibles existants ; éviter toute imbrication invalide de contrôles interactifs.

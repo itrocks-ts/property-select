@@ -373,7 +373,7 @@ export class PropertySelectView
 		row.dataset.kind = property.kind
 		row.dataset.path = property.path
 		const label = property.label || property.name
-		const main = this.button(label, 'add', property.path)
+		const main = this.button(label, 'select', property.path)
 		main.className = 'ps-main'
 		main.dataset.focus = `main:${property.path}`
 		const cell = this.host.ownerDocument.createElement('label')

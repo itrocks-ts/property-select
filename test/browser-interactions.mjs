@@ -58,19 +58,24 @@ try {
 		})
 		for (const path of ['number', 'customer']) {
 			const row = page.locator(`.ps-property[data-path="${path}"]`)
-			assert.equal(await row.locator('.ps-check').isChecked(), true)
-			await row.locator('.ps-main').click()
-			await page.waitForFunction(() => events.at(-1).type === 'outcome')
-			assert.equal(await row.locator('.ps-check').isChecked(), true)
-			assert.equal(await page.evaluate(() => events.at(-1).outcome.status), 'existing')
-			await row.locator('.ps-check').click()
-			await page.waitForFunction(() => events.at(-1)?.outcome?.status === 'removed')
-			assert.equal(await row.locator('.ps-check').isChecked(), false)
-			await row.locator('.ps-check').focus()
-			await page.keyboard.press('Space')
-			await page.waitForFunction(() => events.at(-1)?.outcome?.status === 'added')
-			assert.equal(await row.locator('.ps-check').isChecked(), true)
-			assert.equal(await page.evaluate(() => view.selector.path), '')
+			for (const control of ['.ps-main', '.ps-check', '.ps-check-cell']) {
+				for (const checked of [false, true]) {
+					await page.evaluate(() => { events.length = 0 })
+					await row.locator(control).click({ position: { x: 2, y: 2 } })
+					await page.waitForFunction(() => events.at(-1)?.type === 'outcome')
+					assert.equal(await row.locator('.ps-check').isChecked(), checked)
+					assert.equal(await row.evaluate(node => node.classList.contains('ps-used')), checked)
+					assert.equal(await page.evaluate(() => events.at(-1).outcome.status), checked ? 'added' : 'removed')
+					assert.equal(await page.evaluate(() => events.filter(event => event.type === 'select').length), 1)
+					assert.equal(await page.evaluate(() => view.selector.path), '')
+				}
+			}
+			for (const checked of [false, true]) {
+				await row.locator('.ps-check').focus()
+				await page.keyboard.press('Space')
+				await page.waitForFunction(() => events.at(-1)?.type === 'outcome')
+				assert.equal(await row.locator('.ps-check').isChecked(), checked)
+			}
 		}
 		await page.evaluate(() => { window.rejectSelection = true })
 		await page.locator('.ps-check[data-path="customer"]').click()
@@ -106,7 +111,7 @@ try {
 			}
 		}
 		await page.close()
-		console.log(`PASS checkbox, addition and transport interactions (${touch ? 'touch' : 'desktop'})`)
+		console.log(`PASS checkbox, cell, name and transport interactions (${touch ? 'touch' : 'desktop'})`)
 	}
 }
 finally {

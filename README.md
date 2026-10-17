@@ -92,7 +92,7 @@ Metadata errors return false and remain observable through `selector`; the host 
 `dispose(): void` is idempotent, aborts pending work, removes the owned section and releases its listeners/references.
 Create a new view after disposal. No import activates the DOM or registers a global instance.
 
-The main button requests addition only for either a field or a relation, preserving existing columns. A checkbox in the first cell reflects whether the full path
+Clicking a field or relation name, its checkbox or the surrounding checkbox cell toggles the selection. A checkbox in the first cell reflects whether the full path
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
 A separate chevron on the right opens a relation. It appears on row hover or keyboard focus and stays visible
 on touch devices. All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
