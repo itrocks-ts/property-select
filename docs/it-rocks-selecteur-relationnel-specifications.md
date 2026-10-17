@@ -184,12 +184,13 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
 ### 3.2 Zones de clic
 
 - **ACT-01.** Clicking a terminal or relation name, its checkbox or the surrounding checkbox cell toggles selection:
-  add an unused column or remove a used one. The checkbox and green background reflect confirmed usage.
+  add an unused column or remove a used one. The checkbox clears before the removal flash; rechecking during that flash cancels removal and restores green.
   The name transports its full path when dragged.
 - **ACT-02.** The checkbox in the first cell reflects committed usage for both kinds. Checking requests addition;
   unchecking requests removal. It does not navigate or start transport.
 - **ACT-03.** Used rows expose a target button on row hover (always visible on smartphones).
   It locates the existing column without removal or navigation. Its hover area is independent.
+  Unused rows have no target button space; that width belongs to the property name.
   Relations have a separate chevron button aligned on the right. Clicking it opens the related object.
 - **ACT-04.** Desktop row hover reveals both buttons; keyboard focus reveals only the focused button. Reserve its space to avoid layout changes.
 - **ACT-05.** At widths up to 600 px, or with a coarse primary pointer or no hover, both buttons remain visible.

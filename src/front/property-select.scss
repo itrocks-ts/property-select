@@ -118,10 +118,10 @@
 .property-select .ps-open, .property-select .ps-locate { text-align: center; }
 .property-select .ps-locate {
 	background: #fff url('locate.svg') center no-repeat;
+	display: none;
 	font-size: 0;
-	visibility: hidden;
 }
-.ps-property.ps-used .ps-locate { visibility: visible; }
+.ps-property.ps-used .ps-locate { display: block; }
 .ps-open, .ps-locate { opacity: 0; pointer-events: none; }
 .ps-property:hover :is(.ps-open, .ps-locate), .ps-open:focus-visible, .ps-locate:focus-visible {
 	opacity: 1;

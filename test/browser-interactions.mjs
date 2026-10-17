@@ -131,6 +131,13 @@ try {
 					assert.equal(await row.locator('.ps-check').isChecked(), checked)
 					assert.equal(await row.locator('.ps-locate').isDisabled(), !checked)
 					assert.equal(await row.locator('.ps-locate').isVisible(), checked)
+					if (!checked) {
+						assert.equal(await row.locator('.ps-locate').boundingBox(), null)
+						const main = row.locator('.ps-main')
+						const bounds = await main.boundingBox()
+						await page.mouse.move(bounds.x + bounds.width - 2, bounds.y + bounds.height / 2)
+						assert.equal(await main.evaluate(node => node.matches(':hover')), true)
+					}
 					assert.equal(await row.evaluate(node => node.classList.contains('ps-used')), checked)
 					assert.equal(await page.evaluate(() => events.at(-1).outcome.status), checked ? 'added' : 'removed')
 					assert.equal(await page.evaluate(() => events.filter(event => event.type === 'select').length), 1)
