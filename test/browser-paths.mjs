@@ -46,8 +46,12 @@ try {
 			.evaluate(row => row.getBoundingClientRect().height)
 		for (const path of ['customer', 'customer.address', 'customer.address.country']) {
 			const used = page.locator('.ps-property.ps-used[data-path="customer.address.country.code"]')
-			assert.equal(await used.locator('.ps-result-path').textContent(), 'Client.Adresse.Pays.Côde')
-			await used.locator(`button[data-path="${path}"]`).click()
+			assert.equal(await used.locator('button:not(.ps-add)')
+				.evaluateAll(buttons => buttons.map(button => button.textContent).join('')), 'Client.Adresse.Pays.Côde')
+			const relation = used.locator(`button[data-path="${path}"]`)
+			const bounds = await relation.boundingBox()
+			assert.equal(bounds.height, ordinaryHeight - 1)
+			await relation.click({ position: { x: bounds.width / 2, y: 1 } })
 			await page.waitForFunction(path => view.selector.path === path, path)
 			assert.deepEqual(await page.evaluate(() => selections), [])
 			assert.equal(await page.locator('.ps-query').inputValue(), '')
@@ -56,27 +60,36 @@ try {
 			assert.deepEqual(displayed.sort(), expected.sort())
 			await page.evaluate(() => view.selector.navigate(''))
 		}
+		const used = page.locator('.ps-property.ps-used[data-path="customer.address.country.code"]')
+		const terminal = used.locator('.ps-main')
+		const terminalBounds = await terminal.boundingBox()
+		assert.equal(terminalBounds.height, ordinaryHeight - 1)
+		await terminal.click({ position: { x: terminalBounds.width - 2, y: terminalBounds.height - 2 } })
+		assert.deepEqual(await page.evaluate(() => selections), ['customer.address.country.code'])
+		assert.equal(await page.evaluate(() => view.selector.path), '')
+		await page.evaluate(() => { selections.length = 0 })
 		await page.locator('.ps-query').fill('code')
 		await page.waitForFunction(() => ['complete', 'limited'].includes(
 			document.querySelector('.property-select').dataset.searchStatus))
 		const row = page.locator('.ps-property[data-path="customer.address.country.code"]')
 		const observed = await row.evaluate(row => {
-			const path = row.querySelector('.ps-result-path')
+			const buttons = [...row.querySelectorAll('button:not(.ps-add)')]
 			return {
-				buttons: [...path.querySelectorAll('button')].map(button => button.dataset.path),
+				buttons: buttons.map(button => button.dataset.path),
 				height: row.getBoundingClientRect().height,
-				label: path.textContent,
-				lines: new Set([...path.querySelectorAll('button')].map(button => {
+				label: buttons.map(button => button.textContent).join(''),
+				lines: new Set(buttons.map(button => {
 					const range = document.createRange()
 					range.selectNodeContents(button.firstChild)
 					return range.getBoundingClientRect().top
 				})).size,
-				overflow: path.scrollWidth > path.clientWidth,
-				title: path.title
+				overflow: row.scrollWidth > row.clientWidth,
+				title: row.title
 			}
 		})
 		assert.deepEqual(observed.buttons, ['customer', 'customer.address', 'customer.address.country',
 			'customer.address.country.code'])
+		assert.equal(await row.locator(':scope > button').count(), 5)
 		assert.equal(observed.height, ordinaryHeight)
 		assert.equal(observed.label, 'Client.Adresse.Pays.Côde')
 		assert.equal(observed.lines, 1)
@@ -99,7 +112,7 @@ try {
 		await page.waitForFunction(() => ['complete', 'limited'].includes(
 			document.querySelector('.property-select').dataset.searchStatus))
 		await page.evaluate(() => { document.querySelector('#selector').style.width = '150px' })
-		assert.equal(await row.locator('.ps-result-path').evaluate(path => path.scrollWidth > path.clientWidth), true)
+		assert.equal(await row.evaluate(row => row.scrollWidth > row.clientWidth), true)
 		assert.equal(await row.evaluate(row => row.getBoundingClientRect().height), ordinaryHeight)
 		await page.screenshot({ path: `/tmp/property-select-paths-${width}.png` })
 		assert.deepEqual(errors, [])

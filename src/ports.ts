@@ -33,7 +33,7 @@ export interface Outcome
 	id: InteractionId
 	message?: string
 	path: string
-	status: 'added' | 'existing' | 'moved' | 'cancelled' | 'rejected'
+	status: 'added' | 'existing' | 'removed' | 'moved' | 'cancelled' | 'rejected'
 }
 
 export interface PointerSample

@@ -135,14 +135,14 @@ try {
 	check('T09 normalised all words match labelled path', (await paths()).includes('customer.address.country.code'), true)
 	check('T09 distinct billing result', (await paths()).includes('customer.billingAddress.country.code'), true)
 	const row = main('customer.address.country.code').locator('..')
-	check('T09 root-to-parent segments', await row.locator('.ps-result-path button').allTextContents(),
-		['Facture', 'Client', 'Adresse', 'Pays'])
+	check('T09 root-to-parent segments', await row.locator('.ps-segment').allTextContents(),
+		['Client.', 'Adresse.', 'Pays.'])
 	await main('customer.address.country.code').click()
 	await page.locator('#intentions li').waitFor()
 	check('T11 terminal emits exact path once', await page.locator('#intentions li').allTextContents(),
 		['customer.address.country.code'])
 	check('NAV-07 query retained after selection', await query.inputValue(), ' CÔDE   pAyS CLIENT ')
-	await row.locator('.ps-result-path button[data-path="customer.address"]').click()
+	await row.locator('.ps-segment[data-path="customer.address"]').click()
 	await waitContext('customer.address')
 	await waitSearch()
 	check('T10 scope is current descendants', (await paths()).every(path => path.startsWith('customer.address.')), true)

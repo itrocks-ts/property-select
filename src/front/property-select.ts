@@ -1,6 +1,7 @@
 import { PropertySelect }             from '../property-select.js'
 import type { PropertySelectOptions } from '../property-select.js'
 import type { SearchResult }          from '../property-select.js'
+import type { UsedProperty }          from '../property-select.js'
 import { PointerTransport }           from './pointer-transport.js'
 
 export type PropertySelectViewOptions = { template?: string; templateUrl?: string | URL }
@@ -18,6 +19,7 @@ export class PropertySelectView
 	private mounting?: Promise<boolean>
 	private operationError = ''
 	private query?: HTMLInputElement
+	private readonly related = new Map<string, UsedProperty>()
 	private root?: HTMLElement
 	private resize?: ResizeObserver
 	private readonly restoredScroll = new WeakMap<HTMLElement, { left: number; top: number }>()
@@ -55,6 +57,7 @@ export class PropertySelectView
 		this.unsubscribe = undefined
 		this.labels.clear()
 		this.rows.clear()
+		this.related.clear()
 		this.query = undefined
 	}
 
@@ -169,7 +172,7 @@ export class PropertySelectView
 					this.render()
 				}
 				if (event.type === 'begin' || event.type === 'select'
-					|| (event.type === 'outcome' && ['added', 'existing', 'moved'].includes(event.outcome.status))) {
+					|| (event.type === 'outcome' && ['added', 'existing', 'moved', 'removed'].includes(event.outcome.status))) {
 					this.operationError = ''
 					this.render()
 				}
@@ -232,6 +235,8 @@ export class PropertySelectView
 		const context = this.selector.context
 		const state = this.selector.snapshot()
 		const search = this.selector.search
+		if (context?.path || state.query || this.selector.status === 'loading')
+			this.related.clear()
 		if (this.query!.value !== state.query)
 			this.operationError = ''
 		this.query!.value = state.query
@@ -266,9 +271,12 @@ export class PropertySelectView
 		const retainFocus = !!searchScope && (searchScope === this.searchScope)
 		this.searchScope = searchScope
 		const usedPaths = this.selector.usedPaths
+		if (!context.path && !state.query && this.selector.status === 'ready')
+			for (const property of this.selector.usedProperties)
+				this.related.set(property.path, property)
 		const fingerprint = JSON.stringify([
 			context, state.branch, state.current, state.query, search.results, search.status,
-			this.selector.suggestions, usedPaths, this.selector.usedProperties
+			this.selector.suggestions, usedPaths, this.selector.usedProperties, [...this.related.values()]
 		])
 		if (fingerprint === this.fingerprint)
 			return
@@ -297,7 +305,7 @@ export class PropertySelectView
 					b.property.label || b.property.name,
 					undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
 		if (search.status === 'idle' && !context.path) {
-			const related = [...this.selector.usedProperties]
+			const related = [...this.related.values()]
 			related.sort((a, b) => a.label.localeCompare(b.label,
 				undefined, { sensitivity: 'base' }) || a.path.localeCompare(b.path))
 			results = [...results, ...related.map(property => ({
@@ -383,19 +391,15 @@ export class PropertySelectView
 		add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
 		const segments = result.segments.filter(segment => segment.path)
 		if (segments.length) {
-			const path = this.host.ownerDocument.createElement('div')
-			path.className = 'ps-result-path'
-			path.title = [...segments.map(segment => segment.label), label].join('.')
+			row.title = [...segments.map(segment => segment.label), label].join('.')
 			for (const segment of segments) {
-				const button = this.button(segment.label, 'navigate', segment.path)
+				const button = this.button(segment.label + '.', 'navigate', segment.path)
+				button.className = 'ps-segment'
 				button.dataset.focus = `segment:${property.path}:${segment.path}`
-				path.append(button, '.')
+				row.append(button)
 			}
-			path.append(main)
-			row.append(path, add)
 		}
-		else
-			row.append(main, add)
+		row.append(main, add)
 		return row
 	}
 

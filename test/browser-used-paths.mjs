@@ -58,7 +58,7 @@ try {
 				['name', 'child.note', 'child.child', 'child.child.name', 'child.name'])
 			check('nested columns follow direct properties and use translated alphabetical order',
 				[...host.querySelectorAll('.ps-property')].map(row =>
-					row.querySelector('.ps-result-path')?.textContent || row.querySelector('.ps-main').textContent),
+					[...row.querySelectorAll('button:not(.ps-add)')].map(button => button.textContent).join('')),
 				['Child›', 'Name', 'Note', 'Child.Alpha', 'Child.Child›', 'Child.Child.Zulu', 'Child.Zulu'])
 			const selected = []
 			view.selector.subscribe(event => { if (event.type === 'select') selected.push(event.intent.path) })
@@ -75,7 +75,16 @@ try {
 				['child.child', 'child.name', 'child.note'])
 			await view.selector.navigate('')
 			view.selector.setConfiguration({ usedPaths: ['name'] })
-			check('removing nested configured paths removes the extra rows immediately', marked(), ['name'])
+			check('removing nested configured paths clears their highlights', marked(), ['name'])
+			check('removed nested columns remain available at the root',
+				!!host.querySelector('.ps-property[data-path="child.name"]:not(.ps-used)'), true)
+			const retained = host.querySelector('.ps-property[data-path="child.name"]')
+			retained.querySelector('.ps-main').click()
+			while (selected.length < 2) await new Promise(resolve => setTimeout(resolve, 0))
+			check('retained nested rows remain selectable', selected[1], 'child.name')
+			await view.selector.refresh()
+			check('refresh removes unused temporary root rows',
+				!!host.querySelector('.ps-property[data-path="child.name"]'), false)
 			const row = host.querySelector('.ps-property[data-path="name"]')
 			const unused = host.querySelector('.ps-property[data-path="note"]')
 			check('configured properties have a distinct background',
@@ -104,12 +113,33 @@ try {
 				await new Promise(resolve => setTimeout(resolve, 0))
 			check('configuration changes resolve new root rows', marked(), ['child.name'])
 			host.querySelector('.ps-property[data-path="child.name"] .ps-add').click()
-			while (selected.length < 2) await new Promise(resolve => setTimeout(resolve, 0))
-			check('extra row plus selects the full configured path', selected[1], 'child.name')
+			while (selected.length < 3) await new Promise(resolve => setTimeout(resolve, 0))
+			check('extra row plus selects the full configured path', selected[2], 'child.name')
 			view.selector.setQuery('name')
 			while (view.selector.search.status === 'loading') await new Promise(resolve => setTimeout(resolve, 0))
 			view.selector.setConfiguration({ usedPaths: [] })
 			check('removing all columns clears highlights in search results', marked(), [])
+			view.selector.setQuery('')
+			check('search discards temporary root rows',
+				!!host.querySelector('.ps-property[data-path="child.name"]'), false)
+			view.selector.setConfiguration({ usedPaths: ['child.name'] })
+			while (!host.querySelector('.ps-property[data-path="child.name"]'))
+				await new Promise(resolve => setTimeout(resolve, 0))
+			view.selector.setConfiguration({ usedPaths: [] })
+			check('removed root row remains until a transition',
+				!!host.querySelector('.ps-property[data-path="child.name"]'), true)
+			const count = selected.length
+			host.querySelector('.ps-property[data-path="child.name"] [data-path="child"]').click()
+			while (view.selector.status === 'loading') await new Promise(resolve => setTimeout(resolve, 0))
+			check('retained row intermediate segment still navigates', view.selector.path, 'child')
+			check('intermediate navigation does not select a property', selected.length, count)
+			await view.selector.navigate('')
+			check('navigation discards temporary root rows',
+				!!host.querySelector('.ps-property[data-path="child.name"]'), false)
+			check('temporary rows never enter exported state',
+				Object.keys(view.selector.snapshot()).sort(),
+				['branch', 'current', 'query', 'recent', 'scroll', 'version'])
+
 		}
 		finally { view.dispose() }
 		return assertions

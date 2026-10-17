@@ -139,6 +139,8 @@ its translated label and full path.
 The browser appends these highlighted columns after the direct properties at the root, alphabetically by those labels.
 Intermediate path segments navigate to the chosen object without selecting a property; the final name and `+` keep
 their usual actions. Used columns are excluded from search results and nested object views; unknown paths are omitted.
+Removing a used path leaves its root row unhighlighted for immediate reselection. These temporary rows belong only
+to the current view and disappear on refresh, search, relation navigation or disposal; they are never persisted.
 `suggestions` exposes `{ path, label }` destinations, ordered by confirmed recents, maximal used contexts per branch,
 then advice. Full paths deduplicate entries; translated metadata labels distinguish equal names by ancestry.
 `suggestionLimit` defaults to six (1–100).
@@ -184,8 +186,8 @@ Changes are observable before asynchronous metadata completes. Unsubscribe/dispo
 Provide an optional `ConsumerPort` to apply intentions in another application. `select(intent, signal)` and
 `end(id, sample)` return `Promise<Outcome>` after the host commits its operation. Intentions carry an opaque unique
 `id`, the fixed `root` and canonical `path`; they carry no column or insertion position. Outcomes distinguish `added`,
-`existing`, `moved`, `cancelled` and `rejected`. Only `added` updates recent destinations. Rejections emit a recoverable
-error. Without a consumer, events remain observable; a host may call `acknowledge(outcome)` explicitly.
+`existing`, `removed`, `moved`, `cancelled` and `rejected`. Only `added` updates recent destinations. Rejections emit a
+recoverable error. Without a consumer, events remain observable; a host may call `acknowledge(outcome)` explicitly.
 Mismatched, premature, duplicate and disposed acknowledgements return false and never apply.
 
 `begin(path, sample, signal?)` returns the recognised `SelectionIntent`, `move(id, sample)` forwards movement and

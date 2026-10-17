@@ -92,25 +92,25 @@
 	background: #fff;
 	border-bottom: 1px solid #d8d8d8;
 	box-sizing: border-box;
-	display: grid;
-	grid-template-columns: minmax(0, 1fr) 29px;
-	line-height: 1.15;
+	display: flex;
+	overflow: hidden;
 }
 .ps-property.ps-used { background: #e7f4e7; }
-.property-select .ps-main, .ps-result-path {
+.property-select .ps-main {
 	box-sizing: border-box;
+	flex: 1;
 	min-width: 0;
 	overflow: hidden;
 	padding: .6em;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-/* Match the list row's checkbox contribution to its text line box. */
-.property-select .ps-main::after { content: ''; display: inline-block; height: 13px; width: 0; }
 .ps-chevron { display: inline; margin-left: 8px; }
-.property-select .ps-add { padding: 0; text-align: center; width: 29px; }
+.property-select .ps-add { flex: none; padding: 0; text-align: center; width: 29px; }
 .ps-property[data-kind="terminal"] .ps-add { display: none; }
-.property-select .ps-result-path button { overflow: visible; padding: 0; }
+.property-select .ps-segment { flex-shrink: 0; overflow: visible; padding: .6em 0; }
+.property-select .ps-segment:first-child { padding-left: .6em; }
+.property-select .ps-segment ~ .ps-main { padding-left: 0; }
 
 @media (hover: hover) and (pointer: fine) {
 	.ps-property[data-kind="terminal"] .ps-add { display: block; }
@@ -118,10 +118,10 @@
 	.ps-property:hover .ps-add, .ps-property:focus-within .ps-add { opacity: 1; pointer-events: auto; }
 }
 
-.ps-main, .ps-level, .ps-result-path button { user-select: none; -webkit-user-select: none; }
+.ps-main, .ps-level, .ps-segment { user-select: none; -webkit-user-select: none; }
 
 /* Set before pointerdown; keep breadcrumb panning and pinch zoom native. */
-.ps-main, .ps-result-path button { touch-action: pan-y pinch-zoom; }
+.ps-main, .ps-segment { touch-action: pan-y pinch-zoom; }
 @media (any-pointer: coarse) {
 	.ps-property[data-kind="terminal"] .ps-add { display: none; }
 	.ps-property[data-kind="relation"] .ps-add { opacity: 1; pointer-events: auto; }

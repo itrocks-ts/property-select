@@ -50,7 +50,7 @@ export class Intentions
 		if (
 			this.disposed || !pending || !['selected', 'ended'].includes(pending.phase)
 			|| (outcome.path !== pending.intent.path)
-			|| !['added', 'existing', 'moved', 'cancelled', 'rejected'].includes(outcome.status)
+			|| !['added', 'existing', 'removed', 'moved', 'cancelled', 'rejected'].includes(outcome.status)
 		) {
 			if (!this.disposed)
 				this.failed(new Error('Ignored unknown, duplicate, premature or mismatched acknowledgement'))

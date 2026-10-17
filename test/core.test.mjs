@@ -143,7 +143,7 @@ test('PORT-02: acknowledgements validate identity/path/status; only applied adde
 		if (event.type === 'select') intents.push(event.intent)
 		if (event.type === 'error') errors.push(event.error)
 	})
-	for (const status of ['existing', 'moved', 'cancelled', 'rejected']) {
+	for (const status of ['existing', 'removed', 'moved', 'cancelled', 'rejected']) {
 		await selector.select('customer.address')
 		assert.equal(selector.acknowledge({ ...intents.at(-1), status }), true)
 		assert.deepEqual(selector.snapshot().recent, [])

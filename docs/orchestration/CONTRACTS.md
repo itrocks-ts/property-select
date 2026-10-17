@@ -83,7 +83,7 @@ type PointerSample = { pointerId: number; pointerType: string; clientX: number; 
 type Outcome = {
   id: InteractionId
   path: string
-  status: 'added' | 'existing' | 'moved' | 'cancelled' | 'rejected'
+  status: 'added' | 'existing' | 'removed' | 'moved' | 'cancelled' | 'rejected'
   message?: string
 }
 interface ConsumerPort {
@@ -103,8 +103,8 @@ A click gets its own id. After recognition suppress its residual click; `+` stop
 No consumer means observable intentions only, no implicit confirmation or mutation.
 
 Resolve `select/end` only after the host accepts the operation and updates its committed column state. Only `added`
-feeds recents; existing/moved/cancelled/rejected never do. Id/path mismatches, duplicate acknowledgements and results
-from disposed generations are ignored/reported, never applied. Rejection shows a recoverable error and retains context.
+feeds recents; existing/removed/moved/cancelled/rejected never do. Id/path mismatches, duplicate acknowledgements and
+results from disposed generations are ignored/reported, never applied. Rejection shows a recoverable error and retains context.
 Host pending-path reservations prevent rapid clicks or click/drag overlap from creating duplicates. Removing/aborting
 one pending operation must not release another operation's reservation.
 
@@ -209,6 +209,7 @@ interface ColumnOperation {
 add(source: ColumnSource): Promise<'added' | 'existing'>
 reveal(id: string): void
 highlight(id: string): void
+remove(id: string, signal?: AbortSignal): Promise<boolean>
 beginExternal(source: ColumnSource, sample: PointerSample): ColumnOperation
 ```
 
@@ -225,9 +226,13 @@ supply safe rendered content, not SQL. Identity/row-key alignment belongs to lis
 Plugin commit/cancel notifications distinguish transient from committed changes; only commit invokes list persistence.
 Repeated move does not reload values. Late load completions check transaction and view generation before DOM mutation.
 
-`list` reserves normalised paths before asynchronous addition, supplies loaded row ids and handles duplicate selection
-with reveal/highlight only. Click appends, drag inserts at the accepted position. Highlight is the same subtle green →
-light → theme background sequence for new/existing clicks, with reduced-motion handling and no keyboard focus theft.
+`list` reserves normalised paths during asynchronous column changes and supplies loaded row ids. Clicking a terminal
+property toggles its column. Removal reveals the column and flashes it red for 350 ms before deleting its cells and
+matching `col`; abort/reset clears the flash without deletion, and late values cannot restore it. Relation selection
+reveals/highlights existing columns. New clicks append, drag inserts at the accepted position. Addition highlight is a
+subtle green → light → theme background sequence, with reduced-motion handling and no keyboard focus theft.
+The selector retains removed nested root rows without highlighting until refresh, search, relation navigation or
+disposal. These temporary rows are view-local and never enter exported or persisted selector state.
 A valid drop commits independently of whether optional value loading has finished; a loading failure is a visible
 cell error with retry, not a false cancellation. A failed column creation rejects and confirms no addition.
 Optional `accept(signal)` validates admission independently of values; list uses its authorised representation check
