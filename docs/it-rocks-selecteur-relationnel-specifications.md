@@ -209,13 +209,13 @@ The SVG swatches below are part of this reference and must be updated with the c
 
 | Swatch                                 | Meaning                           | Rule   | Value (over white) |
 | -------------------------------------- | --------------------------------- | ------ | ------------------ |
-| ![Colour](colours/navigation.svg) | Selector hover (all actions)       | COL-02 | `#ddd`    |
+| ![Colour](colours/navigation.svg) | Selector hover (all actions)       | COL-02 | `#f4f4f4`    |
 | ![Colour](colours/used.svg)       | Already used property             | COL-03 | `#2f8943` at 10%    |
 | ![Colour](colours/surface.svg)    | Standard background               | COL-04 | `#fff`    |
 | ![Colour](colours/text.svg)       | Standard text                     | COL-04 | `#444`    |
 | ![Colour](colours/group.svg)      | Functional group heading (future) | COL-06 | `#e8f0fa` |
 
-**COL-02. Selector hover.** All selector rows and navigation controls use the same neutral `#ddd` hover.
+**COL-02. Selector hover.** All selector rows and navigation controls use the same neutral `#f4f4f4` hover as `.action` in `@itrocks/action-bar`.
 Child controls keep the row background. Hover does not encode addition, removal or navigation.
 The provisional table column and its addition indicator in TAB-08 remain unchanged.
 

@@ -54,9 +54,9 @@ try {
 		assert.equal(await unusedRow.locator('.ps-check').isChecked(), false)
 		assert.notEqual(await background(usedRow), await background(unusedRow))
 		await unusedRow.hover()
-		assert.equal(await background(unusedRow), 'rgb(221, 221, 221)')
+		assert.equal(await background(unusedRow), 'rgb(244, 244, 244)')
 		await usedRow.hover()
-		assert.equal(await background(usedRow), 'rgb(221, 221, 221)')
+		assert.equal(await background(usedRow), 'rgb(244, 244, 244)')
 		assert.equal(await page.locator('.ps-add').count(), 0)
 		for (const relation of [unusedRow.locator('[data-action="navigate"]').first(),
 			usedRow.locator('.ps-segment').first(), page.locator('.ps-level').first()]) {
@@ -64,7 +64,7 @@ try {
 				await relation.locator('..').hover()
 			await relation.hover()
 			assert.equal(await background(relation), await relation.evaluate(node =>
-				node.classList.contains('ps-level') ? 'rgb(221, 221, 221)' : 'rgba(0, 0, 0, 0)'))
+				node.classList.contains('ps-level') ? 'rgb(244, 244, 244)' : 'rgba(0, 0, 0, 0)'))
 		}
 		await page.mouse.move(0, 0)
 		const open = page.locator('.ps-property[data-path="customer"] .ps-open')
@@ -94,7 +94,7 @@ try {
 			await page.waitForFunction(path => view.selector.path === path, path)
 			const current = page.locator('.ps-level[aria-current]')
 			await current.hover()
-			assert.equal(await background(current), 'rgb(221, 221, 221)')
+			assert.equal(await background(current), 'rgb(244, 244, 244)')
 			assert.deepEqual(await page.evaluate(() => selections), [])
 			assert.equal(await page.locator('.ps-query').inputValue(), '')
 			const displayed = await page.locator('.ps-property').evaluateAll(rows => rows.map(row => row.dataset.path))
