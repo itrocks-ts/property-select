@@ -70,10 +70,12 @@ export class PropertySelectView
 
 	private activate(event: MouseEvent): void
 	{
-		const button = (event.target as Element).closest<HTMLButtonElement>('button[data-action]')
+		const button = (event.target as Element).closest<HTMLElement>('[data-action]')
 		if (!button || !this.root?.contains(button))
 			return
 		event.stopPropagation()
+		if (button instanceof HTMLInputElement)
+			event.preventDefault()
 		if (button.dataset.action === 'retry') {
 			void this.selector.flushState().catch(() => {})
 			return
@@ -343,7 +345,10 @@ export class PropertySelectView
 		}
 		const used = new Set(usedPaths)
 		for (const [path, row] of this.rows)
+		{
 			row.classList.toggle('ps-used', used.has(path))
+			row.querySelector<HTMLInputElement>('.ps-check')!.checked = used.has(path)
+		}
 		if (retained && (this.list!.lastElementChild !== retained))
 			this.list!.append(retained)
 		const scrollKey = this.scrollKey()
@@ -379,9 +384,17 @@ export class PropertySelectView
 			chevron.textContent = '›'
 			main.append(chevron)
 		}
-		const add = this.button('+', 'add', property.path)
-		add.className = 'ps-add'
-		add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
+		const cell = this.host.ownerDocument.createElement('label')
+		cell.className = 'ps-check-cell'
+		const checkbox = this.host.ownerDocument.createElement('input')
+		checkbox.type = 'checkbox'
+		checkbox.className = 'ps-check'
+		checkbox.dataset.action = 'select'
+		checkbox.dataset.path = property.path
+		checkbox.dataset.focus = `check:${property.path}`
+		checkbox.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
+		cell.append(checkbox)
+		row.append(cell)
 		const segments = result.segments.filter(segment => segment.path)
 		if (segments.length) {
 			row.title = [...segments.map(segment => segment.label), label].join('.')
@@ -392,7 +405,7 @@ export class PropertySelectView
 				row.append(button)
 			}
 		}
-		row.append(main, add)
+		row.append(main)
 		return row
 	}
 

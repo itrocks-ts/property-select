@@ -95,7 +95,7 @@
 	display: flex;
 	overflow: hidden;
 }
-.ps-property.ps-used { background: #eee; }
+.ps-property.ps-used { background: color-mix(in srgb, #2f8943 10%, white); }
 .ps-property:hover { background: #ddd; }
 .property-select .ps-property > button:hover { background-color: transparent; }
 .property-select .ps-level:hover { background: #ddd; }
@@ -109,27 +109,24 @@
 	white-space: nowrap;
 }
 .ps-chevron { display: inline; margin-left: 8px; }
-.property-select .ps-add { flex: none; padding: 0; text-align: center; width: 29px; }
-.ps-property[data-kind="terminal"] .ps-add { display: none; }
-.property-select .ps-segment { flex-shrink: 0; overflow: visible; padding: .6em 0; }
-.property-select .ps-segment:first-child { padding-left: .6em; }
-.property-select .ps-segment ~ .ps-main { padding-left: 0; }
-
-@media (hover: hover) and (pointer: fine) {
-	.ps-property[data-kind="terminal"] .ps-add { display: block; }
-	.ps-add { opacity: 0; pointer-events: none; }
-	.ps-property:hover .ps-add, .ps-property:focus-within .ps-add { opacity: 1; pointer-events: auto; }
+.ps-check-cell {
+	align-items: center;
+	border-right: 1px solid #ddd;
+	display: flex;
+	flex: none;
+	justify-content: center;
+	width: 28px;
 }
+.ps-check { cursor: pointer; margin: 0; }
+.ps-check:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
+.property-select .ps-segment { flex-shrink: 0; overflow: visible; padding: .6em 0; }
+.property-select .ps-check-cell + .ps-segment { padding-left: .6em; }
+.property-select .ps-segment ~ .ps-main { padding-left: 0; }
 
 .ps-main, .ps-level, .ps-segment { user-select: none; -webkit-user-select: none; }
 
 /* Set before pointerdown; keep breadcrumb panning and pinch zoom native. */
 .ps-main, .ps-segment { touch-action: pan-y pinch-zoom; }
-@media (any-pointer: coarse) {
-	.ps-property[data-kind="terminal"] .ps-add { display: none; }
-	.ps-property[data-kind="relation"] .ps-add { opacity: 1; pointer-events: auto; }
-}
-
 .right-pane:has(.property-select) .right-pane-tab {
 	background: #fff url('property-select.svg') center / 20px 20px no-repeat;
 	font-size: 0;

@@ -223,7 +223,7 @@ The SVG swatches below are part of this reference and must be updated with the c
 | Swatch                                 | Meaning                           | Rule   | Value (over white) |
 | -------------------------------------- | --------------------------------- | ------ | ------------------ |
 | ![Colour](colours/navigation.svg) | Selector hover (all actions)       | COL-02 | `#ddd`    |
-| ![Colour](colours/used.svg)       | Already used property             | COL-03 | `#eee`    |
+| ![Colour](colours/used.svg)       | Already used property             | COL-03 | `#2f8943` at 10%    |
 | ![Colour](colours/surface.svg)    | Standard background               | COL-04 | `#fff`    |
 | ![Colour](colours/text.svg)       | Standard text                     | COL-04 | `#444`    |
 | ![Colour](colours/group.svg)      | Functional group heading (future) | COL-06 | `#e8f0fa` |
@@ -232,7 +232,9 @@ The SVG swatches below are part of this reference and must be updated with the c
 Child controls keep the row background. Hover does not encode addition, removal or navigation.
 The provisional table column and its addition indicator in TAB-08 remain unchanged.
 
-**COL-03. Already used property.** A property whose full normalised path is already used has a grey `#eee` background.
+**COL-03. Already used property.** A property whose full normalised path is already used has a subtle green `color-mix(in srgb, #2f8943 10%, white)` background.
+A checkbox in the first cell reflects committed usage and requests addition or removal for either property kind.
+The former `+` control is removed.
 Its hover follows COL-02, like every other property.
 
 **COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`
@@ -251,7 +253,7 @@ This reserves the visual convention only; functional groups and automatically op
 features described in [P2-D](#p2-d-functional-groups-and-inline-relations).
 
 **COL-07. Themes and accessibility.** The values above define the light-theme reference. Theme variants must preserve
-the meanings and the identical treatment of both kinds of functional group in COL-06. Keep labels, the `+`, the addition
+the meanings and the identical treatment of both kinds of functional group in COL-06. Keep labels, checkboxes, the addition
 indicator and visible focus so that colour is never the only cue. Apply QUA-02 for contrast and reduced motion.
 
 ## 4. Accès rapides : récents, chemins utilisés et conseils

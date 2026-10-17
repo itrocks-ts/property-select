@@ -92,9 +92,9 @@ Metadata errors return false and remain observable through `selector`; the host 
 `dispose(): void` is idempotent, aborts pending work, removes the owned section and releases its listeners/references.
 Create a new view after disposal. No import activates the DOM or registers a global instance.
 
-The main button selects a field or opens a relation; its adjacent `+` selects either path without navigating,
-with `action: 'add'` to request addition only.
-Desktop hover or keyboard focus reveals the reserved `+`; without hover only relation buttons show it.
+The main button selects a field or opens a relation. A checkbox in the first cell reflects whether the full path
+is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
+All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
 Native buttons support Enter, Space, Tab and visible focus. The horizontally scrollable breadcrumb retains remembered
 descendants and marks the current object with `aria-current`, bold text and an underline.
 
@@ -140,7 +140,7 @@ clearing local recents. `translate(text)` defaults to identity or calls the supp
 full labels. Each description includes `segments`, ordered from the first relation through the final property, with
 its translated label and full path.
 The browser appends these highlighted columns after the direct properties at the root, alphabetically by those labels.
-Intermediate path segments navigate to the chosen object without selecting a property; the final name and `+` keep
+Intermediate path segments navigate to the chosen object without selecting a property; the final name and checkbox keep
 their usual actions. Used columns are excluded from search results and nested object views; unknown paths are omitted.
 Removing a used path leaves its root row unhighlighted for immediate reselection. These temporary rows belong only
 to the current view and disappear on refresh, search, relation navigation or disposal; they are never persisted.
@@ -216,7 +216,7 @@ This package is licensed under the GNU Lesser General Public License, version 3 
 
 The rendered view recognises a primary mouse/pen movement of 10 pixels from property names, breadcrumb relations and
 search-result relation segments. It transports their fixed full path through the generic consumer port. The root,
-shortcuts and `+` controls do not start transport. A recognised drag suppresses its compatibility click. No column,
+shortcuts and checkbox controls do not start transport. A recognised drag suppresses its compatibility click. No column,
 thumbnail or insertion indicator is rendered by the selector. Target decisions belong to the consumer.
 
 Pointer capture belongs to the document element so replacing source rows or folding a containing pane preserves the
@@ -230,5 +230,5 @@ These are technical recognition constants, not user preferences.
 Property names and result path segments declare `touch-action: pan-y pinch-zoom` before contact. Vertical scrolling
 and pinch zoom remain native; a second contact abandons pending or active transport. The horizontally scrollable
 breadcrumb keeps native touch navigation and mouse/pen transport. Touch users can transport the same object through
-its relation row or result segment. Relation plus controls remain visible on devices with any coarse pointer.
+its relation row or result segment. Relation controls remain visible on devices with any coarse pointer.
 A new primary contact resets residual-click suppression, including contacts outside the selector.
