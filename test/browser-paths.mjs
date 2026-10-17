@@ -57,6 +57,24 @@ try {
 		assert.equal(await background(unusedRow.locator('.ps-main')), 'rgb(244, 244, 244)')
 		await usedRow.locator('.ps-main').hover()
 		assert.equal(await background(usedRow.locator('.ps-main')), 'rgb(244, 244, 244)')
+		assert.equal(await background(usedRow.locator('.ps-check-cell')), 'rgba(0, 0, 0, 0)')
+		for (const segment of await usedRow.locator('.ps-segment').all())
+			assert.equal(await background(segment), 'rgba(0, 0, 0, 0)')
+		for (const segment of await usedRow.locator('.ps-segment').all()) {
+			await segment.hover()
+			assert.equal(await background(segment), 'rgb(244, 244, 244)')
+			assert.equal(await background(usedRow.locator('.ps-main')), 'rgba(0, 0, 0, 0)')
+			assert.equal(await background(usedRow.locator('.ps-check-cell')), 'rgba(0, 0, 0, 0)')
+			for (const other of await usedRow.locator('.ps-segment').all())
+				if (await other.getAttribute('data-path') !== await segment.getAttribute('data-path'))
+					assert.equal(await background(other), 'rgba(0, 0, 0, 0)')
+		}
+		await unusedRow.locator('.ps-main').hover()
+		assert.equal(await background(unusedRow.locator('.ps-check-cell')), 'rgb(244, 244, 244)')
+		await usedRow.locator('.ps-check-cell').hover()
+		assert.equal(await background(usedRow.locator('.ps-main')), 'rgb(244, 244, 244)')
+		for (const segment of await usedRow.locator('.ps-segment').all())
+			assert.equal(await background(segment), 'rgba(0, 0, 0, 0)')
 		assert.equal(await page.locator('.ps-add').count(), 0)
 		for (const relation of [unusedRow.locator('[data-action="navigate"]').first(),
 			usedRow.locator('.ps-segment').first(), page.locator('.ps-level').first()]) {

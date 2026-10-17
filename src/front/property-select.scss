@@ -96,7 +96,9 @@
 	overflow: hidden;
 }
 .ps-property.ps-used { background: color-mix(in srgb, #2f8943 10%, white); }
-.property-select .ps-property:has(.ps-check-cell:hover, .ps-main:hover, .ps-segment:hover) > :not(.ps-open) {
+.property-select .ps-check-cell:hover,
+.property-select .ps-property:has(> .ps-check-cell:hover) > .ps-main,
+.property-select .ps-property:has(> .ps-check-cell + .ps-main:hover) > .ps-check-cell {
 	background: #f4f4f4;
 }
 .property-select .ps-level:hover { background: #f4f4f4; }
