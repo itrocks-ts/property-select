@@ -93,7 +93,19 @@ try {
 			assert.equal(await locate.evaluate(node => getComputedStyle(node).opacity), touch ? '1' : '0')
 			await row.locator('.ps-main').hover()
 			assert.equal(await locate.evaluate(node => getComputedStyle(node).opacity), '1')
-			assert.equal(await locate.evaluate(node => getComputedStyle(node).backgroundColor), 'rgba(0, 0, 0, 0)')
+			assert.equal(await locate.evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(255, 255, 255)')
+			const clearBounds = await page.locator('.ps-clear').boundingBox()
+			const buttons = await row.locator('.ps-locate, .ps-open').all()
+			for (const button of buttons) {
+				const bounds = await button.boundingBox()
+				assert.equal(bounds.width, clearBounds.width)
+				assert.equal(await button.evaluate(node => getComputedStyle(node).borderLeft),
+					await page.locator('.ps-clear').evaluate(node => getComputedStyle(node).borderLeft))
+				assert.equal(await button.evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(255, 255, 255)')
+			}
+			const rightmost = await buttons.at(-1).boundingBox()
+			assert.equal(rightmost.x, clearBounds.x)
+			assert.equal(rightmost.x + rightmost.width, clearBounds.x + clearBounds.width)
 			await locate.hover()
 			assert.equal(await locate.evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(244, 244, 244)')
 			assert.equal(await row.locator('.ps-main').evaluate(node => getComputedStyle(node).backgroundColor),

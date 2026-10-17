@@ -232,7 +232,9 @@ A checkbox in the first cell reflects committed usage and requests addition or r
 Its hover follows COL-02, like every other property.
 
 **COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`
-and separators are `#ddd`. These neutral colours carry no addition, deletion or grouping meaning.
+and separators are `#ddd`. Right-hand target and chevron buttons have white backgrounds and a left border,
+with the same width as the search reset button. Only their own hover changes their background to COL-02.
+These neutral colours carry no addition, deletion or grouping meaning.
 
 **COL-05. Column confirmation.** The green flash, transition to white and return to the standard background in TAB-05
 mean that the requested column has been located or added. This transient confirmation is shared by new and existing

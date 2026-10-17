@@ -89,7 +89,7 @@ try {
 		await page.locator('.ps-property[data-path="customer"]').hover()
 		assert.equal(await open.evaluate(node => getComputedStyle(node).opacity), '1')
 		await page.locator('.ps-property[data-path="customer"] .ps-main').hover()
-		assert.equal(await background(open), 'rgba(0, 0, 0, 0)')
+		assert.equal(await background(open), 'rgb(255, 255, 255)')
 		await open.hover()
 		assert.equal(await background(open), 'rgb(244, 244, 244)')
 		assert.equal(await background(open.locator('..').locator('.ps-main')), 'rgba(0, 0, 0, 0)')
