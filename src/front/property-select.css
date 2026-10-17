@@ -97,7 +97,7 @@
 	line-height: 1.15;
 }
 .ps-property.ps-used { background: #e7f4e7; }
-.property-select .ps-main {
+.property-select .ps-main, .ps-result-path {
 	box-sizing: border-box;
 	min-width: 0;
 	overflow: hidden;
@@ -110,8 +110,7 @@
 .ps-chevron { display: inline; margin-left: 8px; }
 .property-select .ps-add { padding: 0; text-align: center; width: 29px; }
 .ps-property[data-kind="terminal"] .ps-add { display: none; }
-.ps-result-path { grid-column: 1 / -1; min-width: 0; overflow-wrap: anywhere; padding: 0 8px 4px; }
-.property-select .ps-result-path button { padding: 0 2px; }
+.property-select .ps-result-path button { overflow: visible; padding: 0; }
 
 @media (hover: hover) and (pointer: fine) {
 	.ps-property[data-kind="terminal"] .ps-add { display: block; }

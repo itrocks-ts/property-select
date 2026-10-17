@@ -377,19 +377,21 @@ export class PropertySelectView
 		const add = this.button('+', 'select', property.path)
 		add.className = 'ps-add'
 		add.setAttribute('aria-label', `${this.selector.translate('Select')} ${label}`)
-		row.append(main, add)
-		if (result.segments.length) {
+		const segments = result.segments.filter(segment => segment.path)
+		if (segments.length) {
 			const path = this.host.ownerDocument.createElement('div')
 			path.className = 'ps-result-path'
-			for (const [index, segment] of result.segments.entries()) {
-				if (index)
-					path.append('.')
+			path.title = [...segments.map(segment => segment.label), label].join('.')
+			for (const segment of segments) {
 				const button = this.button(segment.label, 'navigate', segment.path)
 				button.dataset.focus = `segment:${property.path}:${segment.path}`
-				path.append(button)
+				path.append(button, '.')
 			}
-			row.append(path)
+			path.append(main)
+			row.append(path, add)
 		}
+		else
+			row.append(main, add)
 		return row
 	}
 

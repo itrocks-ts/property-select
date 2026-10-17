@@ -270,17 +270,17 @@ affiché. Ne pas dédupliquer par classe cible : deux chemins conduisant au mêm
 
 ### 5.2 Résultats et interactions
 
-**SEA-04.** Une entrée logique par chemin, champ terminal ou objet lié. Présentation : **nom de la propriété** suivi du
-chemin ordonné depuis la racine vers son parent, par exemple :
+**SEA-04.** One logical entry per path, terminal field or related object. Show the ordered property labels from
+root to final property on one line, separated by dots. The business root label is excluded, as in table column headers:
 
 ```text
-Code : Facture.Client.Adresse.Ville.Pays
-Ville : Facture.Client.Adresse
+Client.Adresse.Ville.Pays.Code
+Client.Adresse.Ville
 ```
 
-Ne pas inverser l'arborescence. Tous les segments utiles restent accessibles, au besoin par retour à la ligne sur
-mobile. Les boutons et actions du résultat suivent la section 3 ; le chemin intermédiaire sert à naviguer ou démarrer un
-drag.
+Use the same presentation and row height as ordinary properties. Truncate long paths within the available width and
+expose the complete label on hover. Intermediate relation segments remain buttons for navigation and drag; the final
+property keeps its normal selection or navigation action.
 
 **SEA-05.** Cliquer sur le nom d'un résultat terminal sélectionne ; cliquer sur le nom d'un résultat relationnel ouvre.
 Cliquer sur un segment du chemin ouvre ce contexte en conservant la recherche. Le champ de recherche dispose d'un
