@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="20" viewBox="0 0 32 20">
+<title>Addition button hover</title>
+<rect x="1" y="1" width="30" height="18" rx="3" fill="#ffffff"/>
+<rect x="1" y="1" width="30" height="18" rx="3" fill="#2f8943" fill-opacity="0.25"/>
+<rect x="1" y="1" width="30" height="18" rx="3" fill="none" stroke="#888888"/>
+</svg>

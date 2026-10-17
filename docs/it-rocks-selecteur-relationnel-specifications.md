@@ -211,6 +211,57 @@ depuis sa ligne relationnelle.
 **ACT-08.** Préserver l'usage clavier : ordre logique, focus visible, activation des zones principales et boutons sans
 drag. Réutiliser les composants accessibles existants ; éviter toute imbrication invalide de contrôles interactifs.
 
+### 3.3 Colour coding
+
+**COL-01. Reference and maintenance.** COL-01 to COL-07 are the shared colour reference for the selector and its
+integration with the table. Use these stable identifiers in implementation tasks and validation scenarios. Any change
+to a colour, its meaning or its target state must update this reference and the affected styles and checks together.
+The current selector styles are in [`src/front/property-select.scss`](../src/front/property-select.scss).
+Colours describe interaction states or functional structure, never the technical origin of a property.
+The SVG swatches below are part of this reference and must be updated with the corresponding colour values.
+
+| Swatch                                 | Meaning                           | Rule   | Value (over white) |
+| -------------------------------------- | --------------------------------- | ------ | ------------------ |
+| ![Colour](colours/addition-hover.svg)  | Available property hover          | COL-02 | `#2f8943` at 15%   |
+| ![Colour](colours/addition-button.svg) | Addition button hover             | COL-02 | `#2f8943` at 25%   |
+| ![Colour](colours/used.svg)            | Already used property             | COL-03 | `#eee`             |
+| ![Colour](colours/used-hover.svg)      | Already used property hover       | COL-03 | `#d51d2c` at 15%   |
+| ![Colour](colours/navigation.svg)      | Navigation hover and separators   | COL-04 | `#ddd`             |
+| ![Colour](colours/surface.svg)         | Standard background               | COL-04 | `#fff`             |
+| ![Colour](colours/text.svg)            | Standard text                     | COL-04 | `#444`             |
+| ![Colour](colours/group.svg)           | Functional group heading (future) | COL-06 | `#e8f0fa`          |
+
+**COL-02. Available property and addition.** Green means an addition is available or being previewed. Hovering an
+unused property uses `color-mix(in srgb, #2f8943 15%, white)`; hovering its `+` button uses the same green at 25%.
+The `+` retains this addition coding even on an already used property; duplicate handling follows TAB-02.
+For a provisional table column, TAB-08 uses a light green accent together with an addition indicator.
+
+**COL-03. Already used property.** A property whose full normalised path is already used has a grey `#eee` background.
+Hovering its row uses `color-mix(in srgb, #d51d2c 15%, white)`: red indicates that the property is already present,
+so selecting it will not create another column. It does not mean deletion, an error or a disabled property.
+TAB-02 still applies: reveal and highlight the existing column. For relations, the main area still navigates
+according to ACT-02; the colour does not change the action of a control.
+
+**COL-04. Navigation and neutral surfaces.** Hovering a breadcrumb level or a relation navigation button uses grey
+`#ddd`, distinguishing navigation from addition. Standard property backgrounds are white `#fff`, text is `#444`
+and separators are `#ddd`. These neutral colours carry no addition, deletion or grouping meaning.
+
+**COL-05. Column confirmation.** The green flash, transition to white and return to the standard background in TAB-05
+mean that the requested column has been located or added. This transient confirmation is shared by new and existing
+columns; it must not imply that every activation created a column.
+
+**COL-06. Functional group heading (reserved for future use).** Reserve a light blue background `#e8f0fa`, with
+readable text, for a heading that names a functional group of properties. Use exactly the same heading colour and
+presentation whether the properties belong to the current object or to a related object automatically opened inline
+at the current level. Both represent the same functional grouping to the user; the underlying object structure must
+not introduce a visual distinction. A group heading is a structural separator, not an addition or used-property state.
+This reserves the visual convention only; functional groups and automatically opened inline relations remain future
+features described in [P2-D](#p2-d-functional-groups-and-inline-relations).
+
+**COL-07. Themes and accessibility.** The values above define the light-theme reference. Theme variants must preserve
+the meanings and the identical treatment of both kinds of functional group in COL-06. Keep labels, the `+`, the addition
+indicator and visible focus so that colour is never the only cue. Apply QUA-02 for contrast and reduced motion.
+
 ## 4. Accès rapides : récents, chemins utilisés et conseils
 
 **REC-01.** Afficher une seule liste de destinations d'objets, sans distinction visuelle de provenance. Sources, dans
@@ -394,7 +445,8 @@ dans cette intégration.
 sélection des lignes ou un déplacement forcé du focus clavier hors du sélecteur. Utiliser le défilement nécessaire pour
 la rendre visible sans mouvements inutiles.
 
-**TAB-05.** Après ajout par clic comme après clic sur une colonne existante, appliquer le même flash subtil : brillance
+**TAB-05.** Selon [COL-05](#33-colour-coding), après ajout par clic comme après clic sur une colonne existante,
+appliquer le même flash subtil : brillance
 verte, transition vers blanc, puis retour au fond standard. Préserver la lisibilité, adapter l'éclaircissement au thème
 et respecter les préférences de réduction d'animations du projet. Ne pas laisser un style temporaire attaché à la
 colonne.
@@ -408,8 +460,9 @@ créer de doublon avant la fin d'un chargement. Une erreur d'ajout n'alimente pa
 représenter directement une vraie colonne provisoire dans le tableau, données incluses dès qu'elles sont disponibles.
 Pas de petite étiquette flottante à la place de cet aperçu.
 
-**TAB-08.** L'aperçu d'un ajout utilise un accent légèrement vert et un indicateur d'ajout. Pour une colonne déjà
-présente, conserver le comportement de déplacement existant. La position d'insertion et le défilement horizontal sont
+**TAB-08.** Selon [COL-02](#33-colour-coding), l'aperçu d'un ajout utilise un accent légèrement vert et un indicateur
+d'ajout. Pour une colonne déjà présente, conserver le comportement de déplacement existant. La position d'insertion
+et le défilement horizontal sont
 ceux du tableau, sans second algorithme dans le sélecteur.
 
 **TAB-09.** Afficher immédiatement la structure de la colonne provisoire ; le chargement de ses valeurs ne bloque ni le
@@ -583,6 +636,15 @@ les affichages de P2-B. Les noms de décorateurs seront choisis après inspectio
 
 Ne pas développer maintenant le calcul statistique des habitudes, la détection des colonnes absentes de toutes les
 listes sauvegardées ou une gestion supplémentaire de configurations. La source statique V1 reste suffisante.
+
+### P2-D. Functional groups and inline relations
+
+When an object has many properties, introduce separator headings naming functional groups. Also allow selected
+relations to open automatically inline at the current level. Present the resulting properties under the same kind of
+functional group heading: users need not distinguish properties stored on the current object from those stored on a
+related object. Both headings must use the shared blue coding defined by [COL-06](#33-colour-coding).
+Keep each property's full path for selection and duplicate detection. These features are reserved for future work;
+this specification update does not enable them in phase 1.
 
 ## 11. Découpage et exécution par agents en contexte neuf
 
