@@ -33,7 +33,8 @@ try {
 			const { PropertySelectView } = await import('/front/property-select.js')
 			const { graphProvider } = await import('/test/fixtures/search-graph.mjs')
 			window.view = new PropertySelectView(document.querySelector('#selector'), {
-				metadata: graphProvider(), root: 'invoice'
+				metadata: graphProvider(), root: 'invoice',
+				usedPaths: ['customer.address.country.code']
 			})
 			window.selections = []
 			view.selector.subscribe(event => {
@@ -43,6 +44,18 @@ try {
 		})
 		const ordinaryHeight = await page.locator('.ps-property').first()
 			.evaluate(row => row.getBoundingClientRect().height)
+		for (const path of ['customer', 'customer.address', 'customer.address.country']) {
+			const used = page.locator('.ps-property.ps-used[data-path="customer.address.country.code"]')
+			assert.equal(await used.locator('.ps-result-path').textContent(), 'Client.Adresse.Pays.Côde')
+			await used.locator(`button[data-path="${path}"]`).click()
+			await page.waitForFunction(path => view.selector.path === path, path)
+			assert.deepEqual(await page.evaluate(() => selections), [])
+			assert.equal(await page.locator('.ps-query').inputValue(), '')
+			const displayed = await page.locator('.ps-property').evaluateAll(rows => rows.map(row => row.dataset.path))
+			const expected = await page.evaluate(() => view.selector.context.properties.map(property => property.path))
+			assert.deepEqual(displayed.sort(), expected.sort())
+			await page.evaluate(() => view.selector.navigate(''))
+		}
 		await page.locator('.ps-query').fill('code')
 		await page.waitForFunction(() => ['complete', 'limited'].includes(
 			document.querySelector('.property-select').dataset.searchStatus))

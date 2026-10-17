@@ -38,6 +38,11 @@ export interface PropertySelectOptions
 	usedPaths?: readonly PropertyPath[]
 }
 
+export interface UsedProperty extends PropertyDescription
+{
+	segments: readonly { label: string; path: string }[]
+}
+
 export class PropertySelect
 {
 
@@ -58,7 +63,7 @@ export class PropertySelect
 	private recentValue: string[] = []
 	private scrollValue: Record<string, { left: number; top: number }> = {}
 	private readonly searchEngine: Search
-	private usedPropertiesValue: PropertyDescription[] = []
+	private usedPropertiesValue: UsedProperty[] = []
 	private usedValue: string[]
 
 	readonly root: RootId
@@ -145,7 +150,7 @@ export class PropertySelect
 	}
 
 	/** Configured nested columns, with translated full labels, for the root property list. */
-	get usedProperties(): readonly PropertyDescription[]
+	get usedProperties(): readonly UsedProperty[]
 	{
 		return structuredClone(this.usedPropertiesValue)
 	}
@@ -370,13 +375,13 @@ export class PropertySelect
 		catch (error) { if (!abort.signal.aborted && !this.disposed) this.emit({ type: 'error', error }) }
 	}
 
-	private async resolveUsedProperties(signal: AbortSignal): Promise<PropertyDescription[]>
+	private async resolveUsedProperties(signal: AbortSignal): Promise<UsedProperty[]>
 	{
-		const properties: PropertyDescription[] = []
+		const properties: UsedProperty[] = []
 		for (const path of new Set(this.usedValue.filter(path => path.includes('.')))) {
 			signal.throwIfAborted()
 			try {
-				const labels: string[] = []
+				const labels: { label: string; path: string }[] = []
 				const segments = path.split('.')
 				let property: PropertyDescription | undefined
 				for (let depth = 1; depth <= segments.length; depth ++) {
@@ -384,9 +389,9 @@ export class PropertySelect
 					if ('properties' in resolved || (depth < segments.length && resolved.kind !== 'relation'))
 						throw new TypeError(`Not a property path: ${path}`)
 					property = resolved
-					labels.push(this.translate(resolved.label || resolved.name))
+					labels.push({ label: this.translate(resolved.label || resolved.name), path: resolved.path })
 				}
-				properties.push({ ...property!, label: labels.join('.') })
+				properties.push({ ...property!, label: labels.map(segment => segment.label).join('.'), segments: labels })
 			}
 			catch (error) { if (signal.aborted) throw error }
 		}

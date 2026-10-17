@@ -297,10 +297,14 @@ export class PropertySelectView
 					b.property.label || b.property.name,
 					undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
 		if (search.status === 'idle' && !context.path) {
-			const related = this.selector.usedProperties.map(property => ({ depth: 0, property, segments: [] }))
-			related.sort((a, b) => a.property.label.localeCompare(b.property.label,
-				undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
-			results = [...results, ...related]
+			const related = [...this.selector.usedProperties]
+			related.sort((a, b) => a.label.localeCompare(b.label,
+				undefined, { sensitivity: 'base' }) || a.path.localeCompare(b.path))
+			results = [...results, ...related.map(property => ({
+				depth: 0,
+				property: { ...property, label: property.segments.at(-1)!.label },
+				segments: property.segments.slice(0, -1)
+			}))]
 		}
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
 		const retained = retainFocus && focusedRow && this.list!.contains(focusedRow)

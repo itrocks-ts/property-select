@@ -57,7 +57,8 @@ try {
 			check('configured nested columns are highlighted once after direct properties', marked(),
 				['name', 'child.note', 'child.child', 'child.child.name', 'child.name'])
 			check('nested columns follow direct properties and use translated alphabetical order',
-				[...host.querySelectorAll('.ps-main')].map(button => button.textContent),
+				[...host.querySelectorAll('.ps-property')].map(row =>
+					row.querySelector('.ps-result-path')?.textContent || row.querySelector('.ps-main').textContent),
 				['Child›', 'Name', 'Note', 'Child.Alpha', 'Child.Child›', 'Child.Child.Zulu', 'Child.Zulu'])
 			const selected = []
 			view.selector.subscribe(event => { if (event.type === 'select') selected.push(event.intent.path) })

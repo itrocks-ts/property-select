@@ -1,6 +1,7 @@
 export { PropertySelect }             from './controller.js'
 export type { PropertySelectOptions } from './controller.js'
 export type { SelectorEvent }         from './controller.js'
+export type { UsedProperty }          from './controller.js'
 export type { IntentionEvent }        from './intentions.js'
 export type { NavigationStatus }      from './navigation.js'
 export { normalisePath }              from './path.js'
