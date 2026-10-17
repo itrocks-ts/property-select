@@ -50,31 +50,18 @@ try {
 		const unusedRow = page.locator('.ps-property:not(.ps-used)').first()
 		const background = locator => locator.evaluate(node => getComputedStyle(node).backgroundColor)
 		await page.mouse.move(0, 0)
-		assert.equal(await background(usedRow), 'rgb(248, 248, 248)')
-		const colours = await page.evaluate(() => {
-			const sample = document.createElement('div')
-			document.body.append(sample)
-			const values = ['#2f8943 15%', '#2674c6 15%', '#2f8943 25%'].map(colour => {
-				sample.style.background = `color-mix(in srgb, ${colour}, white)`
-				return getComputedStyle(sample).backgroundColor
-			})
-			sample.remove()
-			return values
-		})
+		assert.equal(await background(usedRow), 'rgb(238, 238, 238)')
 		await unusedRow.hover()
-		assert.equal(await background(unusedRow), colours[0])
+		assert.equal(await background(unusedRow), 'rgb(221, 221, 221)')
 		await usedRow.hover()
-		assert.equal(await background(usedRow), colours[1])
-		const plus = usedRow.locator('.ps-add')
-		await plus.hover()
-		assert.equal(await background(plus), colours[2])
-		await unusedRow.hover()
-		await unusedRow.locator('.ps-add').hover()
-		assert.equal(await background(unusedRow.locator('.ps-add')), colours[2])
+		assert.equal(await background(usedRow), 'rgb(221, 221, 221)')
+		await usedRow.locator('.ps-add').hover()
+		assert.equal(await background(usedRow.locator('.ps-add')), 'rgba(0, 0, 0, 0)')
 		for (const relation of [unusedRow.locator('[data-action="navigate"]').first(),
 			usedRow.locator('.ps-segment').first(), page.locator('.ps-level').first()]) {
 			await relation.hover()
-			assert.equal(await background(relation), 'rgb(221, 221, 221)')
+			assert.equal(await background(relation), await relation.evaluate(node =>
+				node.classList.contains('ps-level') ? 'rgb(221, 221, 221)' : 'rgba(0, 0, 0, 0)'))
 		}
 		const ordinaryHeight = await page.locator('.ps-property').first()
 			.evaluate(row => row.getBoundingClientRect().height)

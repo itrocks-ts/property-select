@@ -222,28 +222,20 @@ The SVG swatches below are part of this reference and must be updated with the c
 
 | Swatch                                 | Meaning                           | Rule   | Value (over white) |
 | -------------------------------------- | --------------------------------- | ------ | ------------------ |
-| ![Colour](colours/addition-hover.svg)  | Available property hover          | COL-02 | `#2f8943` at 15%   |
-| ![Colour](colours/addition-button.svg) | Addition button hover             | COL-02 | `#2f8943` at 25%   |
-| ![Colour](colours/used.svg)            | Already used property             | COL-03 | `#eee`             |
-| ![Colour](colours/used-hover.svg)      | Already used property hover       | COL-03 | `#d51d2c` at 15%   |
-| ![Colour](colours/navigation.svg)      | Navigation hover and separators   | COL-04 | `#ddd`             |
-| ![Colour](colours/surface.svg)         | Standard background               | COL-04 | `#fff`             |
-| ![Colour](colours/text.svg)            | Standard text                     | COL-04 | `#444`             |
-| ![Colour](colours/group.svg)           | Functional group heading (future) | COL-06 | `#e8f0fa`          |
+| ![Colour](colours/navigation.svg) | Selector hover (all actions)       | COL-02 | `#ddd`    |
+| ![Colour](colours/used.svg)       | Already used property             | COL-03 | `#eee`    |
+| ![Colour](colours/surface.svg)    | Standard background               | COL-04 | `#fff`    |
+| ![Colour](colours/text.svg)       | Standard text                     | COL-04 | `#444`    |
+| ![Colour](colours/group.svg)      | Functional group heading (future) | COL-06 | `#e8f0fa` |
 
-**COL-02. Available property and addition.** Green means an addition is available or being previewed. Hovering an
-unused property uses `color-mix(in srgb, #2f8943 15%, white)`; hovering its `+` button uses the same green at 25%.
-The `+` retains this addition coding even on an already used property; duplicate handling follows TAB-02.
-For a provisional table column, TAB-08 uses a light green accent together with an addition indicator.
+**COL-02. Selector hover.** All selector rows and navigation controls use the same neutral `#ddd` hover.
+Child controls keep the row background. Hover does not encode addition, removal or navigation.
+The provisional table column and its addition indicator in TAB-08 remain unchanged.
 
 **COL-03. Already used property.** A property whose full normalised path is already used has a grey `#eee` background.
-Hovering its row uses `color-mix(in srgb, #d51d2c 15%, white)`: red indicates that the property is already present,
-so selecting it will not create another column. It does not mean deletion, an error or a disabled property.
-TAB-02 still applies: reveal and highlight the existing column. For relations, the main area still navigates
-according to ACT-02; the colour does not change the action of a control.
+Its hover follows COL-02, like every other property.
 
-**COL-04. Navigation and neutral surfaces.** Hovering a breadcrumb level or a relation navigation button uses grey
-`#ddd`, distinguishing navigation from addition. Standard property backgrounds are white `#fff`, text is `#444`
+**COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`
 and separators are `#ddd`. These neutral colours carry no addition, deletion or grouping meaning.
 
 **COL-05. Column confirmation.** The green flash, transition to white and return to the standard background in TAB-05

@@ -96,12 +96,9 @@
 	overflow: hidden;
 }
 .ps-property.ps-used { background: #eee; }
-.ps-property:hover { background: color-mix(in srgb, #2f8943 15%, white); }
-.ps-property.ps-used:hover { background: color-mix(in srgb, #d51d2c 15%, white); }
+.ps-property:hover { background: #ddd; }
 .property-select .ps-property > button:hover { background-color: transparent; }
-.property-select .ps-property > .ps-add:hover { background: color-mix(in srgb, #2f8943 25%, white); }
-.property-select .ps-level:hover,
-.property-select .ps-property > button[data-action="navigate"]:hover { background: #ddd; }
+.property-select .ps-level:hover { background: #ddd; }
 .property-select .ps-main {
 	box-sizing: border-box;
 	flex: 1;
