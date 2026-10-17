@@ -92,7 +92,7 @@ Metadata errors return false and remain observable through `selector`; the host 
 `dispose(): void` is idempotent, aborts pending work, removes the owned section and releases its listeners/references.
 Create a new view after disposal. No import activates the DOM or registers a global instance.
 
-The main button selects a field or opens a relation. A checkbox in the first cell reflects whether the full path
+The main button requests addition only for either a field or a relation, preserving existing columns. A checkbox in the first cell reflects whether the full path
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
 A separate chevron on the right opens a relation. It appears on row hover or keyboard focus and stays visible
 on touch devices. All rows share one neutral hover colour. The host confirms usage through `usedPaths`.
@@ -141,7 +141,8 @@ clearing local recents. `translate(text)` defaults to identity or calls the supp
 full labels. Each description includes `segments`, ordered from the first relation through the final property, with
 its translated label and full path.
 The browser appends these highlighted columns after the direct properties at the root, alphabetically by those labels.
-Intermediate path segments navigate to the chosen object without selecting a property; the final name and checkbox keep
+Intermediate path segments include their following chevron and space in one navigation target;
+they open the chosen object without selecting a property; the final name and checkbox keep
 their usual actions. Used columns are excluded from search results and nested object views; unknown paths are omitted.
 Removing a used path leaves its root row unhighlighted for immediate reselection. These temporary rows belong only
 to the current view and disappear on refresh, search, relation navigation or disposal; they are never persisted.

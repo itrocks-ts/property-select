@@ -126,7 +126,7 @@
 }
 .ps-check { cursor: pointer; margin: 0; }
 .ps-check:focus-visible { outline: 2px solid Highlight; outline-offset: 2px; }
-.property-select .ps-segment { flex-shrink: 0; overflow: visible; padding: .6em 0; }
+.property-select .ps-segment { flex-shrink: 0; overflow: visible; padding: .6em 0; white-space: pre; }
 .property-select .ps-check-cell + .ps-segment { padding-left: .6em; }
 .property-select .ps-segment ~ .ps-main { padding-left: 0; }
 

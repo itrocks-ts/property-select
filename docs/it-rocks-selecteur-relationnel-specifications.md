@@ -183,30 +183,17 @@ Le chevron suffit à indiquer la navigation possible ; une différence de style 
 
 ### 3.2 Zones de clic
 
-- **ACT-01.** **Propriété :** Terminale ; **Activation de la zone principale :** Émettre une sélection. **Activation du
-  `+` :** Même sélection lorsqu'il est affiché. **Drag :** Transporter son chemin.
-
-- **ACT-02.** **Propriété :** Relation ; **Activation de la zone principale :** Ouvrir la structure liée. **Activation
-  du `+` :** Émettre une sélection de l'objet lui-même. **Drag :** Transporter le chemin de l'objet.
-
-**ACT-03.** Le nom et son chevron constituent une seule zone de navigation. Le chevron suit le nom, avant la zone
-d'ajout. Tous les `+` sont alignés à droite. Il n'y a jamais l'ordre « nom navigable, `+`, chevron navigable » ni une
-troisième action indépendante.
-
-**ACT-04. Ordinateur avec survol.** Afficher le `+` contextuellement au survol de la ligne et au focus clavier, pour les
-relations et les terminaux. Réserver sa place en permanence pour éviter déplacement du libellé, du chevron ou
-modification de hauteur. Le bouton garde une cible confortable même si le symbole est discret.
-
-**ACT-05. Mobile/tactile sans survol.** Le `+` est toujours visible pour les relations uniquement. Aucun `+` pour les
-terminaux : leur nom suffit. Ne pas ajouter de `+` d'objet courant dans l'en-tête. Traiter les appareils hybrides sans
-laisser une action indispensable accessible uniquement au survol.
-
-**ACT-06.** Une activation du `+` n'ouvre pas la relation et ne déclenche pas un second ajout par propagation à la
-ligne. Un drag reconnu ne se termine pas par un clic synthétique provoquant un ajout supplémentaire.
-
-**ACT-07.** Dans les chemins affichés, un segment relationnel s'ouvre par clic et peut être transporté par drag. Pas de
-`+` pour chaque segment intermédiaire. La racine n'est jamais transportée. Un objet peut aussi être retrouvé et ajouté
-depuis sa ligne relationnelle.
+- **ACT-01.** Clicking a terminal or relation name requests addition only. An existing column is revealed and
+  highlighted without removal. The name transports its full path when dragged.
+- **ACT-02.** The checkbox in the first cell reflects committed usage for both kinds. Checking requests addition;
+  unchecking requests removal. It does not navigate or start transport.
+- **ACT-03.** Relations have a separate chevron button aligned on the right. Clicking it opens the related object.
+- **ACT-04.** Desktop hover or keyboard focus reveals that chevron. Reserve its space to avoid layout changes.
+- **ACT-05.** On touch and hybrid devices the chevron remains visible. All actions remain accessible without hover.
+- **ACT-06.** A recognised drag suppresses its residual click. Each control performs only its own action.
+- **ACT-07.** Intermediate relation segments in displayed paths remain navigation targets and drag sources.
+  Each target contains the relation label, its following chevron and space (for example `Customer › `).
+  The root is never transported. The final property name requests addition as in ACT-01.
 
 **ACT-08.** Préserver l'usage clavier : ordre logique, focus visible, activation des zones principales et boutons sans
 drag. Réutiliser les composants accessibles existants ; éviter toute imbrication invalide de contrôles interactifs.
@@ -234,7 +221,7 @@ The provisional table column and its addition indicator in TAB-08 remain unchang
 
 **COL-03. Already used property.** A property whose full normalised path is already used has a subtle green `color-mix(in srgb, #2f8943 10%, white)` background.
 A checkbox in the first cell reflects committed usage and requests addition or removal for either property kind.
-The former `+` control is removed.
+
 Its hover follows COL-02, like every other property.
 
 **COL-04. Neutral surfaces.** Standard property backgrounds are white `#fff`, text is `#444`

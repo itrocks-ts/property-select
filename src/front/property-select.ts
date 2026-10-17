@@ -374,7 +374,7 @@ export class PropertySelectView
 		row.dataset.kind = property.kind
 		row.dataset.path = property.path
 		const label = property.label || property.name
-		const main = this.button(label, property.kind === 'relation' ? 'navigate' : 'select', property.path)
+		const main = this.button(label, 'add', property.path)
 		main.className = 'ps-main'
 		main.dataset.focus = `main:${property.path}`
 		const cell = this.host.ownerDocument.createElement('label')
@@ -392,7 +392,7 @@ export class PropertySelectView
 		if (segments.length) {
 			row.title = [...segments.map(segment => segment.label), label].join('.')
 			for (const segment of segments) {
-				const button = this.button(segment.label + '.', 'navigate', segment.path)
+				const button = this.button(segment.label + ' › ', 'navigate', segment.path)
 				button.className = 'ps-segment'
 				button.dataset.focus = `segment:${property.path}:${segment.path}`
 				row.append(button)

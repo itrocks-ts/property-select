@@ -59,7 +59,7 @@ try {
 			check('nested columns follow direct properties and use translated alphabetical order',
 				[...host.querySelectorAll('.ps-property')].map(row =>
 					[...row.querySelectorAll('button:not(.ps-add)')].map(button => button.textContent).join('')),
-				['Child›', 'Name', 'Note', 'Child.Alpha', 'Child.Child›', 'Child.Child.Zulu', 'Child.Zulu'])
+				['Child›', 'Name', 'Note', 'Child › Alpha', 'Child › Child›', 'Child › Child › Zulu', 'Child › Zulu'])
 			const selected = []
 			view.selector.subscribe(event => { if (event.type === 'select') selected.push(event.intent.path) })
 			host.querySelector('[data-path="child.note"] .ps-main').click()
