@@ -13,13 +13,13 @@ const server = createServer(async (request, response) => {
 		response.end('<!doctype html><link rel="stylesheet" href="/front/property-select.css"><div id="host"></div>')
 		return
 	}
-	if (!/^\/(?:front\/)?[\w-]+\.(?:css|html|js)$/.test(path)) {
+	if (!/^\/(?:front\/)?[\w-]+\.(?:css|html|js|svg)$/.test(path)) {
 		response.writeHead(404).end()
 		return
 	}
 	try {
 		response.setHeader('Content-Type', path.endsWith('.css') ? 'text/css'
-			: path.endsWith('.html') ? 'text/html' : 'text/javascript')
+			: path.endsWith('.html') ? 'text/html' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/javascript')
 		response.end(await readFile(new URL(`..${path}`, import.meta.url)))
 	}
 	catch { response.writeHead(404).end() }
@@ -58,7 +58,7 @@ try {
 				['name', 'child.note', 'child.child', 'child.child.name', 'child.name'])
 			check('nested columns follow direct properties and use translated alphabetical order',
 				[...host.querySelectorAll('.ps-property')].map(row =>
-					[...row.querySelectorAll('button:not(.ps-add)')].map(button => button.textContent).join('')),
+					[...row.querySelectorAll('button:not(.ps-locate)')].map(button => button.textContent).join('')),
 				['Child›', 'Name', 'Note', 'Child › Alpha', 'Child › Child›', 'Child › Child › Zulu', 'Child › Zulu'])
 			const selected = []
 			view.selector.subscribe(event => { if (event.type === 'select') selected.push(event.intent.path) })

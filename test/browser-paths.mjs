@@ -15,7 +15,7 @@ const server = createServer(async (request, response) => {
 	}
 	try {
 		response.setHeader('Content-Type', path.endsWith('.css') ? 'text/css'
-			: path.endsWith('.html') ? 'text/html' : 'text/javascript')
+			: path.endsWith('.html') ? 'text/html' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/javascript')
 		response.end(await readFile(new URL(`..${path}`, import.meta.url)))
 	}
 	catch { response.writeHead(404).end() }
@@ -108,7 +108,7 @@ try {
 			.evaluate(row => row.getBoundingClientRect().height)
 		for (const path of ['customer', 'customer.address', 'customer.address.country']) {
 			const used = page.locator('.ps-property.ps-used[data-path="customer.address.country.code"]')
-			assert.equal(await used.locator('button:not(.ps-add)')
+			assert.equal(await used.locator('button:not(.ps-locate)')
 				.evaluateAll(buttons => buttons.map(button => button.textContent).join('')), 'Client › Adresse › Pays › Côde')
 			const relation = used.locator(`button[data-path="${path}"]`)
 			const bounds = await relation.boundingBox()
@@ -141,7 +141,7 @@ try {
 			document.querySelector('.property-select').dataset.searchStatus))
 		const row = page.locator('.ps-property[data-path="customer.address.country.code"]')
 		const observed = await row.evaluate(row => {
-			const buttons = [...row.querySelectorAll('button:not(.ps-add)')]
+			const buttons = [...row.querySelectorAll('button:not(.ps-locate)')]
 			return {
 				buttons: buttons.map(button => button.dataset.path),
 				height: row.getBoundingClientRect().height,
@@ -157,7 +157,7 @@ try {
 		})
 		assert.deepEqual(observed.buttons, ['customer', 'customer.address', 'customer.address.country',
 			'customer.address.country.code'])
-		assert.equal(await row.locator(':scope > button').count(), 4)
+		assert.equal(await row.locator(':scope > button').count(), 5)
 		assert.equal(observed.height, ordinaryHeight)
 		assert.equal(observed.label, 'Client › Adresse › Pays › Côde')
 		assert.equal(observed.lines, 1)

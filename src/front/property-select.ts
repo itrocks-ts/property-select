@@ -271,8 +271,10 @@ export class PropertySelectView
 			context, state.branch, state.current, state.query, search.results, search.status,
 			this.selector.suggestions, usedPaths, this.selector.usedProperties, [...this.related.values()]
 		])
-		for (const [path, row] of this.rows)
+		for (const [path, row] of this.rows) {
 			row.querySelector<HTMLInputElement>('.ps-check')!.checked = usedPaths.includes(path)
+			row.querySelector<HTMLButtonElement>('.ps-locate')!.disabled = !usedPaths.includes(path)
+		}
 		if (fingerprint === this.fingerprint)
 			return
 		this.fingerprint = fingerprint
@@ -347,6 +349,7 @@ export class PropertySelectView
 		for (const [path, row] of this.rows) {
 			row.classList.toggle('ps-used', used.has(path))
 			row.querySelector<HTMLInputElement>('.ps-check')!.checked = used.has(path)
+			row.querySelector<HTMLButtonElement>('.ps-locate')!.disabled = !used.has(path)
 		}
 		if (retained && (this.list!.lastElementChild !== retained))
 			this.list!.append(retained)
@@ -397,7 +400,11 @@ export class PropertySelectView
 				row.append(button)
 			}
 		}
-		row.append(main)
+		const locate = this.button('⌖', 'add', property.path)
+		locate.className = 'ps-locate'
+		locate.setAttribute('aria-label', `${this.selector.translate('Locate')} ${label}`)
+		locate.title = locate.getAttribute('aria-label')!
+		row.append(main, locate)
 		if (property.kind === 'relation') {
 			const open = this.button('›', 'navigate', property.path)
 			open.className = 'ps-open'

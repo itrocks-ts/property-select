@@ -15,7 +15,7 @@ const server = createServer(async (request, response) => {
 	}
 	try {
 		response.setHeader('Content-Type', path.endsWith('.css') ? 'text/css'
-			: path.endsWith('.html') ? 'text/html' : 'text/javascript')
+			: path.endsWith('.html') ? 'text/html' : path.endsWith('.svg') ? 'image/svg+xml' : 'text/javascript')
 		response.end(await readFile(new URL(`..${path}`, import.meta.url)))
 	}
 	catch { response.writeHead(404).end() }
@@ -56,6 +56,32 @@ try {
 			})
 			await view.mount()
 		})
+		assert.equal(await page.locator('.ps-locate[data-path="tags"]').isVisible(), false)
+		assert.equal(await page.locator('.ps-locate[data-path="tags"]').isDisabled(), true)
+		for (const path of ['number', 'customer', 'customer.address.country.code']) {
+			const row = page.locator(`.ps-property[data-path="${path}"]`)
+			const locate = row.locator('.ps-locate')
+			await page.locator('.ps-query').focus()
+			await page.mouse.move(0, 0)
+			assert.equal(await locate.evaluate(node => getComputedStyle(node).opacity), touch ? '1' : '0')
+			await row.locator('.ps-main').hover()
+			assert.equal(await locate.evaluate(node => getComputedStyle(node).opacity), '1')
+			assert.equal(await locate.evaluate(node => getComputedStyle(node).backgroundColor), 'rgba(0, 0, 0, 0)')
+			await locate.hover()
+			assert.equal(await locate.evaluate(node => getComputedStyle(node).backgroundColor), 'rgb(244, 244, 244)')
+			assert.equal(await row.locator('.ps-main').evaluate(node => getComputedStyle(node).backgroundColor),
+				'rgba(0, 0, 0, 0)')
+			await page.evaluate(() => { events.length = 0 })
+			if (!touch && path === 'customer')
+				await page.screenshot({ path: '/tmp/property-select-locate.png' })
+			await locate.click()
+			await page.waitForFunction(() => events.at(-1)?.type === 'outcome')
+			assert.equal(await page.evaluate(() => events.at(-1).outcome.status), 'existing')
+			assert.equal(await page.evaluate(() => events.find(event => event.type === 'select').intent.action), 'add')
+			assert.equal(await page.evaluate(() => events.filter(event => event.type === 'select').length), 1)
+			assert.equal(await row.locator('.ps-check').isChecked(), true)
+			assert.equal(await page.evaluate(() => view.selector.path), '')
+		}
 		for (const path of ['number', 'customer']) {
 			const row = page.locator(`.ps-property[data-path="${path}"]`)
 			for (const control of ['.ps-main', '.ps-check', '.ps-check-cell']) {
@@ -64,6 +90,8 @@ try {
 					await row.locator(control).click({ position: { x: 2, y: 2 } })
 					await page.waitForFunction(() => events.at(-1)?.type === 'outcome')
 					assert.equal(await row.locator('.ps-check').isChecked(), checked)
+					assert.equal(await row.locator('.ps-locate').isDisabled(), !checked)
+					assert.equal(await row.locator('.ps-locate').isVisible(), checked)
 					assert.equal(await row.evaluate(node => node.classList.contains('ps-used')), checked)
 					assert.equal(await page.evaluate(() => events.at(-1).outcome.status), checked ? 'added' : 'removed')
 					assert.equal(await page.evaluate(() => events.filter(event => event.type === 'select').length), 1)

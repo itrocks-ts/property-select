@@ -227,8 +227,8 @@ Plugin commit/cancel notifications distinguish transient from committed changes;
 Repeated move does not reload values. Late load completions check transaction and view generation before DOM mutation.
 
 `list` reserves normalised paths during asynchronous column changes and supplies loaded row ids. Clicking a terminal
-property toggles its column. Removal reveals the column and flashes it red for 350 ms before deleting its cells and
-matching `col`; abort/reset clears the flash without deletion, and late values cannot restore it. Relation selection
+property toggles its column. Removal reveals the column and flashes it red with an immediate 150 ms fade before deleting
+its cells and matching `col`; abort/reset clears the flash without deletion, and late values cannot restore it. Relation selection
 reveals/highlights existing columns. New clicks append, drag inserts at the accepted position. Addition highlight is a
 subtle green → light → theme background sequence, with reduced-motion handling and no keyboard focus theft.
 The selector retains removed nested root rows without highlighting until refresh, search, relation navigation or

@@ -111,13 +111,22 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.property-select .ps-open { flex: none; padding: 0; text-align: center; width: 29px; }
+.property-select .ps-open, .property-select .ps-locate { flex: none; padding: 0; text-align: center; width: 29px; }
+.property-select .ps-locate {
+	background: url('locate.svg') center no-repeat;
+	font-size: 0;
+	visibility: hidden;
+}
+.ps-property.ps-used .ps-locate { visibility: visible; }
 @media (hover: hover) and (pointer: fine) {
-	.ps-open { opacity: 0; pointer-events: none; }
-	.ps-property:hover .ps-open, .ps-property:focus-within .ps-open { opacity: 1; pointer-events: auto; }
+	.ps-open, .ps-locate { opacity: 0; pointer-events: none; }
+	.ps-property:hover :is(.ps-open, .ps-locate), .ps-property:focus-within :is(.ps-open, .ps-locate) {
+		opacity: 1;
+		pointer-events: auto;
+	}
 }
 @media (any-pointer: coarse) {
-	.ps-open { opacity: 1; pointer-events: auto; }
+	.ps-open, .ps-locate { opacity: 1; pointer-events: auto; }
 }
 .ps-check-cell {
 	align-items: center;

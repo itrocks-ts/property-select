@@ -94,6 +94,7 @@ Create a new view after disposal. No import activates the DOM or registers a glo
 
 Clicking a field or relation name, its checkbox or the surrounding checkbox cell toggles the selection. A checkbox in the first cell reflects whether the full path
 is used; checking or unchecking requests addition or removal. Used rows have a subtle green background.
+A target button on used rows locates the existing column through an addition-only intention without toggling it.
 A separate chevron on the right opens a relation. It appears on row hover or keyboard focus and stays visible
 on touch devices. All action areas share the light `.action` hover colour. Each parent segment and the right-hand chevron highlights
 independently; the final name highlights only its remaining area. The host confirms usage through `usedPaths`.
