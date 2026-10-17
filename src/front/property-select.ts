@@ -289,6 +289,10 @@ export class PropertySelectView
 		this.positionScroll(this.breadcrumb!, state.scroll.breadcrumb?.left ?? left, 0)
 		let results: readonly SearchResult[] = search.status === 'idle'
 			? context.properties.map(property => ({ depth: 0, property, segments: [] })) : search.results
+		if (search.status === 'idle')
+			results = [...results].sort((a, b) =>
+				(a.property.label || a.property.name).localeCompare(b.property.label || b.property.name,
+					undefined, { sensitivity: 'base' }) || a.property.path.localeCompare(b.property.path))
 		const focusedRow = active?.closest<HTMLLIElement>('.ps-property')
 		const retained = retainFocus && focusedRow && this.list!.contains(focusedRow)
 			&& !results.some(result => result.property.path === focusedRow.dataset.path) ? focusedRow : undefined
